@@ -1,0 +1,20 @@
+{% extends "home/base.html" %}
+{% block content %}
+    <div class="text-white bg-dark p-4">
+        <div class="profile mb-4">
+            <h2 class="mb-1">{{ user.first_name }} {{ user.last_name }}</h2>
+            <p class="text-muted mb-0">{{user}}</p>
+            <p class="text-muted mb-0">{{user.userprofile.school}}</p>
+            <p class="text-muted mb-0">{{user.email}}</p>
+             <p class="text-muted mb-0">{{user.userprofile.access}}</p>
+        </div>
+
+        {% if user.userprofile.access == 'pending' %}
+        <div class="alert alert-danger mb-4">
+            Your account is pending approval from your teachers. Until then, you wont be able to post or view content from other students.
+        </div>
+        {% endif %}
+
+        <h3>Manage Your Posts Here</h3>
+    </div>
+{% endblock content %}
