@@ -1,4 +1,5 @@
 # Indigenous Storytelling
+Welcome to our official git repo for our project! If you're working on a specific section of the website, please create a new branch of the project before making any changes, that way we don't change the master file before we're sure that we're happy with our changes. 
  
  ## Apps
  
@@ -16,6 +17,11 @@
  
  ### administration
  **This hasn't been built yet** This will be where teachers and admins can change the access level of students so that they can begin viewing and posting content. 
+
+ ## static folder
+ This folder stores all of the static content such as images and css. Keep your files here, and in a django template you have to do two things to load them:
+ 1. Include `{% load static %}` at the top of your html file
+ 2. Call the file by using the format `{% static 'type/file.type' %}`. For example, for loading css you would put `{% static 'css/styles.css' %}` in the href.
  
  
  ## Django, Useful Functions
