@@ -39,7 +39,7 @@ def profile(request):
 
 @login_required
 def edit_profile(request):
-    # TO DO: prepopulate forms with user data. SHOULD work with instance=requeset.usr, but it doesnt :( )
+    # TO DO: prepopulate forms with user data. SHOULD work with instance=requeset.user, but it doesnt :( )
     if request.method == 'POST':
         user_form = UserUpdateForm(request.POST, instance=request.user)
         profile_form = ProfileUpdateForm(request.POST, instance=request.user.userprofile)
