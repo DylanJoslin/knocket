@@ -32,3 +32,6 @@ Welcome to our official git repo for our project! If you're working on a specifi
  - python manage.py makemigrations AND python manage.py migrate
    - Needs to be run after creating a new app or model. I think this updates the database. 
 
+## Final Notes
+It's possible you might need to install some extra plugins into your virtual environment. If that's the case and you need help, just text Tristan
+
