@@ -33,5 +33,11 @@ Welcome to our official git repo for our project! If you're working on a specifi
    - Needs to be run after creating a new app or model. I think this updates the database. 
 
 ## Final Notes
+If you're working on Django templates, you'll have to install the Django Templates plugin in VS Code. When you do, you lose html snippets in Django Templates, which is annoying. You can get them back by pressing cmd+shift+p on mac, or ctr+shift+p on windows, and type settings. Open the settins JSON file, and add this bit to it to get the snippets back: 
+`"emmet.includeLanguages": {
+        "django-html": "html"
+    }
+`
+
 It's possible you might need to install some extra plugins into your virtual environment. If that's the case and you need help, just text Tristan
 
