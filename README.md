@@ -18,7 +18,7 @@ Welcome to our official git repo for our project! If you're working on a specifi
  ### administration
  **This hasn't been built yet** This will be where teachers and admins can change the access level of students so that they can begin viewing and posting content. 
 
- ## static folder
+ ### static folder
  This folder stores all of the static content such as images and css. Keep your files here, and in a django template you have to do two things to load them:
  1. Include `{% load static %}` at the top of your html file
  2. Call the file by using the format `{% static 'type/file.type' %}`. For example, for loading css you would write `href="{% static 'css/styles.css' %}"`.
