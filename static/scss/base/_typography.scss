@@ -1,0 +1,57 @@
+
+html{
+  font-size: 62.5%;
+}
+
+body{
+    margin-top: 4.8rem; 
+    font-family: 'Roboto Slab', serif;
+    line-height: 1.5;
+    background-image: linear-gradient(rgb(0, 0, 0) 0.1rem, transparent 0.1rem);
+    background-size: auto 2.4rem; 
+  }
+  
+  h2, h3, h4, h5, h6, p{
+      font-family: $heading-font;
+      color: $heading-color;
+      margin-bottom: 2.4rem; 
+    //   background-color: $heading-background;
+  }
+  
+  h1{
+    font-size: 6.9rem; 
+    line-height: 7.2rem; 
+    margin-bottom: 4.8rem;
+    // background-color: $heading-background;
+  }
+  
+  h2{
+    //@extend h1; //Getting styles from the h1 so we don't have to copy
+    font-size: 6.1rem; 
+    line-height: 7.2rem; 
+  }
+  
+  h3{
+    font-size: 5.1rem; 
+    line-height: 7.2rem; 
+  }
+  
+  h4{
+    font-size: 4.8rem; 
+    line-height: 7.2rem; 
+  }
+  
+  h5{
+    font-size: 4.1rem; 
+    line-height: 4.8rem; 
+  }
+  
+  h6{
+    font-size: 3.7em; 
+    line-height: 4.8rem; 
+  }
+  
+  p, a{
+    font-size: 1.6rem;
+    max-width: 54rem;
+  }
