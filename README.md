@@ -22,14 +22,31 @@ Welcome to our official git repo for our project! If you're working on a specifi
  This folder stores all of the static content such as images and css. Keep your files here, and in a django template you have to do two things to load them:
  1. Include `{% load static %}` at the top of your html file
  2. Call the file by using the format `{% static 'type/file.type' %}`. For example, for loading css you would write `href="{% static 'css/styles.css' %}"`.
+
+ ## Creating a Virtual Environment
+ You wont be able to run any django functions without installing it into a virtual environment. There are a few steps involved in that:
+ 1. Install pip on yoour machine by opening terminal and entering  `curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py` and then run `python get-pip.py`
+ 1. Install virtualenv on your machine by running `pip install virtualenv`
+ 1. Create a folder that will hold your django environment called 'Environments'
+ 1. In terminal, navigate to the 'Environments' folder you created, and run `virtualenv django`
+ 1. To start your virtual environment, run `source django/bin/activate`
+    - You can tell it is working when you see (django) above your command line
+ 1. Several packages will need to  be installed. Run these commands to install theme:
+    - `pip install numpy`
+    - `pip install pytz`
+    - `pip install Pillow`
+    - `pip install django`
+  1. Now, to start running your server ans using django, in terminal navigate to the project folder (which is probably in your github directory if you downloaded the project from Dylan's github). Once inside, if you type the command `ls` you should see all of the files in the project, including manage.py. 
+  1. In terminal, run the command `python manage.py runserver` and you should be able to go to localhost:8000 in your browser to view the website.
+  In the future, when you want to run the server again you will need to be in your virtualenv first. Follow step 5 again to achieve this.
  
  
  ## Django, Useful Functions
- - python manage.py runserver
+ - `python manage.py runserver`
    - Launches the local server, which is run on localhost:8000 in your browser
- - python manage.py startapp <app_name> 
+ - `python manage.py startapp <app_name> `
    - Creates a new app in the project, such as users and home
- - python manage.py makemigrations AND python manage.py migrate
+ - `python manage.py makemigrations` AND `python manage.py migrate`
    - Needs to be run after creating a new app or model. I think this updates the database. 
 
 ## Final Notes
