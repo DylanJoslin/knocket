@@ -31,13 +31,13 @@ Welcome to our official git repo for our project! If you're working on a specifi
  1. In terminal, navigate to the 'Environments' folder you created, and run `virtualenv django`
  1. To start your virtual environment, run `source django/bin/activate`
     - You can tell it is working when you see (django) above your command line
- 1. Several packages will need to  be installed. Run these commands to install theme:
+ 1. Several packages will need to  be installed. Run these commands to install them:
     - `pip install numpy`
     - `pip install pytz`
     - `pip install Pillow`
     - `pip install django`
-  1. Now, to start running your server ans using django, in terminal navigate to the project folder (which is probably in your github directory if you downloaded the project from Dylan's github). Once inside, if you type the command `ls` you should see all of the files in the project, including manage.py. 
-  1. In terminal, run the command `python manage.py runserver` and you should be able to go to localhost:8000 in your browser to view the website.
+  1. Now, to start running your server and using django, in terminal navigate to the project folder (which is probably in your github directory if you downloaded the project from Dylan's github). Once inside if you type the command `ls` you should see all of the files in the project, including manage.py. 
+  1. In terminal run the command `python manage.py runserver` and you should be able to go to localhost:8000 in your browser to view the website.
   In the future, when you want to run the server again you will need to be in your virtualenv first. Follow step 5 again to achieve this.
  
  
