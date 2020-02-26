@@ -25,7 +25,7 @@ Welcome to our official git repo for our project! If you're working on a specifi
 
  ## Creating a Virtual Environment
  You wont be able to run any django functions without installing it into a virtual environment. There are a few steps involved in that:
- 1. Install pip on yoour machine by opening terminal and entering  `curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py` and then run `python get-pip.py`
+ 1. Install pip on your machine by opening terminal and entering  `sudo easy_install pip`.
  1. Install virtualenv on your machine by running `pip install virtualenv`
  1. Create a folder that will hold your django environment called 'Environments'
  1. In terminal, navigate to the 'Environments' folder you created, and run `virtualenv django`
