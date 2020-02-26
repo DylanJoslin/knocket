@@ -1,4 +1,5 @@
 {% extends "home/base.html" %}
+{% load static %}
 {% block content %}
     <div class="text-white bg-dark p-4">
         <div class="profile mb-4">
@@ -6,7 +7,8 @@
             <p class="text-muted mb-0">{{user}}</p>
             <p class="text-muted mb-0">{{user.userprofile.school}}</p>
             <p class="text-muted mb-0">{{user.email}}</p>
-             <p class="text-muted mb-0">{{user.userprofile.access}}</p>
+            <p class="text-muted mb-0">{{user.userprofile.access}}</p>
+            <p class="text-muted mb-0"><img src="{% static 'media/' %}{{user.userprofile.image}}" alt="{{ user.first_name }}'s profile photo"></p>
         </div>
 
         {% if user.userprofile.access == 'pending' %}
