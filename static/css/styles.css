@@ -2,7 +2,7 @@
     In this file is:
         1. variables
         2. mixins
-        3.  partials
+        3. partials
     
     Everything must be in this order for it to work since the mixins 
     need access to the variables and the partials need access to both.
