@@ -2,9 +2,6 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.views import View
 
-
-# Create your views here.
-
 def home(request):
     return render(request, 'home/map.html')
 
@@ -17,6 +14,8 @@ def events(request):
 def about(request):
     return render(request, 'home/about.html')
 
+# Each link on the map provides a slug that is passed into the view, and the view determines which html template to load.
+# Django doesn't support switch statements, so I used else if
 def ProvinceView(request, province_name):
     if province_name == 'ab':
         url = 'home/local-alberta.html'
