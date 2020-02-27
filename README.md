@@ -58,3 +58,23 @@ If you're working on Django templates, you'll have to install the Django Templat
 
 It's possible you might need to install some extra plugins into your virtual environment. If that's the case and you need help, just text Tristan
 
+
+## Working with SASS/SCSS
+
+To start working with SASS in this project you'll need to do two things:
+1. Download the live sass compiler through visual studio code.
+2. Go to your settings: cmd+shift+p on mac, or ctr+shift+p then search "open settings" and enter. This should open a settings.json file. Add the piece of code below to that settings.json file.
+
+`
+"liveSassCompile.settings.formats": [
+        {
+          "format": "expanded",
+          "extensionName": ".css",
+          "savePath": "~/../css"
+        }
+      ],
+`
+
+This ensures that SASS is compiling the css in the right directory.
+=======
+
