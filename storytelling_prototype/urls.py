@@ -18,7 +18,7 @@ from django.urls import path, include
 from home import views
 from users import views as user_views
 from administration import views as administration_views
-# from stories import views as story_views
+from stories import views as story_views
 from stories.views import VideoListView
 from django.conf import settings
 from django.conf.urls.static import static
@@ -30,10 +30,12 @@ urlpatterns = [
     path('register/', user_views.register, name='register'),
     path('login/', user_views.login_view, name='login'),
     path('logout/', user_views.logout_view, name='logout'),
+    # TODO: Fix url pathing for the stories app. I can't get it to work from the map for some reason.
     path('stories/<slug:school>', VideoListView.as_view(), name='stories'),
     path('profile/', user_views.profile, name="profile"),
     path('profile/edit/', user_views.edit_profile, name="edit_profile"),
 ]
 
+# Changes the pathing for static files while we're in debug mode (which we currently are)
 if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

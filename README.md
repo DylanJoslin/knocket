@@ -58,6 +58,7 @@ If you're working on Django templates, you'll have to install the Django Templat
 
 It's possible you might need to install some extra plugins into your virtual environment. If that's the case and you need help, just text Tristan
 
+
 ## Working with SASS/SCSS
 
 To start working with SASS in this project you'll need to do two things:
@@ -75,3 +76,5 @@ To start working with SASS in this project you'll need to do two things:
 `
 
 This ensures that SASS is compiling the css in the right directory.
+=======
+
