@@ -1,11 +1,14 @@
-@import 'base/minireset';
-@import 'base/variables';
-@import 'base/mixins';
+
 
 @import 'map/map-styles';
 
-@import 'dashboard/typography';
+
+@import 'dashboard/base/minireset';
+@import 'dashboard/base/variables';
+@import 'dashboard/base/mixins';
+@import 'dashboard/base/typography';
 @import 'dashboard/mobile/navigation';
+
 
 
 
