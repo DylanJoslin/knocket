@@ -1,8 +1,15 @@
-@mixin flexCenter($direction){
+@mixin link-styles($color, $bgd, $border){
+    text-decoration: none;
+    color: $color;
+    background: $bgd;
+    border: 1px solid $border;
+    border-radius: 1rem;
+    padding: 2rem;
+}
+
+
+@mixin flex(){
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: $direction ;
 }
 
 @mixin innerContainer($width){

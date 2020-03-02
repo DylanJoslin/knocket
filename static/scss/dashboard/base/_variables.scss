@@ -1,16 +1,28 @@
 /*******    MEDIA QUERIES     *******/
-$md-viewport: "screen and (min-width: 800px)";
-$lg-viewport: "screen and (min-width: 1100px)";
+
+
 
 /*******    CONTENT PADDING    *******/
 $sm-padding: 1rem;
 $md-padding: 3rem;
 $lg-padding: 4.2rem;
 
-/*******    HEADING STYLES     *******/
+
+/*******    COLORS    *******/
+$white: rgb(255, 255, 255);
+$dark: rgb(69, 71, 75);
+
+
+/*******    FONTS     *******/
 $heading-color: rgb(255, 255, 255);
 $heading-background: rgba(177, 239, 240, 0.822);
 $heading-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
+
 /*******      FORM STYLES      *******/
 $input-border: 0.1rem solid black;
+
+
+
+
+

@@ -423,7 +423,8 @@ td, th {
 
 /*******    MEDIA QUERIES     *******/
 /*******    CONTENT PADDING    *******/
-/*******    HEADING STYLES     *******/
+/*******    COLORS    *******/
+/*******    FONTS     *******/
 /*******      FORM STYLES      *******/
 html {
   font-size: 62.5%;
@@ -441,49 +442,63 @@ html {
   color: black;
 }
 
-h2, h3, h4, h5, h6, p {
+.dashboard-body h2, .dashboard-body h3, .dashboard-body h4, .dashboard-body h5, .dashboard-body h6, .dashboard-body p {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: white;
   margin-bottom: 2.4rem;
 }
 
-h1 {
+.dashboard-body h1 {
   font-size: 6.9rem;
   line-height: 7.2rem;
   margin-bottom: 4.8rem;
 }
 
-h2 {
+.dashboard-body h2 {
   font-size: 6.1rem;
   line-height: 7.2rem;
 }
 
-h3 {
+.dashboard-body h3 {
   font-size: 5.1rem;
   line-height: 7.2rem;
 }
 
-h4 {
+.dashboard-body h4 {
   font-size: 4.8rem;
   line-height: 7.2rem;
 }
 
-h5 {
+.dashboard-body h5 {
   font-size: 4.1rem;
   line-height: 4.8rem;
 }
 
-h6 {
+.dashboard-body h6 {
   font-size: 3.7em;
   line-height: 4.8rem;
 }
 
-p, a {
+.dashboard-body p, .dashboard-body a {
   font-size: 1.6rem;
   max-width: 54rem;
 }
 
-p {
-  color: green;
+.dashboard-body .dashboard-navigation ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.dashboard-body .dashboard-navigation ul li a {
+  text-decoration: none;
+  color: black;
+  background: white;
+  border: 1px solid black;
+  border-radius: 1rem;
+  padding: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 /*# sourceMappingURL=styles.css.map */

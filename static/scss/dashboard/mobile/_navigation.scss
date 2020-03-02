@@ -1,3 +1,25 @@
-p{
-    color: green;
+.dashboard-body{
+
+    .dashboard-navigation{
+
+        ul{
+
+            @include flex;
+
+            li{
+
+                a{
+                    @include link-styles(black, white, black);
+                    @include flex;
+                }
+
+            }
+
+        }
+
+        
+
+    }
+
+
 }
