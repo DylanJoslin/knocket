@@ -4,6 +4,7 @@ from django.contrib.auth.models import User
 
 class VideoPost(models.Model):
     # Content will need to be changed to the video upload. For now I will use text to build the page.
+    school = models.CharField(max_length=20)
     content = models.TextField()
     title = models.CharField(max_length=100)
     date_posted = models.DateTimeField(default=timezone.now)

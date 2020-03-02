@@ -30,8 +30,8 @@ urlpatterns = [
     path('register/', user_views.register, name='register'),
     path('login/', user_views.login_view, name='login'),
     path('logout/', user_views.logout_view, name='logout'),
-    # TODO: Fix url pathing for the stories app. I can't get it to work from the map for some reason.
-    path('stories/<slug:school>', VideoListView.as_view(), name='stories'),
+    path('stories/', story_views.stories, name='stories'),
+    path('stories/<slug:school>/', VideoListView.as_view(), name='stories'),
     path('profile/', user_views.profile, name="profile"),
     path('profile/edit/', user_views.edit_profile, name="edit_profile"),
 ]

@@ -17,6 +17,7 @@
                         class="form-control" 
                         max_length="{{ field.field.max_length }}"
                         min_length="{{ field.field.min_length }}"
+                        value='{{field.value|default_if_none:""}}'
                     >
                 {% comment %} If there are errors, loop through them and create a div containing the error message {% endcomment %}
                 {% if field.errors %}
@@ -44,6 +45,7 @@
 
                 {% comment %} CREATE TEXT INPUT HTML ELEMENT {% endcomment %}
                 {% elif field.field.widget.input_type != 'select' %}
+                    
                     <div class="form-group mb-4">
                         <label for="{{ field.html_name }}">{{ field.label }}</label>
                         <input 
@@ -53,6 +55,7 @@
                             class="form-control" 
                             max_length="{{ field.field.max_length }}"
                             min_length="{{ field.field.min_length }}"
+                            value='{{ field.value|default_if_none:"" }}'
                         >
                     </div>
                 {% endif %}

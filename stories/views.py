@@ -7,3 +7,6 @@ class VideoListView(ListView):
     template_name = 'stories/browse.html'
     context_object_name = 'video_posts'
     ordering = ['-date_posted']
+
+def stories(request):
+    return render(request, 'stories/browse.html')
