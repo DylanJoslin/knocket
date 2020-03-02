@@ -8,9 +8,13 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 </head>
-<body class="bg-secondary">
-    
-    <header class="container bg-dark rounded">
+<body class="dashboard-body">
+
+    <div class="dashboard-navigation">
+        <p>Hello</p>
+    </div>
+
+    <!-- <header class="container bg-dark rounded">
         <nav class="d-flex justify-content-between  p-3 mb-2 mt-2 ">
             <ul class="nav">
                 <li class="nav-item"><a href="{% url 'home' %}" class="nav-link text-info">Home</a></li>
@@ -39,44 +43,11 @@
                 {% endif %}
             </ul>
         </nav>
-    </header>
+    </header> -->
 
-    <main class="container mb-4">
-        {% if messages %}
-          {% for message in messages %}
-            <div class="alert alert-{{ message.tags }}">
-              {{ message }}
-            </div>
-          {% endfor%}
-        {% endif %}
-        {% block content%}{% endblock %}
+    <main class="dashboard-main">
+        <h1>{% block content%}{% endblock %}</h1>
     </main>
-
-    <footer class="bg-dark">
-        <div class="container">
-            <div class="row p-3 d-flex justify-content-between text-white">
-                <ul class="nav col-3 d-flex flex-column bg-secondary rounded p-2 ">
-                    <h2>Navigation</h2>
-                    <li class="nav-item"><a href="#" class="nav-link text-info">link</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link text-info">link</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link text-info">link</a></li>
-                </ul>
-                <ul class="nav col-3 d-flex flex-column bg-secondary rounded p-2">
-                    <h2>Navigation</h2>
-                    <li class="nav-item"><a href="#" class="nav-link text-info">link</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link text-info">link</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link text-info">link</a></li>
-                </ul>
-                <ul class="nav col-3 d-flex flex-column bg-secondary rounded p-2">
-                    <h2>Navigation</h2>
-                    <li class="nav-item"><a href="#" class="nav-link text-info">link</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link text-info">link</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link text-info">link</a></li>
-                </ul>
-            </div>
-        </div>
-    </footer>
-
 
 
     <script src="{% static 'js/main.js' %}"></script>
