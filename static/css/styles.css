@@ -1,12 +1,51 @@
-/* 
-    In this file is:
-        1. variables
-        2. mixins
-        3. partials
-    
-    Everything must be in this order for it to work since the mixins 
-    need access to the variables and the partials need access to both.
-*/
+/*! minireset.css v0.0.5 | MIT License | github.com/jgthms/minireset.css */
+html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+ul {
+  list-style: none;
+}
+
+button, input, select, textarea {
+  margin: 0;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+img, video {
+  height: auto;
+  max-width: 100%;
+}
+
+iframe {
+  border: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td, th {
+  padding: 0;
+  text-align: left;
+}
+
 /*-----------------------------------------------------------------------
         VARIABLES
 --------------------------------------------------------------------------*/
@@ -14,13 +53,6 @@
 /*******    CONTENT PADDING    *******/
 /*******    HEADING STYLES     *******/
 /*******      FORM STYLES      *******/
-/*-----------------------------------------------------------------------
-        MIXINS
---------------------------------------------------------------------------*/
-/*-----------------------------------------------------------------------
-        PARTIALS
---------------------------------------------------------------------------*/
-/*******      MAP STYLES      *******/
 body {
   background-color: white;
   font-family: 'Poppins', sans-serif;
@@ -64,7 +96,6 @@ h5 {
    ===========================================*/
 /*---------- General ----------*/
 main {
-  background-color: #0c2034;
   height: 100%;
   padding: 5rem 0;
 }
@@ -392,55 +423,6 @@ a:hover {
   width: 100%;
 }
 
-/*******      BASE STYLES      *******/
-/*! minireset.css v0.0.5 | MIT License | github.com/jgthms/minireset.css */
-html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
-  margin: 0;
-  padding: 0;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-size: 100%;
-  font-weight: normal;
-}
-
-ul {
-  list-style: none;
-}
-
-button, input, select, textarea {
-  margin: 0;
-}
-
-html {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-*, *:before, *:after {
-  -webkit-box-sizing: inherit;
-          box-sizing: inherit;
-}
-
-img, video {
-  height: auto;
-  max-width: 100%;
-}
-
-iframe {
-  border: 0;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-td, th {
-  padding: 0;
-  text-align: left;
-}
-
 html {
   font-size: 62.5%;
 }
@@ -495,6 +477,4 @@ p, a {
   font-size: 1.6rem;
   max-width: 54rem;
 }
-
-/*******      DASHBOARD STYLES      *******/
 /*# sourceMappingURL=styles.css.map */
