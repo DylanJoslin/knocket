@@ -1,6 +1,6 @@
 {% extends "home/base.html" %}
 {% block content %}
-    <form method="POST" class="text-white bg-dark p-3">
+    <form enctype="multipart/form-data" method="POST" class="text-white bg-dark p-3">
         <h2 class="mb-4">Update Your Profile</h2>
         {% comment %} csrf_token is some built in security {% endcomment %}
         {% csrf_token %} 
@@ -17,7 +17,7 @@
                         class="form-control" 
                         max_length="{{ field.field.max_length }}"
                         min_length="{{ field.field.min_length }}"
-                        value=""
+                        value="{{field.value}}"
                     >
                 {% comment %} If there are errors, loop through them and create a div containing the error message {% endcomment %}
                 {% if field.errors %}

@@ -34,7 +34,7 @@ class LoginForm(forms.Form):
 class UserProfileForm(forms.ModelForm):
     class Meta:
         model = UserProfile
-        fields = ('school', 'image')
+        fields = ('school',)
 
 class UserUpdateForm(forms.ModelForm):
     email = forms.EmailField()
