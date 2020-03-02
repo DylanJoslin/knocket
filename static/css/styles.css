@@ -1,3 +1,6 @@
+/* ------------------------------------------------------
+                MAP STYLES
+------------------------------------------------------ */
 body {
   background-color: white;
   font-family: 'Poppins', sans-serif;
@@ -6,7 +9,6 @@ body {
   color: #999999;
   background-color: #0c2034;
   /* background: linear-gradient(#0ff 0.0555555em, transparent 0.0555555em); */
-  background-size: auto 1.5em;
   /*24px for ideal gap*/
 }
 
@@ -368,6 +370,9 @@ a:hover {
   width: 100%;
 }
 
+/* ------------------------------------------------------
+                DASHBOARD STYLES
+------------------------------------------------------ */
 /*! minireset.css v0.0.5 | MIT License | github.com/jgthms/minireset.css */
 html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
   margin: 0;
@@ -424,13 +429,16 @@ html {
   font-size: 62.5%;
 }
 
-body {
-  margin-top: 4.8rem;
-  font-family: 'Roboto Slab', serif;
+.dashboard-body {
+  background: white;
   line-height: 1.5;
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0.1rem, black), color-stop(0.1rem, transparent));
   background-image: linear-gradient(black 0.1rem, transparent 0.1rem);
   background-size: auto 2.4rem;
+}
+
+.dashboard-body h1, .dashboard-body h2, .dashboard-body h3, .dashboard-body h4, .dashboard-body h5, .dashboard-body h6, .dashboard-body p {
+  color: black;
 }
 
 h2, h3, h4, h5, h6, p {

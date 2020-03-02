@@ -1,11 +1,17 @@
 
-
+/* ------------------------------------------------------
+                MAP STYLES
+------------------------------------------------------ */
 @import 'map/map-styles';
 
 
+/* ------------------------------------------------------
+                DASHBOARD STYLES
+------------------------------------------------------ */
 @import 'dashboard/base/minireset';
 @import 'dashboard/base/variables';
 @import 'dashboard/base/mixins';
+@import 'dashboard/base/base';
 @import 'dashboard/base/typography';
 @import 'dashboard/mobile/navigation';
 
