@@ -1,3 +1,6 @@
+/* ------------------------------------------------------
+                MAP STYLES
+------------------------------------------------------ */
 body {
   background-color: white;
   font-family: 'Poppins', sans-serif;
@@ -6,7 +9,6 @@ body {
   color: #999999;
   background-color: #0c2034;
   /* background: linear-gradient(#0ff 0.0555555em, transparent 0.0555555em); */
-  background-size: auto 1.5em;
   /*24px for ideal gap*/
 }
 
@@ -15,40 +17,50 @@ h1 {
   font-size: 1.802em;
   padding-top: 5rem;
 }
-  
-h2 {font-size: 1.602em;}
-  
-h3 {font-size: 1.424em;}
-  
-h4 {font-size: 1.266em;}
-  
-h5 {font-size: 1.125em;}
-  
-.text_small {font-size: 0.889em;}
+
+h2 {
+  font-size: 1.602em;
+}
+
+h3 {
+  font-size: 1.424em;
+}
+
+h4 {
+  font-size: 1.266em;
+}
+
+h5 {
+  font-size: 1.125em;
+}
+
+.text_small {
+  font-size: 0.889em;
+}
 
 /*============================================
-                 Custom Styles 
- ===========================================*/
-
-
- /*---------- General ----------*/
- main{
-  background-color: #0c2034;
+                   Custom Styles 
+   ===========================================*/
+/*---------- General ----------*/
+main {
   height: 100%;
   padding: 5rem 0;
 }
 
-a{
+a {
   color: #999;
 }
 
-a:hover{
+a:hover {
   color: #999;
 }
 
-.holder{
+.holder {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-around;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   margin: 20rem 0;
   width: 60%;
   margin: 0 auto;
@@ -57,17 +69,21 @@ a:hover{
   height: 35rem;
   padding-top: 10%;
 }
- 
-.province-nav{
+
+.province-nav {
   list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   width: 75%;
   margin: 0 auto;
 }
 
-.province-nav>li{
+.province-nav > li {
   padding: 1rem;
   width: 14%;
   text-decoration: underline;
@@ -76,26 +92,35 @@ a:hover{
   margin-bottom: 1rem;
 }
 
-.province-nav>li:hover{
+.province-nav > li:hover {
+  -webkit-transition: 0.5s;
   transition: 0.5s;
   background-color: #999999;
   color: #333;
   cursor: pointer;
 }
 
-.local-holder{
+.local-holder {
   width: 50%;
   margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-.image-container{
+.image-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-around;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
-.alberta-svg{
+.alberta-svg {
   width: 30rem;
   height: 40rem;
   background-image: url("../img/alberta.svg");
@@ -104,12 +129,12 @@ a:hover{
   margin: 0 auto;
 }
 
-.alberta-content{
+.alberta-content {
   width: 75%;
   margin: 0 auto;
 }
 
-.bc-svg{
+.bc-svg {
   width: 30rem;
   height: 40rem;
   background-image: url("../img/bc.svg");
@@ -118,12 +143,12 @@ a:hover{
   margin: 0 auto;
 }
 
-.bc-content{
+.bc-content {
   width: 75%;
   margin: 0 auto;
 }
 
-.sask-svg{
+.sask-svg {
   width: 30rem;
   height: 40rem;
   background-image: url("../img/saskatchewan.svg");
@@ -132,12 +157,12 @@ a:hover{
   margin: 0 auto;
 }
 
-.sask-content{
+.sask-content {
   width: 75%;
   margin: 0 auto;
 }
 
-.manitoba-svg{
+.manitoba-svg {
   width: 30rem;
   height: 40rem;
   background-image: url("../img/manitoba.svg");
@@ -146,19 +171,19 @@ a:hover{
   margin: 0 auto;
 }
 
-.manitoba-content{
+.manitoba-content {
   width: 75%;
   margin: 0 auto;
 }
 
-.school-icon-main{
+.school-icon-main {
   width: 15%;
   position: relative;
   margin-top: 30%;
   left: 45%;
 }
 
-.treaty-icon-main{
+.treaty-icon-main {
   width: 15%;
   position: relative;
   margin-top: 100%;
@@ -166,30 +191,33 @@ a:hover{
 }
 
 .school-icon-main:hover,
-.treaty-icon-main:hover{
+.treaty-icon-main:hover {
   border: 1px solid #999999;
   border-radius: 15px;
 }
 
-.learn-more-local-buttons{
+.learn-more-local-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-around;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
-.map-local-link{
+.map-local-link {
   width: 40%;
   text-align: center;
 }
 
 .bc:hover,
 .sask:hover,
-.manitoba:hover{
+.manitoba:hover {
   cursor: not-allowed;
 }
 
 .map-local-link,
 .return-link,
-.mobile-local-button{
+.mobile-local-button {
   border: 1px solid #999999;
   border-radius: 10px;
   padding: 1rem;
@@ -197,7 +225,8 @@ a:hover{
 
 .map-local-link:hover,
 .return-link:hover,
-.mobile-local-button:hover{
+.mobile-local-button:hover {
+  -webkit-transition: 0.5s;
   transition: 0.5s;
   background-color: #999999;
   color: #333;
@@ -205,27 +234,30 @@ a:hover{
   text-decoration: none;
 }
 
-.mobile-local-button{
+.mobile-local-button {
   margin: 0 auto;
 }
 
-.button-container{
+.button-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-around;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
-.return-link{
+.return-link {
   width: 10rem;
-  margin-left: 5rem; 
+  margin-left: 5rem;
   margin-top: 3rem;
 }
 
-.province-hover{
+.province-hover {
   color: #999999;
   padding: 0;
 }
 
-.local{
+.local {
   background-image: url(../img/local-arrow.svg);
   background-repeat: no-repeat;
   width: 6%;
@@ -233,23 +265,26 @@ a:hover{
   padding: 1rem;
 }
 
-.holder-mobile{
+.holder-mobile {
   display: none;
   width: 100%;
   margin: 0 auto;
 }
 
-.holder-mobile>div>img{
+.holder-mobile > div > img {
   width: 25rem;
   margin: 0 auto;
 }
 
-.slideshow-buttons{
+.slideshow-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-around;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
-.slideshow-buttons>span{
+.slideshow-buttons > span {
   height: 4rem;
   width: 4rem;
   margin: 0;
@@ -259,10 +294,10 @@ a:hover{
 
 .next,
 .prev {
-	background-color: #0c2034;
-	border-radius: 50%;
-	color: #ddd;
-	display: inline-block;
+  background-color: #0c2034;
+  border-radius: 50%;
+  color: #ddd;
+  display: inline-block;
   font-size: 210%;
   font-weight: bold;
   margin-top: 30%;
@@ -271,64 +306,184 @@ a:hover{
 }
 
 .next:hover,
-.prev:hover{
+.prev:hover {
   cursor: pointer;
 }
 
 /*---------- Respondsive ----------*/
-
-@media only screen and (max-width: 1000px){
+@media only screen and (max-width: 1000px) {
   .alberta-svg,
   .bc-svg,
   .sask-svg,
-  .manitoba-svg{
+  .manitoba-svg {
     width: 20rem;
     height: 26.6rem;
   }
-
-  .local-holder{
+  .local-holder {
     width: 80%;
   }
   .alberta-content,
   .bc-content,
   .sask-content,
-  .manitoba-content{
+  .manitoba-content {
     width: 90%;
   }
 }
 
-@media only screen and (max-width: 800px){
-  .holder{
+@media only screen and (max-width: 800px) {
+  .holder {
     display: none;
   }
-
-  .holder-mobile{
+  .holder-mobile {
     display: block;
   }
 }
- /*---------- utils ----------*/
 
-.text-center{
+/*---------- utils ----------*/
+.text-center {
   text-align: center;
 }
 
-.flex-column{
+.flex-column {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-.grey{
+.grey {
   background-color: #999999;
 }
 
-.hidden{
+.hidden {
   display: none;
 }
 
-.no-padding{
+.no-padding {
   padding: 0;
 }
 
-.width-full{
+.width-full {
   width: 100%;
 }
+
+/* ------------------------------------------------------
+                DASHBOARD STYLES
+------------------------------------------------------ */
+/*! minireset.css v0.0.5 | MIT License | github.com/jgthms/minireset.css */
+html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+ul {
+  list-style: none;
+}
+
+button, input, select, textarea {
+  margin: 0;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+img, video {
+  height: auto;
+  max-width: 100%;
+}
+
+iframe {
+  border: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td, th {
+  padding: 0;
+  text-align: left;
+}
+
+/*******    MEDIA QUERIES     *******/
+/*******    CONTENT PADDING    *******/
+/*******    HEADING STYLES     *******/
+/*******      FORM STYLES      *******/
+html {
+  font-size: 62.5%;
+}
+
+.dashboard-body {
+  background: white;
+  line-height: 1.5;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0.1rem, black), color-stop(0.1rem, transparent));
+  background-image: linear-gradient(black 0.1rem, transparent 0.1rem);
+  background-size: auto 2.4rem;
+}
+
+.dashboard-body h1, .dashboard-body h2, .dashboard-body h3, .dashboard-body h4, .dashboard-body h5, .dashboard-body h6, .dashboard-body p {
+  color: black;
+}
+
+h2, h3, h4, h5, h6, p {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+  margin-bottom: 2.4rem;
+}
+
+h1 {
+  font-size: 6.9rem;
+  line-height: 7.2rem;
+  margin-bottom: 4.8rem;
+}
+
+h2 {
+  font-size: 6.1rem;
+  line-height: 7.2rem;
+}
+
+h3 {
+  font-size: 5.1rem;
+  line-height: 7.2rem;
+}
+
+h4 {
+  font-size: 4.8rem;
+  line-height: 7.2rem;
+}
+
+h5 {
+  font-size: 4.1rem;
+  line-height: 4.8rem;
+}
+
+h6 {
+  font-size: 3.7em;
+  line-height: 4.8rem;
+}
+
+p, a {
+  font-size: 1.6rem;
+  max-width: 54rem;
+}
+
+p {
+  color: green;
+}
+/*# sourceMappingURL=styles.css.map */
