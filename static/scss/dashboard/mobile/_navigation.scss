@@ -1,23 +1,30 @@
 .dashboard-body{
 
     .dashboard-navigation{
-
+        width: 100%;
+        position: absolute;
+        top: 5.3rem;
+        right: -100%;
+        background-color: #000000;
+        padding-bottom: 2rem;
+        transition: all 0.7s ease-in-out;
+       
         ul{
-
             @include flex;
-
             li{
-
                 a{
-                    @include link-styles(black, white, black);
+                    @include navlink-styles($dark, $white, $dark, $navlink-font-size);
                     @include flex;
                 }
-
             }
-
         }
 
         
+        @include break(laptop){
+            
+        }
+
+       
 
     }
 

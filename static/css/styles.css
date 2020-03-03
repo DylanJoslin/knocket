@@ -433,8 +433,6 @@ html {
 .dashboard-body {
   background: white;
   line-height: 1.5;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0.1rem, black), color-stop(0.1rem, transparent));
-  background-image: linear-gradient(black 0.1rem, transparent 0.1rem);
   background-size: auto 2.4rem;
 }
 
@@ -484,6 +482,35 @@ html {
   max-width: 54rem;
 }
 
+.dasboard-header {
+  position: relative;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 1px solid black;
+  padding: 1rem 1.6rem;
+  -webkit-transition: all 0.7s ease-in-out;
+  transition: all 0.7s ease-in-out;
+}
+
+.dashboard-body .dashboard-navigation {
+  width: 100%;
+  position: absolute;
+  top: 5.3rem;
+  right: -100%;
+  background-color: #000000;
+  padding-bottom: 2rem;
+  -webkit-transition: all 0.7s ease-in-out;
+  transition: all 0.7s ease-in-out;
+}
+
 .dashboard-body .dashboard-navigation ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -492,13 +519,64 @@ html {
 
 .dashboard-body .dashboard-navigation ul li a {
   text-decoration: none;
-  color: black;
+  color: #404b5e;
   background: white;
-  border: 1px solid black;
+  border: 1px solid #404b5e;
   border-radius: 1rem;
   padding: 2rem;
+  font: arial;
+  font-size: 1.6rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.dashboard-header .menu-icon {
+  width: 3rem;
+}
+
+.dashboard-header .menu-icon:after,
+.dashboard-header .menu-icon:before,
+.dashboard-header .menu-icon div {
+  background-color: #020202;
+  border-radius: 0.3rem;
+  content: '';
+  display: block;
+  height: 0.3rem;
+  margin: 0.5rem 0;
+  -webkit-transition: all 0.7s ease-in-out;
+  transition: all 0.7s ease-in-out;
+}
+
+.dashboard-header .close-button {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.4rem;
+  text-align: right;
+  padding: 1rem;
+  padding-top: 6rem;
+  text-align: center;
+  border-bottom: 2px solid black;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.dashboard-header .icon-closed:before {
+  -webkit-transform: translateY(7px) rotate(135deg);
+          transform: translateY(7px) rotate(135deg);
+}
+
+.dashboard-header .icon-closed:after {
+  -webkit-transform: translateY(-9px) rotate(-135deg);
+          transform: translateY(-9px) rotate(-135deg);
+}
+
+.dashboard-header .icon-closed div {
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+.dashboard-header .menu-toggle {
+  position: absolute;
+  right: 0;
 }
 /*# sourceMappingURL=styles.css.map */
