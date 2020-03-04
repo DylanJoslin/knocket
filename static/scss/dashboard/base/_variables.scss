@@ -6,12 +6,18 @@ $white: rgb(255, 255, 255);
 $dark: rgb(64, 75, 94);
 $nav-shown: rgb(116, 147, 201);
 
+$acc-background: rgb(116, 147, 201);
+$acc-hover-background: rgb(64, 75, 94);
+
 
 /*******    FONTS     *******/
+$paragraph: 1.6rem;
 $heading-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 $navlink-font: arial;
 $navlink-font-size: 1.8rem;
 $signed-in: 1.4rem;
+
+$acc-tabs: 2rem;
 
 /*******      FORM STYLES      *******/
 $input-border: 1px solid black;

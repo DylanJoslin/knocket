@@ -6,5 +6,20 @@ $(document).ready(function(){
         $('.dashboard-header').toggleClass('menu-closed-header-style ');
     });
 
+    $('.acc-user-dropdown').click(function(event){
+        console.log("clicked");
+
+        $('.acc-user-info').toggleClass('closed');
+        if($('.acc-user-info').hasClass('closed')){
+            $('.icon').html('+');
+        } else {
+            $('.icon').html('-');
+        }
+       
+
+
+        event.preventDefault();
+    });
+
 });
 
