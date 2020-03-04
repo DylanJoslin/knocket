@@ -86,13 +86,6 @@
 @mixin accordian-info-shown(){
   border: 1px solid $acc-background;
   padding: 1rem;
-  transition: 0.5s ease-out;
-}
-
-@mixin accordian-info-hidden(){
-  padding: 0;
-  max-height: 0;
-  overflow: hidden;
 }
 
 @mixin innerContainer($width){

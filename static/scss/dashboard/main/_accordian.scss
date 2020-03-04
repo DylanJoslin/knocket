@@ -1,10 +1,9 @@
 .dashboard-main{
 
-    .users-accordian{
+    .accordian{
 
         .acc-tabs{
             margin-bottom: 0.8rem;
-            
 
             a{
                 @include accordian-tabs;
@@ -35,14 +34,12 @@
                 .acc-user-info{
                     @include accordian-info-shown;
                 }
-
-                 .closed{
-                    @include accordian-info-hidden;
-                }
                 
             }
 
         }
+
+        // USERS ACCORDIAN
 
     }
 
