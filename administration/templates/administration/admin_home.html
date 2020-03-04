@@ -13,17 +13,25 @@
 
         <div class="acc-content"> <!-- Content-->
 
-            
+            {% for user in users %}
             {% comment %} This part is what is repeated for each new user {% endcomment %}
+            {% if user.userprofile.access == 'pending' %}
             <div class="acc-single"> <!-- Single user -->
                     <div class="acc-user-dropdown"><!-- User Dropdown -->
-                            <p class="acc-username">username</p>
+                            <p class="acc-username">{{ user.first_name }} {{ user.last_name }}</p>
                             <p class="icon">+</p>
                     </div><!-- User Dropdown -->
                     <div class="acc-user-info closed"><!-- User information -->
-                            <p>Some content</p>
+                            <p>User: {{ user.username }}</p>
+                            <p>Email: {{ user.email }}</p>
+                            <p>School: {{ user.userprofile.school }}</p>
+                            <p>Access Level: {{ user.userprofile.access }}</p>
+
                     </div><!-- User information -->
             </div><!-- Single user -->
+            {% endif %}
+
+            {% endfor %}
 
 
         </div><!-- Content-->
