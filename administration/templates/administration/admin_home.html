@@ -7,27 +7,33 @@
     <div class="users-accordian"><!-- Accordian -->
 
         <div class="acc-tabs"><!-- Tabs-->
-            <a href="#">New</a>
-            <a href="#">Registered</a>
+            <a href="{% url 'administration' %}new">New</a>
+            <a href="{% url 'administration' %}student">Students</a>
+            <a href="{% url 'administration' %}teacher">Teachers</a>
+            <a href="{% url 'administration' %}elder">Elders</a>
         </div><!-- Tabs-->
 
         <div class="acc-content"> <!-- Content-->
+            {% for user in users %}
+                {% if user.userprofile.access == access %}
+                {% comment %} This part is what is repeated for each new user {% endcomment %}
+                <div class="acc-single"> <!-- Single user -->
+                        <div class="acc-user-dropdown"><!-- User Dropdown -->
+                                <p class="acc-username">{{ user.first_name }} {{ user.last_name }}</p>
+                                <p class="icon">+</p>
+                        </div><!-- User Dropdown -->
+                        <div class="acc-user-info closed"><!-- User information -->
+                                <p>User: {{ user.username }}</p>
+                                <p>Email: {{ user.email }}</p>
+                                <p>School: {{ user.userprofile.school }}</p>
+                                <p>Access Level: {{ user.userprofile.access }}</p>
 
+                        </div><!-- User information -->
+                </div><!-- Single user -->
+                
+
+                {% endif %}
+            {% endfor %}
             
-            {% comment %} This part is what is repeated for each new user {% endcomment %}
-            <div class="acc-single"> <!-- Single user -->
-                    <div class="acc-user-dropdown"><!-- User Dropdown -->
-                            <p class="acc-username">username</p>
-                            <p class="icon">+</p>
-                    </div><!-- User Dropdown -->
-                    <div class="acc-user-info closed"><!-- User information -->
-                            <p>Some content</p>
-                    </div><!-- User information -->
-            </div><!-- Single user -->
-
-
-        </div><!-- Content-->
-    </div> <!-- Accordian -->
-
 {% endblock content %}
 
