@@ -1,18 +1,20 @@
 from django.db import models
 from django import forms
 from django.contrib.auth.models import User
+from PIL import Image
 
 # UserProfile extends Django's defualt User and adds
 # additional properties to the student.
 class UserProfile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
+    image = models.ImageField(default='profile_pics/default.jpg', upload_to='profile_pics')
 
     # Add additional school choices in the future by
     # adding to this list. They will auto populate in
     # the register form.
     SCHOOL_CHOICES = [
         ('Amiskwaciy Academy', 'Amiskwaciy Academy'),
-        ('NAIT', 'NAIT'),
+        ('NAIT', 'NAIT')
     ]
 
     # Access level grants certain permissions:
@@ -36,7 +38,7 @@ class UserProfile(models.Model):
     )
 
     school = models.CharField(
-        max_length = 20,
+        max_length = 100,
         choices = SCHOOL_CHOICES,
         default = 'amiskwaciy'
     )
@@ -46,4 +48,11 @@ class UserProfile(models.Model):
     # This can be rectified with the pylint plugin.
     def __str__(self):
         return self.user.username
+
+    def save(self):
+        super().save()
+        img = Image.open(self.image.path)
+        img.save(self.image.path)
+
+        
     

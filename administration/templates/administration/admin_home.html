@@ -1,7 +1,30 @@
-{% extends 'home/base.html' %}
+{% extends 'administration/base.html' %}
 
 {% block content %}
-    <h2>Admin Home</h2>
+    <h2>Welcome (name) to your dashboard</h2>
+    <p>Here you can manage the users and the content on your site.</p>
+
+    <div class="users-accordian">
+
+        <div class="acc-tabs"><!-- Tabs-->
+            <a href="#">New</a>
+            <a href="#">Registered</a>
+        </div><!-- Tabs-->
+
+        <div class="acc-content"> <!-- Content-->
+
+            <div class="acc-single"> <!-- Single user -->
+                    <a href="#" class="acc-user-dropdown"><!-- User Dropdown -->
+                        <p class="acc-username">username</p>
+                        <p class="icon">+</p>
+                    </a><!-- User Dropdown -->
+                    <div class="acc-user-info"><!-- User information -->
+                        <p>Some content</p>
+                    </div><!-- User information -->
+            </div><!-- Single user -->
+
+        </div><!-- Content-->
+    </div>
 
 {% endblock content %}
 

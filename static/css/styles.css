@@ -1,26 +1,6 @@
-/* 
-    In this file is:
-        1. variables
-        2. mixins
-        3.  partials
-    
-    Everything must be in this order for it to work since the mixins 
-    need access to the variables and the partials need access to both.
-*/
-/*-----------------------------------------------------------------------
-        VARIABLES
---------------------------------------------------------------------------*/
-/*******    MEDIA QUERIES     *******/
-/*******    CONTENT PADDING    *******/
-/*******    HEADING STYLES     *******/
-/*******      FORM STYLES      *******/
-/*-----------------------------------------------------------------------
-        MIXINS
---------------------------------------------------------------------------*/
-/*-----------------------------------------------------------------------
-        PARTIALS
---------------------------------------------------------------------------*/
-/*******      MAP STYLES      *******/
+/* ------------------------------------------------------
+                MAP STYLES
+------------------------------------------------------ */
 body {
   background-color: white;
   font-family: 'Poppins', sans-serif;
@@ -29,7 +9,6 @@ body {
   color: #999999;
   background-color: #0c2034;
   /* background: linear-gradient(#0ff 0.0555555em, transparent 0.0555555em); */
-  background-size: auto 1.5em;
   /*24px for ideal gap*/
 }
 
@@ -64,7 +43,6 @@ h5 {
    ===========================================*/
 /*---------- General ----------*/
 main {
-  background-color: #0c2034;
   height: 100%;
   padding: 5rem 0;
 }
@@ -392,7 +370,9 @@ a:hover {
   width: 100%;
 }
 
-/*******      BASE STYLES      *******/
+/* ------------------------------------------------------
+                DASHBOARD STYLES
+------------------------------------------------------ */
 /*! minireset.css v0.0.5 | MIT License | github.com/jgthms/minireset.css */
 html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
   margin: 0;
@@ -441,60 +421,316 @@ td, th {
   text-align: left;
 }
 
+/*******    CONTENT PADDING    *******/
+/*******    COLORS    *******/
+/*******    FONTS     *******/
+/*******      FORM STYLES      *******/
 html {
   font-size: 62.5%;
 }
 
-body {
-  margin-top: 4.8rem;
-  font-family: 'Roboto Slab', serif;
+.dashboard-body {
+  background: white;
   line-height: 1.5;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0.1rem, black), color-stop(0.1rem, transparent));
-  background-image: linear-gradient(black 0.1rem, transparent 0.1rem);
   background-size: auto 2.4rem;
 }
 
-h2, h3, h4, h5, h6, p {
+.dashboard-body h1, .dashboard-body h2, .dashboard-body h3, .dashboard-body h4, .dashboard-body h5, .dashboard-body h6, .dashboard-body p {
+  color: black;
+}
+
+.dashboard-body h2, .dashboard-body h3, .dashboard-body h4, .dashboard-body h5, .dashboard-body h6, .dashboard-body p {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: white;
   margin-bottom: 2.4rem;
 }
 
-h1 {
+.dashboard-body h2 {
+  color: #404b5e;
+}
+
+.dashboard-body h1 {
   font-size: 6.9rem;
   line-height: 7.2rem;
   margin-bottom: 4.8rem;
 }
 
-h2 {
+.dashboard-body h2 {
   font-size: 6.1rem;
   line-height: 7.2rem;
 }
 
-h3 {
+.dashboard-body h3 {
   font-size: 5.1rem;
   line-height: 7.2rem;
 }
 
-h4 {
+.dashboard-body h4 {
   font-size: 4.8rem;
   line-height: 7.2rem;
 }
 
-h5 {
+.dashboard-body h5 {
   font-size: 4.1rem;
   line-height: 4.8rem;
 }
 
-h6 {
+.dashboard-body h6 {
   font-size: 3.7em;
   line-height: 4.8rem;
 }
 
-p, a {
-  font-size: 1.6rem;
-  max-width: 54rem;
+.dashboard-body a {
+  text-decoration: none;
 }
 
-/*******      DASHBOARD STYLES      *******/
+.dashboard-body li {
+  list-style: none;
+}
+
+.dashboard-header {
+  padding: 1rem 1.6rem;
+  background: #404b5e;
+}
+
+@media screen and (max-width: 1099px) {
+  .dashboard-header {
+    position: relative;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    align-items: center;
+    -webkit-transition: all 0.7s ease-in-out;
+    transition: all 0.7s ease-in-out;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .dashboard-header {
+    width: 24rem;
+    height: 200vh;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+}
+
+.dashboard-header h1 {
+  margin: 0;
+  font-size: 4rem;
+  color: white;
+}
+
+@media screen and (min-width: 1100px) {
+  .dashboard-header h1 {
+    margin: 3rem 0;
+    text-align: center;
+  }
+}
+
+.menu-closed-header-style {
+  background-color: #7493c9;
+}
+
+@media screen and (min-width: 1100px) {
+  .menu-closed-header-style {
+    background: #404b5e;
+  }
+}
+
+@media screen and (max-width: 1099px) {
+  .dashboard-body .dashboard-navigation {
+    width: 100%;
+    position: absolute;
+    top: 5.3rem;
+    right: -100%;
+    background-color: #7493c9;
+    padding-bottom: 4rem;
+    -webkit-transition: all 0.7s ease-in-out;
+    transition: all 0.7s ease-in-out;
+    margin-top: 3.9rem;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .dashboard-body .dashboard-navigation {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .dashboard-body .dashboard-navigation {
+    display: inline-block;
+    width: 22rem;
+    background: #404b5e;
+  }
+}
+
+.dashboard-body .dashboard-navigation .nav-link a {
+  color: white;
+  border: 1px solid white;
+  border-radius: 1rem;
+  margin: 2rem;
+  display: block;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (min-width: 1100px) {
+  .dashboard-body .dashboard-navigation .nav-link a {
+    margin: 0;
+    margin-right: 1rem;
+    margin-bottom: 3rem;
+  }
+}
+
+.dashboard-body .dashboard-navigation .nav-link a p {
+  margin-bottom: 0;
+  font-size: 1.8rem;
+  font-family: arial;
+}
+
+.dashboard-body .dashboard-navigation .nav-link a p span {
+  font-size: 1.4rem;
+}
+
+.dashboard-body .dashboard-navigation .logout {
+  color: white;
+  border: 1px solid white;
+  border-radius: 1rem;
+  margin: 2rem;
+  display: block;
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+@media screen and (min-width: 1100px) {
+  .dashboard-body .dashboard-navigation .logout {
+    margin: 0;
+    margin-right: 1rem;
+    margin-bottom: 3rem;
+  }
+}
+
+@media screen and (max-width: 1099px) {
+  .dashboard-body .dashboard-navigation .logout {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .dashboard-body .dashboard-navigation .logout .signed-in {
+    padding-bottom: 1.5rem;
+  }
+}
+
+.dashboard-body .dashboard-navigation .logout a p {
+  text-align: right;
+}
+
+.dashboard-body .dashboard-navigation .logout p {
+  margin-bottom: 0;
+  font-size: 1.8rem;
+  font-family: arial;
+}
+
+.dashboard-body .dashboard-navigation .logout p span {
+  font-size: 1.4rem;
+}
+
+.dashboard-header .menu-icon {
+  width: 3rem;
+}
+
+@media screen and (min-width: 1100px) {
+  .dashboard-header .menu-icon {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1099px) {
+  .dashboard-header .menu-icon:after,
+  .dashboard-header .menu-icon:before,
+  .dashboard-header .menu-icon div {
+    background-color: white;
+    border-radius: 0.3rem;
+    content: '';
+    display: block;
+    height: 0.3rem;
+    margin: 0.5rem 0;
+    -webkit-transition: all 0.7s ease-in-out;
+    transition: all 0.7s ease-in-out;
+  }
+  .dashboard-header .close-button {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.4rem;
+    text-align: right;
+    padding: 1rem;
+    padding-top: 6rem;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .dashboard-header .icon-closed:before {
+    -webkit-transform: translateY(7px) rotate(135deg);
+            transform: translateY(7px) rotate(135deg);
+  }
+  .dashboard-header .icon-closed:after {
+    -webkit-transform: translateY(-9px) rotate(-135deg);
+            transform: translateY(-9px) rotate(-135deg);
+  }
+  .dashboard-header .icon-closed div {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  .dashboard-header .menu-toggle {
+    position: absolute;
+    right: 0;
+  }
+}
+
+.dashboard-main {
+  padding: 1rem;
+}
+
+@media screen and (min-width: 800px) {
+  .dashboard-main {
+    padding: 3rem;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .dashboard-main {
+    padding: 0rem 3rem 3rem 28rem;
+  }
+}
+
+.dashboard-main p {
+  color: #404b5e;
+  font-size: 1.6rem;
+}
 /*# sourceMappingURL=styles.css.map */

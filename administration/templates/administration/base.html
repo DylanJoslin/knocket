@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indigenous Storytelling</title>
+    <script src="https://kit.fontawesome.com/8a1af29f7b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body class="dashboard-body">
+
+    <header class="dashboard-header">
+        <h1>Title</h1>
+        <nav class="dashboard-navigation"> 
+            <ul class="menu-links">
+                <li class="nav-link">
+                    <a href="#">
+                        <p>Home</p>
+                        <p><i class="fas fa-home"></i></p>
+                    </a>
+                </li>
+                <li class="nav-link">
+                    <a href="#">
+                        <p>Users</p>
+                        <p><i class="fas fa-users"></i></p>
+                    </a>
+                </li>
+                <li class="nav-link">
+                    <a href="#">
+                        <p>Content</p>
+                        <p><i class="fas fa-image"></i></p>
+                    </a>
+                </li>
+                <li class="logout">
+                        <p class="signed-in"><span>Signed in as,</span><br> John Doe</p>
+                         <a href="#"><p>Logout <i class="fas fa-sign-out-alt"></i></p></a>
+                </li>
+            </ul>
+        </nav>
+        <div class="menu-icon">
+            <div></div>
+        </div>
+    </header>
+
+
+    <main class="dashboard-main">
+        <h1>{% block content%}{% endblock %}</h1>
+    </main>
+
+    <script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+    <script src="{% static 'js/dashboard.js' %}"></script>
+</body>
+</html>
