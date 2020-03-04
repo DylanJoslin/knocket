@@ -52,20 +52,49 @@
 
   }//nav-border
 
-  @mixin accordian(){
-    
-  }
-
-@mixin para-width{
+@mixin para-width(){
   max-width: 54rem;
 }//para
-
 
 @mixin nav-flex(){
     display: flex;
     justify-content: space-between;
     align-items: center;
 }//flex
+
+@mixin accordian-tabs(){
+  background: $acc-background;
+  color: $white;
+  padding: 1.2rem 4rem;
+  margin-bottom: 3rem;
+  font-size: $acc-tabs;
+  border-top-left-radius: 1.6rem;
+  border-top-right-radius: 1.6rem;
+}
+
+@mixin accordian-dropdown(){
+  background: $acc-background;
+  color: $white;
+  padding: 1rem 2rem;
+  border-top-right-radius: 1.6rem;
+}
+
+@mixin acc-hover{
+  background: $acc-hover-background;
+}
+
+@mixin accordian-info-shown(){
+  border: 1px solid $acc-background;
+  padding: 1rem;
+  transition: max-height 0.2s ease-out;
+}
+
+@mixin accordian-info-hidden(){
+  padding: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-in;
+}
 
 @mixin innerContainer($width){
     max-width: $width;
