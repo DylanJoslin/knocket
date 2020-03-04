@@ -441,7 +441,7 @@ html {
 
 .dashboard-body h2, .dashboard-body h3, .dashboard-body h4, .dashboard-body h5, .dashboard-body h6, .dashboard-body p {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  color: white;
+  color: #404b5e;
   margin-bottom: 2.4rem;
 }
 
