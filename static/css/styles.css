@@ -733,4 +733,59 @@ html {
   color: #404b5e;
   font-size: 1.6rem;
 }
+
+.dashboard-main .users-accordian .acc-tabs {
+  margin-bottom: 0.8rem;
+}
+
+.dashboard-main .users-accordian .acc-tabs a {
+  background: #7493c9;
+  color: white;
+  padding: 1.2rem 4rem;
+  margin-bottom: 3rem;
+  font-size: 2rem;
+  border-top-left-radius: 1.6rem;
+  border-top-right-radius: 1.6rem;
+}
+
+.dashboard-main .users-accordian .acc-content .acc-single .acc-user-dropdown:hover {
+  background: #404b5e;
+}
+
+.dashboard-main .users-accordian .acc-content .acc-single .acc-user-dropdown {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #7493c9;
+  color: white;
+  padding: 1rem 2rem;
+  border-top-right-radius: 1.6rem;
+}
+
+.dashboard-main .users-accordian .acc-content .acc-single .acc-user-dropdown p {
+  font-size: 2rem;
+  color: white;
+  margin-bottom: 0;
+}
+
+.dashboard-main .users-accordian .acc-content .acc-single .acc-user-info {
+  border: 1px solid #7493c9;
+  padding: 1rem;
+  -webkit-transition: max-height 0.2s ease-out;
+  transition: max-height 0.2s ease-out;
+}
+
+.dashboard-main .users-accordian .acc-content .acc-single .closed {
+  padding: 0;
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: max-height 0.2s ease-in;
+  transition: max-height 0.2s ease-in;
+}
 /*# sourceMappingURL=styles.css.map */

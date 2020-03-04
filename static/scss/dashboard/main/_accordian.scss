@@ -2,7 +2,48 @@
 
     .users-accordian{
 
-        
+        .acc-tabs{
+            margin-bottom: 0.8rem;
+            
+
+            a{
+                @include accordian-tabs;
+            }
+
+        }
+
+        .acc-content{
+            
+            .acc-single{
+
+                .acc-user-dropdown:hover{
+                   @include acc-hover;
+                }
+
+                .acc-user-dropdown{
+                    @include nav-flex;
+                    @include accordian-dropdown;
+
+                    p{
+                        font-size: $acc-tabs;
+                        color: $white;
+                        margin-bottom: 0;
+                    }
+                    
+                }
+
+                .acc-user-info{
+                    @include accordian-info-shown;
+                }
+
+                 .closed{
+                    @include accordian-info-hidden;
+                }
+                
+            }
+
+        }
+
     }
 
 
