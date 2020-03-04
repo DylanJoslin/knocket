@@ -86,14 +86,13 @@
 @mixin accordian-info-shown(){
   border: 1px solid $acc-background;
   padding: 1rem;
-  transition: max-height 0.2s ease-out;
+  transition: 0.5s ease-out;
 }
 
 @mixin accordian-info-hidden(){
   padding: 0;
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.2s ease-in;
 }
 
 @mixin innerContainer($width){
