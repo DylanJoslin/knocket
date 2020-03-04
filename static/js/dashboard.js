@@ -15,12 +15,14 @@ $(document).ready(function(){
             allPanels.slideUp();
             var content = $(this).siblings();
             content.slideDown();
-            // var icon = $(this).find('.icon-plus');
-            // $(this).toggleClass('open');
+            var iconPlus = $(this).find('.icon-plus');
+            var iconMinus = $(this).find('.icon-minus');
 
-            // if($(this).hasClass('open')){
-            //     icon.html('-');
-            // }
+            // console.log(iconPlus);
+            // console.log(iconMinus);
+            iconPlus.addClass('hidden');
+            iconMinus.removeClass('hidden');
+            
         });
       
       })(jQuery);
