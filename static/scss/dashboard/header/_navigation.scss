@@ -26,7 +26,7 @@
 
             a{
                 @include nav-links;
-                @include nav-flex;
+                @include flex(space-between);
             
                 p{
                     margin-bottom: 0;
@@ -51,7 +51,7 @@
             @include nav-links;
 
             @include breakpoint(maxTablet){
-                @include nav-flex;
+                @include flex(space-between);
             }//break
 
             .signed-in{

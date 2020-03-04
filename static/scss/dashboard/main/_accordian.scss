@@ -2,11 +2,23 @@
 
     .accordian{
 
+        .hidden{
+            display:none;
+        }
+
         .acc-tabs{
-            margin-bottom: 0.8rem;
+            margin-bottom: 0.5rem;
+
+            @include breakpoint(laptop){
+                margin-bottom: 0.8rem;
+            }
 
             a{
                 @include accordian-tabs;
+            }
+
+            a:hover{
+                @include acc-hover;
             }
 
         }
@@ -20,8 +32,12 @@
                 }
 
                 .acc-user-dropdown{
-                    @include nav-flex;
+                    @include flex(space-between);
                     @include accordian-dropdown;
+
+                    .acc-badge{
+                        @include accordian-badge;
+                    }
 
                     p{
                         font-size: $acc-tabs;
@@ -32,10 +48,69 @@
                 }
 
                 .acc-user-info{
+
                     @include accordian-info-shown;
+                    @include breakpoint(tablet){
+                        padding: 2rem;
+                        @include flex(unset);
+                    }
+
+                    @include breakpoint(desktop){
+                        padding: 0.8rem 0.8rem 0.8rem 2rem;
+                    }
+
+                    .information{
+
+                        p{
+                            margin-bottom: 1rem;
+
+                            @include breakpoint(desktop){
+                                padding-right: 1.4rem;
+                            }
+                        }
+
+                        @include breakpoint(desktop){
+                            @include flex(unset);
+                        }
+                    }
+                    
+                    .options {
+                        padding-top: 1rem;
+
+                        @include breakpoint(tablet){
+                            padding-left: 3rem;
+                        }
+
+                        @include breakpoint(laptop){
+                            @include flex(unset);
+                            
+                        }
+
+                        a{
+                            @include button;
+                            @include breakpoint(tablet){
+                                width: 30rem;
+                            }
+
+                            @include breakpoint(laptop){
+                                width: 18rem;
+                                margin-right: 1rem;
+                            }
+                            
+                        }
+
+                        a:hover{
+                            @include button-hover;
+                        }
+                    }
+                    
                 }
                 
             }
+
+            .acc-single:first-child .acc-user-dropdown{
+                border-top-right-radius: 1.6rem;
+              }
 
         }
 

@@ -493,7 +493,7 @@ html {
   background: #404b5e;
 }
 
-@media screen and (max-width: 1099px) {
+@media screen and (max-width: 999px) {
   .dashboard-header {
     position: relative;
     width: 100%;
@@ -512,7 +512,7 @@ html {
   }
 }
 
-@media screen and (min-width: 1100px) {
+@media screen and (min-width: 1000px) {
   .dashboard-header {
     width: 24rem;
     height: 200vh;
@@ -528,7 +528,7 @@ html {
   color: white;
 }
 
-@media screen and (min-width: 1100px) {
+@media screen and (min-width: 1000px) {
   .dashboard-header h1 {
     margin: 3rem 0;
     text-align: center;
@@ -539,13 +539,13 @@ html {
   background-color: #7493c9;
 }
 
-@media screen and (min-width: 1100px) {
+@media screen and (min-width: 1000px) {
   .menu-closed-header-style {
     background: #404b5e;
   }
 }
 
-@media screen and (max-width: 1099px) {
+@media screen and (max-width: 999px) {
   .dashboard-body .dashboard-navigation {
     width: 100%;
     position: absolute;
@@ -559,13 +559,13 @@ html {
   }
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 700px) {
   .dashboard-body .dashboard-navigation {
     width: 50%;
   }
 }
 
-@media screen and (min-width: 1100px) {
+@media screen and (min-width: 1000px) {
   .dashboard-body .dashboard-navigation {
     display: inline-block;
     width: 22rem;
@@ -592,7 +592,7 @@ html {
           align-items: center;
 }
 
-@media screen and (min-width: 1100px) {
+@media screen and (min-width: 1000px) {
   .dashboard-body .dashboard-navigation .nav-link a {
     margin: 0;
     margin-right: 1rem;
@@ -620,7 +620,7 @@ html {
   margin-bottom: 2rem;
 }
 
-@media screen and (min-width: 1100px) {
+@media screen and (min-width: 1000px) {
   .dashboard-body .dashboard-navigation .logout {
     margin: 0;
     margin-right: 1rem;
@@ -628,7 +628,7 @@ html {
   }
 }
 
-@media screen and (max-width: 1099px) {
+@media screen and (max-width: 999px) {
   .dashboard-body .dashboard-navigation .logout {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -642,7 +642,7 @@ html {
   }
 }
 
-@media screen and (min-width: 1100px) {
+@media screen and (min-width: 1000px) {
   .dashboard-body .dashboard-navigation .logout .signed-in {
     padding-bottom: 1.5rem;
   }
@@ -666,13 +666,13 @@ html {
   width: 3rem;
 }
 
-@media screen and (min-width: 1100px) {
+@media screen and (min-width: 1000px) {
   .dashboard-header .menu-icon {
     display: none;
   }
 }
 
-@media screen and (max-width: 1099px) {
+@media screen and (max-width: 999px) {
   .dashboard-header .menu-icon:after,
   .dashboard-header .menu-icon:before,
   .dashboard-header .menu-icon div {
@@ -717,13 +717,13 @@ html {
   padding: 1rem;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 700px) {
   .dashboard-main {
     padding: 3rem;
   }
 }
 
-@media screen and (min-width: 1100px) {
+@media screen and (min-width: 1000px) {
   .dashboard-main {
     padding: 0rem 3rem 3rem 28rem;
   }
@@ -734,18 +734,38 @@ html {
   font-size: 1.6rem;
 }
 
+.dashboard-main .accordian .hidden {
+  display: none;
+}
+
 .dashboard-main .accordian .acc-tabs {
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.5rem;
+}
+
+@media screen and (min-width: 1000px) {
+  .dashboard-main .accordian .acc-tabs {
+    margin-bottom: 0.8rem;
+  }
 }
 
 .dashboard-main .accordian .acc-tabs a {
   background: #7493c9;
   color: white;
-  padding: 1.2rem 4rem;
+  padding: 1rem 3rem;
   margin-bottom: 3rem;
   font-size: 2rem;
   border-top-left-radius: 1.6rem;
   border-top-right-radius: 1.6rem;
+}
+
+@media screen and (min-width: 700px) {
+  .dashboard-main .accordian .acc-tabs a {
+    padding: 1.2rem 3rem;
+  }
+}
+
+.dashboard-main .accordian .acc-tabs a:hover {
+  background: #404b5e;
 }
 
 .dashboard-main .accordian .acc-content .acc-single .acc-user-dropdown:hover {
@@ -765,7 +785,16 @@ html {
   background: #7493c9;
   color: white;
   padding: 1rem 2rem;
-  border-top-right-radius: 1.6rem;
+}
+
+.dashboard-main .accordian .acc-content .acc-single .acc-user-dropdown .acc-badge {
+  background: white;
+  color: #404b5e;
+  padding: 0.5rem 1rem;
+  font-size: 1.4rem;
+  border: 1px solid #404b5e;
+  border-radius: 1rem;
+  margin-left: 1rem;
 }
 
 .dashboard-main .accordian .acc-content .acc-single .acc-user-dropdown p {
@@ -777,5 +806,108 @@ html {
 .dashboard-main .accordian .acc-content .acc-single .acc-user-info {
   border: 1px solid #7493c9;
   padding: 1rem;
+}
+
+@media screen and (min-width: 700px) {
+  .dashboard-main .accordian .acc-content .acc-single .acc-user-info {
+    padding: 2rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: unset;
+        -ms-flex-pack: unset;
+            justify-content: unset;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .dashboard-main .accordian .acc-content .acc-single .acc-user-info {
+    padding: 0.8rem 0.8rem 0.8rem 2rem;
+  }
+}
+
+.dashboard-main .accordian .acc-content .acc-single .acc-user-info .information p {
+  margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 1200px) {
+  .dashboard-main .accordian .acc-content .acc-single .acc-user-info .information p {
+    padding-right: 1.4rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .dashboard-main .accordian .acc-content .acc-single .acc-user-info .information {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: unset;
+        -ms-flex-pack: unset;
+            justify-content: unset;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.dashboard-main .accordian .acc-content .acc-single .acc-user-info .options {
+  padding-top: 1rem;
+}
+
+@media screen and (min-width: 700px) {
+  .dashboard-main .accordian .acc-content .acc-single .acc-user-info .options {
+    padding-left: 3rem;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .dashboard-main .accordian .acc-content .acc-single .acc-user-info .options {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: unset;
+        -ms-flex-pack: unset;
+            justify-content: unset;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.dashboard-main .accordian .acc-content .acc-single .acc-user-info .options a {
+  color: white;
+  background: #404b5e;
+  font-size: 1.8rem;
+  border-radius: 3rem;
+  text-align: center;
+  display: block;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 700px) {
+  .dashboard-main .accordian .acc-content .acc-single .acc-user-info .options a {
+    width: 30rem;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .dashboard-main .accordian .acc-content .acc-single .acc-user-info .options a {
+    width: 18rem;
+    margin-right: 1rem;
+  }
+}
+
+.dashboard-main .accordian .acc-content .acc-single .acc-user-info .options a:hover {
+  border: 2px solid #404b5e;
+  background: white;
+  color: #404b5e;
+}
+
+.dashboard-main .accordian .acc-content .acc-single:first-child .acc-user-dropdown {
+  border-top-right-radius: 1.6rem;
 }
 /*# sourceMappingURL=styles.css.map */
