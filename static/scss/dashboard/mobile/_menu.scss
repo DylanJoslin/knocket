@@ -2,49 +2,55 @@
 
     .menu-icon {
         width: 3rem;
-      }
 
-    .menu-icon:after, 
-    .menu-icon:before, 
-    .menu-icon div {
-        background-color: rgb(2, 2, 2);
-        border-radius: 0.3rem;
-        content: '';
-        display: block;
-        height: 0.3rem;
-        margin: 0.5rem 0;
-        transition: all 0.7s ease-in-out;
-    }
+        @include breakpoint(laptop){
+            display: none;
+        }//breakpoint
 
-    .close-button {
-        font-family: 'Playfair Display', serif;
-        font-size: 2.4rem;
-        text-align: right;
-        padding: 1rem;
-        padding-top: 6rem;
-        text-align: center;
-        border-bottom: 2px solid black;
-        width: 100%;
-        margin: 0 auto;
-    }
+      }//.menu-icon
 
-    .icon-closed:before {
-        transform: translateY(7px) rotate(135deg);
-    }
-    
-    .icon-closed:after {
-        transform: translateY(-9px) rotate(-135deg);
-    }
-    
-    .icon-closed div {
-        transform: scale(0);
-    }
+      @include breakpoint(maxTablet){
+        
+        .menu-icon:after, 
+        .menu-icon:before, 
+        .menu-icon div {
+            background-color: $white;
+            border-radius: 0.3rem;
+            content: '';
+            display: block;
+            height: 0.3rem;
+            margin: 0.5rem 0;
+            transition: all 0.7s ease-in-out;
+        }//.menu-icon
 
-    .menu-toggle {
-        position: absolute;
-        right: 0;
-    }
+        .close-button {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.4rem;
+            text-align: right;
+            padding: 1rem;
+            padding-top: 6rem;
+            text-align: center;
+            width: 100%;
+            margin: 0 auto;
+        }//.close
 
+        .icon-closed:before {
+            transform: translateY(7px) rotate(135deg);
+        }//.close
+        
+        .icon-closed:after {
+            transform: translateY(-9px) rotate(-135deg);
+        }//.close
+        
+        .icon-closed div {
+            transform: scale(0);
+        }//.close
 
+        .menu-toggle {
+            position: absolute;
+            right: 0;
+        }//.menu-toggle
 
-}
+    }//breakpoint
+
+}//.dashboard-header

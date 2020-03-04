@@ -1,32 +1,76 @@
 .dashboard-body{
 
     .dashboard-navigation{
-        width: 100%;
-        position: absolute;
-        top: 5.3rem;
-        right: -100%;
-        background-color: #000000;
-        padding-bottom: 2rem;
-        transition: all 0.7s ease-in-out;
-       
-        ul{
-            @include flex;
-            li{
-                a{
-                    @include navlink-styles($dark, $white, $dark, $navlink-font-size);
-                    @include flex;
-                }
-            }
-        }
+        @include breakpoint(maxTablet){
+            width: 100%;
+            position: absolute;
+            top: 5.3rem;
+            right: -100%;
+            background-color: $nav-shown;
+            padding-bottom: 4rem;
+            transition: all 0.7s ease-in-out;
+            margin-top: 3.9rem;
+        }//break
 
-        
-        @include break(laptop){
+        @include breakpoint(laptop){
+            display: inline-block;
+           width: 22rem;
+           background: $dark;
+        }//break
+
+        .nav-link{
+
+            a{
+                @include nav-links;
+                @include nav-flex;
             
-        }
+                p{
+                    margin-bottom: 0;
+                    font-size: $navlink-font-size;
+                    font-family: $navlink-font;
 
-       
+                    span{
+                        font-size: $signed-in;
+                    }//span
 
-    }
+                }//p
 
+            }//a
 
-}
+        }//.navlink
+
+        .logout{
+            @include nav-links;
+
+            @include breakpoint(maxTablet){
+                @include nav-flex;
+            }//break
+
+            .signed-in{
+
+                @include breakpoint(laptop){
+                    padding-bottom: 1.5rem;
+                }//break
+
+            }
+            
+            a p{
+                text-align: right;
+            }
+
+            p{
+                margin-bottom: 0;
+                font-size: $navlink-font-size;
+                font-family: $navlink-font;
+                
+                span{
+                    font-size: $signed-in;
+                } //span
+
+            }//p
+
+        }//.logout
+
+    }//.dashboard-navigation
+
+}//.dashboard-body

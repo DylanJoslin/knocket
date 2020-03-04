@@ -1,11 +1,43 @@
-.dasboard-header{
-    position: relative;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid black;
+.dashboard-header{
     padding: 1rem 1.6rem;
-    transition: all 0.7s ease-in-out;
+    background: $dark;
 
-}
+    @include breakpoint(maxTablet){
+        position: relative;
+        width: 100%;
+        @include nav-flex;
+        align-items: center;
+        transition: all 0.7s ease-in-out;
+    }//breakpoint
+
+    @include breakpoint(laptop){
+        width: 24rem;
+        height: 200vh;
+        position: absolute;
+        left: 0;
+        top: 0;
+
+    }//breakpoint
+
+    h1{
+        margin: 0;
+        font-size: 4rem;
+        color: $white;
+
+        @include breakpoint(laptop){
+            margin: 3rem 0;
+            text-align: center;
+        }//breakpoint
+
+    }//h1
+
+}//.dashboard-header
+
+.menu-closed-header-style {
+    background-color: $nav-shown;
+
+    @include breakpoint(laptop){
+        background: $dark;
+    }//breakpoint
+
+}//.menu-closed-header-styles

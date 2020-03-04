@@ -14,9 +14,28 @@
         <h1>Title</h1>
         <nav class="dashboard-navigation"> 
             <ul class="menu-links">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Users</a></li>
-                <li><a href="#">Content</a></li>
+                <li class="nav-link">
+                    <a href="#">
+                        <p>Home</p>
+                        <p><i class="fas fa-home"></i></p>
+                    </a>
+                </li>
+                <li class="nav-link">
+                    <a href="#">
+                        <p>Users</p>
+                        <p><i class="fas fa-users"></i></p>
+                    </a>
+                </li>
+                <li class="nav-link">
+                    <a href="#">
+                        <p>Content</p>
+                        <p><i class="fas fa-image"></i></p>
+                    </a>
+                </li>
+                <li class="logout">
+                        <p class="signed-in"><span>Signed in as,</span><br> John Doe</p>
+                         <a href="#"><p>Logout <i class="fas fa-sign-out-alt"></i></p></a>
+                </li>
             </ul>
         </nav>
         <div class="menu-icon">
@@ -25,51 +44,11 @@
     </header>
 
 
-            
-    
-
-    <!-- <header class="container bg-dark rounded">
-        <nav class="d-flex justify-content-between  p-3 mb-2 mt-2 ">
-            <ul class="nav">
-                <li class="nav-item"><a href="{% url 'home' %}" class="nav-link text-info">Home</a></li>
-                <li class="nav-item"><a href="{% url 'resources' %}" class="nav-link text-info">Resources</a></li>
-                <li class="nav-item"><a href="{% url 'events' %}" class="nav-link text-info">Events</a></li>
-                <li class="nav-item"><a href="{% url 'about' %}" class="nav-link text-info">About</a></li>
-            </ul>
-            <ul class="nav">
-                {% if user.is_authenticated %}
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle text-info" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">{{user}}</a>
-                    <div class="dropdown-menu bg-dark">
-                        <a class="dropdown-item text-white" href="{% url 'profile' %}">Profile</a>
-                        <a class="dropdown-item text-white" href="{% url 'edit_profile' %}">Manage Profile</a>
-                        {% if user.userprofile.access == 'admin' or user.userprofile.access == 'teacher' %}
-                        <a class="dropdown-item text-white" href="/admin">Default Admin</a>
-                        <a class="dropdown-item text-white" href="{% url 'administration' %}">Custom Admin</a>
-                        {% endif %}
-                    <div class="dropdown-divider" style="border-color: #6C757D"></div>
-                    <a href="{% url 'logout' %}" class="dropdown-item text-info">Log Out</a>               
-                    </div>
-                </li>
-                {% else %}
-                <li class="nav-item"><a href="{% url 'login' %}" class="nav-link text-info">Log In</a></li>
-                <li class="nav-item"><a href="{% url 'register' %}" class="nav-link text-info">Register</a></li>
-                {% endif %}
-            </ul>
-        </nav>
-    </header> -->
-
     <main class="dashboard-main">
         <h1>{% block content%}{% endblock %}</h1>
     </main>
 
-
-    <script src="{% static 'js/main.js' %}"></script>
-    <script src="{% static 'js/hover-handler.js' %}"></script>
     <script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
     <script src="{% static 'js/dashboard.js' %}"></script>
-    <!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script> -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script> -->
-    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script> -->
 </body>
 </html>
