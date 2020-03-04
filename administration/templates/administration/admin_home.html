@@ -24,11 +24,14 @@
                                 <p class="icon">+</p>
                         </div><!-- User Dropdown -->
                         <div class="acc-user-info closed"><!-- User information -->
-                                <p>User: {{ user.username }}</p>
-                                <p>Email: {{ user.email }}</p>
-                                <p>School: {{ user.userprofile.school }}</p>
-                                <p>Access Level: {{ user.userprofile.access }}</p>
-
+                                <h2>User</h2>
+                                <p>{{ user.username }}</p>
+                                <h2>Email</h2>
+                                <p>{{ user.email }}</p>
+                                <h2>School</h2>
+                                <p>{{ user.userprofile.school }}</p>
+                                <h2>Access Level</h2>
+                                <p>{{ user.userprofile.access }}</p>
                         </div><!-- User information -->
                 </div><!-- Single user -->
                 
