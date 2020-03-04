@@ -1,7 +1,7 @@
 {% extends 'administration/base.html' %}
 
 {% block content %}
-    <h2>Welcome (name) to your dashboard</h2>
+    <h2>Welcome {{ user.first_name }}, to your dashboard</h2>
     <p>Here you can manage the users and the content on your site.</p>
 
     <div class="users-accordian"><!-- Accordian -->
@@ -13,6 +13,8 @@
 
         <div class="acc-content"> <!-- Content-->
 
+            
+            {% comment %} This part is what is repeated for each new user {% endcomment %}
             <div class="acc-single"> <!-- Single user -->
                     <div class="acc-user-dropdown"><!-- User Dropdown -->
                             <p class="acc-username">username</p>
@@ -22,6 +24,7 @@
                             <p>Some content</p>
                     </div><!-- User information -->
             </div><!-- Single user -->
+
 
         </div><!-- Content-->
     </div> <!-- Accordian -->

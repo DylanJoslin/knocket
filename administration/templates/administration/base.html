@@ -4,18 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Indigenous Storytelling</title>
+    <title>Indigenous Storytelling | Dashboard</title>
     <script src="https://kit.fontawesome.com/8a1af29f7b.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 </head>
 <body class="dashboard-body">
 
     <header class="dashboard-header">
-        <h1>Title</h1>
+        <h1><a href="{% url 'home' %}">Title</a></h1>
         <nav class="dashboard-navigation"> 
             <ul class="menu-links">
                 <li class="nav-link">
-                    <a href="#">
+                    <a href="{% url 'administration' %}">
                         <p>Home</p>
                         <p><i class="fas fa-home"></i></p>
                     </a>
@@ -33,8 +33,8 @@
                     </a>
                 </li>
                 <li class="logout">
-                        <p class="signed-in"><span>Signed in as,</span><br> John Doe</p>
-                         <a href="#"><p>Logout <i class="fas fa-sign-out-alt"></i></p></a>
+                        <p class="signed-in"><span>Signed in as,</span><br> {{ user.username }}</p>
+                         <a href="{% url 'logout' %}"><p>Logout <i class="fas fa-sign-out-alt"></i></p></a>
                 </li>
             </ul>
         </nav>
