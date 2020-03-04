@@ -1,0 +1,53 @@
+.banner{
+    position: relative;
+    background: url('/img/banner-bg.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    
+    h2{
+        color: white;
+
+        span{
+            color: $sage;
+            font-style: italic;
+            font-size: 28px;
+
+            @include media-md{
+                font-size: 36px;
+            }
+        }
+    }
+    
+}
+
+.button{
+    width: 220px;
+    margin: 0 auto;
+
+    @include media-md{
+        width: 256px;
+    }
+
+    a{
+        font: 18px 'Raleway Thin', sans-serif;
+        @include button;
+        background-color: $sage;
+        padding: 10px;
+        border-radius: 10px;
+
+        @include media-md{
+            padding: 10px 20px
+        }
+
+        &:hover{
+            background-color: $maroon;
+            transition: 0.5s;
+        }
+
+        @include media-md{
+            font-size: 22px;
+        }
+    }
+}

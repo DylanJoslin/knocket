@@ -1,0 +1,85 @@
+/* CARDO FONT */
+
+@font-face{
+    font-family: "Cardo Bold";
+    src: url('/static/fonts/Cardo-Bold.ttf');
+}
+
+@font-face{
+    font-family: "Cardo Italic";
+    src: url('/static/fonts/Cardo-Italic.ttf');
+}
+
+@font-face{
+    font-family: "Cardo Regular";
+    src: url('/static/fonts/Cardo-Regular.ttf');
+}
+
+/* RALEWAY FONT */
+
+@font-face{
+    font-family: "Raleway Bold";
+    src: url('/static/fonts/Raleway-Bold.ttf');
+}
+
+@font-face{
+    font-family: "Raleway Bold Italic";
+    src: url('/static/fonts/Raleway-BoldItalic.ttf');
+}
+
+@font-face{
+    font-family: "Raleway Regular";
+    src: url('/static/fonts/Raleway-Regular.ttf');
+}
+
+@font-face{
+    font-family: "Raleway Thin";
+    src: url('/static/fonts/Raleway-Thin.ttf');
+}
+
+@font-face{
+    font-family: "Raleway Thin Italic";
+    src: url('/static/fonts/Raleway-ThinItalic.ttf');
+}
+
+
+/* Custom Styles for Typography */
+
+h1{
+    font: 30px/1 'Cardo Regular', sans-serif;
+    color: white;
+    text-transform: uppercase;
+
+    span{
+        text-transform: none;
+        font-style: italic;
+        margin-left: 50px;
+        
+
+    }
+    a{
+        text-decoration: none;
+        color: white;
+    }
+}
+
+h2{
+    font: 24px/1.5 'Raleway Regular', sans-serif;
+
+    @include media-md{
+        font-size: 32px;
+    }
+}
+
+h3{
+    font: 30px/1.5 'Cardo Bold', sans-serif;
+
+    @include media-md{
+        font-size: 60px;
+    }
+}
+
+p{
+    font: 18px/1.5 'Raleway Regular', sans-serif;
+    text-align: justify;
+}
