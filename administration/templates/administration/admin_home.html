@@ -3,11 +3,12 @@
 {% block content %}
     <h2>Welcome {{ user.first_name }}, to your dashboard</h2>
     <p>Here you can manage the users and the content on your site.</p>
+    <p>New students must have their access changed to Student before they can contribute to the site.</p>
 
     <div class="users-accordian"><!-- Accordian -->
 
         <div class="acc-tabs"><!-- Tabs-->
-            <a href="{% url 'administration' %}new">New</a>
+            <a href="{% url 'administration' %}pending">New</a>
             <a href="{% url 'administration' %}student">Students</a>
             <a href="{% url 'administration' %}teacher">Teachers</a>
             <a href="{% url 'administration' %}elder">Elders</a>
