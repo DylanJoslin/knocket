@@ -89,5 +89,3 @@ Git will allow us to all work together to make sure that we are working on an up
 1. `git merge <your-branch-name>` --> This will merge your branch into the master files. The master files now include the work you've done. Continue work in your branch, or make a new branch if it makes sense. 
 
 When everything is done in this order, it ensures that everything in your branch is working before we commit it to the master branch. 
-
-
