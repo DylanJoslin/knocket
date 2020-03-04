@@ -1,16 +1,22 @@
-/*******    MEDIA QUERIES     *******/
-$md-viewport: "screen and (min-width: 800px)";
-$lg-viewport: "screen and (min-width: 1100px)";
-
 /*******    CONTENT PADDING    *******/
-$sm-padding: 1rem;
-$md-padding: 3rem;
-$lg-padding: 4.2rem;
 
-/*******    HEADING STYLES     *******/
-$heading-color: rgb(255, 255, 255);
-$heading-background: rgba(177, 239, 240, 0.822);
+
+/*******    COLORS    *******/
+$white: rgb(255, 255, 255);
+$dark: rgb(64, 75, 94);
+$nav-shown: rgb(116, 147, 201);
+
+
+/*******    FONTS     *******/
 $heading-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+$navlink-font: arial;
+$navlink-font-size: 1.8rem;
+$signed-in: 1.4rem;
 
 /*******      FORM STYLES      *******/
-$input-border: 0.1rem solid black;
+$input-border: 1px solid black;
+
+
+
+
+
