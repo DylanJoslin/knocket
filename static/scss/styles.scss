@@ -13,9 +13,11 @@
 @import 'dashboard/base/mixins';
 @import 'dashboard/base/base';
 @import 'dashboard/base/typography';
-@import 'dashboard/content/header';
-@import 'dashboard/content/navigation';
-@import 'dashboard/content/menu';
+@import 'dashboard/header/header';
+@import 'dashboard/header/navigation';
+@import 'dashboard/header/mobile-menu';
+@import 'dashboard/main/main-base';
+@import 'dashboard/main/accordian';
 
 
 

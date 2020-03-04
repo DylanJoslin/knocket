@@ -12,6 +12,10 @@
             margin-top: 3.9rem;
         }//break
 
+        @include breakpoint(tablet){
+            width: 50%;
+        }
+
         @include breakpoint(laptop){
             display: inline-block;
            width: 22rem;
@@ -28,6 +32,10 @@
                     margin-bottom: 0;
                     font-size: $navlink-font-size;
                     font-family: $navlink-font;
+
+                    @include breakpoint(laptop){
+
+                    }
 
                     span{
                         font-size: $signed-in;

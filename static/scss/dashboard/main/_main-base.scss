@@ -1,0 +1,17 @@
+    .dashboard-main{
+        @include padding(small);
+
+        @include breakpoint(tablet){
+            @include padding(medium);
+        }
+
+        @include breakpoint(laptop){
+            @include padding(large);
+        }
+
+        p{
+            color: $dark;
+            font-size: 1.6rem;
+        }
+
+    }
