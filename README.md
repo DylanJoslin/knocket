@@ -83,9 +83,11 @@ Git will allow us to all work together to make sure that we are working on an up
 1. To open terminal, click Terminal>New Terminal in VS Code. 
 1. `git add .` --> Prepare your changes to commit to your branch on github 
 1. `git commit -m "your descriptive message of the changes you made here"` --> Saves your changes to your branch on your computer, and provides a message along with it.
-1. `git merge master` --> merges the Master branch to **your** branch. Once this is done, make sure that the application is still working. If it isn't, debug.
 1. `git push` --> Commits the changes to your branch on GitHub.
+1. `git merge origin master` --> merges the Master branch to **your** branch. Once this is done, make sure that the application is still working. If it isn't, debug.
+1. `git push` --> When it is working, commit the changes to github again
 1. `git checkout master` --> Now the files open in VS Code will reflect the master files, **before** your changes.
 1. `git merge <your-branch-name>` --> This will merge your branch into the master files. The master files now include the work you've done. Continue work in your branch, or make a new branch if it makes sense. 
+1. `git push` --> When it is working, commit the changes to github again
 
 When everything is done in this order, it ensures that everything in your branch is working before we commit it to the master branch. 
