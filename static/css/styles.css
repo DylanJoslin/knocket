@@ -441,42 +441,40 @@ html {
 
 .dashboard-body h2, .dashboard-body h3, .dashboard-body h4, .dashboard-body h5, .dashboard-body h6, .dashboard-body p {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  color: white;
+  color: #404b5e;
   margin-bottom: 2.4rem;
 }
 
-.dashboard-body h2 {
-  color: #404b5e;
+.dashboard-body p {
+  font-size: 1.6rem;
 }
 
 .dashboard-body h1 {
-  font-size: 6.9rem;
+  font-size: 6.1rem;
   line-height: 7.2rem;
   margin-bottom: 4.8rem;
 }
 
 .dashboard-body h2 {
-  font-size: 6.1rem;
+  font-size: 5.6rem;
   line-height: 7.2rem;
+  margin-bottom: 4.8rem;
 }
 
 .dashboard-body h3 {
-  font-size: 5.1rem;
+  font-size: 5.0rem;
   line-height: 7.2rem;
+  margin-bottom: 2.8rem;
 }
 
 .dashboard-body h4 {
-  font-size: 4.8rem;
-  line-height: 7.2rem;
+  font-size: 4.2rem;
+  line-height: 6.4rem;
+  margin-bottom: 4.8rem;
 }
 
 .dashboard-body h5 {
-  font-size: 4.1rem;
-  line-height: 4.8rem;
-}
-
-.dashboard-body h6 {
-  font-size: 3.7em;
+  font-size: 3.8rem;
   line-height: 4.8rem;
 }
 
@@ -516,9 +514,7 @@ html {
   .dashboard-header {
     width: 24rem;
     height: 200vh;
-    position: absolute;
-    left: 0;
-    top: 0;
+    position: fixed;
   }
 }
 
@@ -581,6 +577,7 @@ html {
   display: block;
   padding: 2rem;
   margin-bottom: 2rem;
+  color: white;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -604,6 +601,7 @@ html {
   margin-bottom: 0;
   font-size: 1.8rem;
   font-family: arial;
+  color: white;
 }
 
 .dashboard-body .dashboard-navigation .nav-link a p span {
@@ -618,6 +616,7 @@ html {
   display: block;
   padding: 2rem;
   margin-bottom: 2rem;
+  color: white;
 }
 
 @media screen and (min-width: 1000px) {
@@ -642,6 +641,10 @@ html {
   }
 }
 
+.dashboard-body .dashboard-navigation .logout .signed-in {
+  color: white;
+}
+
 @media screen and (min-width: 1000px) {
   .dashboard-body .dashboard-navigation .logout .signed-in {
     padding-bottom: 1.5rem;
@@ -650,6 +653,7 @@ html {
 
 .dashboard-body .dashboard-navigation .logout a p {
   text-align: right;
+  color: white;
 }
 
 .dashboard-body .dashboard-navigation .logout p {
@@ -714,24 +718,59 @@ html {
 }
 
 .dashboard-main {
-  padding: 1rem;
+  padding: 0;
+}
+
+.dashboard-main .welcome {
+  background: #eaf3f4;
+  border-bottom: 0.5rem solid #404b5e;
+  padding: 3rem 1rem 0 1rem;
+}
+
+.dashboard-main .welcome h2 {
+  font-size: 3.6rem;
+  line-height: 4.8rem;
 }
 
 @media screen and (min-width: 700px) {
-  .dashboard-main {
-    padding: 3rem;
+  .dashboard-main .welcome h2 {
+    font-size: 5.6rem;
+    line-height: 7.2rem;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .dashboard-main .welcome {
+    padding: 3rem 3rem 0 3rem;
   }
 }
 
 @media screen and (min-width: 1000px) {
-  .dashboard-main {
-    padding: 0rem 3rem 3rem 28rem;
+  .dashboard-main .welcome {
+    padding: 6rem 6rem 0 30rem;
   }
 }
 
-.dashboard-main p {
-  color: #404b5e;
-  font-size: 1.6rem;
+.dashboard-main .welcome p {
+  font-size: 2rem;
+  margin-bottom: 5rem;
+}
+
+.dashboard-main .accordian {
+  padding: 3rem 1rem 0 1rem;
+  margin-bottom: 8rem;
+}
+
+@media screen and (min-width: 700px) {
+  .dashboard-main .accordian {
+    padding: 3rem 3rem 0 3rem;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .dashboard-main .accordian {
+    padding: 6rem 6rem 0 30rem;
+  }
 }
 
 .dashboard-main .accordian .hidden {
@@ -753,7 +792,7 @@ html {
   color: white;
   padding: 1rem 3rem;
   margin-bottom: 3rem;
-  font-size: 2rem;
+  font-size: 1.8rem;
   border-top-left-radius: 1.6rem;
   border-top-right-radius: 1.6rem;
 }
@@ -798,7 +837,7 @@ html {
 }
 
 .dashboard-main .accordian .acc-content .acc-single .acc-user-dropdown p {
-  font-size: 2rem;
+  font-size: 1.8rem;
   color: white;
   margin-bottom: 0;
 }
@@ -909,5 +948,77 @@ html {
 
 .dashboard-main .accordian .acc-content .acc-single:first-child .acc-user-dropdown {
   border-top-right-radius: 1.6rem;
+}
+
+.dashboard-main .overview h3 {
+  padding: 3rem 1rem 0 1rem;
+}
+
+@media screen and (min-width: 700px) {
+  .dashboard-main .overview h3 {
+    padding: 3rem 3rem 0 3rem;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .dashboard-main .overview h3 {
+    padding: 6rem 6rem 0 30rem;
+  }
+}
+
+.dashboard-main .overview .overview-box {
+  border-top: 1px solid #404b5e;
+  border-bottom: 1px solid #404b5e;
+  padding: 3rem 1rem 3rem 1rem;
+}
+
+@media screen and (min-width: 700px) {
+  .dashboard-main .overview .overview-box {
+    padding: 3rem 3rem 3rem 3rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: unset;
+        -ms-flex-pack: unset;
+            justify-content: unset;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .dashboard-main .overview .overview-box {
+    padding: 3rem 6rem 3rem 30rem;
+  }
+}
+
+.dashboard-main .overview .overview-box p {
+  font-size: 2.4rem;
+  margin-bottom: 1rem;
+}
+
+.dashboard-main .overview .overview-box p .number {
+  font-weight: bold;
+}
+
+.dashboard-main .overview .overview-box a {
+  color: white;
+  background: #404b5e;
+  font-size: 1.8rem;
+  border-radius: 3rem;
+  text-align: center;
+  display: block;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  margin-top: 3rem;
+}
+
+@media screen and (min-width: 700px) {
+  .dashboard-main .overview .overview-box a {
+    margin: 0;
+    width: 30rem;
+    margin-left: 4rem;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

@@ -13,9 +13,7 @@
     @include breakpoint(laptop){
         width: 24rem;
         height: 200vh;
-        position: absolute;
-        left: 0;
-        top: 0;
+        position: fixed;
 
     }//breakpoint
 

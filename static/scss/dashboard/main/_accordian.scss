@@ -1,6 +1,18 @@
 .dashboard-main{
 
     .accordian{
+        
+        @include padding(small);
+
+        @include breakpoint(tablet){
+            @include padding(medium);
+        }
+
+        @include breakpoint(laptop){
+            @include padding(large);
+        }
+
+        margin-bottom: 8rem;
 
         .hidden{
             display:none;
@@ -18,7 +30,7 @@
             }
 
             a:hover{
-                @include acc-hover;
+                @include accordian-hover;
             }
 
         }
@@ -28,7 +40,7 @@
             .acc-single{
 
                 .acc-user-dropdown:hover{
-                   @include acc-hover;
+                   @include accordian-hover;
                 }
 
                 .acc-user-dropdown{
@@ -111,6 +123,11 @@
             .acc-single:first-child .acc-user-dropdown{
                 border-top-right-radius: 1.6rem;
               }
+
+            //   .acc-single:last-child .acc-user-dropdown{
+            //     border-bottom-right-radius: 1.6rem;
+            //     border-bottom-left-radius: 1.6rem;
+            //   }
 
         }
 

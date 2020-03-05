@@ -1,5 +1,61 @@
 .dashboard-main{
 
+    .overview{
+
+        h3{
+            @include padding(small);
+
+            @include breakpoint(tablet){
+                @include padding(medium);
+            }
+
+            @include breakpoint(laptop){
+                @include padding(large);
+            }
+        }
+        
+        .overview-box{
+            border-top: 1px solid $dark;
+            border-bottom: 1px solid $dark;
+
+            padding: 3rem 1rem 3rem 1rem;
+
+            @include breakpoint(tablet){
+                padding: 3rem 3rem 3rem 3rem;
+                @include flex(unset);
+            }
+
+            @include breakpoint(laptop){
+                padding: 3rem 6rem 3rem 30rem;
+            }
+
+            p{
+                font-size: $overview-labels;
+                margin-bottom: 1rem;
+
+                .number{
+                    font-weight: bold;
+                }
+            }
+
+
+            a{
+                @include button;
+                margin-top: 3rem;
+                //margin-bottom: 3rem;
+
+                @include breakpoint(tablet){
+                    margin: 0;
+                    width: 30rem;
+                    margin-left: 4rem;
+                }
+            }
+        }
+
+        
+
+    }
+
     
 
 

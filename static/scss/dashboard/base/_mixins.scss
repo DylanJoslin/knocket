@@ -2,15 +2,15 @@
 @mixin padding($size) {
 
     @if $size == small {
-      padding: 1rem;
+      padding: 3rem 1rem 0 1rem;
     }
 
     @if $size == medium {
-      padding: 3rem;
+      padding: 3rem 3rem 0 3rem;
     }
 
     @else if $size == large {
-      padding: 0rem 3rem 3rem 28rem;
+      padding: 6rem 6rem 0 30rem;
     }
     
   }//breakpoint mixin
@@ -44,6 +44,7 @@
     display: block;
     padding: 2rem;
     margin-bottom: 2rem;
+    color: $white;
 
     @include breakpoint(laptop){
       margin: 0;
@@ -95,7 +96,11 @@
   margin-left: 1rem;
 }
 
-@mixin acc-hover{
+@mixin accordian-link(){
+  color: ;
+}
+
+@mixin accordian-hover{
   background: $acc-hover-background;
 }
 

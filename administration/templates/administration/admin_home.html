@@ -1,182 +1,443 @@
 {% extends 'administration/base.html' %}
 
 {% block content %}
-    <h2>Welcome (name) to your dashboard</h2>
-    <p>Here you can manage the users and the content on your site.</p>
 
-    <div class="accordian"><!-- Accordian -->
+<!-- ====================WELCOME BANNER==================== -->
+        <div class="welcome">
+                <h2>Welcome (name)<br> to your dashboard</h2>
+                <p>Here you can manage the users and the content on your site.</p>
+        </div>
+<!-- ====================WELCOME BANNER CLOSE==================== -->
+        
+<!-- ====================CONTAINER==================== -->
+        <div class="container">
 
-        <div class="acc-tabs"><!-- Tabs-->
-            <a href="#" class="acc-new">New</a>
-            <a href="#" class="acc-registered">Registered</a>
-        </div><!-- Tabs-->
+        <!-- ====================OVERVIEW==================== -->
+                <div class="overview">
+                        <h3>Users Overview</h3>
+                        <div class="overview-box">
+                                <div>
+                                        <p>New Users: <span class="number">4</span></p>
+                                        <p>Registered Users: <span class="number">23</span></p>
+                                </div>
+                                <div>
+                                        <a href="#">Manage Users</a>
+                                </div>
+                        </div>
+                </div>
+        <!-- ====================OVERVIEW CLOSE==================== -->
 
-        <div id="new-users" class="acc-content"> <!-- New Users Content-->
+        <!-- ====================ACCORDION==================== -->
+                <div class="accordian"><!-- Accordian -->
+                        <h4>Latest User Activity</h4>
+                        <div class="acc-tabs"><!-- Tabs-->
+                        <a href="#" class="acc-new-users">New</a>
+                        <a href="#" class="acc-registered-users">Registered</a>
+                        </div><!-- Tabs-->
 
-                <div class="acc-single"> <!-- Single user -->
-                        <div class="acc-user-dropdown"><!-- User Dropdown -->
-                                <p class="acc-username">username <span class="acc-badge">New!</span></p>
-                                <p class="icon-plus">+</p>
-                                <p class="icon-minus hidden">-</p>
-                        </div><!-- User Dropdown -->
-                        <div class="acc-user-info"><!-- User information -->
-                                <div class="information">
-                                        <p>Created on: (date)</p>
-                                        <p>Full Name: (full name)</p>
-                                        <p>Email: (email)</p>
-                                </div>
-                                <div class="options">
-                                        <a href="#">Delete User</a>
-                                        <a href="#">Approve User</a>
-                                </div>
-                        </div><!-- User information -->
-                </div><!-- Single user -->
+                <!-- ====================NEW USERS==================== -->
+                        <div id="new-users" class="acc-content"> <!-- New Users Content-->
 
-                <div class="acc-single"> <!-- Single user -->
-                        <div class="acc-user-dropdown"><!-- User Dropdown -->
-                                <p class="acc-username">username <span class="acc-badge">New!</span></p>
-                                <p class="icon-plus">+</p>
-                                <p class="icon-minus hidden">-</p>
-                        </div><!-- User Dropdown -->
-                        <div class="acc-user-info"><!-- User information -->
-                                <div class="information">
-                                        <p>Created on: (date)</p>
-                                        <p>Full Name: (full name)</p>
-                                        <p>Email: (email)</p>
-                                </div>
-                                <div class="options">
-                                        <a href="#">Delete User</a>
-                                        <a href="#">Approve User</a>
-                                </div>
-                        </div><!-- User information -->
-                </div><!-- Single user -->
+                        <!-- ====================SINGLE USER==================== -->
+                                <div class="acc-single"> <!-- Single user -->
+                                        <div class="acc-user-dropdown"><!-- User Dropdown -->
+                                                <p class="acc-username">username <span class="acc-badge">New!</span></p>
+                                                <p class="icon-plus">+</p>
+                                                <p class="icon-minus hidden">-</p>
+                                        </div><!-- User Dropdown -->
+                                        <div class="acc-user-info"><!-- User information -->
+                                                <div class="information">
+                                                        <p>Created on: (date)</p>
+                                                        <p>Full Name: (full name)</p>
+                                                        <p>Email: (email)</p>
+                                                </div>
+                                                <div class="options">
+                                                        <a href="#">Delete User</a>
+                                                        <a href="#">Approve User</a>
+                                                </div>
+                                        </div><!-- User information -->
+                                </div><!-- Single user -->
+                        <!-- ====================SINGLE USER CLOSE==================== -->
 
-                <div class="acc-single"> <!-- Single user -->
-                        <div class="acc-user-dropdown"><!-- User Dropdown -->
-                                <p class="acc-username">username <span class="acc-badge">New!</span></p>
-                                <p class="icon-plus">+</p>
-                                <p class="icon-minus hidden">-</p>
-                        </div><!-- User Dropdown -->
-                        <div class="acc-user-info"><!-- User information -->
-                                <div class="information">
-                                        <p>Created on: (date)</p>
-                                        <p>Full Name: (full name)</p>
-                                        <p>Email: (email)</p>
-                                </div>
-                                <div class="options">
-                                        <a href="#">Delete User</a>
-                                        <a href="#">Approve User</a>
-                                </div>
-                        </div><!-- User information -->
-                </div><!-- Single user -->
+                                <div class="acc-single"> <!-- Single user -->
+                                        <div class="acc-user-dropdown"><!-- User Dropdown -->
+                                                <p class="acc-username">username <span class="acc-badge">New!</span></p>
+                                                <p class="icon-plus">+</p>
+                                                <p class="icon-minus hidden">-</p>
+                                        </div><!-- User Dropdown -->
+                                        <div class="acc-user-info"><!-- User information -->
+                                                <div class="information">
+                                                        <p>Created on: (date)</p>
+                                                        <p>Full Name: (full name)</p>
+                                                        <p>Email: (email)</p>
+                                                </div>
+                                                <div class="options">
+                                                        <a href="#">Delete User</a>
+                                                        <a href="#">Approve User</a>
+                                                </div>
+                                        </div><!-- User information -->
+                                </div><!-- Single user -->
+                        <!-- ====================SINGLE USER CLOSE==================== -->
 
-                <div class="acc-single"> <!-- Single user -->
-                        <div class="acc-user-dropdown"><!-- User Dropdown -->
-                                <p class="acc-username">username <span class="acc-badge">New!</span></p>
-                                <p class="icon-plus">+</p>
-                                <p class="icon-minus hidden">-</p>
-                        </div><!-- User Dropdown -->
-                        <div class="acc-user-info"><!-- User information -->
-                                <div class="information">
-                                        <p>Created on: (date)</p>
-                                        <p>Full Name: (full name)</p>
-                                        <p>Email: (email)</p>
-                                </div>
-                                <div class="options">
-                                        <a href="#">Delete User</a>
-                                        <a href="#">Approve User</a>
-                                </div>
-                        </div><!-- User information -->
-                </div><!-- Single user -->
+                        <!-- ====================SINGLE USER==================== -->
+                                <div class="acc-single"> <!-- Single user -->
+                                        <div class="acc-user-dropdown"><!-- User Dropdown -->
+                                                <p class="acc-username">username <span class="acc-badge">New!</span></p>
+                                                <p class="icon-plus">+</p>
+                                                <p class="icon-minus hidden">-</p>
+                                        </div><!-- User Dropdown -->
+                                        <div class="acc-user-info"><!-- User information -->
+                                                <div class="information">
+                                                        <p>Created on: (date)</p>
+                                                        <p>Full Name: (full name)</p>
+                                                        <p>Email: (email)</p>
+                                                </div>
+                                                <div class="options">
+                                                        <a href="#">Delete User</a>
+                                                        <a href="#">Approve User</a>
+                                                </div>
+                                        </div><!-- User information -->
+                                </div><!-- Single user -->
+                        <!-- ====================SINGLE USER CLOSE==================== -->
 
-        </div><!-- New Users Content-->
+                        <!-- ====================SINGLE USER==================== -->
+                                <div class="acc-single"> <!-- Single user -->
+                                        <div class="acc-user-dropdown"><!-- User Dropdown -->
+                                                <p class="acc-username">username <span class="acc-badge">New!</span></p>
+                                                <p class="icon-plus">+</p>
+                                                <p class="icon-minus hidden">-</p>
+                                        </div><!-- User Dropdown -->
+                                        <div class="acc-user-info"><!-- User information -->
+                                                <div class="information">
+                                                        <p>Created on: (date)</p>
+                                                        <p>Full Name: (full name)</p>
+                                                        <p>Email: (email)</p>
+                                                </div>
+                                                <div class="options">
+                                                        <a href="#">Delete User</a>
+                                                        <a href="#">Approve User</a>
+                                                </div>
+                                        </div><!-- User information -->
+                                </div><!-- Single user -->
+                        <!-- ====================SINGLE USER CLOSE==================== -->
 
-        <div id="registered-users" class="acc-content hidden"> <!-- New Users Content-->
+                        </div><!-- New Users Content-->
+                <!-- ====================NEW USERS CLOSE==================== -->
 
-                <div class="acc-single"> <!-- Single user -->
-                        <div class="acc-user-dropdown"><!-- User Dropdown -->
-                                <p class="acc-username">username <span class="acc-badge">Approved</span></p>
-                                <p class="icon-plus">+</p>
-                                <p class="icon-minus hidden">-</p>
-                        </div><!-- User Dropdown -->
-                        <div class="acc-user-info"><!-- User information -->
-                                <div class="information">
-                                        <p>Created on: (date)</p>
-                                        <p>Full Name: (full name)</p>
-                                        <p>Email: (email)</p>
-                                        <p>Accepted By: (name)</p>
-                                </div>
-                                <div class="options">
-                                        <a href="#">Delete User</a>
-                                        <a href="#">Edit User</a>
-                                </div>
-                        </div><!-- User information -->
-                </div><!-- Single user -->
+                <!-- ====================REGISTERED USERS==================== -->
+                        <div id="registered-users" class="acc-content hidden"> <!-- New Users Content-->
 
-                <div class="acc-single"> <!-- Single user -->
-                        <div class="acc-user-dropdown"><!-- User Dropdown -->
-                                <p class="acc-username">username <span class="acc-badge">Approved</span></p>
-                                <p class="icon-plus">+</p>
-                                <p class="icon-minus hidden">-</p>
-                        </div><!-- User Dropdown -->
-                        <div class="acc-user-info"><!-- User information -->
-                                <div class="information">
-                                        <p>Created on: (date)</p>
-                                        <p>Full Name: (full name)</p>
-                                        <p>Email: (email)</p>
-                                        <p>Accepted By: (name)</p>
-                                </div>
-                                <div class="options">
-                                        <a href="#">Delete User</a>
-                                        <a href="#">Edit User</a>
-                                </div>
-                        </div><!-- User information -->
-                </div><!-- Single user -->
+                        <!-- ====================SINGLE USER==================== -->
+                                <div class="acc-single"> <!-- Single user -->
+                                        <div class="acc-user-dropdown"><!-- User Dropdown -->
+                                                <p class="acc-username">username <span class="acc-badge">Approved</span></p>
+                                                <p class="icon-plus">+</p>
+                                                <p class="icon-minus hidden">-</p>
+                                        </div><!-- User Dropdown -->
+                                        <div class="acc-user-info"><!-- User information -->
+                                                <div class="information">
+                                                        <p>Created on: (date)</p>
+                                                        <p>Full Name: (full name)</p>
+                                                        <p>Email: (email)</p>
+                                                        <p>Accepted By: (name)</p>
+                                                </div>
+                                                <div class="options">
+                                                        <a href="#">Delete User</a>
+                                                        <a href="#">Edit User</a>
+                                                </div>
+                                        </div><!-- User information -->
+                                </div><!-- Single user -->
+                        <!-- ====================SINGLE USER CLOSE==================== -->
 
-                <div class="acc-single"> <!-- Single user -->
-                        <div class="acc-user-dropdown"><!-- User Dropdown -->
-                                <p class="acc-username">username <span class="acc-badge">Approved</span></p>
-                                <p class="icon-plus">+</p>
-                                <p class="icon-minus hidden">-</p>
-                        </div><!-- User Dropdown -->
-                        <div class="acc-user-info"><!-- User information -->
-                                <div class="information">
-                                        <p>Created on: (date)</p>
-                                        <p>Full Name: (full name)</p>
-                                        <p>Email: (email)</p>
-                                        <p>Accepted By: (name)</p>
-                                </div>
-                                <div class="options">
-                                        <a href="#">Delete User</a>
-                                        <a href="#">Edit User</a>
-                                </div>
-                        </div><!-- User information -->
-                </div><!-- Single user -->
+                        <!-- ====================SINGLE USER==================== -->
+                                <div class="acc-single"> <!-- Single user -->
+                                        <div class="acc-user-dropdown"><!-- User Dropdown -->
+                                                <p class="acc-username">username <span class="acc-badge">Approved</span></p>
+                                                <p class="icon-plus">+</p>
+                                                <p class="icon-minus hidden">-</p>
+                                        </div><!-- User Dropdown -->
+                                        <div class="acc-user-info"><!-- User information -->
+                                                <div class="information">
+                                                        <p>Created on: (date)</p>
+                                                        <p>Full Name: (full name)</p>
+                                                        <p>Email: (email)</p>
+                                                        <p>Accepted By: (name)</p>
+                                                </div>
+                                                <div class="options">
+                                                        <a href="#">Delete User</a>
+                                                        <a href="#">Edit User</a>
+                                                </div>
+                                        </div><!-- User information -->
+                                </div><!-- Single user -->
+                        <!-- ====================SINGLE USER CLOSE==================== -->
 
-                <div class="acc-single"> <!-- Single user -->
-                        <div class="acc-user-dropdown"><!-- User Dropdown -->
-                                <p class="acc-username">username <span class="acc-badge">Approved</span></p>
-                                <p class="icon-plus">+</p>
-                                <p class="icon-minus hidden">-</p>
-                        </div><!-- User Dropdown -->
-                        <div class="acc-user-info"><!-- User information -->
-                                <div class="information">
-                                        <p>Created on: (date)</p>
-                                        <p>Full Name: (full name)</p>
-                                        <p>Email: (email)</p>
-                                        <p>Accepted By: (name)</p>
+                        <!-- ====================SINGLE USER==================== -->
+                                <div class="acc-single"> <!-- Single user -->
+                                        <div class="acc-user-dropdown"><!-- User Dropdown -->
+                                                <p class="acc-username">username <span class="acc-badge">Approved</span></p>
+                                                <p class="icon-plus">+</p>
+                                                <p class="icon-minus hidden">-</p>
+                                        </div><!-- User Dropdown -->
+                                        <div class="acc-user-info"><!-- User information -->
+                                                <div class="information">
+                                                        <p>Created on: (date)</p>
+                                                        <p>Full Name: (full name)</p>
+                                                        <p>Email: (email)</p>
+                                                        <p>Accepted By: (name)</p>
+                                                </div>
+                                                <div class="options">
+                                                        <a href="#">Delete User</a>
+                                                        <a href="#">Edit User</a>
+                                                </div>
+                                        </div><!-- User information -->
+                                </div><!-- Single user -->
+                        <!-- ====================SINGLE USER CLOSE==================== -->
+
+                        <!-- ====================SINGLE USER==================== -->
+                                <div class="acc-single"> <!-- Single user -->
+                                        <div class="acc-user-dropdown"><!-- User Dropdown -->
+                                                <p class="acc-username">username <span class="acc-badge">Approved</span></p>
+                                                <p class="icon-plus">+</p>
+                                                <p class="icon-minus hidden">-</p>
+                                        </div><!-- User Dropdown -->
+                                        <div class="acc-user-info"><!-- User information -->
+                                                <div class="information">
+                                                        <p>Created on: (date)</p>
+                                                        <p>Full Name: (full name)</p>
+                                                        <p>Email: (email)</p>
+                                                        <p>Accepted By: (name)</p>
+                                                </div>
+                                                <div class="options">
+                                                        <a href="#">Delete User</a>
+                                                        <a href="#">Edit User</a>
+                                                </div>
+                                        </div><!-- User information -->
+                                </div><!-- Single user -->
+                        <!-- ====================SINGLE USER CLOSE==================== -->
+                        
+                        </div><!-- Registered Users Content-->
+                <!-- ====================REGISTERED USERS CLOSE==================== -->
+
+                <a href="#">View all users</a>
+
+                </div> <!-- Accordion -->
+                <!-- ====================ACCORDION CLOSE==================== -->
+
+
+                <!-- ====================OVERVIEW==================== -->
+                <div class="overview">
+                        <h3>Uploads Overview</h3>
+                        <div class="overview-box">
+                                <div>
+                                        <p>New Uploads: <span class="number">12</span></p>
+                                        <p>Published Uploads: <span class="number">40</span></p>
                                 </div>
-                                <div class="options">
-                                        <a href="#">Delete User</a>
-                                        <a href="#">Edit User</a>
+                                <div>
+                                        <a href="#">Manage Uploads</a>
                                 </div>
-                        </div><!-- User information -->
-                </div><!-- Single user -->
+                        </div>
+                </div>
+        <!-- ====================OVERVIEW CLOSE==================== -->
 
+        <!-- ====================ACCORDION==================== -->
+        <div class="accordian"><!-- Accordian -->
+                <h4>Latest Upload Activity</h4>
+                <div class="acc-tabs"><!-- Tabs-->
+                <a href="#" class="acc-new-uploads">New</a>
+                <a href="#" class="acc-published-uploads">Registered</a>
+                </div><!-- Tabs-->
 
-        </div><!-- New Users Content-->
+        <!-- ====================NEW UPLOADS==================== -->
+                <div id="new-uploads" class="acc-content"> <!-- New Upoads Content-->
 
-    </div> <!-- Accordian -->
+                <!-- ====================SINGLE UPLOAD==================== -->
+                        <div class="acc-single"> <!-- Single user -->
+                                <div class="acc-user-dropdown"><!-- User Dropdown -->
+                                        <p class="acc-username">title<span class="acc-badge">New!</span></p>
+                                        <p class="icon-plus">+</p>
+                                        <p class="icon-minus hidden">-</p>
+                                </div><!-- User Dropdown -->
+                                <div class="acc-user-info"><!-- User information -->
+                                        <div class="information">
+                                                <p>Created on: (date)</p>
+                                                <p>Full Name: (full name)</p>
+                                                <p>Email: (email)</p>
+                                        </div>
+                                        <div class="options">
+                                                <a href="#">Delete Upload</a>
+                                                <a href="#">Edit Upload</a>
+                                        </div>
+                                </div><!-- User information -->
+                        </div><!-- Single user -->
+                <!-- ====================SINGLE UPLOAD CLOSE==================== -->
+
+                <!-- ====================SINGLE UPLOAD==================== -->
+                        <div class="acc-single"> <!-- Single user -->
+                                <div class="acc-user-dropdown"><!-- User Dropdown -->
+                                        <p class="acc-username">title<span class="acc-badge">New!</span></p>
+                                        <p class="icon-plus">+</p>
+                                        <p class="icon-minus hidden">-</p>
+                                </div><!-- User Dropdown -->
+                                <div class="acc-user-info"><!-- User information -->
+                                        <div class="information">
+                                                <p>Created on: (date)</p>
+                                                <p>Full Name: (full name)</p>
+                                                <p>Email: (email)</p>
+                                        </div>
+                                        <div class="options">
+                                                <a href="#">Delete Upload</a>
+                                                <a href="#">Edit Upload</a>
+                                        </div>
+                                </div><!-- User information -->
+                        </div><!-- Single user -->
+                <!-- ====================SINGLE UPLOAD CLOSE==================== -->
+
+                <!-- ====================SINGLE UPLOAD==================== -->
+                        <div class="acc-single"> <!-- Single user -->
+                                <div class="acc-user-dropdown"><!-- User Dropdown -->
+                                        <p class="acc-username">title<span class="acc-badge">New!</span></p>
+                                        <p class="icon-plus">+</p>
+                                        <p class="icon-minus hidden">-</p>
+                                </div><!-- User Dropdown -->
+                                <div class="acc-user-info"><!-- User information -->
+                                        <div class="information">
+                                                <p>Created on: (date)</p>
+                                                <p>Full Name: (full name)</p>
+                                                <p>Email: (email)</p>
+                                        </div>
+                                        <div class="options">
+                                                <a href="#">Delete Upload</a>
+                                                <a href="#">Edit Upload</a>
+                                        </div>
+                                </div><!-- User information -->
+                        </div><!-- Single user -->
+                <!-- ====================SINGLE UPLOAD CLOSE==================== -->
+
+                <!-- ====================SINGLE UPLOAD==================== -->
+                        <div class="acc-single"> <!-- Single user -->
+                                <div class="acc-user-dropdown"><!-- User Dropdown -->
+                                        <p class="acc-username">title<span class="acc-badge">New!</span></p>
+                                        <p class="icon-plus">+</p>
+                                        <p class="icon-minus hidden">-</p>
+                                </div><!-- User Dropdown -->
+                                <div class="acc-user-info"><!-- User information -->
+                                        <div class="information">
+                                                <p>Created on: (date)</p>
+                                                <p>Full Name: (full name)</p>
+                                                <p>Email: (email)</p>
+                                        </div>
+                                        <div class="options">
+                                                <a href="#">Delete Upload</a>
+                                                <a href="#">Edit Upload</a>
+                                        </div>
+                                </div><!-- User information -->
+                        </div><!-- Single user -->
+                <!-- ====================SINGLE UPLOAD CLOSE==================== -->
+
+                </div><!-- New Uploads Content-->
+        <!-- ====================NEW UPLOADS CLOSE==================== -->
+
+        <!-- ====================PUBLISHED UPLOADS==================== -->
+                <div id="published-uploads" class="acc-content hidden"> <!-- New Users Content-->
+
+                <!-- ====================SINGLE UPLOAD==================== -->
+                        <div class="acc-single"> <!-- Single user -->
+                                <div class="acc-user-dropdown"><!-- User Dropdown -->
+                                        <p class="acc-username">title <span class="acc-badge">Published</span></p>
+                                        <p class="icon-plus">+</p>
+                                        <p class="icon-minus hidden">-</p>
+                                </div><!-- User Dropdown -->
+                                <div class="acc-user-info"><!-- User information -->
+                                        <div class="information">
+                                                <p>Created on: (date)</p>
+                                                <p>Created by: (full name)</p>
+                                                <p>Category: (category)</p>
+                                                <p>Accepted By: (name)</p>
+                                        </div>
+                                        <div class="options">
+                                                <a href="#">Delete Upload</a>
+                                                <a href="#">Edit Upload</a>
+                                        </div>
+                                </div><!-- User information -->
+                        </div><!-- Single user -->
+                <!-- ====================SINGLE UPLOAD CLOSE==================== -->
+
+                 <!-- ====================SINGLE UPLOAD==================== -->
+                        <div class="acc-single"> <!-- Single user -->
+                                <div class="acc-user-dropdown"><!-- User Dropdown -->
+                                        <p class="acc-username">title <span class="acc-badge">Published</span></p>
+                                        <p class="icon-plus">+</p>
+                                        <p class="icon-minus hidden">-</p>
+                                </div><!-- User Dropdown -->
+                                <div class="acc-user-info"><!-- User information -->
+                                        <div class="information">
+                                                <p>Created on: (date)</p>
+                                                <p>Created by: (full name)</p>
+                                                <p>Category: (category)</p>
+                                                <p>Accepted By: (name)</p>
+                                        </div>
+                                        <div class="options">
+                                                <a href="#">Delete Upload</a>
+                                                <a href="#">Edit Upload</a>
+                                        </div>
+                                </div><!-- User information -->
+                        </div><!-- Single user -->
+                <!-- ====================SINGLE UPLOAD CLOSE==================== -->
+
+                 <!-- ====================SINGLE UPLOAD==================== -->
+                        <div class="acc-single"> <!-- Single user -->
+                                <div class="acc-user-dropdown"><!-- User Dropdown -->
+                                        <p class="acc-username">title <span class="acc-badge">Published</span></p>
+                                        <p class="icon-plus">+</p>
+                                        <p class="icon-minus hidden">-</p>
+                                </div><!-- User Dropdown -->
+                                <div class="acc-user-info"><!-- User information -->
+                                        <div class="information">
+                                                <p>Created on: (date)</p>
+                                                <p>Created by: (full name)</p>
+                                                <p>Category: (category)</p>
+                                                <p>Accepted By: (name)</p>
+                                        </div>
+                                        <div class="options">
+                                                <a href="#">Delete Upload</a>
+                                                <a href="#">Edit Upload</a>
+                                        </div>
+                                </div><!-- User information -->
+                        </div><!-- Single user -->
+                <!-- ====================SINGLE UPLOAD CLOSE==================== -->
+
+                 <!-- ====================SINGLE UPLOAD==================== -->
+                        <div class="acc-single"> <!-- Single user -->
+                                <div class="acc-user-dropdown"><!-- User Dropdown -->
+                                        <p class="acc-username">title <span class="acc-badge">Published</span></p>
+                                        <p class="icon-plus">+</p>
+                                        <p class="icon-minus hidden">-</p>
+                                </div><!-- User Dropdown -->
+                                <div class="acc-user-info"><!-- User information -->
+                                        <div class="information">
+                                                <p>Created on: (date)</p>
+                                                <p>Created by: (full name)</p>
+                                                <p>Category: (category)</p>
+                                                <p>Accepted By: (name)</p>
+                                        </div>
+                                        <div class="options">
+                                                <a href="#">Delete Upload</a>
+                                                <a href="#">Edit Upload</a>
+                                        </div>
+                                </div><!-- User information -->
+                        </div><!-- Single user -->
+                <!-- ====================SINGLE UPLOAD CLOSE==================== -->
+        
+                </div><!-- Published Uploads Content-->
+        <!-- ====================PUBLISHED UPLOADS CLOSE==================== -->
+
+        <a href="#">View all uploads</a>
+
+        </div> <!-- Accordion -->
+        <!-- ====================ACCORDION CLOSE==================== -->
+
+        </div><!-- Container -->
+<!-- ====================CONTAINER CLOSE==================== -->
 
 {% endblock content %}
 

@@ -17,30 +17,38 @@ $(document).ready(function(){
             content.slideDown();
             var iconPlus = $(this).find('.icon-plus');
             var iconMinus = $(this).find('.icon-minus');
-
-            // console.log(iconPlus);
-            // console.log(iconMinus);
-            iconPlus.addClass('hidden');
-            iconMinus.removeClass('hidden');
+            
+            // iconPlus.addClass('hidden');
+            // iconMinus.removeClass('hidden');
             
         });
       
       })(jQuery);
 
-    $('.acc-new').click(function(event){
-        console.log("new");
-            
+    $('.acc-new-users').click(function(event){
         $('#new-users').removeClass('hidden');
         $('#registered-users').addClass('hidden');
 
         event.preventDefault();
     });
 
-    $('.acc-registered').click(function(event){
-        console.log("registered");
-
+    $('.acc-registered-users').click(function(event){
         $('#new-users').addClass('hidden');
         $('#registered-users').removeClass('hidden');
+        
+        event.preventDefault();
+    });
+
+    $('.acc-new-uploads').click(function(event){
+        $('#new-uploads').removeClass('hidden');
+        $('#published-uploads').addClass('hidden');
+
+        event.preventDefault();
+    });
+
+    $('.acc-published-uploads').click(function(event){
+        $('#published-uploads').removeClass('hidden');
+        $('#new-uploads').addClass('hidden');
         
         event.preventDefault();
     });
