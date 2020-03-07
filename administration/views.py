@@ -4,3 +4,6 @@ from django.shortcuts import render
 
 def admin_home(request): 
     return render(request, 'administration/admin_home.html')
+
+def admin_users(request): 
+    return render(request, 'administration/admin_users.html')

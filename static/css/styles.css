@@ -722,9 +722,7 @@ html {
 }
 
 .dashboard-main .welcome {
-  background: #eaf3f4;
-  border-bottom: 0.5rem solid #404b5e;
-  padding: 3rem 1rem 0 1rem;
+  padding: 2rem 1rem 0 1rem;
 }
 
 .dashboard-main .welcome h2 {
@@ -747,7 +745,7 @@ html {
 
 @media screen and (min-width: 1000px) {
   .dashboard-main .welcome {
-    padding: 6rem 6rem 0 30rem;
+    padding: 4rem 6rem 0 30rem;
   }
 }
 
@@ -757,7 +755,7 @@ html {
 }
 
 .dashboard-main .accordian {
-  padding: 3rem 1rem 0 1rem;
+  padding: 2rem 1rem 0 1rem;
   margin-bottom: 8rem;
 }
 
@@ -769,7 +767,7 @@ html {
 
 @media screen and (min-width: 1000px) {
   .dashboard-main .accordian {
-    padding: 6rem 6rem 0 30rem;
+    padding: 4rem 6rem 0 30rem;
   }
 }
 
@@ -807,6 +805,10 @@ html {
   background: #404b5e;
 }
 
+.dashboard-main .accordian .acc-content {
+  margin-bottom: 2rem;
+}
+
 .dashboard-main .accordian .acc-content .acc-single .acc-user-dropdown:hover {
   background: #404b5e;
 }
@@ -821,7 +823,7 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: #7493c9;
+  background: linear-gradient(85deg, #0a728e 0%, #a7feff 100%);
   color: white;
   padding: 1rem 2rem;
 }
@@ -950,8 +952,24 @@ html {
   border-top-right-radius: 1.6rem;
 }
 
+.dashboard-main .accordian .view-all {
+  color: #5dc6ff;
+  border-bottom: 1px solid #5dc6ff;
+  font-size: 1.8rem;
+  padding-bottom: 1rem;
+  font: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.dashboard-main .overview {
+  background: linear-gradient(85deg, #0a728e 0%, #a7feff 100%);
+  border-top: 1px solid #404b5e;
+  border-bottom: 1px solid #404b5e;
+}
+
 .dashboard-main .overview h3 {
-  padding: 3rem 1rem 0 1rem;
+  color: white;
+  margin-bottom: 0;
+  padding: 2rem 1rem 0 1rem;
 }
 
 @media screen and (min-width: 700px) {
@@ -962,13 +980,11 @@ html {
 
 @media screen and (min-width: 1000px) {
   .dashboard-main .overview h3 {
-    padding: 6rem 6rem 0 30rem;
+    padding: 4rem 6rem 0 30rem;
   }
 }
 
 .dashboard-main .overview .overview-box {
-  border-top: 1px solid #404b5e;
-  border-bottom: 1px solid #404b5e;
   padding: 3rem 1rem 3rem 1rem;
 }
 
@@ -996,6 +1012,7 @@ html {
 .dashboard-main .overview .overview-box p {
   font-size: 2.4rem;
   margin-bottom: 1rem;
+  color: white;
 }
 
 .dashboard-main .overview .overview-box p .number {
@@ -1020,5 +1037,9 @@ html {
     width: 30rem;
     margin-left: 4rem;
   }
+}
+
+.dashboard-main .users-overview > .overvew-box {
+  background: #8dc5d1;
 }
 /*# sourceMappingURL=styles.css.map */

@@ -1,8 +1,13 @@
 .dashboard-main{
 
     .overview{
+        background: $users-overview-bgd;
+        border-top: 1px solid $dark;
+        border-bottom: 1px solid $dark;
 
         h3{
+            color: $white;
+            margin-bottom: 0;
             @include padding(small);
 
             @include breakpoint(tablet){
@@ -15,8 +20,6 @@
         }
         
         .overview-box{
-            border-top: 1px solid $dark;
-            border-bottom: 1px solid $dark;
 
             padding: 3rem 1rem 3rem 1rem;
 
@@ -32,6 +35,7 @@
             p{
                 font-size: $overview-labels;
                 margin-bottom: 1rem;
+                color: $white;
 
                 .number{
                     font-weight: bold;
@@ -56,8 +60,9 @@
 
     }
 
-    
-
-
+    .users-overview > .overvew-box{
+        background: rgb(141,197,209);
+        
+    }
 
 }

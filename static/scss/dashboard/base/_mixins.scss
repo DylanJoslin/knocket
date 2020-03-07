@@ -2,7 +2,7 @@
 @mixin padding($size) {
 
     @if $size == small {
-      padding: 3rem 1rem 0 1rem;
+      padding: 2rem 1rem 0 1rem;
     }
 
     @if $size == medium {
@@ -10,7 +10,7 @@
     }
 
     @else if $size == large {
-      padding: 6rem 6rem 0 30rem;
+      padding: 4rem 6rem 0 30rem;
     }
     
   }//breakpoint mixin
@@ -81,7 +81,7 @@
 }
 
 @mixin accordian-dropdown(){
-  background: $acc-background;
+  background: $user-acc-background;
   color: $white;
   padding: 1rem 2rem;
 }
@@ -97,7 +97,11 @@
 }
 
 @mixin accordian-link(){
-  color: ;
+  color: $acc-link-color;
+  border-bottom: 1px solid $acc-link-color;
+  font-size: $acc-tabs;
+  padding-bottom: 1rem;
+  font: $acc-link-font;
 }
 
 @mixin accordian-hover{

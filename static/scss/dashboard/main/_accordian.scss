@@ -36,6 +36,7 @@
         }
 
         .acc-content{
+            margin-bottom: 2rem;
             
             .acc-single{
 
@@ -132,6 +133,11 @@
         }
 
         // USERS ACCORDIAN
+
+        .view-all{
+            @include accordian-link;
+        }
+
 
     }
 
