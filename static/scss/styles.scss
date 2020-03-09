@@ -1,4 +1,14 @@
+/* ------------------------------------------------------
+                LANDING STYLES
+------------------------------------------------------ */
 
+@import 'landing-page/reset';
+@import 'landing-page/config';
+@import 'landing-page/typography';
+@import 'landing-page/header';
+@import 'landing-page/styling';
+@import 'landing-page/menu';
+@import 'landing-page/footer';
 /* ------------------------------------------------------
                 MAP STYLES
 ------------------------------------------------------ */
@@ -18,17 +28,4 @@
 @import 'dashboard/header/mobile-menu';
 @import 'dashboard/main/main-base';
 @import 'dashboard/main/accordian';
-
-/* ------------------------------------------------------
-                LANDING STYLES
------------------------------------------------------- */
-@import 'landing-page/config';
-@import 'landing-page/typography';
-@import 'landing-page/menu';
-@import 'landing-page/banner';
-@import 'landing-page/footer';
-@import 'landing-page/styling';
-
-
-
 

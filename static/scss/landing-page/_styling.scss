@@ -11,47 +11,7 @@ img, .treaty-img{
     max-width: 100%;
     height: auto;
 }
-/* HEADER CUSTOM STYLES */
-
-header{
-   
-    .top-header{
-        display: flex;
-        justify-content: space-between;
-        padding: 30px 10px;
-        background-color: $darkblue;
-
-        @include media-md{
-            margin-bottom: 70px;
-        }
-    }
-
-    .login{
-        margin-top: 8px;
-    }
-
-    .login a{
-        font-family: 'Cardo Regular', sans-serif;
-        text-transform: uppercase;
-        font-size: 12px;
-        text-decoration: none;
-        color: white;
-        background-color: $sage;
-        padding: 8px;
-        margin-top: 10px;
-        border-radius: 8px;
-
-        &:hover{
-            background-color: $maroon;
-            transition: 0.5s;
-        }
-    }
-
-    .menu{
-        @include flex;
-    }
-}
-
+ 
 .treaty{
 
     .content{
@@ -92,33 +52,6 @@ header{
     }
 }
 
-.interactive-map{
-    width: 100%;
-    height: 450px;
-    background-color: $darkblue;
-    padding: 30px 10px;
-    margin-bottom: 80px;
-
-    @include media-md{
-        height: 500px;
-        margin-bottom: 110px;
-    }
-    h2{
-        color: white;
-        text-align: center;
-        line-height: 1.5;
-    }
-
-    h3{
-        text-transform: uppercase;
-        color: white;
-        text-align: center;
-    }
-
-    img{
-        margin: 40px auto;
-    }
-}
 
 
 
