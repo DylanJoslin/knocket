@@ -1,23 +1,55 @@
 $(document).ready(function(){
 
-    $('.menu-icon').on('click', function(){
+    $('.menu-icon').click(function(){
         $('.dashboard-navigation').toggleClass('menu-toggle');
         $('.menu-icon').toggleClass('icon-closed');
         $('.dashboard-header').toggleClass('menu-closed-header-style ');
     });
 
-    $('.acc-user-dropdown').click(function(event){
-        console.log("clicked");
+    (function($) {
+    
+        var allPanels = $('.acc-user-info');
+        allPanels.hide();
+        
+        $('.acc-user-dropdown').click(function() {
+            allPanels.slideUp();
+            var content = $(this).siblings();
+            content.slideDown();
+            var iconPlus = $(this).find('.icon-plus');
+            var iconMinus = $(this).find('.icon-minus');
+            
+            // iconPlus.addClass('hidden');
+            // iconMinus.removeClass('hidden');
+            
+        });
+      
+      })(jQuery);
 
-        $('.acc-user-info').toggleClass('closed');
-        if($('.acc-user-info').hasClass('closed')){
-            $('.icon').html('+');
-        } else {
-            $('.icon').html('-');
-        }
-       
+    $('.acc-new-users').click(function(event){
+        $('#new-users').removeClass('hidden');
+        $('#registered-users').addClass('hidden');
 
+        event.preventDefault();
+    });
 
+    $('.acc-registered-users').click(function(event){
+        $('#new-users').addClass('hidden');
+        $('#registered-users').removeClass('hidden');
+        
+        event.preventDefault();
+    });
+
+    $('.acc-new-uploads').click(function(event){
+        $('#new-uploads').removeClass('hidden');
+        $('#published-uploads').addClass('hidden');
+
+        event.preventDefault();
+    });
+
+    $('.acc-published-uploads').click(function(event){
+        $('#published-uploads').removeClass('hidden');
+        $('#new-uploads').addClass('hidden');
+        
         event.preventDefault();
     });
 

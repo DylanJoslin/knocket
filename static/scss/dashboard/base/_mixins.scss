@@ -2,15 +2,15 @@
 @mixin padding($size) {
 
     @if $size == small {
-      padding: 1rem;
+      padding: 2rem 1rem 0 1rem;
     }
 
     @if $size == medium {
-      padding: 3rem;
+      padding: 3rem 3rem 0 3rem;
     }
 
     @else if $size == large {
-      padding: 0rem 3rem 3rem 28rem;
+      padding: 4rem 6rem 0 30rem;
     }
     
   }//breakpoint mixin
@@ -18,15 +18,19 @@
   @mixin breakpoint($size) {
 
     @if $size == maxTablet {
-      @media screen and (max-width: 1099px) {@content;}
+      @media screen and (max-width: 999px) {@content;}
     }
 
     @if $size == tablet {
-      @media screen and (min-width: 800px) {@content;}
+      @media screen and (min-width: 700px) {@content;}
     }
 
     @else if $size == laptop {
-      @media screen and (min-width: 1100px) {@content;}
+      @media screen and (min-width: 1000px) {@content;}
+    }
+
+    @else if $size == desktop {
+      @media screen and (min-width: 1200px) {@content;}
     }
     
   }//breakpoint mixin
@@ -40,6 +44,7 @@
     display: block;
     padding: 2rem;
     margin-bottom: 2rem;
+    color: $white;
 
     @include breakpoint(laptop){
       margin: 0;
@@ -56,16 +61,19 @@
   max-width: 54rem;
 }//para
 
-@mixin nav-flex(){
+@mixin flex($justify-content){
     display: flex;
-    justify-content: space-between;
+    justify-content: $justify-content;
     align-items: center;
 }//flex
 
 @mixin accordian-tabs(){
   background: $acc-background;
   color: $white;
-  padding: 1.2rem 4rem;
+  padding: 1rem 3rem;
+  @include breakpoint(tablet){
+    padding: 1.2rem 3rem;
+  }
   margin-bottom: 3rem;
   font-size: $acc-tabs;
   border-top-left-radius: 1.6rem;
@@ -73,27 +81,53 @@
 }
 
 @mixin accordian-dropdown(){
-  background: $acc-background;
+  background: $user-acc-background;
   color: $white;
   padding: 1rem 2rem;
-  border-top-right-radius: 1.6rem;
 }
 
-@mixin acc-hover{
+@mixin accordian-badge(){
+  background: $white;
+  color: $dark;
+  padding: 0.5rem 1rem;
+  font-size: $acc-badge;
+  border: 1px solid $dark;
+  border-radius: 1rem;
+  margin-left: 1rem;
+}
+
+@mixin accordian-link(){
+  color: $acc-link-color;
+  border-bottom: 1px solid $acc-link-color;
+  font-size: $acc-tabs;
+  padding-bottom: 1rem;
+  font: $acc-link-font;
+}
+
+@mixin accordian-hover{
   background: $acc-hover-background;
 }
 
 @mixin accordian-info-shown(){
   border: 1px solid $acc-background;
   padding: 1rem;
-  transition: max-height 0.2s ease-out;
 }
 
-@mixin accordian-info-hidden(){
-  padding: 0;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.2s ease-in;
+@mixin button(){
+  color: $white;
+  background: $dark;
+  font-size: $button;
+  border-radius: 3rem;
+  text-align: center;
+  display: block;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+@mixin button-hover{
+  border: 2px solid $dark;
+  background: $white;
+  color: $dark;
 }
 
 @mixin innerContainer($width){

@@ -13,3 +13,4 @@ def admin_home(request, access='new'):
 
 
     return render(request, 'administration/admin_home.html', context)
+

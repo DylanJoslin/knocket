@@ -26,12 +26,13 @@
 
             a{
                 @include nav-links;
-                @include nav-flex;
+                @include flex(space-between);
             
                 p{
                     margin-bottom: 0;
                     font-size: $navlink-font-size;
                     font-family: $navlink-font;
+                    color: $white;
 
                     @include breakpoint(laptop){
 
@@ -51,10 +52,11 @@
             @include nav-links;
 
             @include breakpoint(maxTablet){
-                @include nav-flex;
+                @include flex(space-between);
             }//break
 
             .signed-in{
+                color: $white;
 
                 @include breakpoint(laptop){
                     padding-bottom: 1.5rem;
@@ -64,6 +66,7 @@
             
             a p{
                 text-align: right;
+                color: $white;
             }
 
             p{

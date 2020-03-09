@@ -1,17 +1,38 @@
     .dashboard-main{
-        @include padding(small);
+        padding: 0;
 
-        @include breakpoint(tablet){
-            @include padding(medium);
-        }
+        .welcome{
 
-        @include breakpoint(laptop){
-            @include padding(large);
-        }
+            h2{
+                font-size: 3.6rem;
+                line-height: 4.8rem;
 
-        p{
-            color: $dark;
-            font-size: $paragraph;
-        }
+                @include breakpoint(tablet){
+                    font-size: 5.6rem; 
+                     line-height: 7.2rem;
+                }
+            }
 
-    }
+            @include padding(small);
+
+            @include breakpoint(tablet){
+                @include padding(medium);
+            }
+
+            @include breakpoint(laptop){
+                @include padding(large);
+            }
+
+            p{
+                font-size: 2rem;
+                margin-bottom: 5rem;
+            }
+
+        }//.welcome
+
+        .container{
+           
+
+        }//.container
+
+    }//.dashboard-main
