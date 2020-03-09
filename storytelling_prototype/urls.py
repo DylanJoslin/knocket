@@ -28,6 +28,7 @@ urlpatterns = [
     path('admin/', admin.site.urls, name='admin'),
     path('administration/', administration_views.admin_home, name='administration'),
     path('administration/<slug:access>', administration_views.admin_home, name='administration'),
+    path('administration/users', administration_views.admin_users, name='admin_users'),
     path('register/', user_views.register, name='register'),
     path('login/', user_views.login_view, name='login'),
     path('logout/', user_views.logout_view, name='logout'),

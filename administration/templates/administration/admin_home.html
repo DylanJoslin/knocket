@@ -5,6 +5,7 @@
     <h2>Welcome {{ user.first_name }}, to your dashboard</h2>
     <p>Here you can manage the users and the content on your site.</p>
 </div>
+
 <!-- ====================CONTAINER==================== -->
         <div class="container">
 
@@ -13,8 +14,8 @@
                         <h3>Users Overview</h3>
                         <div class="overview-box">
                                 <div>
-                                        <p>New Users: <span class="number">4</span></p>
-                                        <p>Registered Users: <span class="number">23</span></p>
+                                        <p>New Users: <span class="number">{{new_users}}</span></p>
+                                        <p>Registered Users: <span class="number">{{ registered_users }}</span></p>
                                 </div>
                                 <div>
                                         <a href="#">Manage Users</a>
