@@ -10,7 +10,6 @@ def admin_home(request, access='new'):
         'users': User.objects.all(),
         'access': access
     }
-
-
+    
     return render(request, 'administration/admin_home.html', context)
 

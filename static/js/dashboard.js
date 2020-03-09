@@ -25,19 +25,7 @@ $(document).ready(function(){
       
       })(jQuery);
 
-    $('.acc-new-users').click(function(event){
-        $('#new-users').removeClass('hidden');
-        $('#registered-users').addClass('hidden');
-
-        event.preventDefault();
-    });
-
-    $('.acc-registered-users').click(function(event){
-        $('#new-users').addClass('hidden');
-        $('#registered-users').removeClass('hidden');
-        
-        event.preventDefault();
-    });
+    
 
     $('.acc-new-uploads').click(function(event){
         $('#new-uploads').removeClass('hidden');
