@@ -45,8 +45,14 @@
 
 /* Custom Styles for Typography */
 
+h1, h2, h3, h4, h5 {
+margin: 2.75rem 0 1.05rem;
+font-weight: 500;
+line-height: 1.15;
+}
 h1{
-    font: 30px/1 'Cardo Regular', sans-serif;
+    font: 4.209em/1 'Cardo Regular', sans-serif;
+    margin-top: 0;
     color: white;
     text-transform: uppercase;
 
@@ -64,7 +70,7 @@ h1{
 }
 
 h2{
-    font: 24px/1.5 'Raleway Regular', sans-serif;
+    font: 3.157em/1.5 'Raleway Regular', sans-serif;
 
     @include media-md{
         font-size: 32px;
@@ -72,7 +78,7 @@ h2{
 }
 
 h3{
-    font: 30px/1.5 'Cardo Bold', sans-serif;
+    font: 2.369em/1.5 'Cardo Bold', sans-serif;
 
     @include media-md{
         font-size: 60px;

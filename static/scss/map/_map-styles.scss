@@ -1,30 +1,30 @@
-body {
-    background-color: white;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    line-height: 1.5;
-    color: #999999;
-    background-color: #0c2034;
-    /* background: linear-gradient(#0ff 0.0555555em, transparent 0.0555555em); */
-    // background-size: auto 1.5em;
-    /*24px for ideal gap*/
-  }
+// body {
+//     background-color: white;
+//     font-family: 'Poppins', sans-serif;
+//     font-weight: 400;
+//     line-height: 1.5;
+//     color: #999999;
+//     background-color: #0c2034;
+//     /* background: linear-gradient(#0ff 0.0555555em, transparent 0.0555555em); */
+//     // background-size: auto 1.5em;
+//     /*24px for ideal gap*/
+//   }
   
-  h1 {
-    margin-top: 0;
-    font-size: 1.802em;
-    padding-top: 5rem;
-  }
+//   h1 {
+//     margin-top: 0;
+//     font-size: 1.802em;
+//     padding-top: 5rem;
+//   }
     
-  h2 {font-size: 1.602em;}
+//   h2 {font-size: 1.602em;}
     
-  h3 {font-size: 1.424em;}
+//   h3 {font-size: 1.424em;}
     
-  h4 {font-size: 1.266em;}
+//   h4 {font-size: 1.266em;}
     
-  h5 {font-size: 1.125em;}
+//   h5 {font-size: 1.125em;}
     
-  .text_small {font-size: 0.889em;}
+//   .text_small {font-size: 0.889em;}
   
   /*============================================
                    Custom Styles 
@@ -36,6 +36,10 @@ body {
     // background-color: #0c2034;
     height: 100%;
     padding: 5rem 0;
+  }
+
+  .interactive-map{
+    background-color: #0c2034
   }
   
   a{

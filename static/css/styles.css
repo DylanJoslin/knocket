@@ -128,8 +128,15 @@ select {
 }
 
 /* Custom Styles for Typography */
+h1, h2, h3, h4, h5 {
+  margin: 2.75rem 0 1.05rem;
+  font-weight: 500;
+  line-height: 1.15;
+}
+
 h1 {
-  font: 30px/1 'Cardo Regular', sans-serif;
+  font: 4.209em/1 'Cardo Regular', sans-serif;
+  margin-top: 0;
   color: white;
   text-transform: uppercase;
 }
@@ -146,7 +153,7 @@ h1 a {
 }
 
 h2 {
-  font: 24px/1.5 'Raleway Regular', sans-serif;
+  font: 3.157em/1.5 'Raleway Regular', sans-serif;
 }
 
 @media screen and (min-width: 768px) {
@@ -156,7 +163,7 @@ h2 {
 }
 
 h3 {
-  font: 30px/1.5 'Cardo Bold', sans-serif;
+  font: 2.369em/1.5 'Cardo Bold', sans-serif;
 }
 
 @media screen and (min-width: 768px) {
@@ -168,54 +175,6 @@ h3 {
 p {
   font: 18px/1.5 'Raleway Regular', sans-serif;
   text-align: justify;
-}
-
-header .top-header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding: 30px 10px;
-  background-color: #278AB0;
-}
-
-@media screen and (min-width: 768px) {
-  header .top-header {
-    margin-bottom: 70px;
-  }
-}
-
-header .login {
-  margin-top: 8px;
-}
-
-header .login a {
-  font-family: 'Cardo Regular', sans-serif;
-  text-transform: uppercase;
-  font-size: 12px;
-  text-decoration: none;
-  color: white;
-  background-color: #9DC183;
-  padding: 8px;
-  margin-top: 10px;
-  border-radius: 8px;
-}
-
-header .login a:hover {
-  background-color: #DB7434;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-}
-
-header .menu {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 
 .inner-container {
@@ -274,6 +233,54 @@ img, .treaty-img {
     margin: 60px auto 120px;
     width: 40%;
   }
+}
+
+header .top-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 30px 10px;
+  background-color: #278AB0;
+}
+
+@media screen and (min-width: 768px) {
+  header .top-header {
+    margin-bottom: 70px;
+  }
+}
+
+header .login {
+  margin-top: 8px;
+}
+
+header .login a {
+  font-family: 'Cardo Regular', sans-serif;
+  text-transform: uppercase;
+  font-size: 12px;
+  text-decoration: none;
+  color: white;
+  background-color: #9DC183;
+  padding: 8px;
+  margin-top: 10px;
+  border-radius: 8px;
+}
+
+header .login a:hover {
+  background-color: #DB7434;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+header .menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .menu-toggle {
@@ -447,43 +454,6 @@ footer .bottom p {
 /* ------------------------------------------------------
                 MAP STYLES
 ------------------------------------------------------ */
-body {
-  background-color: white;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 400;
-  line-height: 1.5;
-  color: #999999;
-  background-color: #0c2034;
-  /* background: linear-gradient(#0ff 0.0555555em, transparent 0.0555555em); */
-  /*24px for ideal gap*/
-}
-
-h1 {
-  margin-top: 0;
-  font-size: 1.802em;
-  padding-top: 5rem;
-}
-
-h2 {
-  font-size: 1.602em;
-}
-
-h3 {
-  font-size: 1.424em;
-}
-
-h4 {
-  font-size: 1.266em;
-}
-
-h5 {
-  font-size: 1.125em;
-}
-
-.text_small {
-  font-size: 0.889em;
-}
-
 /*============================================
                    Custom Styles 
    ===========================================*/
@@ -491,6 +461,10 @@ h5 {
 main {
   height: 100%;
   padding: 5rem 0;
+}
+
+.interactive-map {
+  background-color: #0c2034;
 }
 
 a {
