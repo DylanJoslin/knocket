@@ -1,85 +1,19 @@
 {% extends 'administration/base.html' %}
 
 {% block content %}
-<div class="welcome">
-    <h2>Welcome {{ user.first_name }}, to your dashboard</h2>
-    <p>Here you can manage the users and the content on your site.</p>
-</div>
+
+<!-- ====================WELCOME BANNER==================== -->
+        <div class="welcome">
+                <h2>Manage site uploads</h2>
+                <p>Here you can manage the site content uploads. Create, delete and update posts.</p>
+        </div>
+<!-- ====================WELCOME BANNER CLOSE==================== -->
+        
 <!-- ====================CONTAINER==================== -->
         <div class="container">
 
-        <!-- ====================OVERVIEW==================== -->
-                <div class="overview users-overview">
-                        <h3>Users Overview</h3>
-                        <div class="overview-box">
-                                <div>
-                                        <p>New Users: <span class="number">4</span></p>
-                                        <p>Registered Users: <span class="number">23</span></p>
-                                </div>
-                                <div>
-                                        <a href="#">Manage Users</a>
-                                </div>
-                        </div>
-                </div>
-        <!-- ====================OVERVIEW CLOSE==================== -->
-
-        <!-- ====================ACCORDION==================== -->
-                <div class="accordian"><!-- Accordian -->
-                        <h4>Latest User Activity</h4>
-                        <div class="acc-tabs"><!-- Tabs-->
-                                <a href="{% url 'administration' %}pending" class="acc-new-users">New</a>
-                                <a href="{% url 'administration' %}student" class="acc-registered-users">Registered</a>
-                                {% comment %} <a href="{% url 'administration' %}teacher">Teachers</a>
-                                <a href="{% url 'administration' %}elder">Elders</a> {% endcomment %}
-                        </div><!-- Tabs-->
-
-                <!-- ====================NEW USERS==================== -->
-                        <div id="new-users" class="acc-content"> <!-- New Users Content-->
-                        {% for user in users %}
-                                {% if user.userprofile.access == access %}
-
-                        <!-- ====================SINGLE USER==================== -->
-                                        <div class="acc-single"> <!-- Single user -->
-                                                <div class="acc-user-dropdown"><!-- User Dropdown -->
-                                                        <p class="acc-username">
-                                                                {{user.username}} 
-                                                                {% if user.userprofile.access == 'pending'%} 
-                                                                        <span class="acc-badge">New!</span> 
-                                                                {% endif %}
-                                                        </p>
-                                                        <p class="icon-plus">+</p>
-                                                        <p class="icon-minus hidden">-</p>
-                                                </div><!-- User Dropdown -->
-                                                <div class="acc-user-info"><!-- User information -->
-                                                        <div class="information">
-                                                                <p>Created on: (date)</p>
-                                                                <p>Full Name: {{user.first_name}} {{user.last_name}}</p>
-                                                                <p>Email: {{user.email}}</p>
-                                                        </div>
-                                                        <div class="options">
-                                                                <a href="#">Delete User</a>
-                                                                <a href="#">Approve User</a>
-                                                        </div>
-                                                </div><!-- User information -->
-                                        </div><!-- Single user -->
-                        <!-- ====================SINGLE USER CLOSE==================== -->      
-                                {% endif %}
-                        {% endfor %}
-                                
-                        
-
-                        
-
-                        </div><!-- New Users Content-->
-
-                        <a href="#" class="view-all">View all users</a>
-
-                </div> <!-- Accordion -->
-                <!-- ====================ACCORDION CLOSE==================== -->
-
-
                 <!-- ====================OVERVIEW==================== -->
-                <div class="overview uploads-overview">
+                <div class="overview">
                         <h3>Uploads Overview</h3>
                         <div class="overview-box">
                                 <div>
@@ -285,7 +219,7 @@
                 </div><!-- Published Uploads Content-->
         <!-- ====================PUBLISHED UPLOADS CLOSE==================== -->
 
-        <a href="#" class="view-all">View all users</a>
+        <a href="#">View all uploads</a>
 
         </div> <!-- Accordion -->
         <!-- ====================ACCORDION CLOSE==================== -->
@@ -293,6 +227,5 @@
         </div><!-- Container -->
 <!-- ====================CONTAINER CLOSE==================== -->
 
->>>>>>> origin/Admin-Dashboard
 {% endblock content %}
 

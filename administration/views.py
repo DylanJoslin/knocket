@@ -11,6 +11,8 @@ def admin_home(request, access='pending'):
         'users': User.objects.all(),
         'access': access
     }
+    
+    return render(request, 'administration/admin_home.html', context)
 
     if request.method == 'POST':
         access_form = AccessForm(request.POST, instance=request.user)
