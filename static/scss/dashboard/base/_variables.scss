@@ -4,16 +4,20 @@
 /*******    COLORS    *******/
 $white: rgb(255, 255, 255);
 $dark: rgb(64, 75, 94);
-$nav-shown: rgb(116, 147, 201);
+$nav-shown: rgb(64, 75, 94);
+//rgb(116, 147, 201);
 
-$nav-background: rgba(10,114,142,1);
+$nav-background: rgb(64, 75, 94);
+$nav-links-background: rgb(81, 94, 116);
 
 $acc-background: rgb(116, 147, 201);
 $acc-hover-background: rgb(64, 75, 94);
 
-$user-acc-background: linear-gradient(85deg, rgba(10,114,142,1) 0%, rgba(167,254,255,1) 100%);
+$user-acc-background: rgb(116, 147, 201);
+//linear-gradient(85deg, rgba(10,114,142,1) 0%, rgba(167,254,255,1) 100%);
 
-$users-overview-bgd: linear-gradient(85deg, rgba(10,114,142,1) 0%, rgba(167,254,255,1) 100%);
+$users-overview-bgd: rgb(116, 147, 201);
+//linear-gradient(85deg, rgba(10,114,142,1) 0%, rgba(167,254,255,1) 100%);
 
 //linear-gradient(143deg, rgba(0,142,201,1) 8%, rgba(40,226,227,1) 46%, rgba(67,235,171,1) 88%);
 

@@ -11,8 +11,6 @@ def admin_home(request, access='pending'):
         'users': User.objects.all(),
         'access': access
     }
-    
-    return render(request, 'administration/admin_home.html', context)
 
     if request.method == 'POST':
         access_form = AccessForm(request.POST, instance=request.user)
@@ -21,3 +19,9 @@ def admin_home(request, access='pending'):
             # user_access.user
 
     return render(request, 'administration/admin_home.html', context)
+
+def admin_users(request):
+    return render(request, 'administration/admin_users.html')
+
+def admin_uploads(request):
+    return render(request, 'administration/admin_uploads.html')

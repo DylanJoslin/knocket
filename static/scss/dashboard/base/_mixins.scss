@@ -38,11 +38,12 @@
 
   @mixin nav-links(){
     color: $white;
-    border: 1px solid $white;
+    border: 1px solid rgba(255, 255, 255, 0.523);
+    background: $nav-links-background;
     border-radius: 1rem;
     margin: 2rem;
     display: block;
-    padding: 2rem;
+    padding: 1.4rem;
     margin-bottom: 2rem;
     color: $white;
 

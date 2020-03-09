@@ -532,7 +532,7 @@ html {
 }
 
 .menu-closed-header-style {
-  background-color: #7493c9;
+  background-color: #404b5e;
 }
 
 @media screen and (min-width: 1000px) {
@@ -547,7 +547,7 @@ html {
     position: absolute;
     top: 5.3rem;
     right: -100%;
-    background-color: #7493c9;
+    background-color: #404b5e;
     padding-bottom: 4rem;
     -webkit-transition: all 0.7s ease-in-out;
     transition: all 0.7s ease-in-out;
@@ -571,11 +571,12 @@ html {
 
 .dashboard-body .dashboard-navigation .nav-link a {
   color: white;
-  border: 1px solid white;
+  border: 1px solid rgba(255, 255, 255, 0.523);
+  background: #515e74;
   border-radius: 1rem;
   margin: 2rem;
   display: block;
-  padding: 2rem;
+  padding: 1.4rem;
   margin-bottom: 2rem;
   color: white;
   display: -webkit-box;
@@ -610,11 +611,12 @@ html {
 
 .dashboard-body .dashboard-navigation .logout {
   color: white;
-  border: 1px solid white;
+  border: 1px solid rgba(255, 255, 255, 0.523);
+  background: #515e74;
   border-radius: 1rem;
   margin: 2rem;
   display: block;
-  padding: 2rem;
+  padding: 1.4rem;
   margin-bottom: 2rem;
   color: white;
 }
@@ -823,7 +825,7 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: linear-gradient(85deg, #0a728e 0%, #a7feff 100%);
+  background: #7493c9;
   color: white;
   padding: 1rem 2rem;
 }
@@ -961,7 +963,7 @@ html {
 }
 
 .dashboard-main .overview {
-  background: linear-gradient(85deg, #0a728e 0%, #a7feff 100%);
+  background: #7493c9;
   border-top: 1px solid #404b5e;
   border-bottom: 1px solid #404b5e;
 }
