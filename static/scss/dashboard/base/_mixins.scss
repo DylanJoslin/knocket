@@ -135,3 +135,18 @@
     max-width: $width;
     margin: 0 auto;
 }//container
+
+@mixin formLabels(){
+  font-size: $labelFontSize;
+  color: $dark;
+}
+
+@mixin formInputs(){
+  margin-top: 0.8rem;
+  font-size: $inputFontSize;
+  height: 4.5rem;
+  width: 100%;
+  padding: 2rem;
+  border: $input-border;
+  border-radius: 2rem;
+}

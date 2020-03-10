@@ -1,0 +1,48 @@
+.dashboard-main{
+
+
+    .dashboard-form{
+        @include padding(small);
+
+        @include breakpoint(tablet){
+            @include padding(medium);
+        }
+
+        @include breakpoint(laptop){
+            @include padding(large);
+        }
+
+        .dashboard-form-group{
+            .dashboard-label{
+                @include formLabels;
+            }
+    
+            .dashboard-input{
+                @include formInputs;
+            }
+        }
+
+        .side-image{
+            display: none;
+
+            @include breakpoint(tablet){
+                display: block;
+                width: 3rem;
+                height: 3rem;
+                background: rgb(204, 204, 208);
+            }
+        }
+
+        .flex-container{
+            @include flex(unset);
+        }
+
+        
+
+        
+
+        
+
+    }
+
+}

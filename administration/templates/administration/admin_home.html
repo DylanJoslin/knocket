@@ -17,7 +17,7 @@
                                         <p>Registered Users: <span class="number">23</span></p>
                                 </div>
                                 <div>
-                                        <a href="#">Manage Users</a>
+                                        <a href="{% url 'admin_users' %}">Manage All Users</a>
                                 </div>
                         </div>
                 </div>
@@ -57,7 +57,7 @@
                                                                 <p>Email: {{user.email}}</p>
                                                         </div>
                                                         <div class="options">
-                                                                <a href="#">Delete User</a>
+                                                                <a href="{% url 'edit_users' %}">Edit User</a>
                                                                 <a href="#">Approve User</a>
                                                         </div>
                                                 </div><!-- User information -->
@@ -87,7 +87,7 @@
                                         <p>Published Uploads: <span class="number">40</span></p>
                                 </div>
                                 <div>
-                                        <a href="#">Manage Uploads</a>
+                                        <a href="{% url 'admin_uploads' %}">Manage All Uploads</a>
                                 </div>
                         </div>
                 </div>

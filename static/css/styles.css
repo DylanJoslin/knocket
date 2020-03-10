@@ -1044,4 +1044,60 @@ html {
 .dashboard-main .users-overview > .overvew-box {
   background: #8dc5d1;
 }
+
+.dashboard-main .dashboard-form {
+  padding: 2rem 1rem 0 1rem;
+}
+
+@media screen and (min-width: 700px) {
+  .dashboard-main .dashboard-form {
+    padding: 3rem 3rem 0 3rem;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .dashboard-main .dashboard-form {
+    padding: 4rem 6rem 0 30rem;
+  }
+}
+
+.dashboard-main .dashboard-form .dashboard-form-group .dashboard-label {
+  font-size: 2rem;
+  color: #404b5e;
+}
+
+.dashboard-main .dashboard-form .dashboard-form-group .dashboard-input {
+  margin-top: 0.8rem;
+  font-size: 2rem;
+  height: 4.5rem;
+  width: 100%;
+  padding: 2rem;
+  border: 1px solid #404b5e;
+  border-radius: 2rem;
+}
+
+.dashboard-main .dashboard-form .side-image {
+  display: none;
+}
+
+@media screen and (min-width: 700px) {
+  .dashboard-main .dashboard-form .side-image {
+    display: block;
+    width: 3rem;
+    height: 3rem;
+    background: #ccccd0;
+  }
+}
+
+.dashboard-main .dashboard-form .flex-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: unset;
+      -ms-flex-pack: unset;
+          justify-content: unset;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
 /*# sourceMappingURL=styles.css.map */

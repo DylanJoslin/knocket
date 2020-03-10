@@ -25,3 +25,6 @@ def admin_users(request):
 
 def admin_uploads(request):
     return render(request, 'administration/admin_uploads.html')
+
+def edit_users(request):
+    return render(request, 'administration/edit_user.html')
