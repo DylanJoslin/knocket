@@ -1,5 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.contrib.auth.models import User
+from django.contrib import messages
 from .forms import AccessForm
 
 
@@ -36,3 +37,26 @@ def admin_home(request, access='pending'):
 
 def admin_users(request):
     return render(request, 'administration/admin_users.html')
+
+def delete_user(request, username='none'):
+    if request.user.userprofile.access == 'teacher' or request.user.userprofile.access == 'admin':
+        if username != 'none':
+            user = User.objects.get(username=username)
+            user.delete()
+            messages.success(request, f'This user has been deleted')
+            return redirect('administration/')
+
+def approve_user(request, username='none'):
+        if request.user.userprofile.access == 'teacher' or request.user.userprofile.access == 'admin':
+            if username != 'none':
+                user = User.objects.get(username=username)
+                user.userprofile.access == 'student'
+                messages.success(request, f'This student has been approved!')
+                return redirect('administration/')
+            else:
+                messages.success(request, f'Cannot approve user!')
+                return render(request, 'administration/admin_home.html')
+
+
+
+
