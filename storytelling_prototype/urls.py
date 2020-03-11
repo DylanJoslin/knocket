@@ -29,11 +29,20 @@ urlpatterns = [
     path('administration/', administration_views.admin_home, name='administration'),
     path('administration/<slug:access>', administration_views.admin_home, name='administration'),
     path('administration/users', administration_views.admin_users, name='admin_users'),
+
+    path('delete/', administration_views.delete_user, name='delete_user'),
+    path('delete/<slug:username>', administration_views.delete_user, name='delete_user'),
+
+    path('approve/', administration_views.approve_user, name='approve_user'),
+    path('approve/<slug:username>', administration_views.approve_user, name='approve_user'),
+
     path('register/', user_views.register, name='register'),
     path('login/', user_views.login_view, name='login'),
     path('logout/', user_views.logout_view, name='logout'),
+
     path('stories/', story_views.stories, name='stories'),
     path('stories/<slug:school>/', VideoListView.as_view(), name='stories'),
+    
     path('profile/', user_views.profile, name="profile"),
     path('profile/edit/', user_views.edit_profile, name="edit_profile"),
 ]
