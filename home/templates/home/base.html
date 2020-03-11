@@ -33,6 +33,14 @@
                 </li>
                 <li><a href="{% url 'resources' %}" class="underline-link">Resources</a></li>
                 <li><a href="{% url 'about' %}" class="underline-link">About Us</a></li>
+                {% if user.is_authenticated %}
+                <li><a href="{% url 'profile' %}">Profile</a></li>
+                {% if user.userprofile.access == 'admin' or user.userprofile.access == 'teacher' %}
+                <li><a href="{% url 'administration' %}">Admin</a></li>
+                {% endif %}
+                <li><a href="{% url 'logout' %}">Log Out</a></li>
+                {% endif %}
+
             </ul>
         </nav>
         <!-- <ul class="nav">
