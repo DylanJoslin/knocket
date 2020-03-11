@@ -845,10 +845,6 @@ td, th {
 /*******    COLORS    *******/
 /*******    FONTS     *******/
 /*******      FORM STYLES      *******/
-html {
-  font-size: 62.5%;
-}
-
 .dashboard-body {
   background: white;
   line-height: 1.5;
