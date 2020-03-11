@@ -1,0 +1,55 @@
+{% extends "home/base.html" %}
+{% load static %}
+{% block content %}
+
+<section>
+    <div class="treaty inner-container">
+        <h3> Treaty 6</h3>
+        <div class="content">
+            <img src="/static/img/treaty.jpg" class="treaty-img" alt="Aliance between First Nations">
+            <div>
+                <p>Treaty 6 was signed between 1871 - 1877 by Canadian Crown and a few First Nations. It is an agreement
+                between the Crown, the Plains and Wood Cree, Assiniboine and the other band governments at Fort
+                Carlton and Fort Pitt. Treaty 6 included those terms which were not part of Treat 1 to 5. It Included
+                medicine chest at the house of Indian agent on reserve, more agriculture implements, protection from
+                shortage of food and fatal epidemic disease and education on the reserve. The treaty signing began 18th
+                August until 09th September 1876 (Wikipedia, 2020).</p><br>
+
+                <p>The Key figures who were representing Crown during the negotiations involved Lt. Governor of North-
+                West Territories, Minister of Agriculture for Manitoba, and the Chief Factor of the Hudson’s Bay
+                Company. Carlton Cree was represented by Chief Mistawasis and Chief Ahtahkakoop.</p> 
+            </div>
+        </div>
+    </div>
+    <div class="decoration">
+        <img src="/static/img/decoration.png" alt="Indigenous decoration">
+    </div>
+</section>
+
+<div class="interactive-map">
+    <h1 id="province-hover" class="province-hover text-center">Select A Province</h1>
+    <div class="province-data">
+        <div class="holder">
+            <a class="local bc" href="province/bc"></a>
+            <a class="local alberta" href="province/ab"></a>
+            <a class="local sask" href="province/sk"></a>
+            <a class="local manitoba" href="province/mb"></a>
+        </div> <!-- End Local Nav Arrow Holder -->
+
+        <div class="holder-mobile">
+            <h2 class="mobile-provice-name text-center">British Columbia</h2>
+            <div class="text-center slideshow-buttons">
+                <span class="prev">&lsaquo;</span>
+                <span class="next">&rsaquo;</span>
+            </div>
+            <div class="width-full image-container">
+                <img src="{% static 'img/bc.svg'%}">
+            </div>
+            <div class="button-container">
+                <a class="mobile-local-button" href="local-bc.html">Explore</a>
+            </div>
+        </div> <!-- End Mobile Holder -->
+
+    </div> <!-- End Province Data Holder -->
+</div>
+{% endblock content %}

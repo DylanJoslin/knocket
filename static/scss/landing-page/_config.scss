@@ -1,0 +1,39 @@
+$sage: #9DC183;
+$darkblue: #278AB0;
+$maroon: #DB7434;
+$accent: #ffeb4e;
+
+
+@mixin flex{
+    display: flex;
+    justify-content: space-between;
+}
+
+@mixin button{
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+
+
+/* Media Queries for different viewport sizes*/
+
+@mixin media-md {
+    @media screen and (min-width: 768px) {
+        @content;
+    }
+}
+
+@mixin media-lg {
+    @media screen and (min-width: 1024px) {
+        @content;
+    }
+}
+
+@mixin media-xl {
+    @media screen and (min-width: 1600px) {
+        @content;
+    }
+}
