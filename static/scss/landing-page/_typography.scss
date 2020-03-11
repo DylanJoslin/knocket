@@ -50,8 +50,11 @@ margin: 2.75rem 0 1.05rem;
 font-weight: 500;
 line-height: 1.15;
 }
+
+/* FONT-SIZES FOR IPAD/DESKTOP*/
+
 h1{
-    font: 4.209em/1 'Cardo Regular', sans-serif;
+    font: 2.488em/1 'Cardo Regular', sans-serif;
     margin-top: 0;
     color: white;
     text-transform: uppercase;
@@ -67,21 +70,25 @@ h1{
         text-decoration: none;
         color: white;
     }
+
+    @include media-md{
+        font-size: 4.209em;
+    }
 }
 
 h2{
-    font: 3.157em/1.5 'Raleway Regular', sans-serif;
+    font: 2.074em/1.5 'Raleway Regular', sans-serif;
 
     @include media-md{
-        font-size: 32px;
+        font-size: 3.157em;
     }
 }
 
 h3{
-    font: 2.369em/1.5 'Cardo Bold', sans-serif;
+    font: 1.728em/1.5 'Cardo Bold', sans-serif;
 
     @include media-md{
-        font-size: 60px;
+        font-size: 2.369em;
     }
 }
 

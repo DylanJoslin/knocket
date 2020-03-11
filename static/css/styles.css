@@ -134,8 +134,9 @@ h1, h2, h3, h4, h5 {
   line-height: 1.15;
 }
 
+/* FONT-SIZES FOR IPAD/DESKTOP*/
 h1 {
-  font: 4.209em/1 'Cardo Regular', sans-serif;
+  font: 2.488em/1 'Cardo Regular', sans-serif;
   margin-top: 0;
   color: white;
   text-transform: uppercase;
@@ -152,23 +153,29 @@ h1 a {
   color: white;
 }
 
+@media screen and (min-width: 768px) {
+  h1 {
+    font-size: 4.209em;
+  }
+}
+
 h2 {
-  font: 3.157em/1.5 'Raleway Regular', sans-serif;
+  font: 2.074em/1.5 'Raleway Regular', sans-serif;
 }
 
 @media screen and (min-width: 768px) {
   h2 {
-    font-size: 32px;
+    font-size: 3.157em;
   }
 }
 
 h3 {
-  font: 2.369em/1.5 'Cardo Bold', sans-serif;
+  font: 1.728em/1.5 'Cardo Bold', sans-serif;
 }
 
 @media screen and (min-width: 768px) {
   h3 {
-    font-size: 60px;
+    font-size: 2.369em;
   }
 }
 
