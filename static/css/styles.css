@@ -425,12 +425,13 @@ td, th {
 /*******    COLORS    *******/
 /*******    FONTS     *******/
 /*******      FORM STYLES      *******/
-html {
+.dashboard-html {
   font-size: 62.5%;
 }
 
 .dashboard-body {
   background: white;
+  margin-bottom: 12rem;
   line-height: 1.5;
   background-size: auto 2.4rem;
 }
@@ -458,7 +459,7 @@ html {
 .dashboard-body h2 {
   font-size: 5.6rem;
   line-height: 7.2rem;
-  margin-bottom: 4.8rem;
+  margin-bottom: 3rem;
 }
 
 .dashboard-body h3 {
@@ -545,7 +546,7 @@ html {
   .dashboard-body .dashboard-navigation {
     width: 100%;
     position: absolute;
-    top: 5.3rem;
+    top: 5rem;
     right: -100%;
     background-color: #404b5e;
     padding-bottom: 4rem;
@@ -723,12 +724,18 @@ html {
   padding: 0;
 }
 
+@media screen and (min-width: 700px) {
+  .dashboard-main .container {
+    max-width: 1100px;
+  }
+}
+
 .dashboard-main .welcome {
-  padding: 2rem 1rem 0 1rem;
+  padding: 4.5rem 1.6rem 0 1.6rem;
 }
 
 .dashboard-main .welcome h2 {
-  font-size: 3.6rem;
+  font-size: 4.2rem;
   line-height: 4.8rem;
 }
 
@@ -741,7 +748,7 @@ html {
 
 @media screen and (min-width: 700px) {
   .dashboard-main .welcome {
-    padding: 3rem 3rem 0 3rem;
+    padding: 6rem 3rem 0 3rem;
   }
 }
 
@@ -757,13 +764,13 @@ html {
 }
 
 .dashboard-main .accordian {
-  padding: 2rem 1rem 0 1rem;
+  padding: 4.5rem 1.6rem 0 1.6rem;
   margin-bottom: 8rem;
 }
 
 @media screen and (min-width: 700px) {
   .dashboard-main .accordian {
-    padding: 3rem 3rem 0 3rem;
+    padding: 6rem 3rem 0 3rem;
   }
 }
 
@@ -924,10 +931,10 @@ html {
   color: white;
   background: #404b5e;
   font-size: 1.8rem;
-  border-radius: 3rem;
+  border-radius: 1.6rem;
   text-align: center;
   display: block;
-  padding: 0.8rem;
+  padding: 1.4rem;
   margin-bottom: 1rem;
 }
 
@@ -945,7 +952,7 @@ html {
 }
 
 .dashboard-main .accordian .acc-content .acc-single .acc-user-info .options a:hover {
-  border: 2px solid #404b5e;
+  border: 1px solid #404b5e;
   background: white;
   color: #404b5e;
 }
@@ -971,12 +978,12 @@ html {
 .dashboard-main .overview h3 {
   color: white;
   margin-bottom: 0;
-  padding: 2rem 1rem 0 1rem;
+  padding: 4.5rem 1.6rem 0 1.6rem;
 }
 
 @media screen and (min-width: 700px) {
   .dashboard-main .overview h3 {
-    padding: 3rem 3rem 0 3rem;
+    padding: 6rem 3rem 0 3rem;
   }
 }
 
@@ -1025,10 +1032,10 @@ html {
   color: white;
   background: #404b5e;
   font-size: 1.8rem;
-  border-radius: 3rem;
+  border-radius: 1.6rem;
   text-align: center;
   display: block;
-  padding: 0.8rem;
+  padding: 1.4rem;
   margin-bottom: 1rem;
   margin-top: 3rem;
 }
@@ -1045,20 +1052,56 @@ html {
   background: #8dc5d1;
 }
 
+.dashboard-main .hidden {
+  display: none;
+}
+
 .dashboard-main .dashboard-form {
-  padding: 2rem 1rem 0 1rem;
+  padding: 4.5rem 1.6rem 0 1.6rem;
 }
 
 @media screen and (min-width: 700px) {
   .dashboard-main .dashboard-form {
-    padding: 3rem 3rem 0 3rem;
+    padding: 6rem 3rem 0 3rem;
+    width: 76%;
+    padding-top: 0;
   }
 }
 
 @media screen and (min-width: 1000px) {
   .dashboard-main .dashboard-form {
     padding: 4rem 6rem 0 30rem;
+    width: 80%;
   }
+}
+
+.dashboard-main .dashboard-form .dashboard-form-group {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.dashboard-main .dashboard-form .dashboard-form-group .tooltip {
+  border: 1px solid rgba(77, 90, 108, 0.543);
+  padding: 1.6rem;
+  position: absolute;
+  top: 3.6rem;
+  background: #404b5e;
+  border-radius: 0.5rem;
+  z-index: 9999;
+  width: 100%;
+}
+
+.dashboard-main .dashboard-form .dashboard-form-group .tooltip p {
+  color: white;
+  font-size: 1.8rem;
+}
+
+.dashboard-main .dashboard-form .dashboard-form-group .tooltip p:nth-child(2n) {
+  margin-bottom: 0;
+}
+
+.dashboard-main .dashboard-form .dashboard-form-group .required {
+  color: #d01f1f;
 }
 
 .dashboard-main .dashboard-form .dashboard-form-group .dashboard-label {
@@ -1068,36 +1111,66 @@ html {
 
 .dashboard-main .dashboard-form .dashboard-form-group .dashboard-input {
   margin-top: 0.8rem;
-  font-size: 2rem;
+  font-size: 1.8rem;
+  background: white;
   height: 4.5rem;
   width: 100%;
-  padding: 2rem;
-  border: 1px solid #404b5e;
-  border-radius: 2rem;
+  padding: 2rem 1rem;
+  color: #49576a;
+  border: 1px solid rgba(77, 90, 108, 0.543);
+  border-radius: 0.5rem;
 }
 
-.dashboard-main .dashboard-form .side-image {
+.dashboard-main .dashboard-form .form-button {
+  color: white;
+  background: #404b5e;
+  font-size: 1.8rem;
+  border-radius: 1.6rem;
+  text-align: center;
+  display: block;
+  padding: 1.4rem;
+  margin-bottom: 1rem;
+  width: 100%;
+  margin-top: 5rem;
+}
+
+@media screen and (min-width: 700px) {
+  .dashboard-main .dashboard-form .form-button {
+    width: 50%;
+  }
+}
+
+.dashboard-main .dashboard-form .form-button:hover {
+  border: 1px solid #404b5e;
+  background: white;
+  color: #404b5e;
+}
+
+@media screen and (min-width: 700px) {
+  .dashboard-main .flex-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: unset;
+        -ms-flex-pack: unset;
+            justify-content: unset;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.dashboard-main .flex-container .side-image {
   display: none;
 }
 
 @media screen and (min-width: 700px) {
-  .dashboard-main .dashboard-form .side-image {
-    display: block;
-    width: 3rem;
-    height: 3rem;
-    background: #ccccd0;
+  .dashboard-main .flex-container .side-image {
+    background: rgba(128, 128, 128, 0.529);
+    border: 1px solid grey;
+    padding: 25rem 6rem;
+    display: inline-block;
+    margin-left: 1rem;
   }
-}
-
-.dashboard-main .dashboard-form .flex-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: unset;
-      -ms-flex-pack: unset;
-          justify-content: unset;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 /*# sourceMappingURL=styles.css.map */

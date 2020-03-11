@@ -6,6 +6,13 @@ $(document).ready(function(){
         $('.dashboard-header').toggleClass('menu-closed-header-style ');
     });
 
+    $('.dashboard-label > i').click(function(event){
+        
+        $(this).parent().parent().find('.tooltip').toggleClass('hidden');
+
+        event.preventDefault();
+    });
+
     (function($) {
     
         var allPanels = $('.acc-user-info');
@@ -18,14 +25,9 @@ $(document).ready(function(){
             var iconPlus = $(this).find('.icon-plus');
             var iconMinus = $(this).find('.icon-minus');
             
-            // iconPlus.addClass('hidden');
-            // iconMinus.removeClass('hidden');
-            
         });
       
       })(jQuery);
-
-    
 
     $('.acc-new-uploads').click(function(event){
         $('#new-uploads').removeClass('hidden');
