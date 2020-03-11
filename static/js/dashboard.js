@@ -6,8 +6,13 @@ $(document).ready(function(){
         $('.dashboard-header').toggleClass('menu-closed-header-style ');
     });
 
+    $('.dashboard-label > i').hover(function(event){
+        var icon = $(this).toggleClass('color');
+
+        event.preventDefault();
+    });
+
     $('.dashboard-label > i').click(function(event){
-        
         $(this).parent().parent().find('.tooltip').toggleClass('hidden');
 
         event.preventDefault();

@@ -953,7 +953,7 @@ td, th {
 
 .dashboard-main .accordian .acc-content .acc-single .acc-user-info .options a:hover {
   border: 1px solid #404b5e;
-  background: white;
+  background: #b8d7e8;
   color: #404b5e;
 }
 
@@ -1109,6 +1109,10 @@ td, th {
   color: #404b5e;
 }
 
+.dashboard-main .dashboard-form .dashboard-form-group .dashboard-label .color {
+  color: #8cc7e6;
+}
+
 .dashboard-main .dashboard-form .dashboard-form-group .dashboard-input {
   margin-top: 0.8rem;
   font-size: 1.8rem;
@@ -1142,7 +1146,7 @@ td, th {
 
 .dashboard-main .dashboard-form .form-button:hover {
   border: 1px solid #404b5e;
-  background: white;
+  background: #b8d7e8;
   color: #404b5e;
 }
 

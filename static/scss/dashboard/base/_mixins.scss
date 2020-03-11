@@ -115,7 +115,7 @@
 }
 
 @mixin button(){
-  color: $white;
+  color: white;
   background: $dark;
   font-size: $button;
   border-radius: 1.6rem;
@@ -127,7 +127,7 @@
 
 @mixin button-hover{
   border: 1px solid $dark;
-  background: $white;
+  background: rgb(184, 215, 232);
   color: $dark;
 }
 

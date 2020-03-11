@@ -20,6 +20,8 @@
 
         .dashboard-form-group{
             position: relative;
+            margin-bottom: 2rem;
+
             .tooltip{
                 @include tooltip;
                 
@@ -37,9 +39,12 @@
                 color: rgb(208, 31, 31);
             }
 
-            margin-bottom: 2rem;
             .dashboard-label{
                 @include formLabels;
+
+                .color{
+                    color: rgb(140, 199, 230);
+                }
             }
     
             .dashboard-input{
