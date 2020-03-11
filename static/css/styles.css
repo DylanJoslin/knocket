@@ -798,6 +798,32 @@ a:hover {
 }
 
 /* ------------------------------------------------------
+                RESOURCES STYLES
+------------------------------------------------------ */
+.resources-link-holder {
+  max-width: 1250px;
+  margin: 0 auto;
+}
+
+.resources-link-holder section > h2 {
+  padding-top: 2rem;
+}
+
+.resources-link-holder section > div {
+  border: 1px solid #999;
+  border-radius: 10px;
+  margin: 2rem 0;
+  padding: 2rem;
+}
+
+.resources-link {
+  color: #fff;
+  background-color: #09c0c0;
+  border-radius: 10px;
+  padding: 0.7rem;
+}
+
+/* ------------------------------------------------------
                 DASHBOARD STYLES
 ------------------------------------------------------ */
 /*! minireset.css v0.0.5 | MIT License | github.com/jgthms/minireset.css */
@@ -807,6 +833,7 @@ html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, tex
 }
 
 h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
   font-weight: normal;
 }
 
