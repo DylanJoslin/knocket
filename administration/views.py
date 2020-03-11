@@ -44,7 +44,7 @@ def delete_user(request, username='none'):
             user = User.objects.get(username=username)
             user.delete()
             messages.success(request, f'This user has been deleted')
-            return redirect('administration/')
+            return render(request, 'administration/admin_home.html')
 
 def approve_user(request, username='none'):
         if request.user.userprofile.access == 'teacher' or request.user.userprofile.access == 'admin':
@@ -52,7 +52,7 @@ def approve_user(request, username='none'):
                 user = User.objects.get(username=username)
                 user.userprofile.access == 'student'
                 messages.success(request, f'This student has been approved!')
-                return redirect('administration/')
+                return render(request, 'administration/admin_home.html')
             else:
                 messages.success(request, f'Cannot approve user!')
                 return render(request, 'administration/admin_home.html')
