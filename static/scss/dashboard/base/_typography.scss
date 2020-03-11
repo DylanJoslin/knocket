@@ -2,45 +2,40 @@
   
   h2, h3, h4, h5, h6, p{
       font-family: $heading-font;
-      color: $white;
+      color: $dark;
       margin-bottom: 2.4rem; 
-    //   background-color: $heading-background;
   }
 
-  h2{
-    color: $dark;
+  p{
+    font-size: $paragraph;
   }
 
   h1{
-    font-size: 6.9rem; 
+    font-size: 6.1rem; 
     line-height: 7.2rem; 
     margin-bottom: 4.8rem;
-    // background-color: $heading-background;
   }
 
   h2{
-    //@extend h1; //Getting styles from the h1 so we don't have to copy
-    font-size: 6.1rem; 
+    font-size: 5.6rem; 
     line-height: 7.2rem; 
+    margin-bottom: 4.8rem;
   }
 
   h3{
-    font-size: 5.1rem; 
+    font-size: 5.0rem; 
     line-height: 7.2rem; 
+    margin-bottom: 2.8rem;
   }
 
   h4{
-    font-size: 4.8rem; 
-    line-height: 7.2rem; 
+    font-size: 4.2rem; 
+    line-height: 6.4rem; 
+    margin-bottom: 4.8rem;
   }
 
   h5{
-    font-size: 4.1rem; 
-    line-height: 4.8rem; 
-  }
-
-  h6{
-    font-size: 3.7em; 
+    font-size: 3.8rem; 
     line-height: 4.8rem; 
   }
 
