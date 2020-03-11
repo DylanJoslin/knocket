@@ -3,7 +3,7 @@ from django.http import HttpResponse
 from django.views import View
 
 def home(request):
-    return render(request, 'home/map.html')
+    return render(request, 'home/landing.html')
 
 def resources(request):
     return render(request, 'home/resources.html')
