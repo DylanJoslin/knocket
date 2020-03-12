@@ -1,0 +1,33 @@
+.dashboard-main{
+
+    .filter{
+        padding-top: 5rem;
+
+        .dashboard-form{
+
+            .flex-form{
+                @include breakpoint(tablet){
+                    @include flex(unset);
+                }
+            }
+
+            .filter-button{
+                @include button;
+                width: 100%;
+                margin-bottom: 3rem;
+
+                @include breakpoint(tablet){
+                    margin-top: 4.8rem;
+                    border-radius: 0;
+                    padding: 0;
+                    padding: 1.15rem;
+                    margin-left: -0.5rem;
+                }
+                
+            }
+
+        }
+
+    }
+
+}

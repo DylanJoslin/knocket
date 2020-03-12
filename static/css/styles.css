@@ -934,7 +934,7 @@ td, th {
   border-radius: 1.6rem;
   text-align: center;
   display: block;
-  padding: 1.4rem;
+  padding: 1.2rem;
   margin-bottom: 1rem;
 }
 
@@ -1035,7 +1035,7 @@ td, th {
   border-radius: 1.6rem;
   text-align: center;
   display: block;
-  padding: 1.4rem;
+  padding: 1.2rem;
   margin-bottom: 1rem;
   margin-top: 3rem;
 }
@@ -1132,7 +1132,7 @@ td, th {
   border-radius: 1.6rem;
   text-align: center;
   display: block;
-  padding: 1.4rem;
+  padding: 1.2rem;
   margin-bottom: 1rem;
   width: 100%;
   margin-top: 5rem;
@@ -1187,6 +1187,47 @@ td, th {
 @media screen and (min-width: 700px) {
   .dashboard-main .flex-container .create-form-image {
     padding: 30rem 8rem;
+  }
+}
+
+.dashboard-main .filter {
+  padding-top: 5rem;
+}
+
+@media screen and (min-width: 700px) {
+  .dashboard-main .filter .dashboard-form .flex-form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: unset;
+        -ms-flex-pack: unset;
+            justify-content: unset;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.dashboard-main .filter .dashboard-form .filter-button {
+  color: white;
+  background: #404b5e;
+  font-size: 1.8rem;
+  border-radius: 1.6rem;
+  text-align: center;
+  display: block;
+  padding: 1.2rem;
+  margin-bottom: 1rem;
+  width: 100%;
+  margin-bottom: 3rem;
+}
+
+@media screen and (min-width: 700px) {
+  .dashboard-main .filter .dashboard-form .filter-button {
+    margin-top: 4.8rem;
+    border-radius: 0;
+    padding: 0;
+    padding: 1.15rem;
+    margin-left: -0.5rem;
   }
 }
 /*# sourceMappingURL=styles.css.map */

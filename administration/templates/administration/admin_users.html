@@ -27,6 +27,49 @@
                 </div>
         <!-- ====================OVERVIEW CLOSE==================== -->
 
+        <div class="filter">
+                <div class="flex-container">
+                        <div class="dashboard-form">
+                        <form action="#">
+                                <div class="flex-form">
+                                        <div class="dashboard-form-group">
+                                                <label for="search" class="dashboard-label">Search<span class="required">*</span> <i class="fas fa-info-circle"></i></label>
+                                                <input type="text" id="search" name="search" class="dashboard-input">
+                                                <div class="tooltip hidden">
+                                                        <p>
+                                                                Enter a field that that youd want to search for! (example: someone's username)
+                                                        </p>
+                                                        <p>Click the information icon again to close this window.</p>
+                                                </div>
+                                        </div>
+                                        <button class="filter-button">Filter</button>
+                                </div>
+
+                                <div class="flex-form">
+                                        <div class="dashboard-form-group">
+                                                <label for="group" class="dashboard-label">Filter by group <i class="fas fa-info-circle"></i></label>
+                                                <select name="group" id="group" class="dashboard-input">
+                                                        <option value="none">Select</option>
+                                                        <option value="student">Student</option>
+                                                        <option value="teacher">Teacher</option>
+                                                        <option value="elder">Elder</option>
+                                                </select> 
+                                                <div class="tooltip hidden">
+                                                        <p>
+                                                                Select the name of the permission group you want to filter by.
+                                                        </p>
+                                                        <p>Click the icon again to close this window.</p>
+                                                </div>
+                                        </div>
+
+                                        <button class="filter-button">Filter</button>
+                                </div>
+                
+                        </form>
+                        </div>
+                </div>
+        </div>
+
         <!-- ====================ACCORDION==================== -->
                 <div class="accordian"><!-- Accordian -->
                         <h4>Latest User Activity</h4>
