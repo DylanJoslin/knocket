@@ -725,7 +725,7 @@ td, th {
 }
 
 @media screen and (min-width: 700px) {
-  .dashboard-main .container {
+  .dashboard-main .width-container {
     max-width: 1100px;
   }
 }
@@ -1071,7 +1071,7 @@ td, th {
 @media screen and (min-width: 1000px) {
   .dashboard-main .dashboard-form {
     padding: 4rem 6rem 0 30rem;
-    width: 80%;
+    width: 78%;
   }
 }
 
@@ -1172,9 +1172,21 @@ td, th {
   .dashboard-main .flex-container .side-image {
     background: rgba(128, 128, 128, 0.529);
     border: 1px solid grey;
-    padding: 25rem 6rem;
+    padding: 25rem 8rem;
     display: inline-block;
     margin-left: 1rem;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .dashboard-main .flex-container .side-image {
+    padding: 25rem 8rem;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .dashboard-main .flex-container .create-form-image {
+    padding: 30rem 8rem;
   }
 }
 /*# sourceMappingURL=styles.css.map */

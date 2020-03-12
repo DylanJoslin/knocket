@@ -28,3 +28,6 @@ def admin_uploads(request):
 
 def edit_users(request):
     return render(request, 'administration/edit_user.html')
+
+def create_user(request):
+    return render(request, 'administration/create_user.html')

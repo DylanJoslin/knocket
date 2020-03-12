@@ -1,7 +1,7 @@
     .dashboard-main{
         padding: 0;
 
-        .container{
+        .width-container{
             @include breakpoint(tablet){
                 @include innerContainer;
             }
