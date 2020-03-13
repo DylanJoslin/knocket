@@ -981,13 +981,13 @@ td, th {
 }
 
 .dashboard-main .overview {
-  background: -webkit-gradient(linear, left top, left bottom, from(#1e384a), color-stop(53%, #00ccbe), color-stop(96%, white));
-  background: linear-gradient(180deg, #1e384a 0%, #00ccbe 53%, white 96%);
-  border-top: 1rem solid #1e2e4a;
+  border-top: 2px solid #1e2e4a;
+  background: -webkit-gradient(linear, left bottom, left top, from(white), to(#0ae4d5));
+  background: linear-gradient(0deg, white 0%, #0ae4d5 100%);
 }
 
 .dashboard-main .overview h3 {
-  color: white;
+  color: #1e2e4a;
   margin-bottom: 0;
   padding: 4.5rem 1.6rem 0 1.6rem;
 }
