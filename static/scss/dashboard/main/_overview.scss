@@ -2,8 +2,7 @@
 
     .overview{
         background: $users-overview-bgd;
-        border-top: 1px solid $dark;
-        border-bottom: 1px solid $dark;
+        border-top: 1rem solid $dark;
 
         h3{
             color: $white;
@@ -21,15 +20,15 @@
         
         .overview-box{
 
-            padding: 3rem 1rem 3rem 1rem;
+            padding: 2rem 1rem 4rem 1rem;
 
             @include breakpoint(tablet){
-                padding: 3rem 3rem 3rem 3rem;
+                padding: 2rem 3rem 8rem 3rem;
                 @include flex(unset);
             }
 
             @include breakpoint(laptop){
-                padding: 3rem 6rem 3rem 30rem;
+                padding: 2rem 6rem 8rem 30rem;
             }
 
             p{
@@ -40,6 +39,10 @@
                 .number{
                     font-weight: bold;
                 }
+            }
+
+            div p{
+                color: $dark;
             }
 
 
@@ -54,15 +57,14 @@
                     margin-left: 4rem;
                 }
             }
+
+            a:hover{
+                @include button-hover;
+            }
         }
 
         
 
-    }
-
-    .users-overview > .overvew-box{
-        background: rgb(141,197,209);
-        
     }
 
 }

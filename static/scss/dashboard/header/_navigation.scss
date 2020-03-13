@@ -32,7 +32,7 @@
                     margin-bottom: 0;
                     font-size: $navlink-font-size;
                     font-family: $navlink-font;
-                    color: $white;
+                    color: $nav-link-color;
 
                     @include breakpoint(laptop){
 
@@ -46,10 +46,16 @@
 
             }//a
 
+            a:hover{
+                @include nav-hover;
+            }
+
         }//.navlink
 
         .logout{
             @include nav-links;
+
+            
 
             @include breakpoint(maxTablet){
                 @include flex(space-between);
@@ -77,6 +83,7 @@
                 span{
                     font-size: $signed-in;
                 } //span
+                
 
             }//p
 

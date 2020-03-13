@@ -1,7 +1,6 @@
 .dashboard-main{
 
     .filter{
-        padding-top: 5rem;
 
         .dashboard-form{
 
@@ -18,12 +17,16 @@
 
                 @include breakpoint(tablet){
                     margin-top: 4.8rem;
-                    border-radius: 0;
-                    padding: 0;
                     padding: 1.15rem;
                     margin-left: -0.5rem;
+                    width: 40%;
+                    margin-left: 2rem;
                 }
                 
+            }
+
+            .flter-button:hover{
+                @include button-hover;
             }
 
         }
