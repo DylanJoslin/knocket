@@ -42,21 +42,16 @@ def delete_user(request, username='none'):
 
 def approve_user(request, username='none'):
 
-    context = {
-        messages: 'help'
-    }
-
     if request.user.userprofile.access == 'teacher' or request.user.userprofile.access == 'admin':
-        # import pdb;pdb.set_trace()
         if username != 'none':
             user = User.objects.get(username=username)
             user.userprofile.access = 'student'
             user.userprofile.save()
             messages.success(request, f'This student has been approved!')
-            return render(request, 'administration/admin_home.html', context)
+            return render(request, 'administration/admin_home.html')
         else:
             messages.success(request, f'Cannot approve user!')
-            return render(request, 'administration/admin_home.html', context)
+            return render(request, 'administration/admin_home.html')
 
 
 

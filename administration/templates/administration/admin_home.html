@@ -10,6 +10,13 @@
 
 <!-- ====================CONTAINER==================== -->
         <div class="container">
+        {% if messages %}
+                {% for message in messages %}
+                <div class="alert alert-{{ message.tags }}">
+                {{ message }}
+                </div>
+                {% endfor%}
+        {% endif %}
 
         <!-- ====================OVERVIEW==================== -->
                 <div class="overview users-overview">
@@ -22,13 +29,7 @@
                                 <div>
                                         <a href="#">Manage Users</a>
                                 </div>
-                                {% if messages %}
-                                        {% for message in messages %}
-                                        <div class="alert alert-{{ message.tags }}">
-                                        {{ message }}
-                                        </div>
-                                        {% endfor%}
-                                {% endif %}
+                                
                         </div>
                 </div>
         <!-- ====================OVERVIEW CLOSE==================== -->
