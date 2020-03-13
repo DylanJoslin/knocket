@@ -36,17 +36,27 @@ def delete_user(request, username='none'):
             user.delete()
             messages.success(request, f'This user has been deleted')
             return render(request, 'administration/admin_home.html')
+    else:
+        messages.error(request, f'You do not have perission to perform this task.')
+        return render(request, 'administration/admin_home.html')
 
 def approve_user(request, username='none'):
-        if request.user.userprofile.access == 'teacher' or request.user.userprofile.access == 'admin':
-            if username != 'none':
-                user = User.objects.get(username=username)
-                user.userprofile.access == 'student'
-                messages.success(request, f'This student has been approved!')
-                return render(request, 'administration/admin_home.html')
-            else:
-                messages.success(request, f'Cannot approve user!')
-                return render(request, 'administration/admin_home.html')
+
+    context = {
+        messages: 'help'
+    }
+
+    if request.user.userprofile.access == 'teacher' or request.user.userprofile.access == 'admin':
+        # import pdb;pdb.set_trace()
+        if username != 'none':
+            user = User.objects.get(username=username)
+            user.userprofile.access = 'student'
+            user.userprofile.save()
+            messages.success(request, f'This student has been approved!')
+            return render(request, 'administration/admin_home.html', context)
+        else:
+            messages.success(request, f'Cannot approve user!')
+            return render(request, 'administration/admin_home.html', context)
 
 
 
