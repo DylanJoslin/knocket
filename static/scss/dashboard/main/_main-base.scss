@@ -34,7 +34,7 @@
 
             p{
                 font-size: 2.2rem;
-                padding-bottom: 5rem;
+                padding-bottom: 2rem;
                 color: $white;
                 margin: 0;
                 font-family: 'Raleway Light', sans-serif;
@@ -63,12 +63,9 @@
 
             h3{
                 color: $white;
-                font-size: 3rem;
+                font-size: 2.6rem;
                 line-height: 1.5;
                 font-family: 'Raleway Light', sans-serif;
-                @include breakpoint(tablet){
-                    font-size: 3rem;
-                }
 
                 .heading-small{
                     font-size: 2rem;
@@ -116,7 +113,7 @@
                 border-top: 2px solid $triangle-color;
                 padding: 0.7rem 0 0.7rem 1rem;
                 width: 66rem;
-                margin-bottom: 2rem;
+                margin-bottom: 4rem;
 
                 .triangle-up{
                     width: 0;

@@ -104,6 +104,7 @@
 
                         a{
                             @include button;
+                            background: $primary;
                             @include breakpoint(tablet){
                                 width: 30rem;
                             }

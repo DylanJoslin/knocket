@@ -819,7 +819,7 @@ td, th {
 
 .dashboard-main .welcome p {
   font-size: 2.2rem;
-  padding-bottom: 5rem;
+  padding-bottom: 2rem;
   color: white;
   margin: 0;
   font-family: 'Raleway Light', sans-serif;
@@ -857,15 +857,9 @@ td, th {
 
 .dashboard-main .home-welcome h3 {
   color: white;
-  font-size: 3rem;
+  font-size: 2.6rem;
   line-height: 1.5;
   font-family: 'Raleway Light', sans-serif;
-}
-
-@media screen and (min-width: 700px) {
-  .dashboard-main .home-welcome h3 {
-    font-size: 3rem;
-  }
 }
 
 .dashboard-main .home-welcome h3 .heading-small {
@@ -932,7 +926,7 @@ td, th {
   border-top: 2px solid #697582;
   padding: 0.7rem 0 0.7rem 1rem;
   width: 66rem;
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
 }
 
 .dashboard-main .home-welcome .border .triangle-up {
@@ -1131,6 +1125,7 @@ td, th {
   display: block;
   padding: 1.2rem;
   margin-bottom: 1rem;
+  background: #a5c29b;
 }
 
 @media screen and (min-width: 700px) {
