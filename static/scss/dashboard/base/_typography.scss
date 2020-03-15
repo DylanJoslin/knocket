@@ -1,13 +1,67 @@
+/* CARDO FONT */
+
+@font-face{
+  font-family: "Cardo Bold";
+  src: url('/static/fonts/Cardo-Bold.ttf');
+}
+
+@font-face{
+  font-family: "Cardo Italic";
+  src: url('/static/fonts/Cardo-Italic.ttf');
+}
+
+@font-face{
+  font-family: "Cardo Regular";
+  src: url('/static/fonts/Cardo-Regular.ttf');
+}
+
+/* RALEWAY FONT */
+
+@font-face{
+  font-family: "Raleway Bold";
+  src: url('/static/fonts/Raleway-Bold.ttf');
+}
+
+@font-face{
+  font-family: "Raleway Bold Italic";
+  src: url('/static/fonts/Raleway-BoldItalic.ttf');
+}
+
+@font-face{
+  font-family: "Raleway Regular";
+  src: url('/static/fonts/Raleway-Regular.ttf');
+}
+
+@font-face{
+  font-family: "Raleway Light";
+  src: url('/static/fonts/Raleway-Light.ttf');
+}
+
+@font-face{
+  font-family: "Raleway Thin";
+  src: url('/static/fonts/Raleway-Thin.ttf');
+}
+
+@font-face{
+  font-family: "Raleway Thin Italic";
+  src: url('/static/fonts/Raleway-ThinItalic.ttf');
+}
+
+
 .dashboard-body{
   
   h2, h3, h4, h5, h6, p{
-      font-family: $heading-font;
-      color: $dark;
+      color: $text-color;
       margin-bottom: 2.4rem; 
+  }
+
+  h2, h3, h4, h5, h6{
+    font-family: $heading-font;
   }
 
   p{
     font-size: $paragraph;
+    font-family: $para-font;
   }
 
   h1{

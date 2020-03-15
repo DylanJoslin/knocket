@@ -1,15 +1,54 @@
 {% extends 'administration/base.html' %}
 
 {% block content %}
-<div class="welcome">
-    <h2>Welcome {{ user.first_name }}, to your dashboard</h2>
-    <p>Here you can manage the users and the content on your site.</p>
+<div class="welcome home-welcome">
+    <h2>Welcome {{ user.first_name }}, to your dashboard!</h2>
+    <p>Manage the users and the content on your site.</p>
+    <div class="border">
+        <div class="triangle-up"></div>
+        <div class="triangle-down"></div>
+        <div class="triangle-up"></div>
+        <div class="triangle-down"></div>
+        <div class="triangle-up"></div>
+        <div class="triangle-down"></div>
+        <div class="triangle-up"></div>
+        <div class="triangle-down"></div>
+        <div class="triangle-up"></div>
+        <div class="triangle-down"></div>
+        <div class="triangle-up"></div>
+        <div class="triangle-down"></div>
+        <div class="triangle-up"></div>
+        <div class="triangle-down"></div>
+        <div class="triangle-up"></div>
+        <div class="triangle-down"></div>
+        <div class="triangle-up"></div>
+        <div class="triangle-down"></div>
+        <div class="triangle-up"></div>
+        <div class="triangle-down"></div>
+         <div class="triangle-up"></div>
+        <div class="triangle-down"></div>
+        <div class="triangle-up"></div>
+        <div class="triangle-down"></div>
+        <div class="triangle-up"></div>
+        <div class="triangle-down"></div>
+         <div class="triangle-up"></div>
+        <div class="triangle-down"></div>
+        <div class="triangle-up"></div>
+        <div class="triangle-down"></div>
+         <div class="triangle-up"></div>
+        <div class="triangle-down"></div>
+    </div>
+    <h3><span class="heading-small">Start by: </span><br><span class="heading-small-two">Viewing the latest activity on your site.</span></h3>
+    <div class="welcome-links">
+        <a href="#users-overview">Users</a>
+        <a href="#uploads-overview">Uploads</a>
+    </div>
 </div>
 <!-- ====================CONTAINER==================== -->
         <div class="container">
 
         <!-- ====================OVERVIEW==================== -->
-                <div class="overview users-overview">
+                <div class="overview users-overview" id="users-overview">
                         <h3>Users Overview</h3>
                         <div class="overview-box">
                                 <div>
@@ -79,7 +118,7 @@
 
 
                 <!-- ====================OVERVIEW==================== -->
-                <div class="overview uploads-overview">
+                <div class="overview uploads-overview" id="uploads-overview">
                         <h3>Uploads Overview</h3>
                         <div class="overview-box">
                                 <div>

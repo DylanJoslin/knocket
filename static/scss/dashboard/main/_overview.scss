@@ -5,7 +5,7 @@
         background: $users-overview-bgd;
 
         h3{
-            color: $dark;
+            color: $white;
             margin-bottom: 0;
             @include padding(small);
 
@@ -34,7 +34,6 @@
             p{
                 font-size: $overview-labels;
                 margin-bottom: 1rem;
-                color: $white;
 
                 .number{
                     font-weight: bold;
@@ -42,7 +41,7 @@
             }
 
             div p{
-                color: $dark;
+                color: $text-color;
             }
 
 

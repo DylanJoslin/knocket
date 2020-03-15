@@ -1,52 +1,66 @@
-/*******    CONTENT PADDING    *******/
-
 
 /*******    COLORS    *******/
 $white: rgb(255, 255, 255);
-$dark: rgb(30, 46, 74);
-$nav-shown: rgb(30, 46, 74);
-//rgb(116, 147, 201);
+$text-color: rgb(48, 48, 48);
+$dark: #49596c;
+//$primary: rgb(223, 107, 54);
+//$secondary: #D66028;
+$primary: rgb(165, 194, 155);
+$secondary: rgb(165, 194, 155);
 
-$nav-background: rgb(30, 46, 74);
-$nav-links-background: rgb(0, 204, 190);
-$nav-link-color: white;
-$nav-hover: rgb(30, 46, 74);
+$triangle-color: rgb(105, 117, 130);
 
-$hover-background: rgb(0, 204, 190);
-$hover-color: $dark;
 
-$acc-background: rgb(30, 46, 74);
-$acc-badge-background: rgb(0, 204, 190);
-$acc-hover-background: rgb(0, 204, 190);
 
-$user-acc-background: rgb(30, 46, 74);
-$users-overview-bgd: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(10,228,213,1) 100%);
+/*******    NAVIGATION    *******/
+$nav-shown: $dark;
+$nav-hover: $secondary;
+$nav-background: $dark;
+$nav-links-background: $primary;
+$nav-link-color: $white;
+
+/*******    HOVER    *******/
+$hover-background: $secondary;
+$hover-color: secondary;
+$acc-hover-background: $secondary;
+
+/*******    ACCORDIAN    *******/
+$acc-background: $dark;
+$acc-badge-background: $primary;
+$acc-link-color: $primary;
+$user-acc-background: $dark;
+
+$acc-tabs: 1.8rem;
+$acc-tabs-font: 'Raleway Light', sans-serif;
+$acc-badge: 1.4rem;
+$acc-link-font: 'Raleway Bold', sans-serif;
+
+
+/*******    BUTTONS    *******/
+$button-color: $dark;
+$button: 1.8rem;
+$button-font: 'Raleway Bold', sans-serif;
+
+
+/*******    OVERVIEW    *******/
+$users-overview-bgd: linear-gradient(0deg, $white 0%, $secondary 50%);
 //linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(0,204,190,1) 51%, rgba(255,255,255,1) 100%);
-
-//linear-gradient(180deg, rgba(30,56,74,1) 0%, rgba(0,204,190,1) 53%, rgba(255,255,255,1) 96%);
+$overview-labels: 2.4rem;
 
 
 /*******    FONTS     *******/
+$para-font: 'Raleway Regluar', sans-serif;
 $paragraph: 1.6rem;
-$heading-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-$navlink-font: arial;
+$heading-font: 'Raleway Bold', sans-serif;
+$navlink-font: 'Raleway Regluar', sans-serif;
 $navlink-font-size: 1.8rem;
 $signed-in: 1.4rem;
 
-$overview-labels: 2.4rem;
 
-$acc-tabs: 1.8rem;
-$acc-badge: 1.4rem;
-$acc-link-color: rgb(0, 204, 190);
-$acc-link-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
-$button: 1.8rem;
-
-/*******      FORM STYLES      *******/
-$input-border: 1px solid rgb(0, 204, 190);
-
-
+/*******      FORM     *******/
+$input-border: 1px solid $primary;
 $labelFontSize: 2rem;
+$labelFont: 'Raleway Regluar', sans-serif;
 $inputFontSize: 1.8rem;
 $inputFontColor: rgb(73, 87, 106);
 

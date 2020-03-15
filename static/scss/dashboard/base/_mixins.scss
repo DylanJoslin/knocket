@@ -37,7 +37,7 @@
 
 
   @mixin nav-links(){
-    border: 2px solid rgba(255, 255, 255, 0.523);
+    border: 0.15rem solid rgb(255, 255, 255);
     background: $nav-links-background;
     border-radius: 1rem;
     margin: 2rem;
@@ -71,6 +71,7 @@
     padding: 1.2rem 3rem;
   }
   font-size: $acc-tabs;
+  font-family: $acc-tabs-font;
   border-top-left-radius: 1.6rem;
   border-top-right-radius: 1.6rem;
 }
@@ -95,7 +96,7 @@
   color: $acc-link-color;
   font-size: $acc-tabs;
   padding-bottom: 1rem;
-  font: $acc-link-font;
+  font-family: $acc-link-font;
 }
 
 @mixin accordian-hover{
@@ -111,8 +112,9 @@
 
 @mixin button(){
   color: white;
-  background: $dark;
+  background: $button-color;
   font-size: $button;
+  font-family: $button-font;
   border-radius: 1.6rem;
   text-align: center;
   display: block;
@@ -138,6 +140,7 @@
 @mixin formLabels(){
   font-size: $labelFontSize;
   color: $dark;
+  font-family: $labelFont;
 }
 
 @mixin formInputs(){
@@ -150,6 +153,7 @@
   color: $inputFontColor;
   border: $input-border;
   border-radius: 0.5rem;
+  font-family: $labelFont;
 }
 
 @mixin tooltip(){

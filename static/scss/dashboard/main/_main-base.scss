@@ -8,16 +8,7 @@
         }
 
         .welcome{
-
-            h2{
-                font-size: 4.2rem;
-                line-height: 4.8rem;
-
-                @include breakpoint(tablet){
-                    font-size: 5.6rem; 
-                     line-height: 7.2rem;
-                }
-            }
+            background: $dark;
 
             @include padding(small);
 
@@ -29,16 +20,125 @@
                 @include padding(large);
             }
 
+            h2{
+                color: $white;
+                font-size: 4.2rem;
+                line-height: 4.8rem;
+                margin-bottom: 2rem;
+
+                @include breakpoint(tablet){
+                    font-size: 5.6rem; 
+                     line-height: 7.2rem;
+                }
+            }
+
             p{
-                font-size: 2rem;
-                margin-bottom: 5rem;
+                font-size: 2.2rem;
+                padding-bottom: 5rem;
+                color: $white;
+                margin: 0;
+                font-family: 'Raleway Light', sans-serif;
+            }
+
+            .welcome-links{
+                padding-bottom: 4rem;
+
+                @include breakpoint (tablet){
+                    @include flex(unset);
+                    width: 10rem;
+                    padding-right: 3rem;
+                }
+
             }
 
         }//.welcome
 
-        .container{
-           
+        .home-welcome{
+            height: 70rem;
 
-        }//.container
+            @include breakpoint(tablet){
+                height: 100vh;
+            }
+            
+
+            h3{
+                color: $white;
+                font-size: 3rem;
+                line-height: 1.5;
+                font-family: 'Raleway Light', sans-serif;
+                @include breakpoint(tablet){
+                    font-size: 3rem;
+                }
+
+                .heading-small{
+                    font-size: 2rem;
+                    font-family: 'Raleway Bold', sans-serif;
+
+                    @include breakpoint(tablet){
+                        font-size: 2.6rem;
+
+                    }
+                }
+
+               .heading-small-two{
+                    @include breakpoint(tablet){
+                        padding-left: 3rem;
+                    }
+               }
+
+            }
+
+            @include breakpoint(laptop){
+                padding-top: 13rem;
+            }
+
+            a{
+                @include button;
+                margin-bottom: 2rem;
+                background: $primary;
+                border: 1px solid white;
+
+                @include breakpoint(tablet){
+                    padding: 1rem 10rem;
+                    margin-right: 3rem;
+                }
+
+            }
+
+            a:hover{
+                background: $white;
+                color: $dark;
+            }
+
+            .border {
+                @include flex(unset);
+                border-bottom: 2px solid $triangle-color;
+                border-top: 2px solid $triangle-color;
+                padding: 0.7rem 0 0.7rem 1rem;
+                width: 66rem;
+                margin-bottom: 2rem;
+
+                .triangle-up{
+                    width: 0;
+                    height: 0;
+                    border-left: 10px solid transparent;
+                    border-right: 10px solid transparent;
+                    border-bottom: 20px solid $triangle-color;
+                }
+
+                .triangle-down{
+                    width: 0;
+                    height: 0;
+                    border-left: 10px solid transparent;
+                    border-right: 10px solid transparent;
+                    border-top: 20px solid $triangle-color;
+                }
+
+            }
+
+                
+        }
+
+
 
     }//.dashboard-main
