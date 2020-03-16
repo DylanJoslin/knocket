@@ -1,6 +1,7 @@
 .dashboard-body{
 
     .dashboard-navigation{
+        z-index: 9999;
         @include breakpoint(maxTablet){
             width: 100%;
             position: absolute;
