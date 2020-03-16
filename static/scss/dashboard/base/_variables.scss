@@ -1,7 +1,7 @@
 
 /*******    COLORS    *******/
 $white: rgb(255, 255, 255);
-$text-color: rgb(48, 48, 48);
+$text-color: rgb(47, 47, 55);
 $dark: #49596c;
 //$primary: rgb(223, 107, 54);
 //$secondary: #D66028;
@@ -14,7 +14,6 @@ $triangle-color: rgb(105, 117, 130);
 
 /*******    NAVIGATION    *******/
 $nav-shown: $dark;
-$nav-hover: $secondary;
 $nav-background: $dark;
 $nav-links-background: $primary;
 $nav-link-color: $white;
@@ -23,6 +22,7 @@ $nav-link-color: $white;
 $hover-background: $secondary;
 $hover-color: secondary;
 $acc-hover-background: $secondary;
+$nav-hover: $white;
 
 /*******    ACCORDIAN    *******/
 $acc-background: $dark;
@@ -39,7 +39,7 @@ $acc-link-font: 'Raleway Bold', sans-serif;
 /*******    BUTTONS    *******/
 $button-color: $dark;
 $button: 1.8rem;
-$button-font: 'Raleway Bold', sans-serif;
+$button-font: 'Raleway Regular', sans-serif;
 
 
 /*******    OVERVIEW    *******/
@@ -48,11 +48,11 @@ $users-overview-bgd: linear-gradient(0deg, $white 0%, $secondary 50%);
 $overview-labels: 2.4rem;
 
 
-/*******    FONTS     *******/
+/*******    PARA, HEADING, NAV     *******/
 $para-font: 'Raleway Regluar', sans-serif;
 $paragraph: 1.6rem;
-$heading-font: 'Raleway Bold', sans-serif;
-$navlink-font: 'Raleway Regluar', sans-serif;
+$heading-font: 'Coolvetica Regluar', sans-serif;
+$navlink-font: 'Raleway Regular', sans-serif;
 $navlink-font-size: 1.8rem;
 $signed-in: 1.4rem;
 

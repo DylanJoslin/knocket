@@ -15,6 +15,13 @@
   src: url('/static/fonts/Cardo-Regular.ttf');
 }
 
+/* COOLVETICA FONT */
+
+@font-face{
+  font-family: "Coolvetica Regluar";
+  src: url('/static/fonts/coolvetica-regular.ttf');
+}
+
 /* RALEWAY FONT */
 
 @font-face{
@@ -78,13 +85,13 @@
 
   h3{
     font-size: 5.0rem; 
-    line-height: 7.2rem; 
+    line-height: 5rem; 
     margin-bottom: 2.8rem;
   }
 
   h4{
     font-size: 4.2rem; 
-    line-height: 6.4rem; 
+    line-height: 5rem; 
     margin-bottom: 4.8rem;
   }
 

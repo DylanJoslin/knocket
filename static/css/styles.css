@@ -427,7 +427,7 @@ td, th {
 /*******    ACCORDIAN    *******/
 /*******    BUTTONS    *******/
 /*******    OVERVIEW    *******/
-/*******    FONTS     *******/
+/*******    PARA, HEADING, NAV     *******/
 /*******      FORM     *******/
 .dashboard-html {
   font-size: 62.5%;
@@ -458,6 +458,12 @@ td, th {
 @font-face {
   font-family: "Cardo Regular";
   src: url("/static/fonts/Cardo-Regular.ttf");
+}
+
+/* COOLVETICA FONT */
+@font-face {
+  font-family: "Coolvetica Regluar";
+  src: url("/static/fonts/coolvetica-regular.ttf");
 }
 
 /* RALEWAY FONT */
@@ -492,12 +498,12 @@ td, th {
 }
 
 .dashboard-body h2, .dashboard-body h3, .dashboard-body h4, .dashboard-body h5, .dashboard-body h6, .dashboard-body p {
-  color: #303030;
+  color: #2f2f37;
   margin-bottom: 2.4rem;
 }
 
 .dashboard-body h2, .dashboard-body h3, .dashboard-body h4, .dashboard-body h5, .dashboard-body h6 {
-  font-family: "Raleway Bold", sans-serif;
+  font-family: "Coolvetica Regluar", sans-serif;
 }
 
 .dashboard-body p {
@@ -519,13 +525,13 @@ td, th {
 
 .dashboard-body h3 {
   font-size: 5.0rem;
-  line-height: 7.2rem;
+  line-height: 5rem;
   margin-bottom: 2.8rem;
 }
 
 .dashboard-body h4 {
   font-size: 4.2rem;
-  line-height: 6.4rem;
+  line-height: 5rem;
   margin-bottom: 4.8rem;
 }
 
@@ -545,6 +551,7 @@ td, th {
 .dashboard-header {
   padding: 1rem 1.6rem;
   background: #49596c;
+  border-right: 1px solid rgba(255, 255, 255, 0.447);
 }
 
 @media screen and (max-width: 999px) {
@@ -568,9 +575,10 @@ td, th {
 
 @media screen and (min-width: 1000px) {
   .dashboard-header {
-    width: 24rem;
+    width: 26rem;
     height: 200vh;
     position: fixed;
+    padding-left: 2.4rem;
   }
 }
 
@@ -626,12 +634,11 @@ td, th {
 }
 
 .dashboard-body .dashboard-navigation .nav-link a {
-  border: 0.15rem solid white;
   background: #a5c29b;
   border-radius: 1rem;
   margin: 2rem;
   display: block;
-  padding: 1.4rem;
+  padding: 1.2rem;
   margin-bottom: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -655,7 +662,7 @@ td, th {
 .dashboard-body .dashboard-navigation .nav-link a p {
   margin-bottom: 0;
   font-size: 1.8rem;
-  font-family: "Raleway Regluar", sans-serif;
+  font-family: "Raleway Regular", sans-serif;
   color: white;
 }
 
@@ -664,17 +671,15 @@ td, th {
 }
 
 .dashboard-body .dashboard-navigation .nav-link a:hover {
-  border: 1px solid white;
-  background: #a5c29b;
+  border: 2px solid white;
 }
 
 .dashboard-body .dashboard-navigation .logout {
-  border: 0.15rem solid white;
   background: #a5c29b;
   border-radius: 1rem;
   margin: 2rem;
   display: block;
-  padding: 1.4rem;
+  padding: 1.2rem;
   margin-bottom: 2rem;
 }
 
@@ -702,27 +707,38 @@ td, th {
 
 .dashboard-body .dashboard-navigation .logout .signed-in {
   color: white;
+  font-size: 2rem;
+  font-family: 'Raleway Bold', sans-serif;
+  margin-bottom: 1rem;
 }
 
 @media screen and (min-width: 1000px) {
   .dashboard-body .dashboard-navigation .logout .signed-in {
-    padding-bottom: 1.5rem;
+    padding-bottom: 1rem;
   }
 }
 
 .dashboard-body .dashboard-navigation .logout a p {
-  text-align: right;
+  text-align: center;
   color: white;
+  border-radius: 1rem;
+  background: #49596c;
+  padding: 0.5rem;
+}
+
+.dashboard-body .dashboard-navigation .logout a:hover p {
+  border: 2px solid white;
 }
 
 .dashboard-body .dashboard-navigation .logout p {
   margin-bottom: 0;
   font-size: 1.8rem;
-  font-family: "Raleway Regluar", sans-serif;
+  font-family: "Raleway Regular", sans-serif;
 }
 
 .dashboard-body .dashboard-navigation .logout p span {
   font-size: 1.4rem;
+  font-family: 'Raleway Regular', sans-serif;
 }
 
 .dashboard-header .menu-icon {
@@ -749,7 +765,6 @@ td, th {
     transition: all 0.7s ease-in-out;
   }
   .dashboard-header .close-button {
-    font-family: 'Playfair Display', serif;
     font-size: 2.4rem;
     text-align: right;
     padding: 1rem;
@@ -789,17 +804,20 @@ td, th {
 .dashboard-main .welcome {
   background: #49596c;
   padding: 4.5rem 1.6rem 0 1.6rem;
+  padding-bottom: 4rem;
 }
 
 @media screen and (min-width: 700px) {
   .dashboard-main .welcome {
     padding: 6rem 3rem 0 3rem;
+    padding-bottom: 4rem;
   }
 }
 
 @media screen and (min-width: 1000px) {
   .dashboard-main .welcome {
     padding: 4rem 6rem 0 30rem;
+    padding-bottom: 4rem;
   }
 }
 
@@ -889,7 +907,7 @@ td, th {
   color: white;
   background: #49596c;
   font-size: 1.8rem;
-  font-family: "Raleway Bold", sans-serif;
+  font-family: "Raleway Regular", sans-serif;
   border-radius: 1.6rem;
   text-align: center;
   display: block;
@@ -898,6 +916,18 @@ td, th {
   margin-bottom: 2rem;
   background: #a5c29b;
   border: 1px solid white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: unset;
+      -ms-flex-pack: unset;
+          justify-content: unset;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 @media screen and (min-width: 700px) {
@@ -905,6 +935,19 @@ td, th {
     padding: 1rem 10rem;
     margin-right: 3rem;
   }
+}
+
+.dashboard-main .home-welcome a .badge {
+  background: #a5c29b;
+  color: white;
+  padding: 0.5rem 1rem;
+  font-size: 1.4rem;
+  border: 1px solid #49596c;
+  border-radius: 1rem;
+  margin-left: 1rem;
+  background: white;
+  color: #49596c;
+  border: 1px solid #49596c;
 }
 
 .dashboard-main .home-welcome a:hover {
@@ -1119,7 +1162,7 @@ td, th {
   color: white;
   background: #49596c;
   font-size: 1.8rem;
-  font-family: "Raleway Bold", sans-serif;
+  font-family: "Raleway Regular", sans-serif;
   border-radius: 1.6rem;
   text-align: center;
   display: block;
@@ -1223,14 +1266,14 @@ td, th {
 }
 
 .dashboard-main .overview .overview-box div p {
-  color: #303030;
+  color: #2f2f37;
 }
 
 .dashboard-main .overview .overview-box a {
   color: white;
   background: #49596c;
   font-size: 1.8rem;
-  font-family: "Raleway Bold", sans-serif;
+  font-family: "Raleway Regular", sans-serif;
   border-radius: 1.6rem;
   text-align: center;
   display: block;
@@ -1332,7 +1375,7 @@ td, th {
   color: white;
   background: #49596c;
   font-size: 1.8rem;
-  font-family: "Raleway Bold", sans-serif;
+  font-family: "Raleway Regular", sans-serif;
   border-radius: 1.6rem;
   text-align: center;
   display: block;
@@ -1412,7 +1455,7 @@ td, th {
   color: white;
   background: #49596c;
   font-size: 1.8rem;
-  font-family: "Raleway Bold", sans-serif;
+  font-family: "Raleway Regular", sans-serif;
   border-radius: 1.6rem;
   text-align: center;
   display: block;

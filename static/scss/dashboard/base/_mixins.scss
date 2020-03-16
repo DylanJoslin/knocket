@@ -37,12 +37,12 @@
 
 
   @mixin nav-links(){
-    border: 0.15rem solid rgb(255, 255, 255);
+    // border: 0.15rem solid rgb(255, 255, 255);
     background: $nav-links-background;
     border-radius: 1rem;
     margin: 2rem;
     display: block;
-    padding: 1.4rem;
+    padding: 1.2rem;
     margin-bottom: 2rem;
 
     @include breakpoint(laptop){
@@ -129,8 +129,7 @@
 }
 
 @mixin nav-hover(){
-  border: 1px solid $white;
-  background: $nav-hover;
+  border: 2px solid $nav-hover;
 }
 
 @mixin innerContainer(){

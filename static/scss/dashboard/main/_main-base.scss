@@ -11,13 +11,16 @@
             background: $dark;
 
             @include padding(small);
+            padding-bottom: 4rem;
 
             @include breakpoint(tablet){
                 @include padding(medium);
+                padding-bottom: 4rem;
             }
 
             @include breakpoint(laptop){
                 @include padding(large);
+                padding-bottom: 4rem;
             }
 
             h2{
@@ -93,11 +96,21 @@
                 @include button;
                 margin-bottom: 2rem;
                 background: $primary;
-                border: 1px solid white;
+                border: 1px solid $white;
+                @include flex(unset);
+                justify-content: center;
 
                 @include breakpoint(tablet){
                     padding: 1rem 10rem;
                     margin-right: 3rem;
+                }
+
+                .badge{
+                    @include accordian-badge;
+                    background: $white;
+                    color: $dark;
+                    border: 1px solid $dark;
+
                 }
 
             }
