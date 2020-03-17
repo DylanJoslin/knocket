@@ -54,7 +54,7 @@ line-height: 1.15;
 /* FONT-SIZES FOR IPAD/DESKTOP*/
 
 h1{
-    font: 2.488em/1 'Cardo Regular', sans-serif;
+    font: 20px/1 'Cardo Regular', sans-serif;
     margin-top: 0;
     color: white;
     text-transform: uppercase;
@@ -62,7 +62,11 @@ h1{
     span{
         text-transform: none;
         font-style: italic;
-        margin-left: 50px;
+        margin-left: 36px;
+
+        @include media-md{
+            margin-left: 50px;
+        }
         
 
     }
@@ -72,7 +76,7 @@ h1{
     }
 
     @include media-md{
-        font-size: 4.209em;
+        font-size: 28px;
     }
 }
 
@@ -86,10 +90,16 @@ h2{
 
 h3{
     font: 1.728em/1.5 'Cardo Bold', sans-serif;
+    color: $dark-purple;
 
     @include media-md{
         font-size: 2.369em;
     }
+}
+
+h4{
+    font: 1.44em/1.5 'Cardo Bold', sans-serif;
+    color: $light-purple;
 }
 
 p{
