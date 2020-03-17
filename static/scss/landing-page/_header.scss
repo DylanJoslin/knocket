@@ -3,7 +3,7 @@ header{
         display: flex;
         justify-content: space-between;
         padding: 30px 10px;
-        background-color: $darkblue;
+        background-color: $light-blue;
     
         @include media-md{
             margin-bottom: 70px;
@@ -20,13 +20,13 @@ header{
         font-size: 12px;
         text-decoration: none;
         color: white;
-        background-color: $sage;
+        background-color: $red-colour;
         padding: 8px;
         margin-top: 10px;
         border-radius: 8px;
 
         &:hover{
-            background-color: $maroon;
+            background-color: $light-purple;
             transition: 0.5s;
         }
     }
