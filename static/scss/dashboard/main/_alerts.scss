@@ -1,0 +1,35 @@
+.dashboard-body{
+
+    .alert{
+
+            @include padding(small);
+
+            @include breakpoint(tablet){
+                @include padding(medium);
+            }
+
+            @include breakpoint(laptop){
+                @include padding(large);
+            }
+
+        p{
+            padding: 2rem;
+            font-size: 2rem;
+            background: $alert;
+            border: 2px solid $dark;
+            border-radius: 2rem;
+            color: $white;
+        }
+
+    }
+
+
+
+}
+
+
+
+
+
+
+

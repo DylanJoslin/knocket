@@ -49,13 +49,6 @@
 
 <!-- ====================CONTAINER==================== -->
         <div class="container">
-        {% if messages %}
-                {% for message in messages %}
-                <div class="alert alert-{{ message.tags }}">
-                {{ message }}
-                </div>
-                {% endfor%}
-        {% endif %}
 
         <!-- ====================OVERVIEW==================== -->
                 <div class="overview users-overview" id="users-overview">
@@ -68,10 +61,17 @@
                                 <div>
                                         <a href="{% url 'admin_users' %}">Manage All Users</a>
                                 </div>
-                                
                         </div>
                 </div>
         <!-- ====================OVERVIEW CLOSE==================== -->
+
+        {% if messages %}
+                {% for message in messages %}
+                <div class="alert alert-{{ message.tags }}">
+                        {{ message }}
+                </div>
+                {% endfor%}
+        {% endif %}
 
         <!-- ====================ACCORDION==================== -->
                 <div class="accordian"><!-- Accordian -->
