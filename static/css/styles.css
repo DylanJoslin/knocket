@@ -141,7 +141,7 @@ h1, h2, h3, h4, h5 {
 
 /* FONT-SIZES FOR IPAD/DESKTOP*/
 h1 {
-  font: 2.488em/1 'Cardo Regular', sans-serif;
+  font: 20px/1 'Cardo Regular', sans-serif;
   margin-top: 0;
   color: white;
   text-transform: uppercase;
@@ -150,7 +150,13 @@ h1 {
 h1 span {
   text-transform: none;
   font-style: italic;
-  margin-left: 50px;
+  margin-left: 36px;
+}
+
+@media screen and (min-width: 768px) {
+  h1 span {
+    margin-left: 50px;
+  }
 }
 
 h1 a {
@@ -160,7 +166,7 @@ h1 a {
 
 @media screen and (min-width: 768px) {
   h1 {
-    font-size: 4.209em;
+    font-size: 28px;
   }
 }
 
@@ -176,12 +182,18 @@ h2 {
 
 h3 {
   font: 1.728em/1.5 'Cardo Bold', sans-serif;
+  color: #51508B;
 }
 
 @media screen and (min-width: 768px) {
   h3 {
     font-size: 2.369em;
   }
+}
+
+h4 {
+  font: 1.44em/1.5 'Cardo Bold', sans-serif;
+  color: #B4B9E5;
 }
 
 p {
@@ -202,6 +214,10 @@ p {
 img, .treaty-img {
   max-width: 100%;
   height: auto;
+}
+
+.treaty .content {
+  margin-bottom: 100px;
 }
 
 @media screen and (min-width: 768px) {
@@ -232,18 +248,6 @@ img, .treaty-img {
     width: 200px;
     height: 200px;
     margin-right: 40px;
-  }
-}
-
-.decoration {
-  width: 60%;
-  margin: 40px auto 80px;
-}
-
-@media screen and (min-width: 768px) {
-  .decoration {
-    margin: 60px auto 120px;
-    width: 40%;
   }
 }
 
@@ -387,6 +391,79 @@ header .menu {
   display: block;
 }
 
+.about {
+  margin-top: 80px;
+}
+
+.about h3 {
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.about .content {
+  margin-bottom: 120px;
+}
+
+.about .grid .member-1, .about .grid .member-2, .about .grid .member-3 {
+  margin-bottom: 80px;
+}
+
+@media screen and (min-width: 768px) {
+  .about .grid .member-1, .about .grid .member-2, .about .grid .member-3 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+.about .grid .member-1 h4, .about .grid .member-2 h4, .about .grid .member-3 h4 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.about .grid .member-1 .member-img, .about .grid .member-2 .member-img, .about .grid .member-3 .member-img {
+  margin: 0 auto;
+  width: 300px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .about .grid .member-1 .member-img, .about .grid .member-2 .member-img, .about .grid .member-3 .member-img {
+    width: 1400px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .about .grid .member-1 .description, .about .grid .member-2 .description, .about .grid .member-3 .description {
+    margin-left: 40px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .about .grid .member-2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .about .grid .member-2 .description {
+    margin-left: 0;
+    margin-right: 40px;
+  }
+}
+
 footer {
   background-color: #3EA3DF;
   padding: 30px 10px;
@@ -472,7 +549,6 @@ footer .bottom p {
 /*---------- General ----------*/
 main {
   height: 100%;
-  padding: 5rem 0;
 }
 
 .interactive-map {
@@ -838,7 +914,6 @@ html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, tex
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-size: 100%;
   font-weight: normal;
 }
 
