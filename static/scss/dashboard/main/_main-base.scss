@@ -96,7 +96,8 @@
                 @include button;
                 margin-bottom: 2rem;
                 background: $primary;
-                border: 1px solid $white;
+                border: 0.2rem solid $white;
+                color: $dark;
                 @include flex(unset);
                 justify-content: center;
 
