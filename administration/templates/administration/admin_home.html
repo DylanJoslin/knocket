@@ -1,33 +1,74 @@
 {% extends 'administration/base.html' %}
 
 {% block content %}
-<div class="welcome">
-    <h2>Welcome {{ user.first_name }}, to your dashboard</h2>
-    <p>Here you can manage the users and the content on your site.</p>
+<div class="welcome home-welcome">
+    <h2>Welcome {{ user.first_name }}, to your dashboard!</h2>
+    <p>Manage the users and the content on your site.</p>
+    <div class="border">
+        <div class="triangle-up"></div>
+        <div class="triangle-down"></div>
+        <div class="triangle-up"></div>
+        <div class="triangle-down"></div>
+        <div class="triangle-up"></div>
+        <div class="triangle-down"></div>
+        <div class="triangle-up"></div>
+        <div class="triangle-down"></div>
+        <div class="triangle-up"></div>
+        <div class="triangle-down"></div>
+        <div class="triangle-up"></div>
+        <div class="triangle-down"></div>
+        <div class="triangle-up"></div>
+        <div class="triangle-down"></div>
+        <div class="triangle-up"></div>
+        <div class="triangle-down"></div>
+        <div class="triangle-up"></div>
+        <div class="triangle-down"></div>
+        <div class="triangle-up"></div>
+        <div class="triangle-down"></div>
+         <div class="triangle-up"></div>
+        <div class="triangle-down"></div>
+        <div class="triangle-up"></div>
+        <div class="triangle-down"></div>
+        <div class="triangle-up"></div>
+        <div class="triangle-down"></div>
+         <div class="triangle-up"></div>
+        <div class="triangle-down"></div>
+        <div class="triangle-up"></div>
+        <div class="triangle-down"></div>
+         <div class="triangle-up"></div>
+        <div class="triangle-down"></div>
+    </div>
+    <h3><span class="heading-small">Start by: </span><br><span class="heading-small-two">Viewing the newest activity on your site.</span></h3>
+    <div class="welcome-links">
+        <a href="#users-overview">Users <span class="badge">20</span></a>
+        <a href="#uploads-overview">Uploads <span class="badge">6</span></a>
+    </div>
 </div>
 
-{% if messages %}
-        {% for message in messages %}
-        <div class="alert alert-{{ message.tags }}">
-        {{ message }}
-        </div>
-        {% endfor%}
-{% endif %}
+
 
 <!-- ====================CONTAINER==================== -->
         <div class="container">
+        {% if messages %}
+                {% for message in messages %}
+                <div class="alert alert-{{ message.tags }}">
+                {{ message }}
+                </div>
+                {% endfor%}
+        {% endif %}
 
         <!-- ====================OVERVIEW==================== -->
-                <div class="overview users-overview">
+                <div class="overview users-overview" id="users-overview">
                         <h3>Users Overview</h3>
                         <div class="overview-box">
                                 <div>
-                                        <p>New Users: <span class="number">{{new_users}}</span></p>
+                                        <p>New Users: <span class="number">{{ new_users }}</span></p>
                                         <p>Registered Users: <span class="number">{{ registered_users }}</span></p>
                                 </div>
                                 <div>
-                                        <a href="#">Manage Users</a>
+                                        <a href="{% url 'admin_users' %}">Manage All Users</a>
                                 </div>
+                                
                         </div>
                 </div>
         <!-- ====================OVERVIEW CLOSE==================== -->
@@ -88,7 +129,7 @@
 
 
                 <!-- ====================OVERVIEW==================== -->
-                <div class="overview uploads-overview">
+                <div class="overview uploads-overview" id="uploads-overview">
                         <h3>Uploads Overview</h3>
                         <div class="overview-box">
                                 <div>
@@ -96,7 +137,7 @@
                                         <p>Published Uploads: <span class="number">40</span></p>
                                 </div>
                                 <div>
-                                        <a href="#">Manage Uploads</a>
+                                        <a href="{% url 'admin_uploads' %}">Manage All Uploads</a>
                                 </div>
                         </div>
                 </div>
@@ -112,69 +153,6 @@
 
         <!-- ====================NEW UPLOADS==================== -->
                 <div id="new-uploads" class="acc-content"> <!-- New Upoads Content-->
-
-                <!-- ====================SINGLE UPLOAD==================== -->
-                        <div class="acc-single"> <!-- Single user -->
-                                <div class="acc-user-dropdown"><!-- User Dropdown -->
-                                        <p class="acc-username">title<span class="acc-badge">New!</span></p>
-                                        <p class="icon-plus">+</p>
-                                        <p class="icon-minus hidden">-</p>
-                                </div><!-- User Dropdown -->
-                                <div class="acc-user-info"><!-- User information -->
-                                        <div class="information">
-                                                <p>Created on: (date)</p>
-                                                <p>Full Name: (full name)</p>
-                                                <p>Email: (email)</p>
-                                        </div>
-                                        <div class="options">
-                                                <a href="#">Delete Upload</a>
-                                                <a href="#">Edit Upload</a>
-                                        </div>
-                                </div><!-- User information -->
-                        </div><!-- Single user -->
-                <!-- ====================SINGLE UPLOAD CLOSE==================== -->
-
-                <!-- ====================SINGLE UPLOAD==================== -->
-                        <div class="acc-single"> <!-- Single user -->
-                                <div class="acc-user-dropdown"><!-- User Dropdown -->
-                                        <p class="acc-username">title<span class="acc-badge">New!</span></p>
-                                        <p class="icon-plus">+</p>
-                                        <p class="icon-minus hidden">-</p>
-                                </div><!-- User Dropdown -->
-                                <div class="acc-user-info"><!-- User information -->
-                                        <div class="information">
-                                                <p>Created on: (date)</p>
-                                                <p>Full Name: (full name)</p>
-                                                <p>Email: (email)</p>
-                                        </div>
-                                        <div class="options">
-                                                <a href="#">Delete Upload</a>
-                                                <a href="#">Edit Upload</a>
-                                        </div>
-                                </div><!-- User information -->
-                        </div><!-- Single user -->
-                <!-- ====================SINGLE UPLOAD CLOSE==================== -->
-
-                <!-- ====================SINGLE UPLOAD==================== -->
-                        <div class="acc-single"> <!-- Single user -->
-                                <div class="acc-user-dropdown"><!-- User Dropdown -->
-                                        <p class="acc-username">title<span class="acc-badge">New!</span></p>
-                                        <p class="icon-plus">+</p>
-                                        <p class="icon-minus hidden">-</p>
-                                </div><!-- User Dropdown -->
-                                <div class="acc-user-info"><!-- User information -->
-                                        <div class="information">
-                                                <p>Created on: (date)</p>
-                                                <p>Full Name: (full name)</p>
-                                                <p>Email: (email)</p>
-                                        </div>
-                                        <div class="options">
-                                                <a href="#">Delete Upload</a>
-                                                <a href="#">Edit Upload</a>
-                                        </div>
-                                </div><!-- User information -->
-                        </div><!-- Single user -->
-                <!-- ====================SINGLE UPLOAD CLOSE==================== -->
 
                 <!-- ====================SINGLE UPLOAD==================== -->
                         <div class="acc-single"> <!-- Single user -->
@@ -224,72 +202,6 @@
                                 </div><!-- User information -->
                         </div><!-- Single user -->
                 <!-- ====================SINGLE UPLOAD CLOSE==================== -->
-
-                 <!-- ====================SINGLE UPLOAD==================== -->
-                        <div class="acc-single"> <!-- Single user -->
-                                <div class="acc-user-dropdown"><!-- User Dropdown -->
-                                        <p class="acc-username">title <span class="acc-badge">Published</span></p>
-                                        <p class="icon-plus">+</p>
-                                        <p class="icon-minus hidden">-</p>
-                                </div><!-- User Dropdown -->
-                                <div class="acc-user-info"><!-- User information -->
-                                        <div class="information">
-                                                <p>Created on: (date)</p>
-                                                <p>Created by: (full name)</p>
-                                                <p>Category: (category)</p>
-                                                <p>Accepted By: (name)</p>
-                                        </div>
-                                        <div class="options">
-                                                <a href="#">Delete Upload</a>
-                                                <a href="#">Edit Upload</a>
-                                        </div>
-                                </div><!-- User information -->
-                        </div><!-- Single user -->
-                <!-- ====================SINGLE UPLOAD CLOSE==================== -->
-
-                 <!-- ====================SINGLE UPLOAD==================== -->
-                        <div class="acc-single"> <!-- Single user -->
-                                <div class="acc-user-dropdown"><!-- User Dropdown -->
-                                        <p class="acc-username">title <span class="acc-badge">Published</span></p>
-                                        <p class="icon-plus">+</p>
-                                        <p class="icon-minus hidden">-</p>
-                                </div><!-- User Dropdown -->
-                                <div class="acc-user-info"><!-- User information -->
-                                        <div class="information">
-                                                <p>Created on: (date)</p>
-                                                <p>Created by: (full name)</p>
-                                                <p>Category: (category)</p>
-                                                <p>Accepted By: (name)</p>
-                                        </div>
-                                        <div class="options">
-                                                <a href="#">Delete Upload</a>
-                                                <a href="#">Edit Upload</a>
-                                        </div>
-                                </div><!-- User information -->
-                        </div><!-- Single user -->
-                <!-- ====================SINGLE UPLOAD CLOSE==================== -->
-
-                 <!-- ====================SINGLE UPLOAD==================== -->
-                        <div class="acc-single"> <!-- Single user -->
-                                <div class="acc-user-dropdown"><!-- User Dropdown -->
-                                        <p class="acc-username">title <span class="acc-badge">Published</span></p>
-                                        <p class="icon-plus">+</p>
-                                        <p class="icon-minus hidden">-</p>
-                                </div><!-- User Dropdown -->
-                                <div class="acc-user-info"><!-- User information -->
-                                        <div class="information">
-                                                <p>Created on: (date)</p>
-                                                <p>Created by: (full name)</p>
-                                                <p>Category: (category)</p>
-                                                <p>Accepted By: (name)</p>
-                                        </div>
-                                        <div class="options">
-                                                <a href="#">Delete Upload</a>
-                                                <a href="#">Edit Upload</a>
-                                        </div>
-                                </div><!-- User information -->
-                        </div><!-- Single user -->
-                <!-- ====================SINGLE UPLOAD CLOSE==================== -->
         
                 </div><!-- Published Uploads Content-->
         <!-- ====================PUBLISHED UPLOADS CLOSE==================== -->
@@ -302,6 +214,6 @@
         </div><!-- Container -->
 <!-- ====================CONTAINER CLOSE==================== -->
 
->>>>>>> origin/Admin-Dashboard
+{% comment %} >>>>>>> origin/Admin-Dashboard {% endcomment %}
 {% endblock content %}
 

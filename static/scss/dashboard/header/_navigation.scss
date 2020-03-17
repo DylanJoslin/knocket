@@ -1,10 +1,11 @@
 .dashboard-body{
 
     .dashboard-navigation{
+        z-index: 9999;
         @include breakpoint(maxTablet){
             width: 100%;
             position: absolute;
-            top: 5.3rem;
+            top: 5rem;
             right: -100%;
             background-color: $nav-shown;
             padding-bottom: 4rem;
@@ -18,12 +19,12 @@
 
         @include breakpoint(laptop){
             display: inline-block;
-           width: 22rem;
-           background: $dark;
+            width: 22rem;
+            background: $dark;
         }//break
-
-        .nav-link{
-
+        
+        .nav-link{ 
+        
             a{
                 @include nav-links;
                 @include flex(space-between);
@@ -32,7 +33,7 @@
                     margin-bottom: 0;
                     font-size: $navlink-font-size;
                     font-family: $navlink-font;
-                    color: $white;
+                    color: $nav-link-color;
 
                     @include breakpoint(laptop){
 
@@ -46,6 +47,10 @@
 
             }//a
 
+            a:hover{
+                @include nav-hover;
+            }
+
         }//.navlink
 
         .logout{
@@ -56,17 +61,27 @@
             }//break
 
             .signed-in{
-                color: $white;
-
+                color: $nav-link-color;
+                font-size: 2rem;
+                font-family: 'Raleway Bold', sans-serif;
+                margin-bottom: 1rem;
+                
                 @include breakpoint(laptop){
-                    padding-bottom: 1.5rem;
+                    padding-bottom: 1rem;
                 }//break
 
             }
             
             a p{
-                text-align: right;
-                color: $white;
+                text-align: center;
+                color: $nav-link-color;
+                border-radius: 1rem;
+                background: $dark;
+                padding: 0.5rem;
+            }
+
+            a:hover p{
+                border: 2px solid $white;
             }
 
             p{
@@ -76,11 +91,14 @@
                 
                 span{
                     font-size: $signed-in;
+                    font-family: 'Raleway Regular', sans-serif;
                 } //span
+                
 
             }//p
 
         }//.logout
+
 
     }//.dashboard-navigation
 
