@@ -23,11 +23,22 @@ def admin_home(request, access='pending'):
         'registered_users': registered_users,
         'access': access
     }
-    
+
     return render(request, 'administration/admin_home.html', context)
 
 def admin_users(request):
     return render(request, 'administration/admin_users.html')
+
+def admin_uploads(request):
+    return render(request, 'administration/admin_uploads.html')
+
+def edit_users(request):
+    return render(request, 'administration/edit_user.html')
+
+def create_user(request):
+    return render(request, 'administration/create_user.html')
+
+
 
 def delete_user(request, username='none'):
     if request.user.userprofile.access == 'teacher' or request.user.userprofile.access == 'admin':
@@ -52,7 +63,3 @@ def approve_user(request, username='none'):
         else:
             messages.success(request, f'Cannot approve user!')
             return render(request, 'administration/admin_home.html')
-
-
-
-

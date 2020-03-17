@@ -1,6 +1,7 @@
 .dashboard-header{
     padding: 1rem 1.6rem;
     background: $dark;
+    border-right: 1px solid rgba(255, 255, 255, 0.447);
 
     @include breakpoint(maxTablet){
         position: relative;
@@ -11,9 +12,10 @@
     }//breakpoint
 
     @include breakpoint(laptop){
-        width: 24rem;
+        width: 26rem;
         height: 200vh;
         position: fixed;
+        padding-left: 2.4rem;
 
     }//breakpoint
 
