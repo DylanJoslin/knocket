@@ -46,5 +46,19 @@ $(document).ready(function() {
 		$('#new-uploads').addClass('hidden');
 
 		event.preventDefault();
+    });
+    
+    $('.acc-new-users').click(function(event) {
+		$('#new-users').removeClass('hidden');
+		$('#registered-users').addClass('hidden');
+
+		event.preventDefault();
+	});
+
+	$('.acc-registered-users').click(function(event) {
+		$('#registered-users').removeClass('hidden');
+		$('#new-users').addClass('hidden');
+
+		event.preventDefault();
 	});
 });
