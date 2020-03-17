@@ -37,7 +37,7 @@
 
 
   @mixin nav-links(){
-    // border: 0.15rem solid rgb(255, 255, 255);
+    border: 0.2rem solid $white;
     background: $nav-links-background;
     border-radius: 1rem;
     margin: 2rem;
@@ -129,7 +129,7 @@
 }
 
 @mixin nav-hover(){
-  border: 2px solid $nav-hover;
+  border: 4px solid $nav-hover;
 }
 
 @mixin innerContainer(){
@@ -138,7 +138,7 @@
 
 @mixin formLabels(){
   font-size: $labelFontSize;
-  color: $dark;
+  color: $labelFontColor;
   font-family: $labelFont;
 }
 

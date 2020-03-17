@@ -32,13 +32,9 @@
                 p{
                     margin-bottom: 0;
                     font-size: $navlink-font-size;
-                    font-family: $navlink-font;
+                    font-family: $nav-link-font;
                     color: $nav-link-color;
-
-                    @include breakpoint(laptop){
-
-                    }
-
+                    
                     span{
                         font-size: $signed-in;
                     }//span
@@ -74,14 +70,14 @@
             
             a p{
                 text-align: center;
-                color: $nav-link-color;
+                color: $white;
                 border-radius: 1rem;
                 background: $dark;
                 padding: 0.5rem;
             }
 
             a:hover p{
-                border: 2px solid $white;
+                border: 4px solid $white;
             }
 
             p{

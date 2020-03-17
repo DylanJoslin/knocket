@@ -103,6 +103,11 @@ select {
 
 /* RALEWAY FONT */
 @font-face {
+  font-family: "Raleway Light";
+  src: url("/static/fonts/Raleway-Light.ttf");
+}
+
+@font-face {
   font-family: "Raleway Bold";
   src: url("/static/fonts/Raleway-Bold.ttf");
 }
@@ -897,113 +902,60 @@ td, th {
   color: black;
 }
 
-/* CARDO FONT */
-@font-face {
-  font-family: "Cardo Bold";
-  src: url("/static/fonts/Cardo-Bold.ttf");
-}
-
-@font-face {
-  font-family: "Cardo Italic";
-  src: url("/static/fonts/Cardo-Italic.ttf");
-}
-
-@font-face {
-  font-family: "Cardo Regular";
-  src: url("/static/fonts/Cardo-Regular.ttf");
-}
-
-/* COOLVETICA FONT */
-@font-face {
-  font-family: "Coolvetica Regluar";
-  src: url("/static/fonts/coolvetica-regular.ttf");
-}
-
-/* RALEWAY FONT */
-@font-face {
-  font-family: "Raleway Bold";
-  src: url("/static/fonts/Raleway-Bold.ttf");
-}
-
-@font-face {
-  font-family: "Raleway Bold Italic";
-  src: url("/static/fonts/Raleway-BoldItalic.ttf");
-}
-
-@font-face {
-  font-family: "Raleway Regular";
-  src: url("/static/fonts/Raleway-Regular.ttf");
-}
-
-@font-face {
-  font-family: "Raleway Light";
-  src: url("/static/fonts/Raleway-Light.ttf");
-}
-
-@font-face {
-  font-family: "Raleway Thin";
-  src: url("/static/fonts/Raleway-Thin.ttf");
-}
-
-@font-face {
-  font-family: "Raleway Thin Italic";
-  src: url("/static/fonts/Raleway-ThinItalic.ttf");
-}
-
-.dashboard-body h2, .dashboard-body h3, .dashboard-body h4, .dashboard-body h5, .dashboard-body h6, .dashboard-body p {
+.dashboard-html .dashboard-body h2, .dashboard-html .dashboard-body h3, .dashboard-html .dashboard-body h4, .dashboard-html .dashboard-body h5, .dashboard-html .dashboard-body h6, .dashboard-html .dashboard-body p {
   color: #2f2f37;
   margin-bottom: 2.4rem;
 }
 
-.dashboard-body h2, .dashboard-body h3, .dashboard-body h4, .dashboard-body h5, .dashboard-body h6 {
+.dashboard-html .dashboard-body h2, .dashboard-html .dashboard-body h3, .dashboard-html .dashboard-body h4, .dashboard-html .dashboard-body h5, .dashboard-html .dashboard-body h6 {
   font-family: "Raleway Bold", sans-serif;
 }
 
-.dashboard-body p {
+.dashboard-html .dashboard-body p {
   font-size: 1.6rem;
   font-family: "Raleway Regluar", sans-serif;
 }
 
-.dashboard-body h1 {
+.dashboard-html .dashboard-body h1 {
   font-size: 6.1rem;
   line-height: 7.2rem;
   margin-bottom: 4.8rem;
 }
 
-.dashboard-body h2 {
+.dashboard-html .dashboard-body h2 {
   font-size: 5.6rem;
   line-height: 7.2rem;
   margin-bottom: 3rem;
 }
 
-.dashboard-body h3 {
+.dashboard-html .dashboard-body h3 {
   font-size: 5.0rem;
   line-height: 5rem;
   margin-bottom: 2.8rem;
 }
 
-.dashboard-body h4 {
+.dashboard-html .dashboard-body h4 {
   font-size: 4.2rem;
   line-height: 5rem;
   margin-bottom: 4.8rem;
 }
 
-.dashboard-body h5 {
+.dashboard-html .dashboard-body h5 {
   font-size: 3.8rem;
   line-height: 4.8rem;
 }
 
-.dashboard-body a {
+.dashboard-html .dashboard-body a {
   text-decoration: none;
 }
 
-.dashboard-body li {
+.dashboard-html .dashboard-body li {
   list-style: none;
 }
 
 .dashboard-header {
   padding: 1rem 1.6rem;
-  background: #49596c;
+  background: #374352;
   border-right: 1px solid rgba(255, 255, 255, 0.447);
 }
 
@@ -1049,12 +1001,12 @@ td, th {
 }
 
 .menu-closed-header-style {
-  background-color: #49596c;
+  background-color: #374352;
 }
 
 @media screen and (min-width: 1000px) {
   .menu-closed-header-style {
-    background: #49596c;
+    background: #374352;
   }
 }
 
@@ -1068,7 +1020,7 @@ td, th {
     position: absolute;
     top: 5rem;
     right: -100%;
-    background-color: #49596c;
+    background-color: #374352;
     padding-bottom: 4rem;
     -webkit-transition: all 0.7s ease-in-out;
     transition: all 0.7s ease-in-out;
@@ -1086,12 +1038,13 @@ td, th {
   .dashboard-body .dashboard-navigation {
     display: inline-block;
     width: 22rem;
-    background: #49596c;
+    background: #374352;
   }
 }
 
 .dashboard-body .dashboard-navigation .nav-link a {
-  background: #a5c29b;
+  border: 0.2rem solid white;
+  background: #B4B9E5;
   border-radius: 1rem;
   margin: 2rem;
   display: block;
@@ -1119,8 +1072,8 @@ td, th {
 .dashboard-body .dashboard-navigation .nav-link a p {
   margin-bottom: 0;
   font-size: 1.8rem;
-  font-family: "Raleway Regular", sans-serif;
-  color: white;
+  font-family: "Raleway Bold", sans-serif;
+  color: #374352;
 }
 
 .dashboard-body .dashboard-navigation .nav-link a p span {
@@ -1128,11 +1081,12 @@ td, th {
 }
 
 .dashboard-body .dashboard-navigation .nav-link a:hover {
-  border: 2px solid white;
+  border: 4px solid white;
 }
 
 .dashboard-body .dashboard-navigation .logout {
-  background: #a5c29b;
+  border: 0.2rem solid white;
+  background: #B4B9E5;
   border-radius: 1rem;
   margin: 2rem;
   display: block;
@@ -1163,7 +1117,7 @@ td, th {
 }
 
 .dashboard-body .dashboard-navigation .logout .signed-in {
-  color: white;
+  color: #374352;
   font-size: 2rem;
   font-family: 'Raleway Bold', sans-serif;
   margin-bottom: 1rem;
@@ -1179,12 +1133,12 @@ td, th {
   text-align: center;
   color: white;
   border-radius: 1rem;
-  background: #49596c;
+  background: #374352;
   padding: 0.5rem;
 }
 
 .dashboard-body .dashboard-navigation .logout a:hover p {
-  border: 2px solid white;
+  border: 4px solid white;
 }
 
 .dashboard-body .dashboard-navigation .logout p {
@@ -1259,7 +1213,7 @@ td, th {
 }
 
 .dashboard-main .welcome {
-  background: #49596c;
+  background: #374352;
   padding: 4.5rem 1.6rem 0 1.6rem;
   padding-bottom: 4rem;
 }
@@ -1362,17 +1316,18 @@ td, th {
 
 .dashboard-main .home-welcome a {
   color: white;
-  background: #49596c;
+  background: #374352;
   font-size: 1.8rem;
-  font-family: "Raleway Regular", sans-serif;
+  font-family: "Raleway Bold", sans-serif;
   border-radius: 1.6rem;
   text-align: center;
   display: block;
   padding: 1.2rem;
   margin-bottom: 1rem;
   margin-bottom: 2rem;
-  background: #a5c29b;
-  border: 1px solid white;
+  background: #B4B9E5;
+  border: 0.2rem solid white;
+  color: #374352;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1395,21 +1350,21 @@ td, th {
 }
 
 .dashboard-main .home-welcome a .badge {
-  background: #a5c29b;
+  background: #B4B9E5;
   color: white;
   padding: 0.5rem 1rem;
   font-size: 1.4rem;
-  border: 1px solid #49596c;
+  border: 1px solid #374352;
   border-radius: 1rem;
   margin-left: 1rem;
   background: white;
-  color: #49596c;
-  border: 1px solid #49596c;
+  color: #374352;
+  border: 1px solid #374352;
 }
 
 .dashboard-main .home-welcome a:hover {
   background: white;
-  color: #49596c;
+  color: #374352;
 }
 
 .dashboard-main .home-welcome .border {
@@ -1477,11 +1432,11 @@ td, th {
 }
 
 .dashboard-main .accordian .acc-tabs a {
-  background: #49596c;
+  background: #374352;
   color: white;
   padding: 1rem 3rem;
   font-size: 1.8rem;
-  font-family: "Raleway Light", sans-serif;
+  font-family: "Raleway Regluar", sans-serif;
   border-top-left-radius: 1.6rem;
   border-top-right-radius: 1.6rem;
 }
@@ -1493,7 +1448,7 @@ td, th {
 }
 
 .dashboard-main .accordian .acc-tabs a:hover {
-  background: #a5c29b;
+  background: #B4B9E5;
   color: white;
 }
 
@@ -1505,7 +1460,7 @@ td, th {
 }
 
 .dashboard-main .accordian .acc-content .acc-single .acc-user-dropdown:hover {
-  background: #a5c29b;
+  background: #B4B9E5;
   color: white;
 }
 
@@ -1519,17 +1474,17 @@ td, th {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: #49596c;
+  background: #374352;
   border-bottom: 1px solid #8a9098;
   padding: 1rem 2rem;
 }
 
 .dashboard-main .accordian .acc-content .acc-single .acc-user-dropdown .acc-badge {
-  background: #a5c29b;
+  background: #B4B9E5;
   color: white;
   padding: 0.5rem 1rem;
   font-size: 1.4rem;
-  border: 1px solid #49596c;
+  border: 1px solid #374352;
   border-radius: 1rem;
   margin-left: 1rem;
 }
@@ -1541,7 +1496,7 @@ td, th {
 }
 
 .dashboard-main .accordian .acc-content .acc-single .acc-user-info {
-  border: 1px solid #49596c;
+  border: 1px solid #374352;
   border-top: 0;
   padding: 1rem;
 }
@@ -1617,15 +1572,16 @@ td, th {
 
 .dashboard-main .accordian .acc-content .acc-single .acc-user-info .options a {
   color: white;
-  background: #49596c;
+  background: #374352;
   font-size: 1.8rem;
-  font-family: "Raleway Regular", sans-serif;
+  font-family: "Raleway Bold", sans-serif;
   border-radius: 1.6rem;
   text-align: center;
   display: block;
   padding: 1.2rem;
   margin-bottom: 1rem;
-  background: #a5c29b;
+  background: #B4B9E5;
+  color: #374352;
 }
 
 @media screen and (min-width: 700px) {
@@ -1642,8 +1598,8 @@ td, th {
 }
 
 .dashboard-main .accordian .acc-content .acc-single .acc-user-info .options a:hover {
-  border: 1px solid #49596c;
-  background: #a5c29b;
+  border: 1px solid #374352;
+  background: #B4B9E5;
   color: secondary;
 }
 
@@ -1652,26 +1608,25 @@ td, th {
 }
 
 .dashboard-main .accordian .view-all {
-  color: #a5c29b;
+  color: #B4B9E5;
   font-size: 1.8rem;
   padding-bottom: 1rem;
   font-family: "Raleway Bold", sans-serif;
-  border-bottom: 1px solid #a5c29b;
+  border-bottom: 1px solid #B4B9E5;
 }
 
 .dashboard-main .accordian .view-all:hover {
-  color: #49596c;
-  border-bottom: 1px solid #49596c;
+  color: #374352;
+  border-bottom: 1px solid #374352;
 }
 
 .dashboard-main .overview {
-  border-top: 2px solid #49596c;
-  background: -webkit-gradient(linear, left bottom, left top, from(white), color-stop(50%, #a5c29b));
-  background: linear-gradient(0deg, white 0%, #a5c29b 50%);
+  border-top: 2px solid #374352;
+  background: -webkit-gradient(linear, left bottom, left top, from(white), color-stop(50%, #B4B9E5));
+  background: linear-gradient(0deg, white 0%, #B4B9E5 50%);
 }
 
 .dashboard-main .overview h3 {
-  color: white;
   margin-bottom: 0;
   padding: 4.5rem 1.6rem 0 1.6rem;
 }
@@ -1728,9 +1683,9 @@ td, th {
 
 .dashboard-main .overview .overview-box a {
   color: white;
-  background: #49596c;
+  background: #374352;
   font-size: 1.8rem;
-  font-family: "Raleway Regular", sans-serif;
+  font-family: "Raleway Bold", sans-serif;
   border-radius: 1.6rem;
   text-align: center;
   display: block;
@@ -1748,8 +1703,8 @@ td, th {
 }
 
 .dashboard-main .overview .overview-box a:hover {
-  border: 1px solid #49596c;
-  background: #a5c29b;
+  border: 1px solid #374352;
+  background: #B4B9E5;
   color: secondary;
 }
 
@@ -1786,7 +1741,7 @@ td, th {
   padding: 1.6rem;
   position: absolute;
   top: 3.6rem;
-  background: #49596c;
+  background: #374352;
   border-radius: 0.5rem;
   z-index: 9999;
   width: 100%;
@@ -1807,7 +1762,7 @@ td, th {
 
 .dashboard-main .dashboard-form .dashboard-form-group .dashboard-label {
   font-size: 2rem;
-  color: #49596c;
+  color: #2f2f37;
   font-family: "Raleway Regluar", sans-serif;
 }
 
@@ -1823,16 +1778,16 @@ td, th {
   width: 100%;
   padding: 2rem 1rem;
   color: #49576a;
-  border: 1px solid #a5c29b;
+  border: 1px solid #B4B9E5;
   border-radius: 0.5rem;
   font-family: "Raleway Regluar", sans-serif;
 }
 
 .dashboard-main .dashboard-form .form-button {
   color: white;
-  background: #49596c;
+  background: #374352;
   font-size: 1.8rem;
-  font-family: "Raleway Regular", sans-serif;
+  font-family: "Raleway Bold", sans-serif;
   border-radius: 1.6rem;
   text-align: center;
   display: block;
@@ -1849,8 +1804,8 @@ td, th {
 }
 
 .dashboard-main .dashboard-form .form-button:hover {
-  border: 1px solid #49596c;
-  background: #a5c29b;
+  border: 1px solid #374352;
+  background: #B4B9E5;
   color: secondary;
 }
 
@@ -1910,9 +1865,9 @@ td, th {
 
 .dashboard-main .filter .dashboard-form .filter-button {
   color: white;
-  background: #49596c;
+  background: #374352;
   font-size: 1.8rem;
-  font-family: "Raleway Regular", sans-serif;
+  font-family: "Raleway Bold", sans-serif;
   border-radius: 1.6rem;
   text-align: center;
   display: block;
@@ -1933,8 +1888,33 @@ td, th {
 }
 
 .dashboard-main .filter .dashboard-form .flter-button:hover {
-  border: 1px solid #49596c;
-  background: #a5c29b;
+  border: 1px solid #374352;
+  background: #B4B9E5;
   color: secondary;
+}
+
+.dashboard-body .alert {
+  padding: 4.5rem 1.6rem 0 1.6rem;
+}
+
+@media screen and (min-width: 700px) {
+  .dashboard-body .alert {
+    padding: 6rem 3rem 0 3rem;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .dashboard-body .alert {
+    padding: 4rem 6rem 0 30rem;
+  }
+}
+
+.dashboard-body .alert p {
+  padding: 2rem;
+  font-size: 2rem;
+  background: #51508B;
+  border: 2px solid #374352;
+  border-radius: 2rem;
+  color: white;
 }
 /*# sourceMappingURL=styles.css.map */

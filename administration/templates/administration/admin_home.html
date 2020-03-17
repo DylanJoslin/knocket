@@ -2,60 +2,53 @@
 
 {% block content %}
 <div class="welcome home-welcome">
-    <h2>Welcome {{ user.first_name }}, to your dashboard!</h2>
-    <p>Manage the users and the content on your site.</p>
-    <div class="border">
-        <div class="triangle-up"></div>
-        <div class="triangle-down"></div>
-        <div class="triangle-up"></div>
-        <div class="triangle-down"></div>
-        <div class="triangle-up"></div>
-        <div class="triangle-down"></div>
-        <div class="triangle-up"></div>
-        <div class="triangle-down"></div>
-        <div class="triangle-up"></div>
-        <div class="triangle-down"></div>
-        <div class="triangle-up"></div>
-        <div class="triangle-down"></div>
-        <div class="triangle-up"></div>
-        <div class="triangle-down"></div>
-        <div class="triangle-up"></div>
-        <div class="triangle-down"></div>
-        <div class="triangle-up"></div>
-        <div class="triangle-down"></div>
-        <div class="triangle-up"></div>
-        <div class="triangle-down"></div>
-         <div class="triangle-up"></div>
-        <div class="triangle-down"></div>
-        <div class="triangle-up"></div>
-        <div class="triangle-down"></div>
-        <div class="triangle-up"></div>
-        <div class="triangle-down"></div>
-         <div class="triangle-up"></div>
-        <div class="triangle-down"></div>
-        <div class="triangle-up"></div>
-        <div class="triangle-down"></div>
-         <div class="triangle-up"></div>
-        <div class="triangle-down"></div>
-    </div>
-    <h3><span class="heading-small">Start by: </span><br><span class="heading-small-two">Viewing the newest activity on your site.</span></h3>
-    <div class="welcome-links">
-        <a href="#users-overview">Users <span class="badge">{{ users|length }}</span></a>
-        <a href="#uploads-overview">Uploads <span class="badge">6</span></a>
-    </div>
+	<h2>Welcome {{ user.first_name }}, to your dashboard!</h2>
+	<p>Manage the users and the content on your site.</p>
+	<div class="border">
+		<div class="triangle-up"></div>
+		<div class="triangle-down"></div>
+		<div class="triangle-up"></div>
+		<div class="triangle-down"></div>
+		<div class="triangle-up"></div>
+		<div class="triangle-down"></div>
+		<div class="triangle-up"></div>
+		<div class="triangle-down"></div>
+		<div class="triangle-up"></div>
+		<div class="triangle-down"></div>
+		<div class="triangle-up"></div>
+		<div class="triangle-down"></div>
+		<div class="triangle-up"></div>
+		<div class="triangle-down"></div>
+		<div class="triangle-up"></div>
+		<div class="triangle-down"></div>
+		<div class="triangle-up"></div>
+		<div class="triangle-down"></div>
+		<div class="triangle-up"></div>
+		<div class="triangle-down"></div>
+		<div class="triangle-up"></div>
+		<div class="triangle-down"></div>
+		<div class="triangle-up"></div>
+		<div class="triangle-down"></div>
+		<div class="triangle-up"></div>
+		<div class="triangle-down"></div>
+		<div class="triangle-up"></div>
+		<div class="triangle-down"></div>
+		<div class="triangle-up"></div>
+		<div class="triangle-down"></div>
+		<div class="triangle-up"></div>
+		<div class="triangle-down"></div>
+	</div>
+	<h3><span class="heading-small">Start by: </span><br><span class="heading-small-two">Viewing the newest activity on your site.</span></h3>
+	<div class="welcome-links">
+		<a href="#users-overview">Users <span class="badge">{{ users|length }}</span></a>
+		<a href="#uploads-overview">Uploads <span class="badge">6</span></a>
+	</div>
 </div>
 
 
 
 <!-- ====================CONTAINER==================== -->
         <div class="container">
-        {% if messages %}
-                {% for message in messages %}
-                <div class="alert alert-{{ message.tags }}">
-                {{ message }}
-                </div>
-                {% endfor%}
-        {% endif %}
 
         <!-- ====================OVERVIEW==================== -->
                 <div class="overview users-overview" id="users-overview">
@@ -68,17 +61,24 @@
                                 <div>
                                         <a href="{% url 'admin_users' %}">Manage All Users</a>
                                 </div>
-                                
                         </div>
                 </div>
         <!-- ====================OVERVIEW CLOSE==================== -->
+
+        {% if messages %}
+                {% for message in messages %}
+                <div class="alert alert-{{ message.tags }}">
+                        {{ message }}
+                </div>
+                {% endfor%}
+        {% endif %}
 
         <!-- ====================ACCORDION==================== -->
                 <div class="accordian"><!-- Accordian -->
                         <h4>Latest User Activity</h4>
                         <div class="acc-tabs"><!-- Tabs-->
-                                <a href="{% url 'administration' %}pending" class="acc-new-users">New</a>
-                                <a href="{% url 'administration' %}student" class="acc-registered-users">Registered</a>
+                                <a href="#" class="acc-new-users">New</a>
+                                <a href="#" class="acc-registered-users">Registered</a>
                                 {% comment %} <a href="{% url 'administration' %}teacher">Teachers</a>
                                 <a href="{% url 'administration' %}elder">Elders</a> {% endcomment %}
                         </div><!-- Tabs-->
@@ -116,11 +116,42 @@
                                 {% endif %}
                         {% endfor %}
                                 
-                        
-
-                        
-
                         </div><!-- New Users Content-->
+
+                        <!-- ====================Registered USERS==================== -->
+                        <div id="registered-users" class="acc-content hidden"> <!-- New Users Content-->
+                        {% for user in users %}
+                                {% if user.userprofile.access == 'student' %}
+
+                        <!-- ====================SINGLE USER==================== -->
+                                        <div class="acc-single"> <!-- Single user -->
+                                                <div class="acc-user-dropdown"><!-- User Dropdown -->
+                                                        <p class="acc-username">
+                                                                {{user.username}} 
+                                                                {% if user.userprofile.access == 'student'%} 
+                                                                        <span class="acc-badge">Approved</span> 
+                                                                {% endif %}
+                                                        </p>
+                                                        <p class="icon-plus">+</p>
+                                                        <p class="icon-minus hidden">-</p>
+                                                </div><!-- User Dropdown -->
+                                                <div class="acc-user-info"><!-- User information -->
+                                                        <div class="information">
+                                                                <p>Created on: (date)</p>
+                                                                <p>Full Name: {{user.first_name}} {{user.last_name}}</p>
+                                                                <p>Email: {{user.email}}</p>
+                                                        </div>
+                                                        <div class="options">
+                                                                <a href="{% url 'delete_user' %}{{ user.username }}">Delete User</a>
+                                                                <a href="{% url 'approve_user' %}{{ user.username }}">Approve User</a>
+                                                        </div>
+                                                </div><!-- User information -->
+                                        </div><!-- Single user -->
+                        <!-- ====================SINGLE USER CLOSE==================== -->      
+                                {% endif %}
+                        {% endfor %}
+
+                        </div><!-- Registered Users Content-->
 
                         <a href="#" class="view-all">View all users</a>
 
@@ -147,8 +178,8 @@
         <div class="accordian"><!-- Accordian -->
                 <h4>Latest Upload Activity</h4>
                 <div class="acc-tabs"><!-- Tabs-->
-                <a href="#" class="acc-new-uploads">New</a>
-                <a href="#" class="acc-published-uploads">Registered</a>
+                        <a href="#" class="acc-new-uploads">New</a>
+                        <a href="#" class="acc-published-uploads">Registered</a>
                 </div><!-- Tabs-->
 
         <!-- ====================NEW UPLOADS==================== -->
@@ -214,6 +245,5 @@
         </div><!-- Container -->
 <!-- ====================CONTAINER CLOSE==================== -->
 
-{% comment %} >>>>>>> origin/Admin-Dashboard {% endcomment %}
 {% endblock content %}
 
