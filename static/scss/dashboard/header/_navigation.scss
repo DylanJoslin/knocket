@@ -22,9 +22,9 @@
             width: 22rem;
             background: $dark;
         }//break
-
-        .nav-link{
-
+        
+        .nav-link{ 
+        
             a{
                 @include nav-links;
                 @include flex(space-between);

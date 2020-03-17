@@ -44,20 +44,31 @@
         <a href="#uploads-overview">Uploads <span class="badge">6</span></a>
     </div>
 </div>
+
+
+
 <!-- ====================CONTAINER==================== -->
         <div class="container">
+        {% if messages %}
+                {% for message in messages %}
+                <div class="alert alert-{{ message.tags }}">
+                {{ message }}
+                </div>
+                {% endfor%}
+        {% endif %}
 
         <!-- ====================OVERVIEW==================== -->
                 <div class="overview users-overview" id="users-overview">
                         <h3>Users Overview</h3>
                         <div class="overview-box">
                                 <div>
-                                        <p>New Users: <span class="number">4</span></p>
-                                        <p>Registered Users: <span class="number">23</span></p>
+                                        <p>New Users: <span class="number">{{ new_users }}</span></p>
+                                        <p>Registered Users: <span class="number">{{ registered_users }}</span></p>
                                 </div>
                                 <div>
                                         <a href="{% url 'admin_users' %}">Manage All Users</a>
                                 </div>
+                                
                         </div>
                 </div>
         <!-- ====================OVERVIEW CLOSE==================== -->
@@ -96,8 +107,8 @@
                                                                 <p>Email: {{user.email}}</p>
                                                         </div>
                                                         <div class="options">
-                                                                <a href="{% url 'edit_users' %}">Edit User</a>
-                                                                <a href="#">Approve User</a>
+                                                                <a href="{% url 'delete_user' %}{{ user.username }}">Delete User</a>
+                                                                <a href="{% url 'approve_user' %}{{ user.username }}">Approve User</a>
                                                         </div>
                                                 </div><!-- User information -->
                                         </div><!-- Single user -->

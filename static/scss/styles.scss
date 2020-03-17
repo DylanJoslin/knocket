@@ -1,10 +1,23 @@
-
+/* ------------------------------------------------------
+                LANDING STYLES
+------------------------------------------------------ */
+@import 'landing-page/reset';
+@import 'landing-page/config';
+@import 'landing-page/typography';
+@import 'landing-page/styling';
+@import 'landing-page/header';
+@import 'landing-page/menu';
+@import 'landing-page/footer';
 /* ------------------------------------------------------
                 MAP STYLES
 ------------------------------------------------------ */
 @import 'map/map-styles';
 
 
+/* ------------------------------------------------------
+                RESOURCES STYLES
+------------------------------------------------------ */
+@import 'resources/resource-card';
 /* ------------------------------------------------------
                 DASHBOARD STYLES
 ------------------------------------------------------ */
@@ -21,7 +34,4 @@
 @import 'dashboard/main/overview';
 @import 'dashboard/main/forms';
 @import 'dashboard/main/filter-forms';
-
-
-
 

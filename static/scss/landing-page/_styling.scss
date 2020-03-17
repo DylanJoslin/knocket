@@ -1,0 +1,60 @@
+.inner-container{
+    margin: 0 4%;
+
+    @include media-lg{
+        margin: 0 14%;
+    }
+  }
+
+
+img, .treaty-img{
+    max-width: 100%;
+    height: auto;
+}
+ 
+.treaty{
+
+    .content{
+        @include media-md{
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    h3{
+        text-align: center;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+    }
+
+    .treaty-img{
+        width: 60%;
+        
+        margin: 0 auto;
+        margin-bottom: 40px;
+
+        @include media-md{
+            width: 200px;
+            height: 200px;
+            margin-right: 40px;
+        }
+    }
+
+}
+
+.decoration{
+    width: 60%;
+    margin: 40px auto 80px;
+
+    @include media-md{
+        margin: 60px auto 120px;
+        width: 40%;
+    }
+}
+
+
+
+
+
+
+

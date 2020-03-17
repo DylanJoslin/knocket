@@ -1,43 +1,466 @@
 /* ------------------------------------------------------
-                MAP STYLES
+                LANDING STYLES
 ------------------------------------------------------ */
-body {
-  background-color: white;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 400;
-  line-height: 1.5;
-  color: #999999;
-  background-color: #0c2034;
-  /* background: linear-gradient(#0ff 0.0555555em, transparent 0.0555555em); */
-  /*24px for ideal gap*/
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
+/* Remove default padding */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Natural flow and rhythm in articles by default */
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    -webkit-transition-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Media Queries for different viewport sizes*/
+/* CARDO FONT */
+@font-face {
+  font-family: "Cardo Bold";
+  src: url("/static/fonts/Cardo-Bold.ttf");
+}
+
+@font-face {
+  font-family: "Cardo Italic";
+  src: url("/static/fonts/Cardo-Italic.ttf");
+}
+
+@font-face {
+  font-family: "Cardo Regular";
+  src: url("/static/fonts/Cardo-Regular.ttf");
+}
+
+/* RALEWAY FONT */
+@font-face {
+  font-family: "Raleway Bold";
+  src: url("/static/fonts/Raleway-Bold.ttf");
+}
+
+@font-face {
+  font-family: "Raleway Bold Italic";
+  src: url("/static/fonts/Raleway-BoldItalic.ttf");
+}
+
+@font-face {
+  font-family: "Raleway Regular";
+  src: url("/static/fonts/Raleway-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Raleway Thin";
+  src: url("/static/fonts/Raleway-Thin.ttf");
+}
+
+@font-face {
+  font-family: "Raleway Thin Italic";
+  src: url("/static/fonts/Raleway-ThinItalic.ttf");
+}
+
+/* Custom Styles for Typography */
+h1, h2, h3, h4, h5 {
+  margin: 2.75rem 0 1.05rem;
+  font-weight: 500;
+  line-height: 1.15;
+}
+
+/* FONT-SIZES FOR IPAD/DESKTOP*/
 h1 {
+  font: 2.488em/1 'Cardo Regular', sans-serif;
   margin-top: 0;
-  font-size: 1.802em;
-  padding-top: 5rem;
+  color: white;
+  text-transform: uppercase;
+}
+
+h1 span {
+  text-transform: none;
+  font-style: italic;
+  margin-left: 50px;
+}
+
+h1 a {
+  text-decoration: none;
+  color: white;
+}
+
+@media screen and (min-width: 768px) {
+  h1 {
+    font-size: 4.209em;
+  }
 }
 
 h2 {
-  font-size: 1.602em;
+  font: 2.074em/1.5 'Raleway Regular', sans-serif;
+}
+
+@media screen and (min-width: 768px) {
+  h2 {
+    font-size: 3.157em;
+  }
 }
 
 h3 {
-  font-size: 1.424em;
+  font: 1.728em/1.5 'Cardo Bold', sans-serif;
 }
 
-h4 {
-  font-size: 1.266em;
+@media screen and (min-width: 768px) {
+  h3 {
+    font-size: 2.369em;
+  }
 }
 
-h5 {
-  font-size: 1.125em;
+p {
+  font: 18px/1.5 'Raleway Regular', sans-serif;
+  text-align: justify;
 }
 
-.text_small {
-  font-size: 0.889em;
+.inner-container {
+  margin: 0 4%;
 }
 
+@media screen and (min-width: 1024px) {
+  .inner-container {
+    margin: 0 14%;
+  }
+}
+
+img, .treaty-img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .treaty .content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+.treaty h3 {
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.treaty .treaty-img {
+  width: 60%;
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+
+@media screen and (min-width: 768px) {
+  .treaty .treaty-img {
+    width: 200px;
+    height: 200px;
+    margin-right: 40px;
+  }
+}
+
+.decoration {
+  width: 60%;
+  margin: 40px auto 80px;
+}
+
+@media screen and (min-width: 768px) {
+  .decoration {
+    margin: 60px auto 120px;
+    width: 40%;
+  }
+}
+
+header .top-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 30px 10px;
+  background-color: #278AB0;
+}
+
+@media screen and (min-width: 768px) {
+  header .top-header {
+    margin-bottom: 70px;
+  }
+}
+
+header .login {
+  margin-top: 8px;
+}
+
+header .login a {
+  font-family: 'Cardo Regular', sans-serif;
+  text-transform: uppercase;
+  font-size: 12px;
+  text-decoration: none;
+  color: white;
+  background-color: #9DC183;
+  padding: 8px;
+  margin-top: 10px;
+  border-radius: 8px;
+}
+
+header .login a:hover {
+  background-color: #DB7434;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+header .menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.menu-toggle {
+  margin-left: 20px;
+  font-size: 30px;
+  text-decoration: none;
+  color: white;
+}
+
+.navigation {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  background-color: #278AB0;
+  width: 100%;
+  height: 100vh;
+}
+
+.navigation .close-nav {
+  text-decoration: none;
+  color: white;
+  font-size: 34px;
+  position: absolute;
+  top: 24px;
+  left: 93%;
+  -webkit-transition: .5 ease-in-out;
+  transition: .5 ease-in-out;
+}
+
+@media screen and (min-width: 768px) {
+  .navigation .close-nav {
+    left: 95%;
+  }
+}
+
+.navigation ul {
+  margin-top: 80px;
+}
+
+.navigation ul li {
+  list-style-type: none;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.navigation ul li a {
+  font-family: 'Raleway Regular', sans-serif;
+  text-transform: uppercase;
+  font-size: 24px;
+  text-decoration: none;
+  color: white;
+}
+
+.navigation ul li a.underline-link {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+}
+
+.navigation ul li a.underline-link::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  padding-top: 2px;
+  background: #ffeb4e;
+  -webkit-transition: width .3s;
+  transition: width .3s;
+}
+
+.navigation ul li a.underline-link:hover::after {
+  width: 50%;
+}
+
+.navigation ul li a .dropdown {
+  color: #ffeb4e;
+  font-size: 18px;
+  margin-left: 10px;
+}
+
+.navigation ul li .sub-menu {
+  display: none;
+}
+
+.show-nav {
+  top: 0;
+  -webkit-transition: .8s ease;
+  transition: .8s ease;
+}
+
+.show-sub-menu {
+  display: block;
+}
+
+footer {
+  background-color: #278AB0;
+  padding: 30px 10px;
+}
+
+footer h1 {
+  text-align: center;
+  opacity: 20%;
+  margin-bottom: 20px;
+}
+
+footer .line {
+  width: 300px;
+  margin: 0 auto;
+  height: 2px;
+  background-color: white;
+  opacity: 10%;
+  margin-bottom: 40px;
+}
+
+footer .row {
+  text-align: center;
+  color: white;
+}
+
+@media screen and (min-width: 768px) {
+  footer .row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+footer .row .col {
+  margin-bottom: 40px;
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  footer .row .col {
+    width: 33.333%;
+  }
+}
+
+footer .row .col li {
+  margin-bottom: 4px;
+}
+
+footer .row .col a {
+  text-decoration: none;
+  color: white;
+}
+
+footer .row .col a:hover {
+  color: #9DC183;
+}
+
+footer .row .col li:nth-child(1) {
+  font-family: 'Cardo Italic', sans-serif;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+footer .bottom {
+  color: #9DC183;
+  opacity: 20%;
+}
+
+footer .bottom p {
+  text-align: center;
+  font-size: 16px;
+}
+
+/* ------------------------------------------------------
+                MAP STYLES
+------------------------------------------------------ */
 /*============================================
                    Custom Styles 
    ===========================================*/
@@ -45,6 +468,10 @@ h5 {
 main {
   height: 100%;
   padding: 5rem 0;
+}
+
+.interactive-map {
+  background-color: #0c2034;
 }
 
 a {
@@ -368,6 +795,32 @@ a:hover {
 
 .width-full {
   width: 100%;
+}
+
+/* ------------------------------------------------------
+                RESOURCES STYLES
+------------------------------------------------------ */
+.resources-link-holder {
+  max-width: 1250px;
+  margin: 0 auto;
+}
+
+.resources-link-holder section > h2 {
+  padding-top: 2rem;
+}
+
+.resources-link-holder section > div {
+  border: 1px solid #999;
+  border-radius: 10px;
+  margin: 2rem 0;
+  padding: 2rem;
+}
+
+.resources-link {
+  color: #fff;
+  background-color: #09c0c0;
+  border-radius: 10px;
+  padding: 0.7rem;
 }
 
 /* ------------------------------------------------------
