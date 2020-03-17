@@ -40,7 +40,7 @@
     </div>
     <h3><span class="heading-small">Start by: </span><br><span class="heading-small-two">Viewing the newest activity on your site.</span></h3>
     <div class="welcome-links">
-        <a href="#users-overview">Users <span class="badge">20</span></a>
+        <a href="#users-overview">Users <span class="badge">{{ users|length }}</span></a>
         <a href="#uploads-overview">Uploads <span class="badge">6</span></a>
     </div>
 </div>
@@ -49,13 +49,6 @@
 
 <!-- ====================CONTAINER==================== -->
         <div class="container">
-        {% if messages %}
-                {% for message in messages %}
-                <div class="alert alert-{{ message.tags }}">
-                {{ message }}
-                </div>
-                {% endfor%}
-        {% endif %}
 
         <!-- ====================OVERVIEW==================== -->
                 <div class="overview users-overview" id="users-overview">
@@ -68,10 +61,17 @@
                                 <div>
                                         <a href="{% url 'admin_users' %}">Manage All Users</a>
                                 </div>
-                                
                         </div>
                 </div>
         <!-- ====================OVERVIEW CLOSE==================== -->
+
+        {% if messages %}
+                {% for message in messages %}
+                <div class="alert alert-{{ message.tags }}">
+                        {{ message }}
+                </div>
+                {% endfor%}
+        {% endif %}
 
         <!-- ====================ACCORDION==================== -->
                 <div class="accordian"><!-- Accordian -->

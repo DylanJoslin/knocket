@@ -857,7 +857,6 @@ html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, tex
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-size: 100%;
   font-weight: normal;
 }
 
@@ -1960,5 +1959,30 @@ td, th {
   border: 1px solid #49596c;
   background: #a5c29b;
   color: secondary;
+}
+
+.dashboard-body .alert {
+  padding: 4.5rem 1.6rem 0 1.6rem;
+}
+
+@media screen and (min-width: 700px) {
+  .dashboard-body .alert {
+    padding: 6rem 3rem 0 3rem;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .dashboard-body .alert {
+    padding: 4rem 6rem 0 30rem;
+  }
+}
+
+.dashboard-body .alert p {
+  padding: 2rem;
+  font-size: 2rem;
+  background: #ed6b62;
+  border: 2px solid #49596c;
+  border-radius: 2rem;
+  color: white;
 }
 /*# sourceMappingURL=styles.css.map */
