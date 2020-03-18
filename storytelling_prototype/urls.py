@@ -31,6 +31,7 @@ urlpatterns = [
     path('administration/users/', administration_views.admin_users, name='admin_users'),
     path('administration/uploads/', administration_views.admin_uploads, name='admin_uploads'),
     path('administration/edit-user/', administration_views.edit_users, name='edit_users'),
+    path('administration/edit-user/<slug:username>', administration_views.edit_users, name='edit_users'),
     path('administration/create-user/', administration_views.create_user, name='create_user'),
     # path('administration/<slug:access>', administration_views.admin_home, name='administration'),
 

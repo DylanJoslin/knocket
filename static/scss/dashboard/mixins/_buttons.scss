@@ -1,0 +1,25 @@
+
+
+//BUTTON
+
+@mixin button(){
+  color: white;
+  background: $button-color;
+  font-size: $button;
+  font-family: $button-font;
+  border-radius: 1.6rem;
+  text-align: center;
+  display: block;
+  padding: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+//BUTTON HOVER
+
+@mixin button-hover(){
+  border: 1px solid $dark;
+  background: $hover-background;
+  color: $hover-color;
+}
+
+

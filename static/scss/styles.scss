@@ -25,13 +25,21 @@
 ------------------------------------------------------ */
 @import 'dashboard/base/minireset';
 @import 'dashboard/base/variables';
-@import 'dashboard/base/mixins';
 @import 'dashboard/base/base';
+
+@import 'dashboard/mixins/base';
+@import 'dashboard/mixins/buttons';
+@import 'dashboard/mixins/links';
+@import 'dashboard/mixins/forms';
+@import 'dashboard/mixins/accordian';
+
 @import 'dashboard/base/typography';
+
 @import 'dashboard/header/header';
 @import 'dashboard/header/navigation';
 @import 'dashboard/header/mobile-menu';
-@import 'dashboard/main/main-base';
+
+@import 'dashboard/main/welcome';
 @import 'dashboard/main/accordian';
 @import 'dashboard/main/overview';
 @import 'dashboard/main/forms';
