@@ -1,0 +1,15 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+{% block content %}
+    <h1>{{post.title}}</h1>
+    <p>{{post.author}}</p>
+    {% if post.image %}
+    <!-- <img src="{{ post.image.url }}" alt=""> -->
+    <img src="{% static 'media/' %}{{ post.image }}" alt="">
+    {% endif %}
+    {% if post.video %}
+     <iframe src="https://www.youtube.com/embed/{{ post.video }}" frameborder="0"></iframe>
+    {% endif %}
+    {{post.content | safe}}
+{% endblock content %}
