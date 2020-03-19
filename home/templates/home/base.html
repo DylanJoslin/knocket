@@ -1,0 +1,117 @@
+{% comment %} load static is required to load css, images, and js {% endcomment %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indigenous Storytelling</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <header>
+            <div class="top-header">
+            <h1 class="logo"><a href="{% url 'home' %}">Indigenous <br><span>Storytelling</span></a></h1>
+            <div class="menu">
+                <div class="login">
+                    <a href="{% url 'login' %}">Sign In</a>
+                </div>
+                <a class="menu-toggle" href="#">&#9776;</a>
+            </div>
+        </div>
+        <nav class="navigation">
+            <a href="#" class="close-nav">&#215;</a>
+            <ul>
+                <li><a href="#" class="underline-link">Map</a></li>
+                <li><a href="{% url 'post_list' %}" class="underline-link">Stories <span class="dropdown">&#9660;</span></a>
+                    <ul class="sub-menu">
+                        <li><a href="#" class="underline-link">Physical</a></li>
+                        <li><a href="#" class="underline-link">Emotional</a></li>
+                        <li><a href="#" class="underline-link">Mental</a></li>
+                        <li><a href="#" class="underline-link">Spiritual</a></li>
+                    </ul>
+                </li>
+                <li><a href="{% url 'resources' %}" class="underline-link">Resources</a></li>
+                <li><a href="{% url 'about' %}" class="underline-link">About Us</a></li>
+            </ul>
+        </nav>
+        <!-- <ul class="nav">
+            {% if user.is_authenticated %}
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-info" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">{{user}}</a>
+                <div class="dropdown-menu bg-dark">
+                    <a class="dropdown-item text-white" href="{% url 'profile' %}">Profile</a>
+                    <a class="dropdown-item text-white" href="{% url 'edit_profile' %}">Manage Profile</a>
+                    {% if user.userprofile.access == 'admin' or user.userprofile.access == 'teacher' %}
+                    <a class="dropdown-item text-white" href="/admin">Default Admin</a>
+                    <a class="dropdown-item text-white" href="{% url 'administration' %}">Custom Admin</a>
+                    {% endif %}
+                <div class="dropdown-divider" style="border-color: #6C757D"></div>
+                <a href="{% url 'logout' %}" class="dropdown-item text-info">Log Out</a>               
+                </div>
+            </li>
+            {% else %}
+            <li class="nav-item"><a href="{% url 'login' %}" class="nav-link text-info">Log In</a></li>
+            <li class="nav-item"><a href="{% url 'register' %}" class="nav-link text-info">Register</a></li>
+            {% endif %}
+        </ul> -->
+    </header>
+    <main class="container">
+        {% comment %} If there are any errors, such as an error when loggin in or registering, this code block will output it as html {% endcomment %}
+        {% if messages %}
+          {% for message in messages %}
+            <div class="alert alert-{{ message.tags }}">
+              {{ message }}
+            </div>
+          {% endfor%}
+        {% endif %}
+        {% comment %} Other html templates will be placed in this block statement {% endcomment %}
+
+
+        {% block content%}{% endblock %}
+    </main>
+
+    <footer>
+        <h1>Indigenous <br><span>Storytelling</span></h1>
+        <div class="line"></div>
+        <div class="row">
+            <ul class="col">
+                <li>Education</li>
+                <li><a href="https://www.nait.ca/nait/life-at-nait/nisohkamatotan-centre">Nîsôhkamâtotân Centre – NAIT</a></li>
+                <li><a href="http://amiskwaciy.epsb.ca">Amiskwaciy Academy</a></li>
+                <li><a href="">Item 3</a></li>
+                <li><a href="">Item 4</a></li>
+            </ul>
+
+            <ul class="col">
+                <li>Resources</li>
+                <li><a href="https://www.nait.ca/nait/life-at-nait/nisohkamatotan-centre">Nîsôhkamâtotân Centre</a></li>
+                <li><a href="http://amiskwaciy.epsb.ca">Amiskwaciy Academy</a></li>
+                <li><a href="https://www.bac-lac.gc.ca/eng/discover/aboriginal-heritage/pages/introduction.aspx">Government of Canada – Indigenous Heritage</a></li>
+            </ul>
+               
+            <ul class="col">
+                <li><a href="">Connect</a></li>
+                <li><a href="">Instagram</a></li>
+                <li><a href="">Twitter</a></li>
+                <li><a href="">Facebook</a></li>
+                <li><a href="">LinkedIn</a></li>
+            </ul>
+                
+        </div>
+        
+        <div class="bottom">
+            <p>&#9400; 2020 Indigenous Storytelling</p>
+        </div>
+
+    </footer>
+
+
+
+    <script src="{% static 'js/main.js' %}"></script>
+    <script src="{% static 'js/hover-handler.js' %}"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>

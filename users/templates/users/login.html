@@ -1,0 +1,33 @@
+{% extends "home/base.html" %}
+{% block content %}
+    <form method="POST" class="text-white bg-dark p-3">
+        <h2 class="mb-4">Log In</h2>
+        {% comment %} csrf_token is some built in security {% endcomment %}
+        {% csrf_token %} 
+        <div style="width: 40%">
+        {% comment %} Loops over each field specified in forms.py and generates a bootstrapped form-group {% endcomment %}
+            {% for field in form %}
+                <div class="form-group mb-4">
+                    <label for="{{ field.html_name }}">{{ field.label }}</label>
+                    <input 
+                        type="{{ field.field.widget.input_type }}" 
+                        name="{{ field.html_name }}" 
+                        id="{{ field.html_name }}" 
+                        class="form-control" 
+                        max_length="{{ field.field.max_length }}"
+                        min_length="{{ field.field.min_length }}"
+                    >
+                {% comment %} If there are errors, loop through them and create a div containing the error message {% endcomment %}
+                {% if field.errors %}
+                    {% for error in field.errors %}
+                        <div class="alert alert-danger mt-2">
+                            {{ error|escape }}
+                        </div>
+                    {% endfor %}
+                {% endif %}
+                </div>
+            {% endfor %}
+            <button type="submit" class="btn btn-primary mt-2">Log in!</button>
+        </div>
+    </form>
+{% endblock content %}

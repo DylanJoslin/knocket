@@ -1,0 +1,136 @@
+
+@mixin padding($size) {
+
+    @if $size == small {
+      padding: 2rem 1rem 0 1rem;
+    }
+
+    @if $size == medium {
+      padding: 3rem 3rem 0 3rem;
+    }
+
+    @else if $size == large {
+      padding: 4rem 6rem 0 30rem;
+    }
+    
+  }//breakpoint mixin
+
+  @mixin breakpoint($size) {
+
+    @if $size == maxTablet {
+      @media screen and (max-width: 999px) {@content;}
+    }
+
+    @if $size == tablet {
+      @media screen and (min-width: 700px) {@content;}
+    }
+
+    @else if $size == laptop {
+      @media screen and (min-width: 1000px) {@content;}
+    }
+
+    @else if $size == desktop {
+      @media screen and (min-width: 1200px) {@content;}
+    }
+    
+  }//breakpoint mixin
+
+
+  @mixin nav-links(){
+    color: $white;
+    border: 1px solid $white;
+    border-radius: 1rem;
+    margin: 2rem;
+    display: block;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    color: $white;
+
+    @include breakpoint(laptop){
+      margin: 0;
+      margin-right: 1rem;
+      margin-bottom: 3rem;
+      // border: 0;
+      // border-bottom: 1px solid $white;
+      // border-radius: 0;
+    }//breakpoint
+
+  }//nav-border
+
+@mixin para-width(){
+  max-width: 54rem;
+}//para
+
+@mixin flex($justify-content){
+    display: flex;
+    justify-content: $justify-content;
+    align-items: center;
+}//flex
+
+@mixin accordian-tabs(){
+  background: $acc-background;
+  color: $white;
+  padding: 1rem 3rem;
+  @include breakpoint(tablet){
+    padding: 1.2rem 3rem;
+  }
+  margin-bottom: 3rem;
+  font-size: $acc-tabs;
+  border-top-left-radius: 1.6rem;
+  border-top-right-radius: 1.6rem;
+}
+
+@mixin accordian-dropdown(){
+  background: $user-acc-background;
+  color: $white;
+  padding: 1rem 2rem;
+}
+
+@mixin accordian-badge(){
+  background: $white;
+  color: $dark;
+  padding: 0.5rem 1rem;
+  font-size: $acc-badge;
+  border: 1px solid $dark;
+  border-radius: 1rem;
+  margin-left: 1rem;
+}
+
+@mixin accordian-link(){
+  color: $acc-link-color;
+  border-bottom: 1px solid $acc-link-color;
+  font-size: $acc-tabs;
+  padding-bottom: 1rem;
+  font: $acc-link-font;
+}
+
+@mixin accordian-hover{
+  background: $acc-hover-background;
+}
+
+@mixin accordian-info-shown(){
+  border: 1px solid $acc-background;
+  padding: 1rem;
+}
+
+@mixin button(){
+  color: $white;
+  background: $dark;
+  font-size: $button;
+  border-radius: 3rem;
+  text-align: center;
+  display: block;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+@mixin button-hover{
+  border: 2px solid $dark;
+  background: $white;
+  color: $dark;
+}
+
+@mixin innerContainer($width){
+    max-width: $width;
+    margin: 0 auto;
+}//container

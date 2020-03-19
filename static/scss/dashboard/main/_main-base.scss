@@ -1,0 +1,38 @@
+    .dashboard-main{
+        padding: 0;
+
+        .welcome{
+
+            h2{
+                font-size: 3.6rem;
+                line-height: 4.8rem;
+
+                @include breakpoint(tablet){
+                    font-size: 5.6rem; 
+                     line-height: 7.2rem;
+                }
+            }
+
+            @include padding(small);
+
+            @include breakpoint(tablet){
+                @include padding(medium);
+            }
+
+            @include breakpoint(laptop){
+                @include padding(large);
+            }
+
+            p{
+                font-size: 2rem;
+                margin-bottom: 5rem;
+            }
+
+        }//.welcome
+
+        .container{
+           
+
+        }//.container
+
+    }//.dashboard-main

@@ -1,0 +1,98 @@
+/* CARDO FONT */
+
+@font-face{
+    font-family: "Cardo Bold";
+    src: url('/static/fonts/Cardo-Bold.ttf');
+}
+
+@font-face{
+    font-family: "Cardo Italic";
+    src: url('/static/fonts/Cardo-Italic.ttf');
+}
+
+@font-face{
+    font-family: "Cardo Regular";
+    src: url('/static/fonts/Cardo-Regular.ttf');
+}
+
+/* RALEWAY FONT */
+
+@font-face{
+    font-family: "Raleway Bold";
+    src: url('/static/fonts/Raleway-Bold.ttf');
+}
+
+@font-face{
+    font-family: "Raleway Bold Italic";
+    src: url('/static/fonts/Raleway-BoldItalic.ttf');
+}
+
+@font-face{
+    font-family: "Raleway Regular";
+    src: url('/static/fonts/Raleway-Regular.ttf');
+}
+
+@font-face{
+    font-family: "Raleway Thin";
+    src: url('/static/fonts/Raleway-Thin.ttf');
+}
+
+@font-face{
+    font-family: "Raleway Thin Italic";
+    src: url('/static/fonts/Raleway-ThinItalic.ttf');
+}
+
+
+/* Custom Styles for Typography */
+
+h1, h2, h3, h4, h5 {
+margin: 2.75rem 0 1.05rem;
+font-weight: 500;
+line-height: 1.15;
+}
+
+/* FONT-SIZES FOR IPAD/DESKTOP*/
+
+h1{
+    font: 2.488em/1 'Cardo Regular', sans-serif;
+    margin-top: 0;
+    color: white;
+    text-transform: uppercase;
+
+    span{
+        text-transform: none;
+        font-style: italic;
+        margin-left: 50px;
+        
+
+    }
+    a{
+        text-decoration: none;
+        color: white;
+    }
+
+    @include media-md{
+        font-size: 4.209em;
+    }
+}
+
+h2{
+    font: 2.074em/1.5 'Raleway Regular', sans-serif;
+
+    @include media-md{
+        font-size: 3.157em;
+    }
+}
+
+h3{
+    font: 1.728em/1.5 'Cardo Bold', sans-serif;
+
+    @include media-md{
+        font-size: 2.369em;
+    }
+}
+
+p{
+    font: 18px/1.5 'Raleway Regular', sans-serif;
+    text-align: justify;
+}

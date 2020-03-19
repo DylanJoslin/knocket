@@ -1,0 +1,52 @@
+.dashboard-body{
+  
+  h2, h3, h4, h5, h6, p{
+      font-family: $heading-font;
+      color: $dark;
+      margin-bottom: 2.4rem; 
+  }
+
+  p{
+    font-size: $paragraph;
+  }
+
+  h1{
+    font-size: 6.1rem; 
+    line-height: 7.2rem; 
+    margin-bottom: 4.8rem;
+  }
+
+  h2{
+    font-size: 5.6rem; 
+    line-height: 7.2rem; 
+    margin-bottom: 4.8rem;
+  }
+
+  h3{
+    font-size: 5.0rem; 
+    line-height: 7.2rem; 
+    margin-bottom: 2.8rem;
+  }
+
+  h4{
+    font-size: 4.2rem; 
+    line-height: 6.4rem; 
+    margin-bottom: 4.8rem;
+  }
+
+  h5{
+    font-size: 3.8rem; 
+    line-height: 4.8rem; 
+  }
+
+  a{
+    text-decoration: none;
+  }
+
+  li{
+    list-style: none;
+  }
+
+}
+  
+  

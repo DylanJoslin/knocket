@@ -1,0 +1,41 @@
+.dashboard-header{
+    padding: 1rem 1.6rem;
+    background: $dark;
+
+    @include breakpoint(maxTablet){
+        position: relative;
+        width: 100%;
+        @include flex(space-between);
+        align-items: center;
+        transition: all 0.7s ease-in-out;
+    }//breakpoint
+
+    @include breakpoint(laptop){
+        width: 24rem;
+        height: 200vh;
+        position: fixed;
+
+    }//breakpoint
+
+    h1{
+        margin: 0;
+        font-size: 4rem;
+        color: $white;
+
+        @include breakpoint(laptop){
+            margin: 3rem 0;
+            text-align: center;
+        }//breakpoint
+
+    }//h1
+
+}//.dashboard-header
+
+.menu-closed-header-style {
+    background-color: $nav-shown;
+
+    @include breakpoint(laptop){
+        background: $dark;
+    }//breakpoint
+
+}//.menu-closed-header-styles

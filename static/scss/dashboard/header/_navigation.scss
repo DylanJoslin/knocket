@@ -1,0 +1,87 @@
+.dashboard-body{
+
+    .dashboard-navigation{
+        @include breakpoint(maxTablet){
+            width: 100%;
+            position: absolute;
+            top: 5.3rem;
+            right: -100%;
+            background-color: $nav-shown;
+            padding-bottom: 4rem;
+            transition: all 0.7s ease-in-out;
+            margin-top: 3.9rem;
+        }//break
+
+        @include breakpoint(tablet){
+            width: 50%;
+        }
+
+        @include breakpoint(laptop){
+            display: inline-block;
+           width: 22rem;
+           background: $dark;
+        }//break
+
+        .nav-link{
+
+            a{
+                @include nav-links;
+                @include flex(space-between);
+            
+                p{
+                    margin-bottom: 0;
+                    font-size: $navlink-font-size;
+                    font-family: $navlink-font;
+                    color: $white;
+
+                    @include breakpoint(laptop){
+
+                    }
+
+                    span{
+                        font-size: $signed-in;
+                    }//span
+
+                }//p
+
+            }//a
+
+        }//.navlink
+
+        .logout{
+            @include nav-links;
+
+            @include breakpoint(maxTablet){
+                @include flex(space-between);
+            }//break
+
+            .signed-in{
+                color: $white;
+
+                @include breakpoint(laptop){
+                    padding-bottom: 1.5rem;
+                }//break
+
+            }
+            
+            a p{
+                text-align: right;
+                color: $white;
+            }
+
+            p{
+                margin-bottom: 0;
+                font-size: $navlink-font-size;
+                font-family: $navlink-font;
+                
+                span{
+                    font-size: $signed-in;
+                } //span
+
+            }//p
+
+        }//.logout
+
+    }//.dashboard-navigation
+
+}//.dashboard-body
