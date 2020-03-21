@@ -104,8 +104,6 @@
 
                         a{
                             @include button;
-                            background: $primary;
-                            color: $dark;
                             @include breakpoint(tablet){
                                 width: 30rem;
                             }
@@ -145,8 +143,8 @@
         }
 
         .view-all:hover{
-            color: $dark;
-            border-bottom: 1px solid $dark;
+            color: $primary;
+            border-bottom: 1px solid $primary;
         }
 
 

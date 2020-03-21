@@ -22,7 +22,7 @@
     color: $white;
     padding: 0.5rem 1rem;
     font-size: $acc-badge;
-    border: 1px solid $dark;
+    border: 2px solid $white;
     border-radius: 1rem;
     margin-left: 1rem;
   }
@@ -33,7 +33,7 @@
   }
   
   @mixin accordian-info-shown(){
-    border: 1px solid $dark;
+    border: 1px solid $primary;
     border-top: 0;
     padding: 1rem;
   }

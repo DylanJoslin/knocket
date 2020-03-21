@@ -4,7 +4,7 @@
 
 @mixin button(){
   color: white;
-  background: $button-color;
+  background: $secondary;
   font-size: $button;
   font-family: $button-font;
   border-radius: 1.6rem;
@@ -17,9 +17,9 @@
 //BUTTON HOVER
 
 @mixin button-hover(){
-  border: 1px solid $dark;
-  background: $hover-background;
-  color: $hover-color;
+  background: $button-hover;
+  color: $hover-text-color;
+  transition: $hover-transition;
 }
 
 

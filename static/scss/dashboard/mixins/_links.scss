@@ -2,7 +2,6 @@
 // NAVIGATION LINKS
 
 @mixin nav-links(){
-    //border: 0.2rem solid $white;
     background: $nav-links-background;
     border-radius: 1rem;
     margin: 2rem;
@@ -22,7 +21,8 @@
 //NAVIGATION HOVER
 
 @mixin nav-hover(){
-    border: 0.2rem solid $nav-hover;
+    background: $nav-hover;
+    transition: $hover-transition;
   }
 
 

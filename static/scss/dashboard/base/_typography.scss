@@ -14,12 +14,16 @@
     p{
       font-size: $paragraph;
       font-family: $para-font;
+      text-align: left;
     }
   
     h1{
-      font-size: 6.1rem; 
-      line-height: 7.2rem; 
-      margin-bottom: 4.8rem;
+      font-size: 2rem; 
+
+      @include breakpoint(tablet){
+        font-size: 3.1rem; 
+      }
+      
     }
   
     h2{

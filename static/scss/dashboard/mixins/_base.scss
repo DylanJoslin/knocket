@@ -11,9 +11,15 @@
       padding: 6rem 3rem 0 3rem;
     }
 
+    @if $size == large {
+      padding: 4rem 6rem 0 30rem;
+    }
+
     @else if $size == large {
       padding: 4rem 6rem 0 30rem;
     }
+
+
     
   }
 

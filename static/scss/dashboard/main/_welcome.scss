@@ -1,4 +1,7 @@
     .dashboard-main{
+        @include breakpoint(maxTablet){
+            padding-top: 8rem;
+        }
         padding: 0;
 
         .width-container{
@@ -8,10 +11,10 @@
         }
 
         .welcome{
-            background: $dark;
+            background: $primary;
 
             @include padding(small);
-            padding-bottom: 4rem;
+            padding-bottom: 14rem;
 
             @include breakpoint(tablet){
                 @include padding(medium);
@@ -95,9 +98,8 @@
             a{
                 @include button;
                 margin-bottom: 2rem;
-                background: $primary;
-                border: 0.2rem solid $white;
-                color: $dark;
+                background: $third;
+                // color: $white;
                 @include flex(unset);
                 justify-content: center;
 
@@ -108,17 +110,17 @@
 
                 .badge{
                     @include accordian-badge;
-                    background: $white;
-                    color: $dark;
-                    border: 1px solid $dark;
+                    background: $secondary;
+                    //color: $primary;
 
                 }
 
             }
 
             a:hover{
-                background: $white;
-                color: $dark;
+                // background: $white;
+                // color: $primary;
+                @include nav-hover;
             }
 
             .border {

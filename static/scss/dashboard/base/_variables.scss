@@ -2,38 +2,39 @@
 /*******    COLORS    *******/
 $white: rgb(255, 255, 255);
 $text-color: rgb(47, 47, 55);
-$dark: #374352;
-//$primary: $light-purple;
-//$secondary: $light-purple;
-$primary: rgb(165, 194, 155);
-$secondary: rgb(165, 194, 155);
-$alert: $dark-purple;
-$triangle-color: rgb(105, 117, 130);
+$black: rgb(41, 41, 43);
+$primary: $light-blue;
+$secondary: $red-colour;
+$third: $dark-blue;
+//$primary: rgb(165, 194, 155);
+//$secondary: rgb(165, 194, 155);
+$alert: $secondary;
+$triangle-color: $third;
 
 
 
 /*******    NAVIGATION    *******/
-$nav-shown: $dark;
-$nav-background: $dark;
+$nav-shown: $third; 
 $nav-links-background: $primary;
-$nav-link-color: $dark;
+$nav-link-color: $white;
 $nav-link-font: 'Raleway Bold', sans-serif;
-
-$navlink-font: 'Raleway Regular', sans-serif;
 $navlink-font-size: 1.6rem;
 
 
 /*******    HOVER    *******/
-$hover-background: $secondary;
-$hover-color: secondary;
-$acc-hover-background: $secondary;
-$nav-hover: $white;
+$button-hover: $third; //button
+$hover-text-color: $white; //button
+
+$acc-hover-background: $third;
+$hover-transition: 0.7s;
+$nav-hover: $red-colour;
+
 
 /*******    ACCORDIAN    *******/
-$acc-background: $dark;
-$acc-badge-background: $primary;
+$acc-background: $primary;
+$acc-badge-background: $third;
 $acc-link-color: $primary;
-$user-acc-background: $dark;
+$user-acc-background: $primary;
 
 $acc-tabs: 1.8rem;
 $acc-tabs-font: 'Raleway Regluar', sans-serif;
@@ -42,13 +43,15 @@ $acc-link-font: 'Raleway Bold', sans-serif;
 
 
 /*******    BUTTONS    *******/
-$button-color: $dark;
+$button-color: $secondary;
 $button: 1.8rem;
 $button-font: 'Raleway Bold', sans-serif;
 
 
 /*******    OVERVIEW    *******/
-$users-overview-bgd: linear-gradient(0deg, $white 0%, $secondary 50%);
+$users-overview-bgd: $white;
+
+//linear-gradient(0deg, $white 0%, $secondary 50%);
 $overview-labels: 2.4rem;
 
 
