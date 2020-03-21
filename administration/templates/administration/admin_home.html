@@ -5,18 +5,50 @@
 	<h2>Welcome {{ user.first_name }}, to your dashboard!</h2>
 	<p>Manage the users and the content on your site.</p>
 	<div class="border">
-		<div class="triangle-up"></div><div class="triangle-down"></div><div class="triangle-up"></div><div class="triangle-down"></div><div class="triangle-up"></div><div class="triangle-down"></div><div class="triangle-up"></div><div class="triangle-down"></div><div class="triangle-up"></div><div class="triangle-down"></div><div class="triangle-up"></div><div class="triangle-down"></div><div class="triangle-up"></div><div class="triangle-down"></div><div class="triangle-up"></div><div class="triangle-down"></div><div class="triangle-up"></div><div class="triangle-down"></div><div class="triangle-up"></div><div class="triangle-down"></div><div class="triangle-up"></div><div class="triangle-down"></div><div class="triangle-up"></div><div class="triangle-down"></div><div class="triangle-up"></div><div class="triangle-down"></div><div class="triangle-up"></div><div class="triangle-down"></div><div class="triangle-up"></div><div class="triangle-down"></div><div class="triangle-up"></div><div class="triangle-down"></div>
+		<div class="triangle-up"></div>
+                <div class="triangle-down"></div>
+                <div class="triangle-up"></div>
+                <div class="triangle-down"></div>
+                <div class="triangle-up"></div>
+                <div class="triangle-down"></div>
+                <div class="triangle-up"></div>
+                <div class="triangle-down"></div>
+                <div class="triangle-up"></div>
+                <div class="triangle-down"></div>
+                
+                        <div class="triangle-up"></div>
+                        <div class="triangle-down"></div>
+                        <div class="triangle-up"></div>
+                        <div class="triangle-down"></div>
+                        {% comment %} <div class="triangle-up"></div>
+                        <div class="triangle-down"></div>
+                        <div class="triangle-up"></div>
+                        <div class="triangle-down"></div>
+                        <div class="triangle-up"></div>
+                        <div class="triangle-down"></div>
+                        <div class="triangle-up"></div>
+                        <div class="triangle-down"></div>
+                        <div class="triangle-up"></div>
+                        <div class="triangle-down"></div>
+                        <div class="triangle-up"></div>
+                        <div class="triangle-down"></div>
+                        <div class="triangle-up"></div>
+                        <div class="triangle-down"></div>
+                        <div class="triangle-up"></div>
+                        <div class="triangle-down"></div>
+                        <div class="triangle-up"></div>
+                        <div class="triangle-down"></div> {% endcomment %}
+                
 	</div>
 	<h3><span class="heading-small">Start by: </span><br><span class="heading-small-two">Viewing the newest activity on your site.</span></h3>
 	<div class="welcome-links">
-		<a href="#users-overview">Users <span class="badge">{{ users|length }}</span></a>
-		<a href="#uploads-overview">Uploads <span class="badge">6</span></a>
+		<a href="#users-overview"> New Users <span class="badge">{{ users|length }} </span></a>
+		<a href="#uploads-overview"> New Uploads <span class="badge">6 </span></a>
 	</div>
 </div>
 
 <!-- ====================CONTAINER==================== -->
         <div class="container">
-
         <!-- ====================OVERVIEW==================== -->
                 <div class="overview-background"></div>
                 <div class="overview users-overview" id="users-overview">
@@ -130,6 +162,7 @@
 
 
                 <!-- ====================OVERVIEW==================== -->
+                <div class="overview-background-second"></div>
                 <div class="overview uploads-overview" id="uploads-overview">
                         <h3>Uploads Overview</h3>
                         <div class="overview-box">

@@ -1330,7 +1330,6 @@ td, th {
 .dashboard-main .welcome {
   background: #3EA3DF;
   padding: 4.5rem 1.6rem 0 1.6rem;
-  padding-bottom: 14rem;
 }
 
 @media screen and (min-width: 700px) {
@@ -1384,18 +1383,7 @@ td, th {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    width: 10rem;
     padding-right: 3rem;
-  }
-}
-
-.dashboard-main .home-welcome {
-  height: 70rem;
-}
-
-@media screen and (min-width: 700px) {
-  .dashboard-main .home-welcome {
-    height: 100vh;
   }
 }
 
@@ -1440,7 +1428,6 @@ td, th {
   padding: 1.2rem;
   margin-bottom: 1rem;
   margin-bottom: 2rem;
-  background: #0C2946;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1467,14 +1454,15 @@ td, th {
   color: white;
   padding: 0.5rem 1rem;
   font-size: 1.4rem;
-  border: 2px solid white;
   border-radius: 1rem;
   margin-left: 1rem;
-  background: #FB4547;
+  background: #0C2946;
+  margin-right: 1rem;
 }
 
 .dashboard-main .home-welcome a:hover {
-  background: #FB4547;
+  background: #0C2946;
+  color: white;
   -webkit-transition: 0.7s;
   transition: 0.7s;
 }
@@ -1489,10 +1477,10 @@ td, th {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border-bottom: 2px solid #0C2946;
-  border-top: 2px solid #0C2946;
+  border-bottom: 2px solid rgba(12, 41, 70, 0.591);
+  border-top: 2px solid rgba(12, 41, 70, 0.591);
   padding: 0.7rem 0 0.7rem 1rem;
-  width: 66rem;
+  width: 30rem;
   margin-bottom: 4rem;
 }
 
@@ -1501,7 +1489,7 @@ td, th {
   height: 0;
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
-  border-bottom: 20px solid #0C2946;
+  border-bottom: 20px solid rgba(12, 41, 70, 0.591);
 }
 
 .dashboard-main .home-welcome .border .triangle-down {
@@ -1509,12 +1497,12 @@ td, th {
   height: 0;
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
-  border-top: 20px solid #0C2946;
+  border-top: 20px solid rgba(12, 41, 70, 0.591);
 }
 
 .dashboard-main .accordian {
   padding: 4.5rem 1.6rem 0 1.6rem;
-  margin-bottom: 8rem;
+  margin-bottom: 18rem;
 }
 
 @media screen and (min-width: 700px) {
@@ -1544,7 +1532,7 @@ td, th {
 }
 
 .dashboard-main .accordian .acc-tabs a {
-  background: #3EA3DF;
+  background: #0C2946;
   color: white;
   padding: 1rem 3rem;
   font-size: 1.8rem;
@@ -1560,8 +1548,10 @@ td, th {
 }
 
 .dashboard-main .accordian .acc-tabs a:hover {
-  background: #0C2946;
+  background: #FB4547;
   color: white;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
 }
 
 .dashboard-main .accordian .acc-content {
@@ -1572,8 +1562,10 @@ td, th {
 }
 
 .dashboard-main .accordian .acc-content .acc-single .acc-user-dropdown:hover {
-  background: #0C2946;
+  background: #FB4547;
   color: white;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
 }
 
 .dashboard-main .accordian .acc-content .acc-single .acc-user-dropdown {
@@ -1587,7 +1579,7 @@ td, th {
       -ms-flex-align: center;
           align-items: center;
   background: #3EA3DF;
-  border-bottom: 1px solid #8a9098;
+  border-bottom: 1px solid #0C2946;
   padding: 1rem 2rem;
 }
 
@@ -1596,7 +1588,6 @@ td, th {
   color: white;
   padding: 0.5rem 1rem;
   font-size: 1.4rem;
-  border: 2px solid white;
   border-radius: 1rem;
   margin-left: 1rem;
 }
@@ -1608,7 +1599,7 @@ td, th {
 }
 
 .dashboard-main .accordian .acc-content .acc-single .acc-user-info {
-  border: 1px solid #3EA3DF;
+  border: 1px solid #0C2946;
   border-top: 0;
   padding: 1rem;
 }
@@ -1719,42 +1710,41 @@ td, th {
 }
 
 .dashboard-main .accordian .view-all {
-  color: #3EA3DF;
+  color: #0C2946;
   font-size: 1.8rem;
+  border-bottom: 1px solid #FB4547;
   padding-bottom: 1rem;
   font-family: "Raleway Bold", sans-serif;
-  border-bottom: 1px solid #3EA3DF;
 }
 
 .dashboard-main .accordian .view-all:hover {
-  color: #3EA3DF;
-  border-bottom: 1px solid #3EA3DF;
+  color: #FB4547;
+  border-bottom: 1px solid #0C2946;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
 }
 
-.dashboard-main {
+.dashboard-main .container {
   position: relative;
 }
 
 .dashboard-main .overview {
-  z-index: 20;
   border: 1px solid #aeaeae;
   background: white;
-  padding-top: -10rem;
   margin: 1rem;
   border-radius: 2rem;
 }
 
 @media screen and (min-width: 700px) {
   .dashboard-main .overview {
-    padding: 6rem 3rem 0 3rem;
-    padding-bottom: 4rem;
+    margin: 3rem;
+    margin-top: 6rem;
   }
 }
 
 @media screen and (min-width: 1000px) {
   .dashboard-main .overview {
-    padding: 4rem 6rem 0 30rem;
-    padding-bottom: 4rem;
+    margin-left: 30rem;
   }
 }
 
@@ -1765,7 +1755,7 @@ td, th {
 
 @media screen and (min-width: 700px) {
   .dashboard-main .overview h3 {
-    padding: 0;
+    padding: 6rem 3rem 0 3rem;
   }
 }
 
@@ -1779,7 +1769,9 @@ td, th {
 
 @media screen and (min-width: 700px) {
   .dashboard-main .overview .overview-box p {
-    padding: 0;
+    padding: 6rem 3rem 0 3rem;
+    padding-bottom: 0;
+    padding-top: 0;
   }
 }
 
@@ -1808,8 +1800,7 @@ td, th {
 
 @media screen and (min-width: 700px) {
   .dashboard-main .overview .overview-box a {
-    margin-bottom: 2rem;
-    width: 35rem;
+    width: 50rem;
     margin-top: 4rem;
   }
 }
@@ -1824,10 +1815,35 @@ td, th {
 .dashboard-main .overview-background {
   content: "";
   background: #3EA3DF;
-  padding: 1rem;
+  height: 24rem;
   width: 100vw;
   position: absolute;
+  top: -8rem;
   left: -1rem;
+  z-index: -1;
+}
+
+.dashboard-main .overview-background-second {
+  content: "";
+  background: #3EA3DF;
+  height: 23rem;
+  width: 100vw;
+  position: absolute;
+  top: 80rem;
+  left: -1rem;
+  z-index: -1;
+}
+
+@media screen and (min-width: 700px) {
+  .dashboard-main .overview-background-second {
+    top: 85rem;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .dashboard-main .overview-background-second {
+    top: 83rem;
+  }
 }
 
 .dashboard-main .hidden {
@@ -1859,11 +1875,10 @@ td, th {
 }
 
 .dashboard-main .dashboard-form .dashboard-form-group .tooltip {
-  border: 1px solid rgba(77, 90, 108, 0.543);
   padding: 1.6rem;
   position: absolute;
   top: 3.6rem;
-  background: #3EA3DF;
+  background: #0C2946;
   border-radius: 0.5rem;
   z-index: 9999;
   width: 100%;
@@ -1879,7 +1894,7 @@ td, th {
 }
 
 .dashboard-main .dashboard-form .dashboard-form-group .required {
-  color: #d01f1f;
+  color: #FB4547;
 }
 
 .dashboard-main .dashboard-form .dashboard-form-group .dashboard-label {
@@ -1889,7 +1904,7 @@ td, th {
 }
 
 .dashboard-main .dashboard-form .dashboard-form-group .dashboard-label .color {
-  color: #8cc7e6;
+  color: #3EA3DF;
 }
 
 .dashboard-main .dashboard-form .dashboard-form-group .dashboard-input {
@@ -2010,7 +2025,7 @@ td, th {
   }
 }
 
-.dashboard-main .filter .dashboard-form .flter-button:hover {
+.dashboard-main .filter .dashboard-form .filter-button:hover {
   background: #0C2946;
   color: white;
   -webkit-transition: 0.7s;
@@ -2037,7 +2052,6 @@ td, th {
   padding: 2rem;
   font-size: 2rem;
   background: #FB4547;
-  border: 2px solid #3EA3DF;
   border-radius: 2rem;
   color: white;
 }

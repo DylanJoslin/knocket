@@ -42,8 +42,9 @@
 //ACCORDIAN LINKS
 
   @mixin accordian-link(){
-    color: $acc-link-color;
+    color: $third;
     font-size: $acc-tabs;
+    border-bottom: 1px solid $secondary;
     padding-bottom: 1rem;
     font-family: $acc-link-font;
   }

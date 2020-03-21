@@ -12,7 +12,7 @@
             @include padding(large);
         }
 
-        margin-bottom: 8rem;
+        margin-bottom: 18rem;
 
         .hidden{
             display:none;
@@ -139,12 +139,12 @@
 
         .view-all{
             @include accordian-link;
-            border-bottom: 1px solid $primary;
         }
 
         .view-all:hover{
-            color: $primary;
-            border-bottom: 1px solid $primary;
+            color: $secondary;
+            border-bottom: 1px solid $third;
+            transition: $hover-transition;
         }
 
 

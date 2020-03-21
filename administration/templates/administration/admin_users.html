@@ -13,15 +13,21 @@
         <div class="container">
 
         <!-- ====================OVERVIEW==================== -->
+                <div class="overview-background"></div>
                 <div class="overview">
                         <h3>Users Overview</h3>
                         <div class="overview-box">
-                                <div>
-                                        <p>New Users: <span class="number">4</span></p>
-                                        <p>Registered Users: <span class="number">23</span></p>
+                                <div class="overview-text">
+                                        <div>
+                                                <p>New Users: <span class="number">4</span></p>
+                                                <p>Registered Users: <span class="number">23</span></p>
+                                        </div>
+                                        <div>
+                                                <a href="{% url 'create_user' %}">Create New User</a>
+                                        </div>
                                 </div>
-                                <div>
-                                        <a href="{% url 'create_user' %}">Create New User</a>
+                                <div class="overview-image">
+
                                 </div>
                         </div>
                 </div>

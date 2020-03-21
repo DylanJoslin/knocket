@@ -1,5 +1,5 @@
 @mixin accordian-tabs(){
-    background: $acc-background;
+    background: $third;
     color: $white;
     padding: 1rem 3rem;
     @include breakpoint(tablet){
@@ -13,7 +13,7 @@
   
   @mixin accordian-dropdown(){
     background: $user-acc-background;
-    border-bottom: 1px solid rgb(138, 144, 152);
+    border-bottom: 1px solid $third;
     padding: 1rem 2rem;
   }
   
@@ -22,18 +22,19 @@
     color: $white;
     padding: 0.5rem 1rem;
     font-size: $acc-badge;
-    border: 2px solid $white;
+    //border: 2px solid $white;
     border-radius: 1rem;
     margin-left: 1rem;
   }
   
   @mixin accordian-hover{
-    background: $acc-hover-background;
+    background: $secondary;
     color: $white;
+    transition: $hover-transition;
   }
   
   @mixin accordian-info-shown(){
-    border: 1px solid $primary;
+    border: 1px solid $third;
     border-top: 0;
     padding: 1rem;
   }
