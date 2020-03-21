@@ -12,7 +12,7 @@
             @include padding(large);
         }
 
-        margin-bottom: 18rem;
+        margin-bottom: 20rem;
 
         .hidden{
             display:none;
@@ -67,7 +67,7 @@
                 .acc-user-info{
 
                     @include accordian-info-shown;
-                    @include breakpoint(tablet){
+                    @include breakpoint(laptop){
                         padding: 2rem;
                         @include flex(unset);
                     }
@@ -86,7 +86,7 @@
                             }
                         }
 
-                        @include breakpoint(desktop){
+                        @media only screen and (min-width: 1400px)  {
                             @include flex(unset);
                         }
                     }

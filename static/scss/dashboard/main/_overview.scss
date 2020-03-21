@@ -3,7 +3,6 @@
     .container{
         position: relative;
     }
-    
 
     .overview{
         border: 1px solid rgb(174, 174, 174);
@@ -13,15 +12,15 @@
         border-radius: 2rem;
 
         @include breakpoint(tablet){
-            // @include padding(medium);
-            //padding-bottom: 4rem;
+            @include padding(medium);
+            padding-bottom: 4rem;
             margin: 3rem;
             margin-top: 6rem;
         }
 
         @include breakpoint(laptop){
-            // padding: 4rem 6rem 0 4rem;
-            //padding-bottom: 4rem;
+            padding: 4rem 6rem 0 4rem;
+            padding-bottom: 4rem;
             margin-left: 30rem;
         }
 
@@ -30,43 +29,22 @@
             padding-bottom: 0;
 
             @include breakpoint(tablet){
-                @include padding(medium);
+                padding: 0;
             }
 
         }
         
         .overview-box{
             @include breakpoint(laptop){
-                @include flex(space-between);
-
-                .overview-text{
-                    width: 50%;
-                }
-
-                .overview-image{
-                    width: 40rem;
-                    height: 31rem;
-                    background: $secondary;
-                    border-top-right-radius: 2rem;
-                    border-bottom-right-radius: 2rem;
-                }
-
+                @include flex(unset);
             }
 
             p{
                 font-size: $overview-labels;
                 margin-bottom: 1rem;
-                // text-align: center;
-
                 @include padding(small);
                 padding-bottom: 0;
                 padding-top: 0;
-
-                @include breakpoint(tablet){
-                @include padding(medium);
-                padding-bottom: 0;
-                padding-top: 0;
-            }
                 
 
                 .number{
@@ -82,7 +60,6 @@
             a{
                 @include button;
                 text-align: center;
-                // margin: 0 auto;
                 margin-top: 4rem;
                 margin-bottom: 0;
 
@@ -90,6 +67,17 @@
                     width: 50rem;
                     margin-top: 4rem;
                     
+                }
+
+                @include breakpoint(laptop){
+                    width: 28rem;
+                    margin-left: 4rem;
+                    margin-top: 0;
+                }
+
+                @include breakpoint(desktop){
+                    width: 40rem;
+                    margin-left: 8rem;
                 }
             }
 
@@ -128,12 +116,13 @@
         top: 80rem;
 
         @include breakpoint(tablet){
-            top: 85rem;
+            top: 88rem;
+            height: 25rem;
             width: 99.3vw;
         }
 
         @include breakpoint(laptop){
-            top: 83rem;
+            top: 76rem;
             width: 99.8vw;
         }
         

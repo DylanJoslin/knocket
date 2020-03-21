@@ -4,6 +4,33 @@
         }
         padding: 0;
 
+        .border {
+            display: inline-block;
+            @include flex(unset);
+            border-bottom: 2px solid $triangle-color;
+            border-top: 2px solid $triangle-color;
+            padding: 0.7rem 0 0.7rem 1rem;
+            width: 30rem;
+            margin-bottom: 4rem;
+            
+            .triangle-up{
+                width: 0;
+                height: 0;
+                border-left: 10px solid transparent;
+                border-right: 10px solid transparent;
+                border-bottom: 20px solid $triangle-color;
+            }
+
+            .triangle-down{
+                width: 0;
+                height: 0;
+                border-left: 10px solid transparent;
+                border-right: 10px solid transparent;
+                border-top: 20px solid $triangle-color;
+            }
+
+        }
+
         .width-container{
             @include breakpoint(tablet){
                 @include innerContainer;
@@ -14,7 +41,6 @@
             background: $primary;
 
             @include padding(small);
-            // padding-bottom: 14rem;
 
             @include breakpoint(tablet){
                 @include padding(medium);
@@ -28,13 +54,13 @@
 
             h2{
                 color: $white;
-                font-size: 4.2rem;
-                line-height: 4.8rem;
+                font-size: 5.4rem;
+                line-height: 7.2rem;
                 margin-bottom: 2rem;
 
                 @include breakpoint(tablet){
-                    font-size: 5.6rem; 
-                     line-height: 7.2rem;
+                    font-size: 6.4rem; 
+                    line-height: 7.2rem;
                 }
             }
 
@@ -119,32 +145,6 @@
                 // background: $white;
                 // color: $primary;
                 @include button-hover;
-            }
-
-            .border {
-                @include flex(unset);
-                border-bottom: 2px solid $triangle-color;
-                border-top: 2px solid $triangle-color;
-                padding: 0.7rem 0 0.7rem 1rem;
-                width: 30rem;
-                margin-bottom: 4rem;
-
-                .triangle-up{
-                    width: 0;
-                    height: 0;
-                    border-left: 10px solid transparent;
-                    border-right: 10px solid transparent;
-                    border-bottom: 20px solid $triangle-color;
-                }
-
-                .triangle-down{
-                    width: 0;
-                    height: 0;
-                    border-left: 10px solid transparent;
-                    border-right: 10px solid transparent;
-                    border-top: 20px solid $triangle-color;
-                }
-
             }
 
                 
