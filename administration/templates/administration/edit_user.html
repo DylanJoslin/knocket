@@ -4,8 +4,8 @@
         
 <!-- ====================WELCOME BANNER==================== -->
         <div class="welcome">
-                <h2>Editing {{ user.first_name }}'s information</h2>
-                <p>All fields must be entered fully.</p>
+					<h2>Editing {{ edited_user.first_name }} {{ edited_user.last_name }}'s information</h2>
+					<p>All fields must be entered fully.</p>
         </div>
 <!-- ====================WELCOME BANNER CLOSE==================== -->
         
@@ -14,53 +14,68 @@
 
             <div class="flex-container">
                 <div class="dashboard-form">
-                    <form action="#">
-                        <div class="dashboard-form-group">
-                            <label for="firstname" class="dashboard-label">First Name<span class="required">*</span> <i class="fas fa-info-circle"></i></label>
-                            <input type="text" id="firstname" name="firstname" class="dashboard-input">
-                            <div class="tooltip hidden">
-                                <p>
-                                    Enter the users first name. Minimum 4 characters and maximum 20 characters in length. Field is required.
-                                </p>
-                                <p>Click the information icon again to close this window.</p>
-                            </div>
-                        </div>
-                        <div class="dashboard-form-group">
-                            <label for="lastname" class="dashboard-label">Last Name<span class="required">*</span> <i class="fas fa-info-circle"></i></label>
-                            <input type="text" id="lastname" name="lastname" class="dashboard-input">
-                            <div class="tooltip hidden">
-                                <p>
-                                    Enter the users last name. Minimum 4 characters and maximum 20 characters in length. Field is required.
-                                </p>
-                                <p>Click the information icon again to close this window.</p>
-                            </div>
-                        </div>
-                        <div class="dashboard-form-group">
-                            <label for="username" class="dashboard-label">Username<span class="required">*</span> <i class="fas fa-info-circle"></i></label>
-                            <input type="text" id="username" name="username" class="dashboard-input">
-                            <div class="tooltip hidden">
-                                <p>
-                                    Enter the users username. Minimum 4 characters and maximum 20 characters in length. Field is required.
-                                </p>
-                                <p>Click the information icon again to close this window.</p>
-                            </div>
-                        </div>
-                        <div class="dashboard-form-group">
-                            <label for="group" class="dashboard-label">Group<span class="required">*</span> <i class="fas fa-info-circle"></i></label>
-                            <select name="group" id="group" class="dashboard-input">
-                                <option value="none">Select</option>
-                                <option value="student">Student</option>
-                                <option value="teacher">Teacher</option>
-                                <option value="elder">Elder</option>
-                            </select> 
-                            <div class="tooltip hidden">
-                                <p>
-                                    Choose the users permission group. Field is required. 
-                                </p>
-                                <p>Click the icon again to close this window.</p>
-                            </div>
-                        </div>
-                        <button class="form-button">Edit User</button>
+                    <form method="POST">
+											{% csrf_token %} 
+											{% for field in form %}
+												<div class="dashboard-form-group">
+														<label class="dashboard-label" for="{{ field.html_name }}">{{ field.label }}</label>
+														<input 
+																type="{{ field.field.widget.input_type }}" 
+																name="{{ field.html_name }}" 
+																id="{{ field.html_name }}" 
+																class="dashboard-input" 
+																max_length="{{ field.field.max_length }}"
+																min_length="{{ field.field.min_length }}"
+																value="{{field.value}}"
+														>
+													{% comment %} If there are errors, loop through them and create a div containing the error message {% endcomment %}
+													{% if field.errors %}
+															{% for error in field.errors %}
+																	<div class="alert">
+																			{{ error|escape }}
+																	</div>
+															{% endfor %}
+													{% endif %}
+													</div>
+											{% endfor %}
+
+											{% for field in profile_form %}
+												{% comment %} CREATE SELECT HTML ELEMENT {% endcomment %}
+												{% if field.field.widget.input_type == 'select' %}
+														<div class="dashboard-form-group mb-4">
+																<label class="dashboard-label" for="{{ field.html_name }}">{{ field.label }}</label>
+																<select name="{{ field.html_name }}" id="{{ field.html_name }}" class="dashboard-input">
+																		{% for choice in field.field.choices %}
+																				<option value="{{ choice.0 }}">{{ choice.1 }}</option>
+																		{% endfor %}
+																</select>
+														</div>
+
+												{% comment %} CREATE TEXT INPUT HTML ELEMENT {% endcomment %}
+												{% elif field.field.widget.input_type != 'select' %}
+														<div class="dashboard-form-group">
+																<label class="dashboard-label" for="{{ field.html_name }}">{{ field.label }}</label>
+																<input 
+																		type="{{ field.field.widget.input_type }}" 
+																		name="{{ field.html_name }}" 
+																		id="{{ field.html_name }}" 
+																		class="dashboard-input" 
+																		max_length="{{ field.field.max_length }}"
+																		min_length="{{ field.field.min_length }}"
+																>
+														</div>
+												{% endif %}
+
+												{% comment %} If there are errors, loop through them and create a div containing the error message {% endcomment %}
+												{% if field.errors %}
+														{% for error in field.errors %}
+																<div class="alert">
+																		{{ error|escape }}
+																</div>
+														{% endfor %}
+												{% endif %}
+											{% endfor %}
+											<button class="form-button">Submit Changes</button>
                     </form>
                 </div>
                 <div class="side-image"></div>

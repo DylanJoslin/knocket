@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User
 from django.contrib import messages
-from users.forms import RegistrationForm, UserProfileForm
+from users.forms import AdminUserUpdateForm, RegistrationForm, LoginForm, UserProfileForm, UserUpdateForm, ProfileUpdateForm
 
 
 # Create your views here.
@@ -63,7 +63,35 @@ def admin_uploads(request, access='pending'):
     }
     return render(request, 'administration/admin_uploads.html', context)
 
-def edit_users(request):
+def edit_users(request, username="none"):
+    if request.user.userprofile.access == 'teacher' or request.user.userprofile.access == 'admin':
+        if username != 'none':
+            user = User.objects.get(username=username)
+            user_form = AdminUserUpdateForm(request.POST, instance=user)
+            profile_form = UserProfileForm(request.POST, instance=user.userprofile)
+            if request.method == 'POST':
+                user = user_form.save()
+                profile = profile_form.save()
+                profile.user = user
+                profile.save()
+                messages.success(request, f'User has been updated.')
+                return redirect('/administration')
+            else:
+                user_form = AdminUserUpdateForm(instance=user)
+                profile_form = UserProfileForm(instance=user)
+            
+            context = {
+                'form': user_form,
+                'profile_form': profile_form,
+                'edited_user': user
+            }
+
+            return render(request, 'administration/edit_user.html', context)
+    else:
+        messages.error(request, f'You do not have permission to perform this function.')
+
+                
+
     return render(request, 'administration/edit_user.html')
 
 def create_user(request):
@@ -98,10 +126,10 @@ def delete_user(request, username='none'):
             user = User.objects.get(username=username)
             user.delete()
             messages.success(request, f'This user has been deleted')
-            return render(request, 'administration/admin_home.html')
+            return redirect('/administration')
     else:
         messages.error(request, f'You do not have perission to perform this task.')
-        return render(request, 'administration/admin_home.html')
+        return redirect('/administration')
 
 def approve_user(request, username='none'):
 
@@ -111,7 +139,7 @@ def approve_user(request, username='none'):
             user.userprofile.access = 'student'
             user.userprofile.save()
             messages.success(request, f'This student has been approved!')
-            return redirect('admin_home')
+            return redirect('/administration')
         else:
             messages.success(request, f'Cannot approve user!')
-            return render(request, 'administration/admin_home.html')
+            return redirect('/administration')
