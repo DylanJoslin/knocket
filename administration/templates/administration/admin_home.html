@@ -71,7 +71,7 @@
                                                 </div><!-- User Dropdown -->
                                                 <div class="acc-user-info"><!-- User information -->
                                                         <div class="information">
-                                                                <p>Created on: (date)</p>
+                                                                <p>Created on: {{ user.date_joined| date:"M d, Y"}}</p>
                                                                 <p>Full Name: {{user.first_name}} {{user.last_name}}</p>
                                                                 <p>Email: {{user.email}}</p>
                                                         </div>
@@ -106,13 +106,12 @@
                                                 </div><!-- User Dropdown -->
                                                 <div class="acc-user-info"><!-- User information -->
                                                         <div class="information">
-                                                                <p>Created on: (date)</p>
+                                                                <p>Created on: {{ user.date_joined| date:"M d, Y"}}</p>
                                                                 <p>Full Name: {{user.first_name}} {{user.last_name}}</p>
                                                                 <p>Email: {{user.email}}</p>
                                                         </div>
                                                         <div class="options">
                                                                 <a href="{% url 'edit_users' %}">Edit User</a>
-                                                                <a href="{% url 'approve_user' %}{{ user.username }}">Approve User</a>
                                                         </div>
                                                 </div><!-- User information -->
                                         </div><!-- Single user -->

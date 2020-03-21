@@ -45,7 +45,9 @@
 
 
     <main class="dashboard-main">
-        {% block content%}{% endblock %}
+        {% block content%}
+            {% block new_accordian %}{%endblock %}
+        {% endblock %}
     </main>
 
     <script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
