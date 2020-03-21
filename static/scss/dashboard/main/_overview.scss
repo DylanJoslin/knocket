@@ -33,13 +33,25 @@
                 @include padding(medium);
             }
 
-
-
-            
         }
         
         .overview-box{
-            
+            @include breakpoint(laptop){
+                @include flex(space-between);
+
+                .overview-text{
+                    width: 50%;
+                }
+
+                .overview-image{
+                    width: 40rem;
+                    height: 31rem;
+                    background: $secondary;
+                    border-top-right-radius: 2rem;
+                    border-bottom-right-radius: 2rem;
+                }
+
+            }
 
             p{
                 font-size: $overview-labels;
@@ -92,27 +104,37 @@
         content: "";
         background: $primary;
         height: 24rem;
-        width: 100vw;
+        width: 98.8vw;
         position: absolute;
         top: -8rem;
         left: -1rem;
         z-index: -1;
+
+        @include breakpoint(tablet){
+            width: 99.3vw;
+        }
+
+        @include breakpoint(laptop){
+            width: 99.8vw;
+        }
     }
 
     .overview-background-second{
         content: "";
         background: $primary;
         height: 23rem;
-        width: 100vw;
+        width: 98.8vw;
         position: absolute;
         top: 80rem;
 
         @include breakpoint(tablet){
             top: 85rem;
+            width: 99.3vw;
         }
 
         @include breakpoint(laptop){
             top: 83rem;
+            width: 99.8vw;
         }
         
 
