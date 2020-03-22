@@ -4,10 +4,6 @@ header{
         justify-content: space-between;
         padding: 30px 10px;
         background-color: $light-blue;
-    
-        @include media-md{
-            margin-bottom: 70px;
-        }
     }
 
     .login{
