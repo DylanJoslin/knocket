@@ -1,7 +1,7 @@
 {% extends "home/base.html" %}
 {% block content %}
-    <form enctype="multipart/form-data" method="POST" class="text-white bg-dark p-3">
-        <h2 class="mb-4">Update Your Profile</h2>
+    <form enctype="multipart/form-data" method="POST">
+        <h2>Update Your Profile</h2>
         {% comment %} csrf_token is some built in security {% endcomment %}
         {% csrf_token %} 
         <div style="width: 40%">

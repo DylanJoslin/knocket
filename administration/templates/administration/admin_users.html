@@ -34,11 +34,11 @@
                         <h3>Users Overview</h3>
                         <div class="overview-box">
                                 <div>
-                                        <p>New Users: <span class="number">12</span></p>
-                                        <p>Registered Users: <span class="number">40</span></p>
+                                        <p>New Students: <span class="number">{{ new_users }}</span></p>
+                                        <p>Registered Students: <span class="number">{{ registered_users }}</span></p>
                                 </div>
                                 <div>
-                                        <a href="{% url 'admin_uploads' %}">Create New Upload</a>
+                                        <a href="{% url 'create_user' %}">Create New User</a>
                                 </div>
                         </div>
                 </div><!--overview-->
@@ -53,9 +53,7 @@
                                                 <label for="search" class="dashboard-label">Search <i class="fas fa-info-circle"></i></label>
                                                 <input type="text" id="search" name="search" class="dashboard-input">
                                                 <div class="tooltip hidden">
-                                                        <p>
-                                                                Enter a field that that youd want to search for! (example: someone's username)
-                                                        </p>
+                                                        <p>Enter a field that that youd want to search for! (example: someone's username)</p>
                                                         <p>Click the information icon again to close this window.</p>
                                                 </div>
                                         </div>
@@ -127,13 +125,13 @@
                                                 </div><!-- User Dropdown -->
                                                 <div class="acc-user-info"><!-- User information -->
                                                         <div class="information">
-                                                                <p>Created on: (date)</p>
+                                                                <p>Created on: {{ user.date_joined| date:"M d, Y"}}</p>
                                                                 <p>Full Name: {{user.first_name}} {{user.last_name}}</p>
                                                                 <p>Email: {{user.email}}</p>
                                                         </div>
                                                         <div class="options">
-                                                                <a href="{% url 'delete_user' %}{{ user.username }}">Delete User</a>
                                                                 <a href="{% url 'approve_user' %}{{ user.username }}">Approve User</a>
+                                                                <a href="{% url 'delete_user' %}{{ user.username }}">Delete User</a>
                                                         </div>
                                                 </div><!-- User information -->
                                         </div><!-- Single user -->
@@ -143,7 +141,7 @@
                                 
                         </div><!-- New Users Content-->
 
-                        <!-- ====================Registered STUDENTS==================== -->
+                        <!-- ====================Registered USERS==================== -->
                         <div id="registered-users" class="acc-content hidden"> <!-- New Users Content-->
                         {% for user in users %}
                                 {% if user.userprofile.access == 'student' %}
@@ -162,13 +160,13 @@
                                                 </div><!-- User Dropdown -->
                                                 <div class="acc-user-info"><!-- User information -->
                                                         <div class="information">
-                                                                <p>Created on: (date)</p>
+                                                                <p>Created on: {{ user.date_joined| date:"M d, Y"}}</p>
                                                                 <p>Full Name: {{user.first_name}} {{user.last_name}}</p>
                                                                 <p>Email: {{user.email}}</p>
                                                         </div>
                                                         <div class="options">
-                                                                <a href="{% url 'edit_users' %}">Edit User</a>
-                                                                <a href="{% url 'approve_user' %}{{ user.username }}">Approve User</a>
+                                                                <a href="{% url 'edit_users' %}{{ user.username }}">Edit User</a>
+                                                                <a href="{% url 'delete_user' %}{{ user.username }}">Delete User</a>
                                                         </div>
                                                 </div><!-- User information -->
                                         </div><!-- Single user -->
@@ -177,8 +175,6 @@
                         {% endfor %}
 
                         </div><!-- Registered STUDENTS Close-->
-
-                        <a href="#" class="view-all">View all users</a>
 
                 </div> <!-- Accordion -->
                 <!-- ====================ACCORDION CLOSE==================== -->

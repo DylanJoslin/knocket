@@ -5,32 +5,35 @@ $(document).ready(function() {
 		$('.dashboard-header').toggleClass('menu-closed-header-style ');
 	});
 
-	$('.dashboard-label > i').hover(function(event) {
-		var icon = $(this).toggleClass('color');
+	// $('.dashboard-label > i').hover(function(event) {
+	// 	var icon = $(this).toggleClass('color');
 
-		event.preventDefault();
-	});
+	// 	event.preventDefault();
+	// });
 
-	$('.dashboard-label > i').click(function(event) {
-		$(this)
-			.parent()
-			.parent()
-			.find('.tooltip')
-			.toggleClass('hidden');
-
-		event.preventDefault();
-	});
+	// $('.dashboard-label > i').click(function(event) {
+	// 	$(this).parent().parent().find('.tooltip').toggleClass('hidden');
+	// 	event.preventDefault();
+	// });
 
 	(function($) {
 		var allPanels = $('.acc-user-info');
 		allPanels.hide();
 
 		$('.acc-user-dropdown').click(function() {
-			allPanels.slideUp();
 			var content = $(this).siblings();
-			content.slideDown();
-			var iconPlus = $(this).find('.icon-plus');
-			var iconMinus = $(this).find('.icon-minus');
+			if(!content.is(':visible')){
+				allPanels.slideUp();
+				content.slideDown();
+				var accordian = $(this).parent().parent().parent();
+
+				if(accordian.hasClass('users-acc') == true){
+					$('.overview-background-second').addClass('overview-bgd-moved');
+				} else if (accordian.hasClass('users-acc') == false){
+					$('.overview-background-second').removeClass('overview-bgd-moved');
+				}
+			}
+
 		});
 	})(jQuery);
 

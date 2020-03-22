@@ -22,7 +22,7 @@
 	</div>
 	<h3><span class="heading-small">Start by: </span><br><span class="heading-small-two">Viewing the newest activity on your site.</span></h3>
 	<div class="welcome-links">
-		<a href="#users-overview"> New Users <span class="badge">{{ users|length }} </span></a>
+		<a href="#users-overview"> New Students <span class="badge">{{ new_users }}</span></a>
 		<a href="#uploads-overview"> New Uploads <span class="badge">6 </span></a>
 	</div>
 </div>
@@ -36,8 +36,8 @@
                         <h3>Users Overview</h3>
                         <div class="overview-box">
                                 <div>
-                                        <p>New Users: <span class="number">{{ new_users }}</span></p>
-                                        <p>Registered Users: <span class="number">{{ registered_users }}</span></p>
+                                        <p>New Students: <span class="number">{{ new_users }}</span></p>
+                                        <p>Registered Students: <span class="number">{{ registered_users }}</span></p>
                                 </div>
                                 <div>
                                         <a href="{% url 'admin_users' %}">Manage All Users</a>
@@ -57,7 +57,7 @@
         <!-- ====================ALERT CLOSE==================== -->
 
         <!-- ====================ACCORDION==================== -->
-                <div class="accordian"><!-- Accordian -->
+                <div class="accordian users-acc"><!-- Accordian -->
                         <h4>Latest User Activity</h4>
                         <div class="acc-tabs"><!-- Tabs-->
                                 <a href="#" class="acc-new-users">New</a>
@@ -85,13 +85,13 @@
                                                 </div><!-- User Dropdown -->
                                                 <div class="acc-user-info"><!-- User information -->
                                                         <div class="information">
-                                                                <p>Created on: (date)</p>
+                                                                <p>Created on: {{ user.date_joined| date:"M d, Y"}}</p>
                                                                 <p>Full Name: {{user.first_name}} {{user.last_name}}</p>
                                                                 <p>Email: {{user.email}}</p>
                                                         </div>
                                                         <div class="options">
-                                                                <a href="{% url 'delete_user' %}{{ user.username }}">Delete User</a>
                                                                 <a href="{% url 'approve_user' %}{{ user.username }}">Approve User</a>
+                                                                <a href="{% url 'delete_user' %}{{ user.username }}">Delete User</a>
                                                         </div>
                                                 </div><!-- User information -->
                                         </div><!-- Single user -->
@@ -120,13 +120,13 @@
                                                 </div><!-- User Dropdown -->
                                                 <div class="acc-user-info"><!-- User information -->
                                                         <div class="information">
-                                                                <p>Created on: (date)</p>
+                                                                <p>Created on: {{ user.date_joined| date:"M d, Y"}}</p>
                                                                 <p>Full Name: {{user.first_name}} {{user.last_name}}</p>
                                                                 <p>Email: {{user.email}}</p>
                                                         </div>
                                                         <div class="options">
-                                                                <a href="{% url 'edit_users' %}">Edit User</a>
-                                                                <a href="{% url 'approve_user' %}{{ user.username }}">Approve User</a>
+                                                                <a href="{% url 'edit_users' %}{{ user.username }}">Edit User</a>
+                                                                <a href="{% url 'delete_user' %}{{ user.username }}">Delete User</a>
                                                         </div>
                                                 </div><!-- User information -->
                                         </div><!-- Single user -->
@@ -136,7 +136,7 @@
 
                         </div><!-- Registered Users Content-->
 
-                        <a href="#" class="view-all">View all users</a>
+                        <a href="{% url 'admin_users' %}" class="view-all">View all users</a>
 
                 </div> <!-- Accordion -->
                 <!-- ====================ACCORDION CLOSE==================== -->
@@ -221,7 +221,7 @@
                 </div><!-- Published Uploads Content-->
         <!-- ====================PUBLISHED UPLOADS CLOSE==================== -->
 
-        <a href="" class="view-all">View all Uploads</a>
+        <a href="{% url 'admin_uploads' %}" class="view-all">View all Uploads</a>
 
         </div> <!-- Accordion -->
         <!-- ====================ACCORDION CLOSE==================== -->

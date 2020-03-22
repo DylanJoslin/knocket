@@ -107,6 +107,7 @@
         }
     }
 
+
     .overview-background-second{
         content: "";
         background: $primary;
@@ -129,5 +130,12 @@
         left: -1rem;
         z-index: -1;
     }
+
+     .overview-bgd-moved{
+        top: 88rem;
+        transition: 0.6s;
+    }
+
+    
 
 }

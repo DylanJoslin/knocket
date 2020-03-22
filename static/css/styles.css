@@ -1886,6 +1886,12 @@ td, th {
   }
 }
 
+.dashboard-main .overview-bgd-moved {
+  top: 88rem;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+}
+
 .dashboard-main .hidden {
   display: none;
 }
