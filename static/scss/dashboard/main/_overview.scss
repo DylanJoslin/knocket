@@ -92,18 +92,19 @@
         content: "";
         background: $primary;
         height: 24rem;
-        width: 98.8vw;
+        width: 100vw;
+        // width: 98.8vw;
         position: absolute;
         top: -8rem;
         left: -1rem;
         z-index: -1;
 
         @include breakpoint(tablet){
-            width: 99.3vw;
+            // width: 99.3vw;
         }
 
         @include breakpoint(laptop){
-            width: 99.8vw;
+            // width: 99.8vw;
         }
     }
 
@@ -112,14 +113,16 @@
         content: "";
         background: $primary;
         height: 23rem;
-        width: 98.8vw;
+        width: 100vw;
+        //width: 98.8vw;
         position: absolute;
         top: 80rem;
 
         @include breakpoint(tablet){
             top: 88rem;
             height: 25rem;
-            width: 99.3vw;
+            width: 100vw;
+            //width: 99.3vw;
         }
 
         @include breakpoint(laptop){
@@ -132,8 +135,24 @@
     }
 
      .overview-bgd-moved{
-        top: 88rem;
+        top: 106rem;
         transition: 0.6s;
+
+        @include breakpoint(tablet){
+            top: 112rem;
+        }
+
+        @include breakpoint(laptop){
+            top: 88rem;
+            
+        }
+        
+        @include breakpoint(desktop){
+            top: 85rem;
+            
+        }
+
+        
     }
 
     

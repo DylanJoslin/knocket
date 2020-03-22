@@ -1625,13 +1625,25 @@ td, th {
   }
 }
 
+@media screen and (min-width: 700px) {
+  .dashboard-main .accordian .acc-content .acc-single .acc-user-info .information {
+    padding-top: 2rem;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .dashboard-main .accordian .acc-content .acc-single .acc-user-info .information {
+    padding-top: 1rem;
+  }
+}
+
 .dashboard-main .accordian .acc-content .acc-single .acc-user-info .information p {
   margin-bottom: 1rem;
 }
 
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 700px) {
   .dashboard-main .accordian .acc-content .acc-single .acc-user-info .information p {
-    padding-right: 1.4rem;
+    padding-left: 2rem;
   }
 }
 
@@ -1656,6 +1668,16 @@ td, th {
 @media screen and (min-width: 700px) {
   .dashboard-main .accordian .acc-content .acc-single .acc-user-info .options {
     padding-left: 3rem;
+    padding-bottom: 2rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: unset;
+        -ms-flex-pack: unset;
+            justify-content: unset;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 
@@ -1670,6 +1692,7 @@ td, th {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    padding-bottom: 0;
   }
 }
 
@@ -1688,6 +1711,7 @@ td, th {
 @media screen and (min-width: 700px) {
   .dashboard-main .accordian .acc-content .acc-single .acc-user-info .options a {
     width: 30rem;
+    margin-right: 2rem;
   }
 }
 
@@ -1841,30 +1865,18 @@ td, th {
   content: "";
   background: #3EA3DF;
   height: 24rem;
-  width: 98.8vw;
+  width: 100vw;
   position: absolute;
   top: -8rem;
   left: -1rem;
   z-index: -1;
 }
 
-@media screen and (min-width: 700px) {
-  .dashboard-main .overview-background {
-    width: 99.3vw;
-  }
-}
-
-@media screen and (min-width: 1000px) {
-  .dashboard-main .overview-background {
-    width: 99.8vw;
-  }
-}
-
 .dashboard-main .overview-background-second {
   content: "";
   background: #3EA3DF;
   height: 23rem;
-  width: 98.8vw;
+  width: 100vw;
   position: absolute;
   top: 80rem;
   left: -1rem;
@@ -1875,7 +1887,7 @@ td, th {
   .dashboard-main .overview-background-second {
     top: 88rem;
     height: 25rem;
-    width: 99.3vw;
+    width: 100vw;
   }
 }
 
@@ -1887,9 +1899,27 @@ td, th {
 }
 
 .dashboard-main .overview-bgd-moved {
-  top: 88rem;
+  top: 106rem;
   -webkit-transition: 0.6s;
   transition: 0.6s;
+}
+
+@media screen and (min-width: 700px) {
+  .dashboard-main .overview-bgd-moved {
+    top: 112rem;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .dashboard-main .overview-bgd-moved {
+    top: 88rem;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .dashboard-main .overview-bgd-moved {
+    top: 85rem;
+  }
 }
 
 .dashboard-main .hidden {

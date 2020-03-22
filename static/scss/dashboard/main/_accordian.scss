@@ -78,11 +78,23 @@
 
                     .information{
 
+                        @include breakpoint(tablet){
+                            padding-top: 2rem;
+                        }
+
+                        @include breakpoint(laptop){
+                            padding-top: 1rem;
+                        }
+
                         p{
                             margin-bottom: 1rem;
 
+                            @include breakpoint(tablet){
+                                padding-left: 2rem;
+                            }
+
                             @include breakpoint(desktop){
-                                padding-right: 1.4rem;
+                                
                             }
                         }
 
@@ -96,16 +108,20 @@
 
                         @include breakpoint(tablet){
                             padding-left: 3rem;
+                            padding-bottom: 2rem;
+                            @include flex(unset);
                         }
 
                         @include breakpoint(laptop){
                             @include flex(unset);
+                            padding-bottom: 0;
                         }
 
                         a{
                             @include button;
                             @include breakpoint(tablet){
                                 width: 30rem;
+                                margin-right: 2rem;
                             }
 
                             @include breakpoint(laptop){
