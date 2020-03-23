@@ -6,13 +6,21 @@ from django.shortcuts import redirect
 # Create your views here.
 
 def post_list(request):
-# def post_list(request, post_category):
-    posts = VideoPost.objects.order_by('-date_posted')
-    # content = {
-    #     'video_posts': VideoPost.objects.all()
-    # }
-    # return render(request, 'stories/browse.html', context)
+    school_slug = request.GET.get('school')
+    category_slug = request.GET.get('category')
+
+    posts = VideoPost.objects.all()
+    
+    if school_slug:
+        posts = posts.filter(school=school_slug)
+    
+    if category_slug:
+        posts = posts.filter(category=category_slug)
+    
+    posts = posts.order_by('-date_posted')
+    
     return render(request, 'stories/browse.html', {'posts': posts})
+    
 
 def post_detail(request, post_slug):
     # post = get_object_or_404(VideoPost, pk=pk)
