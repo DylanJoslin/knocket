@@ -3,183 +3,250 @@
 {% block content %}
         
 <!-- ====================WELCOME BANNER==================== -->
-        <div class="welcome">
-                <h2>Manage site users</h2>
-                <div class="border">
-                        <div class="triangle-up"></div>
-                        <div class="triangle-down"></div>
-                        <div class="triangle-up"></div>
-                        <div class="triangle-down"></div>
-                        <div class="triangle-up"></div>
-                        <div class="triangle-down"></div>
-                        <div class="triangle-up"></div>
-                        <div class="triangle-down"></div>
-                        <div class="triangle-up"></div>
-                        <div class="triangle-down"></div>
-                        <div class="triangle-up"></div>
-                        <div class="triangle-down"></div>
-                        <div class="triangle-up"></div>
-                        <div class="triangle-down"></div>
-	        </div>
-                <p>Manage the site users. Create, delete and update user information and preferences.</p>
-        </div>
+	<div class="welcome">
+		<h2>Manage site users</h2>
+		<div class="border">
+			<div class="triangle-up"></div>
+			<div class="triangle-down"></div>
+			<div class="triangle-up"></div>
+			<div class="triangle-down"></div>
+			<div class="triangle-up"></div>
+			<div class="triangle-down"></div>
+			<div class="triangle-up"></div>
+			<div class="triangle-down"></div>
+			<div class="triangle-up"></div>
+			<div class="triangle-down"></div>
+			<div class="triangle-up"></div>
+			<div class="triangle-down"></div>
+			<div class="triangle-up"></div>
+			<div class="triangle-down"></div>
+		</div>
+		<p>Manage the site users. Create, delete and update user information and preferences.</p>
+	</div>
 <!-- ====================WELCOME BANNER CLOSE==================== -->
         
 <!-- ====================CONTAINER==================== -->
-        <div class="container">
+	<div class="container">
 
-        <!-- ====================OVERVIEW==================== -->
-                <div class="overview-background"></div>
-                <div class="overview">
-                        <h3>Users Overview</h3>
-                        <div class="overview-box">
-                                <div>
-                                        <p>New Students: <span class="number">{{ new_users }}</span></p>
-                                        <p>Registered Students: <span class="number">{{ registered_users }}</span></p>
-                                </div>
-                                <div>
-                                        <a href="{% url 'create_user' %}">Create New User</a>
-                                </div>
-                        </div>
-                </div><!--overview-->
-        <!-- ====================OVERVIEW CLOSE==================== -->
+	<!-- ====================USERS OVERVIEW==================== -->
+		<div class="overview-background"></div>
+		<div class="overview users-overview" id="users-overview">
+			<h3>Users Overview</h3>
+			<div class="overview-box">
+				<div>
+					<p>New Students: <span class="number">{{ new_users }}</span></p>
+					<p>Registered Students: <span class="number">{{ registered_users }}</span></p>
+				</div>
+				<div>
+					<a href="{% url 'create_user' %}">Create New User</a>
+				</div>
+			</div>
+		</div>
+	<!-- ====================USERS OVERVIEW CLOSE==================== -->
 
-        {% comment %} <div class="filter">
-                <div class="flex-container">
-                        <div class="dashboard-form">
-                        <form action="#">
-                                <div class="flex-form">
-                                        <div class="dashboard-form-group">
-                                                <label for="search" class="dashboard-label">Search <i class="fas fa-info-circle"></i></label>
-                                                <input type="text" id="search" name="search" class="dashboard-input">
-                                                <div class="tooltip hidden">
-                                                        <p>Enter a field that that youd want to search for! (example: someone's username)</p>
-                                                        <p>Click the information icon again to close this window.</p>
-                                                </div>
-                                        </div>
-                                        <button class="filter-button">Search</button>
-                                </div>
+	<!-- ====================ALERT==================== -->
+		{% if messages %}
+			{% for message in messages %}
+				<div class="alert alert-{{ message.tags }}">
+					{{ message }}
+				</div>
+			{% endfor%}
+		{% endif %}
+	<!-- ====================ALERT CLOSE==================== -->
 
-                                <div class="flex-form">
-                                        <div class="dashboard-form-group">
-                                                <label for="group" class="dashboard-label">Filter by group <i class="fas fa-info-circle"></i></label>
-                                                <select name="group" id="group" class="dashboard-input">
-                                                        <option value="none">Select</option>
-                                                        <option value="student">Student</option>
-                                                        <option value="teacher">Teacher</option>
-                                                        <option value="elder">Elder</option>
-                                                </select> 
-                                                <div class="tooltip hidden">
-                                                        <p>
-                                                                Select the name of the permission group you want to filter by.
-                                                        </p>
-                                                        <p>Click the icon again to close this window.</p>
-                                                </div>
-                                        </div>
+	<!-- ====================ACCORDION==================== -->
+		<div class="accordian users-acc"><!-- Accordian -->
+			<h4>Latest User Activity</h4>
+			<div class="acc-tabs"><!-- Tabs-->
+				<a href="#" class="acc-new-users">New</a>
+				<a href="#" class="acc-registered-users">Registered</a>
+				{% if user.userprofile.access == 'admin' %}
+				<a href="#" class="acc-teachers">Teachers</a>
+				<a href="#" class="acc-elders">Elders</a>
+				<a href="#" class="acc-admins">Admins</a>
+				{% endif %}
+			</div><!-- Tabs-->
 
-                                        <button class="filter-button">Filter</button>
-                                </div>
-                
-                        </form>
-                        </div>
-                </div>
-        </div> {% endcomment %}
+		<!-- ====================PENDING USERS==================== -->
+			<div id="new-users" class="acc-content"> <!-- New Users Content-->
+				{% for user in users %}
+					{% if user.userprofile.access == access %}
+					<!-- ====================SINGLE USER==================== -->
+						<div class="acc-single"> <!-- Single user -->
+							<div class="acc-user-dropdown"><!-- User Dropdown -->
+								<p class="acc-username">
+									{{user.username}} 
+									{% if user.userprofile.access == 'pending'%} 
+									<span class="acc-badge">New!</span> 
+									{% endif %}
+								</p>
+								<p class="icon-plus">+</p>
+								<p class="icon-minus hidden">-</p>
+							</div><!-- User Dropdown -->
+							<div class="acc-user-info"><!-- User information -->
+								<div class="information">
+									<p>Created on: {{ user.date_joined| date:"M d, Y"}}</p>
+									<p>Full Name: {{user.first_name}} {{user.last_name}}</p>
+									<p>Email: {{user.email}}</p>
+								</div>
+								<div class="options">
+									<a href="{% url 'approve_user' %}{{ user.username }}">Approve User</a>
+									<a href="{% url 'delete_user' %}{{ user.username }}">Delete User</a>
+								</div>
+							</div><!-- User information -->
+						</div><!-- Single user -->
+					<!-- ====================SINGLE USER CLOSE==================== -->      
+					{% endif %}
+				{% endfor %}
+			</div><!-- New Users Content-->
+		<!-- ==================PENDING USERS CLOSE =================== -->
 
-        <!-- ====================ALERT==================== -->
-         {% if messages %}
-                {% for message in messages %}
-                <div class="alert alert-{{ message.tags }}">
-                        {{ message }}
-                        {% comment %} <p>Alert</p> {% endcomment %}
-                </div>
-                 {% endfor%}
-        {% endif %} 
-        <!-- ====================ALERT CLOSE==================== -->
+		<!-- ====================STUDENTS==================== -->
+			<div id="registered-users" class="acc-content hidden"> <!-- New Users Content-->
+				{% for user in users %}
+					{% if user.userprofile.access == 'student' %}
+					<!-- ====================SINGLE USER==================== -->
+						<div class="acc-single"> <!-- Single user -->
+							<div class="acc-user-dropdown"><!-- User Dropdown -->
+								<p class="acc-username">
+									{{user.username}} 
+									{% if user.userprofile.access == 'student'%} 
+									<span class="acc-badge"><i class="fas fa-check-circle"></i></span> 
+									{% endif %}
+								</p>
+								<p class="icon-plus">+</p>
+								<p class="icon-minus hidden">-</p>
+							</div><!-- User Dropdown -->
+							<div class="acc-user-info"><!-- User information -->
+								<div class="information">
+									<p>Created on: {{ user.date_joined| date:"M d, Y"}}</p>
+									<p>Full Name: {{user.first_name}} {{user.last_name}}</p>
+									<p>Email: {{user.email}}</p>
+								</div>
+								<div class="options">
+									<a href="{% url 'edit_users' %}{{ user.username }}">Edit User</a>
+									<a href="{% url 'delete_user' %}{{ user.username }}">Delete User</a>
+								</div>
+							</div><!-- User information -->
+						</div><!-- Single user -->
+					<!-- ====================SINGLE USER CLOSE==================== -->      
+					{% endif %}
+				{% endfor %}
+			</div><!-- Registered Users Content-->
+		<!-- ==================STUDENTS CLOSE =================== -->
 
-        <!-- ====================ACCORDION==================== -->
-                <div class="accordian"><!-- Accordian -->
-                        <h4>Site Users</h4>
-                        <div class="acc-tabs"><!-- Tabs-->
-                                <a href="#" class="acc-new-users">New</a>
-                                <a href="#" class="acc-registered-users">Registered</a>
-                                {% comment %} <a href="{% url 'administration' %}teacher">Teachers</a>
-                                <a href="{% url 'administration' %}elder">Elders</a> {% endcomment %}
-                        </div><!-- Tabs-->
+			{% if user.userprofile.access == 'admin'%}
 
-                <!-- ====================NEW USERS==================== -->
-                        <div id="new-users" class="acc-content"> <!-- New Users Content-->
-                        {% for user in users %}
-                                {% if user.userprofile.access == access %} 
+				<!-- ====================TEACHERS==================== -->
+					<div id="teacher-users" class="acc-content hidden"> <!-- New Users Content-->
+						{% for user in users %}
+							{% if user.userprofile.access == 'teacher' %}
+							<!-- ====================SINGLE USER==================== -->
+								<div class="acc-single"> <!-- Single user -->
+									<div class="acc-user-dropdown"><!-- User Dropdown -->
+										<p class="acc-username">
+											{{user.username}} 
+											{% if user.userprofile.access == 'pending'%} 
+											<span class="acc-badge">New!</span> 
+											{% endif %}
+										</p>
+										<p class="icon-plus">+</p>
+										<p class="icon-minus hidden">-</p>
+									</div><!-- User Dropdown -->
+									<div class="acc-user-info"><!-- User information -->
+										<div class="information">
+											<p>Created on: {{ user.date_joined| date:"M d, Y"}}</p>
+											<p>Full Name: {{user.first_name}} {{user.last_name}}</p>
+											<p>Email: {{user.email}}</p>
+										</div>
+										<div class="options">
+											<a href="{% url 'approve_user' %}{{ user.username }}">Approve User</a>
+											<a href="{% url 'delete_user' %}{{ user.username }}">Delete User</a>
+										</div>
+									</div><!-- User information -->
+								</div><!-- Single user -->
+							<!-- ====================SINGLE USER CLOSE==================== -->      
+							{% endif %}
+						{% endfor %}
+					</div><!-- New Users Content-->
+				<!-- ==================TEACHERS CLOSE =================== -->
 
-                        <!-- ====================SINGLE USER==================== -->
-                                        <div class="acc-single"> <!-- Single user -->
-                                                <div class="acc-user-dropdown"><!-- User Dropdown -->
-                                                        <p class="acc-username">
-                                                                {{user.username}} 
-                                                                {% if user.userprofile.access == 'pending'%} 
-                                                                        <span class="acc-badge">New!</span> 
-                                                                {% endif %}
-                                                        </p>
-                                                        <p class="icon-plus">+</p>
-                                                        <p class="icon-minus hidden">-</p>
-                                                </div><!-- User Dropdown -->
-                                                <div class="acc-user-info"><!-- User information -->
-                                                        <div class="information">
-                                                                <p>Created on: {{ user.date_joined| date:"M d, Y"}}</p>
-                                                                <p>Full Name: {{user.first_name}} {{user.last_name}}</p>
-                                                                <p>Email: {{user.email}}</p>
-                                                        </div>
-                                                        <div class="options">
-                                                                <a href="{% url 'approve_user' %}{{ user.username }}">Approve User</a>
-                                                                <a href="{% url 'delete_user' %}{{ user.username }}">Delete User</a>
-                                                        </div>
-                                                </div><!-- User information -->
-                                        </div><!-- Single user -->
-                        <!-- ====================SINGLE USER CLOSE==================== -->      
-                                {% endif %}
-                        {% endfor %}
-                                
-                        </div><!-- New Users Content-->
+				<!-- ====================ELDERS==================== -->
+					<div id="elder-users" class="acc-content hidden"> <!-- New Users Content-->
+						{% for user in users %}
+							{% if user.userprofile.access == 'elder' %}
+							<!-- ====================SINGLE USER==================== -->
+								<div class="acc-single"> <!-- Single user -->
+									<div class="acc-user-dropdown"><!-- User Dropdown -->
+										<p class="acc-username">
+											{{user.username}} 
+											{% if user.userprofile.access == 'pending'%} 
+											<span class="acc-badge">New!</span> 
+											{% endif %}
+										</p>
+										<p class="icon-plus">+</p>
+										<p class="icon-minus hidden">-</p>
+									</div><!-- User Dropdown -->
+									<div class="acc-user-info"><!-- User information -->
+										<div class="information">
+											<p>Created on: {{ user.date_joined| date:"M d, Y"}}</p>
+											<p>Full Name: {{user.first_name}} {{user.last_name}}</p>
+											<p>Email: {{user.email}}</p>
+										</div>
+										<div class="options">
+											<a href="{% url 'approve_user' %}{{ user.username }}">Approve User</a>
+											<a href="{% url 'delete_user' %}{{ user.username }}">Delete User</a>
+										</div>
+									</div><!-- User information -->
+								</div><!-- Single user -->
+							<!-- ====================SINGLE USER CLOSE==================== -->      
+							{% endif %}
+						{% endfor %}
+					</div><!-- New Users Content-->
+				<!-- ==================ELDER CLOSE =================== -->
 
-                        <!-- ====================Registered USERS==================== -->
-                        <div id="registered-users" class="acc-content hidden"> <!-- New Users Content-->
-                        {% for user in users %}
-                                {% if user.userprofile.access == 'student' %}
+				<!-- ====================ADMINS==================== -->
+					<div id="admin-users" class="acc-content hidden"> <!-- New Users Content-->
+						{% for user in users %}
+							{% if user.userprofile.access == 'admin' %}
+							<!-- ====================SINGLE USER==================== -->
+								<div class="acc-single"> <!-- Single user -->
+									<div class="acc-user-dropdown"><!-- User Dropdown -->
+										<p class="acc-username">
+											{{user.username}} 
+											{% if user.userprofile.access == 'pending'%} 
+											<span class="acc-badge">New!</span> 
+											{% endif %}
+										</p>
+										<p class="icon-plus">+</p>
+										<p class="icon-minus hidden">-</p>
+									</div><!-- User Dropdown -->
+									<div class="acc-user-info"><!-- User information -->
+										<div class="information">
+											<p>Created on: {{ user.date_joined| date:"M d, Y"}}</p>
+											<p>Full Name: {{user.first_name}} {{user.last_name}}</p>
+											<p>Email: {{user.email}}</p>
+										</div>
+										<div class="options">
+											<a href="{% url 'approve_user' %}{{ user.username }}">Approve User</a>
+											<a href="{% url 'delete_user' %}{{ user.username }}">Delete User</a>
+										</div>
+									</div><!-- User information -->
+								</div><!-- Single user -->
+							<!-- ====================SINGLE USER CLOSE==================== -->      
+							{% endif %}
+						{% endfor %}
+					</div><!-- New Users Content-->
+				<!-- ==================ADMINS CLOSE =================== -->
 
-                        <!-- ====================SINGLE USER==================== -->
-                                        <div class="acc-single"> <!-- Single user -->
-                                                <div class="acc-user-dropdown"><!-- User Dropdown -->
-                                                        <p class="acc-username">
-                                                                {{user.username}} 
-                                                                {% if user.userprofile.access == 'student'%} 
-                                                                        <span class="acc-badge"><i class="fas fa-check-circle"></i></span> 
-                                                                {% endif %}
-                                                        </p>
-                                                        <p class="icon-plus">+</p>
-                                                        <p class="icon-minus hidden">-</p>
-                                                </div><!-- User Dropdown -->
-                                                <div class="acc-user-info"><!-- User information -->
-                                                        <div class="information">
-                                                                <p>Created on: {{ user.date_joined| date:"M d, Y"}}</p>
-                                                                <p>Full Name: {{user.first_name}} {{user.last_name}}</p>
-                                                                <p>Email: {{user.email}}</p>
-                                                        </div>
-                                                        <div class="options">
-                                                                <a href="{% url 'edit_users' %}{{ user.username }}">Edit User</a>
-                                                                <a href="{% url 'delete_user' %}{{ user.username }}">Delete User</a>
-                                                        </div>
-                                                </div><!-- User information -->
-                                        </div><!-- Single user -->
-                        <!-- ====================SINGLE USER CLOSE==================== -->      
-                                {% endif %}
-                        {% endfor %}
+			{% endif %}
 
-                        </div><!-- Registered STUDENTS Close-->
+			<a href="{% url 'admin_users' %}" class="view-all">View all users</a>
 
-                </div> <!-- Accordion -->
-                <!-- ====================ACCORDION CLOSE==================== -->
+		</div> <!-- Accordion -->
+	<!-- ====================ACCORDION CLOSE==================== -->
 
-        </div><!-- Container -->
+	</div><!-- Container -->
 <!-- ====================CONTAINER CLOSE==================== -->
 
 {% endblock content %}
