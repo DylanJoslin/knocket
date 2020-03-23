@@ -24,6 +24,11 @@ class UserProfileForm(forms.ModelForm):
         model = UserProfile
         fields = ('school',)
 
+class AdminUserProfileForm(forms.ModelForm):
+    class Meta: 
+        model = UserProfile
+        fields = ('school', 'access')
+
 
 # Model for loging into the website
 class LoginForm(forms.Form):

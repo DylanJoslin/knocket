@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User
 from django.contrib import messages
-from users.forms import AdminUserUpdateForm, RegistrationForm, LoginForm, UserProfileForm, UserUpdateForm, ProfileUpdateForm
+from users.forms import AdminUserUpdateForm, AdminUserProfileForm, RegistrationForm, LoginForm, UserProfileForm, UserUpdateForm, ProfileUpdateForm
 from django.contrib.auth.decorators import login_required
 # import pdb;pdb.set_trace()
 
@@ -97,7 +97,6 @@ def edit_users(request, username="none"):
                     profile = profile_form.save()
                     profile.user = user
                     profile.save()
-                    messages.success(request, f'User has been updated.')
                     return redirect('/administration')
                 else:
                     user_form = AdminUserUpdateForm(instance=user)
@@ -110,15 +109,16 @@ def edit_users(request, username="none"):
                 }
 
                 return render(request, 'administration/edit_user.html', context)
-        else:
-            messages.error(request, f'You do not have permission to perform this function.')
         return render(request, 'administration/edit_user.html')
 
 
 def create_user(request):
     if request.method == 'POST':
         form = RegistrationForm(request.POST)
-        profile_form = UserProfileForm(request.POST)
+        if request.user.userprofile.access == 'admin':
+            profile_form = AdminUserProfileForm(request.POST)
+        else:
+            profile_form = UserProfileForm(request.POST)
         if form.is_valid() and profile_form.is_valid():
             user = form.save()
             profile = profile_form.save(commit=False)
@@ -126,11 +126,10 @@ def create_user(request):
             profile.save()
             user.userprofile.access = 'student'
             user.userprofile.save()
-            messages.success(request, f'The students account has been created.')
             return redirect('admin_users')
     else: 
         form = RegistrationForm()
-        profile_form = UserProfileForm()
+        profile_form = AdminUserProfileForm()
 
     context = {
         'form': form,
@@ -149,7 +148,6 @@ def delete_user(request, username='none'):
             messages.success(request, f'This user has been deleted')
             return redirect('/administration')
     else:
-        messages.error(request, f'You do not have perission to perform this task.')
         return redirect('/administration')
 
 
@@ -159,8 +157,6 @@ def approve_user(request, username='none'):
             user = User.objects.get(username=username)
             user.userprofile.access = 'student'
             user.userprofile.save()
-            messages.success(request, f'This student has been approved!')
             return redirect('/administration')
         else:
-            messages.success(request, f'Cannot approve user!')
             return redirect('/administration')

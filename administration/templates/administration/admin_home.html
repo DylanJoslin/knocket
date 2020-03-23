@@ -62,8 +62,11 @@
                         <div class="acc-tabs"><!-- Tabs-->
                                 <a href="#" class="acc-new-users">New</a>
                                 <a href="#" class="acc-registered-users">Registered</a>
-                                {% comment %} <a href="{% url 'administration' %}teacher">Teachers</a>
-                                <a href="{% url 'administration' %}elder">Elders</a> {% endcomment %}
+                                {% if user.userprofile.access == 'admin' %}
+                                <a href="#" class="acc-teachers">Teachers</a>
+                                <a href="#" class="acc-elders">Elders</a>
+                                <a href="#" class="acc-admins">Admins</a>
+                                {% endif %}
                         </div><!-- Tabs-->
 
                 <!-- ====================NEW USERS==================== -->
@@ -135,6 +138,113 @@
                         {% endfor %}
 
                         </div><!-- Registered Users Content-->
+
+                        {% if user.userprofile.access == 'admin'%}
+                                <!-- ====================Teacher USERS==================== -->
+                                <div id="teacher-users" class="acc-content hidden"> <!-- New Users Content-->
+                                {% for user in users %}
+                                        {% if user.userprofile.access == 'teacher' %}
+
+                                <!-- ====================SINGLE USER==================== -->
+                                                <div class="acc-single"> <!-- Single user -->
+                                                        <div class="acc-user-dropdown"><!-- User Dropdown -->
+                                                                <p class="acc-username">
+                                                                        {{user.username}} 
+                                                                        {% if user.userprofile.access == 'student'%} 
+                                                                                <span class="acc-badge"><i class="fas fa-check-circle"></i></span> 
+                                                                        {% endif %}
+                                                                </p>
+                                                                <p class="icon-plus">+</p>
+                                                                <p class="icon-minus hidden">-</p>
+                                                        </div><!-- User Dropdown -->
+                                                        <div class="acc-user-info"><!-- User information -->
+                                                                <div class="information">
+                                                                        <p>Created on: {{ user.date_joined| date:"M d, Y"}}</p>
+                                                                        <p>Full Name: {{user.first_name}} {{user.last_name}}</p>
+                                                                        <p>Email: {{user.email}}</p>
+                                                                </div>
+                                                                <div class="options">
+                                                                        <a href="{% url 'edit_users' %}{{ user.username }}">Edit User</a>
+                                                                        <a href="{% url 'delete_user' %}{{ user.username }}">Delete User</a>
+                                                                </div>
+                                                        </div><!-- User information -->
+                                                </div><!-- Single user -->
+                                <!-- ====================SINGLE USER CLOSE==================== -->      
+                                        {% endif %}
+                                {% endfor %}
+
+                                </div><!-- Teacher Users Content-->
+
+                                <!-- ====================Elder USERS==================== -->
+                                <div id="elder-users" class="acc-content hidden"> <!-- New Users Content-->
+                                {% for user in users %}
+                                        {% if user.userprofile.access == 'elder' %}
+
+                                <!-- ====================SINGLE USER==================== -->
+                                                <div class="acc-single"> <!-- Single user -->
+                                                        <div class="acc-user-dropdown"><!-- User Dropdown -->
+                                                                <p class="acc-username">
+                                                                        {{user.username}} 
+                                                                        {% if user.userprofile.access == 'student'%} 
+                                                                                <span class="acc-badge"><i class="fas fa-check-circle"></i></span> 
+                                                                        {% endif %}
+                                                                </p>
+                                                                <p class="icon-plus">+</p>
+                                                                <p class="icon-minus hidden">-</p>
+                                                        </div><!-- User Dropdown -->
+                                                        <div class="acc-user-info"><!-- User information -->
+                                                                <div class="information">
+                                                                        <p>Created on: {{ user.date_joined| date:"M d, Y"}}</p>
+                                                                        <p>Full Name: {{user.first_name}} {{user.last_name}}</p>
+                                                                        <p>Email: {{user.email}}</p>
+                                                                </div>
+                                                                <div class="options">
+                                                                        <a href="{% url 'edit_users' %}{{ user.username }}">Edit User</a>
+                                                                        <a href="{% url 'delete_user' %}{{ user.username }}">Delete User</a>
+                                                                </div>
+                                                        </div><!-- User information -->
+                                                </div><!-- Single user -->
+                                <!-- ====================Elder USER CLOSE==================== -->      
+                                        {% endif %}
+                                {% endfor %}
+
+                                </div><!-- Registered Users Content-->
+
+                                <!-- ====================Admin USERS==================== -->
+                                <div id="admin-users" class="acc-content hidden"> <!-- New Users Content-->
+                                {% for user in users %}
+                                        {% if user.userprofile.access == 'admin' %}
+
+                                <!-- ====================SINGLE USER==================== -->
+                                                <div class="acc-single"> <!-- Single user -->
+                                                        <div class="acc-user-dropdown"><!-- User Dropdown -->
+                                                                <p class="acc-username">
+                                                                        {{user.username}} 
+                                                                        {% if user.userprofile.access == 'student'%} 
+                                                                                <span class="acc-badge"><i class="fas fa-check-circle"></i></span> 
+                                                                        {% endif %}
+                                                                </p>
+                                                                <p class="icon-plus">+</p>
+                                                                <p class="icon-minus hidden">-</p>
+                                                        </div><!-- User Dropdown -->
+                                                        <div class="acc-user-info"><!-- User information -->
+                                                                <div class="information">
+                                                                        <p>Created on: {{ user.date_joined| date:"M d, Y"}}</p>
+                                                                        <p>Full Name: {{user.first_name}} {{user.last_name}}</p>
+                                                                        <p>Email: {{user.email}}</p>
+                                                                </div>
+                                                                <div class="options">
+                                                                        <a href="{% url 'edit_users' %}{{ user.username }}">Edit User</a>
+                                                                        <a href="{% url 'delete_user' %}{{ user.username }}">Delete User</a>
+                                                                </div>
+                                                        </div><!-- User information -->
+                                                </div><!-- Single user -->
+                                <!-- ====================SINGLE USER CLOSE==================== -->      
+                                        {% endif %}
+                                {% endfor %}
+
+                                </div><!-- Admin Users Content-->
+                        {% endif %}
 
                         <a href="{% url 'admin_users' %}" class="view-all">View all users</a>
 

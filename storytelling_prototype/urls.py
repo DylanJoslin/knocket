@@ -42,15 +42,18 @@ urlpatterns = [
     path('approve/', administration_views.approve_user, name='approve_user'),
     path('approve/<slug:username>', administration_views.approve_user, name='approve_user'),
 
+    # Login/Logout
     path('register/', user_views.register, name='register'),
     path('login/', user_views.login_view, name='login'),
     path('logout/', user_views.logout_view, name='logout'),
 
+    # Posts
     path('post/', story_views.post_list, name='post_list'),
     # path('post/<slug:post_category>', story_views.post_list, name='post_list'),
     path('post/<slug:post_slug>/', story_views.post_detail, name='post_detail'),
     path('post/new', story_views.post_new, name='post_new'),
     
+    # User Profiles
     path('profile/', user_views.profile, name="profile"),
     path('profile/edit/', user_views.edit_profile, name="edit_profile"),
     
