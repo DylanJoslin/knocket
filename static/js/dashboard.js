@@ -37,10 +37,31 @@ $(document).ready(function() {
 		});
 	})(jQuery);
 
+
+	function fixBackground(thisElement, accInfoSelector){
+
+		if(thisElement.parent().parent().hasClass('users-acc') == true){
+
+			if(!accInfoSelector.is(':visible') ){
+
+				if($('.overview-background-second').hasClass('overview-bgd-moved') == true){
+					$('.overview-background-second').removeClass('overview-bgd-moved');
+				}
+
+			} else if(accInfoSelector.is(':visible') ){
+				if($('.overview-background-second').hasClass('overview-bgd-moved') == false){
+					$('.overview-background-second').addClass('overview-bgd-moved');
+				}
+			}
+
+		}
+
+	}
+
 	$('.acc-new-uploads').click(function(event) {
 		$('#new-uploads').removeClass('hidden');
 		$('#published-uploads').addClass('hidden');
-		
+
 		event.preventDefault();
 	});
 
@@ -52,11 +73,19 @@ $(document).ready(function() {
     });
     
     $('.acc-new-users').click(function(event) {
+
+
+
+
 		$('#new-users').removeClass('hidden');
 		$('#admin-users').addClass('hidden');
 		$('#registered-users').addClass('hidden');
 		$('#elder-users').addClass('hidden');
 		$('#teacher-users').addClass('hidden');
+
+		$thisElement = $(this);
+		$accInfoSelector = $('.users-acc > #new-users > .acc-single > .acc-user-info');
+		fixBackground($thisElement, $accInfoSelector);
 
 		event.preventDefault();
 	});
@@ -68,6 +97,10 @@ $(document).ready(function() {
 		$('#elder-users').addClass('hidden');
 		$('#teacher-users').addClass('hidden');
 
+		$thisElement = $(this);
+		$accInfoSelector = $('.users-acc > #registered-users > .acc-single > .acc-user-info');
+		fixBackground($thisElement, $accInfoSelector);
+
 		event.preventDefault();
 	});
 
@@ -77,6 +110,10 @@ $(document).ready(function() {
 		$('#registered-users').addClass('hidden');
 		$('#elder-users').addClass('hidden');
 		$('#admin-users').addClass('hidden');
+
+		$thisElement = $(this);
+		$accInfoSelector = $('.users-acc > #teacher-users > .acc-single > .acc-user-info');
+		fixBackground($thisElement, $accInfoSelector);
 
 		event.preventDefault();
 	});
@@ -88,6 +125,10 @@ $(document).ready(function() {
 		$('#admin-users').addClass('hidden');
 		$('#teacher-users').addClass('hidden');
 
+		$thisElement = $(this);
+		$accInfoSelector = $('.users-acc > #elder-users > .acc-single > .acc-user-info');
+		fixBackground($thisElement, $accInfoSelector);
+
 		event.preventDefault();
 	});
 
@@ -97,6 +138,10 @@ $(document).ready(function() {
 		$('#registered-users').addClass('hidden');
 		$('#elder-users').addClass('hidden');
 		$('#teacher-users').addClass('hidden');
+
+		$thisElement = $(this);
+		$accInfoSelector = $('.users-acc > #admin-users > .acc-single > .acc-user-info');
+		fixBackground($thisElement, $accInfoSelector);
 
 		event.preventDefault();
 	});
