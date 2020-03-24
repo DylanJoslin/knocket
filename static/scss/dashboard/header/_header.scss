@@ -1,33 +1,37 @@
 .dashboard-header{
-    padding: 1rem 1.6rem;
-    background: $dark;
+    z-index: 90;
+    padding: 2rem;
+    background: $nav-shown;
+    //border-right: 1px solid rgba(255, 255, 255, 0.447);
 
     @include breakpoint(maxTablet){
-        position: relative;
+        position: fixed;
         width: 100%;
-        @include nav-flex;
+        @include flex(space-between);
         align-items: center;
         transition: all 0.7s ease-in-out;
     }//breakpoint
 
     @include breakpoint(laptop){
-        width: 24rem;
+        width: 26rem;
         height: 200vh;
-        position: absolute;
-        left: 0;
-        top: 0;
+        position: fixed;
+        padding-left: 2.4rem;
 
     }//breakpoint
 
-    h1{
-        margin: 0;
-        font-size: 4rem;
+    .logo{
         color: $white;
 
         @include breakpoint(laptop){
             margin: 3rem 0;
             text-align: center;
         }//breakpoint
+
+        a:hover{
+            transition: $hover-transition;
+            color: $primary;
+        }
 
     }//h1
 
@@ -37,7 +41,7 @@
     background-color: $nav-shown;
 
     @include breakpoint(laptop){
-        background: $dark;
+        background: $third;
     }//breakpoint
 
 }//.menu-closed-header-styles

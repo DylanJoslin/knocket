@@ -1,0 +1,103 @@
+{% extends 'administration/base.html' %}
+
+{% block content %}
+        
+<!-- ====================WELCOME BANNER==================== -->
+        <div class="welcome">
+                <h2>Editing {{ edited_user.first_name }} {{ edited_user.last_name }}'s information</h2>
+                <div class="border">
+                        <div class="triangle-up"></div>
+                        <div class="triangle-down"></div>
+                        <div class="triangle-up"></div>
+                        <div class="triangle-down"></div>
+                        <div class="triangle-up"></div>
+                        <div class="triangle-down"></div>
+                        <div class="triangle-up"></div>
+                        <div class="triangle-down"></div>
+                        <div class="triangle-up"></div>
+                        <div class="triangle-down"></div>
+                        <div class="triangle-up"></div>
+                        <div class="triangle-down"></div>
+                        <div class="triangle-up"></div>
+                        <div class="triangle-down"></div>
+	        </div>
+        </div>
+<!-- ====================WELCOME BANNER CLOSE==================== -->
+        
+<!-- ====================CONTAINER==================== -->
+        <div class="width-container">
+
+            <div class="flex-container">
+                <div class="dashboard-form">
+                    <form method="POST">
+											{% csrf_token %} 
+											{% for field in form %}
+												<div class="dashboard-form-group">
+														<label class="dashboard-label" for="{{ field.html_name }}">{{ field.label }}</label>
+														<input 
+																type="{{ field.field.widget.input_type }}" 
+																name="{{ field.html_name }}" 
+																id="{{ field.html_name }}" 
+																class="dashboard-input" 
+																max_length="{{ field.field.max_length }}"
+																min_length="{{ field.field.min_length }}"
+																value="{{field.value}}"
+														>
+													{% comment %} If there are errors, loop through them and create a div containing the error message {% endcomment %}
+													{% if field.errors %}
+															{% for error in field.errors %}
+																	<div class="alert">
+																			{{ error|escape }}
+																	</div>
+															{% endfor %}
+													{% endif %}
+													</div>
+											{% endfor %}
+
+											{% for field in profile_form %}
+												{% comment %} CREATE SELECT HTML ELEMENT {% endcomment %}
+												{% if field.field.widget.input_type == 'select' %}
+														<div class="dashboard-form-group mb-4">
+																<label class="dashboard-label" for="{{ field.html_name }}">{{ field.label }}</label>
+																<select name="{{ field.html_name }}" id="{{ field.html_name }}" class="dashboard-input">
+																		{% for choice in field.field.choices %}
+																				<option value="{{ choice.0 }}">{{ choice.1 }}</option>
+																		{% endfor %}
+																</select>
+														</div>
+
+												{% comment %} CREATE TEXT INPUT HTML ELEMENT {% endcomment %}
+												{% elif field.field.widget.input_type != 'select' %}
+														<div class="dashboard-form-group">
+																<label class="dashboard-label" for="{{ field.html_name }}">{{ field.label }}</label>
+																<input 
+																		type="{{ field.field.widget.input_type }}" 
+																		name="{{ field.html_name }}" 
+																		id="{{ field.html_name }}" 
+																		class="dashboard-input" 
+																		max_length="{{ field.field.max_length }}"
+																		min_length="{{ field.field.min_length }}"
+																>
+														</div>
+												{% endif %}
+
+												{% comment %} If there are errors, loop through them and create a div containing the error message {% endcomment %}
+												{% if field.errors %}
+														{% for error in field.errors %}
+																<div class="alert">
+																		{{ error|escape }}
+																</div>
+														{% endfor %}
+												{% endif %}
+											{% endfor %}
+											<button class="form-button">Submit Changes</button>
+                    </form>
+                </div>
+                <div class="side-image"></div>
+            </div>
+
+        </div><!--Container-->
+<!-- ====================CONTAINER CLOSE==================== -->
+
+{% endblock content %}
+
