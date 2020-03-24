@@ -7,9 +7,10 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 
 def register(request):
+
     if request.method == 'POST':
-        form = RegistrationForm(request.POST, instance=request.user)
-        profile_form = UserProfileForm(request.POST, instance=request.user)
+        form = RegistrationForm(request.POST)
+        profile_form = UserProfileForm(request.POST)
         if form.is_valid() and profile_form.is_valid():
             user = form.save()
 
@@ -19,9 +20,9 @@ def register(request):
             profile.user = user
             # THEN save to database
             profile.save()
+            login(request, user)
 
-            messages.success(request, f'Your account has been created! You can now log in.')
-            return redirect('home')
+            return redirect('profile')
     else: 
         form = RegistrationForm()
         profile_form = UserProfileForm()

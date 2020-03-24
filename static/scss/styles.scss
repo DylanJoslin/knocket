@@ -1,3 +1,15 @@
+/* ------------------------------------------------------
+                LANDING STYLES
+------------------------------------------------------ */
+@import 'landing-page/reset';
+@import 'config';
+@import 'landing-page/typography';
+@import 'landing-page/styling';
+@import 'landing-page/header';
+@import 'landing-page/banner';
+@import 'landing-page/menu';
+@import 'landing-page/about-us';
+@import 'landing-page/footer';
 
 /* ------------------------------------------------------
                 MAP STYLES
@@ -5,24 +17,40 @@
 @import 'map/map-styles';
 
 /* ------------------------------------------------------
+<<<<<<< HEAD
                 UPLOAED CARD STYLES
 ------------------------------------------------------ */
 @import 'uploadedpost/uploadedstyles';
+/*-----------------------------------------------------
+                RESOURCES STYLES
+------------------------------------------------------ */
+@import 'resources/resource-card';
+// >>>>>>> origin/master
 
 /* ------------------------------------------------------
                 DASHBOARD STYLES
 ------------------------------------------------------ */
 @import 'dashboard/base/minireset';
 @import 'dashboard/base/variables';
-@import 'dashboard/base/mixins';
 @import 'dashboard/base/base';
+
+@import 'dashboard/mixins/base';
+@import 'dashboard/mixins/buttons';
+@import 'dashboard/mixins/links';
+@import 'dashboard/mixins/forms';
+@import 'dashboard/mixins/accordian';
+
 @import 'dashboard/base/typography';
+
 @import 'dashboard/header/header';
 @import 'dashboard/header/navigation';
 @import 'dashboard/header/mobile-menu';
-@import 'dashboard/main/main-base';
+
+@import 'dashboard/main/welcome';
 @import 'dashboard/main/accordian';
-
-
+@import 'dashboard/main/overview';
+@import 'dashboard/main/forms';
+@import 'dashboard/main/filter-forms';
+@import 'dashboard/main/alerts';
 
 

@@ -1,0 +1,100 @@
+.dashboard-main{
+
+    .hidden{
+        display: none;
+    }
+
+    .dashboard-form{
+        @include padding(small);
+        
+        @include breakpoint(tablet){
+        @include padding(medium);
+            width: 76%;
+            padding-top: 0;
+        }
+
+        @include breakpoint(laptop){
+            @include padding(large);
+            width: 78%;
+        }
+
+        .dashboard-form-group{
+            position: relative;
+            margin-bottom: 2rem;
+
+            .tooltip{
+                @include tooltip;
+                
+                p{
+                    color: white;
+                    font-size: 1.8rem;
+                }
+
+                p:nth-child(2n){
+                    margin-bottom: 0;
+                }
+            }
+
+            .required{
+                color: $secondary;
+            }
+
+            .dashboard-label{
+                @include formLabels;
+
+                .color{
+                    color: $primary;
+                }
+            }
+    
+            .dashboard-input{
+                @include formInputs;
+            }
+
+        }
+
+        .form-button{
+            @include button;
+            width: 100%;
+            margin-top: 5rem;
+            @include breakpoint(tablet){
+                width: 50%;
+            }
+        }
+
+        .form-button:hover{
+            @include button-hover;
+        }
+
+    }
+
+    .flex-container{
+        @include breakpoint(tablet){
+            @include flex(unset);
+        }
+
+        .side-image {
+            display: none;
+            @include breakpoint(tablet){
+                background: rgba(128, 128, 128, 0.529);
+                border: 1px solid grey;
+                padding: 25rem 8rem;
+                display: inline-block;
+                margin-left: 1rem;
+            }
+
+            @include breakpoint(laptop){
+                padding: 25rem 8rem;
+            }
+
+        }
+
+        .create-form-image{
+            @include breakpoint(tablet){
+                padding: 30rem 8rem;
+            }
+        }
+        
+    }
+
+}

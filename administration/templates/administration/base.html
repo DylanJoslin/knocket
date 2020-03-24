@@ -1,40 +1,41 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dashboard-html">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Indigenous Storytelling</title>
+    <title>Indigenous Storytelling | Dashboard</title>
     <script src="https://kit.fontawesome.com/8a1af29f7b.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 </head>
 <body class="dashboard-body">
 
     <header class="dashboard-header">
-        <h1>Title</h1>
-        <nav class="dashboard-navigation"> 
+        <h1 class="logo"><a href="{% url 'home' %}">Indigenous <br><span>Storytelling</span></a></h1>
+        <nav class="dashboard-navigation">
+            <p class="navigation-para">Dashboard</p>
             <ul class="menu-links">
                 <li class="nav-link">
-                    <a href="#">
+                    <a href="{% url 'administration' %}">
                         <p>Home</p>
                         <p><i class="fas fa-home"></i></p>
                     </a>
                 </li>
                 <li class="nav-link">
-                    <a href="#">
+                    <a href="{% url 'admin_users' %}">
                         <p>Users</p>
                         <p><i class="fas fa-users"></i></p>
                     </a>
                 </li>
                 <li class="nav-link">
-                    <a href="#">
+                    <a href="{% url 'admin_uploads' %}">
                         <p>Content</p>
                         <p><i class="fas fa-image"></i></p>
                     </a>
                 </li>
                 <li class="logout">
-                        <p class="signed-in"><span>Signed in as,</span><br> John Doe</p>
-                         <a href="#"><p>Logout <i class="fas fa-sign-out-alt"></i></p></a>
+                        <p class="signed-in"><span>Signed in as,</span><br> {{ user.username }}</p>
+                         <a href="{% url 'logout' %}"><p>Logout <i class="fas fa-sign-out-alt"></i></p></a>
                 </li>
             </ul>
         </nav>
@@ -45,7 +46,8 @@
 
 
     <main class="dashboard-main">
-        <h1>{% block content%}{% endblock %}</h1>
+        {% block content%}
+        {% endblock %}
     </main>
 
     <script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>

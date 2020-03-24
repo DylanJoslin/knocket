@@ -1,0 +1,41 @@
+$red-colour: #FB4547;
+$dark-blue: #0C2946;
+$light-blue: #3EA3DF;
+$dark-purple: #51508B;
+$light-purple: #B4B9E5;
+$orange: #FF7918;
+
+
+@mixin flex{
+    display: flex;
+    justify-content: space-between;
+}
+
+@mixin button{
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+
+
+/* Media Queries for different viewport sizes*/
+
+@mixin media-md {
+    @media screen and (min-width: 768px) {
+        @content;
+    }
+}
+
+@mixin media-lg {
+    @media screen and (min-width: 1024px) {
+        @content;
+    }
+}
+
+@mixin media-xl {
+    @media screen and (min-width: 1600px) {
+        @content;
+    }
+}
