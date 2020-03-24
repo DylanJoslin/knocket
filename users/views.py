@@ -20,9 +20,9 @@ def register(request):
             profile.user = user
             # THEN save to database
             profile.save()
+            login(request, user)
 
-            messages.success(request, f'Your account has been created! You can now log in.')
-            return redirect('home')
+            return redirect('profile')
     else: 
         form = RegistrationForm()
         profile_form = UserProfileForm()

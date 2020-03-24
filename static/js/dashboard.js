@@ -53,7 +53,10 @@ $(document).ready(function() {
     
     $('.acc-new-users').click(function(event) {
 		$('#new-users').removeClass('hidden');
+		$('#admin-users').addClass('hidden');
 		$('#registered-users').addClass('hidden');
+		$('#elder-users').addClass('hidden');
+		$('#teacher-users').addClass('hidden');
 
 		event.preventDefault();
 	});
@@ -61,6 +64,39 @@ $(document).ready(function() {
 	$('.acc-registered-users').click(function(event) {
 		$('#registered-users').removeClass('hidden');
 		$('#new-users').addClass('hidden');
+		$('#admin-users').addClass('hidden');
+		$('#elder-users').addClass('hidden');
+		$('#teacher-users').addClass('hidden');
+
+		event.preventDefault();
+	});
+
+	$('.acc-teachers').click(function (event) {
+		$('#teacher-users').removeClass('hidden');
+		$('#new-users').addClass('hidden');
+		$('#registered-users').addClass('hidden');
+		$('#elder-users').addClass('hidden');
+		$('#admin-users').addClass('hidden');
+
+		event.preventDefault();
+	});
+
+	$('.acc-elders').click(function (event) {
+		$('#elder-users').removeClass('hidden');
+		$('#new-users').addClass('hidden');
+		$('#registered-users').addClass('hidden');
+		$('#admin-users').addClass('hidden');
+		$('#teacher-users').addClass('hidden');
+
+		event.preventDefault();
+	});
+
+	$('.acc-admins').click(function (event) {
+		$('#admin-users').removeClass('hidden');
+		$('#new-users').addClass('hidden');
+		$('#registered-users').addClass('hidden');
+		$('#elder-users').addClass('hidden');
+		$('#teacher-users').addClass('hidden');
 
 		event.preventDefault();
 	});
