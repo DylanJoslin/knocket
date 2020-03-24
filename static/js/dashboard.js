@@ -40,7 +40,7 @@ $(document).ready(function() {
 	$('.acc-new-uploads').click(function(event) {
 		$('#new-uploads').removeClass('hidden');
 		$('#published-uploads').addClass('hidden');
-
+		
 		event.preventDefault();
 	});
 

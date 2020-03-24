@@ -19,10 +19,10 @@
         }
 
         .acc-tabs{
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.7rem;
 
-            @include breakpoint(laptop){
-                margin-bottom: 0.8rem;
+            @include breakpoint(tablet){
+                margin-bottom: 0.85rem;
             }
 
             a{
