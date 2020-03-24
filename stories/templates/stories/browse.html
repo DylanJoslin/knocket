@@ -1,17 +1,7 @@
 {% extends 'home/base.html' %}
-{% load static %}
 
 {% block content %}
-    <h1>Post List</h1>
-    {% for post in posts %}
-    <div>
-        {% if post.image %}
-        <!-- <img src="{{ post.image.url }}" alt=""> -->
-        <img src="{% static 'media/' %}{{ post.image }}" alt="">
-        {% endif %}
-        <h2><a href="{% url 'post_detail' post.slug %}">{{ post.title }} - <span>{{ post.author }}</span></a></h2>
-        
-    </div> 
-{% endfor %}
-    
+    <h2>In the Storytelling Video Post View</h2>
+    <p>Here we can loop through the database of videos and output links to them.</p>
+    <p>We can also include the small medicine wheel for filtering through  different types of videos.</p>
 {% endblock content %}

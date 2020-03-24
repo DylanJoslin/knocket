@@ -1,558 +1,50 @@
 /* ------------------------------------------------------
-                LANDING STYLES
+                MAP STYLES
 ------------------------------------------------------ */
-/* Box sizing rules */
-*,
-*::before,
-*::after {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-/* Remove default padding */
-ul[class],
-ol[class] {
-  padding: 0;
-}
-
-/* Remove default margin */
-body,
-h1,
-h2,
-h3,
-h4,
-p,
-ul[class],
-ol[class],
-li,
-figure,
-figcaption,
-blockquote,
-dl,
-dd {
-  margin: 0;
-}
-
-/* Set core body defaults */
 body {
-  min-height: 100vh;
-  scroll-behavior: smooth;
-  text-rendering: optimizeSpeed;
+  background-color: white;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
   line-height: 1.5;
+  color: #999999;
+  background-color: #0c2034;
+  /* background: linear-gradient(#0ff 0.0555555em, transparent 0.0555555em); */
+  /*24px for ideal gap*/
 }
 
-/* Remove list styles on ul, ol elements with a class attribute */
-ul[class],
-ol[class] {
-  list-style: none;
-}
-
-/* A elements that don't have a class get default styles */
-a:not([class]) {
-  text-decoration-skip-ink: auto;
-}
-
-/* Make images easier to work with */
-img {
-  max-width: 100%;
-  display: block;
-}
-
-/* Natural flow and rhythm in articles by default */
-article > * + * {
-  margin-top: 1em;
-}
-
-/* Inherit fonts for inputs and buttons */
-input,
-button,
-textarea,
-select {
-  font: inherit;
-}
-
-/* Remove all animations and transitions for people that prefer not to see them */
-@media (prefers-reduced-motion: reduce) {
-  * {
-    -webkit-animation-duration: 0.01ms !important;
-            animation-duration: 0.01ms !important;
-    -webkit-animation-iteration-count: 1 !important;
-            animation-iteration-count: 1 !important;
-    -webkit-transition-duration: 0.01ms !important;
-            transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
-}
-
-/* Media Queries for different viewport sizes*/
-/* CARDO FONT */
-@font-face {
-  font-family: "Cardo Bold";
-  src: url("/static/fonts/Cardo-Bold.ttf");
-}
-
-@font-face {
-  font-family: "Cardo Italic";
-  src: url("/static/fonts/Cardo-Italic.ttf");
-}
-
-@font-face {
-  font-family: "Cardo Regular";
-  src: url("/static/fonts/Cardo-Regular.ttf");
-}
-
-/* RALEWAY FONT */
-@font-face {
-  font-family: "Raleway Light";
-  src: url("/static/fonts/Raleway-Light.ttf");
-}
-
-@font-face {
-  font-family: "Raleway Bold";
-  src: url("/static/fonts/Raleway-Bold.ttf");
-}
-
-@font-face {
-  font-family: "Raleway Bold Italic";
-  src: url("/static/fonts/Raleway-BoldItalic.ttf");
-}
-
-@font-face {
-  font-family: "Raleway Regular";
-  src: url("/static/fonts/Raleway-Regular.ttf");
-}
-
-@font-face {
-  font-family: "Raleway Thin";
-  src: url("/static/fonts/Raleway-Thin.ttf");
-}
-
-@font-face {
-  font-family: "Raleway Thin Italic";
-  src: url("/static/fonts/Raleway-ThinItalic.ttf");
-}
-
-/* Custom Styles for Typography */
-h1, h2, h3, h4, h5 {
-  margin: 2.75rem 0 1.05rem;
-  font-weight: 500;
-  line-height: 1.15;
-}
-
-/* FONT-SIZES FOR IPAD/DESKTOP*/
 h1 {
-  font: 20px/1 'Cardo Regular', sans-serif;
   margin-top: 0;
-  color: white;
-  text-transform: uppercase;
-}
-
-h1 span {
-  text-transform: none;
-  font-style: italic;
-  margin-left: 36px;
-}
-
-@media screen and (min-width: 768px) {
-  h1 span {
-    margin-left: 50px;
-  }
-}
-
-h1 a {
-  text-decoration: none;
-  color: white;
-}
-
-@media screen and (min-width: 768px) {
-  h1 {
-    font-size: 28px;
-  }
+  font-size: 1.802em;
+  padding-top: 5rem;
 }
 
 h2 {
-  font: 2.074em/1.5 'Raleway Regular', sans-serif;
-}
-
-@media screen and (min-width: 768px) {
-  h2 {
-    font-size: 3.157em;
-  }
+  font-size: 1.602em;
 }
 
 h3 {
-  font: 1.728em/1.5 'Cardo Bold', sans-serif;
-  color: #51508B;
-}
-
-@media screen and (min-width: 768px) {
-  h3 {
-    font-size: 2.369em;
-  }
+  font-size: 1.424em;
 }
 
 h4 {
-  font: 1.44em/1.5 'Cardo Bold', sans-serif;
-  color: #B4B9E5;
+  font-size: 1.266em;
 }
 
-p {
-  font: 18px/1.5 'Raleway Regular', sans-serif;
-  text-align: justify;
+h5 {
+  font-size: 1.125em;
 }
 
-.inner-container {
-  margin: 0 4%;
+.text_small {
+  font-size: 0.889em;
 }
 
-@media screen and (min-width: 1024px) {
-  .inner-container {
-    margin: 0 14%;
-  }
-}
-
-img, .treaty-img {
-  max-width: 100%;
-  height: auto;
-}
-
-.treaty .content {
-  margin-bottom: 100px;
-}
-
-@media screen and (min-width: 768px) {
-  .treaty .content {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
-}
-
-.treaty h3 {
-  text-align: center;
-  text-transform: uppercase;
-  margin-bottom: 20px;
-}
-
-.treaty .treaty-img {
-  width: 60%;
-  margin: 0 auto;
-  margin-bottom: 40px;
-}
-
-@media screen and (min-width: 768px) {
-  .treaty .treaty-img {
-    width: 200px;
-    height: 200px;
-    margin-right: 40px;
-  }
-}
-
-header .top-header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding: 30px 10px;
-  background-color: #3EA3DF;
-}
-
-@media screen and (min-width: 768px) {
-  header .top-header {
-    margin-bottom: 70px;
-  }
-}
-
-header .login {
-  margin-top: 8px;
-}
-
-header .login a {
-  font-family: 'Cardo Regular', sans-serif;
-  text-transform: uppercase;
-  font-size: 12px;
-  text-decoration: none;
-  color: white;
-  background-color: #FB4547;
-  padding: 8px;
-  margin-top: 10px;
-  border-radius: 8px;
-}
-
-header .login a:hover {
-  background-color: #B4B9E5;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-}
-
-header .menu {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.menu-toggle {
-  margin-left: 20px;
-  font-size: 30px;
-  text-decoration: none;
-  color: white;
-}
-
-.navigation {
-  position: absolute;
-  top: -100%;
-  left: 0;
-  background-color: #3EA3DF;
-  width: 100%;
-  height: 100vh;
-}
-
-.navigation .close-nav {
-  text-decoration: none;
-  color: white;
-  font-size: 34px;
-  position: absolute;
-  top: 24px;
-  left: 93%;
-  -webkit-transition: .5 ease-in-out;
-  transition: .5 ease-in-out;
-}
-
-@media screen and (min-width: 768px) {
-  .navigation .close-nav {
-    left: 95%;
-  }
-}
-
-.navigation ul {
-  margin-top: 80px;
-}
-
-.navigation ul li {
-  list-style-type: none;
-  text-align: center;
-  margin-bottom: 60px;
-}
-
-.navigation ul li a {
-  font-family: 'Raleway Regular', sans-serif;
-  text-transform: uppercase;
-  font-size: 24px;
-  text-decoration: none;
-  color: white;
-}
-
-.navigation ul li a.underline-link {
-  display: inline-block;
-  color: white;
-  text-decoration: none;
-}
-
-.navigation ul li a.underline-link::after {
-  content: '';
-  display: block;
-  width: 0;
-  height: 2px;
-  padding-top: 2px;
-  background: #FF7918;
-  -webkit-transition: width .3s;
-  transition: width .3s;
-}
-
-.navigation ul li a.underline-link:hover::after {
-  width: 50%;
-}
-
-.navigation ul li a .dropdown {
-  color: #FF7918;
-  font-size: 18px;
-  margin-left: 10px;
-}
-
-.navigation ul li .sub-menu {
-  display: none;
-}
-
-.show-nav {
-  top: 0;
-  -webkit-transition: .8s ease;
-  transition: .8s ease;
-}
-
-.show-sub-menu {
-  display: block;
-}
-
-.about {
-  margin-top: 80px;
-}
-
-.about h3 {
-  text-align: center;
-  text-transform: uppercase;
-  margin-bottom: 10px;
-}
-
-.about .content {
-  margin-bottom: 120px;
-}
-
-.about .grid .member-1, .about .grid .member-2, .about .grid .member-3 {
-  margin-bottom: 80px;
-}
-
-@media screen and (min-width: 768px) {
-  .about .grid .member-1, .about .grid .member-2, .about .grid .member-3 {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
-}
-
-.about .grid .member-1 h4, .about .grid .member-2 h4, .about .grid .member-3 h4 {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.about .grid .member-1 .member-img, .about .grid .member-2 .member-img, .about .grid .member-3 .member-img {
-  margin: 0 auto;
-  width: 300px;
-  border-radius: 20px;
-  margin-bottom: 10px;
-}
-
-@media screen and (min-width: 768px) {
-  .about .grid .member-1 .member-img, .about .grid .member-2 .member-img, .about .grid .member-3 .member-img {
-    width: 1400px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .about .grid .member-1 .description, .about .grid .member-2 .description, .about .grid .member-3 .description {
-    margin-left: 40px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .about .grid .member-2 {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: row-reverse;
-            flex-direction: row-reverse;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .about .grid .member-2 .description {
-    margin-left: 0;
-    margin-right: 40px;
-  }
-}
-
-footer {
-  background-color: #3EA3DF;
-  padding: 30px 10px;
-}
-
-footer h1 {
-  text-align: center;
-  opacity: 20%;
-  margin-bottom: 20px;
-}
-
-footer .line {
-  width: 300px;
-  margin: 0 auto;
-  height: 2px;
-  background-color: white;
-  opacity: 10%;
-  margin-bottom: 40px;
-}
-
-footer .row {
-  text-align: center;
-  color: white;
-}
-
-@media screen and (min-width: 768px) {
-  footer .row {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
-}
-
-footer .row .col {
-  margin-bottom: 40px;
-  width: 100%;
-}
-
-@media screen and (min-width: 768px) {
-  footer .row .col {
-    width: 33.333%;
-  }
-}
-
-footer .row .col li {
-  margin-bottom: 4px;
-}
-
-footer .row .col a {
-  text-decoration: none;
-  color: white;
-}
-
-footer .row .col a:hover {
-  color: #B4B9E5;
-}
-
-footer .row .col li:nth-child(1) {
-  font-family: 'Cardo Italic', sans-serif;
-  text-transform: uppercase;
-  margin-bottom: 10px;
-}
-
-footer .bottom {
-  color: #B4B9E5;
-  opacity: 20%;
-}
-
-footer .bottom p {
-  text-align: center;
-  font-size: 16px;
-}
-
-/* ------------------------------------------------------
-                MAP STYLES
------------------------------------------------------- */
 /*============================================
                    Custom Styles 
    ===========================================*/
 /*---------- General ----------*/
 main {
   height: 100%;
-}
-
-.interactive-map {
-  background-color: #0c2034;
+  padding: 5rem 0;
 }
 
 a {
@@ -879,7 +371,6 @@ a:hover {
 }
 
 /* ------------------------------------------------------
-<<<<<<< HEAD
                 UPLOAED CARD STYLES
 ------------------------------------------------------ */
 * {
@@ -1202,716 +693,6 @@ section {
   background-color: #41c7c7;
 }
 
-/*Boundary line*/
-#ui {
-  position: absolute;
-  top: 20%;
-  width: 100%;
-}
-
-#ui .track {
-  position: absolute;
-  left: 35px;
-  width: 2%;
-  height: 0px;
-  border-radius: 999px;
-  float: left;
-}
-
-#ui .track.track_1 .foot.left {
-  -webkit-animation: fadeOut 3000ms infinite linear 300ms;
-          animation: fadeOut 3000ms infinite linear 300ms;
-}
-
-#ui .track.track_1 .foot.right {
-  -webkit-animation: fadeOut 3000ms infinite linear 450ms;
-          animation: fadeOut 3000ms infinite linear 450ms;
-}
-
-#ui .track.track_2 .foot.left {
-  -webkit-animation: fadeOut 3000ms infinite linear 600ms;
-          animation: fadeOut 3000ms infinite linear 600ms;
-}
-
-#ui .track.track_2 .foot.right {
-  -webkit-animation: fadeOut 3000ms infinite linear 750ms;
-          animation: fadeOut 3000ms infinite linear 750ms;
-}
-
-#ui .track.track_3 .foot.left {
-  -webkit-animation: fadeOut 3000ms infinite linear 900ms;
-          animation: fadeOut 3000ms infinite linear 900ms;
-}
-
-#ui .track.track_3 .foot.right {
-  -webkit-animation: fadeOut 3000ms infinite linear 1050ms;
-          animation: fadeOut 3000ms infinite linear 1050ms;
-}
-
-#ui .track.track_4 .foot.left {
-  -webkit-animation: fadeOut 3000ms infinite linear 1200ms;
-          animation: fadeOut 3000ms infinite linear 1200ms;
-}
-
-#ui .track.track_4 .foot.right {
-  -webkit-animation: fadeOut 3000ms infinite linear 1350ms;
-          animation: fadeOut 3000ms infinite linear 1350ms;
-}
-
-#ui .track.track_5 .foot.left {
-  -webkit-animation: fadeOut 3000ms infinite linear 1500ms;
-          animation: fadeOut 3000ms infinite linear 1500ms;
-}
-
-#ui .track.track_5 .foot.right {
-  -webkit-animation: fadeOut 3000ms infinite linear 1650ms;
-          animation: fadeOut 3000ms infinite linear 1650ms;
-}
-
-#ui .track.track_6 .foot.left {
-  -webkit-animation: fadeOut 3000ms infinite linear 1800ms;
-          animation: fadeOut 3000ms infinite linear 1800ms;
-}
-
-#ui .track.track_6 .foot.right {
-  -webkit-animation: fadeOut 3000ms infinite linear 1950ms;
-          animation: fadeOut 3000ms infinite linear 1950ms;
-}
-
-#ui .track.track_7 .foot.left {
-  -webkit-animation: fadeOut 3000ms infinite linear 2100ms;
-          animation: fadeOut 3000ms infinite linear 2100ms;
-}
-
-#ui .track.track_7 .foot.right {
-  -webkit-animation: fadeOut 3000ms infinite linear 2250ms;
-          animation: fadeOut 3000ms infinite linear 2250ms;
-}
-
-#ui .track.track_8 .foot.left {
-  -webkit-animation: fadeOut 3000ms infinite linear 2400ms;
-          animation: fadeOut 3000ms infinite linear 2400ms;
-}
-
-#ui .track.track_8 .foot.right {
-  -webkit-animation: fadeOut 3000ms infinite linear 2550ms;
-          animation: fadeOut 3000ms infinite linear 2550ms;
-}
-
-#ui .track.track_9 .foot.left {
-  -webkit-animation: fadeOut 3000ms infinite linear 2700ms;
-          animation: fadeOut 3000ms infinite linear 2700ms;
-}
-
-#ui .track.track_9 .foot.right {
-  -webkit-animation: fadeOut 3000ms infinite linear 2850ms;
-          animation: fadeOut 3000ms infinite linear 2850ms;
-}
-
-#ui .track.track_10 .foot.left {
-  -webkit-animation: fadeOut 3000ms infinite linear 3000ms;
-          animation: fadeOut 3000ms infinite linear 3000ms;
-}
-
-#ui .track.track_10 .foot.right {
-  -webkit-animation: fadeOut 3000ms infinite linear 3150ms;
-          animation: fadeOut 3000ms infinite linear 3150ms;
-}
-
-#ui .track.track_11 .foot.left {
-  -webkit-animation: fadeOut 3000ms infinite linear 3300ms;
-          animation: fadeOut 3000ms infinite linear 3300ms;
-}
-
-#ui .track.track_11 .foot.right {
-  -webkit-animation: fadeOut 3000ms infinite linear 3450ms;
-          animation: fadeOut 3000ms infinite linear 3450ms;
-}
-
-#ui .track.track_12 .foot.left {
-  -webkit-animation: fadeOut 3000ms infinite linear 3600ms;
-          animation: fadeOut 3000ms infinite linear 3600ms;
-}
-
-#ui .track.track_12 .foot.right {
-  -webkit-animation: fadeOut 3000ms infinite linear 3750ms;
-          animation: fadeOut 3000ms infinite linear 3750ms;
-}
-
-#ui .track.track_13 .foot.left {
-  -webkit-animation: fadeOut 3000ms infinite linear 3900ms;
-          animation: fadeOut 3000ms infinite linear 3900ms;
-}
-
-#ui .track.track_13 .foot.right {
-  -webkit-animation: fadeOut 3000ms infinite linear 4050ms;
-          animation: fadeOut 3000ms infinite linear 4050ms;
-}
-
-#ui .track.track_14 .foot.left {
-  -webkit-animation: fadeOut 3000ms infinite linear 4200ms;
-          animation: fadeOut 3000ms infinite linear 4200ms;
-}
-
-#ui .track.track_14 .foot.right {
-  -webkit-animation: fadeOut 3000ms infinite linear 4350ms;
-          animation: fadeOut 3000ms infinite linear 4350ms;
-}
-
-#ui .track.track_15 .foot.left {
-  -webkit-animation: fadeOut 3000ms infinite linear 4500ms;
-          animation: fadeOut 3000ms infinite linear 4500ms;
-}
-
-#ui .track.track_15 .foot.right {
-  -webkit-animation: fadeOut 3000ms infinite linear 4650ms;
-          animation: fadeOut 3000ms infinite linear 4650ms;
-}
-
-#ui .track.track_16 .foot.left {
-  -webkit-animation: fadeOut 3000ms infinite linear 4800ms;
-          animation: fadeOut 3000ms infinite linear 4800ms;
-}
-
-#ui .track.track_16 .foot.right {
-  -webkit-animation: fadeOut 3000ms infinite linear 4950ms;
-          animation: fadeOut 3000ms infinite linear 4950ms;
-}
-
-#ui .track.track_17 .foot.left {
-  -webkit-animation: fadeOut 3000ms infinite linear 5100ms;
-          animation: fadeOut 3000ms infinite linear 5100ms;
-}
-
-#ui .track.track_17 .foot.right {
-  -webkit-animation: fadeOut 3000ms infinite linear 5250ms;
-          animation: fadeOut 3000ms infinite linear 5250ms;
-}
-
-#ui .track.track_18 .foot.left {
-  -webkit-animation: fadeOut 3000ms infinite linear 5400ms;
-          animation: fadeOut 3000ms infinite linear 5400ms;
-}
-
-#ui .track.track_18 .foot.right {
-  -webkit-animation: fadeOut 3000ms infinite linear 5550ms;
-          animation: fadeOut 3000ms infinite linear 5550ms;
-}
-
-#ui .track.track_19 .foot.left {
-  -webkit-animation: fadeOut 3000ms infinite linear 5700ms;
-          animation: fadeOut 3000ms infinite linear 5700ms;
-}
-
-#ui .track.track_19 .foot.right {
-  -webkit-animation: fadeOut 3000ms infinite linear 5850ms;
-          animation: fadeOut 3000ms infinite linear 5850ms;
-}
-
-#ui .track.track_20 .foot.left {
-  -webkit-animation: fadeOut 3000ms infinite linear 6000ms;
-          animation: fadeOut 3000ms infinite linear 6000ms;
-}
-
-#ui .track.track_20 .foot.right {
-  -webkit-animation: fadeOut 3000ms infinite linear 6150ms;
-          animation: fadeOut 3000ms infinite linear 6150ms;
-}
-
-#ui .track.track_21 .foot.left {
-  -webkit-animation: fadeOut 3000ms infinite linear 6300ms;
-          animation: fadeOut 3000ms infinite linear 6300ms;
-}
-
-#ui .track.track_21 .foot.right {
-  -webkit-animation: fadeOut 3000ms infinite linear 6450ms;
-          animation: fadeOut 3000ms infinite linear 6450ms;
-}
-
-#ui .track.track_22 .foot.left {
-  -webkit-animation: fadeOut 3000ms infinite linear 6600ms;
-          animation: fadeOut 3000ms infinite linear 6600ms;
-}
-
-#ui .track.track_22 .foot.right {
-  -webkit-animation: fadeOut 3000ms infinite linear 6750ms;
-          animation: fadeOut 3000ms infinite linear 6750ms;
-}
-
-#ui .track.track_23 .foot.left {
-  -webkit-animation: fadeOut 3000ms infinite linear 6900ms;
-          animation: fadeOut 3000ms infinite linear 6900ms;
-}
-
-#ui .track.track_23 .foot.right {
-  -webkit-animation: fadeOut 3000ms infinite linear 7050ms;
-          animation: fadeOut 3000ms infinite linear 7050ms;
-}
-
-#ui .track.track_24 .foot.left {
-  -webkit-animation: fadeOut 3000ms infinite linear 7200ms;
-          animation: fadeOut 3000ms infinite linear 7200ms;
-}
-
-#ui .track.track_24 .foot.right {
-  -webkit-animation: fadeOut 3000ms infinite linear 7350ms;
-          animation: fadeOut 3000ms infinite linear 7350ms;
-}
-
-#ui .track.track_25 .foot.left {
-  -webkit-animation: fadeOut 3000ms infinite linear 7500ms;
-          animation: fadeOut 3000ms infinite linear 7500ms;
-}
-
-#ui .track.track_25 .foot.right {
-  -webkit-animation: fadeOut 3000ms infinite linear 7650ms;
-          animation: fadeOut 3000ms infinite linear 7650ms;
-}
-
-#ui .track.track_26 .foot.left {
-  -webkit-animation: fadeOut 3000ms infinite linear 7800ms;
-          animation: fadeOut 3000ms infinite linear 7800ms;
-}
-
-#ui .track.track_26 .foot.right {
-  -webkit-animation: fadeOut 3000ms infinite linear 7950ms;
-          animation: fadeOut 3000ms infinite linear 7950ms;
-}
-
-#ui .track.track_27 .foot.left {
-  -webkit-animation: fadeOut 3000ms infinite linear 8100ms;
-          animation: fadeOut 3000ms infinite linear 8100ms;
-}
-
-#ui .track.track_27 .foot.right {
-  -webkit-animation: fadeOut 3000ms infinite linear 8250ms;
-          animation: fadeOut 3000ms infinite linear 8250ms;
-}
-
-#ui .track.track_28 .foot.left {
-  -webkit-animation: fadeOut 3000ms infinite linear 8400ms;
-          animation: fadeOut 3000ms infinite linear 8400ms;
-}
-
-#ui .track.track_28 .foot.right {
-  -webkit-animation: fadeOut 3000ms infinite linear 8550ms;
-          animation: fadeOut 3000ms infinite linear 8550ms;
-}
-
-#ui .track.track_29 .foot.left {
-  -webkit-animation: fadeOut 3000ms infinite linear 8700ms;
-          animation: fadeOut 3000ms infinite linear 8700ms;
-}
-
-#ui .track.track_29 .foot.right {
-  -webkit-animation: fadeOut 3000ms infinite linear 8850ms;
-          animation: fadeOut 3000ms infinite linear 8850ms;
-}
-
-#ui .track.track_30 .foot.left {
-  -webkit-animation: fadeOut 3000ms infinite linear 9000ms;
-          animation: fadeOut 3000ms infinite linear 9000ms;
-}
-
-#ui .track.track_30 .foot.right {
-  -webkit-animation: fadeOut 3000ms infinite linear 9150ms;
-          animation: fadeOut 3000ms infinite linear 9150ms;
-}
-
-#ui .track.track_31 .foot.left {
-  -webkit-animation: fadeOut 3000ms infinite linear 9300ms;
-          animation: fadeOut 3000ms infinite linear 9300ms;
-}
-
-#ui .track.track_31 .foot.right {
-  -webkit-animation: fadeOut 3000ms infinite linear 9450ms;
-          animation: fadeOut 3000ms infinite linear 9450ms;
-}
-
-#ui .track.track_32 .foot.left {
-  -webkit-animation: fadeOut 3000ms infinite linear 9600ms;
-          animation: fadeOut 3000ms infinite linear 9600ms;
-}
-
-#ui .track.track_32 .foot.right {
-  -webkit-animation: fadeOut 3000ms infinite linear 9750ms;
-          animation: fadeOut 3000ms infinite linear 9750ms;
-}
-
-#ui .track.track_33 .foot.left {
-  -webkit-animation: fadeOut 3000ms infinite linear 9900ms;
-          animation: fadeOut 3000ms infinite linear 9900ms;
-}
-
-#ui .track.track_33 .foot.right {
-  -webkit-animation: fadeOut 3000ms infinite linear 10050ms;
-          animation: fadeOut 3000ms infinite linear 10050ms;
-}
-
-#ui .track.track_34 .foot.left {
-  -webkit-animation: fadeOut 3000ms infinite linear 10200ms;
-          animation: fadeOut 3000ms infinite linear 10200ms;
-}
-
-#ui .track.track_34 .foot.right {
-  -webkit-animation: fadeOut 3000ms infinite linear 10350ms;
-          animation: fadeOut 3000ms infinite linear 10350ms;
-}
-
-#ui .track.track_35 .foot.left {
-  -webkit-animation: fadeOut 3000ms infinite linear 10500ms;
-          animation: fadeOut 3000ms infinite linear 10500ms;
-}
-
-#ui .track.track_35 .foot.right {
-  -webkit-animation: fadeOut 3000ms infinite linear 10650ms;
-          animation: fadeOut 3000ms infinite linear 10650ms;
-}
-
-#ui .track.track_36 .foot.left {
-  -webkit-animation: fadeOut 3000ms infinite linear 10800ms;
-          animation: fadeOut 3000ms infinite linear 10800ms;
-}
-
-#ui .track.track_36 .foot.right {
-  -webkit-animation: fadeOut 3000ms infinite linear 10950ms;
-          animation: fadeOut 3000ms infinite linear 10950ms;
-}
-
-#ui .track.track_37 .foot.left {
-  -webkit-animation: fadeOut 3000ms infinite linear 11100ms;
-          animation: fadeOut 3000ms infinite linear 11100ms;
-}
-
-#ui .track.track_37 .foot.right {
-  -webkit-animation: fadeOut 3000ms infinite linear 11250ms;
-          animation: fadeOut 3000ms infinite linear 11250ms;
-}
-
-#ui .track.track_38 .foot.left {
-  -webkit-animation: fadeOut 3000ms infinite linear 11400ms;
-          animation: fadeOut 3000ms infinite linear 11400ms;
-}
-
-#ui .track.track_38 .foot.right {
-  -webkit-animation: fadeOut 3000ms infinite linear 11550ms;
-          animation: fadeOut 3000ms infinite linear 11550ms;
-}
-
-#ui .track.track_39 .foot.left {
-  -webkit-animation: fadeOut 3000ms infinite linear 11700ms;
-          animation: fadeOut 3000ms infinite linear 11700ms;
-}
-
-#ui .track.track_39 .foot.right {
-  -webkit-animation: fadeOut 3000ms infinite linear 11850ms;
-          animation: fadeOut 3000ms infinite linear 11850ms;
-}
-
-#ui .track.track_40 .foot.left {
-  -webkit-animation: fadeOut 3000ms infinite linear 12000ms;
-          animation: fadeOut 3000ms infinite linear 12000ms;
-}
-
-#ui .track.track_40 .foot.right {
-  -webkit-animation: fadeOut 3000ms infinite linear 12150ms;
-          animation: fadeOut 3000ms infinite linear 12150ms;
-}
-
-#ui .track.track_41 .foot.left {
-  -webkit-animation: fadeOut 3000ms infinite linear 12300ms;
-          animation: fadeOut 3000ms infinite linear 12300ms;
-}
-
-#ui .track.track_41 .foot.right {
-  -webkit-animation: fadeOut 3000ms infinite linear 12450ms;
-          animation: fadeOut 3000ms infinite linear 12450ms;
-}
-
-#ui .track.track_42 .foot.left {
-  -webkit-animation: fadeOut 3000ms infinite linear 12600ms;
-          animation: fadeOut 3000ms infinite linear 12600ms;
-}
-
-#ui .track.track_42 .foot.right {
-  -webkit-animation: fadeOut 3000ms infinite linear 12750ms;
-          animation: fadeOut 3000ms infinite linear 12750ms;
-}
-
-#ui .track.track_43 .foot.left {
-  -webkit-animation: fadeOut 3000ms infinite linear 12900ms;
-          animation: fadeOut 3000ms infinite linear 12900ms;
-}
-
-#ui .track.track_43 .foot.right {
-  -webkit-animation: fadeOut 3000ms infinite linear 13050ms;
-          animation: fadeOut 3000ms infinite linear 13050ms;
-}
-
-#ui .track.track_44 .foot.left {
-  -webkit-animation: fadeOut 3000ms infinite linear 13200ms;
-          animation: fadeOut 3000ms infinite linear 13200ms;
-}
-
-#ui .track.track_44 .foot.right {
-  -webkit-animation: fadeOut 3000ms infinite linear 13350ms;
-          animation: fadeOut 3000ms infinite linear 13350ms;
-}
-
-#ui .track.track_45 .foot.left {
-  -webkit-animation: fadeOut 3000ms infinite linear 13500ms;
-          animation: fadeOut 3000ms infinite linear 13500ms;
-}
-
-#ui .track.track_45 .foot.right {
-  -webkit-animation: fadeOut 3000ms infinite linear 13650ms;
-          animation: fadeOut 3000ms infinite linear 13650ms;
-}
-
-#ui .track.track_46 .foot.left {
-  -webkit-animation: fadeOut 3000ms infinite linear 13800ms;
-          animation: fadeOut 3000ms infinite linear 13800ms;
-}
-
-#ui .track.track_46 .foot.right {
-  -webkit-animation: fadeOut 3000ms infinite linear 13950ms;
-          animation: fadeOut 3000ms infinite linear 13950ms;
-}
-
-#ui .track.track_47 .foot.left {
-  -webkit-animation: fadeOut 3000ms infinite linear 14100ms;
-          animation: fadeOut 3000ms infinite linear 14100ms;
-}
-
-#ui .track.track_47 .foot.right {
-  -webkit-animation: fadeOut 3000ms infinite linear 14250ms;
-          animation: fadeOut 3000ms infinite linear 14250ms;
-}
-
-#ui .track.track_48 .foot.left {
-  -webkit-animation: fadeOut 3000ms infinite linear 14400ms;
-          animation: fadeOut 3000ms infinite linear 14400ms;
-}
-
-#ui .track.track_48 .foot.right {
-  -webkit-animation: fadeOut 3000ms infinite linear 14550ms;
-          animation: fadeOut 3000ms infinite linear 14550ms;
-}
-
-#ui .track.track_49 .foot.left {
-  -webkit-animation: fadeOut 3000ms infinite linear 14700ms;
-          animation: fadeOut 3000ms infinite linear 14700ms;
-}
-
-#ui .track.track_49 .foot.right {
-  -webkit-animation: fadeOut 3000ms infinite linear 14850ms;
-          animation: fadeOut 3000ms infinite linear 14850ms;
-}
-
-#ui .track.track_50 .foot.left {
-  -webkit-animation: fadeOut 3000ms infinite linear 15000ms;
-          animation: fadeOut 3000ms infinite linear 15000ms;
-}
-
-#ui .track.track_50 .foot.right {
-  -webkit-animation: fadeOut 3000ms infinite linear 15150ms;
-          animation: fadeOut 3000ms infinite linear 15150ms;
-}
-
-#ui .track.track_51 .foot.left {
-  -webkit-animation: fadeOut 3000ms infinite linear 15000ms;
-          animation: fadeOut 3000ms infinite linear 15000ms;
-}
-
-#ui .track.track_51 .foot.right {
-  -webkit-animation: fadeOut 3000ms infinite linear 15150ms;
-          animation: fadeOut 3000ms infinite linear 15150ms;
-}
-
-#ui .track.track_52 .foot.left {
-  -webkit-animation: fadeOut 3000ms infinite linear 15000ms;
-          animation: fadeOut 3000ms infinite linear 15000ms;
-}
-
-#ui .track.track_52 .foot.right {
-  -webkit-animation: fadeOut 3000ms infinite linear 15150ms;
-          animation: fadeOut 3000ms infinite linear 15150ms;
-}
-
-#ui .track.track_53 .foot.left {
-  -webkit-animation: fadeOut 3000ms infinite linear 15000ms;
-          animation: fadeOut 3000ms infinite linear 15000ms;
-}
-
-#ui .track.track_53 .foot.right {
-  -webkit-animation: fadeOut 3000ms infinite linear 15150ms;
-          animation: fadeOut 3000ms infinite linear 15150ms;
-}
-
-#ui .track.track_54 .foot.left {
-  -webkit-animation: fadeOut 3000ms infinite linear 15000ms;
-          animation: fadeOut 3000ms infinite linear 15000ms;
-}
-
-#ui .track.track_54 .foot.right {
-  -webkit-animation: fadeOut 3000ms infinite linear 15150ms;
-          animation: fadeOut 3000ms infinite linear 15150ms;
-}
-
-#ui .track.track_55 .foot.left {
-  -webkit-animation: fadeOut 3000ms infinite linear 15000ms;
-          animation: fadeOut 3000ms infinite linear 15000ms;
-}
-
-#ui .track.track_55 .foot.right {
-  -webkit-animation: fadeOut 3000ms infinite linear 15150ms;
-          animation: fadeOut 3000ms infinite linear 15150ms;
-}
-
-#ui .track.track_56 .foot.left {
-  -webkit-animation: fadeOut 3000ms infinite linear 15000ms;
-          animation: fadeOut 3000ms infinite linear 15000ms;
-}
-
-#ui .track.track_56 .foot.right {
-  -webkit-animation: fadeOut 3000ms infinite linear 15150ms;
-          animation: fadeOut 3000ms infinite linear 15150ms;
-}
-
-#ui .track.track_57 .foot.left {
-  -webkit-animation: fadeOut 3000ms infinite linear 15000ms;
-          animation: fadeOut 3000ms infinite linear 15000ms;
-}
-
-#ui .track.track_57 .foot.right {
-  -webkit-animation: fadeOut 3000ms infinite linear 15150ms;
-          animation: fadeOut 3000ms infinite linear 15150ms;
-}
-
-#ui .track.track_58 .foot.left {
-  -webkit-animation: fadeOut 3000ms infinite linear 15000ms;
-          animation: fadeOut 3000ms infinite linear 15000ms;
-}
-
-#ui .track.track_58 .foot.right {
-  -webkit-animation: fadeOut 3000ms infinite linear 15150ms;
-          animation: fadeOut 3000ms infinite linear 15150ms;
-}
-
-#ui .track.track_59 .foot.left {
-  -webkit-animation: fadeOut 3000ms infinite linear 15000ms;
-          animation: fadeOut 3000ms infinite linear 15000ms;
-}
-
-#ui .track.track_59 .foot.right {
-  -webkit-animation: fadeOut 3000ms infinite linear 15150ms;
-          animation: fadeOut 3000ms infinite linear 15150ms;
-}
-
-#ui .track.track_60 .foot.left {
-  -webkit-animation: fadeOut 3000ms infinite linear 15000ms;
-          animation: fadeOut 3000ms infinite linear 15000ms;
-}
-
-#ui .track.track_60 .foot.right {
-  -webkit-animation: fadeOut 3000ms infinite linear 15150ms;
-          animation: fadeOut 3000ms infinite linear 15150ms;
-}
-
-#ui .track .foot {
-  position: absolute;
-  width: 8px;
-  height: 9px;
-  background: #000;
-  border-radius: 100%;
-  opacity: 0;
-}
-
-#ui .track .foot_claw {
-  content: '';
-  position: absolute;
-  width: 4px;
-  height: 4px;
-  background: #000;
-  border-radius: 100%;
-}
-
-#ui .track .foot_claw:nth-child(1) {
-  top: -3px;
-  left: 8px;
-}
-
-#ui .track .foot_claw:nth-child(2) {
-  top: 3px;
-  left: 10px;
-}
-
-#ui .track .foot_claw:nth-child(3) {
-  top: 8px;
-  left: 8px;
-}
-
-#ui .track .foot.left {
-  top: -7px;
-}
-
-#ui .track .foot.right {
-  top: 7px;
-  left: 25px;
-}
-
-#ui.switch .track {
-  background: rgba(0, 0, 0, 0.1);
-}
-
-#ui.switch p::after {
-  opacity: 1;
-}
-
-@-webkit-keyframes fadeOut {
-  0% {
-    opacity: 1;
-  }
-  20% {
-    opacity: 0;
-  }
-}
-
-@keyframes fadeOut {
-  0% {
-    opacity: 1;
-  }
-  20% {
-    opacity: 0;
-  }
-}
-
-/*-----------------------------------------------------
-                RESOURCES STYLES
------------------------------------------------------- */
-.resources-link-holder {
-  max-width: 1250px;
-  margin: 0 auto;
-}
-
-.resources-link-holder section > h2 {
-  padding-top: 2rem;
-}
-
-.resources-link-holder section > div {
-  border: 1px solid #999;
-  border-radius: 10px;
-  margin: 2rem 0;
-  padding: 2rem;
-}
-
-.resources-link {
-  color: #fff;
-  background-color: #09c0c0;
-  border-radius: 10px;
-  padding: 0.7rem;
-}
-
 /* ------------------------------------------------------
                 DASHBOARD STYLES
 ------------------------------------------------------ */
@@ -1922,6 +703,7 @@ html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, tex
 }
 
 h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
   font-weight: normal;
 }
 
@@ -1962,21 +744,16 @@ td, th {
   text-align: left;
 }
 
+/*******    CONTENT PADDING    *******/
 /*******    COLORS    *******/
-/*******    NAVIGATION    *******/
-/*******    HOVER    *******/
-/*******    ACCORDIAN    *******/
-/*******    BUTTONS    *******/
-/*******    OVERVIEW    *******/
-/*******    PARA, HEADING, NAV     *******/
-/*******      FORM     *******/
-.dashboard-html {
+/*******    FONTS     *******/
+/*******      FORM STYLES      *******/
+html {
   font-size: 62.5%;
 }
 
 .dashboard-body {
   background: white;
-  margin-bottom: 12rem;
   line-height: 1.5;
   background-size: auto 2.4rem;
 }
@@ -1985,71 +762,63 @@ td, th {
   color: black;
 }
 
-.dashboard-html .dashboard-body h2, .dashboard-html .dashboard-body h3, .dashboard-html .dashboard-body h4, .dashboard-html .dashboard-body h5, .dashboard-html .dashboard-body h6, .dashboard-html .dashboard-body p {
-  color: #2f2f37;
+.dashboard-body h2, .dashboard-body h3, .dashboard-body h4, .dashboard-body h5, .dashboard-body h6, .dashboard-body p {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
   margin-bottom: 2.4rem;
 }
 
-.dashboard-html .dashboard-body h2, .dashboard-html .dashboard-body h3, .dashboard-html .dashboard-body h4, .dashboard-html .dashboard-body h5, .dashboard-html .dashboard-body h6 {
-  font-family: "Raleway Bold", sans-serif;
+.dashboard-body h2 {
+  color: #404b5e;
 }
 
-.dashboard-html .dashboard-body p {
-  font-size: 1.6rem;
-  font-family: "Raleway Regluar", sans-serif;
-  text-align: left;
-}
-
-.dashboard-html .dashboard-body h1 {
-  font-size: 2rem;
-}
-
-@media screen and (min-width: 700px) {
-  .dashboard-html .dashboard-body h1 {
-    font-size: 3.1rem;
-  }
-}
-
-.dashboard-html .dashboard-body h2 {
-  font-size: 5.6rem;
+.dashboard-body h1 {
+  font-size: 6.9rem;
   line-height: 7.2rem;
-  margin-bottom: 3rem;
-}
-
-.dashboard-html .dashboard-body h3 {
-  font-size: 5.0rem;
-  line-height: 5rem;
-  margin-bottom: 2.8rem;
-}
-
-.dashboard-html .dashboard-body h4 {
-  font-size: 4.2rem;
-  line-height: 5rem;
   margin-bottom: 4.8rem;
 }
 
-.dashboard-html .dashboard-body h5 {
-  font-size: 3.8rem;
+.dashboard-body h2 {
+  font-size: 6.1rem;
+  line-height: 7.2rem;
+}
+
+.dashboard-body h3 {
+  font-size: 5.1rem;
+  line-height: 7.2rem;
+}
+
+.dashboard-body h4 {
+  font-size: 4.8rem;
+  line-height: 7.2rem;
+}
+
+.dashboard-body h5 {
+  font-size: 4.1rem;
   line-height: 4.8rem;
 }
 
-.dashboard-html .dashboard-body a {
+.dashboard-body h6 {
+  font-size: 3.7em;
+  line-height: 4.8rem;
+}
+
+.dashboard-body a {
   text-decoration: none;
 }
 
-.dashboard-html .dashboard-body li {
+.dashboard-body li {
   list-style: none;
 }
 
 .dashboard-header {
-  z-index: 90;
-  padding: 2rem;
-  background: #0C2946;
+  padding: 1rem 1.6rem;
+  background: #404b5e;
 }
 
-@media screen and (max-width: 999px) {
+@media screen and (max-width: 1099px) {
   .dashboard-header {
-    position: fixed;
+    position: relative;
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2066,53 +835,46 @@ td, th {
   }
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1100px) {
   .dashboard-header {
-    width: 26rem;
+    width: 24rem;
     height: 200vh;
-    position: fixed;
-    padding-left: 2.4rem;
+    position: absolute;
+    left: 0;
+    top: 0;
   }
 }
 
-.dashboard-header .logo {
+.dashboard-header h1 {
+  margin: 0;
+  font-size: 4rem;
   color: white;
 }
 
-@media screen and (min-width: 1000px) {
-  .dashboard-header .logo {
+@media screen and (min-width: 1100px) {
+  .dashboard-header h1 {
     margin: 3rem 0;
     text-align: center;
   }
 }
 
-.dashboard-header .logo a:hover {
-  -webkit-transition: 0.7s;
-  transition: 0.7s;
-  color: #3EA3DF;
-}
-
 .menu-closed-header-style {
-  background-color: #0C2946;
+  background-color: #7493c9;
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1100px) {
   .menu-closed-header-style {
-    background: #0C2946;
+    background: #404b5e;
   }
 }
 
-.dashboard-body .dashboard-navigation {
-  z-index: 90;
-}
-
-@media screen and (max-width: 999px) {
+@media screen and (max-width: 1099px) {
   .dashboard-body .dashboard-navigation {
     width: 100%;
     position: absolute;
-    top: 4rem;
+    top: 5.3rem;
     right: -100%;
-    background-color: #0C2946;
+    background-color: #7493c9;
     padding-bottom: 4rem;
     -webkit-transition: all 0.7s ease-in-out;
     transition: all 0.7s ease-in-out;
@@ -2120,43 +882,27 @@ td, th {
   }
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 800px) {
   .dashboard-body .dashboard-navigation {
     width: 50%;
   }
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1100px) {
   .dashboard-body .dashboard-navigation {
     display: inline-block;
     width: 22rem;
-  }
-}
-
-.dashboard-body .dashboard-navigation .navigation-para {
-  margin: 1rem;
-  color: white;
-  font-family: "Raleway Bold", sans-serif;
-  border-bottom: 1px solid white;
-  padding-bottom: 0.5rem;
-  font-size: 2rem;
-  text-align: center;
-}
-
-@media screen and (min-width: 1000px) {
-  .dashboard-body .dashboard-navigation .navigation-para {
-    margin: 0;
-    margin-right: 1rem;
-    margin-bottom: 2rem;
+    background: #404b5e;
   }
 }
 
 .dashboard-body .dashboard-navigation .nav-link a {
-  background: #3EA3DF;
+  color: white;
+  border: 1px solid white;
   border-radius: 1rem;
   margin: 2rem;
   display: block;
-  padding: 1.2rem;
+  padding: 2rem;
   margin-bottom: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2169,7 +915,7 @@ td, th {
           align-items: center;
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1100px) {
   .dashboard-body .dashboard-navigation .nav-link a {
     margin: 0;
     margin-right: 1rem;
@@ -2179,35 +925,25 @@ td, th {
 
 .dashboard-body .dashboard-navigation .nav-link a p {
   margin-bottom: 0;
-  font-size: 1.6rem;
-  font-family: "Raleway Bold", sans-serif;
-  color: white;
+  font-size: 1.8rem;
+  font-family: arial;
 }
 
 .dashboard-body .dashboard-navigation .nav-link a p span {
   font-size: 1.4rem;
 }
 
-.dashboard-body .dashboard-navigation .nav-link a p:first-child {
-  padding-right: 1rem;
-}
-
-.dashboard-body .dashboard-navigation .nav-link a:hover {
-  background: #FB4547;
-  -webkit-transition: 0.7s;
-  transition: 0.7s;
-}
-
 .dashboard-body .dashboard-navigation .logout {
-  background: #3EA3DF;
+  color: white;
+  border: 1px solid white;
   border-radius: 1rem;
   margin: 2rem;
   display: block;
-  padding: 1.2rem;
+  padding: 2rem;
   margin-bottom: 2rem;
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1100px) {
   .dashboard-body .dashboard-navigation .logout {
     margin: 0;
     margin-right: 1rem;
@@ -2215,7 +951,7 @@ td, th {
   }
 }
 
-@media screen and (max-width: 999px) {
+@media screen and (max-width: 1099px) {
   .dashboard-body .dashboard-navigation .logout {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2229,55 +965,37 @@ td, th {
   }
 }
 
-.dashboard-body .dashboard-navigation .logout .signed-in {
-  color: white;
-  font-size: 2rem;
-  font-family: 'Raleway Bold', sans-serif;
-  margin-bottom: 1rem;
-}
-
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1100px) {
   .dashboard-body .dashboard-navigation .logout .signed-in {
-    padding-bottom: 1rem;
+    padding-bottom: 1.5rem;
   }
 }
 
 .dashboard-body .dashboard-navigation .logout a p {
-  text-align: center;
-  color: white;
-  border-radius: 1rem;
-  background: #3EA3DF;
-  padding: 0.5rem;
-}
-
-.dashboard-body .dashboard-navigation .logout a:hover p {
-  background: #FB4547;
-  -webkit-transition: 0.7s;
-  transition: 0.7s;
+  text-align: right;
 }
 
 .dashboard-body .dashboard-navigation .logout p {
   margin-bottom: 0;
-  font-size: 1.6rem;
-  font-family: "Raleway Bold", sans-serif;
+  font-size: 1.8rem;
+  font-family: arial;
 }
 
 .dashboard-body .dashboard-navigation .logout p span {
   font-size: 1.4rem;
-  font-family: 'Raleway Regular', sans-serif;
 }
 
 .dashboard-header .menu-icon {
   width: 3rem;
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1100px) {
   .dashboard-header .menu-icon {
     display: none;
   }
 }
 
-@media screen and (max-width: 999px) {
+@media screen and (max-width: 1099px) {
   .dashboard-header .menu-icon:after,
   .dashboard-header .menu-icon:before,
   .dashboard-header .menu-icon div {
@@ -2291,6 +1009,7 @@ td, th {
     transition: all 0.7s ease-in-out;
   }
   .dashboard-header .close-button {
+    font-family: 'Playfair Display', serif;
     font-size: 2.4rem;
     text-align: right;
     padding: 1rem;
@@ -2314,799 +1033,27 @@ td, th {
   .dashboard-header .menu-toggle {
     position: absolute;
     right: 0;
-    z-index: 9999;
   }
 }
 
 .dashboard-main {
-  padding: 0;
-}
-
-@media screen and (max-width: 999px) {
-  .dashboard-main {
-    padding-top: 8rem;
-  }
-}
-
-.dashboard-main .border {
-  display: inline-block;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: unset;
-      -ms-flex-pack: unset;
-          justify-content: unset;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  border-bottom: 2px solid rgba(12, 41, 70, 0.591);
-  border-top: 2px solid rgba(12, 41, 70, 0.591);
-  padding: 0.7rem 0 0.7rem 1rem;
-  width: 30rem;
-  margin-bottom: 4rem;
-}
-
-.dashboard-main .border .triangle-up {
-  width: 0;
-  height: 0;
-  border-left: 10px solid transparent;
-  border-right: 10px solid transparent;
-  border-bottom: 20px solid rgba(12, 41, 70, 0.591);
-}
-
-.dashboard-main .border .triangle-down {
-  width: 0;
-  height: 0;
-  border-left: 10px solid transparent;
-  border-right: 10px solid transparent;
-  border-top: 20px solid rgba(12, 41, 70, 0.591);
-}
-
-@media screen and (min-width: 700px) {
-  .dashboard-main .width-container {
-    max-width: 1100px;
-  }
-}
-
-.dashboard-main .welcome {
-  background: #3EA3DF;
-  padding: 4.5rem 1.6rem 0 1.6rem;
-}
-
-@media screen and (min-width: 700px) {
-  .dashboard-main .welcome {
-    padding: 6rem 3rem 0 3rem;
-    padding-bottom: 4rem;
-  }
-}
-
-@media screen and (min-width: 1000px) {
-  .dashboard-main .welcome {
-    padding: 4rem 6rem 0 30rem;
-    padding-bottom: 4rem;
-  }
-}
-
-.dashboard-main .welcome h2 {
-  color: white;
-  font-size: 5.4rem;
-  line-height: 7.2rem;
-  margin-bottom: 2rem;
-}
-
-@media screen and (min-width: 700px) {
-  .dashboard-main .welcome h2 {
-    font-size: 6.4rem;
-    line-height: 7.2rem;
-  }
-}
-
-.dashboard-main .welcome p {
-  font-size: 2.2rem;
-  padding-bottom: 2rem;
-  color: white;
-  margin: 0;
-  font-family: 'Raleway Light', sans-serif;
-}
-
-.dashboard-main .welcome .welcome-links {
-  padding-bottom: 4rem;
-}
-
-@media screen and (min-width: 700px) {
-  .dashboard-main .welcome .welcome-links {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: unset;
-        -ms-flex-pack: unset;
-            justify-content: unset;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    padding-right: 3rem;
-  }
-}
-
-.dashboard-main .home-welcome h3 {
-  color: white;
-  font-size: 2.6rem;
-  line-height: 1.5;
-  font-family: 'Raleway Light', sans-serif;
-}
-
-.dashboard-main .home-welcome h3 .heading-small {
-  font-size: 2rem;
-  font-family: 'Raleway Bold', sans-serif;
-}
-
-@media screen and (min-width: 700px) {
-  .dashboard-main .home-welcome h3 .heading-small {
-    font-size: 2.6rem;
-  }
-}
-
-@media screen and (min-width: 700px) {
-  .dashboard-main .home-welcome h3 .heading-small-two {
-    padding-left: 3rem;
-  }
-}
-
-@media screen and (min-width: 1000px) {
-  .dashboard-main .home-welcome {
-    padding-top: 13rem;
-  }
-}
-
-.dashboard-main .home-welcome a {
-  color: white;
-  background: #FB4547;
-  font-size: 1.8rem;
-  font-family: "Raleway Bold", sans-serif;
-  border-radius: 1.6rem;
-  text-align: center;
-  display: block;
-  padding: 1.2rem;
-  margin-bottom: 1rem;
-  margin-bottom: 2rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: unset;
-      -ms-flex-pack: unset;
-          justify-content: unset;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-@media screen and (min-width: 700px) {
-  .dashboard-main .home-welcome a {
-    padding: 1rem 10rem;
-    margin-right: 3rem;
-  }
-}
-
-.dashboard-main .home-welcome a .badge {
-  background: #0C2946;
-  color: white;
-  padding: 0.5rem 1rem;
-  font-size: 1.4rem;
-  border-radius: 1rem;
-  margin-left: 1rem;
-  background: #0C2946;
-  margin-right: 1rem;
-}
-
-.dashboard-main .home-welcome a:hover {
-  background: #0C2946;
-  color: white;
-  -webkit-transition: 0.7s;
-  transition: 0.7s;
-}
-
-.dashboard-main .accordian {
-  padding: 4.5rem 1.6rem 0 1.6rem;
-  margin-bottom: 20rem;
-}
-
-@media screen and (min-width: 700px) {
-  .dashboard-main .accordian {
-    padding: 6rem 3rem 0 3rem;
-  }
-}
-
-@media screen and (min-width: 1000px) {
-  .dashboard-main .accordian {
-    padding: 4rem 6rem 0 30rem;
-  }
-}
-
-.dashboard-main .accordian .hidden {
-  display: none;
-}
-
-.dashboard-main .accordian .acc-tabs {
-  margin-bottom: 0.5rem;
-}
-
-@media screen and (min-width: 1000px) {
-  .dashboard-main .accordian .acc-tabs {
-    margin-bottom: 0.8rem;
-  }
-}
-
-.dashboard-main .accordian .acc-tabs a {
-  background: #0C2946;
-  color: white;
-  padding: 1rem 3rem;
-  font-size: 1.8rem;
-  font-family: "Raleway Regluar", sans-serif;
-  border-top-left-radius: 1.6rem;
-  border-top-right-radius: 1.6rem;
-}
-
-@media screen and (min-width: 700px) {
-  .dashboard-main .accordian .acc-tabs a {
-    padding: 1.2rem 3rem;
-  }
-}
-
-.dashboard-main .accordian .acc-tabs a:hover {
-  background: #FB4547;
-  color: white;
-  -webkit-transition: 0.7s;
-  transition: 0.7s;
-}
-
-.dashboard-main .accordian .acc-content {
-  -webkit-box-shadow: 0px 0px 6px 2px #d4d4d4;
-  box-shadow: 0px 0px 6px 2px #d4d4d4;
-  border-top-right-radius: 1.6rem;
-  margin-bottom: 2rem;
-}
-
-.dashboard-main .accordian .acc-content .acc-single .acc-user-dropdown:hover {
-  background: #FB4547;
-  color: white;
-  -webkit-transition: 0.7s;
-  transition: 0.7s;
-}
-
-.dashboard-main .accordian .acc-content .acc-single .acc-user-dropdown {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background: #3EA3DF;
-  border-bottom: 1px solid #0C2946;
-  padding: 1rem 2rem;
-}
-
-.dashboard-main .accordian .acc-content .acc-single .acc-user-dropdown .acc-badge {
-  background: #0C2946;
-  color: white;
-  padding: 0.5rem 1rem;
-  font-size: 1.4rem;
-  border-radius: 1rem;
-  margin-left: 1rem;
-}
-
-.dashboard-main .accordian .acc-content .acc-single .acc-user-dropdown p {
-  font-size: 1.8rem;
-  color: white;
-  margin-bottom: 0;
-}
-
-.dashboard-main .accordian .acc-content .acc-single .acc-user-info {
-  border: 1px solid #0C2946;
-  border-top: 0;
   padding: 1rem;
 }
 
-@media screen and (min-width: 1000px) {
-  .dashboard-main .accordian .acc-content .acc-single .acc-user-info {
-    padding: 2rem;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: unset;
-        -ms-flex-pack: unset;
-            justify-content: unset;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+@media screen and (min-width: 800px) {
+  .dashboard-main {
+    padding: 3rem;
   }
 }
 
-@media screen and (min-width: 1280px) {
-  .dashboard-main .accordian .acc-content .acc-single .acc-user-info {
-    padding: 0.8rem 0.8rem 0.8rem 2rem;
+@media screen and (min-width: 1100px) {
+  .dashboard-main {
+    padding: 0rem 3rem 3rem 28rem;
   }
 }
 
-.dashboard-main .accordian .acc-content .acc-single .acc-user-info .information p {
-  margin-bottom: 1rem;
-}
-
-@media screen and (min-width: 1280px) {
-  .dashboard-main .accordian .acc-content .acc-single .acc-user-info .information p {
-    padding-right: 1.4rem;
-  }
-}
-
-@media only screen and (min-width: 1400px) {
-  .dashboard-main .accordian .acc-content .acc-single .acc-user-info .information {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: unset;
-        -ms-flex-pack: unset;
-            justify-content: unset;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-}
-
-.dashboard-main .accordian .acc-content .acc-single .acc-user-info .options {
-  padding-top: 1rem;
-}
-
-@media screen and (min-width: 700px) {
-  .dashboard-main .accordian .acc-content .acc-single .acc-user-info .options {
-    padding-left: 3rem;
-  }
-}
-
-@media screen and (min-width: 1000px) {
-  .dashboard-main .accordian .acc-content .acc-single .acc-user-info .options {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: unset;
-        -ms-flex-pack: unset;
-            justify-content: unset;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-}
-
-.dashboard-main .accordian .acc-content .acc-single .acc-user-info .options a {
-  color: white;
-  background: #FB4547;
-  font-size: 1.8rem;
-  font-family: "Raleway Bold", sans-serif;
-  border-radius: 1.6rem;
-  text-align: center;
-  display: block;
-  padding: 1.2rem;
-  margin-bottom: 1rem;
-}
-
-@media screen and (min-width: 700px) {
-  .dashboard-main .accordian .acc-content .acc-single .acc-user-info .options a {
-    width: 30rem;
-  }
-}
-
-@media screen and (min-width: 1000px) {
-  .dashboard-main .accordian .acc-content .acc-single .acc-user-info .options a {
-    width: 18rem;
-    margin-right: 1rem;
-  }
-}
-
-.dashboard-main .accordian .acc-content .acc-single .acc-user-info .options a:hover {
-  background: #0C2946;
-  color: white;
-  -webkit-transition: 0.7s;
-  transition: 0.7s;
-}
-
-.dashboard-main .accordian .acc-content .acc-single:first-child .acc-user-dropdown {
-  border-top-right-radius: 1.6rem;
-}
-
-.dashboard-main .accordian .view-all {
-  color: #0C2946;
-  font-size: 1.8rem;
-  border-bottom: 1px solid #FB4547;
-  padding-bottom: 1rem;
-  font-family: "Raleway Bold", sans-serif;
-}
-
-.dashboard-main .accordian .view-all:hover {
-  color: #FB4547;
-  border-bottom: 1px solid #0C2946;
-  -webkit-transition: 0.7s;
-  transition: 0.7s;
-}
-
-.dashboard-main .container {
-  position: relative;
-}
-
-.dashboard-main .overview {
-  border: 1px solid #aeaeae;
-  background: white;
-  margin: 1rem;
-  border-radius: 2rem;
-}
-
-@media screen and (min-width: 700px) {
-  .dashboard-main .overview {
-    padding: 6rem 3rem 0 3rem;
-    padding-bottom: 4rem;
-    margin: 3rem;
-    margin-top: 6rem;
-  }
-}
-
-@media screen and (min-width: 1000px) {
-  .dashboard-main .overview {
-    padding: 4rem 6rem 0 4rem;
-    padding-bottom: 4rem;
-    margin-left: 30rem;
-  }
-}
-
-.dashboard-main .overview h3 {
-  padding: 4.5rem 1.6rem 0 1.6rem;
-  padding-bottom: 0;
-}
-
-@media screen and (min-width: 700px) {
-  .dashboard-main .overview h3 {
-    padding: 0;
-  }
-}
-
-@media screen and (min-width: 1000px) {
-  .dashboard-main .overview .overview-box {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: unset;
-        -ms-flex-pack: unset;
-            justify-content: unset;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-}
-
-.dashboard-main .overview .overview-box p {
-  font-size: 2.4rem;
-  margin-bottom: 1rem;
-  padding: 4.5rem 1.6rem 0 1.6rem;
-  padding-bottom: 0;
-  padding-top: 0;
-}
-
-.dashboard-main .overview .overview-box p .number {
-  font-weight: bold;
-}
-
-.dashboard-main .overview .overview-box div p {
-  color: #2f2f37;
-}
-
-.dashboard-main .overview .overview-box a {
-  color: white;
-  background: #FB4547;
-  font-size: 1.8rem;
-  font-family: "Raleway Bold", sans-serif;
-  border-radius: 1.6rem;
-  text-align: center;
-  display: block;
-  padding: 1.2rem;
-  margin-bottom: 1rem;
-  text-align: center;
-  margin-top: 4rem;
-  margin-bottom: 0;
-}
-
-@media screen and (min-width: 700px) {
-  .dashboard-main .overview .overview-box a {
-    width: 50rem;
-    margin-top: 4rem;
-  }
-}
-
-@media screen and (min-width: 1000px) {
-  .dashboard-main .overview .overview-box a {
-    width: 28rem;
-    margin-left: 4rem;
-    margin-top: 0;
-  }
-}
-
-@media screen and (min-width: 1280px) {
-  .dashboard-main .overview .overview-box a {
-    width: 40rem;
-    margin-left: 8rem;
-  }
-}
-
-.dashboard-main .overview .overview-box a:hover {
-  background: #0C2946;
-  color: white;
-  -webkit-transition: 0.7s;
-  transition: 0.7s;
-}
-
-.dashboard-main .overview-background {
-  content: "";
-  background: #3EA3DF;
-  height: 24rem;
-  width: 98.8vw;
-  position: absolute;
-  top: -8rem;
-  left: -1rem;
-  z-index: -1;
-}
-
-@media screen and (min-width: 700px) {
-  .dashboard-main .overview-background {
-    width: 99.3vw;
-  }
-}
-
-@media screen and (min-width: 1000px) {
-  .dashboard-main .overview-background {
-    width: 99.8vw;
-  }
-}
-
-.dashboard-main .overview-background-second {
-  content: "";
-  background: #3EA3DF;
-  height: 23rem;
-  width: 98.8vw;
-  position: absolute;
-  top: 80rem;
-  left: -1rem;
-  z-index: -1;
-}
-
-@media screen and (min-width: 700px) {
-  .dashboard-main .overview-background-second {
-    top: 88rem;
-    height: 25rem;
-    width: 99.3vw;
-  }
-}
-
-@media screen and (min-width: 1000px) {
-  .dashboard-main .overview-background-second {
-    top: 76rem;
-    width: 99.8vw;
-  }
-}
-
-.dashboard-main .overview-bgd-moved {
-  top: 88rem;
-  -webkit-transition: 0.6s;
-  transition: 0.6s;
-}
-
-.dashboard-main .hidden {
-  display: none;
-}
-
-.dashboard-main .dashboard-form {
-  padding: 4.5rem 1.6rem 0 1.6rem;
-}
-
-@media screen and (min-width: 700px) {
-  .dashboard-main .dashboard-form {
-    padding: 6rem 3rem 0 3rem;
-    width: 76%;
-    padding-top: 0;
-  }
-}
-
-@media screen and (min-width: 1000px) {
-  .dashboard-main .dashboard-form {
-    padding: 4rem 6rem 0 30rem;
-    width: 78%;
-  }
-}
-
-.dashboard-main .dashboard-form .dashboard-form-group {
-  position: relative;
-  margin-bottom: 2rem;
-}
-
-.dashboard-main .dashboard-form .dashboard-form-group .tooltip {
-  padding: 1.6rem;
-  position: absolute;
-  top: 3.6rem;
-  background: #0C2946;
-  border-radius: 0.5rem;
-  z-index: 9999;
-  width: 100%;
-}
-
-.dashboard-main .dashboard-form .dashboard-form-group .tooltip p {
-  color: white;
-  font-size: 1.8rem;
-}
-
-.dashboard-main .dashboard-form .dashboard-form-group .tooltip p:nth-child(2n) {
-  margin-bottom: 0;
-}
-
-.dashboard-main .dashboard-form .dashboard-form-group .required {
-  color: #FB4547;
-}
-
-.dashboard-main .dashboard-form .dashboard-form-group .dashboard-label {
-  font-size: 2rem;
-  color: #2f2f37;
-  font-family: "Raleway Regluar", sans-serif;
-}
-
-.dashboard-main .dashboard-form .dashboard-form-group .dashboard-label .color {
-  color: #3EA3DF;
-}
-
-.dashboard-main .dashboard-form .dashboard-form-group .dashboard-input {
-  margin-top: 0.8rem;
-  font-size: 1.8rem;
-  background: white;
-  height: 4.5rem;
-  width: 100%;
-  padding: 2rem 1rem;
-  color: #49576a;
-  border: 1px solid #3EA3DF;
-  border-radius: 0.5rem;
-  font-family: "Raleway Regluar", sans-serif;
-}
-
-.dashboard-main .dashboard-form .form-button {
-  color: white;
-  background: #FB4547;
-  font-size: 1.8rem;
-  font-family: "Raleway Bold", sans-serif;
-  border-radius: 1.6rem;
-  text-align: center;
-  display: block;
-  padding: 1.2rem;
-  margin-bottom: 1rem;
-  width: 100%;
-  margin-top: 5rem;
-}
-
-@media screen and (min-width: 700px) {
-  .dashboard-main .dashboard-form .form-button {
-    width: 50%;
-  }
-}
-
-.dashboard-main .dashboard-form .form-button:hover {
-  background: #0C2946;
-  color: white;
-  -webkit-transition: 0.7s;
-  transition: 0.7s;
-}
-
-@media screen and (min-width: 700px) {
-  .dashboard-main .flex-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: unset;
-        -ms-flex-pack: unset;
-            justify-content: unset;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-}
-
-.dashboard-main .flex-container .side-image {
-  display: none;
-}
-
-@media screen and (min-width: 700px) {
-  .dashboard-main .flex-container .side-image {
-    background: rgba(128, 128, 128, 0.529);
-    border: 1px solid grey;
-    padding: 25rem 8rem;
-    display: inline-block;
-    margin-left: 1rem;
-  }
-}
-
-@media screen and (min-width: 1000px) {
-  .dashboard-main .flex-container .side-image {
-    padding: 25rem 8rem;
-  }
-}
-
-@media screen and (min-width: 700px) {
-  .dashboard-main .flex-container .create-form-image {
-    padding: 30rem 8rem;
-  }
-}
-
-@media screen and (min-width: 700px) {
-  .dashboard-main .filter .dashboard-form .flex-form {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: unset;
-        -ms-flex-pack: unset;
-            justify-content: unset;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-}
-
-.dashboard-main .filter .dashboard-form .filter-button {
-  color: white;
-  background: #FB4547;
-  font-size: 1.8rem;
-  font-family: "Raleway Bold", sans-serif;
-  border-radius: 1.6rem;
-  text-align: center;
-  display: block;
-  padding: 1.2rem;
-  margin-bottom: 1rem;
-  width: 100%;
-  margin-bottom: 3rem;
-}
-
-@media screen and (min-width: 700px) {
-  .dashboard-main .filter .dashboard-form .filter-button {
-    margin-top: 4.8rem;
-    padding: 1.15rem;
-    margin-left: -0.5rem;
-    width: 20rem;
-    margin-left: 2rem;
-  }
-}
-
-.dashboard-main .filter .dashboard-form .filter-button:hover {
-  background: #0C2946;
-  color: white;
-  -webkit-transition: 0.7s;
-  transition: 0.7s;
-}
-
-.dashboard-body .alert {
-  padding: 4.5rem 1.6rem 0 1.6rem;
-}
-
-@media screen and (min-width: 700px) {
-  .dashboard-body .alert {
-    padding: 6rem 3rem 0 3rem;
-  }
-}
-
-@media screen and (min-width: 1000px) {
-  .dashboard-body .alert {
-    padding: 4rem 6rem 0 30rem;
-  }
-}
-
-.dashboard-body .alert p {
-  padding: 2rem;
-  font-size: 2rem;
-  background: #FB4547;
-  border-radius: 2rem;
-  color: white;
+.dashboard-main p {
+  color: #404b5e;
+  font-size: 1.6rem;
 }
 /*# sourceMappingURL=styles.css.map */

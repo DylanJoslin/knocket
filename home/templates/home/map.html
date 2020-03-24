@@ -1,0 +1,28 @@
+{% extends "home/base.html" %}
+{% load static %}
+{% block content %}
+    <h1 id="province-hover" class="province-hover text-center">Select A Province</h1>
+    <div class="province-data">
+        <div class="holder">
+            <a class="local bc" href="province/bc"></a>
+            <a class="local alberta" href="province/ab"></a>
+            <a class="local sask" href="province/sk"></a>
+            <a class="local manitoba" href="province/mb"></a>
+        </div> <!-- End Local Nav Arrow Holder -->
+
+        <div class="holder-mobile">
+            <h2 class="mobile-provice-name text-center">British Columbia</h2>
+            <div class="text-center slideshow-buttons">
+                <span class="prev">&lsaquo;</span>
+                <span class="next">&rsaquo;</span>
+            </div>
+            <div class="width-full image-container">
+                <img src="{% static 'img/bc.svg'%}">
+            </div>
+            <div class="button-container">
+                <a class="mobile-local-button" href="local-bc.html">Explore</a>
+            </div>
+        </div> <!-- End Mobile Holder -->
+
+    </div> <!-- End Province Data Holder -->
+{% endblock content %}

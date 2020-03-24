@@ -1,11 +1,10 @@
 .dashboard-body{
 
     .dashboard-navigation{
-        z-index: 90;
         @include breakpoint(maxTablet){
             width: 100%;
             position: absolute;
-            top: 4rem;
+            top: 5.3rem;
             right: -100%;
             background-color: $nav-shown;
             padding-bottom: 4rem;
@@ -19,54 +18,32 @@
 
         @include breakpoint(laptop){
             display: inline-block;
-            width: 22rem;
+           width: 22rem;
+           background: $dark;
         }//break
 
-        
+        .nav-link{
 
-        .navigation-para{
-            margin: 1rem;
-            color: white;
-            font-family: $nav-link-font;
-            border-bottom: 1px solid white;
-            padding-bottom: 0.5rem;
-            font-size: 2rem;
-            text-align: center;
-
-            @include breakpoint(laptop){
-                margin: 0;
-                margin-right: 1rem;
-                margin-bottom: 2rem;
-            }
-        }
-        
-        .nav-link{ 
-        
             a{
                 @include nav-links;
-                @include flex(space-between);
+                @include nav-flex;
             
                 p{
                     margin-bottom: 0;
                     font-size: $navlink-font-size;
-                    font-family: $nav-link-font;
-                    color: $nav-link-color;
-                    
+                    font-family: $navlink-font;
+
+                    @include breakpoint(laptop){
+
+                    }
+
                     span{
                         font-size: $signed-in;
                     }//span
 
                 }//p
 
-                p:first-child{
-                    padding-right: 1rem;
-                }
-
             }//a
-
-            a:hover{
-                @include nav-hover;
-            }
 
         }//.navlink
 
@@ -74,48 +51,33 @@
             @include nav-links;
 
             @include breakpoint(maxTablet){
-                @include flex(space-between);
+                @include nav-flex;
             }//break
 
             .signed-in{
-                color: $nav-link-color;
-                font-size: 2rem;
-                font-family: 'Raleway Bold', sans-serif;
-                margin-bottom: 1rem;
-                
+
                 @include breakpoint(laptop){
-                    padding-bottom: 1rem;
+                    padding-bottom: 1.5rem;
                 }//break
 
             }
             
             a p{
-                text-align: center;
-                color: $white;
-                border-radius: 1rem;
-                background: $primary;
-                padding: 0.5rem;
-            }
-
-            a:hover p{
-                @include nav-hover;
+                text-align: right;
             }
 
             p{
                 margin-bottom: 0;
                 font-size: $navlink-font-size;
-                font-family: $nav-link-font;
+                font-family: $navlink-font;
                 
                 span{
                     font-size: $signed-in;
-                    font-family: 'Raleway Regular', sans-serif;
                 } //span
-                
 
             }//p
 
         }//.logout
-
 
     }//.dashboard-navigation
 

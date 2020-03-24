@@ -1,66 +1,57 @@
-.dashboard-html{
-
-  .dashboard-body{
+.dashboard-body{
   
-    h2, h3, h4, h5, h6, p{
-        color: $text-color;
-        margin-bottom: 2.4rem; 
-    }
-  
-    h2, h3, h4, h5, h6{
+  h2, h3, h4, h5, h6, p{
       font-family: $heading-font;
-    }
-  
-    p{
-      font-size: $paragraph;
-      font-family: $para-font;
-      text-align: left;
-    }
-  
-    h1{
-      font-size: 2rem; 
+      color: $white;
+      margin-bottom: 2.4rem; 
+    //   background-color: $heading-background;
+  }
 
-      @include breakpoint(tablet){
-        font-size: 3.1rem; 
-      }
-      
-    }
-  
-    h2{
-      font-size: 5.6rem; 
-      line-height: 7.2rem; 
-      margin-bottom: 3rem;
-    }
-  
-    h3{
-      font-size: 5.0rem; 
-      line-height: 5rem; 
-      margin-bottom: 2.8rem;
-    }
-  
-    h4{
-      font-size: 4.2rem; 
-      line-height: 5rem; 
-      margin-bottom: 4.8rem;
-    }
-  
-    h5{
-      font-size: 3.8rem; 
-      line-height: 4.8rem; 
-    }
-  
-    a{
-      text-decoration: none;
-    }
-  
-    li{
-      list-style: none;
-    }
-  
+  h2{
+    color: $dark;
+  }
+
+  h1{
+    font-size: 6.9rem; 
+    line-height: 7.2rem; 
+    margin-bottom: 4.8rem;
+    // background-color: $heading-background;
+  }
+
+  h2{
+    //@extend h1; //Getting styles from the h1 so we don't have to copy
+    font-size: 6.1rem; 
+    line-height: 7.2rem; 
+  }
+
+  h3{
+    font-size: 5.1rem; 
+    line-height: 7.2rem; 
+  }
+
+  h4{
+    font-size: 4.8rem; 
+    line-height: 7.2rem; 
+  }
+
+  h5{
+    font-size: 4.1rem; 
+    line-height: 4.8rem; 
+  }
+
+  h6{
+    font-size: 3.7em; 
+    line-height: 4.8rem; 
+  }
+
+  a{
+    text-decoration: none;
+  }
+
+  li{
+    list-style: none;
   }
 
 }
-
-
   
   
