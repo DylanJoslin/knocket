@@ -386,6 +386,10 @@ img, .treaty-img {
   margin-bottom: 20px;
 }
 
+.main-body .container {
+  margin-top: 100px;
+}
+
 .main-header .main-navigation {
   z-index: 90;
 }
