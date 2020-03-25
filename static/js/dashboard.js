@@ -1,3 +1,7 @@
+/***********************************************************************
+					MOBILE MENU FUNCTIONALITY
+	************************************************************************/
+
 $(document).ready(function() {
 	$('.menu-icon').click(function() {
 		$('.dashboard-navigation').toggleClass('menu-toggle');
@@ -16,6 +20,10 @@ $(document).ready(function() {
 	// 	event.preventDefault();
 	// });
 
+	/***********************************************************************
+					ACCORDION FUNCTIONALITY
+	************************************************************************/
+
 	(function($) {
 		var allPanels = $('.acc-user-info');
 		allPanels.hide();
@@ -25,11 +33,11 @@ $(document).ready(function() {
 			if(!content.is(':visible')){
 				allPanels.slideUp();
 				content.slideDown();
-				var accordian = $(this).parent().parent().parent();
+				var accordion = $(this).parent().parent().parent();
 
-				if(accordian.hasClass('users-acc') == true){
+				if(accordion.hasClass('users-acc') == true){
 					$('.overview-background-second').addClass('overview-bgd-moved');
-				} else if (accordian.hasClass('users-acc') == false){
+				} else if (accordion.hasClass('users-acc') == false){
 					$('.overview-background-second').removeClass('overview-bgd-moved');
 				}
 			}
@@ -38,111 +46,83 @@ $(document).ready(function() {
 	})(jQuery);
 
 
+	/***********************************************************************
+					ABSOLUTE BACKGROUND FIX
+	************************************************************************/
+
 	function fixBackground(thisElement, accInfoSelector){
 
-		if(thisElement.parent().parent().hasClass('users-acc') == true){
-
+		if(thisElement.parents('.accordion').hasClass('users-acc') == true){
 			if(!accInfoSelector.is(':visible') ){
-
 				if($('.overview-background-second').hasClass('overview-bgd-moved') == true){
 					$('.overview-background-second').removeClass('overview-bgd-moved');
 				}
-
 			} else if(accInfoSelector.is(':visible') ){
 				if($('.overview-background-second').hasClass('overview-bgd-moved') == false){
 					$('.overview-background-second').addClass('overview-bgd-moved');
 				}
 			}
-
 		}
 
 	}
 
-	$('.acc-new-uploads').click(function(event) {
-		$('#new-uploads').removeClass('hidden');
-		$('#published-uploads').addClass('hidden');
+	/***********************************************************************
+					ACCORDION TABS CLICK FUNCTION
+	************************************************************************/
 
+	function tabClick(contentId, thisElement){
+		thisElement.parent().siblings('.acc-content').not('.hidden').addClass('hidden');
+		$(contentId).removeClass('hidden');
+		$accInfoSelector = $('.users-acc > contentId > .acc-single > .acc-user-info');
+
+		fixBackground(thisElement, $accInfoSelector);
+	}
+
+	/***********************************************************************
+					ACCORDION TABS CLICK EVENTLISTENERS
+	************************************************************************/
+
+	/*************** NEW UPLOADS ***************/
+	$('.acc-new-uploads').click(function(event) {
+		tabClick('#new-uploads', $(this));
 		event.preventDefault();
 	});
 
+	/*************** PUBLISHED UPLOADS ***************/
 	$('.acc-published-uploads').click(function(event) {
-		$('#published-uploads').removeClass('hidden');
-		$('#new-uploads').addClass('hidden');
-
+		tabClick('#published-uploads', $(this));
 		event.preventDefault();
     });
-    
+	
+	/*************** NEW USERS ***************/
     $('.acc-new-users').click(function(event) {
-
-
-
-
-		$('#new-users').removeClass('hidden');
-		$('#admin-users').addClass('hidden');
-		$('#registered-users').addClass('hidden');
-		$('#elder-users').addClass('hidden');
-		$('#teacher-users').addClass('hidden');
-
-		$thisElement = $(this);
-		$accInfoSelector = $('.users-acc > #new-users > .acc-single > .acc-user-info');
-		fixBackground($thisElement, $accInfoSelector);
-
+		tabClick('#new-users', $(this));
 		event.preventDefault();
 	});
 
+	/*************** REGISTERED USERS ***************/
 	$('.acc-registered-users').click(function(event) {
-		$('#registered-users').removeClass('hidden');
-		$('#new-users').addClass('hidden');
-		$('#admin-users').addClass('hidden');
-		$('#elder-users').addClass('hidden');
-		$('#teacher-users').addClass('hidden');
-
-		$thisElement = $(this);
-		$accInfoSelector = $('.users-acc > #registered-users > .acc-single > .acc-user-info');
-		fixBackground($thisElement, $accInfoSelector);
-
+		tabClick('#registered-users', $(this));
 		event.preventDefault();
 	});
 
+	/*************** TEACHERS ***************/
 	$('.acc-teachers').click(function (event) {
-		$('#teacher-users').removeClass('hidden');
-		$('#new-users').addClass('hidden');
-		$('#registered-users').addClass('hidden');
-		$('#elder-users').addClass('hidden');
-		$('#admin-users').addClass('hidden');
-
-		$thisElement = $(this);
-		$accInfoSelector = $('.users-acc > #teacher-users > .acc-single > .acc-user-info');
-		fixBackground($thisElement, $accInfoSelector);
-
+		tabClick('#teacher-users', $(this));
 		event.preventDefault();
 	});
 
+	/*************** ELDERS ***************/
 	$('.acc-elders').click(function (event) {
-		$('#elder-users').removeClass('hidden');
-		$('#new-users').addClass('hidden');
-		$('#registered-users').addClass('hidden');
-		$('#admin-users').addClass('hidden');
-		$('#teacher-users').addClass('hidden');
-
-		$thisElement = $(this);
-		$accInfoSelector = $('.users-acc > #elder-users > .acc-single > .acc-user-info');
-		fixBackground($thisElement, $accInfoSelector);
-
+		tabClick('#elder-users', $(this));
 		event.preventDefault();
 	});
 
+	/*************** ADMINS ***************/
 	$('.acc-admins').click(function (event) {
-		$('#admin-users').removeClass('hidden');
-		$('#new-users').addClass('hidden');
-		$('#registered-users').addClass('hidden');
-		$('#elder-users').addClass('hidden');
-		$('#teacher-users').addClass('hidden');
-
-		$thisElement = $(this);
-		$accInfoSelector = $('.users-acc > #admin-users > .acc-single > .acc-user-info');
-		fixBackground($thisElement, $accInfoSelector);
-
+		tabClick('#admin-users', $(this));
 		event.preventDefault();
 	});
+
+
 });

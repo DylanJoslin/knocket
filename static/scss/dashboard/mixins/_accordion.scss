@@ -1,4 +1,4 @@
-@mixin accordian-tabs(){
+@mixin accordion-tabs(){
     background: $third;
     color: $white;
     padding: 1rem 3rem;
@@ -11,13 +11,13 @@
     border-top-right-radius: 1.6rem;
   }
   
-  @mixin accordian-dropdown(){
+  @mixin accordion-dropdown(){
     background: $user-acc-background;
     border-bottom: 1px solid $third;
     padding: 1rem 2rem;
   }
   
-  @mixin accordian-badge(){
+  @mixin accordion-badge(){
     background: $acc-badge-background;
     color: $white;
     padding: 0.5rem 1rem;
@@ -27,13 +27,13 @@
     margin-left: 1rem;
   }
   
-  @mixin accordian-hover{
+  @mixin accordion-hover{
     background: $secondary;
     color: $white;
     transition: $hover-transition;
   }
   
-  @mixin accordian-info-shown(){
+  @mixin accordion-info-shown(){
     border: 1px solid $third;
     border-top: 0;
     padding: 1rem;

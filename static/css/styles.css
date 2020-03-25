@@ -957,7 +957,7 @@ td, th {
 /*******    COLORS    *******/
 /*******    NAVIGATION    *******/
 /*******    HOVER    *******/
-/*******    ACCORDIAN    *******/
+/*******    ACCORDION    *******/
 /*******    BUTTONS    *******/
 /*******    OVERVIEW    *******/
 /*******    PARA, HEADING, NAV     *******/
@@ -1500,38 +1500,38 @@ td, th {
   transition: 0.7s;
 }
 
-.dashboard-main .accordian {
+.dashboard-main .accordion {
   padding: 4.5rem 1.6rem 0 1.6rem;
   margin-bottom: 20rem;
 }
 
 @media screen and (min-width: 700px) {
-  .dashboard-main .accordian {
+  .dashboard-main .accordion {
     padding: 6rem 3rem 0 3rem;
   }
 }
 
 @media screen and (min-width: 1000px) {
-  .dashboard-main .accordian {
+  .dashboard-main .accordion {
     padding: 4rem 6rem 0 30rem;
   }
 }
 
-.dashboard-main .accordian .hidden {
+.dashboard-main .accordion .hidden {
   display: none;
 }
 
-.dashboard-main .accordian .acc-tabs {
+.dashboard-main .accordion .acc-tabs {
   margin-bottom: 0.7rem;
 }
 
 @media screen and (min-width: 700px) {
-  .dashboard-main .accordian .acc-tabs {
+  .dashboard-main .accordion .acc-tabs {
     margin-bottom: 0.85rem;
   }
 }
 
-.dashboard-main .accordian .acc-tabs a {
+.dashboard-main .accordion .acc-tabs a {
   background: #0C2946;
   color: white;
   padding: 1rem 3rem;
@@ -1542,33 +1542,33 @@ td, th {
 }
 
 @media screen and (min-width: 700px) {
-  .dashboard-main .accordian .acc-tabs a {
+  .dashboard-main .accordion .acc-tabs a {
     padding: 1.2rem 3rem;
   }
 }
 
-.dashboard-main .accordian .acc-tabs a:hover {
+.dashboard-main .accordion .acc-tabs a:hover {
   background: #FB4547;
   color: white;
   -webkit-transition: 0.7s;
   transition: 0.7s;
 }
 
-.dashboard-main .accordian .acc-content {
+.dashboard-main .accordion .acc-content {
   -webkit-box-shadow: 0px 0px 6px 2px #d4d4d4;
   box-shadow: 0px 0px 6px 2px #d4d4d4;
   border-top-right-radius: 1.6rem;
   margin-bottom: 2rem;
 }
 
-.dashboard-main .accordian .acc-content .acc-single .acc-user-dropdown:hover {
+.dashboard-main .accordion .acc-content .acc-single .acc-user-dropdown:hover {
   background: #FB4547;
   color: white;
   -webkit-transition: 0.7s;
   transition: 0.7s;
 }
 
-.dashboard-main .accordian .acc-content .acc-single .acc-user-dropdown {
+.dashboard-main .accordion .acc-content .acc-single .acc-user-dropdown {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1583,7 +1583,7 @@ td, th {
   padding: 1rem 2rem;
 }
 
-.dashboard-main .accordian .acc-content .acc-single .acc-user-dropdown .acc-badge {
+.dashboard-main .accordion .acc-content .acc-single .acc-user-dropdown .acc-badge {
   background: #0C2946;
   color: white;
   padding: 0.5rem 1rem;
@@ -1592,20 +1592,20 @@ td, th {
   margin-left: 1rem;
 }
 
-.dashboard-main .accordian .acc-content .acc-single .acc-user-dropdown p {
+.dashboard-main .accordion .acc-content .acc-single .acc-user-dropdown p {
   font-size: 1.8rem;
   color: white;
   margin-bottom: 0;
 }
 
-.dashboard-main .accordian .acc-content .acc-single .acc-user-info {
+.dashboard-main .accordion .acc-content .acc-single .acc-user-info {
   border: 1px solid #0C2946;
   border-top: 0;
   padding: 1rem;
 }
 
 @media screen and (min-width: 1000px) {
-  .dashboard-main .accordian .acc-content .acc-single .acc-user-info {
+  .dashboard-main .accordion .acc-content .acc-single .acc-user-info {
     padding: 2rem;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1620,35 +1620,35 @@ td, th {
 }
 
 @media screen and (min-width: 1280px) {
-  .dashboard-main .accordian .acc-content .acc-single .acc-user-info {
+  .dashboard-main .accordion .acc-content .acc-single .acc-user-info {
     padding: 0.8rem 0.8rem 0.8rem 2rem;
   }
 }
 
 @media screen and (min-width: 700px) {
-  .dashboard-main .accordian .acc-content .acc-single .acc-user-info .information {
+  .dashboard-main .accordion .acc-content .acc-single .acc-user-info .information {
     padding-top: 2rem;
   }
 }
 
 @media screen and (min-width: 1000px) {
-  .dashboard-main .accordian .acc-content .acc-single .acc-user-info .information {
+  .dashboard-main .accordion .acc-content .acc-single .acc-user-info .information {
     padding-top: 1rem;
   }
 }
 
-.dashboard-main .accordian .acc-content .acc-single .acc-user-info .information p {
+.dashboard-main .accordion .acc-content .acc-single .acc-user-info .information p {
   margin-bottom: 1rem;
 }
 
 @media screen and (min-width: 700px) {
-  .dashboard-main .accordian .acc-content .acc-single .acc-user-info .information p {
+  .dashboard-main .accordion .acc-content .acc-single .acc-user-info .information p {
     padding-left: 2rem;
   }
 }
 
 @media only screen and (min-width: 1400px) {
-  .dashboard-main .accordian .acc-content .acc-single .acc-user-info .information {
+  .dashboard-main .accordion .acc-content .acc-single .acc-user-info .information {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1661,12 +1661,12 @@ td, th {
   }
 }
 
-.dashboard-main .accordian .acc-content .acc-single .acc-user-info .options {
+.dashboard-main .accordion .acc-content .acc-single .acc-user-info .options {
   padding-top: 1rem;
 }
 
 @media screen and (min-width: 700px) {
-  .dashboard-main .accordian .acc-content .acc-single .acc-user-info .options {
+  .dashboard-main .accordion .acc-content .acc-single .acc-user-info .options {
     padding-left: 3rem;
     padding-bottom: 2rem;
     display: -webkit-box;
@@ -1682,7 +1682,7 @@ td, th {
 }
 
 @media screen and (min-width: 1000px) {
-  .dashboard-main .accordian .acc-content .acc-single .acc-user-info .options {
+  .dashboard-main .accordion .acc-content .acc-single .acc-user-info .options {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1696,7 +1696,7 @@ td, th {
   }
 }
 
-.dashboard-main .accordian .acc-content .acc-single .acc-user-info .options a {
+.dashboard-main .accordion .acc-content .acc-single .acc-user-info .options a {
   color: white;
   background: #FB4547;
   font-size: 1.8rem;
@@ -1709,31 +1709,31 @@ td, th {
 }
 
 @media screen and (min-width: 700px) {
-  .dashboard-main .accordian .acc-content .acc-single .acc-user-info .options a {
+  .dashboard-main .accordion .acc-content .acc-single .acc-user-info .options a {
     width: 30rem;
     margin-right: 2rem;
   }
 }
 
 @media screen and (min-width: 1000px) {
-  .dashboard-main .accordian .acc-content .acc-single .acc-user-info .options a {
+  .dashboard-main .accordion .acc-content .acc-single .acc-user-info .options a {
     width: 18rem;
     margin-right: 1rem;
   }
 }
 
-.dashboard-main .accordian .acc-content .acc-single .acc-user-info .options a:hover {
+.dashboard-main .accordion .acc-content .acc-single .acc-user-info .options a:hover {
   background: #0C2946;
   color: white;
   -webkit-transition: 0.7s;
   transition: 0.7s;
 }
 
-.dashboard-main .accordian .acc-content .acc-single:first-child .acc-user-dropdown {
+.dashboard-main .accordion .acc-content .acc-single:first-child .acc-user-dropdown {
   border-top-right-radius: 1.6rem;
 }
 
-.dashboard-main .accordian .view-all {
+.dashboard-main .accordion .view-all {
   color: #0C2946;
   font-size: 1.8rem;
   border-bottom: 1px solid #FB4547;
@@ -1741,7 +1741,7 @@ td, th {
   font-family: "Raleway Bold", sans-serif;
 }
 
-.dashboard-main .accordian .view-all:hover {
+.dashboard-main .accordion .view-all:hover {
   color: #FB4547;
   border-bottom: 1px solid #0C2946;
   -webkit-transition: 0.7s;

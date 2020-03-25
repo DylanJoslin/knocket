@@ -1,6 +1,6 @@
 .dashboard-main{
 
-    .accordian{
+    .accordion{
         
         @include padding(small);
 
@@ -26,11 +26,11 @@
             }
 
             a{
-                @include accordian-tabs;
+                @include accordion-tabs;
             }
 
             a:hover{
-                @include accordian-hover;
+                @include accordion-hover;
             }
 
         }
@@ -45,15 +45,15 @@
             .acc-single{
 
                 .acc-user-dropdown:hover{
-                   @include accordian-hover;
+                   @include accordion-hover;
                 }
 
                 .acc-user-dropdown{
                     @include flex(space-between);
-                    @include accordian-dropdown;
+                    @include accordion-dropdown;
 
                     .acc-badge{
-                        @include accordian-badge;
+                        @include accordion-badge;
                     }
 
                     p{
@@ -66,7 +66,7 @@
 
                 .acc-user-info{
 
-                    @include accordian-info-shown;
+                    @include accordion-info-shown;
                     @include breakpoint(laptop){
                         padding: 2rem;
                         @include flex(unset);
@@ -151,10 +151,10 @@
 
         }
 
-        // USERS ACCORDIAN
+        // USERS ACCORDION
 
         .view-all{
-            @include accordian-link;
+            @include accordion-link;
         }
 
         .view-all:hover{

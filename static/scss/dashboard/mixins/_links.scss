@@ -39,9 +39,9 @@
   transition: width .3s;
 }
 
-//ACCORDIAN LINKS
+//ACCORDION LINKS
 
-  @mixin accordian-link(){
+  @mixin accordion-link(){
     color: $third;
     font-size: $acc-tabs;
     border-bottom: 1px solid $secondary;
