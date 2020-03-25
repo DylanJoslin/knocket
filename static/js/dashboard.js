@@ -50,20 +50,17 @@ $(document).ready(function() {
 					ABSOLUTE BACKGROUND FIX
 	************************************************************************/
 
-	function fixBackground(thisElement, accInfoSelector){
-
+	function fixBackground(thisElement){
+		$accInfoSelector = thisElement.parents('.accordion').find('.acc-content > .acc-single > .acc-user-info');
 		if(thisElement.parents('.accordion').hasClass('users-acc') == true){
-			if(!accInfoSelector.is(':visible') ){
-				if($('.overview-background-second').hasClass('overview-bgd-moved') == true){
-					$('.overview-background-second').removeClass('overview-bgd-moved');
-				}
-			} else if(accInfoSelector.is(':visible') ){
-				if($('.overview-background-second').hasClass('overview-bgd-moved') == false){
-					$('.overview-background-second').addClass('overview-bgd-moved');
-				}
+			if($accInfoSelector.is(':visible')){
+				console.log('Is Visible');
+				$('.overview-background-second').addClass('overview-bgd-moved');
+			} else if($accInfoSelector.is(':hidden')){
+				console.log('Is not visible');
+				$('.overview-background-second').removeClass('overview-bgd-moved');
 			}
 		}
-
 	}
 
 	/***********************************************************************
@@ -73,9 +70,8 @@ $(document).ready(function() {
 	function tabClick(contentId, thisElement){
 		thisElement.parent().siblings('.acc-content').not('.hidden').addClass('hidden');
 		$(contentId).removeClass('hidden');
-		$accInfoSelector = $('.users-acc > contentId > .acc-single > .acc-user-info');
 
-		fixBackground(thisElement, $accInfoSelector);
+		fixBackground(thisElement);
 	}
 
 	/***********************************************************************
