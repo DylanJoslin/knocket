@@ -1,37 +1,120 @@
-header{
-    .top-header{
+.main-header{
+    padding: 30px;
+    background-color: $light-blue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo{
+        font-size: 24px;
+    }
+
+    @include breakpoint(laptop){
+        padding-left: 30px;
+    }
+
+    .side-menu{
+        position: relative;
         display: flex;
-        justify-content: space-between;
-        padding: 30px 10px;
-        background-color: $light-blue;
+        align-items: center;
+    }
+
+    .show-at-laptop{
+        display: none;
+        @include breakpoint(laptop){
+            display: inline-block;
+        }
+    }
+
+    .show-at-mobile{
+        @include breakpoint(laptop){
+            display: none;
+        }
+        
+    }
+
+}
+
+.main-header .menu-closed-header-style{
+    background: $light-blue;
+}
+
+.menu-icon {
+    width: 1.875rem;
+    @include breakpoint(laptop){
+        display: none;
+    }
+  }//.menu-icon
+
+  @include breakpoint(maxTablet){
     
-        @include media-md{
-            margin-bottom: 70px;
-        }
+    .menu-icon:after, 
+    .menu-icon:before, 
+    .menu-icon div {
+        background: white;
+        border-radius: 0.3rem;
+        content: '';
+        display: block;
+        height: 3px;
+        margin: 5px 0;
+        transition: all 0.7s ease-in-out;
+    }//.menu-icon
+
+    .close-button {
+        font-size: 24px;
+        text-align: right;
+        padding: 10px;
+        padding-top: 37.5px;
+        text-align: center;
+        width: 100%;
+        margin: 0 auto;
+    }//.close
+
+    .icon-closed:before {
+        transform: translateY(7px) rotate(135deg);
+    }//.close
+
+    .icon-closed:after {
+        transform: translateY(-9px) rotate(-135deg);
+    }//.close
+
+    .icon-closed div {
+        transform: scale(0);
+    }//.close
+
+    .menu-toggle {
+        position: absolute;
+        left: 0;
+        z-index: 9999;
+    }//.menu-toggle
+  }
+
+  .login a{
+    margin-right: 10px;
+    font-family: 'Cardo Regular', sans-serif;
+    text-transform: uppercase;
+    font-size: 14px;
+    text-decoration: none;
+    color: white;
+    background: $red-colour;
+    padding: 10px 20px;
+    border-radius: 8px;
+
+    &:hover{
+        background-color: $light-purple;
+        color: black;
+        transition: 0.5s;
     }
 
-    .login{
-        margin-top: 8px;
-    }
+}
 
-    .login a{
-        font-family: 'Cardo Regular', sans-serif;
-        text-transform: uppercase;
-        font-size: 12px;
-        text-decoration: none;
-        color: white;
-        background-color: $red-colour;
-        padding: 8px;
-        margin-top: 10px;
-        border-radius: 8px;
+.show-at-mobile a{
+    padding: 10px 30px;
+    font-size: 20px;
+    width: 80%;
+    display: inline-block;
+}
 
-        &:hover{
-            background-color: $light-purple;
-            transition: 0.5s;
-        }
-    }
-
-    .menu{
-        @include flex;
-    }
+.show-at-mobile{
+    margin-bottom: 20px;
 }

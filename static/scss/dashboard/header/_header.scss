@@ -37,7 +37,7 @@
 
 }//.dashboard-header
 
-.menu-closed-header-style {
+.dashboard-header .menu-closed-header-style {
     background-color: $nav-shown;
 
     @include breakpoint(laptop){

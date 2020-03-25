@@ -9,65 +9,7 @@
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 </head>
 <body>
-
-    <header class="main-header">
-        <h1 class="logo"><a href="{% url 'home' %}">Indigenous <br><span>Storytelling</span></a></h1>
-        <nav class="main-navigation">
-            <ul class="menu-links">
-                <li class="nav-link">
-                    <a href="#" class="underline-link">Map</a>
-                </li>
-                <li class="nav-link">
-                    <a href="{% url 'post_list' %}amiskwaciy" class="underline-link">Stories <span class="dropdown">&#9660;</span></a>
-                    <ul class="sub-menu hidden">
-                        <li class="nav-link"><a href="#" class="underline-link">Physical</a></li>
-                        <li class="nav-link"><a href="#" class="underline-link">Emotional</a></li>
-                        <li class="nav-link"><a href="#" class="underline-link">Mental</a></li>
-                        <li class="nav-link"><a href="#" class="underline-link">Spiritual</a></li>
-                    </ul>
-                </li>
-                <li class="nav-link">
-                    <a href="{% url 'resources' %}" class="underline-link">Resources</a>
-                </li>
-                 <li class="nav-link">
-                    <a href="{% url 'about' %}" class="underline-link">About Us</a>
-                </li>
-                {% if user.is_authenticated %}
-                    <li class="nav-link margin-bottom">
-                        <a href="{% url 'profile' %}">Profile</a>
-                    </li>
-                    {% if user.userprofile.access == 'admin' or user.userprofile.access == 'teacher' %}
-                        <li class="nav-link margin-bottom">
-                            <a href="{% url 'administration' %}">Admin</a>
-                        </li>
-                    {% endif %}
-                    <li class="nav-link margin-bottom">
-                        <a href="{% url 'logout' %}">Log Out</a>
-                    </li>
-                {% endif %}
-                {% if not user.is_authenticated %}
-                        <li class="login show-at-mobile">
-                            <a href="{% url 'login' %}">Sign In</a>
-                        </li>
-                        <li class="login show-at-mobile">
-                            <a href="{% url 'register' %}" class="text-info">Register</a>
-                        </li>
-                    {% endif %}
-            </ul>
-        </nav>
-            {% if not user.is_authenticated %}
-                <div class="login show-at-laptop">
-                    <a href="{% url 'login' %}">Sign In</a>
-                    <a href="{% url 'register' %}" class="nav-link text-info">Register</a>
-                </div>
-            {% endif %}
-            <div class="menu-icon">
-                <div></div>
-            </div>
-    </header>
-
-
-    {% comment %} <header>
+    <header>
             <div class="top-header">
             <h1 class="logo"><a href="{% url 'home' %}">Indigenous <br><span>Storytelling</span></a></h1>
             <div class="menu">
@@ -102,7 +44,7 @@
                 {% endif %}
 
             </ul>
-        </nav> {% endcomment %}
+        </nav>
         <!-- <ul class="nav">
             {% if user.is_authenticated %}
             <li class="nav-item dropdown">
@@ -123,7 +65,7 @@
             <li class="nav-item"><a href="{% url 'register' %}" class="nav-link text-info">Register</a></li>
             {% endif %}
         </ul> -->
-    {% comment %} </header> {% endcomment %}
+    </header>
     <main class="container">
         {% comment %} If there are any errors, such as an error when loggin in or registering, this code block will output it as html {% endcomment %}
         {% if messages %}
@@ -174,7 +116,7 @@
 
     </footer>
 
-    <script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+
     <script src="{% static 'js/navigation.js' %}"></script>
     <script src="{% static 'js/main.js' %}"></script>
     <script src="{% static 'js/hover-handler.js' %}"></script>
