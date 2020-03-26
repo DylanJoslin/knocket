@@ -1,0 +1,170 @@
+.dashboard-main{
+
+    .accordion{
+        
+        @include padding(small);
+
+        @include breakpoint(tablet){
+            @include padding(medium);
+        }
+
+        @include breakpoint(laptop){
+            @include padding(large);
+        }
+
+        margin-bottom: 20rem;
+
+        .hidden{
+            display:none;
+        }
+
+        .acc-tabs{
+            margin-bottom: 0.7rem;
+
+            @include breakpoint(tablet){
+                margin-bottom: 0.85rem;
+            }
+
+            a{
+                @include accordion-tabs;
+            }
+
+            a:hover{
+                @include accordion-hover;
+            }
+
+        }
+
+        .acc-content{
+            -webkit-box-shadow: 0px 0px 6px 2px rgba(212,212,212,1);
+            -moz-box-shadow: 0px 0px 6px 2px rgba(212,212,212,1);
+            box-shadow: 0px 0px 6px 2px rgba(212,212,212,1);
+            border-top-right-radius: 1.6rem;
+            margin-bottom: 2rem;
+            
+            .acc-single{
+
+                .acc-user-dropdown:hover{
+                   @include accordion-hover;
+                }
+
+                .acc-user-dropdown{
+                    @include flex(space-between);
+                    @include accordion-dropdown;
+
+                    .acc-badge{
+                        @include accordion-badge;
+                    }
+
+                    p{
+                        font-size: $acc-tabs;
+                        color: $white;
+                        margin-bottom: 0;
+                    }
+                    
+                }
+
+                .acc-user-info{
+
+                    @include accordion-info-shown;
+                    @include breakpoint(laptop){
+                        padding: 2rem;
+                        @include flex(unset);
+                    }
+
+                    @include breakpoint(desktop){
+                        padding: 0.8rem 0.8rem 0.8rem 2rem;
+                    }
+
+                    .information{
+
+                        @include breakpoint(tablet){
+                            padding-top: 2rem;
+                        }
+
+                        @include breakpoint(laptop){
+                            padding-top: 1rem;
+                        }
+
+                        p{
+                            margin-bottom: 1rem;
+
+                            @include breakpoint(tablet){
+                                padding-left: 2rem;
+                            }
+
+                            @include breakpoint(desktop){
+                                
+                            }
+                        }
+
+                        @media only screen and (min-width: 1400px)  {
+                            @include flex(unset);
+                        }
+                    }
+                    
+                    .options {
+                        padding-top: 1rem;
+
+                        @include breakpoint(tablet){
+                            padding-left: 3rem;
+                            padding-bottom: 2rem;
+                            @include flex(unset);
+                        }
+
+                        @include breakpoint(laptop){
+                            @include flex(unset);
+                            padding-bottom: 0;
+                        }
+
+                        a{
+                            @include button;
+                            @include breakpoint(tablet){
+                                width: 30rem;
+                                margin-right: 2rem;
+                            }
+
+                            @include breakpoint(laptop){
+                                width: 18rem;
+                                margin-right: 1rem;
+                            }
+                            
+                        }
+
+                        a:hover{
+                            @include button-hover;
+                        }
+                    }
+                    
+                }
+                
+            }
+
+            .acc-single:first-child .acc-user-dropdown{
+                border-top-right-radius: 1.6rem;
+              }
+
+            //   .acc-single:last-child .acc-user-dropdown{
+            //     border-bottom-right-radius: 1.6rem;
+            //     border-bottom-left-radius: 1.6rem;
+            //   }
+
+        }
+
+        // USERS ACCORDION
+
+        .view-all{
+            @include accordion-link;
+        }
+
+        .view-all:hover{
+            color: $secondary;
+            border-bottom: 1px solid $third;
+            transition: $hover-transition;
+        }
+
+
+    }
+
+
+}
