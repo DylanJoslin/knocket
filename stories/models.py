@@ -63,6 +63,7 @@ class VideoPost(models.Model):
     content = RichTextUploadingField()
     image = models.ImageField(upload_to='images', null=True, blank=True)
     date_posted = models.DateTimeField(default=timezone.now)
+    approve = models.BooleanField(default = False)
 
     def _get_unique_slug(self, *args, **kwargs):
         self.slug = slugify(self.title)

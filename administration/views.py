@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.models import User
 from django.contrib import messages
 from .forms import AccessForm
+from stories.models import VideoPost
 
 
 # Create your views here.
@@ -59,6 +60,3 @@ def approve_user(request, username='none'):
 
 def admin_uploads(request):
     return render(request, 'administration/admin_uploads.html')
-
-
-
