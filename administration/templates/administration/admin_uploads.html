@@ -34,8 +34,8 @@
 			<h3>Uploads Overview</h3>
 			<div class="overview-box">
 				<div>
-					<p>New Uploads: <span class="number">12</span></p>
-					<p>Published Uploads: <span class="number">40</span></p>
+					<p>New Uploads: <span class="number">{{ new_post }}</span></p>
+					<p>Published Uploads: <span class="number">{{ approved_post }}</span></p>
 				</div>
 				<div>
 					<a href="{% url 'post_new' %}">Create New Upload</a>
@@ -110,12 +110,11 @@
 					<div class="information">
 						<p>Created on: {{ post.date_posted| date:"M d, Y" }}</p>
 						<p>Author: {{ post.author }}</p>
-						<p>School: {{ post.school_slug }}</p>
-						<p>Category: {{ post.category_slug }}</p>
+						<p>Category: {{ post.school }} / {{ post.category }}</p>
 					</div>
 					<div class="options">
-						<a href="#">Delete Upload</a>
-						<a href="#">Edit Upload</a>
+						<a href="{% url 'delete_upload' %}{{ post.slug }}">Delete Upload</a>
+						<a href="{% url 'edit_upload' %}{{ post.slug }}">Edit Upload</a>
 					</div>
 				</div><!-- User information -->
 			</div><!-- Single user -->
@@ -126,27 +125,30 @@
 
 	<!-- ====================PUBLISHED UPLOADS==================== -->
 		<div id="published-uploads" class="acc-content hidden"> <!-- New Users Content-->
-
+			{% for post in posts %}
+				{% if post.approve == 1 %}
 		<!-- ====================SINGLE UPLOAD==================== -->
 			<div class="acc-single"> <!-- Single user -->
 				<div class="acc-user-dropdown"><!-- User Dropdown -->
-					<p class="acc-username">title <span class="acc-badge">Published</span></p>
+					<p class="acc-username">{{ post.title }} <span class="acc-badge">Published</span></p>
 					<p class="icon-plus">+</p>
 					<p class="icon-minus hidden">-</p>
 				</div><!-- User Dropdown -->
 				<div class="acc-user-info"><!-- User information -->
 					<div class="information">
-						<p>Created on: (date)</p>
-						<p>Created by: (full name)</p>
-						<p>Category: (category)</p>
+						<p>Created on: {{ post.date_posted| date:"M d, Y" }}</p>
+						<p>Created by: {{ post.author }}</p>
+						<p>Category: {{ post.school }} / {{ post.category }}</p>
 						<p>Accepted By: (name)</p>
 					</div>
 					<div class="options">
-						<a href="#">Delete Upload</a>
-						<a href="#">Edit Upload</a>
+						<a href="{% url 'delete_upload' %}{{ post.slug }}">Delete Upload</a>
+						<a href="{% url 'edit_upload' %}{{ post.slug }}">Edit Upload</a>
 					</div>
 				</div><!-- User information -->
 			</div><!-- Single user -->
+				{% endif %}
+			{% endfor %}
 		<!-- ====================SINGLE UPLOAD CLOSE==================== -->
 			
 		</div><!-- Published Uploads Content-->

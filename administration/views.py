@@ -1,9 +1,10 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.models import User
 from django.contrib import messages
 from users.forms import AdminUserUpdateForm, AdminUserProfileForm, RegistrationForm, LoginForm, UserProfileForm, UserUpdateForm, ProfileUpdateForm
 from django.contrib.auth.decorators import login_required
 from stories.models import VideoPost
+from .forms import AdminPostForm
 # import pdb;pdb.set_trace()
 
 
@@ -80,6 +81,23 @@ def admin_uploads(request, access='pending', approve = 0):
             'approve': approve
         }
         return render(request, 'administration/admin_uploads.html', context)
+
+def edit_upload(request, post_slug):
+    post = get_object_or_404(VideoPost, slug=post_slug)
+    if request.method == "POST":
+        form = AdminPostForm(request.POST, instance=post)
+        if form.is_valid():
+            post = form.save(commit=False)
+            post.save()
+            return redirect('admin_uploads')
+    else:
+        form = AdminPostForm(instance=post)
+    return render(request, 'administration/create_upload.html', {'form': form})
+
+def delete_upload(request, post_slug):
+    post = get_object_or_404(VideoPost, slug=post_slug)
+    post.delete()
+    return redirect('admin_uploads')
 
 
 def edit_users(request, username="none"):
