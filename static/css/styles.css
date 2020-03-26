@@ -907,7 +907,6 @@ td, th {
   color: black;
 }
 
-<<<<<<< HEAD
 /* CARDO FONT */
 @font-face {
   font-family: "Cardo Bold";
@@ -959,69 +958,30 @@ td, th {
   font-family: "Raleway Bold", sans-serif;
 }
 .dashboard-body p {
-=======
-.dashboard-html .dashboard-body h2, .dashboard-html .dashboard-body h3, .dashboard-html .dashboard-body h4, .dashboard-html .dashboard-body h5, .dashboard-html .dashboard-body h6, .dashboard-html .dashboard-body p {
-  color: #2f2f37;
-  margin-bottom: 2.4rem;
-}
-
-.dashboard-html .dashboard-body h2, .dashboard-html .dashboard-body h3, .dashboard-html .dashboard-body h4, .dashboard-html .dashboard-body h5, .dashboard-html .dashboard-body h6 {
-  font-family: "Raleway Bold", sans-serif;
-}
-
-.dashboard-html .dashboard-body p {
->>>>>>> origin/master
   font-size: 1.6rem;
   font-family: "Raleway Regluar", sans-serif;
   text-align: left;
 }
-<<<<<<< HEAD
 .dashboard-body h1 {
   font-size: 6.1rem;
   line-height: 7.2rem;
   margin-bottom: 4.8rem;
 }
 .dashboard-body h2 {
-=======
-
-.dashboard-html .dashboard-body h1 {
-  font-size: 2rem;
-}
-
-@media screen and (min-width: 700px) {
-  .dashboard-html .dashboard-body h1 {
-    font-size: 3.1rem;
-  }
-}
-
-.dashboard-html .dashboard-body h2 {
->>>>>>> origin/master
   font-size: 5.6rem;
   line-height: 7.2rem;
   margin-bottom: 3rem;
 }
-<<<<<<< HEAD
 .dashboard-body h3 {
   font-size: 5rem;
   line-height: 5rem;
   margin-bottom: 2.8rem;
 }
 .dashboard-body h4 {
-=======
-
-.dashboard-html .dashboard-body h3 {
-  font-size: 5.0rem;
-  line-height: 5rem;
-  margin-bottom: 2.8rem;
-}
-
-.dashboard-html .dashboard-body h4 {
->>>>>>> origin/master
   font-size: 4.2rem;
   line-height: 5rem;
   margin-bottom: 4.8rem;
 }
-<<<<<<< HEAD
 .dashboard-body h5 {
   font-size: 3.8rem;
   line-height: 4.8rem;
@@ -1030,19 +990,6 @@ td, th {
   text-decoration: none;
 }
 .dashboard-body li {
-=======
-
-.dashboard-html .dashboard-body h5 {
-  font-size: 3.8rem;
-  line-height: 4.8rem;
-}
-
-.dashboard-html .dashboard-body a {
-  text-decoration: none;
-}
-
-.dashboard-html .dashboard-body li {
->>>>>>> origin/master
   list-style: none;
 }
 
@@ -1070,14 +1017,9 @@ td, th {
     padding-left: 2.4rem;
   }
 }
-<<<<<<< HEAD
 .dashboard-header h1 {
   margin: 0;
   font-size: 4rem;
-=======
-
-.dashboard-header .logo {
->>>>>>> origin/master
   color: white;
 }
 @media screen and (min-width: 1000px) {
@@ -1173,14 +1115,6 @@ td, th {
 .dashboard-body .dashboard-navigation .nav-link a p span {
   font-size: 1.4rem;
 }
-<<<<<<< HEAD
-=======
-
-.dashboard-body .dashboard-navigation .nav-link a p:first-child {
-  padding-right: 1rem;
-}
-
->>>>>>> origin/master
 .dashboard-body .dashboard-navigation .nav-link a:hover {
   background: #FB4547;
   -webkit-transition: 0.7s;
@@ -1289,50 +1223,6 @@ td, th {
 .dashboard-main {
   padding: 0;
 }
-<<<<<<< HEAD
-=======
-
-@media screen and (max-width: 999px) {
-  .dashboard-main {
-    padding-top: 8rem;
-  }
-}
-
-.dashboard-main .border {
-  display: inline-block;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: unset;
-      -ms-flex-pack: unset;
-          justify-content: unset;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  border-bottom: 2px solid rgba(12, 41, 70, 0.591);
-  border-top: 2px solid rgba(12, 41, 70, 0.591);
-  padding: 0.7rem 0 0.7rem 1rem;
-  width: 30rem;
-  margin-bottom: 4rem;
-}
-
-.dashboard-main .border .triangle-up {
-  width: 0;
-  height: 0;
-  border-left: 10px solid transparent;
-  border-right: 10px solid transparent;
-  border-bottom: 20px solid rgba(12, 41, 70, 0.591);
-}
-
-.dashboard-main .border .triangle-down {
-  width: 0;
-  height: 0;
-  border-left: 10px solid transparent;
-  border-right: 10px solid transparent;
-  border-top: 20px solid rgba(12, 41, 70, 0.591);
-}
-
->>>>>>> origin/master
 @media screen and (min-width: 700px) {
   .dashboard-main .width-container {
     max-width: 1100px;
@@ -1379,7 +1269,6 @@ td, th {
 @media screen and (min-width: 700px) {
   .dashboard-main .welcome .welcome-links {
     display: flex;
-<<<<<<< HEAD
     justify-content: unset;
     align-items: center;
     width: 10rem;
@@ -1394,18 +1283,6 @@ td, th {
     height: 100vh;
   }
 }
-=======
-    -webkit-box-pack: unset;
-        -ms-flex-pack: unset;
-            justify-content: unset;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    padding-right: 3rem;
-  }
-}
-
->>>>>>> origin/master
 .dashboard-main .home-welcome h3 {
   color: white;
   font-size: 2.6rem;
@@ -1442,13 +1319,8 @@ td, th {
   padding: 1.2rem;
   margin-bottom: 1rem;
   margin-bottom: 2rem;
-<<<<<<< HEAD
   background: #a5c29b;
   border: 1px solid white;
-=======
-  display: -webkit-box;
-  display: -ms-flexbox;
->>>>>>> origin/master
   display: flex;
   justify-content: unset;
   align-items: center;
@@ -1471,7 +1343,6 @@ td, th {
   margin-right: 1rem;
 }
 .dashboard-main .home-welcome a:hover {
-<<<<<<< HEAD
   background: white;
   color: #49596c;
 }
@@ -1498,12 +1369,6 @@ td, th {
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
   border-top: 20px solid #697582;
-=======
-  background: #0C2946;
-  color: white;
-  -webkit-transition: 0.7s;
-  transition: 0.7s;
->>>>>>> origin/master
 }
 
 .dashboard-main .accordion {
@@ -1520,7 +1385,6 @@ td, th {
     padding: 4rem 6rem 0 30rem;
   }
 }
-<<<<<<< HEAD
 .dashboard-main .accordian .hidden {
   display: none;
 }
@@ -1534,25 +1398,6 @@ td, th {
 }
 .dashboard-main .accordian .acc-tabs a {
   background: #49596c;
-=======
-
-.dashboard-main .accordion .hidden {
-  display: none;
-}
-
-.dashboard-main .accordion .acc-tabs {
-  margin-bottom: 0.7rem;
-}
-
-@media screen and (min-width: 700px) {
-  .dashboard-main .accordion .acc-tabs {
-    margin-bottom: 0.85rem;
-  }
-}
-
-.dashboard-main .accordion .acc-tabs a {
-  background: #0C2946;
->>>>>>> origin/master
   color: white;
   padding: 1rem 3rem;
   font-size: 1.8rem;
@@ -1565,43 +1410,25 @@ td, th {
     padding: 1.2rem 3rem;
   }
 }
-<<<<<<< HEAD
 .dashboard-main .accordian .acc-tabs a:hover {
   background: #a5c29b;
-=======
-
-.dashboard-main .accordion .acc-tabs a:hover {
-  background: #FB4547;
->>>>>>> origin/master
   color: white;
   -webkit-transition: 0.7s;
   transition: 0.7s;
 }
-<<<<<<< HEAD
 .dashboard-main .accordian .acc-content {
-=======
-
-.dashboard-main .accordion .acc-content {
->>>>>>> origin/master
   -webkit-box-shadow: 0px 0px 6px 2px #d4d4d4;
   -moz-box-shadow: 0px 0px 6px 2px #d4d4d4;
   box-shadow: 0px 0px 6px 2px #d4d4d4;
   border-top-right-radius: 1.6rem;
   margin-bottom: 2rem;
 }
-<<<<<<< HEAD
 .dashboard-main .accordian .acc-content .acc-single .acc-user-dropdown:hover {
   background: #a5c29b;
-=======
-
-.dashboard-main .accordion .acc-content .acc-single .acc-user-dropdown:hover {
-  background: #FB4547;
->>>>>>> origin/master
   color: white;
   -webkit-transition: 0.7s;
   transition: 0.7s;
 }
-<<<<<<< HEAD
 .dashboard-main .accordian .acc-content .acc-single .acc-user-dropdown {
   display: flex;
   justify-content: space-between;
@@ -1612,43 +1439,17 @@ td, th {
 }
 .dashboard-main .accordian .acc-content .acc-single .acc-user-dropdown .acc-badge {
   background: #a5c29b;
-=======
-
-.dashboard-main .accordion .acc-content .acc-single .acc-user-dropdown {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background: #3EA3DF;
-  border-bottom: 1px solid #0C2946;
-  padding: 1rem 2rem;
-}
-
-.dashboard-main .accordion .acc-content .acc-single .acc-user-dropdown .acc-badge {
-  background: #0C2946;
->>>>>>> origin/master
   color: white;
   padding: 0.5rem 1rem;
   font-size: 1.4rem;
   border-radius: 1rem;
   margin-left: 1rem;
 }
-<<<<<<< HEAD
 .dashboard-main .accordian .acc-content .acc-single .acc-user-dropdown p {
-=======
-
-.dashboard-main .accordion .acc-content .acc-single .acc-user-dropdown p {
->>>>>>> origin/master
   font-size: 1.8rem;
   color: white;
   margin-bottom: 0;
 }
-<<<<<<< HEAD
 .dashboard-main .accordian .acc-content .acc-single .acc-user-info {
   border: 1px solid #49596c;
   border-top: 0;
@@ -1656,24 +1457,12 @@ td, th {
 }
 @media screen and (min-width: 700px) {
   .dashboard-main .accordian .acc-content .acc-single .acc-user-info {
-=======
-
-.dashboard-main .accordion .acc-content .acc-single .acc-user-info {
-  border: 1px solid #0C2946;
-  border-top: 0;
-  padding: 1rem;
-}
-
-@media screen and (min-width: 1000px) {
-  .dashboard-main .accordion .acc-content .acc-single .acc-user-info {
->>>>>>> origin/master
     padding: 2rem;
     display: flex;
     justify-content: unset;
     align-items: center;
   }
 }
-<<<<<<< HEAD
 @media screen and (min-width: 1200px) {
   .dashboard-main .accordian .acc-content .acc-single .acc-user-info {
     padding: 0.8rem 0.8rem 0.8rem 2rem;
@@ -1689,52 +1478,12 @@ td, th {
 }
 @media screen and (min-width: 1200px) {
   .dashboard-main .accordian .acc-content .acc-single .acc-user-info .information {
-=======
-
-@media screen and (min-width: 1280px) {
-  .dashboard-main .accordion .acc-content .acc-single .acc-user-info {
-    padding: 0.8rem 0.8rem 0.8rem 2rem;
-  }
-}
-
-@media screen and (min-width: 700px) {
-  .dashboard-main .accordion .acc-content .acc-single .acc-user-info .information {
-    padding-top: 2rem;
-  }
-}
-
-@media screen and (min-width: 1000px) {
-  .dashboard-main .accordion .acc-content .acc-single .acc-user-info .information {
-    padding-top: 1rem;
-  }
-}
-
-.dashboard-main .accordion .acc-content .acc-single .acc-user-info .information p {
-  margin-bottom: 1rem;
-}
-
-@media screen and (min-width: 700px) {
-  .dashboard-main .accordion .acc-content .acc-single .acc-user-info .information p {
-    padding-left: 2rem;
-  }
-}
-
-@media only screen and (min-width: 1400px) {
-  .dashboard-main .accordion .acc-content .acc-single .acc-user-info .information {
-    display: -webkit-box;
-    display: -ms-flexbox;
->>>>>>> origin/master
     display: flex;
     justify-content: unset;
     align-items: center;
   }
 }
-<<<<<<< HEAD
 .dashboard-main .accordian .acc-content .acc-single .acc-user-info .options {
-=======
-
-.dashboard-main .accordion .acc-content .acc-single .acc-user-info .options {
->>>>>>> origin/master
   padding-top: 1rem;
 }
 @media screen and (min-width: 700px) {
@@ -1753,7 +1502,6 @@ td, th {
   }
 }
 @media screen and (min-width: 1000px) {
-<<<<<<< HEAD
   .dashboard-main .accordian .acc-content .acc-single .acc-user-info .options {
     display: flex;
     justify-content: unset;
@@ -1761,23 +1509,6 @@ td, th {
   }
 }
 .dashboard-main .accordian .acc-content .acc-single .acc-user-info .options a {
-=======
-  .dashboard-main .accordion .acc-content .acc-single .acc-user-info .options {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: unset;
-        -ms-flex-pack: unset;
-            justify-content: unset;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    padding-bottom: 0;
-  }
-}
-
-.dashboard-main .accordion .acc-content .acc-single .acc-user-info .options a {
->>>>>>> origin/master
   color: white;
   background: #FB4547;
   font-size: 1.8rem;
@@ -1800,7 +1531,6 @@ td, th {
     margin-right: 1rem;
   }
 }
-<<<<<<< HEAD
 .dashboard-main .accordian .acc-content .acc-single .acc-user-info .options a:hover {
   border: 1px solid #49596c;
   background: #a5c29b;
@@ -1811,28 +1541,11 @@ td, th {
 }
 .dashboard-main .accordian .view-all {
   color: #a5c29b;
-=======
-
-.dashboard-main .accordion .acc-content .acc-single .acc-user-info .options a:hover {
-  background: #0C2946;
-  color: white;
-  -webkit-transition: 0.7s;
-  transition: 0.7s;
-}
-
-.dashboard-main .accordion .acc-content .acc-single:first-child .acc-user-dropdown {
-  border-top-right-radius: 1.6rem;
-}
-
-.dashboard-main .accordion .view-all {
-  color: #0C2946;
->>>>>>> origin/master
   font-size: 1.8rem;
   border-bottom: 1px solid #FB4547;
   padding-bottom: 1rem;
   font-family: "Raleway Bold", sans-serif;
 }
-<<<<<<< HEAD
 .dashboard-main .accordian .view-all:hover {
   color: #49596c;
   border-bottom: 1px solid #49596c;
@@ -1846,25 +1559,6 @@ td, th {
   color: white;
   margin-bottom: 0;
   padding: 4.5rem 1.6rem 0 1.6rem;
-=======
-
-.dashboard-main .accordion .view-all:hover {
-  color: #FB4547;
-  border-bottom: 1px solid #0C2946;
-  -webkit-transition: 0.7s;
-  transition: 0.7s;
-}
-
-.dashboard-main .container {
-  position: relative;
-}
-
-.dashboard-main .overview {
-  border: 1px solid #aeaeae;
-  background: white;
-  margin: 1rem;
-  border-radius: 2rem;
->>>>>>> origin/master
 }
 @media screen and (min-width: 700px) {
   .dashboard-main .overview {
@@ -1881,15 +1575,8 @@ td, th {
     margin-left: 30rem;
   }
 }
-<<<<<<< HEAD
 .dashboard-main .overview .overview-box {
   padding: 2rem 1rem 4rem 1rem;
-=======
-
-.dashboard-main .overview h3 {
-  padding: 4.5rem 1.6rem 0 1.6rem;
-  padding-bottom: 0;
->>>>>>> origin/master
 }
 @media screen and (min-width: 700px) {
   .dashboard-main .overview h3 {
@@ -1899,26 +1586,17 @@ td, th {
 
 @media screen and (min-width: 1000px) {
   .dashboard-main .overview .overview-box {
-<<<<<<< HEAD
     padding: 2rem 3rem 8rem 3rem;
-=======
-    display: -webkit-box;
-    display: -ms-flexbox;
->>>>>>> origin/master
     display: flex;
     justify-content: unset;
     align-items: center;
   }
 }
-<<<<<<< HEAD
 @media screen and (min-width: 1000px) {
   .dashboard-main .overview .overview-box {
     padding: 2rem 6rem 8rem 30rem;
   }
 }
-=======
-
->>>>>>> origin/master
 .dashboard-main .overview .overview-box p {
   font-size: 2.4rem;
   margin-bottom: 1rem;
