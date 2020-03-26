@@ -11,8 +11,9 @@
 <body class="dashboard-body">
 
     <header class="dashboard-header">
-        <h1><a href="{% url 'home' %}">Title</a></h1>
-        <nav class="dashboard-navigation"> 
+        <h1 class="logo"><a href="{% url 'home' %}">Indigenous <br><span>Storytelling</span></a></h1>
+        <nav class="dashboard-navigation">
+            <p class="navigation-para">Dashboard</p>
             <ul class="menu-links">
                 <li class="nav-link">
                     <a href="{% url 'administration' %}">
@@ -45,7 +46,8 @@
 
 
     <main class="dashboard-main">
-        {% block content%}{% endblock %}
+        {% block content%}
+        {% endblock %}
     </main>
 
     <script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>

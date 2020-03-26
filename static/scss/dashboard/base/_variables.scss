@@ -2,48 +2,50 @@
 /*******    COLORS    *******/
 $white: rgb(255, 255, 255);
 $text-color: rgb(47, 47, 55);
-$dark: #49596c;
-$primary: rgb(165, 194, 155);
-$secondary: rgb(165, 194, 155);
-$alert: rgb(237, 107, 98);
-
-$triangle-color: rgb(105, 117, 130);
+$black: rgb(41, 41, 43);
+$primary: $light-blue;
+$secondary: $red-colour;
+$third: $dark-blue;
+$alert: $secondary;
+$triangle-color: rgba(12, 41, 70, 0.591);
 
 
 
 /*******    NAVIGATION    *******/
-$nav-shown: $dark;
-$nav-background: $dark;
+$nav-shown: $third; 
 $nav-links-background: $primary;
 $nav-link-color: $white;
+$nav-link-font: 'Raleway Bold', sans-serif;
+$navlink-font-size: 1.6rem;
+
 
 /*******    HOVER    *******/
-$hover-background: $secondary;
-$hover-color: secondary;
-$acc-hover-background: $secondary;
-$nav-hover: $white;
+$button-hover: $third; //button
+$hover-text-color: $white; //button
 
-/*******    ACCORDIAN    *******/
-$acc-background: $dark;
-$acc-badge-background: $primary;
-$acc-link-color: $primary;
-$user-acc-background: $dark;
+$hover-transition: 0.7s;
+$nav-hover: $red-colour;
+
+
+/*******    ACCORDION    *******/
+
+$acc-badge-background: $third;
+$user-acc-background: $primary;
 
 $acc-tabs: 1.8rem;
-$acc-tabs-font: 'Raleway Light', sans-serif;
+$acc-tabs-font: 'Raleway Regluar', sans-serif;
 $acc-badge: 1.4rem;
 $acc-link-font: 'Raleway Bold', sans-serif;
 
 
 /*******    BUTTONS    *******/
-$button-color: $dark;
+$button-color: $secondary;
 $button: 1.8rem;
-$button-font: 'Raleway Regular', sans-serif;
+$button-font: 'Raleway Bold', sans-serif;
 
 
 /*******    OVERVIEW    *******/
-$users-overview-bgd: linear-gradient(0deg, $white 0%, $secondary 50%);
-//linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(0,204,190,1) 51%, rgba(255,255,255,1) 100%);
+$users-overview-bgd: $white;
 $overview-labels: 2.4rem;
 
 
@@ -51,9 +53,7 @@ $overview-labels: 2.4rem;
 $para-font: 'Raleway Regluar', sans-serif;
 $paragraph: 1.6rem;
 $heading-font: 'Raleway Bold', sans-serif;
-//$heading-font: 'Coolvetica Regluar', sans-serif;
-$navlink-font: 'Raleway Regular', sans-serif;
-$navlink-font-size: 1.8rem;
+
 $signed-in: 1.4rem;
 
 
@@ -61,6 +61,7 @@ $signed-in: 1.4rem;
 $input-border: 1px solid $primary;
 $labelFontSize: 2rem;
 $labelFont: 'Raleway Regluar', sans-serif;
+$labelFontColor: $text-color;
 $inputFontSize: 1.8rem;
 $inputFontColor: rgb(73, 87, 106);
 

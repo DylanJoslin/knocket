@@ -1,7 +1,7 @@
 .dashboard-body{
 
     .alert{
-
+        
             @include padding(small);
 
             @include breakpoint(tablet){
@@ -15,8 +15,7 @@
         p{
             padding: 2rem;
             font-size: 2rem;
-            background: $alert;
-            border: 2px solid $dark;
+            background: $secondary;
             border-radius: 2rem;
             color: $white;
         }

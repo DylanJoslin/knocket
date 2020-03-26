@@ -13,9 +13,11 @@
         <div class="top-header">
             <h1 class="logo"><a href="{% url 'home' %}">Indigenous <br><span>Storytelling</span></a></h1>
             <div class="menu">
+                {% if not user.is_authenticated %}
                 <div class="login">
                     <a href="{% url 'login' %}">Sign In</a>
                 </div>
+                {% endif %}
                 <a class="menu-toggle" href="#">&#9776;</a>
             </div>
         </div>
@@ -23,7 +25,7 @@
             <a href="#" class="close-nav">&#215;</a>
             <ul>
                 <li><a href="#" class="underline-link">Map</a></li>
-                <li><a href="{% url 'stories' %}amiskwaciy" class="underline-link">Stories <span class="dropdown">&#9660;</span></a>
+                <li><a href="{% url 'post_list' %}amiskwaciy" class="underline-link">Stories <span class="dropdown">&#9660;</span></a>
                     <ul class="sub-menu">
                         <li><a href="#" class="underline-link">Physical</a></li>
                         <li><a href="#" class="underline-link">Emotional</a></li>
@@ -118,6 +120,7 @@
     <script src="{% static 'js/navigation.js' %}"></script>
     <script src="{% static 'js/main.js' %}"></script>
     <script src="{% static 'js/hover-handler.js' %}"></script>
+    
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>

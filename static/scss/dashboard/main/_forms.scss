@@ -36,14 +36,14 @@
             }
 
             .required{
-                color: rgb(208, 31, 31);
+                color: $secondary;
             }
 
             .dashboard-label{
                 @include formLabels;
 
                 .color{
-                    color: rgb(140, 199, 230);
+                    color: $primary;
                 }
             }
     

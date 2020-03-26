@@ -1,5 +1,35 @@
     .dashboard-main{
+        @include breakpoint(maxTablet){
+            padding-top: 8rem;
+        }
         padding: 0;
+
+        .border {
+            display: inline-block;
+            @include flex(unset);
+            border-bottom: 2px solid $triangle-color;
+            border-top: 2px solid $triangle-color;
+            padding: 0.7rem 0 0.7rem 1rem;
+            width: 30rem;
+            margin-bottom: 4rem;
+            
+            .triangle-up{
+                width: 0;
+                height: 0;
+                border-left: 10px solid transparent;
+                border-right: 10px solid transparent;
+                border-bottom: 20px solid $triangle-color;
+            }
+
+            .triangle-down{
+                width: 0;
+                height: 0;
+                border-left: 10px solid transparent;
+                border-right: 10px solid transparent;
+                border-top: 20px solid $triangle-color;
+            }
+
+        }
 
         .width-container{
             @include breakpoint(tablet){
@@ -8,10 +38,9 @@
         }
 
         .welcome{
-            background: $dark;
+            background: $primary;
 
             @include padding(small);
-            padding-bottom: 4rem;
 
             @include breakpoint(tablet){
                 @include padding(medium);
@@ -25,13 +54,13 @@
 
             h2{
                 color: $white;
-                font-size: 4.2rem;
-                line-height: 4.8rem;
+                font-size: 5.4rem;
+                line-height: 7.2rem;
                 margin-bottom: 2rem;
 
                 @include breakpoint(tablet){
-                    font-size: 5.6rem; 
-                     line-height: 7.2rem;
+                    font-size: 6.4rem; 
+                    line-height: 7.2rem;
                 }
             }
 
@@ -48,7 +77,6 @@
 
                 @include breakpoint (tablet){
                     @include flex(unset);
-                    width: 10rem;
                     padding-right: 3rem;
                 }
 
@@ -57,10 +85,10 @@
         }//.welcome
 
         .home-welcome{
-            height: 70rem;
+            // height: 70rem;
 
             @include breakpoint(tablet){
-                height: 100vh;
+                // height: 100vh;
             }
             
 
@@ -95,8 +123,7 @@
             a{
                 @include button;
                 margin-bottom: 2rem;
-                background: $primary;
-                border: 1px solid $white;
+                
                 @include flex(unset);
                 justify-content: center;
 
@@ -106,44 +133,18 @@
                 }
 
                 .badge{
-                    @include accordian-badge;
-                    background: $white;
-                    color: $dark;
-                    border: 1px solid $dark;
+                    @include accordion-badge;
+                    background: $third;
+                    margin-right: 1rem;
 
                 }
 
             }
 
             a:hover{
-                background: $white;
-                color: $dark;
-            }
-
-            .border {
-                @include flex(unset);
-                border-bottom: 2px solid $triangle-color;
-                border-top: 2px solid $triangle-color;
-                padding: 0.7rem 0 0.7rem 1rem;
-                width: 66rem;
-                margin-bottom: 4rem;
-
-                .triangle-up{
-                    width: 0;
-                    height: 0;
-                    border-left: 10px solid transparent;
-                    border-right: 10px solid transparent;
-                    border-bottom: 20px solid $triangle-color;
-                }
-
-                .triangle-down{
-                    width: 0;
-                    height: 0;
-                    border-left: 10px solid transparent;
-                    border-right: 10px solid transparent;
-                    border-top: 20px solid $triangle-color;
-                }
-
+                // background: $white;
+                // color: $primary;
+                @include button-hover;
             }
 
                 

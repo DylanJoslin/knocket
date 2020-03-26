@@ -18,6 +18,11 @@
 /* RALEWAY FONT */
 
 @font-face{
+    font-family: "Raleway Light";
+    src: url('/static/fonts/Raleway-Light.ttf');
+  }
+
+@font-face{
     font-family: "Raleway Bold";
     src: url('/static/fonts/Raleway-Bold.ttf');
 }
