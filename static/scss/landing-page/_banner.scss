@@ -1,0 +1,55 @@
+.banner{
+    background-image: url(/static/img/banner.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 88vh; 
+    padding: 120px 30px;
+    margin-bottom: 100px;
+
+    @include media-md{
+        height: 87vh;
+        padding: 120px 60px;
+    }
+
+    .quote{
+        background-color: $orange-opacity;
+        border-radius: 20px;
+        padding: 20px;
+        margin-bottom: 140px;
+
+        @include media-md{
+            padding: 20px 30px;
+        }
+
+        h3{
+            color: white;
+
+            span{
+                color: $dark-purple;
+                letter-spacing: 1.6px;
+            }
+        }
+           
+    }
+
+    .explore-btn{
+        a{
+            text-transform: uppercase;
+            text-decoration: none;
+            font-size: 20px;
+            letter-spacing: 2px;
+            color: white;
+            background-color: $red-colour;
+            padding: 10px 60px;
+            border-radius: 8px;
+            display: table;
+            margin: 0 auto;
+
+            &:hover{
+                background-color: $light-purple;
+                transition: 0.5s;
+            }    
+        }
+    }
+}

@@ -1,6 +1,7 @@
 {% extends "home/base.html" %}
 {% load static %}
 {% block content %}
+<div class="map-local-main">
         <ul class="province-nav hidden">
             <li>Yukon</li>
             <li>N.W. Territories</li>
@@ -26,7 +27,7 @@
                 <img class="treaty-icon-main" src="{% static 'img/icons/treaty.svg'%}" alt="Treaty icon">
             </div>
             <h1 class="text-center focus-title no-padding">Treaty 6</h1>
-            <div class="amiskwaciy-content hidden">
+            <div class="amiskwaciy-content white hidden">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex veritatis illo magni excepturi omnis qui, aliquid tempore hic placeat nisi maiores fuga voluptate facere ea nesciunt sit consectetur nulla. Quo.</p>
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque expedita labore beatae quaerat doloribus, ipsam sit sapiente ducimus dolor praesentium? Eaque doloribus explicabo neque aliquam, vitae quod libero voluptates officiis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium odit rem iste nobis laborum! Optio soluta modi, at tenetur harum nulla! Maiores numquam officiis illum, nam exercitationem omnis vel distinctio?</p>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, eligendi. Ipsam architecto officiis deleniti odio? Iste natus ipsum quasi, libero officiis, assumenda quo voluptas, ullam odio veritatis delectus architecto soluta. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero eum perferendis a quam voluptates totam optio numquam quia accusantium rem similique pariatur doloribus, adipisci saepe exercitationem molestiae necessitatibus itaque accusamus.</p>
@@ -35,7 +36,7 @@
                     <a class="map-local-link" href="{% url 'post_list' %}?school=Amiskwaciy-Academy&category=Emotional">Cultural Teachings</a>
                 </div>
             </div>
-            <div class="treaty-content">
+            <div class="treaty-content white">
                 <p> Treaty 6 was signed between 1871 - 1877 by Canadian Crown and a few First Nations. It is an agreement between the Crown, the Plains and Wood Cree, Assiniboine and the other band governments at Fort Carlton and Fort Pitt. Treaty 6 included those terms which were not part of Treat 1 to 5. It Included medicine chest at the house of Indian agent on reserve, more agriculture implements, protection from shortage of food and fatal epidemic disease and education on the reserve. The treaty signing began 18th August until 09th September 1876 (Wikipedia, 2020).</p>
                 <p>The Key figures who were representing Crown during the negotiations involved Lt. Governor of North-West Territories, Minister of Agriculture for Manitoba, and the Chief Factor of the Hudson’s Bay Company. Carlton Cree was represented by Chief Mistawasis and Chief Ahtahkakoop.</p>
                 <div class="learn-more-local-buttons">
@@ -44,4 +45,5 @@
                 </div>
             </div>
         </section>
+    </div>
 {% endblock content %}
