@@ -305,61 +305,6 @@ img, .treaty-img {
   }
 }
 
-.main-header .menu-closed-header-style {
-  background: #3EA3DF;
-}
-
-.menu-icon {
-  width: 1.875rem;
-}
-
-@media screen and (min-width: 1000px) {
-  .menu-icon {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 999px) {
-  .menu-icon:after,
-  .menu-icon:before,
-  .menu-icon div {
-    background: white;
-    border-radius: 0.3rem;
-    content: '';
-    display: block;
-    height: 3px;
-    margin: 5px 0;
-    -webkit-transition: all 0.7s ease-in-out;
-    transition: all 0.7s ease-in-out;
-  }
-  .close-button {
-    font-size: 24px;
-    text-align: right;
-    padding: 10px;
-    padding-top: 37.5px;
-    text-align: center;
-    width: 100%;
-    margin: 0 auto;
-  }
-  .icon-closed:before {
-    -webkit-transform: translateY(7px) rotate(135deg);
-            transform: translateY(7px) rotate(135deg);
-  }
-  .icon-closed:after {
-    -webkit-transform: translateY(-9px) rotate(-135deg);
-            transform: translateY(-9px) rotate(-135deg);
-  }
-  .icon-closed div {
-    -webkit-transform: scale(0);
-            transform: scale(0);
-  }
-  .menu-toggle {
-    position: absolute;
-    left: 0;
-    z-index: 9999;
-  }
-}
-
 .login a {
   margin-right: 10px;
   font-family: 'Cardo Regular', sans-serif;
@@ -574,6 +519,61 @@ img, .treaty-img {
   .main-header .main-navigation .margin-bottom {
     margin-bottom: 0;
   }
+}
+
+.main-header .menu-icon {
+  width: 1.875rem;
+}
+
+@media screen and (min-width: 1000px) {
+  .main-header .menu-icon {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 999px) {
+  .main-header .menu-icon:after,
+  .main-header .menu-icon:before,
+  .main-header .menu-icon div {
+    background: white;
+    border-radius: 0.3rem;
+    content: '';
+    display: block;
+    height: 3px;
+    margin: 5px 0;
+    -webkit-transition: all 0.7s ease-in-out;
+    transition: all 0.7s ease-in-out;
+  }
+  .main-header .close-button {
+    font-size: 24px;
+    text-align: right;
+    padding: 10px;
+    padding-top: 37.5px;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .main-header .icon-closed:before {
+    -webkit-transform: translateY(7px) rotate(135deg);
+            transform: translateY(7px) rotate(135deg);
+  }
+  .main-header .icon-closed:after {
+    -webkit-transform: translateY(-9px) rotate(-135deg);
+            transform: translateY(-9px) rotate(-135deg);
+  }
+  .main-header .icon-closed div {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  .main-header .menu-toggle {
+    position: absolute;
+    right: 0;
+    z-index: 9999;
+  }
+}
+
+.main-header .menu-closed-header-style {
+  background: #3EA3DF;
 }
 
 .about {
