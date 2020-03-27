@@ -32,6 +32,12 @@ urlpatterns = [
     path('administration/edit-user/', administration_views.edit_users, name='edit_users'),
     path('administration/edit-user/<slug:username>', administration_views.edit_users, name='edit_users'),
     path('administration/create-user/', administration_views.create_user, name='create_user'),
+
+    path('administration/edit-post/', administration_views.edit_upload, name='edit_upload'),
+    path('administration/edit-post/<slug:post_slug>', administration_views.edit_upload, name='edit_upload'),
+
+    path('administration/delete-post/', administration_views.delete_upload, name='delete_upload'),
+    path('administration/delete-post/<slug:post_slug>', administration_views.delete_upload, name='delete_upload'),
     # path('administration/<slug:access>', administration_views.admin_home, name='administration'),
 
     # Delete
