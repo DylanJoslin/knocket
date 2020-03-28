@@ -52,6 +52,7 @@ urlpatterns = [
     path('register/', user_views.register, name='register'),
     path('login/', user_views.login_view, name='login'),
     path('logout/', user_views.logout_view, name='logout'),
+    path('change_password/', user_views.change_password, name='change_password'),
 
     # Posts
     path('post/', story_views.post_list, name='post_list'),
