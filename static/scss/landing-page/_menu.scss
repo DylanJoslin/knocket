@@ -117,4 +117,59 @@
 
     }//main-navigation
 
+    .menu-icon {
+        width: 1.875rem;
+        @include breakpoint(laptop){
+            display: none;
+        }
+     }//.menu-icon
+    
+      @include breakpoint(maxTablet){
+        
+        .menu-icon:after, 
+        .menu-icon:before, 
+        .menu-icon div {
+            background: white;
+            border-radius: 0.3rem;
+            content: '';
+            display: block;
+            height: 3px;
+            margin: 5px 0;
+            transition: all 0.7s ease-in-out;
+        }//.menu-icon
+    
+        .close-button {
+            font-size: 24px;
+            text-align: right;
+            padding: 10px;
+            padding-top: 37.5px;
+            text-align: center;
+            width: 100%;
+            margin: 0 auto;
+        }//.close
+    
+        .icon-closed:before {
+            transform: translateY(7px) rotate(135deg);
+        }//.close
+    
+        .icon-closed:after {
+            transform: translateY(-9px) rotate(-135deg);
+        }//.close
+    
+        .icon-closed div {
+            transform: scale(0);
+        }//.close
+    
+        .menu-toggle {
+            position: absolute;
+            right: 0;
+            z-index: 9999;
+        }//.menu-toggle
+      }
+
 }//main-header
+
+.main-header .menu-closed-header-style{
+    background: $light-blue;
+}
+

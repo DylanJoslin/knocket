@@ -30,16 +30,17 @@
 <!-- ====================CONTAINER==================== -->
 	<div class="container">
 	<!-- ====================USERS OVERVIEW==================== -->
-		<div class="overview-background"></div>
 		<div class="overview users-overview" id="users-overview">
-			<h3>Users Overview</h3>
 			<div class="overview-box">
-				<div>
-					<p>New Students: <span class="number">{{ new_users }}</span></p>
-					<p>Registered Students: <span class="number">{{ registered_users }}</span></p>
-				</div>
-				<div>
-					<a href="{% url 'admin_users' %}">Manage All Users</a>
+				<h3>Users Overview</h3>
+				<div class="flex-overivew">
+					<div>
+						<p>New Students: <span class="number">{{ new_users }}</span></p>
+						<p>Registered Students: <span class="number">{{ registered_users }}</span></p>
+					</div>
+					<div>
+						<a href="{% url 'admin_users' %}">Manage All Users</a>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -116,7 +117,6 @@
 									{% endif %}
 								</p>
 								<p class="icon-plus">+</p>
-								<p class="icon-minus hidden">-</p>
 							</div><!-- User Dropdown -->
 							<div class="acc-user-info"><!-- User information -->
 								<div class="information">
@@ -249,16 +249,17 @@
 
 
 	<!-- ====================POST OVERVIEW==================== -->
-		<div class="overview-background-second"></div>
 		<div class="overview uploads-overview" id="uploads-overview">
-			<h3>Uploads Overview</h3>
 			<div class="overview-box">
-				<div>
-					<p>New Uploads: <span class="number">{{ new_post }}</span></p>
-					<p>Published Uploads: <span class="number">{{ approved_post }}</span></p>
-				</div>
-				<div>
-					<a href="{% url 'admin_uploads' %}">Manage All Uploads</a>
+			<h3>Uploads Overview</h3>
+				<div class="flex-overview">
+					<div>
+						<p>New Uploads: <span class="number">{{ new_post }}</span></p>
+						<p>Published Uploads: <span class="number">{{ approved_post }}</span></p>
+					</div>
+					<div>
+						<a href="{% url 'admin_uploads' %}">Manage All Uploads</a>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -306,9 +307,8 @@
 			<!-- ====================SINGLE UPLOAD==================== -->
 				<div class="acc-single"> <!-- Single user -->
 					<div class="acc-user-dropdown"><!-- User Dropdown -->
-						<p class="acc-username">{{ post.title }} <span class="acc-badge">Published</span></p>
+						<p class="acc-username">{{ post.title }} <span class="acc-badge"><i class="fas fa-check-circle"></i></span></p>
 						<p class="icon-plus">+</p>
-						<p class="icon-minus hidden">-</p>
 					</div><!-- User Dropdown -->
 					<div class="acc-user-info"><!-- User information -->
 						<div class="information">
