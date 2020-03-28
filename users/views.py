@@ -1,13 +1,13 @@
 from django.http import HttpResponseRedirect
 from django.contrib import messages
 from django.shortcuts import render, redirect
+from django.contrib.auth.forms import PasswordChangeForm
 from .forms import RegistrationForm, LoginForm, UserProfileForm, UserUpdateForm, ProfileUpdateForm
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 
 def register(request):
-
     if request.method == 'POST':
         form = RegistrationForm(request.POST)
         profile_form = UserProfileForm(request.POST)
@@ -90,4 +90,22 @@ def login_view(request):
 def logout_view(request):
     logout(request)
     return redirect('home')
+
+def change_password(request):
+    if request.method == 'POST':
+        form = PasswordChangeForm(request.user, request.POST)
+        if form.is_valid():
+            user = form.save()
+            update_session_auth_hash(request, user)  # Important!
+            messages.success(request, 'Your password was successfully updated!')
+            return redirect('change_password')
+        else:
+            messages.error(request, 'Please correct the error below.')
+    else:
+        form = PasswordChangeForm(request.user)
+
+    context = {
+        'form': form
+    }
+    return render(request, 'users/change_password.html', context)
 

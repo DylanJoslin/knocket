@@ -52,7 +52,7 @@
                         <li class="login show-at-mobile">
                             <a href="{% url 'register' %}" class="text-info">Register</a>
                         </li>
-                    {% endif %}
+                {% endif %}
             </ul>
         </nav>
         {% if not user.is_authenticated %}
