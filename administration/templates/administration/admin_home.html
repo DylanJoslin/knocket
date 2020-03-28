@@ -23,25 +23,27 @@
 	<h3><span class="heading-small">Start by: </span><br><span class="heading-small-two">Viewing the newest activity on your site.</span></h3>
 	<div class="welcome-links">
 		<a href="#users-overview"> New Students <span class="badge">{{ new_users }}</span></a>
-		<a href="#uploads-overview"> New Uploads <span class="badge">{{ new_post }} </span></a>
+		<a href="#uploads-overview"> New Uploads <span class="badge">6 </span></a>
 	</div>
 </div>
 
 <!-- ====================CONTAINER==================== -->
 	<div class="container">
 	<!-- ====================USERS OVERVIEW==================== -->
+		<div class="overview-background"></div>
 		<div class="overview users-overview" id="users-overview">
 			<div class="overview-box">
-				<h3>Users Overview</h3>
-				<div class="flex-overivew">
-					<div>
-						<p>New Students: <span class="number">{{ new_users }}</span></p>
-						<p>Registered Students: <span class="number">{{ registered_users }}</span></p>
-					</div>
-					<div>
-						<a href="{% url 'admin_users' %}">Manage All Users</a>
-					</div>
+			<h3>Users Overview</h3>
+			<div class="flex-overview">
+				<div>
+					<p>New Students: <span class="number">{{ new_users }}</span></p>
+					<p>Registered Students: <span class="number">{{ registered_users }}</span></p>
 				</div>
+				<div>
+					<a href="{% url 'admin_users' %}">Manage All Users</a>
+				</div>
+			</div>
+				
 			</div>
 		</div>
 	<!-- ====================USERS OVERVIEW CLOSE==================== -->
@@ -117,6 +119,7 @@
 									{% endif %}
 								</p>
 								<p class="icon-plus">+</p>
+								<p class="icon-minus hidden">-</p>
 							</div><!-- User Dropdown -->
 							<div class="acc-user-info"><!-- User information -->
 								<div class="information">
@@ -249,13 +252,14 @@
 
 
 	<!-- ====================POST OVERVIEW==================== -->
+		<div class="overview-background-second"></div>
 		<div class="overview uploads-overview" id="uploads-overview">
 			<div class="overview-box">
-			<h3>Uploads Overview</h3>
+				<h3>Uploads Overview</h3>
 				<div class="flex-overview">
 					<div>
-						<p>New Uploads: <span class="number">{{ new_post }}</span></p>
-						<p>Published Uploads: <span class="number">{{ approved_post }}</span></p>
+						<p>New Uploads: <span class="number">12</span></p>
+						<p>Published Uploads: <span class="number">40</span></p>
 					</div>
 					<div>
 						<a href="{% url 'admin_uploads' %}">Manage All Uploads</a>
@@ -274,58 +278,54 @@
 			</div><!-- Tabs-->
 		<!-- ====================NEW UPLOADS==================== -->
 			<div id="new-uploads" class="acc-content"> <!-- New Upoads Content-->
-				{% for post in posts %}
-					{% if post.approve == 0 %}
-		<!-- ====================SINGLE UPLOAD==================== -->
+			<!-- ====================SINGLE UPLOAD==================== -->
 				<div class="acc-single"> <!-- Single user -->
 					<div class="acc-user-dropdown"><!-- User Dropdown -->
-						<p class="acc-username">{{ post.title }}<span class="acc-badge">New!</span></p>
+						<p class="acc-username">title<span class="acc-badge">New!</span></p>
 						<p class="icon-plus">+</p>
 						<p class="icon-minus hidden">-</p>
 					</div><!-- User Dropdown -->
 					<div class="acc-user-info"><!-- User information -->
 						<div class="information">
-							<p>Created on: {{ post.date_posted| date:"M d, Y" }}</p>
-							<p>Author: {{ post.author }}</p>
-							<p>Category: {{ post.school }} / {{ post.category }}</p>
+							<p>Created on: (date)</p>
+							<p>Full Name: (full name)</p>
+							<p>Email: (email)</p>
 						</div>
 						<div class="options">
-							<a href="{% url 'delete_upload' %}{{ post.slug }}">Delete Upload</a>
-							<a href="{% url 'edit_upload' %}{{ post.slug }}">Edit Upload</a>
+							<a href="#">Delete Upload</a>
+							<a href="#">Edit Upload</a>
 						</div>
 					</div><!-- User information -->
 				</div><!-- Single user -->
-					{% endif %}
-				{% endfor %}
+			<!-- ====================SINGLE UPLOAD CLOSE==================== -->
 			</div><!-- New Uploads Content-->
 		<!-- ====================NEW UPLOADS CLOSE==================== -->
 
 		<!-- ====================PUBLISHED UPLOADS==================== -->
 			<div id="published-uploads" class="acc-content hidden"> <!-- New Users Content-->
-				{% for post in posts %}
-					{% if post.approve == 1 %}
+
 			<!-- ====================SINGLE UPLOAD==================== -->
 				<div class="acc-single"> <!-- Single user -->
 					<div class="acc-user-dropdown"><!-- User Dropdown -->
-						<p class="acc-username">{{ post.title }} <span class="acc-badge"><i class="fas fa-check-circle"></i></span></p>
+						<p class="acc-username">title <span class="acc-badge"><i class="fas fa-check-circle"></i></span></p>
 						<p class="icon-plus">+</p>
+						<p class="icon-minus hidden">-</p>
 					</div><!-- User Dropdown -->
 					<div class="acc-user-info"><!-- User information -->
 						<div class="information">
-							<p>Created on: {{ post.date_posted| date:"M d, Y" }}</p>
-							<p>Created by: {{ post.author }}</p>
-							<p>Category: {{ post.school }} / {{ post.category }}</p>
+							<p>Created on: (date)</p>
+							<p>Created by: (full name)</p>
+							<p>Category: (category)</p>
 							<p>Accepted By: (name)</p>
 						</div>
 						<div class="options">
-							<a href="{% url 'delete_upload' %}{{ post.slug }}">Delete Upload</a>
-							<a href="{% url 'edit_upload' %}{{ post.slug }}">Edit Upload</a>
+							<a href="#">Delete Upload</a>
+							<a href="#">Edit Upload</a>
 						</div>
 					</div><!-- User information -->
 				</div><!-- Single user -->
-					{% endif %}
-				{% endfor %}
-			</div>
+			<!-- ====================SINGLE UPLOAD CLOSE==================== -->
+			</div><!-- Published Uploads Content-->
 		<!-- ====================PUBLISHED UPLOADS CLOSE==================== -->
 			<a href="{% url 'admin_uploads' %}" class="view-all">View all Uploads</a>
 		</div> <!-- Accordion -->
