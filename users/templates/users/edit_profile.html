@@ -4,17 +4,17 @@
         <h2>Update Your Profile</h2>
         {% comment %} csrf_token is some built in security {% endcomment %}
         {% csrf_token %} 
-        <div style="width: 40%">
+        <div>
 
         {% comment %} Loops over each field specified in forms.py and generates a bootstrapped form-group {% endcomment %}
             {% for field in form %}
-                <div class="form-group mb-4">
+                <div class="">
                     <label for="{{ field.html_name }}">{{ field.label }}</label>
                     <input 
                         type="{{ field.field.widget.input_type }}" 
                         name="{{ field.html_name }}" 
                         id="{{ field.html_name }}" 
-                        class="form-control" 
+                        class="" 
                         max_length="{{ field.field.max_length }}"
                         min_length="{{ field.field.min_length }}"
                         value="{{field.value}}"
@@ -22,7 +22,7 @@
                 {% comment %} If there are errors, loop through them and create a div containing the error message {% endcomment %}
                 {% if field.errors %}
                     {% for error in field.errors %}
-                        <div class="alert alert-danger mt-2">
+                        <div>
                             {{ error|escape }}
                         </div>
                     {% endfor %}
@@ -34,9 +34,9 @@
             {% for field in profile_form %}
                 {% comment %} CREATE SELECT HTML ELEMENT {% endcomment %}
                 {% if field.field.widget.input_type == 'select' %}
-                    <div class="form-group mb-4">
+                    <div>
                         <label for="{{ field.html_name }}">{{ field.label }}</label>
-                        <select name="{{ field.html_name }}" id="{{ field.html_name }}" class="form-control">
+                        <select name="{{ field.html_name }}" id="{{ field.html_name }}">
                             {% for choice in field.field.choices %}
                                 <option value="{{ choice.0 }}">{{ choice.1 }}</option>
                             {% endfor %}
@@ -45,13 +45,13 @@
 
                 {% comment %} CREATE TEXT INPUT HTML ELEMENT {% endcomment %}
                 {% elif field.field.widget.input_type != 'select' %}
-                    <div class="form-group mb-4">
+                    <div>
                         <label for="{{ field.html_name }}">{{ field.label }}</label>
                         <input 
                             type="{{ field.field.widget.input_type }}" 
                             name="{{ field.html_name }}" 
                             id="{{ field.html_name }}" 
-                            class="form-control" 
+                            class="" 
                             max_length="{{ field.field.max_length }}"
                             min_length="{{ field.field.min_length }}"
                         >
@@ -61,15 +61,15 @@
                 {% comment %} If there are errors, loop through them and create a div containing the error message {% endcomment %}
                 {% if field.errors %}
                     {% for error in field.errors %}
-                        <div class="alert alert-danger mt-2">
+                        <div>
                             {{ error|escape }}
                         </div>
                     {% endfor %}
                 {% endif %}
             {% endfor %}
 
-            <button type="submit" class="btn btn-primary mt-2">Update</button>
+            <button type="submit">Update</button>
+            <a href="{% url 'change_password' %}">Change Password</a>
         </div>
     </form>
-    {{ debug }}
 {% endblock content %}
