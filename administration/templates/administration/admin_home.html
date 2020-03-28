@@ -61,15 +61,30 @@
 	<!-- ====================ACCORDION==================== -->
 		<div class="accordion users-acc"><!-- Accordion -->
 			<h4>Latest User Activity</h4>
-			<div class="acc-tabs"><!-- Tabs-->
+			{% if user.userprofile.access == 'admin' %}
+			<div class="acc-tabs users-tabs-mobile"><!-- Tabs-->
+				<a href="#" class="acc-new-users">N</a>
+				<a href="#" class="acc-registered-users">R</a>
+				<a href="#" class="acc-teachers">T</a>
+				<a href="#" class="acc-elders">E</a>
+				<a href="#" class="acc-admins">A</a>
+			</div><!-- Tabs-->
+
+			<div class="acc-tabs users-tabs-tablet"><!-- Tabs-->
 				<a href="#" class="acc-new-users">New</a>
 				<a href="#" class="acc-registered-users">Registered</a>
-				{% if user.userprofile.access == 'admin' %}
 				<a href="#" class="acc-teachers">Teachers</a>
 				<a href="#" class="acc-elders">Elders</a>
 				<a href="#" class="acc-admins">Admins</a>
-				{% endif %}
 			</div><!-- Tabs-->
+			{% else %}
+
+			<div class="acc-tabs"><!-- Tabs-->
+				<a href="#" class="acc-new-users">New</a>
+				<a href="#" class="acc-registered-users">Registered</a>
+			</div><!-- Tabs-->
+
+			{% endif %}
 
 		<!-- ====================PENDING USERS==================== -->
 			<div id="new-users" class="acc-content"> <!-- New Users Content-->
@@ -274,7 +289,7 @@
 			<h4>Latest Upload Activity</h4>
 			<div class="acc-tabs"><!-- Tabs-->
 				<a href="#" class="acc-new-uploads">New</a>
-				<a href="#" class="acc-published-uploads">Registered</a>
+				<a href="#" class="acc-published-uploads">Published</a>
 			</div><!-- Tabs-->
 		<!-- ====================NEW UPLOADS==================== -->
 			<div id="new-uploads" class="acc-content"> <!-- New Upoads Content-->
