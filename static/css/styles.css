@@ -182,7 +182,7 @@ h2 {
 
 h3 {
   font: 1.728em/1.5 'Cardo Bold', sans-serif;
-  color: #51508B;
+  color: rgb(20, 84, 167);
 }
 
 @media screen and (min-width: 768px) {
@@ -471,7 +471,7 @@ footer {
 
 footer h1 {
   text-align: center;
-  opacity: 20%;
+  opacity: 40%;
   margin-bottom: 20px;
 }
 
@@ -887,9 +887,7 @@ a:hover {
   padding: 0;
 }
 
-body {
-  background-color: #333;
-}
+
 
 h1 {
   text-align: center;
@@ -901,7 +899,7 @@ h1 {
 .con {
   width: 500px;
   height: 500px;
-  border: 2px white solid;
+  border: 1px white solid;
   border-radius: 898px;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
@@ -1014,7 +1012,7 @@ h1 {
   color: black;
   padding-right: 20px;
   font-size: 20px;
-  font-family: 'Sriracha', cursive;
+  font-family:  Raleway Bold Italic;
 }
 
 .textblack {
@@ -1027,7 +1025,7 @@ h1 {
   color: white;
   padding-right: 20px;
   font-size: 20px;
-  font-family: 'Sriracha', cursive;
+  font-family:  Raleway Bold Italic;
 }
 
 /* hover for text
@@ -1087,7 +1085,7 @@ h1 {
 
 .con_top > a:nth-child(2):hover .textyellow {
   font-size: 30px;
-  font-family: 'Berkshire Swash', cursive;
+  font-family:  Raleway Bold Italic;
 }
 
 .con_top > a:nth-child(1):hover {
@@ -1096,7 +1094,7 @@ h1 {
 
 .con_top > a:nth-child(1):hover .textwhite {
   font-size: 30px;
-  font-family: 'Berkshire Swash', cursive;
+  font-family:  Raleway Bold Italic;
 }
 
 /* Screen < 500px */
@@ -1203,9 +1201,12 @@ section {
 }
 
 /*Boundary line*/
+.footprint{
+  margin-top: 20px;
+  margin-bottom: 52px;
+}
 #ui {
   position: absolute;
-  top: 20%;
   width: 100%;
 }
 
@@ -3110,3 +3111,68 @@ td, th {
   color: white;
 }
 /*# sourceMappingURL=styles.css.map */
+
+/*--------------------- LOG IN ------------------------*/
+
+
+/* .logintitle{
+  text-align: center;
+  font-size: 40px;
+  color: aliceblue;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.form-group{
+  margin-top: 10px;
+}
+.username{
+  color: #09c0c0;
+}
+body{
+  background-image: url(/static/img/loginbg.jpg);
+}
+  .loginform{
+      background-color: seagreen;
+      border-radius: 20px;
+  } 
+  .logintitle{
+      text-align: center;
+      margin-bottom: 30px;
+      font-family: Raleway Bold Italic;
+  }
+  .logingroup{
+      text-align: center;
+  }
+  .loginform{
+      margin-left: 20%;
+      margin-right: 20%;
+  }
+  @media screen and (max-width: 800px) {
+    .loginform{
+      margin-top: 10%;
+    }
+  }
+  @media screen and (max-width: 500px) {
+    .loginform{
+      margin-left: 10%;
+      margin-right: 10%;
+    }
+  }
+  .username{
+      color: #fafce1;
+      font-family: Raleway Regular;
+  }
+  span{
+    font-family: Cardo bold;
+  }
+  .submit{
+    width: 100px;
+  } */
+
+
+  /*-----------------------------------------------------
+                RESOURCES STYLES
+------------------------------------------------------ */
+
+.newposth1{
+  font-size: 50px;
+}

@@ -4,7 +4,7 @@
 }
 
 body {
-  
+  background-color: seagreen;
 }
 
 h1 {
@@ -318,10 +318,9 @@ section {
   background-color: #41c7c7;
 }
 
-/*Boundary line*/
+/* Boundary line*/
 #ui {
   position: absolute;
-  top: 20%;
   width: 100%;
 }
 
