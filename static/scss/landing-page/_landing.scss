@@ -1,0 +1,118 @@
+.inner-container{
+    margin: 0 4%;
+
+    @include media-lg{
+        margin: 0 20%;
+    }
+  }
+
+
+img, .treaty-img{
+    max-width: 100%;
+    height: auto;
+}
+ 
+.treaty{
+
+    .content{
+        margin-bottom: 100px;
+        @include media-md{
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    h3{
+        text-align: center;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+    }
+
+    .treaty-img{
+        width: 60%;
+        
+        margin: 0 auto;
+        margin-bottom: 40px;
+
+        @include media-md{
+            width: 200px;
+            height: 200px;
+            margin-right: 40px;
+        }
+    }
+}
+
+.seven-teachings{
+    margin-top: 100px;
+    h3{
+        text-align: center;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+    }
+
+    p{
+        margin-bottom: 16px;
+    }
+
+    .animals{
+        margin-top: 40px;
+
+        @include media-md{
+            margin-top: 80px;
+        }
+
+        .teaching{
+            margin-bottom: 60px;
+
+            @include media-md{
+                display: flex;
+                justify-content: space-between;
+            }
+
+            &:nth-child(odd){
+                @include media-md{
+                    flex-direction: row-reverse;
+                }
+            }
+
+            div:first-child {
+                @include media-md{
+                    margin-right: 60px;
+                }
+            }
+
+            h4{
+                text-align: center;
+                letter-spacing: 3px;
+            }
+
+            img{
+                width: 300px;
+                margin: 40px auto;
+
+                @include media-md{
+                    width: 1200px;
+                }
+            }
+        }
+
+        .teaching:nth-child(odd){
+            div:first-child{
+                @include media-md{
+                    margin-right: 0px;
+                    margin-left: 60px;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+

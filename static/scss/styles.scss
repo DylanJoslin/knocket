@@ -4,7 +4,7 @@
 @import 'landing-page/reset';
 @import 'config';
 @import 'landing-page/typography';
-@import 'landing-page/styling';
+@import 'landing-page/landing';
 @import 'landing-page/header';
 @import 'landing-page/banner';
 @import 'landing-page/menu';
@@ -19,6 +19,8 @@
 /* ------------------------------------------------------
                 RESOURCES STYLES
 ------------------------------------------------------ */
+@import 'landing-page/typography';
+@import 'config';
 @import 'resources/resource-card';
 
 /* ------------------------------------------------------
