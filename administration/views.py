@@ -73,7 +73,7 @@ def admin_users(request, access='pending'):
         return render(request, 'administration/admin_users.html', context)
 
 
-def admin_uploads(request, access='pending', approve = 0):
+def admin_uploads(request, approve = 0):
     if not request.user.is_authenticated:
         return redirect('/')
     elif request.user.userprofile.access == 'pending' or request.user.userprofile.access == 'student':
@@ -97,21 +97,31 @@ def admin_uploads(request, access='pending', approve = 0):
         return render(request, 'administration/admin_uploads.html', context)
 
 def edit_upload(request, post_slug):
-    post = get_object_or_404(VideoPost, slug=post_slug)
-    if request.method == "POST":
-        form = AdminPostForm(request.POST, instance=post)
-        if form.is_valid():
-            post = form.save(commit=False)
-            post.save()
-            return redirect('admin_uploads')
+    if not request.user.is_authenticated:
+        return redirect('/')
+    elif request.user.userprofile.access == 'pending' or request.user.userprofile.access == 'student':
+        return redirect('/')
     else:
-        form = AdminPostForm(instance=post)
-    return render(request, 'administration/create_upload.html', {'form': form})
+        post = get_object_or_404(VideoPost, slug=post_slug)
+        if request.method == "POST":
+            form = AdminPostForm(request.POST, instance=post)
+            if form.is_valid():
+                post = form.save(commit=False)
+                post.save()
+                return redirect('admin_uploads')
+        else:
+            form = AdminPostForm(instance=post)
+        return render(request, 'administration/create_upload.html', {'form': form})
 
 def delete_upload(request, post_slug):
-    post = get_object_or_404(VideoPost, slug=post_slug)
-    post.delete()
-    return redirect('admin_uploads')
+    if not request.user.is_authenticated:
+        return redirect('/')
+    elif request.user.userprofile.access == 'pending' or request.user.userprofile.access == 'student':
+        return redirect('/')
+    else:
+        post = get_object_or_404(VideoPost, slug=post_slug)
+        post.delete()
+        return redirect('admin_uploads')
 
 
 def edit_users(request, username="none"):
