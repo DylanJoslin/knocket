@@ -12,6 +12,11 @@
             @include padding(large);
         }
 
+        @include breakpoint(desktop){
+            @include padding(extraLarge);
+        }
+        
+
         margin-bottom: 20rem;
 
         .hidden{

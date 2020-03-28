@@ -134,7 +134,6 @@
 									{% endif %}
 								</p>
 								<p class="icon-plus">+</p>
-								<p class="icon-minus hidden">-</p>
 							</div><!-- User Dropdown -->
 							<div class="acc-user-info"><!-- User information -->
 								<div class="information">
@@ -170,7 +169,6 @@
 											{% endif %}
 										</p>
 										<p class="icon-plus">+</p>
-										<p class="icon-minus hidden">-</p>
 									</div><!-- User Dropdown -->
 									<div class="acc-user-info"><!-- User information -->
 										<div class="information">
@@ -179,7 +177,7 @@
 											<p>Email: {{user.email}}</p>
 										</div>
 										<div class="options">
-											<a href="{% url 'approve_user' %}{{ user.username }}">Approve User</a>
+											<a href="{% url 'edit_users' %}{{ user.username }}">Edit User</a>
 											<a href="{% url 'delete_user' %}{{ user.username }}">Delete User</a>
 										</div>
 									</div><!-- User information -->
@@ -213,7 +211,7 @@
 											<p>Email: {{user.email}}</p>
 										</div>
 										<div class="options">
-											<a href="{% url 'approve_user' %}{{ user.username }}">Approve User</a>
+											<a href="{% url 'edit_users' %}{{ user.username }}">Edit User</a>
 											<a href="{% url 'delete_user' %}{{ user.username }}">Delete User</a>
 										</div>
 									</div><!-- User information -->
@@ -247,7 +245,7 @@
 											<p>Email: {{user.email}}</p>
 										</div>
 										<div class="options">
-											<a href="{% url 'approve_user' %}{{ user.username }}">Approve User</a>
+											<a href="{% url 'edit_users' %}{{ user.username }}">Edit User</a>
 											<a href="{% url 'delete_user' %}{{ user.username }}">Delete User</a>
 										</div>
 									</div><!-- User information -->

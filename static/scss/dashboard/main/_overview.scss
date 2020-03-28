@@ -38,6 +38,12 @@
                 padding: 4rem 6rem 0 4rem;
                 padding-bottom: 4rem;
                 margin-left: 30rem;
+                margin-right: 6rem;
+            }
+
+            @include breakpoint(desktop){
+                margin-left: 38rem;
+                margin-right: 10rem;
             }
 
             h3{
@@ -47,6 +53,7 @@
                 @include breakpoint(tablet){
                     padding: 0;
                 }
+
             }
 
             p{
