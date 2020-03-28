@@ -3,6 +3,7 @@ from django.utils import timezone
 from .models import VideoPost
 from .forms import PostForm
 from django.shortcuts import redirect
+from django.contrib.auth.decorators import login_required
 # Create your views here.
 
 def post_list(request):
@@ -28,6 +29,11 @@ def post_detail(request, post_slug):
     return render(request, 'stories/post_detail.html', {'post': post})
 
 def post_new(request):
+    if not request.user.is_authenticated:
+        return redirect('/')
+    elif request.user.userprofile.access == 'pending' or request.user.userprofile.access == 'student':
+        return redirect('/')
+    else:
         if request.method == "POST":
             form = PostForm(request.POST, request.FILES)
             if form.is_valid():
