@@ -19,6 +19,28 @@ $orange-opacity: #ff7918db;
     letter-spacing: 1.5px;
 }
 
+//BREAKPOINT
+
+@mixin breakpoint($size) {
+
+    @if $size == maxTablet {
+      @media screen and (max-width: 999px) {@content;}
+    }
+
+    @if $size == tablet {
+      @media screen and (min-width: 700px) {@content;}
+    }
+
+    @else if $size == laptop {
+      @media screen and (min-width: 1000px) {@content;}
+    }
+
+    @else if $size == desktop {
+      @media screen and (min-width: 1280px) {@content;}
+    }
+    
+  }
+
 
 
 /* Media Queries for different viewport sizes*/

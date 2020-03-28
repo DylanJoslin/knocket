@@ -8,64 +8,63 @@
     <title>Indigenous Storytelling</title>
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 </head>
-<body class="main-body">
-
-    <header class="main-header">
-        <h1 class="logo"><a href="{% url 'home' %}">Indigenous <br><span>Storytelling</span></a></h1>
-        <nav class="main-navigation">
-            <ul class="menu-links">
-                <li class="nav-link">
-                    <a href="#" class="underline-link">Map</a>
-                </li>
-                <li class="nav-link stories">
-                    <a href="{% url 'post_list' %}amiskwaciy" class="underline-link">Stories <span class="dropdown">&#9660;</span></a>
-                    <ul class="sub-menu hidden">
-                        <li class="nav-link"><a href="#" class="underline-link">Physical</a></li>
-                        <li class="nav-link"><a href="#" class="underline-link">Emotional</a></li>
-                        <li class="nav-link"><a href="#" class="underline-link">Mental</a></li>
-                        <li class="nav-link"><a href="#" class="underline-link">Spiritual</a></li>
+<body>
+    <header>
+            <div class="top-header">
+            <h1 class="logo"><a href="{% url 'home' %}">Indigenous <br><span>Storytelling</span></a></h1>
+            <div class="menu">
+                {% if not user.is_authenticated %}
+                <div class="login">
+                    <a href="{% url 'login' %}">Sign In</a>
+                </div>
+                {% endif %}
+                <a class="menu-toggle" href="#">&#9776;</a>
+            </div>
+        </div>
+        <nav class="navigation">
+            <a href="#" class="close-nav">&#215;</a>
+            <ul>
+                <li><a href="#" class="underline-link">Map</a></li>
+                <li><a href="{% url 'post_list' %}amiskwaciy" class="underline-link">Stories <span class="dropdown">&#9660;</span></a>
+                    <ul class="sub-menu">
+                        <li><a href="#" class="underline-link">Physical</a></li>
+                        <li><a href="#" class="underline-link">Emotional</a></li>
+                        <li><a href="#" class="underline-link">Mental</a></li>
+                        <li><a href="#" class="underline-link">Spiritual</a></li>
                     </ul>
                 </li>
-                <li class="nav-link">
-                    <a href="{% url 'resources' %}" class="underline-link">Resources</a>
-                </li>
-                 <li class="nav-link">
-                    <a href="{% url 'about' %}" class="underline-link">About Us</a>
-                </li>
+                <li><a href="{% url 'resources' %}" class="underline-link">Resources</a></li>
+                <li><a href="{% url 'about' %}" class="underline-link">About Us</a></li>
                 {% if user.is_authenticated %}
-                    <li class="nav-link margin-bottom">
-                        <a href="{% url 'profile' %}">Profile</a>
-                    </li>
-                    {% if user.userprofile.access == 'admin' or user.userprofile.access == 'teacher' %}
-                        <li class="nav-link margin-bottom">
-                            <a href="{% url 'administration' %}">Admin</a>
-                        </li>
-                    {% endif %}
-                    <li class="nav-link margin-bottom">
-                        <a href="{% url 'logout' %}">Log Out</a>
-                    </li>
+                <li><a href="{% url 'profile' %}">Profile</a></li>
+                {% if user.userprofile.access == 'admin' or user.userprofile.access == 'teacher' %}
+                <li><a href="{% url 'administration' %}">Admin</a></li>
                 {% endif %}
-                {% if not user.is_authenticated %}
-                    <div class="nav-buttons">
-                        <li class="login show-at-mobile">
-                            <a href="{% url 'login' %}">Sign In</a>
-                        </li>
-                        <li class="login show-at-mobile">
-                            <a href="{% url 'register' %}" class="text-info">Register</a>
-                        </li>
-                    </div>
-                    {% endif %}
+                <li><a href="{% url 'logout' %}">Log Out</a></li>
+                {% endif %}
+
             </ul>
         </nav>
-        {% if not user.is_authenticated %}
-            <div class="login show-at-laptop">
-                <a href="{% url 'login' %}">Sign In</a>
-                <a href="{% url 'register' %}" class="nav-link text-info">Register</a>
-            </div>
-        {% endif %}
-        <div class="menu-icon">
-            <div></div>
-        </div>
+        <!-- <ul class="nav">
+            {% if user.is_authenticated %}
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-info" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">{{user}}</a>
+                <div class="dropdown-menu bg-dark">
+                    <a class="dropdown-item text-white" href="{% url 'profile' %}">Profile</a>
+                    <a class="dropdown-item text-white" href="{% url 'edit_profile' %}">Manage Profile</a>
+                    {% if user.userprofile.access == 'admin' or user.userprofile.access == 'teacher' %}
+                    <a class="dropdown-item text-white" href="/admin">Default Admin</a>
+                    <a class="dropdown-item text-white" href="{% url 'administration' %}">Custom Admin</a>
+                    {% endif %}
+                <div class="dropdown-divider" style="border-color: #6C757D"></div>
+                <a href="{% url 'logout' %}" class="dropdown-item text-info">Log Out</a>               
+                </div>
+            </li>
+            {% else %}
+            <li class="nav-item"><a href="{% url 'login' %}" class="nav-link text-info">Log In</a></li>
+            <li class="nav-item"><a href="{% url 'register' %}" class="nav-link text-info">Register</a></li>
+            {% endif %}
+        </ul> -->
     </header>
     <main class="container">
         {% comment %} If there are any errors, such as an error when loggin in or registering, this code block will output it as html {% endcomment %}
@@ -117,7 +116,7 @@
 
     </footer>
 
-    <script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+
     <script src="{% static 'js/navigation.js' %}"></script>
     <script src="{% static 'js/main.js' %}"></script>
     <script src="{% static 'js/hover-handler.js' %}"></script>

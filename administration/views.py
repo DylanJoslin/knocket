@@ -10,7 +10,7 @@ from .forms import AdminPostForm
 
 # Create your views here.
 
-def admin_home(request, access='pending'): 
+def admin_home(request, access='pending', approve=0): 
     if not request.user.is_authenticated:
         return redirect('/')
     elif request.user.userprofile.access == 'pending' or request.user.userprofile.access == 'student':
@@ -25,12 +25,26 @@ def admin_home(request, access='pending'):
             if user.userprofile.access == 'student':
                 registered_users = registered_users + 1
 
+        new_post = 0
+        approved_post = 0
+
+        for post in VideoPost.objects.all():
+            if post.approve == 0:
+                new_post = new_post + 1
+            if post.approve == 1:
+                approved_post = approved_post + 1
+
         context = {
             'users': User.objects.all(),
             'new_users': new_users,
             'registered_users': registered_users,
-            'access': access
+            'access': access,
+            'posts': VideoPost.objects.all(),
+            'new_post': new_post,
+            'approved_post': approved_post,
+            'approve': approve
         }
+
 
         return render(request, 'administration/admin_home.html', context)
 
@@ -59,7 +73,7 @@ def admin_users(request, access='pending'):
         return render(request, 'administration/admin_users.html', context)
 
 
-def admin_uploads(request, access='pending', approve = 0):
+def admin_uploads(request, approve = 0):
     if not request.user.is_authenticated:
         return redirect('/')
     elif request.user.userprofile.access == 'pending' or request.user.userprofile.access == 'student':
@@ -83,21 +97,31 @@ def admin_uploads(request, access='pending', approve = 0):
         return render(request, 'administration/admin_uploads.html', context)
 
 def edit_upload(request, post_slug):
-    post = get_object_or_404(VideoPost, slug=post_slug)
-    if request.method == "POST":
-        form = AdminPostForm(request.POST, instance=post)
-        if form.is_valid():
-            post = form.save(commit=False)
-            post.save()
-            return redirect('admin_uploads')
+    if not request.user.is_authenticated:
+        return redirect('/')
+    elif request.user.userprofile.access == 'pending' or request.user.userprofile.access == 'student':
+        return redirect('/')
     else:
-        form = AdminPostForm(instance=post)
-    return render(request, 'administration/create_upload.html', {'form': form})
+        post = get_object_or_404(VideoPost, slug=post_slug)
+        if request.method == "POST":
+            form = AdminPostForm(request.POST, instance=post)
+            if form.is_valid():
+                post = form.save(commit=False)
+                post.save()
+                return redirect('admin_uploads')
+        else:
+            form = AdminPostForm(instance=post)
+        return render(request, 'administration/create_upload.html', {'form': form})
 
 def delete_upload(request, post_slug):
-    post = get_object_or_404(VideoPost, slug=post_slug)
-    post.delete()
-    return redirect('admin_uploads')
+    if not request.user.is_authenticated:
+        return redirect('/')
+    elif request.user.userprofile.access == 'pending' or request.user.userprofile.access == 'student':
+        return redirect('/')
+    else:
+        post = get_object_or_404(VideoPost, slug=post_slug)
+        post.delete()
+        return redirect('admin_uploads')
 
 
 def edit_users(request, username="none"):

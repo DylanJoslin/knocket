@@ -1,33 +1,70 @@
-header{
-    .top-header{
+.main-header{
+    padding: 30px;
+    background-color: $light-blue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo{
+        font-size: 24px;
+    }
+
+    @include breakpoint(laptop){
+        padding-left: 30px;
+    }
+
+    .side-menu{
+        position: relative;
         display: flex;
-        justify-content: space-between;
-        padding: 30px 10px;
-        background-color: $light-blue;
+        align-items: center;
     }
 
-    .login{
-        margin-top: 8px;
-    }
-
-    .login a{
-        font-family: 'Cardo Regular', sans-serif;
-        text-transform: uppercase;
-        font-size: 12px;
-        text-decoration: none;
-        color: white;
-        background-color: $red-colour;
-        padding: 8px;
-        margin-top: 10px;
-        border-radius: 8px;
-
-        &:hover{
-            background-color: $light-purple;
-            transition: 0.5s;
+    .show-at-laptop{
+        display: none;
+        @include breakpoint(laptop){
+            display: inline-block;
         }
     }
 
-    .menu{
-        @include flex;
+    .show-at-mobile{
+        @include breakpoint(laptop){
+            display: none;
+        }
+        
     }
+
 }
+
+  .login a{
+    margin-right: 10px;
+    font-family: 'Cardo Regular', sans-serif;
+    text-transform: uppercase;
+    font-size: 14px;
+    text-decoration: none;
+    color: white;
+    background: $red-colour;
+    padding: 10px 20px;
+    border-radius: 8px;
+
+    &:hover{
+        background-color: $light-purple;
+        color: black;
+        transition: 0.5s;
+    }
+
+}
+
+.show-at-mobile a{
+    padding: 10px 30px;
+    font-size: 20px;
+    width: 80%;
+    display: inline-block;
+}
+
+.show-at-mobile{
+    margin-bottom: 20px;
+}
+
+// .main-body .container{
+//     margin-top: 100px;
+// }

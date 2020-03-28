@@ -32,8 +32,9 @@
 	<!-- ====================USERS OVERVIEW==================== -->
 		<div class="overview-background"></div>
 		<div class="overview users-overview" id="users-overview">
-			<h3>Users Overview</h3>
 			<div class="overview-box">
+			<h3>Users Overview</h3>
+			<div class="flex-overview">
 				<div>
 					<p>New Students: <span class="number">{{ new_users }}</span></p>
 					<p>Registered Students: <span class="number">{{ registered_users }}</span></p>
@@ -41,6 +42,8 @@
 				<div>
 					<a href="{% url 'admin_users' %}">Manage All Users</a>
 				</div>
+			</div>
+				
 			</div>
 		</div>
 	<!-- ====================USERS OVERVIEW CLOSE==================== -->
@@ -251,14 +254,16 @@
 	<!-- ====================POST OVERVIEW==================== -->
 		<div class="overview-background-second"></div>
 		<div class="overview uploads-overview" id="uploads-overview">
-			<h3>Uploads Overview</h3>
 			<div class="overview-box">
-				<div>
-					<p>New Uploads: <span class="number">12</span></p>
-					<p>Published Uploads: <span class="number">40</span></p>
-				</div>
-				<div>
-					<a href="{% url 'admin_uploads' %}">Manage All Uploads</a>
+				<h3>Uploads Overview</h3>
+				<div class="flex-overview">
+					<div>
+						<p>New Uploads: <span class="number">12</span></p>
+						<p>Published Uploads: <span class="number">40</span></p>
+					</div>
+					<div>
+						<a href="{% url 'admin_uploads' %}">Manage All Uploads</a>
+					</div>
 				</div>
 			</div>
 		</div>
