@@ -5,8 +5,7 @@
 *,
 *::before,
 *::after {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /* Remove default padding */
@@ -74,64 +73,51 @@ select {
 /* Remove all animations and transitions for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
   * {
-    -webkit-animation-duration: 0.01ms !important;
-            animation-duration: 0.01ms !important;
-    -webkit-animation-iteration-count: 1 !important;
-            animation-iteration-count: 1 !important;
-    -webkit-transition-duration: 0.01ms !important;
-            transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
 }
-
 /* Media Queries for different viewport sizes*/
 /* CARDO FONT */
 @font-face {
   font-family: "Cardo Bold";
   src: url("/static/fonts/Cardo-Bold.ttf");
 }
-
 @font-face {
   font-family: "Cardo Italic";
   src: url("/static/fonts/Cardo-Italic.ttf");
 }
-
 @font-face {
   font-family: "Cardo Regular";
   src: url("/static/fonts/Cardo-Regular.ttf");
 }
-
 /* RALEWAY FONT */
 @font-face {
   font-family: "Raleway Light";
   src: url("/static/fonts/Raleway-Light.ttf");
 }
-
 @font-face {
   font-family: "Raleway Bold";
   src: url("/static/fonts/Raleway-Bold.ttf");
 }
-
 @font-face {
   font-family: "Raleway Bold Italic";
   src: url("/static/fonts/Raleway-BoldItalic.ttf");
 }
-
 @font-face {
   font-family: "Raleway Regular";
   src: url("/static/fonts/Raleway-Regular.ttf");
 }
-
 @font-face {
   font-family: "Raleway Thin";
   src: url("/static/fonts/Raleway-Thin.ttf");
 }
-
 @font-face {
   font-family: "Raleway Thin Italic";
   src: url("/static/fonts/Raleway-ThinItalic.ttf");
 }
-
 /* Custom Styles for Typography */
 h1, h2, h3, h4, h5 {
   margin: 2.75rem 0 1.05rem;
@@ -141,29 +127,25 @@ h1, h2, h3, h4, h5 {
 
 /* FONT-SIZES FOR IPAD/DESKTOP*/
 h1 {
-  font: 20px/1 'Cardo Regular', sans-serif;
+  font: 20px/1 "Cardo Regular", sans-serif;
   margin-top: 0;
   color: white;
   text-transform: uppercase;
 }
-
 h1 span {
   text-transform: none;
   font-style: italic;
   margin-left: 36px;
 }
-
 @media screen and (min-width: 768px) {
   h1 span {
     margin-left: 50px;
   }
 }
-
 h1 a {
   text-decoration: none;
   color: white;
 }
-
 @media screen and (min-width: 768px) {
   h1 {
     font-size: 28px;
@@ -171,9 +153,8 @@ h1 a {
 }
 
 h2 {
-  font: 2.074em/1.5 'Raleway Regular', sans-serif;
+  font: 2.074em/1.5 "Raleway Regular", sans-serif;
 }
-
 @media screen and (min-width: 768px) {
   h2 {
     font-size: 3.157em;
@@ -181,10 +162,9 @@ h2 {
 }
 
 h3 {
-  font: 1.728em/1.5 'Cardo Bold', sans-serif;
+  font: 1.728em/1.5 "Cardo Bold", sans-serif;
   color: #51508B;
 }
-
 @media screen and (min-width: 768px) {
   h3 {
     font-size: 2.369em;
@@ -192,10 +172,9 @@ h3 {
 }
 
 h4 {
-  font: 1.44em/1.5 'Cardo Bold', sans-serif;
+  font: 1.44em/1.5 "Cardo Bold", sans-serif;
   color: #B4B9E5;
 }
-
 @media screen and (min-width: 768px) {
   h4 {
     font-size: 1.777em;
@@ -203,18 +182,17 @@ h4 {
 }
 
 p {
-  font: 18px/1.5 'Raleway Regular', sans-serif;
+  font: 18px/1.5 "Raleway Regular", sans-serif;
   text-align: justify;
 }
 
 a {
-  font-family: 'Cardo Regular', sans-serif;
+  font-family: "Cardo Regular", sans-serif;
 }
 
 .inner-container {
   margin: 0 4%;
 }
-
 @media screen and (min-width: 1024px) {
   .inner-container {
     margin: 0 20%;
@@ -229,30 +207,22 @@ img, .treaty-img {
 .treaty .content {
   margin-bottom: 100px;
 }
-
 @media screen and (min-width: 768px) {
   .treaty .content {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    justify-content: space-between;
   }
 }
-
 .treaty h3 {
   text-align: center;
   text-transform: uppercase;
   margin-bottom: 20px;
 }
-
 .treaty .treaty-img {
   width: 60%;
   margin: 0 auto;
   margin-bottom: 40px;
 }
-
 @media screen and (min-width: 768px) {
   .treaty .treaty-img {
     width: 200px;
@@ -264,73 +234,54 @@ img, .treaty-img {
 .seven-teachings {
   margin-top: 100px;
 }
-
 .seven-teachings h3 {
   text-align: center;
   text-transform: uppercase;
   margin-bottom: 20px;
 }
-
 .seven-teachings p {
   margin-bottom: 16px;
 }
-
 .seven-teachings .animals {
   margin-top: 40px;
 }
-
 @media screen and (min-width: 768px) {
   .seven-teachings .animals {
     margin-top: 80px;
   }
 }
-
 .seven-teachings .animals .teaching {
   margin-bottom: 60px;
 }
-
 @media screen and (min-width: 768px) {
   .seven-teachings .animals .teaching {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    justify-content: space-between;
   }
 }
-
 @media screen and (min-width: 768px) {
   .seven-teachings .animals .teaching:nth-child(odd) {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: row-reverse;
-            flex-direction: row-reverse;
+    flex-direction: row-reverse;
   }
 }
-
 @media screen and (min-width: 768px) {
   .seven-teachings .animals .teaching div:first-child {
     margin-right: 60px;
   }
 }
-
 .seven-teachings .animals .teaching h4 {
   text-align: center;
   letter-spacing: 3px;
 }
-
 .seven-teachings .animals .teaching img {
   width: 300px;
   margin: 40px auto;
 }
-
 @media screen and (min-width: 768px) {
   .seven-teachings .animals .teaching img {
     width: 1200px;
   }
 }
-
 @media screen and (min-width: 768px) {
   .seven-teachings .animals .teaching:nth-child(odd) div:first-child {
     margin-right: 0px;
@@ -341,47 +292,31 @@ img, .treaty-img {
 .main-header {
   padding: 30px;
   background-color: #3EA3DF;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
 }
-
 .main-header .logo {
   font-size: 24px;
 }
-
 @media screen and (min-width: 1000px) {
   .main-header {
     padding-left: 30px;
   }
 }
-
 .main-header .side-menu {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
-
 .main-header .show-at-laptop {
   display: none;
 }
-
 @media screen and (min-width: 1000px) {
   .main-header .show-at-laptop {
     display: inline-block;
   }
 }
-
 @media screen and (min-width: 1000px) {
   .main-header .show-at-mobile {
     display: none;
@@ -390,7 +325,7 @@ img, .treaty-img {
 
 .login a {
   margin-right: 10px;
-  font-family: 'Cardo Regular', sans-serif;
+  font-family: "Cardo Regular", sans-serif;
   text-transform: uppercase;
   font-size: 14px;
   text-decoration: none;
@@ -399,11 +334,9 @@ img, .treaty-img {
   padding: 10px 20px;
   border-radius: 8px;
 }
-
 .login a:hover {
   background-color: #B4B9E5;
   color: black;
-  -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
@@ -427,36 +360,30 @@ img, .treaty-img {
   padding: 120px 30px;
   margin-bottom: 100px;
 }
-
 @media screen and (min-width: 768px) {
   .banner {
     height: 87vh;
     padding: 120px 60px;
   }
 }
-
 .banner .quote {
   background-color: #ff7918db;
   border-radius: 20px;
   padding: 20px;
   margin-bottom: 140px;
 }
-
 @media screen and (min-width: 768px) {
   .banner .quote {
     padding: 20px 30px;
   }
 }
-
 .banner .quote h3 {
   color: white;
 }
-
 .banner .quote h3 span {
   color: #51508B;
   letter-spacing: 1.6px;
 }
-
 .banner .explore-btn a {
   text-transform: uppercase;
   text-decoration: none;
@@ -469,17 +396,14 @@ img, .treaty-img {
   display: table;
   margin: 0 auto;
 }
-
 .banner .explore-btn a:hover {
   background-color: #B4B9E5;
-  -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
 .main-header .main-navigation {
   z-index: 90;
 }
-
 @media screen and (max-width: 999px) {
   .main-header .main-navigation {
     padding: 60px 20px;
@@ -491,84 +415,68 @@ img, .treaty-img {
     right: -100%;
     background: #3EA3DF;
     padding-bottom: 4rem;
-    -webkit-transition: all 0.7s ease-in-out;
     transition: all 0.7s ease-in-out;
     margin-top: 3.9rem;
   }
 }
-
 @media screen and (min-width: 1000px) {
   .main-header .main-navigation {
     left: 0;
   }
   .main-header .main-navigation .menu-links {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
   }
 }
-
 @media screen and (min-width: 1000px) {
   .main-header .main-navigation .nav-link {
     padding-right: 26px;
   }
 }
-
 .main-header .main-navigation .nav-link a {
-  font-family: 'Raleway Regular', sans-serif;
+  font-family: "Raleway Regular", sans-serif;
   text-transform: uppercase;
   font-size: 20px;
   margin-bottom: 60px;
   text-decoration: none;
   color: white;
 }
-
 @media screen and (min-width: 768px) {
   .main-header .main-navigation .nav-link a {
     font-size: 24px;
   }
 }
-
 @media screen and (min-width: 1000px) {
   .main-header .main-navigation .nav-link a {
     font-size: 18px;
   }
 }
-
 .main-header .main-navigation .nav-link a.underline-link {
   color: white;
   text-decoration: none;
 }
-
 @media screen and (max-width: 999px) {
   .main-header .main-navigation .nav-link a.underline-link {
     display: inline-block;
   }
 }
-
 .main-header .main-navigation .nav-link a.underline-link::after {
-  content: '';
+  content: "";
   display: block;
   width: 0;
   height: 2px;
   padding-top: 2px;
   background: #FF7918;
-  -webkit-transition: width .3s;
-  transition: width .3s;
+  transition: width 0.3s;
 }
-
 .main-header .main-navigation .nav-link a.underline-link:hover::after {
   width: 50%;
 }
-
 .main-header .main-navigation .nav-link a .dropdown {
   color: #FF7918;
   font-size: 18px;
   padding-left: 10px;
 }
-
 .main-header .main-navigation .nav-link .sub-menu {
-  -webkit-transition: 0.7s;
   transition: 0.7s;
   border-top: 2px solid white;
   border-bottom: 2px solid white;
@@ -577,11 +485,9 @@ img, .treaty-img {
   padding-top: 20px;
   margin-bottom: 20px;
 }
-
 .main-header .main-navigation .nav-link .sub-menu .nav-link a {
   margin-bottom: 0;
 }
-
 @media screen and (min-width: 1000px) {
   .main-header .main-navigation .nav-link .sub-menu {
     position: absolute;
@@ -592,67 +498,52 @@ img, .treaty-img {
     border-bottom: 0;
   }
 }
-
 .main-header .main-navigation .nav-link .sub-menu li {
   padding-bottom: 10px;
 }
-
 .main-header .main-navigation .nav-link .sub-menu .hidden {
   display: none;
 }
-
 .main-header .main-navigation .nav-link:last-child {
   padding-right: 0;
 }
-
 .main-header .main-navigation .margin-bottom {
   margin-bottom: 20px;
 }
-
 @media screen and (min-width: 1000px) {
   .main-header .main-navigation .margin-bottom {
     margin-bottom: 0;
   }
 }
-
 @media screen and (min-width: 768px) {
   .main-header .main-navigation .nav-buttons {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    justify-content: space-between;
   }
 }
-
 @media screen and (min-width: 768px) {
   .main-header .main-navigation .nav-buttons .show-at-mobile {
     width: 400px;
   }
 }
-
 .main-header .menu-icon {
   width: 1.875rem;
 }
-
 @media screen and (min-width: 1000px) {
   .main-header .menu-icon {
     display: none;
   }
 }
-
 @media screen and (max-width: 999px) {
   .main-header .menu-icon:after,
-  .main-header .menu-icon:before,
-  .main-header .menu-icon div {
+.main-header .menu-icon:before,
+.main-header .menu-icon div {
     background: white;
     border-radius: 0.3rem;
-    content: '';
+    content: "";
     display: block;
     height: 3px;
     margin: 5px 0;
-    -webkit-transition: all 0.7s ease-in-out;
     transition: all 0.7s ease-in-out;
   }
   .main-header .close-button {
@@ -665,16 +556,13 @@ img, .treaty-img {
     margin: 0 auto;
   }
   .main-header .icon-closed:before {
-    -webkit-transform: translateY(7px) rotate(135deg);
-            transform: translateY(7px) rotate(135deg);
+    transform: translateY(7px) rotate(135deg);
   }
   .main-header .icon-closed:after {
-    -webkit-transform: translateY(-9px) rotate(-135deg);
-            transform: translateY(-9px) rotate(-135deg);
+    transform: translateY(-9px) rotate(-135deg);
   }
   .main-header .icon-closed div {
-    -webkit-transform: scale(0);
-            transform: scale(0);
+    transform: scale(0);
   }
   .main-header .menu-toggle {
     position: absolute;
@@ -690,69 +578,50 @@ img, .treaty-img {
 .about {
   margin-top: 80px;
 }
-
 .about h3 {
   text-align: center;
   text-transform: uppercase;
   margin-bottom: 10px;
 }
-
 .about .content {
   margin-bottom: 120px;
 }
-
 .about .grid .member-1, .about .grid .member-2, .about .grid .member-3 {
   margin-bottom: 80px;
 }
-
 @media screen and (min-width: 768px) {
   .about .grid .member-1, .about .grid .member-2, .about .grid .member-3 {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    justify-content: space-between;
   }
 }
-
 .about .grid .member-1 h4, .about .grid .member-2 h4, .about .grid .member-3 h4 {
   text-align: center;
   margin-bottom: 20px;
 }
-
 .about .grid .member-1 .member-img, .about .grid .member-2 .member-img, .about .grid .member-3 .member-img {
   margin: 0 auto;
   width: 300px;
   border-radius: 20px;
   margin-bottom: 10px;
 }
-
 @media screen and (min-width: 768px) {
   .about .grid .member-1 .member-img, .about .grid .member-2 .member-img, .about .grid .member-3 .member-img {
     width: 1400px;
   }
 }
-
 @media screen and (min-width: 768px) {
   .about .grid .member-1 .description, .about .grid .member-2 .description, .about .grid .member-3 .description {
     margin-left: 40px;
   }
 }
-
 @media screen and (min-width: 768px) {
   .about .grid .member-2 {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: row-reverse;
-            flex-direction: row-reverse;
+    flex-direction: row-reverse;
   }
 }
-
 @media screen and (min-width: 768px) {
   .about .grid .member-2 .description {
     margin-left: 0;
@@ -764,13 +633,11 @@ footer {
   background-color: #3EA3DF;
   padding: 30px 10px;
 }
-
 footer h1 {
   text-align: center;
   opacity: 20%;
   margin-bottom: 20px;
 }
-
 footer .line {
   width: 300px;
   margin: 0 auto;
@@ -779,58 +646,44 @@ footer .line {
   opacity: 10%;
   margin-bottom: 40px;
 }
-
 footer .row {
   text-align: center;
   color: white;
 }
-
 @media screen and (min-width: 768px) {
   footer .row {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    justify-content: space-between;
   }
 }
-
 footer .row .col {
   margin-bottom: 40px;
   width: 100%;
 }
-
 @media screen and (min-width: 768px) {
   footer .row .col {
     width: 33.333%;
   }
 }
-
 footer .row .col li {
   margin-bottom: 4px;
 }
-
 footer .row .col a {
   text-decoration: none;
   color: white;
 }
-
 footer .row .col a:hover {
   color: #B4B9E5;
 }
-
 footer .row .col li:nth-child(1) {
-  font-family: 'Cardo Italic', sans-serif;
+  font-family: "Cardo Italic", sans-serif;
   text-transform: uppercase;
   margin-bottom: 10px;
 }
-
 footer .bottom {
   color: #B4B9E5;
   opacity: 20%;
 }
-
 footer .bottom p {
   text-align: center;
   font-size: 16px;
@@ -840,8 +693,8 @@ footer .bottom p {
                 MAP STYLES
 ------------------------------------------------------ */
 /*============================================
-                   Custom Styles 
-   ===========================================*/
+                 Custom Styles 
+ ===========================================*/
 /*---------- General ----------*/
 .map-local-main {
   background-color: #0c2034;
@@ -862,11 +715,8 @@ a:hover {
 }
 
 .holder {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  justify-content: space-around;
   margin: 20rem 0;
   width: 60%;
   margin: 0 auto;
@@ -878,13 +728,9 @@ a:hover {
 
 .province-nav {
   list-style: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  justify-content: space-around;
+  flex-wrap: wrap;
   width: 75%;
   margin: 0 auto;
 }
@@ -899,7 +745,6 @@ a:hover {
 }
 
 .province-nav > li:hover {
-  -webkit-transition: 0.5s;
   transition: 0.5s;
   background-color: #999999;
   color: #333;
@@ -909,21 +754,13 @@ a:hover {
 .local-holder {
   width: 50%;
   margin: 0 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
 
 .image-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  justify-content: space-around;
 }
 
 .alberta-svg {
@@ -1044,11 +881,8 @@ a:hover {
 }
 
 .learn-more-local-buttons {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  justify-content: space-around;
 }
 
 .map-local-link {
@@ -1074,7 +908,6 @@ a:hover {
 .map-local-link:hover,
 .return-link:hover,
 .mobile-local-button:hover {
-  -webkit-transition: 0.5s;
   transition: 0.5s;
   background-color: #999999;
   color: #333;
@@ -1087,11 +920,8 @@ a:hover {
 }
 
 .button-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  justify-content: space-around;
 }
 
 .return-link {
@@ -1125,11 +955,8 @@ a:hover {
 }
 
 .slideshow-buttons {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  justify-content: space-around;
 }
 
 .slideshow-buttons > span {
@@ -1161,45 +988,41 @@ a:hover {
 /*---------- Respondsive ----------*/
 @media only screen and (max-width: 1000px) {
   .alberta-svg,
-  .bc-svg,
-  .sask-svg,
-  .manitoba-svg {
+.bc-svg,
+.sask-svg,
+.manitoba-svg {
     width: 20rem;
     height: 26.6rem;
   }
+
   .local-holder {
     width: 80%;
   }
+
   .alberta-content,
-  .bc-content,
-  .sask-content,
-  .manitoba-content {
+.bc-content,
+.sask-content,
+.manitoba-content {
     width: 90%;
   }
 }
-
 @media only screen and (max-width: 800px) {
   .holder {
     display: none;
   }
+
   .holder-mobile {
     display: block;
   }
 }
-
 /*---------- utils ----------*/
 .text-center {
   text-align: center;
 }
 
 .flex-column {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
 
 .grey {
@@ -1230,48 +1053,39 @@ a:hover {
   font-family: "Cardo Bold";
   src: url("/static/fonts/Cardo-Bold.ttf");
 }
-
 @font-face {
   font-family: "Cardo Italic";
   src: url("/static/fonts/Cardo-Italic.ttf");
 }
-
 @font-face {
   font-family: "Cardo Regular";
   src: url("/static/fonts/Cardo-Regular.ttf");
 }
-
 /* RALEWAY FONT */
 @font-face {
   font-family: "Raleway Light";
   src: url("/static/fonts/Raleway-Light.ttf");
 }
-
 @font-face {
   font-family: "Raleway Bold";
   src: url("/static/fonts/Raleway-Bold.ttf");
 }
-
 @font-face {
   font-family: "Raleway Bold Italic";
   src: url("/static/fonts/Raleway-BoldItalic.ttf");
 }
-
 @font-face {
   font-family: "Raleway Regular";
   src: url("/static/fonts/Raleway-Regular.ttf");
 }
-
 @font-face {
   font-family: "Raleway Thin";
   src: url("/static/fonts/Raleway-Thin.ttf");
 }
-
 @font-face {
   font-family: "Raleway Thin Italic";
   src: url("/static/fonts/Raleway-ThinItalic.ttf");
 }
-
 /* Custom Styles for Typography */
 h1, h2, h3, h4, h5 {
   margin: 2.75rem 0 1.05rem;
@@ -1281,29 +1095,25 @@ h1, h2, h3, h4, h5 {
 
 /* FONT-SIZES FOR IPAD/DESKTOP*/
 h1 {
-  font: 20px/1 'Cardo Regular', sans-serif;
+  font: 20px/1 "Cardo Regular", sans-serif;
   margin-top: 0;
   color: white;
   text-transform: uppercase;
 }
-
 h1 span {
   text-transform: none;
   font-style: italic;
   margin-left: 36px;
 }
-
 @media screen and (min-width: 768px) {
   h1 span {
     margin-left: 50px;
   }
 }
-
 h1 a {
   text-decoration: none;
   color: white;
 }
-
 @media screen and (min-width: 768px) {
   h1 {
     font-size: 28px;
@@ -1311,9 +1121,8 @@ h1 a {
 }
 
 h2 {
-  font: 2.074em/1.5 'Raleway Regular', sans-serif;
+  font: 2.074em/1.5 "Raleway Regular", sans-serif;
 }
-
 @media screen and (min-width: 768px) {
   h2 {
     font-size: 3.157em;
@@ -1321,10 +1130,9 @@ h2 {
 }
 
 h3 {
-  font: 1.728em/1.5 'Cardo Bold', sans-serif;
+  font: 1.728em/1.5 "Cardo Bold", sans-serif;
   color: #51508B;
 }
-
 @media screen and (min-width: 768px) {
   h3 {
     font-size: 2.369em;
@@ -1332,10 +1140,9 @@ h3 {
 }
 
 h4 {
-  font: 1.44em/1.5 'Cardo Bold', sans-serif;
+  font: 1.44em/1.5 "Cardo Bold", sans-serif;
   color: #B4B9E5;
 }
-
 @media screen and (min-width: 768px) {
   h4 {
     font-size: 1.777em;
@@ -1343,12 +1150,12 @@ h4 {
 }
 
 p {
-  font: 18px/1.5 'Raleway Regular', sans-serif;
+  font: 18px/1.5 "Raleway Regular", sans-serif;
   text-align: justify;
 }
 
 a {
-  font-family: 'Cardo Regular', sans-serif;
+  font-family: "Cardo Regular", sans-serif;
 }
 
 /* Media Queries for different viewport sizes*/
@@ -1362,12 +1169,14 @@ h2 {
   max-width: 1250px;
   margin: 0 auto;
 }
-
-.resources-link-holder section > h2 {
+.resources-link-holder section > div > div > h3 {
+  color: #3EA3DF;
+}
+.resources-link-holder section > div > h2 {
   padding-top: 2rem;
 }
-
-.resources-link-holder section > div {
+.resources-link-holder section > div > div {
+  text-align: center;
   border: 1px solid #999;
   border-radius: 10px;
   margin: 2rem 0;
@@ -1376,11 +1185,21 @@ h2 {
 
 .resources-link {
   color: #fff;
-  background-color: #09c0c0;
+  background-color: #FB4547;
   border-radius: 10px;
   padding: 0.7rem;
 }
 
+@media only screen and (min-width: 767px) {
+  .re-flexer {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  .re-flexer div {
+    width: 45%;
+  }
+}
 /* ------------------------------------------------------
                 DASHBOARD STYLES
 ------------------------------------------------------ */
@@ -1403,13 +1222,11 @@ button, input, select, textarea {
 }
 
 html {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 *, *:before, *:after {
-  -webkit-box-sizing: inherit;
-          box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 img, video {
@@ -1449,7 +1266,6 @@ td, th {
   line-height: 1.5;
   background-size: auto 2.4rem;
 }
-
 .dashboard-body h1, .dashboard-body h2, .dashboard-body h3, .dashboard-body h4, .dashboard-body h5, .dashboard-body h6, .dashboard-body p {
   color: black;
 }
@@ -1458,54 +1274,44 @@ td, th {
   color: #2f2f37;
   margin-bottom: 2.4rem;
 }
-
 .dashboard-html .dashboard-body h2, .dashboard-html .dashboard-body h3, .dashboard-html .dashboard-body h4, .dashboard-html .dashboard-body h5, .dashboard-html .dashboard-body h6 {
   font-family: "Raleway Bold", sans-serif;
 }
-
 .dashboard-html .dashboard-body p {
   font-size: 1.6rem;
   font-family: "Raleway Regluar", sans-serif;
   text-align: left;
 }
-
 .dashboard-html .dashboard-body h1 {
   font-size: 2rem;
 }
-
 @media screen and (min-width: 700px) {
   .dashboard-html .dashboard-body h1 {
     font-size: 3.1rem;
   }
 }
-
 .dashboard-html .dashboard-body h2 {
   font-size: 5.6rem;
   line-height: 7.2rem;
   margin-bottom: 3rem;
 }
-
 .dashboard-html .dashboard-body h3 {
-  font-size: 5.0rem;
+  font-size: 5rem;
   line-height: 5rem;
   margin-bottom: 2.8rem;
 }
-
 .dashboard-html .dashboard-body h4 {
   font-size: 4.2rem;
   line-height: 5rem;
   margin-bottom: 4.8rem;
 }
-
 .dashboard-html .dashboard-body h5 {
   font-size: 3.8rem;
   line-height: 4.8rem;
 }
-
 .dashboard-html .dashboard-body a {
   text-decoration: none;
 }
-
 .dashboard-html .dashboard-body li {
   list-style: none;
 }
@@ -1515,26 +1321,17 @@ td, th {
   padding: 2rem;
   background: #0C2946;
 }
-
 @media screen and (max-width: 999px) {
   .dashboard-header {
     position: fixed;
     width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    justify-content: space-between;
     align-items: center;
-    -webkit-transition: all 0.7s ease-in-out;
+    align-items: center;
     transition: all 0.7s ease-in-out;
   }
 }
-
 @media screen and (min-width: 1000px) {
   .dashboard-header {
     width: 26rem;
@@ -1544,20 +1341,16 @@ td, th {
     padding-top: 0;
   }
 }
-
 .dashboard-header .logo {
   color: white;
 }
-
 @media screen and (min-width: 1000px) {
   .dashboard-header .logo {
     margin: 3rem 0;
     text-align: center;
   }
 }
-
 .dashboard-header .logo a:hover {
-  -webkit-transition: 0.7s;
   transition: 0.7s;
   color: #3EA3DF;
 }
@@ -1565,7 +1358,6 @@ td, th {
 .dashboard-header .menu-closed-header-style {
   background-color: #0C2946;
 }
-
 @media screen and (min-width: 1000px) {
   .dashboard-header .menu-closed-header-style {
     background: #0C2946;
@@ -1575,7 +1367,6 @@ td, th {
 .dashboard-body .dashboard-navigation {
   z-index: 90;
 }
-
 @media screen and (max-width: 999px) {
   .dashboard-body .dashboard-navigation {
     width: 100%;
@@ -1584,25 +1375,21 @@ td, th {
     right: -100%;
     background-color: #0C2946;
     padding-bottom: 4rem;
-    -webkit-transition: all 0.7s ease-in-out;
     transition: all 0.7s ease-in-out;
     margin-top: 3.9rem;
   }
 }
-
 @media screen and (min-width: 700px) {
   .dashboard-body .dashboard-navigation {
     width: 50%;
   }
 }
-
 @media screen and (min-width: 1000px) {
   .dashboard-body .dashboard-navigation {
     display: inline-block;
     width: 22rem;
   }
 }
-
 .dashboard-body .dashboard-navigation .navigation-para {
   margin: 1rem;
   color: white;
@@ -1612,7 +1399,6 @@ td, th {
   font-size: 2rem;
   text-align: center;
 }
-
 @media screen and (min-width: 1000px) {
   .dashboard-body .dashboard-navigation .navigation-para {
     margin: 0;
@@ -1620,7 +1406,6 @@ td, th {
     margin-bottom: 2rem;
   }
 }
-
 .dashboard-body .dashboard-navigation .nav-link a {
   background: #3EA3DF;
   border-radius: 1rem;
@@ -1628,17 +1413,10 @@ td, th {
   display: block;
   padding: 1.2rem;
   margin-bottom: 2rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
 }
-
 @media screen and (min-width: 1000px) {
   .dashboard-body .dashboard-navigation .nav-link a {
     margin: 0;
@@ -1646,28 +1424,22 @@ td, th {
     margin-bottom: 2rem;
   }
 }
-
 .dashboard-body .dashboard-navigation .nav-link a p {
   margin-bottom: 0;
   font-size: 1.6rem;
   font-family: "Raleway Bold", sans-serif;
   color: white;
 }
-
 .dashboard-body .dashboard-navigation .nav-link a p span {
   font-size: 1.4rem;
 }
-
 .dashboard-body .dashboard-navigation .nav-link a p:first-child {
   padding-right: 1rem;
 }
-
 .dashboard-body .dashboard-navigation .nav-link a:hover {
   background: #FB4547;
-  -webkit-transition: 0.7s;
   transition: 0.7s;
 }
-
 .dashboard-body .dashboard-navigation .logout {
   background: #3EA3DF;
   border-radius: 1rem;
@@ -1676,7 +1448,6 @@ td, th {
   padding: 1.2rem;
   margin-bottom: 2rem;
 }
-
 @media screen and (min-width: 1000px) {
   .dashboard-body .dashboard-navigation .logout {
     margin: 0;
@@ -1684,34 +1455,24 @@ td, th {
     margin-bottom: 2rem;
   }
 }
-
 @media screen and (max-width: 999px) {
   .dashboard-body .dashboard-navigation .logout {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    justify-content: space-between;
+    align-items: center;
   }
 }
-
 .dashboard-body .dashboard-navigation .logout .signed-in {
   color: white;
   font-size: 2rem;
-  font-family: 'Raleway Bold', sans-serif;
+  font-family: "Raleway Bold", sans-serif;
   margin-bottom: 1rem;
 }
-
 @media screen and (min-width: 1000px) {
   .dashboard-body .dashboard-navigation .logout .signed-in {
     padding-bottom: 1rem;
   }
 }
-
 .dashboard-body .dashboard-navigation .logout a p {
   text-align: center;
   color: white;
@@ -1719,45 +1480,38 @@ td, th {
   background: #3EA3DF;
   padding: 0.5rem;
 }
-
 .dashboard-body .dashboard-navigation .logout a:hover p {
   background: #FB4547;
-  -webkit-transition: 0.7s;
   transition: 0.7s;
 }
-
 .dashboard-body .dashboard-navigation .logout p {
   margin-bottom: 0;
   font-size: 1.6rem;
   font-family: "Raleway Bold", sans-serif;
 }
-
 .dashboard-body .dashboard-navigation .logout p span {
   font-size: 1.4rem;
-  font-family: 'Raleway Regular', sans-serif;
+  font-family: "Raleway Regular", sans-serif;
 }
 
 .dashboard-header .menu-icon {
   width: 3rem;
 }
-
 @media screen and (min-width: 1000px) {
   .dashboard-header .menu-icon {
     display: none;
   }
 }
-
 @media screen and (max-width: 999px) {
   .dashboard-header .menu-icon:after,
-  .dashboard-header .menu-icon:before,
-  .dashboard-header .menu-icon div {
+.dashboard-header .menu-icon:before,
+.dashboard-header .menu-icon div {
     background-color: white;
     border-radius: 0.3rem;
-    content: '';
+    content: "";
     display: block;
     height: 0.3rem;
     margin: 0.5rem 0;
-    -webkit-transition: all 0.7s ease-in-out;
     transition: all 0.7s ease-in-out;
   }
   .dashboard-header .close-button {
@@ -1770,16 +1524,13 @@ td, th {
     margin: 0 auto;
   }
   .dashboard-header .icon-closed:before {
-    -webkit-transform: translateY(7px) rotate(135deg);
-            transform: translateY(7px) rotate(135deg);
+    transform: translateY(7px) rotate(135deg);
   }
   .dashboard-header .icon-closed:after {
-    -webkit-transform: translateY(-9px) rotate(-135deg);
-            transform: translateY(-9px) rotate(-135deg);
+    transform: translateY(-9px) rotate(-135deg);
   }
   .dashboard-header .icon-closed div {
-    -webkit-transform: scale(0);
-            transform: scale(0);
+    transform: scale(0);
   }
   .dashboard-header .menu-toggle {
     position: absolute;
@@ -1791,31 +1542,22 @@ td, th {
 .dashboard-main {
   padding: 0;
 }
-
 @media screen and (max-width: 999px) {
   .dashboard-main {
     padding-top: 8rem;
   }
 }
-
 .dashboard-main .border {
   display: inline-block;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: unset;
-      -ms-flex-pack: unset;
-          justify-content: unset;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: unset;
+  align-items: center;
   border-bottom: 2px solid rgba(12, 41, 70, 0.591);
   border-top: 2px solid rgba(12, 41, 70, 0.591);
   padding: 0.7rem 0 0.7rem 1rem;
   width: 30rem;
   margin-bottom: 4rem;
 }
-
 .dashboard-main .border .triangle-up {
   width: 0;
   height: 0;
@@ -1823,7 +1565,6 @@ td, th {
   border-right: 10px solid transparent;
   border-bottom: 20px solid rgba(12, 41, 70, 0.591);
 }
-
 .dashboard-main .border .triangle-down {
   width: 0;
   height: 0;
@@ -1831,103 +1572,82 @@ td, th {
   border-right: 10px solid transparent;
   border-top: 20px solid rgba(12, 41, 70, 0.591);
 }
-
 @media screen and (min-width: 700px) {
   .dashboard-main .width-container {
     max-width: 1100px;
   }
 }
-
 .dashboard-main .welcome {
   background: #3EA3DF;
   padding: 4.5rem 1.6rem 0 1.6rem;
 }
-
 @media screen and (min-width: 700px) {
   .dashboard-main .welcome {
     padding: 6rem 3rem 0 3rem;
     padding-bottom: 4rem;
   }
 }
-
 @media screen and (min-width: 1000px) {
   .dashboard-main .welcome {
     padding: 4rem 6rem 0 30rem;
     padding-bottom: 4rem;
   }
 }
-
 .dashboard-main .welcome h2 {
   color: white;
   font-size: 5.4rem;
   line-height: 7.2rem;
   margin-bottom: 2rem;
 }
-
 @media screen and (min-width: 700px) {
   .dashboard-main .welcome h2 {
     font-size: 6.4rem;
     line-height: 7.2rem;
   }
 }
-
 .dashboard-main .welcome p {
   font-size: 2.2rem;
   padding-bottom: 2rem;
   color: white;
   margin: 0;
-  font-family: 'Raleway Light', sans-serif;
+  font-family: "Raleway Light", sans-serif;
 }
-
 .dashboard-main .welcome .welcome-links {
   padding-bottom: 4rem;
 }
-
 @media screen and (min-width: 700px) {
   .dashboard-main .welcome .welcome-links {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: unset;
-        -ms-flex-pack: unset;
-            justify-content: unset;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    justify-content: unset;
+    align-items: center;
     padding-right: 3rem;
   }
 }
-
 .dashboard-main .home-welcome h3 {
   color: white;
   font-size: 2.6rem;
   line-height: 1.5;
-  font-family: 'Raleway Light', sans-serif;
+  font-family: "Raleway Light", sans-serif;
 }
-
 .dashboard-main .home-welcome h3 .heading-small {
   font-size: 2rem;
-  font-family: 'Raleway Bold', sans-serif;
+  font-family: "Raleway Bold", sans-serif;
 }
-
 @media screen and (min-width: 700px) {
   .dashboard-main .home-welcome h3 .heading-small {
     font-size: 2.6rem;
   }
 }
-
 @media screen and (min-width: 700px) {
   .dashboard-main .home-welcome h3 .heading-small-two {
     padding-left: 3rem;
   }
 }
-
 @media screen and (min-width: 1000px) {
   .dashboard-main .home-welcome {
     padding-top: 13rem;
   }
 }
-
 .dashboard-main .home-welcome a {
   color: white;
   background: #FB4547;
@@ -1939,27 +1659,17 @@ td, th {
   padding: 1.2rem;
   margin-bottom: 1rem;
   margin-bottom: 2rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: unset;
-      -ms-flex-pack: unset;
-          justify-content: unset;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: unset;
+  align-items: center;
+  justify-content: center;
 }
-
 @media screen and (min-width: 700px) {
   .dashboard-main .home-welcome a {
     padding: 1rem 10rem;
     margin-right: 3rem;
   }
 }
-
 .dashboard-main .home-welcome a .badge {
   background: #0C2946;
   color: white;
@@ -1970,11 +1680,9 @@ td, th {
   background: #0C2946;
   margin-right: 1rem;
 }
-
 .dashboard-main .home-welcome a:hover {
   background: #0C2946;
   color: white;
-  -webkit-transition: 0.7s;
   transition: 0.7s;
 }
 
@@ -1982,33 +1690,27 @@ td, th {
   padding: 4.5rem 1.6rem 0 1.6rem;
   margin-bottom: 20rem;
 }
-
 @media screen and (min-width: 700px) {
   .dashboard-main .accordion {
     padding: 6rem 3rem 0 3rem;
   }
 }
-
 @media screen and (min-width: 1000px) {
   .dashboard-main .accordion {
     padding: 4rem 6rem 0 30rem;
   }
 }
-
 .dashboard-main .accordion .hidden {
   display: none;
 }
-
 .dashboard-main .accordion .acc-tabs {
   margin-bottom: 0.5rem;
 }
-
 @media screen and (min-width: 700px) {
   .dashboard-main .accordion .acc-tabs {
     margin-bottom: 0.85rem;
   }
 }
-
 .dashboard-main .accordion .acc-tabs a {
   background: #0C2946;
   color: white;
@@ -2018,49 +1720,36 @@ td, th {
   border-top-left-radius: 1.6rem;
   border-top-right-radius: 1.6rem;
 }
-
 @media screen and (min-width: 700px) {
   .dashboard-main .accordion .acc-tabs a {
     padding: 1.2rem 3rem;
   }
 }
-
 .dashboard-main .accordion .acc-tabs a:hover {
   background: #FB4547;
   color: white;
-  -webkit-transition: 0.7s;
   transition: 0.7s;
 }
-
 .dashboard-main .accordion .acc-content {
   -webkit-box-shadow: 0px 0px 6px 2px #d4d4d4;
+  -moz-box-shadow: 0px 0px 6px 2px #d4d4d4;
   box-shadow: 0px 0px 6px 2px #d4d4d4;
   border-top-right-radius: 1.6rem;
   margin-bottom: 2rem;
 }
-
 .dashboard-main .accordion .acc-content .acc-single .acc-user-dropdown:hover {
   background: #FB4547;
   color: white;
-  -webkit-transition: 0.7s;
   transition: 0.7s;
 }
-
 .dashboard-main .accordion .acc-content .acc-single .acc-user-dropdown {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
   background: #3EA3DF;
   border-bottom: 1px solid #0C2946;
   padding: 1rem 2rem;
 }
-
 .dashboard-main .accordion .acc-content .acc-single .acc-user-dropdown .acc-badge {
   background: #0C2946;
   color: white;
@@ -2069,111 +1758,74 @@ td, th {
   border-radius: 1rem;
   margin-left: 1rem;
 }
-
 .dashboard-main .accordion .acc-content .acc-single .acc-user-dropdown p {
   font-size: 1.8rem;
   color: white;
   margin-bottom: 0;
 }
-
 .dashboard-main .accordion .acc-content .acc-single .acc-user-info {
   border: 1px solid #0C2946;
   border-top: 0;
   padding: 1rem;
 }
-
 @media screen and (min-width: 1000px) {
   .dashboard-main .accordion .acc-content .acc-single .acc-user-info {
     padding: 2rem;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: unset;
-        -ms-flex-pack: unset;
-            justify-content: unset;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    justify-content: unset;
+    align-items: center;
   }
 }
-
 @media screen and (min-width: 1280px) {
   .dashboard-main .accordion .acc-content .acc-single .acc-user-info {
     padding: 0.8rem 0.8rem 0.8rem 2rem;
   }
 }
-
 @media screen and (min-width: 700px) {
   .dashboard-main .accordion .acc-content .acc-single .acc-user-info .information {
     padding-top: 2rem;
   }
 }
-
 @media screen and (min-width: 1000px) {
   .dashboard-main .accordion .acc-content .acc-single .acc-user-info .information {
     padding-top: 1rem;
   }
 }
-
 .dashboard-main .accordion .acc-content .acc-single .acc-user-info .information p {
   margin-bottom: 1rem;
 }
-
 @media screen and (min-width: 700px) {
   .dashboard-main .accordion .acc-content .acc-single .acc-user-info .information p {
     padding-left: 2rem;
   }
 }
-
 @media only screen and (min-width: 1400px) {
   .dashboard-main .accordion .acc-content .acc-single .acc-user-info .information {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: unset;
-        -ms-flex-pack: unset;
-            justify-content: unset;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    justify-content: unset;
+    align-items: center;
   }
 }
-
 .dashboard-main .accordion .acc-content .acc-single .acc-user-info .options {
   padding-top: 1rem;
 }
-
 @media screen and (min-width: 700px) {
   .dashboard-main .accordion .acc-content .acc-single .acc-user-info .options {
     padding-left: 3rem;
     padding-bottom: 2rem;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: unset;
-        -ms-flex-pack: unset;
-            justify-content: unset;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    justify-content: unset;
+    align-items: center;
   }
 }
-
 @media screen and (min-width: 1000px) {
   .dashboard-main .accordion .acc-content .acc-single .acc-user-info .options {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: unset;
-        -ms-flex-pack: unset;
-            justify-content: unset;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    justify-content: unset;
+    align-items: center;
     padding-bottom: 0;
   }
 }
-
 .dashboard-main .accordion .acc-content .acc-single .acc-user-info .options a {
   color: white;
   background: #FB4547;
@@ -2185,32 +1837,26 @@ td, th {
   padding: 1.2rem;
   margin-bottom: 1rem;
 }
-
 @media screen and (min-width: 700px) {
   .dashboard-main .accordion .acc-content .acc-single .acc-user-info .options a {
     width: 30rem;
     margin-right: 2rem;
   }
 }
-
 @media screen and (min-width: 1000px) {
   .dashboard-main .accordion .acc-content .acc-single .acc-user-info .options a {
     width: 18rem;
     margin-right: 1rem;
   }
 }
-
 .dashboard-main .accordion .acc-content .acc-single .acc-user-info .options a:hover {
   background: #0C2946;
   color: white;
-  -webkit-transition: 0.7s;
   transition: 0.7s;
 }
-
 .dashboard-main .accordion .acc-content .acc-single:first-child .acc-user-dropdown {
   border-top-right-radius: 1.6rem;
 }
-
 .dashboard-main .accordion .view-all {
   color: #0C2946;
   font-size: 1.8rem;
@@ -2218,45 +1864,38 @@ td, th {
   padding-bottom: 1rem;
   font-family: "Raleway Bold", sans-serif;
 }
-
 .dashboard-main .accordion .view-all:hover {
   color: #FB4547;
   border-bottom: 1px solid #0C2946;
-  -webkit-transition: 0.7s;
   transition: 0.7s;
 }
 
 .dashboard-main .container {
   position: relative;
 }
-
 .dashboard-main .overview {
   background: url(/static/img/overview-background.jpg);
   background-repeat: no-repeat;
   padding-top: 7rem;
   background-size: 100% 24rem;
 }
-
 @media screen and (min-width: 700px) {
   .dashboard-main .overview {
     padding-top: 2rem;
     background-size: 100% 28rem;
   }
 }
-
 @media screen and (min-width: 1000px) {
   .dashboard-main .overview {
     background-size: 100% 22rem;
   }
 }
-
 .dashboard-main .overview .overview-box {
   border: 1px solid #aeaeae;
   background: white;
   margin: 1rem;
   border-radius: 2rem;
 }
-
 @media screen and (min-width: 700px) {
   .dashboard-main .overview .overview-box {
     padding: 6rem 3rem 0 3rem;
@@ -2265,7 +1904,6 @@ td, th {
     margin-top: 6rem;
   }
 }
-
 @media screen and (min-width: 1000px) {
   .dashboard-main .overview .overview-box {
     padding: 4rem 6rem 0 4rem;
@@ -2273,18 +1911,15 @@ td, th {
     margin-left: 30rem;
   }
 }
-
 .dashboard-main .overview .overview-box h3 {
   padding: 4.5rem 1.6rem 0 1.6rem;
   padding-bottom: 0;
 }
-
 @media screen and (min-width: 700px) {
   .dashboard-main .overview .overview-box h3 {
     padding: 0;
   }
 }
-
 .dashboard-main .overview .overview-box p {
   font-size: 2.4rem;
   margin-bottom: 1rem;
@@ -2292,36 +1927,25 @@ td, th {
   padding-bottom: 0;
   padding-top: 0;
 }
-
 @media screen and (min-width: 700px) {
   .dashboard-main .overview .overview-box p {
     padding: 0;
   }
 }
-
 .dashboard-main .overview .overview-box p .number {
   font-weight: bold;
 }
-
 .dashboard-main .overview .overview-box div p {
   color: #2f2f37;
 }
-
 @media screen and (min-width: 1000px) {
   .dashboard-main .overview .overview-box .flex-overview {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: unset;
-        -ms-flex-pack: unset;
-            justify-content: unset;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    justify-content: unset;
+    align-items: center;
     align-items: center;
   }
 }
-
 .dashboard-main .overview .overview-box a {
   color: white;
   background: #FB4547;
@@ -2336,14 +1960,12 @@ td, th {
   margin-top: 4rem;
   margin-bottom: 0;
 }
-
 @media screen and (min-width: 700px) {
   .dashboard-main .overview .overview-box a {
     width: 50rem;
     margin-top: 4rem;
   }
 }
-
 @media screen and (min-width: 1000px) {
   .dashboard-main .overview .overview-box a {
     width: 28rem;
@@ -2351,29 +1973,24 @@ td, th {
     margin-left: 8rem;
   }
 }
-
 @media screen and (min-width: 1280px) {
   .dashboard-main .overview .overview-box a {
     width: 40rem;
     margin-left: 8rem;
   }
 }
-
 .dashboard-main .overview .overview-box a:hover {
   background: #0C2946;
   color: white;
-  -webkit-transition: 0.7s;
   transition: 0.7s;
 }
 
 .dashboard-main .hidden {
   display: none;
 }
-
 .dashboard-main .dashboard-form {
   padding: 4.5rem 1.6rem 0 1.6rem;
 }
-
 @media screen and (min-width: 700px) {
   .dashboard-main .dashboard-form {
     padding: 6rem 3rem 0 3rem;
@@ -2381,19 +1998,16 @@ td, th {
     padding-top: 0;
   }
 }
-
 @media screen and (min-width: 1000px) {
   .dashboard-main .dashboard-form {
     padding: 4rem 6rem 0 30rem;
     width: 78%;
   }
 }
-
 .dashboard-main .dashboard-form .dashboard-form-group {
   position: relative;
   margin-bottom: 2rem;
 }
-
 .dashboard-main .dashboard-form .dashboard-form-group .tooltip {
   padding: 1.6rem;
   position: absolute;
@@ -2403,30 +2017,24 @@ td, th {
   z-index: 9999;
   width: 100%;
 }
-
 .dashboard-main .dashboard-form .dashboard-form-group .tooltip p {
   color: white;
   font-size: 1.8rem;
 }
-
 .dashboard-main .dashboard-form .dashboard-form-group .tooltip p:nth-child(2n) {
   margin-bottom: 0;
 }
-
 .dashboard-main .dashboard-form .dashboard-form-group .required {
   color: #FB4547;
 }
-
 .dashboard-main .dashboard-form .dashboard-form-group .dashboard-label {
   font-size: 2rem;
   color: #2f2f37;
   font-family: "Raleway Regluar", sans-serif;
 }
-
 .dashboard-main .dashboard-form .dashboard-form-group .dashboard-label .color {
   color: #3EA3DF;
 }
-
 .dashboard-main .dashboard-form .dashboard-form-group .dashboard-input {
   margin-top: 0.8rem;
   font-size: 1.8rem;
@@ -2439,7 +2047,6 @@ td, th {
   border-radius: 0.5rem;
   font-family: "Raleway Regluar", sans-serif;
 }
-
 .dashboard-main .dashboard-form .form-button {
   color: white;
   background: #FB4547;
@@ -2453,38 +2060,26 @@ td, th {
   width: 100%;
   margin-top: 5rem;
 }
-
 @media screen and (min-width: 700px) {
   .dashboard-main .dashboard-form .form-button {
     width: 50%;
   }
 }
-
 .dashboard-main .dashboard-form .form-button:hover {
   background: #0C2946;
   color: white;
-  -webkit-transition: 0.7s;
   transition: 0.7s;
 }
-
 @media screen and (min-width: 700px) {
   .dashboard-main .flex-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: unset;
-        -ms-flex-pack: unset;
-            justify-content: unset;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    justify-content: unset;
+    align-items: center;
   }
 }
-
 .dashboard-main .flex-container .side-image {
   display: none;
 }
-
 @media screen and (min-width: 700px) {
   .dashboard-main .flex-container .side-image {
     background: rgba(128, 128, 128, 0.529);
@@ -2494,13 +2089,11 @@ td, th {
     margin-left: 1rem;
   }
 }
-
 @media screen and (min-width: 1000px) {
   .dashboard-main .flex-container .side-image {
     padding: 25rem 8rem;
   }
 }
-
 @media screen and (min-width: 700px) {
   .dashboard-main .flex-container .create-form-image {
     padding: 30rem 8rem;
@@ -2509,18 +2102,11 @@ td, th {
 
 @media screen and (min-width: 700px) {
   .dashboard-main .filter .dashboard-form .flex-form {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: unset;
-        -ms-flex-pack: unset;
-            justify-content: unset;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    justify-content: unset;
+    align-items: center;
   }
 }
-
 .dashboard-main .filter .dashboard-form .filter-button {
   color: white;
   background: #FB4547;
@@ -2534,7 +2120,6 @@ td, th {
   width: 100%;
   margin-bottom: 3rem;
 }
-
 @media screen and (min-width: 700px) {
   .dashboard-main .filter .dashboard-form .filter-button {
     margin-top: 4.8rem;
@@ -2544,30 +2129,25 @@ td, th {
     margin-left: 2rem;
   }
 }
-
 .dashboard-main .filter .dashboard-form .filter-button:hover {
   background: #0C2946;
   color: white;
-  -webkit-transition: 0.7s;
   transition: 0.7s;
 }
 
 .dashboard-body .alert {
   padding: 4.5rem 1.6rem 0 1.6rem;
 }
-
 @media screen and (min-width: 700px) {
   .dashboard-body .alert {
     padding: 6rem 3rem 0 3rem;
   }
 }
-
 @media screen and (min-width: 1000px) {
   .dashboard-body .alert {
     padding: 4rem 6rem 0 30rem;
   }
 }
-
 .dashboard-body .alert p {
   padding: 2rem;
   font-size: 2rem;
@@ -2575,4 +2155,5 @@ td, th {
   border-radius: 2rem;
   color: white;
 }
+
 /*# sourceMappingURL=styles.css.map */

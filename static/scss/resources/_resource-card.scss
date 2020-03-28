@@ -9,11 +9,16 @@ h2{
     max-width: 1250px;
     margin: 0 auto;
   
-  section>h2{
+  section>div>div>h3{
+    color: #3EA3DF;
+  }
+  
+  section>div>h2{
     padding-top: 2rem;
   }
   
-  section>div{
+  section>div>div{
+    text-align: center;
     border: 1px solid #999;
     border-radius: 10px;
     margin: 2rem 0;
@@ -23,7 +28,19 @@ h2{
   
 .resources-link{
     color: #fff;
-    background-color: rgb(9, 192, 192);
+    background-color: #FB4547;
     border-radius: 10px;
     padding: 0.7rem;
+}
+
+@media only screen and (min-width: 767px){
+  .re-flexer{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    div{
+      width: 45%;
+    }
+  }
 }
