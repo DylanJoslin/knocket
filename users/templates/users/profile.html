@@ -1,18 +1,18 @@
 {% extends "home/base.html" %}
 {% load static %}
 {% block content %}
-    <div class="text-white bg-dark p-4">
-        <div class="profile mb-4">
-            <h2 class="mb-1">{{ user.first_name }} {{ user.last_name }}</h2>
-            <p class="text-muted mb-0">{{user}}</p>
-            <p class="text-muted mb-0">{{user.userprofile.school}}</p>
-            <p class="text-muted mb-0">{{user.email}}</p>
-            <p class="text-muted mb-0">{{user.userprofile.access}}</p>
-            <p class="text-muted mb-0"><img src="{% static 'media/' %}{{user.userprofile.image}}" alt="{{ user.first_name }}'s profile photo"></p>
+    <div>
+        <div class="profile">
+            <h2>{{ user.first_name }} {{ user.last_name }}</h2>
+            <p>{{user}}</p>
+            <p>{{user.userprofile.school}}</p>
+            <p>{{user.email}}</p>
+            <p>{{user.userprofile.access}}</p>
+            <a href="{% url 'edit_profile' %}">Edit Profile</a>
         </div>
 
         {% if user.userprofile.access == 'pending' %}
-        <div class="alert alert-danger mb-4">
+        <div>
             Your account is pending approval from your teachers. Until then, you wont be able to post or view content from other students.
         </div>
         {% endif %}

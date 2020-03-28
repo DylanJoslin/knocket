@@ -1,13 +1,11 @@
 from django.db import models
 from django import forms
 from django.contrib.auth.models import User
-from PIL import Image
 
 # UserProfile extends Django's defualt User and adds
 # additional properties to the student.
 class UserProfile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    image = models.ImageField(default='profile_pics/default.jpg', upload_to='profile_pics')
 
     # Add additional school choices in the future by
     # adding to this list. They will auto populate in
@@ -51,8 +49,6 @@ class UserProfile(models.Model):
 
     def save(self, *args, **kwargs):
         super().save(*args, **kwargs)
-        img = Image.open(self.image.path)
-        img.save(self.image.path)
 
         
     

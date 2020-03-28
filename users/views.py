@@ -53,8 +53,6 @@ def edit_profile(request):
             profile.user = user
             # THEN save to database
             profile.save()
-
-            messages.success(request, f'Your account has been updated.')
             return redirect('profile')
     else: 
         user_form = UserUpdateForm(instance=request.user)
@@ -77,7 +75,6 @@ def login_view(request):
             user = authenticate(request, username=username, password=password)
             if user is not None:
                 login(request, user)
-                messages.success(request, f'You have successfully logged in. Welcome to Indigenous Storytelling!')
                 return redirect('profile')
             else:
                 messages.error(request, f'Your login info is invalid. Please try again.')
@@ -92,6 +89,5 @@ def login_view(request):
 
 def logout_view(request):
     logout(request)
-    messages.success(request, f'You have been logged out.')
     return redirect('home')
 
