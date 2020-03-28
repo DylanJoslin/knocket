@@ -1964,6 +1964,23 @@ td, th {
   border-top-right-radius: 1.6rem;
 }
 
+.dashboard-main .accordion .acc-content .empty-accordion {
+  background: #3EA3DF;
+  padding: 1rem;
+  border-top-right-radius: 1.6rem;
+  border: 1px solid #0C2946;
+}
+
+.dashboard-main .accordion .acc-content .empty-accordion h5 {
+  font-size: 2rem;
+  color: white;
+  margin-bottom: 0;
+}
+
+.dashboard-main .accordion .acc-content .empty-accordion p {
+  color: white;
+}
+
 .dashboard-main .accordion .view-all {
   color: #0C2946;
   font-size: 1.8rem;

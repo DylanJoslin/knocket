@@ -169,10 +169,26 @@
                 border-top-right-radius: 1.6rem;
               }
 
-            //   .acc-single:last-child .acc-user-dropdown{
-            //     border-bottom-right-radius: 1.6rem;
-            //     border-bottom-left-radius: 1.6rem;
-            //   }
+            
+              .empty-accordion{
+                background: $primary;
+                padding: 1rem;
+                border-top-right-radius: 1.6rem;
+                border: 1px solid $third;
+
+                h5{
+                    font-size: 2rem;
+                    color: $white;
+                    margin-bottom: 0;
+                }
+
+                p{
+                    color: $white;
+                }
+
+              }
+
+
 
         }
 
