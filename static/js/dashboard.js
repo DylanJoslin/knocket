@@ -9,17 +9,6 @@ $(document).ready(function() {
 		$('.dashboard-header').toggleClass('menu-closed-header-style ');
 	});
 
-	// $('.dashboard-label > i').hover(function(event) {
-	// 	var icon = $(this).toggleClass('color');
-
-	// 	event.preventDefault();
-	// });
-
-	// $('.dashboard-label > i').click(function(event) {
-	// 	$(this).parent().parent().find('.tooltip').toggleClass('hidden');
-	// 	event.preventDefault();
-	// });
-
 	/***********************************************************************
 					ACCORDION FUNCTIONALITY
 	************************************************************************/
@@ -47,31 +36,12 @@ $(document).ready(function() {
 
 
 	/***********************************************************************
-					ABSOLUTE BACKGROUND FIX
-	************************************************************************/
-
-	function fixBackground(thisElement){
-		$accInfoSelector = thisElement.parents('.accordion').find('.acc-content > .acc-single > .acc-user-info');
-		if(thisElement.parents('.accordion').hasClass('users-acc') == true){
-			if($accInfoSelector.is(':visible')){
-				console.log('Is Visible');
-				$('.overview-background-second').addClass('overview-bgd-moved');
-			} else if($accInfoSelector.is(':hidden')){
-				console.log('Is not visible');
-				$('.overview-background-second').removeClass('overview-bgd-moved');
-			}
-		}
-	}
-
-	/***********************************************************************
 					ACCORDION TABS CLICK FUNCTION
 	************************************************************************/
 
 	function tabClick(contentId, thisElement){
 		thisElement.parent().siblings('.acc-content').not('.hidden').addClass('hidden');
 		$(contentId).removeClass('hidden');
-
-		fixBackground(thisElement);
 	}
 
 	/***********************************************************************

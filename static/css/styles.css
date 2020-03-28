@@ -1255,6 +1255,7 @@ td, th {
     height: 200vh;
     position: fixed;
     padding-left: 2.4rem;
+    padding-top: 0;
   }
 }
 
@@ -1356,7 +1357,7 @@ td, th {
   .dashboard-body .dashboard-navigation .nav-link a {
     margin: 0;
     margin-right: 1rem;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
   }
 }
 
@@ -1394,7 +1395,7 @@ td, th {
   .dashboard-body .dashboard-navigation .logout {
     margin: 0;
     margin-right: 1rem;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
   }
 }
 
@@ -1713,7 +1714,7 @@ td, th {
 }
 
 .dashboard-main .accordion .acc-tabs {
-  margin-bottom: 0.7rem;
+  margin-bottom: 0.5rem;
 }
 
 @media screen and (min-width: 700px) {
@@ -1944,6 +1945,26 @@ td, th {
 }
 
 .dashboard-main .overview {
+  background: url(/static/img/overview-background.jpg);
+  background-repeat: no-repeat;
+  padding-top: 7rem;
+  background-size: 100% 24rem;
+}
+
+@media screen and (min-width: 700px) {
+  .dashboard-main .overview {
+    padding-top: 2rem;
+    background-size: 100% 28rem;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .dashboard-main .overview {
+    background-size: 100% 22rem;
+  }
+}
+
+.dashboard-main .overview .overview-box {
   border: 1px solid #aeaeae;
   background: white;
   margin: 1rem;
@@ -1951,7 +1972,7 @@ td, th {
 }
 
 @media screen and (min-width: 700px) {
-  .dashboard-main .overview {
+  .dashboard-main .overview .overview-box {
     padding: 6rem 3rem 0 3rem;
     padding-bottom: 4rem;
     margin: 3rem;
@@ -1960,35 +1981,21 @@ td, th {
 }
 
 @media screen and (min-width: 1000px) {
-  .dashboard-main .overview {
+  .dashboard-main .overview .overview-box {
     padding: 4rem 6rem 0 4rem;
     padding-bottom: 4rem;
     margin-left: 30rem;
   }
 }
 
-.dashboard-main .overview h3 {
+.dashboard-main .overview .overview-box h3 {
   padding: 4.5rem 1.6rem 0 1.6rem;
   padding-bottom: 0;
 }
 
 @media screen and (min-width: 700px) {
-  .dashboard-main .overview h3 {
+  .dashboard-main .overview .overview-box h3 {
     padding: 0;
-  }
-}
-
-@media screen and (min-width: 1000px) {
-  .dashboard-main .overview .overview-box {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: unset;
-        -ms-flex-pack: unset;
-            justify-content: unset;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
   }
 }
 
@@ -2000,12 +2007,33 @@ td, th {
   padding-top: 0;
 }
 
+@media screen and (min-width: 700px) {
+  .dashboard-main .overview .overview-box p {
+    padding: 0;
+  }
+}
+
 .dashboard-main .overview .overview-box p .number {
   font-weight: bold;
 }
 
 .dashboard-main .overview .overview-box div p {
   color: #2f2f37;
+}
+
+@media screen and (min-width: 1000px) {
+  .dashboard-main .overview .overview-box .flex-overview {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: unset;
+        -ms-flex-pack: unset;
+            justify-content: unset;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    align-items: center;
+  }
 }
 
 .dashboard-main .overview .overview-box a {
@@ -2033,8 +2061,8 @@ td, th {
 @media screen and (min-width: 1000px) {
   .dashboard-main .overview .overview-box a {
     width: 28rem;
-    margin-left: 4rem;
     margin-top: 0;
+    margin-left: 8rem;
   }
 }
 
@@ -2050,65 +2078,6 @@ td, th {
   color: white;
   -webkit-transition: 0.7s;
   transition: 0.7s;
-}
-
-.dashboard-main .overview-background {
-  content: "";
-  background: #3EA3DF;
-  height: 24rem;
-  width: 100%;
-  position: absolute;
-  top: -8rem;
-  left: 0;
-  z-index: -1;
-}
-
-.dashboard-main .overview-background-second {
-  content: "";
-  background: #3EA3DF;
-  height: 23rem;
-  width: 100%;
-  position: absolute;
-  top: 80rem;
-  left: 0;
-  z-index: -1;
-}
-
-@media screen and (min-width: 700px) {
-  .dashboard-main .overview-background-second {
-    top: 88rem;
-    height: 25rem;
-  }
-}
-
-@media screen and (min-width: 1000px) {
-  .dashboard-main .overview-background-second {
-    top: 76rem;
-  }
-}
-
-.dashboard-main .overview-bgd-moved {
-  top: 106rem;
-  -webkit-transition: 0.6s;
-  transition: 0.6s;
-}
-
-@media screen and (min-width: 700px) {
-  .dashboard-main .overview-bgd-moved {
-    top: 112rem;
-  }
-}
-
-@media screen and (min-width: 1000px) {
-  .dashboard-main .overview-bgd-moved {
-    top: 88rem;
-  }
-}
-
-@media screen and (min-width: 1280px) {
-  .dashboard-main .overview-bgd-moved {
-    top: 85rem;
-  }
 }
 
 .dashboard-main .hidden {

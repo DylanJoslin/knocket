@@ -5,48 +5,62 @@
     }
 
     .overview{
-        border: 1px solid rgb(174, 174, 174);
-        background: $users-overview-bgd;
 
-        margin: 1rem;
-        border-radius: 2rem;
+        background: url(/static/img/overview-background.jpg);
+        background-repeat: no-repeat;
+        padding-top: 7rem;
+        background-size: 100% 24rem;
 
         @include breakpoint(tablet){
-            @include padding(medium);
-            padding-bottom: 4rem;
-            margin: 3rem;
-            margin-top: 6rem;
+            padding-top: 2rem;
+            background-size: 100% 28rem;
         }
 
         @include breakpoint(laptop){
-            padding: 4rem 6rem 0 4rem;
-            padding-bottom: 4rem;
-            margin-left: 30rem;
-        }
-
-        h3{
-            @include padding(small);
-            padding-bottom: 0;
-
-            @include breakpoint(tablet){
-                padding: 0;
-            }
-
+            background-size: 100% 22rem;
         }
         
         .overview-box{
+
+            border: 1px solid rgb(174, 174, 174);
+            background: $users-overview-bgd;
+            margin: 1rem;
+            border-radius: 2rem;
+
+            @include breakpoint(tablet){
+                @include padding(medium);
+                padding-bottom: 4rem;
+                margin: 3rem;
+                margin-top: 6rem;
+            }
+
             @include breakpoint(laptop){
-                @include flex(unset);
+                padding: 4rem 6rem 0 4rem;
+                padding-bottom: 4rem;
+                margin-left: 30rem;
+            }
+
+            h3{
+                @include padding(small);
+                padding-bottom: 0;
+
+                @include breakpoint(tablet){
+                    padding: 0;
+                }
             }
 
             p{
                 font-size: $overview-labels;
                 margin-bottom: 1rem;
+
                 @include padding(small);
                 padding-bottom: 0;
                 padding-top: 0;
-                
 
+                @include breakpoint(tablet){
+                    padding: 0;
+                }
+                
                 .number{
                     font-weight: bold;
                 }
@@ -54,6 +68,13 @@
 
             div p{
                 color: $text-color;
+            }
+
+            .flex-overview{
+                @include breakpoint(laptop){
+                    @include flex(unset);
+                    align-items: center;
+                }
             }
 
 
@@ -66,13 +87,12 @@
                 @include breakpoint(tablet){
                     width: 50rem;
                     margin-top: 4rem;
-                    
                 }
 
                 @include breakpoint(laptop){
                     width: 28rem;
-                    margin-left: 4rem;
                     margin-top: 0;
+                    margin-left: 8rem;
                 }
 
                 @include breakpoint(desktop){
@@ -88,59 +108,5 @@
 
     }
 
-    .overview-background{
-        content: "";
-        background: $primary;
-        height: 24rem;
-        width: 100%;
-        position: absolute;
-        top: -8rem;
-        left: 0;
-        z-index: -1;
-    }
-
-
-    .overview-background-second{
-        content: "";
-        background: $primary;
-        height: 23rem;
-        width: 100%;
-        position: absolute;
-        top: 80rem;
-        left: 0;
-
-        @include breakpoint(tablet){
-            top: 88rem;
-            height: 25rem;
-        }
-
-        @include breakpoint(laptop){
-            top: 76rem;
-        }
-        z-index: -1;
-    }
-
-     .overview-bgd-moved{
-        top: 106rem;
-        transition: 0.6s;
-
-        @include breakpoint(tablet){
-            top: 112rem;
-        }
-
-        @include breakpoint(laptop){
-            top: 88rem;
-            
-        }
-        
-        @include breakpoint(desktop){
-            top: 85rem;
-            
-        }
-
-        
-    }
-
-    
 
 }
