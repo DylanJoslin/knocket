@@ -161,12 +161,9 @@
 									<div class="acc-user-dropdown"><!-- User Dropdown -->
 										<p class="acc-username">
 											{{user.username}} 
-											{% if user.userprofile.access == 'pending'%} 
-											<span class="acc-badge">New!</span> 
-											{% endif %}
+											<span class="acc-badge"><i class="fas fa-check-circle"></i></span> 
 										</p>
 										<p class="icon-plus">+</p>
-										<p class="icon-minus hidden">-</p>
 									</div><!-- User Dropdown -->
 									<div class="acc-user-info"><!-- User information -->
 										<div class="information">
@@ -175,7 +172,7 @@
 											<p>Email: {{user.email}}</p>
 										</div>
 										<div class="options">
-											<a href="{% url 'approve_user' %}{{ user.username }}">Approve User</a>
+											<a href="{% url 'edit_users' %}{{ user.username }}">Edit User</a>
 											<a href="{% url 'delete_user' %}{{ user.username }}">Delete User</a>
 										</div>
 									</div><!-- User information -->
@@ -195,12 +192,9 @@
 									<div class="acc-user-dropdown"><!-- User Dropdown -->
 										<p class="acc-username">
 											{{user.username}} 
-											{% if user.userprofile.access == 'pending'%} 
-											<span class="acc-badge">New!</span> 
-											{% endif %}
+											<span class="acc-badge"><i class="fas fa-check-circle"></i></span> 
 										</p>
 										<p class="icon-plus">+</p>
-										<p class="icon-minus hidden">-</p>
 									</div><!-- User Dropdown -->
 									<div class="acc-user-info"><!-- User information -->
 										<div class="information">
@@ -209,7 +203,7 @@
 											<p>Email: {{user.email}}</p>
 										</div>
 										<div class="options">
-											<a href="{% url 'approve_user' %}{{ user.username }}">Approve User</a>
+											<a href="{% url 'edit_users' %}{{ user.username }}">Edit User</a>
 											<a href="{% url 'delete_user' %}{{ user.username }}">Delete User</a>
 										</div>
 									</div><!-- User information -->
@@ -229,12 +223,9 @@
 									<div class="acc-user-dropdown"><!-- User Dropdown -->
 										<p class="acc-username">
 											{{user.username}} 
-											{% if user.userprofile.access == 'pending'%} 
-											<span class="acc-badge">New!</span> 
-											{% endif %}
+											<span class="acc-badge"><i class="fas fa-check-circle"></i></span> 
 										</p>
 										<p class="icon-plus">+</p>
-										<p class="icon-minus hidden">-</p>
 									</div><!-- User Dropdown -->
 									<div class="acc-user-info"><!-- User information -->
 										<div class="information">
@@ -243,7 +234,7 @@
 											<p>Email: {{user.email}}</p>
 										</div>
 										<div class="options">
-											<a href="{% url 'approve_user' %}{{ user.username }}">Approve User</a>
+											<a href="{% url 'edit_users' %}{{ user.username }}">Edit User</a>
 											<a href="{% url 'delete_user' %}{{ user.username }}">Delete User</a>
 										</div>
 									</div><!-- User information -->
