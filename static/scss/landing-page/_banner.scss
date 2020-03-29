@@ -12,6 +12,10 @@
         padding: 120px 60px;
     }
 
+    @include media-lg{
+        padding: 130px 360px;
+    }
+
     .quote{
         background-color: $orange-opacity;
         border-radius: 20px;
@@ -22,12 +26,26 @@
             padding: 20px 30px;
         }
 
+        @include media-lg{
+            padding: 40px 120px;
+
+        }
+
         h3{
             color: white;
+
+            @include media-lg{
+                font-size: 50px;
+            }
 
             span{
                 color: $dark-purple;
                 letter-spacing: 1.6px;
+
+                @include media-lg{
+                    letter-spacing: 3px;
+                    font-size: 60px;
+                }
             }
         }
            
@@ -49,7 +67,13 @@
             &:hover{
                 background-color: $light-purple;
                 transition: 0.5s;
-            }    
+            }
+            
+            @include media-lg{
+                padding: 20px 120px;
+                border-radius: 10px;
+                font-size: 26px;
+            }
         }
     }
 }
