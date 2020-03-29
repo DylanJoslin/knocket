@@ -12,7 +12,7 @@
     @include breakpoint(laptop){
       margin: 0;
       margin-right: 1rem;
-      margin-bottom: 3rem;
+      margin-bottom: 2rem;
     }//breakpoint
 
   }//nav-border
@@ -39,9 +39,9 @@
   transition: width .3s;
 }
 
-//ACCORDIAN LINKS
+//ACCORDION LINKS
 
-  @mixin accordian-link(){
+  @mixin accordion-link(){
     color: $third;
     font-size: $acc-tabs;
     border-bottom: 1px solid $secondary;

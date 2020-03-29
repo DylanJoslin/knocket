@@ -2,6 +2,7 @@
         @include breakpoint(maxTablet){
             padding-top: 8rem;
         }
+
         padding: 0;
 
         .border {
@@ -41,6 +42,7 @@
             background: $primary;
 
             @include padding(small);
+            padding-bottom: 2rem;
 
             @include breakpoint(tablet){
                 @include padding(medium);
@@ -52,10 +54,15 @@
                 padding-bottom: 4rem;
             }
 
+            @include breakpoint(desktop){
+                @include padding(extraLarge);
+                padding-bottom: 4rem;
+            }
+
             h2{
                 color: $white;
-                font-size: 5.4rem;
-                line-height: 7.2rem;
+                font-size: 4.4rem;
+                line-height: 5.6rem;
                 margin-bottom: 2rem;
 
                 @include breakpoint(tablet){
@@ -133,7 +140,7 @@
                 }
 
                 .badge{
-                    @include accordian-badge;
+                    @include accordion-badge;
                     background: $third;
                     margin-right: 1rem;
 

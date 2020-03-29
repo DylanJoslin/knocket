@@ -37,6 +37,12 @@
                         <p class="signed-in"><span>Signed in as,</span><br> {{ user.username }}</p>
                          <a href="{% url 'logout' %}"><p>Logout <i class="fas fa-sign-out-alt"></i></p></a>
                 </li>
+                <li class="nav-link">
+                    <a href="{% url 'home' %}">
+                        <p>Back to Storytelling</p>
+                        <p><i class="fas fa-campground"></i></p>
+                    </a>
+                </li>
             </ul>
         </nav>
         <div class="menu-icon">

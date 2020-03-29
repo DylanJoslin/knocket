@@ -12,14 +12,42 @@
             @include padding(large);
         }
 
+<<<<<<< HEAD
+=======
+        @include breakpoint(desktop){
+            @include padding(extraLarge);
+        }
+        
+
+>>>>>>> origin/master
         margin-bottom: 20rem;
 
         .hidden{
             display:none;
         }
 
+<<<<<<< HEAD
         .acc-tabs{
             margin-bottom: 0.7rem;
+=======
+        .users-tabs-mobile{
+            display: inline-block;
+            @media only screen and (min-width: 658px) {
+                display: none;
+            }
+            
+        }
+
+        .users-tabs-tablet{
+            display: none;
+            @media only screen and (min-width: 658px) {
+                display: inline-block;
+            }
+        }
+
+        .acc-tabs{
+            margin-bottom: 0.6rem;
+>>>>>>> origin/master
 
             @include breakpoint(tablet){
                 margin-bottom: 0.85rem;
@@ -35,6 +63,14 @@
 
         }
 
+<<<<<<< HEAD
+=======
+        .users-tabs-mobile a{
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
+
+>>>>>>> origin/master
         .acc-content{
             -webkit-box-shadow: 0px 0px 6px 2px rgba(212,212,212,1);
             -moz-box-shadow: 0px 0px 6px 2px rgba(212,212,212,1);
@@ -144,10 +180,33 @@
                 border-top-right-radius: 1.6rem;
               }
 
+<<<<<<< HEAD
             //   .acc-single:last-child .acc-user-dropdown{
             //     border-bottom-right-radius: 1.6rem;
             //     border-bottom-left-radius: 1.6rem;
             //   }
+=======
+            
+              .empty-accordion{
+                background: $primary;
+                padding: 1rem;
+                border-top-right-radius: 1.6rem;
+                border: 1px solid $third;
+
+                h5{
+                    font-size: 2rem;
+                    color: $white;
+                    margin-bottom: 0;
+                }
+
+                p{
+                    color: $white;
+                }
+
+              }
+
+
+>>>>>>> origin/master
 
         }
 

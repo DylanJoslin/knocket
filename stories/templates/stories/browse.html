@@ -6,7 +6,6 @@
     {% for post in posts %}
     <div>
         {% if post.image %}
-        <!-- <img src="{{ post.image.url }}" alt=""> -->
         <img src="{% static 'media/' %}{{ post.image }}" alt="">
         {% endif %}
         <h2><a href="{% url 'post_detail' post.slug %}">{{ post.title }} - <span>{{ post.author }}</span></a></h2>

@@ -32,10 +32,10 @@
   
   
    /*---------- General ----------*/
-   main{
-    // background-color: #0c2034;
+   .map-local-main{
+    background-color: #0c2034;
     height: 100%;
-    // padding: 5rem 0;
+    padding: 5rem 0;
   }
 
   .interactive-map{
@@ -158,15 +158,15 @@
   .school-icon-main{
     width: 15%;
     position: relative;
-    margin-top: 30%;
+    margin-top: 50%;
     left: 45%;
   }
   
   .treaty-icon-main{
     width: 15%;
     position: relative;
-    margin-top: 100%;
-    left: 50%;
+    margin-top: 30%;
+    left: 60%;
   }
   
   .school-icon-main:hover,
@@ -335,4 +335,8 @@
   
   .width-full{
     width: 100%;
+  }
+
+  .white{
+    color: #999;
   }

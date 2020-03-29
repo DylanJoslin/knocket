@@ -32,7 +32,7 @@ document.querySelector(".manitoba").addEventListener("mouseover", function(){
 }); // End Manitoba Hover Tile Changer
 
 //Mobile Map Slideshow
-let images = ["img/bc.svg", "img/alberta.svg", "img/saskatchewan.svg", "img/manitoba.svg"];
+let images = ["static/img/bc.svg", "static/img/alberta.svg", "static/img/saskatchewan.svg", "static/img/manitoba.svg"];
 let currentImg = 0;
 
 document.querySelector(".next").addEventListener("click", function(){
@@ -44,16 +44,16 @@ document.querySelector(".next").addEventListener("click", function(){
     document.querySelector(".holder-mobile>div>img").src = images[currentImg];
 
     if(currentImg == 0){
-        document.querySelector(".mobile-local-button").href = "local-bc.html";
+        document.querySelector(".mobile-local-button").href = "province/bc";
         document.querySelector(".mobile-provice-name").innerHTML = "British Columbia";
     } else if (currentImg == 1){
-        document.querySelector(".mobile-local-button").href = "local-alberta.html";
+        document.querySelector(".mobile-local-button").href = "province/ab";
         document.querySelector(".mobile-provice-name").innerHTML = "Alberta";
     } else if (currentImg == 2){
-        document.querySelector(".mobile-local-button").href = "local-sask.html";
+        document.querySelector(".mobile-local-button").href = "province/sk";
         document.querySelector(".mobile-provice-name").innerHTML = "Saskatchewan";
     } else {
-        document.querySelector(".mobile-local-button").href = "local-manitoba.html";
+        document.querySelector(".mobile-local-button").href = "province/mb";
         document.querySelector(".mobile-provice-name").innerHTML = "Manitoba";
     }
 })

@@ -16,7 +16,7 @@
     }
 
     @else if $size == extraLarge {
-      padding: 4rem 10rem 0 40rem;
+      padding: 4rem 10rem 0 38rem;
     }
     
   }
@@ -39,7 +39,7 @@
     }
 
     @else if $size == desktop {
-      @media screen and (min-width: 1280px) {@content;}
+      @media screen and (min-width: 1500px) {@content;}
     }
     
   }

@@ -23,7 +23,7 @@
 	<h3><span class="heading-small">Start by: </span><br><span class="heading-small-two">Viewing the newest activity on your site.</span></h3>
 	<div class="welcome-links">
 		<a href="#users-overview"> New Students <span class="badge">{{ new_users }}</span></a>
-		<a href="#uploads-overview"> New Uploads <span class="badge">6 </span></a>
+		<a href="#uploads-overview"> New Uploads <span class="badge">{{ new_post }} </span></a>
 	</div>
 </div>
 
@@ -32,8 +32,9 @@
 	<!-- ====================USERS OVERVIEW==================== -->
 		<div class="overview-background"></div>
 		<div class="overview users-overview" id="users-overview">
-			<h3>Users Overview</h3>
 			<div class="overview-box">
+			<h3>Users Overview</h3>
+			<div class="flex-overview">
 				<div>
 					<p>New Students: <span class="number">{{ new_users }}</span></p>
 					<p>Registered Students: <span class="number">{{ registered_users }}</span></p>
@@ -41,6 +42,8 @@
 				<div>
 					<a href="{% url 'admin_users' %}">Manage All Users</a>
 				</div>
+			</div>
+				
 			</div>
 		</div>
 	<!-- ====================USERS OVERVIEW CLOSE==================== -->
@@ -56,17 +59,32 @@
 	<!-- ====================ALERT CLOSE==================== -->
 
 	<!-- ====================ACCORDION==================== -->
-		<div class="accordian users-acc"><!-- Accordian -->
+		<div class="accordion users-acc"><!-- Accordion -->
 			<h4>Latest User Activity</h4>
-			<div class="acc-tabs"><!-- Tabs-->
+			{% if user.userprofile.access == 'admin' %}
+			<div class="acc-tabs users-tabs-mobile"><!-- Tabs-->
+				<a href="#" class="acc-new-users">N</a>
+				<a href="#" class="acc-registered-users">R</a>
+				<a href="#" class="acc-teachers">T</a>
+				<a href="#" class="acc-elders">E</a>
+				<a href="#" class="acc-admins">A</a>
+			</div><!-- Tabs-->
+
+			<div class="acc-tabs users-tabs-tablet"><!-- Tabs-->
 				<a href="#" class="acc-new-users">New</a>
 				<a href="#" class="acc-registered-users">Registered</a>
-				{% if user.userprofile.access == 'admin' %}
 				<a href="#" class="acc-teachers">Teachers</a>
 				<a href="#" class="acc-elders">Elders</a>
 				<a href="#" class="acc-admins">Admins</a>
-				{% endif %}
 			</div><!-- Tabs-->
+			{% else %}
+
+			<div class="acc-tabs"><!-- Tabs-->
+				<a href="#" class="acc-new-users">New</a>
+				<a href="#" class="acc-registered-users">Registered</a>
+			</div><!-- Tabs-->
+
+			{% endif %}
 
 		<!-- ====================PENDING USERS==================== -->
 			<div id="new-users" class="acc-content"> <!-- New Users Content-->
@@ -82,7 +100,6 @@
 									{% endif %}
 								</p>
 								<p class="icon-plus">+</p>
-								<p class="icon-minus hidden">-</p>
 							</div><!-- User Dropdown -->
 							<div class="acc-user-info"><!-- User information -->
 								<div class="information">
@@ -147,12 +164,9 @@
 									<div class="acc-user-dropdown"><!-- User Dropdown -->
 										<p class="acc-username">
 											{{user.username}} 
-											{% if user.userprofile.access == 'pending'%} 
-											<span class="acc-badge">New!</span> 
-											{% endif %}
+											<span class="acc-badge"><i class="fas fa-check-circle"></i></span> 
 										</p>
 										<p class="icon-plus">+</p>
-										<p class="icon-minus hidden">-</p>
 									</div><!-- User Dropdown -->
 									<div class="acc-user-info"><!-- User information -->
 										<div class="information">
@@ -161,7 +175,7 @@
 											<p>Email: {{user.email}}</p>
 										</div>
 										<div class="options">
-											<a href="{% url 'approve_user' %}{{ user.username }}">Approve User</a>
+											<a href="{% url 'edit_users' %}{{ user.username }}">Edit User</a>
 											<a href="{% url 'delete_user' %}{{ user.username }}">Delete User</a>
 										</div>
 									</div><!-- User information -->
@@ -181,12 +195,9 @@
 									<div class="acc-user-dropdown"><!-- User Dropdown -->
 										<p class="acc-username">
 											{{user.username}} 
-											{% if user.userprofile.access == 'pending'%} 
-											<span class="acc-badge">New!</span> 
-											{% endif %}
+											<span class="acc-badge"><i class="fas fa-check-circle"></i></span> 
 										</p>
 										<p class="icon-plus">+</p>
-										<p class="icon-minus hidden">-</p>
 									</div><!-- User Dropdown -->
 									<div class="acc-user-info"><!-- User information -->
 										<div class="information">
@@ -195,7 +206,7 @@
 											<p>Email: {{user.email}}</p>
 										</div>
 										<div class="options">
-											<a href="{% url 'approve_user' %}{{ user.username }}">Approve User</a>
+											<a href="{% url 'edit_users' %}{{ user.username }}">Edit User</a>
 											<a href="{% url 'delete_user' %}{{ user.username }}">Delete User</a>
 										</div>
 									</div><!-- User information -->
@@ -203,6 +214,10 @@
 							<!-- ====================SINGLE USER CLOSE==================== -->      
 							{% endif %}
 						{% endfor %}
+						<div class="empty-accordion">
+							<h5>There are currently no records for this category</h5>
+							<p>Check back later!</p>
+						</div>
 					</div><!-- New Users Content-->
 				<!-- ==================ELDER CLOSE =================== -->
 
@@ -215,12 +230,9 @@
 									<div class="acc-user-dropdown"><!-- User Dropdown -->
 										<p class="acc-username">
 											{{user.username}} 
-											{% if user.userprofile.access == 'pending'%} 
-											<span class="acc-badge">New!</span> 
-											{% endif %}
+											<span class="acc-badge"><i class="fas fa-check-circle"></i></span> 
 										</p>
 										<p class="icon-plus">+</p>
-										<p class="icon-minus hidden">-</p>
 									</div><!-- User Dropdown -->
 									<div class="acc-user-info"><!-- User information -->
 										<div class="information">
@@ -229,7 +241,7 @@
 											<p>Email: {{user.email}}</p>
 										</div>
 										<div class="options">
-											<a href="{% url 'approve_user' %}{{ user.username }}">Approve User</a>
+											<a href="{% url 'edit_users' %}{{ user.username }}">Edit User</a>
 											<a href="{% url 'delete_user' %}{{ user.username }}">Delete User</a>
 										</div>
 									</div><!-- User information -->
@@ -251,21 +263,23 @@
 	<!-- ====================POST OVERVIEW==================== -->
 		<div class="overview-background-second"></div>
 		<div class="overview uploads-overview" id="uploads-overview">
-			<h3>Uploads Overview</h3>
 			<div class="overview-box">
-				<div>
-					<p>New Uploads: <span class="number">12</span></p>
-					<p>Published Uploads: <span class="number">40</span></p>
-				</div>
-				<div>
-					<a href="{% url 'admin_uploads' %}">Manage All Uploads</a>
+				<h3>Uploads Overview</h3>
+				<div class="flex-overview">
+					<div>
+						<p>New Uploads: <span class="number">{{ new_post }}</span></p>
+						<p>Published Uploads: <span class="number">{{ approved_post }}</span></p>
+					</div>
+					<div>
+						<a href="{% url 'admin_uploads' %}">Manage All Uploads</a>
+					</div>
 				</div>
 			</div>
 		</div>
 	<!-- ====================POST OVERVIEW CLOSE==================== -->
 
 	<!-- ====================ACCORDION==================== -->
-		<div class="accordian"><!-- Accordian -->
+		<div class="accordion"><!-- Accordion -->
 			<h4>Latest Upload Activity</h4>
 			<div class="acc-tabs"><!-- Tabs-->
 				<a href="#" class="acc-new-uploads">New</a>
@@ -273,52 +287,58 @@
 			</div><!-- Tabs-->
 		<!-- ====================NEW UPLOADS==================== -->
 			<div id="new-uploads" class="acc-content"> <!-- New Upoads Content-->
+				{% for post in posts %}
+					{% if post.approve == 0 %}
 			<!-- ====================SINGLE UPLOAD==================== -->
 				<div class="acc-single"> <!-- Single user -->
 					<div class="acc-user-dropdown"><!-- User Dropdown -->
-						<p class="acc-username">title<span class="acc-badge">New!</span></p>
+						<p class="acc-username">{{ post.title }}<span class="acc-badge">New!</span></p>
 						<p class="icon-plus">+</p>
 						<p class="icon-minus hidden">-</p>
 					</div><!-- User Dropdown -->
 					<div class="acc-user-info"><!-- User information -->
 						<div class="information">
-							<p>Created on: (date)</p>
-							<p>Full Name: (full name)</p>
-							<p>Email: (email)</p>
+							<p>Created on: {{ post.date_posted| date:"M d, Y" }}</p>
+							<p>Full Name: {{ post.author }}</p>
+							<p>Category: {{ post.school }} / {{ post.category }}</p>
 						</div>
 						<div class="options">
-							<a href="#">Delete Upload</a>
-							<a href="#">Edit Upload</a>
+							<a href="{% url 'delete_upload' %}{{ post.slug }}">Delete Upload</a>
+							<a href="{% url 'edit_upload' %}{{ post.slug }}">Edit Upload</a>
 						</div>
 					</div><!-- User information -->
 				</div><!-- Single user -->
+					{% endif %}
+				{% endfor %}
 			<!-- ====================SINGLE UPLOAD CLOSE==================== -->
 			</div><!-- New Uploads Content-->
 		<!-- ====================NEW UPLOADS CLOSE==================== -->
 
 		<!-- ====================PUBLISHED UPLOADS==================== -->
 			<div id="published-uploads" class="acc-content hidden"> <!-- New Users Content-->
+				{% for post in posts %}
+					{% if post.approve == 1 %}
 
 			<!-- ====================SINGLE UPLOAD==================== -->
 				<div class="acc-single"> <!-- Single user -->
 					<div class="acc-user-dropdown"><!-- User Dropdown -->
-						<p class="acc-username">title <span class="acc-badge"><i class="fas fa-check-circle"></i></span></p>
+						<p class="acc-username">{{ post.title }} <span class="acc-badge"><i class="fas fa-check-circle"></i></span></p>
 						<p class="icon-plus">+</p>
-						<p class="icon-minus hidden">-</p>
 					</div><!-- User Dropdown -->
 					<div class="acc-user-info"><!-- User information -->
 						<div class="information">
-							<p>Created on: (date)</p>
-							<p>Created by: (full name)</p>
-							<p>Category: (category)</p>
-							<p>Accepted By: (name)</p>
+							<p>Created on: {{ post.date_posted| date:"M d, Y" }}</p>
+							<p>Created by: {{ post.author }}</p>
+							<p>Category: {{ post.school }} / {{ post.category }}</p>
 						</div>
 						<div class="options">
-							<a href="#">Delete Upload</a>
-							<a href="#">Edit Upload</a>
+							<a href="{% url 'delete_upload' %}{{ post.slug }}">Delete Upload</a>
+							<a href="{% url 'edit_upload' %}{{ post.slug }}">Edit Upload</a>
 						</div>
 					</div><!-- User information -->
 				</div><!-- Single user -->
+					{% endif %}
+				{% endfor %}
 			<!-- ====================SINGLE UPLOAD CLOSE==================== -->
 			</div><!-- Published Uploads Content-->
 		<!-- ====================PUBLISHED UPLOADS CLOSE==================== -->
