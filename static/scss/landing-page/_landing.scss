@@ -2,7 +2,8 @@
     margin: 0 4%;
 
     @include media-lg{
-        margin: 0 20%;
+        margin: 0 auto;
+        max-width: 1200px;
     }
   }
 
@@ -38,6 +39,11 @@ img, .treaty-img{
             width: 200px;
             height: 200px;
             margin-right: 40px;
+        }
+
+        @include media-lg{
+            width: 280px;
+            height: 280px;
         }
     }
 }

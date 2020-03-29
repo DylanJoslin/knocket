@@ -217,7 +217,8 @@ a {
 
 @media screen and (min-width: 1024px) {
   .inner-container {
-    margin: 0 20%;
+    margin: 0 auto;
+    max-width: 1200px;
   }
 }
 
@@ -258,6 +259,13 @@ img, .treaty-img {
     width: 200px;
     height: 200px;
     margin-right: 40px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .treaty .treaty-img {
+    width: 280px;
+    height: 280px;
   }
 }
 
@@ -435,6 +443,12 @@ img, .treaty-img {
   }
 }
 
+@media screen and (min-width: 1024px) {
+  .banner {
+    padding: 130px 360px;
+  }
+}
+
 .banner .quote {
   background-color: #ff7918db;
   border-radius: 20px;
@@ -448,13 +462,32 @@ img, .treaty-img {
   }
 }
 
+@media screen and (min-width: 1024px) {
+  .banner .quote {
+    padding: 40px 120px;
+  }
+}
+
 .banner .quote h3 {
   color: white;
+}
+
+@media screen and (min-width: 1024px) {
+  .banner .quote h3 {
+    font-size: 50px;
+  }
 }
 
 .banner .quote h3 span {
   color: #51508B;
   letter-spacing: 1.6px;
+}
+
+@media screen and (min-width: 1024px) {
+  .banner .quote h3 span {
+    letter-spacing: 3px;
+    font-size: 60px;
+  }
 }
 
 .banner .explore-btn a {
@@ -474,6 +507,14 @@ img, .treaty-img {
   background-color: #B4B9E5;
   -webkit-transition: 0.5s;
   transition: 0.5s;
+}
+
+@media screen and (min-width: 1024px) {
+  .banner .explore-btn a {
+    padding: 20px 120px;
+    border-radius: 10px;
+    font-size: 26px;
+  }
 }
 
 .main-header .main-navigation {
