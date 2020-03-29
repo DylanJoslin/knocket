@@ -1,0 +1,999 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 40px;
+  font-family: 'Sriracha', cursive;
+  color: #fff;
+}
+
+.con {
+  width: 500px;
+  height: 500px;
+  border: 2px white solid;
+  border-radius: 898px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  margin: 100px auto;
+}
+
+.con_top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.con_top > a {
+  display: block;
+  width: 250px;
+  height: 250px;
+}
+
+.con_top > a:nth-child(1) {
+  border-right: 1px black solid;
+  border-bottom: 1px black solid;
+  background: #fff;
+  border-top-left-radius: 999px;
+  position: relative;
+  color: #fff;
+  -webkit-transition-property: background;
+  transition-property: background;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+  -webkit-transition-timing-function: linear;
+          transition-timing-function: linear;
+}
+
+.con_top > a:nth-child(2) {
+  border-bottom: 1px black solid;
+  background: yellow;
+  border-top-right-radius: 999px;
+  position: relative;
+  color: #fff;
+  -webkit-transition-property: background;
+  transition-property: background;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+  -webkit-transition-timing-function: linear;
+          transition-timing-function: linear;
+}
+
+.con_bot {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.con_bot > a {
+  display: block;
+  width: 250px;
+  height: 250px;
+}
+
+.con_bot > a:nth-child(1) {
+  background: red;
+  border-bottom-left-radius: 999px;
+  position: relative;
+  color: #fff;
+  -webkit-transition-property: background;
+  transition-property: background;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+  -webkit-transition-timing-function: linear;
+          transition-timing-function: linear;
+}
+
+.con_bot > a:nth-child(1):hover {
+  background: #fc7171;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  z-index: 9;
+  -webkit-transform-origin: 100% 10%;
+          transform-origin: 100% 10%;
+  -webkit-box-shadow: 0px 0 10px 0px #000;
+          box-shadow: 0px 0 10px 0px #000;
+}
+
+.con_bot > a:nth-child(2) {
+  background: #000;
+  border-left: 1px black solid;
+  border-bottom-right-radius: 999px;
+  position: relative;
+  color: #fff;
+  -webkit-transition-property: background;
+  transition-property: background;
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+  -webkit-transition-timing-function: linear;
+          transition-timing-function: linear;
+}
+
+.sign1 {
+  margin-left: 40px;
+}
+
+/* FONT */
+.textwhite, .textyellow, .textred {
+  position: absolute;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  margin-top: 100px;
+  text-align: center;
+  width: 100%;
+  color: black;
+  padding-right: 20px;
+  font-size: 20px;
+  font-family: 'Sriracha', cursive;
+}
+
+.textblack {
+  position: absolute;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  margin-top: 100px;
+  text-align: center;
+  width: 100%;
+  color: white;
+  padding-right: 20px;
+  font-size: 20px;
+  font-family: 'Sriracha', cursive;
+}
+
+/* hover for text
+.textwhite:hover, .textred:hover, .textyellow:hover{
+    color:black;
+    font-size: 30px;
+    font-family: 'Berkshire Swash', cursive;
+}
+.textblack:hover{
+    color: aliceblue;
+    font-size: 30px;
+    font-family: 'Berkshire Swash', cursive;
+} */
+/* Color of background(hover)	 */
+.con_top > a:nth-child(1):hover {
+  background: #c2c2c2;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  z-index: 9;
+  -webkit-transform-origin: 100% 100%;
+          transform-origin: 100% 100%;
+  -webkit-box-shadow: 0px 0 10px 0px #000;
+          box-shadow: 0px 0 10px 0px #000;
+}
+
+.con_bot > a:nth-child(1):hover .textred {
+  font-size: 30px;
+  font-family: 'Berkshire Swash', cursive;
+}
+
+.con_bot > a:nth-child(2):hover {
+  background: #b8b8b8;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  z-index: 9;
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+  -webkit-box-shadow: 0px 0 10px 0px #000;
+          box-shadow: 0px 0 10px 0px #000;
+}
+
+.con_bot > a:nth-child(2):hover .textblack {
+  font-size: 30px;
+  font-family: 'Berkshire Swash', cursive;
+}
+
+.con_top > a:nth-child(2):hover {
+  background: #f5f59e;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  z-index: 9;
+  -webkit-transform-origin: 10% 100%;
+          transform-origin: 10% 100%;
+  -webkit-box-shadow: 0px 0 10px 0px #000;
+          box-shadow: 0px 0 10px 0px #000;
+}
+
+.con_top > a:nth-child(2):hover .textyellow {
+  font-size: 30px;
+  font-family: 'Berkshire Swash', cursive;
+}
+
+.con_top > a:nth-child(1):hover {
+  background: #c2c2c2;
+}
+
+.con_top > a:nth-child(1):hover .textwhite {
+  font-size: 30px;
+  font-family: 'Berkshire Swash', cursive;
+}
+
+/* Screen < 500px */
+@media only screen and (max-width: 500px) {
+  .con {
+    width: 300px;
+    height: 300px;
+    border: 1px black solid;
+    border-radius: 900px;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+    margin: 100px auto;
+  }
+  .con_top > a {
+    display: block;
+    width: 150px;
+    height: 150px;
+  }
+  .con_bot > a {
+    display: block;
+    width: 150px;
+    height: 150px;
+  }
+  .textwhite, .textyellow, .textred {
+    position: absolute;
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    margin-top: 60px;
+    text-align: center;
+    width: 100%;
+    color: black;
+    padding-left: 5px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-family: 'Sriracha', cursive;
+  }
+  .textblack {
+    position: absolute;
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    margin-top: 60px;
+    text-align: center;
+    width: 100%;
+    color: white;
+    font-size: 16px;
+    font-family: 'Sriracha', cursive;
+  }
+  .textwhite:hover, .textred:hover, .textyellow:hover {
+    color: black;
+    font-size: 20px;
+    font-family: 'Berkshire Swash', cursive;
+  }
+  .textblack:hover {
+    color: aliceblue;
+    font-size: 20px;
+    font-family: 'Berkshire Swash', cursive;
+  }
+}
+
+/* NAVIGATION */
+.navigation {
+  height: 200px;
+  background-color: #41c7c7;
+}
+
+/* Stories */
+section {
+  margin-bottom: 30px;
+}
+
+/* Card */
+.stories {
+  margin-left: 30%;
+  margin-right: 30%;
+}
+
+.card-img {
+  margin-left: 8%;
+}
+
+.card {
+  width: 45%;
+  height: auto;
+}
+
+.card .card-img {
+  width: 85%;
+}
+
+@media only screen and (max-width: 800px) {
+  .stories {
+    margin-left: 25%;
+    margin-right: 20%;
+  }
+  .card {
+    width: 90%;
+  }
+}
+
+/* FOOTER */
+.footer {
+  height: 200px;
+  background-color: #41c7c7;
+}
+
+/*Boundary line*/
+#ui {
+  position: absolute;
+  width: 100%;
+}
+
+#ui .track {
+  position: absolute;
+  left: 35px;
+  width: 2%;
+  height: 0px;
+  border-radius: 999px;
+  float: left;
+}
+
+#ui .track.track_1 .foot.left {
+  -webkit-animation: fadeOut 3000ms infinite linear 300ms;
+          animation: fadeOut 3000ms infinite linear 300ms;
+}
+
+#ui .track.track_1 .foot.right {
+  -webkit-animation: fadeOut 3000ms infinite linear 450ms;
+          animation: fadeOut 3000ms infinite linear 450ms;
+}
+
+#ui .track.track_2 .foot.left {
+  -webkit-animation: fadeOut 3000ms infinite linear 600ms;
+          animation: fadeOut 3000ms infinite linear 600ms;
+}
+
+#ui .track.track_2 .foot.right {
+  -webkit-animation: fadeOut 3000ms infinite linear 750ms;
+          animation: fadeOut 3000ms infinite linear 750ms;
+}
+
+#ui .track.track_3 .foot.left {
+  -webkit-animation: fadeOut 3000ms infinite linear 900ms;
+          animation: fadeOut 3000ms infinite linear 900ms;
+}
+
+#ui .track.track_3 .foot.right {
+  -webkit-animation: fadeOut 3000ms infinite linear 1050ms;
+          animation: fadeOut 3000ms infinite linear 1050ms;
+}
+
+#ui .track.track_4 .foot.left {
+  -webkit-animation: fadeOut 3000ms infinite linear 1200ms;
+          animation: fadeOut 3000ms infinite linear 1200ms;
+}
+
+#ui .track.track_4 .foot.right {
+  -webkit-animation: fadeOut 3000ms infinite linear 1350ms;
+          animation: fadeOut 3000ms infinite linear 1350ms;
+}
+
+#ui .track.track_5 .foot.left {
+  -webkit-animation: fadeOut 3000ms infinite linear 1500ms;
+          animation: fadeOut 3000ms infinite linear 1500ms;
+}
+
+#ui .track.track_5 .foot.right {
+  -webkit-animation: fadeOut 3000ms infinite linear 1650ms;
+          animation: fadeOut 3000ms infinite linear 1650ms;
+}
+
+#ui .track.track_6 .foot.left {
+  -webkit-animation: fadeOut 3000ms infinite linear 1800ms;
+          animation: fadeOut 3000ms infinite linear 1800ms;
+}
+
+#ui .track.track_6 .foot.right {
+  -webkit-animation: fadeOut 3000ms infinite linear 1950ms;
+          animation: fadeOut 3000ms infinite linear 1950ms;
+}
+
+#ui .track.track_7 .foot.left {
+  -webkit-animation: fadeOut 3000ms infinite linear 2100ms;
+          animation: fadeOut 3000ms infinite linear 2100ms;
+}
+
+#ui .track.track_7 .foot.right {
+  -webkit-animation: fadeOut 3000ms infinite linear 2250ms;
+          animation: fadeOut 3000ms infinite linear 2250ms;
+}
+
+#ui .track.track_8 .foot.left {
+  -webkit-animation: fadeOut 3000ms infinite linear 2400ms;
+          animation: fadeOut 3000ms infinite linear 2400ms;
+}
+
+#ui .track.track_8 .foot.right {
+  -webkit-animation: fadeOut 3000ms infinite linear 2550ms;
+          animation: fadeOut 3000ms infinite linear 2550ms;
+}
+
+#ui .track.track_9 .foot.left {
+  -webkit-animation: fadeOut 3000ms infinite linear 2700ms;
+          animation: fadeOut 3000ms infinite linear 2700ms;
+}
+
+#ui .track.track_9 .foot.right {
+  -webkit-animation: fadeOut 3000ms infinite linear 2850ms;
+          animation: fadeOut 3000ms infinite linear 2850ms;
+}
+
+#ui .track.track_10 .foot.left {
+  -webkit-animation: fadeOut 3000ms infinite linear 3000ms;
+          animation: fadeOut 3000ms infinite linear 3000ms;
+}
+
+#ui .track.track_10 .foot.right {
+  -webkit-animation: fadeOut 3000ms infinite linear 3150ms;
+          animation: fadeOut 3000ms infinite linear 3150ms;
+}
+
+#ui .track.track_11 .foot.left {
+  -webkit-animation: fadeOut 3000ms infinite linear 3300ms;
+          animation: fadeOut 3000ms infinite linear 3300ms;
+}
+
+#ui .track.track_11 .foot.right {
+  -webkit-animation: fadeOut 3000ms infinite linear 3450ms;
+          animation: fadeOut 3000ms infinite linear 3450ms;
+}
+
+#ui .track.track_12 .foot.left {
+  -webkit-animation: fadeOut 3000ms infinite linear 3600ms;
+          animation: fadeOut 3000ms infinite linear 3600ms;
+}
+
+#ui .track.track_12 .foot.right {
+  -webkit-animation: fadeOut 3000ms infinite linear 3750ms;
+          animation: fadeOut 3000ms infinite linear 3750ms;
+}
+
+#ui .track.track_13 .foot.left {
+  -webkit-animation: fadeOut 3000ms infinite linear 3900ms;
+          animation: fadeOut 3000ms infinite linear 3900ms;
+}
+
+#ui .track.track_13 .foot.right {
+  -webkit-animation: fadeOut 3000ms infinite linear 4050ms;
+          animation: fadeOut 3000ms infinite linear 4050ms;
+}
+
+#ui .track.track_14 .foot.left {
+  -webkit-animation: fadeOut 3000ms infinite linear 4200ms;
+          animation: fadeOut 3000ms infinite linear 4200ms;
+}
+
+#ui .track.track_14 .foot.right {
+  -webkit-animation: fadeOut 3000ms infinite linear 4350ms;
+          animation: fadeOut 3000ms infinite linear 4350ms;
+}
+
+#ui .track.track_15 .foot.left {
+  -webkit-animation: fadeOut 3000ms infinite linear 4500ms;
+          animation: fadeOut 3000ms infinite linear 4500ms;
+}
+
+#ui .track.track_15 .foot.right {
+  -webkit-animation: fadeOut 3000ms infinite linear 4650ms;
+          animation: fadeOut 3000ms infinite linear 4650ms;
+}
+
+#ui .track.track_16 .foot.left {
+  -webkit-animation: fadeOut 3000ms infinite linear 4800ms;
+          animation: fadeOut 3000ms infinite linear 4800ms;
+}
+
+#ui .track.track_16 .foot.right {
+  -webkit-animation: fadeOut 3000ms infinite linear 4950ms;
+          animation: fadeOut 3000ms infinite linear 4950ms;
+}
+
+#ui .track.track_17 .foot.left {
+  -webkit-animation: fadeOut 3000ms infinite linear 5100ms;
+          animation: fadeOut 3000ms infinite linear 5100ms;
+}
+
+#ui .track.track_17 .foot.right {
+  -webkit-animation: fadeOut 3000ms infinite linear 5250ms;
+          animation: fadeOut 3000ms infinite linear 5250ms;
+}
+
+#ui .track.track_18 .foot.left {
+  -webkit-animation: fadeOut 3000ms infinite linear 5400ms;
+          animation: fadeOut 3000ms infinite linear 5400ms;
+}
+
+#ui .track.track_18 .foot.right {
+  -webkit-animation: fadeOut 3000ms infinite linear 5550ms;
+          animation: fadeOut 3000ms infinite linear 5550ms;
+}
+
+#ui .track.track_19 .foot.left {
+  -webkit-animation: fadeOut 3000ms infinite linear 5700ms;
+          animation: fadeOut 3000ms infinite linear 5700ms;
+}
+
+#ui .track.track_19 .foot.right {
+  -webkit-animation: fadeOut 3000ms infinite linear 5850ms;
+          animation: fadeOut 3000ms infinite linear 5850ms;
+}
+
+#ui .track.track_20 .foot.left {
+  -webkit-animation: fadeOut 3000ms infinite linear 6000ms;
+          animation: fadeOut 3000ms infinite linear 6000ms;
+}
+
+#ui .track.track_20 .foot.right {
+  -webkit-animation: fadeOut 3000ms infinite linear 6150ms;
+          animation: fadeOut 3000ms infinite linear 6150ms;
+}
+
+#ui .track.track_21 .foot.left {
+  -webkit-animation: fadeOut 3000ms infinite linear 6300ms;
+          animation: fadeOut 3000ms infinite linear 6300ms;
+}
+
+#ui .track.track_21 .foot.right {
+  -webkit-animation: fadeOut 3000ms infinite linear 6450ms;
+          animation: fadeOut 3000ms infinite linear 6450ms;
+}
+
+#ui .track.track_22 .foot.left {
+  -webkit-animation: fadeOut 3000ms infinite linear 6600ms;
+          animation: fadeOut 3000ms infinite linear 6600ms;
+}
+
+#ui .track.track_22 .foot.right {
+  -webkit-animation: fadeOut 3000ms infinite linear 6750ms;
+          animation: fadeOut 3000ms infinite linear 6750ms;
+}
+
+#ui .track.track_23 .foot.left {
+  -webkit-animation: fadeOut 3000ms infinite linear 6900ms;
+          animation: fadeOut 3000ms infinite linear 6900ms;
+}
+
+#ui .track.track_23 .foot.right {
+  -webkit-animation: fadeOut 3000ms infinite linear 7050ms;
+          animation: fadeOut 3000ms infinite linear 7050ms;
+}
+
+#ui .track.track_24 .foot.left {
+  -webkit-animation: fadeOut 3000ms infinite linear 7200ms;
+          animation: fadeOut 3000ms infinite linear 7200ms;
+}
+
+#ui .track.track_24 .foot.right {
+  -webkit-animation: fadeOut 3000ms infinite linear 7350ms;
+          animation: fadeOut 3000ms infinite linear 7350ms;
+}
+
+#ui .track.track_25 .foot.left {
+  -webkit-animation: fadeOut 3000ms infinite linear 7500ms;
+          animation: fadeOut 3000ms infinite linear 7500ms;
+}
+
+#ui .track.track_25 .foot.right {
+  -webkit-animation: fadeOut 3000ms infinite linear 7650ms;
+          animation: fadeOut 3000ms infinite linear 7650ms;
+}
+
+#ui .track.track_26 .foot.left {
+  -webkit-animation: fadeOut 3000ms infinite linear 7800ms;
+          animation: fadeOut 3000ms infinite linear 7800ms;
+}
+
+#ui .track.track_26 .foot.right {
+  -webkit-animation: fadeOut 3000ms infinite linear 7950ms;
+          animation: fadeOut 3000ms infinite linear 7950ms;
+}
+
+#ui .track.track_27 .foot.left {
+  -webkit-animation: fadeOut 3000ms infinite linear 8100ms;
+          animation: fadeOut 3000ms infinite linear 8100ms;
+}
+
+#ui .track.track_27 .foot.right {
+  -webkit-animation: fadeOut 3000ms infinite linear 8250ms;
+          animation: fadeOut 3000ms infinite linear 8250ms;
+}
+
+#ui .track.track_28 .foot.left {
+  -webkit-animation: fadeOut 3000ms infinite linear 8400ms;
+          animation: fadeOut 3000ms infinite linear 8400ms;
+}
+
+#ui .track.track_28 .foot.right {
+  -webkit-animation: fadeOut 3000ms infinite linear 8550ms;
+          animation: fadeOut 3000ms infinite linear 8550ms;
+}
+
+#ui .track.track_29 .foot.left {
+  -webkit-animation: fadeOut 3000ms infinite linear 8700ms;
+          animation: fadeOut 3000ms infinite linear 8700ms;
+}
+
+#ui .track.track_29 .foot.right {
+  -webkit-animation: fadeOut 3000ms infinite linear 8850ms;
+          animation: fadeOut 3000ms infinite linear 8850ms;
+}
+
+#ui .track.track_30 .foot.left {
+  -webkit-animation: fadeOut 3000ms infinite linear 9000ms;
+          animation: fadeOut 3000ms infinite linear 9000ms;
+}
+
+#ui .track.track_30 .foot.right {
+  -webkit-animation: fadeOut 3000ms infinite linear 9150ms;
+          animation: fadeOut 3000ms infinite linear 9150ms;
+}
+
+#ui .track.track_31 .foot.left {
+  -webkit-animation: fadeOut 3000ms infinite linear 9300ms;
+          animation: fadeOut 3000ms infinite linear 9300ms;
+}
+
+#ui .track.track_31 .foot.right {
+  -webkit-animation: fadeOut 3000ms infinite linear 9450ms;
+          animation: fadeOut 3000ms infinite linear 9450ms;
+}
+
+#ui .track.track_32 .foot.left {
+  -webkit-animation: fadeOut 3000ms infinite linear 9600ms;
+          animation: fadeOut 3000ms infinite linear 9600ms;
+}
+
+#ui .track.track_32 .foot.right {
+  -webkit-animation: fadeOut 3000ms infinite linear 9750ms;
+          animation: fadeOut 3000ms infinite linear 9750ms;
+}
+
+#ui .track.track_33 .foot.left {
+  -webkit-animation: fadeOut 3000ms infinite linear 9900ms;
+          animation: fadeOut 3000ms infinite linear 9900ms;
+}
+
+#ui .track.track_33 .foot.right {
+  -webkit-animation: fadeOut 3000ms infinite linear 10050ms;
+          animation: fadeOut 3000ms infinite linear 10050ms;
+}
+
+#ui .track.track_34 .foot.left {
+  -webkit-animation: fadeOut 3000ms infinite linear 10200ms;
+          animation: fadeOut 3000ms infinite linear 10200ms;
+}
+
+#ui .track.track_34 .foot.right {
+  -webkit-animation: fadeOut 3000ms infinite linear 10350ms;
+          animation: fadeOut 3000ms infinite linear 10350ms;
+}
+
+#ui .track.track_35 .foot.left {
+  -webkit-animation: fadeOut 3000ms infinite linear 10500ms;
+          animation: fadeOut 3000ms infinite linear 10500ms;
+}
+
+#ui .track.track_35 .foot.right {
+  -webkit-animation: fadeOut 3000ms infinite linear 10650ms;
+          animation: fadeOut 3000ms infinite linear 10650ms;
+}
+
+#ui .track.track_36 .foot.left {
+  -webkit-animation: fadeOut 3000ms infinite linear 10800ms;
+          animation: fadeOut 3000ms infinite linear 10800ms;
+}
+
+#ui .track.track_36 .foot.right {
+  -webkit-animation: fadeOut 3000ms infinite linear 10950ms;
+          animation: fadeOut 3000ms infinite linear 10950ms;
+}
+
+#ui .track.track_37 .foot.left {
+  -webkit-animation: fadeOut 3000ms infinite linear 11100ms;
+          animation: fadeOut 3000ms infinite linear 11100ms;
+}
+
+#ui .track.track_37 .foot.right {
+  -webkit-animation: fadeOut 3000ms infinite linear 11250ms;
+          animation: fadeOut 3000ms infinite linear 11250ms;
+}
+
+#ui .track.track_38 .foot.left {
+  -webkit-animation: fadeOut 3000ms infinite linear 11400ms;
+          animation: fadeOut 3000ms infinite linear 11400ms;
+}
+
+#ui .track.track_38 .foot.right {
+  -webkit-animation: fadeOut 3000ms infinite linear 11550ms;
+          animation: fadeOut 3000ms infinite linear 11550ms;
+}
+
+#ui .track.track_39 .foot.left {
+  -webkit-animation: fadeOut 3000ms infinite linear 11700ms;
+          animation: fadeOut 3000ms infinite linear 11700ms;
+}
+
+#ui .track.track_39 .foot.right {
+  -webkit-animation: fadeOut 3000ms infinite linear 11850ms;
+          animation: fadeOut 3000ms infinite linear 11850ms;
+}
+
+#ui .track.track_40 .foot.left {
+  -webkit-animation: fadeOut 3000ms infinite linear 12000ms;
+          animation: fadeOut 3000ms infinite linear 12000ms;
+}
+
+#ui .track.track_40 .foot.right {
+  -webkit-animation: fadeOut 3000ms infinite linear 12150ms;
+          animation: fadeOut 3000ms infinite linear 12150ms;
+}
+
+#ui .track.track_41 .foot.left {
+  -webkit-animation: fadeOut 3000ms infinite linear 12300ms;
+          animation: fadeOut 3000ms infinite linear 12300ms;
+}
+
+#ui .track.track_41 .foot.right {
+  -webkit-animation: fadeOut 3000ms infinite linear 12450ms;
+          animation: fadeOut 3000ms infinite linear 12450ms;
+}
+
+#ui .track.track_42 .foot.left {
+  -webkit-animation: fadeOut 3000ms infinite linear 12600ms;
+          animation: fadeOut 3000ms infinite linear 12600ms;
+}
+
+#ui .track.track_42 .foot.right {
+  -webkit-animation: fadeOut 3000ms infinite linear 12750ms;
+          animation: fadeOut 3000ms infinite linear 12750ms;
+}
+
+#ui .track.track_43 .foot.left {
+  -webkit-animation: fadeOut 3000ms infinite linear 12900ms;
+          animation: fadeOut 3000ms infinite linear 12900ms;
+}
+
+#ui .track.track_43 .foot.right {
+  -webkit-animation: fadeOut 3000ms infinite linear 13050ms;
+          animation: fadeOut 3000ms infinite linear 13050ms;
+}
+
+#ui .track.track_44 .foot.left {
+  -webkit-animation: fadeOut 3000ms infinite linear 13200ms;
+          animation: fadeOut 3000ms infinite linear 13200ms;
+}
+
+#ui .track.track_44 .foot.right {
+  -webkit-animation: fadeOut 3000ms infinite linear 13350ms;
+          animation: fadeOut 3000ms infinite linear 13350ms;
+}
+
+#ui .track.track_45 .foot.left {
+  -webkit-animation: fadeOut 3000ms infinite linear 13500ms;
+          animation: fadeOut 3000ms infinite linear 13500ms;
+}
+
+#ui .track.track_45 .foot.right {
+  -webkit-animation: fadeOut 3000ms infinite linear 13650ms;
+          animation: fadeOut 3000ms infinite linear 13650ms;
+}
+
+#ui .track.track_46 .foot.left {
+  -webkit-animation: fadeOut 3000ms infinite linear 13800ms;
+          animation: fadeOut 3000ms infinite linear 13800ms;
+}
+
+#ui .track.track_46 .foot.right {
+  -webkit-animation: fadeOut 3000ms infinite linear 13950ms;
+          animation: fadeOut 3000ms infinite linear 13950ms;
+}
+
+#ui .track.track_47 .foot.left {
+  -webkit-animation: fadeOut 3000ms infinite linear 14100ms;
+          animation: fadeOut 3000ms infinite linear 14100ms;
+}
+
+#ui .track.track_47 .foot.right {
+  -webkit-animation: fadeOut 3000ms infinite linear 14250ms;
+          animation: fadeOut 3000ms infinite linear 14250ms;
+}
+
+#ui .track.track_48 .foot.left {
+  -webkit-animation: fadeOut 3000ms infinite linear 14400ms;
+          animation: fadeOut 3000ms infinite linear 14400ms;
+}
+
+#ui .track.track_48 .foot.right {
+  -webkit-animation: fadeOut 3000ms infinite linear 14550ms;
+          animation: fadeOut 3000ms infinite linear 14550ms;
+}
+
+#ui .track.track_49 .foot.left {
+  -webkit-animation: fadeOut 3000ms infinite linear 14700ms;
+          animation: fadeOut 3000ms infinite linear 14700ms;
+}
+
+#ui .track.track_49 .foot.right {
+  -webkit-animation: fadeOut 3000ms infinite linear 14850ms;
+          animation: fadeOut 3000ms infinite linear 14850ms;
+}
+
+#ui .track.track_50 .foot.left {
+  -webkit-animation: fadeOut 3000ms infinite linear 15000ms;
+          animation: fadeOut 3000ms infinite linear 15000ms;
+}
+
+#ui .track.track_50 .foot.right {
+  -webkit-animation: fadeOut 3000ms infinite linear 15150ms;
+          animation: fadeOut 3000ms infinite linear 15150ms;
+}
+
+#ui .track.track_51 .foot.left {
+  -webkit-animation: fadeOut 3000ms infinite linear 15000ms;
+          animation: fadeOut 3000ms infinite linear 15000ms;
+}
+
+#ui .track.track_51 .foot.right {
+  -webkit-animation: fadeOut 3000ms infinite linear 15150ms;
+          animation: fadeOut 3000ms infinite linear 15150ms;
+}
+
+#ui .track.track_52 .foot.left {
+  -webkit-animation: fadeOut 3000ms infinite linear 15000ms;
+          animation: fadeOut 3000ms infinite linear 15000ms;
+}
+
+#ui .track.track_52 .foot.right {
+  -webkit-animation: fadeOut 3000ms infinite linear 15150ms;
+          animation: fadeOut 3000ms infinite linear 15150ms;
+}
+
+#ui .track.track_53 .foot.left {
+  -webkit-animation: fadeOut 3000ms infinite linear 15000ms;
+          animation: fadeOut 3000ms infinite linear 15000ms;
+}
+
+#ui .track.track_53 .foot.right {
+  -webkit-animation: fadeOut 3000ms infinite linear 15150ms;
+          animation: fadeOut 3000ms infinite linear 15150ms;
+}
+
+#ui .track.track_54 .foot.left {
+  -webkit-animation: fadeOut 3000ms infinite linear 15000ms;
+          animation: fadeOut 3000ms infinite linear 15000ms;
+}
+
+#ui .track.track_54 .foot.right {
+  -webkit-animation: fadeOut 3000ms infinite linear 15150ms;
+          animation: fadeOut 3000ms infinite linear 15150ms;
+}
+
+#ui .track.track_55 .foot.left {
+  -webkit-animation: fadeOut 3000ms infinite linear 15000ms;
+          animation: fadeOut 3000ms infinite linear 15000ms;
+}
+
+#ui .track.track_55 .foot.right {
+  -webkit-animation: fadeOut 3000ms infinite linear 15150ms;
+          animation: fadeOut 3000ms infinite linear 15150ms;
+}
+
+#ui .track.track_56 .foot.left {
+  -webkit-animation: fadeOut 3000ms infinite linear 15000ms;
+          animation: fadeOut 3000ms infinite linear 15000ms;
+}
+
+#ui .track.track_56 .foot.right {
+  -webkit-animation: fadeOut 3000ms infinite linear 15150ms;
+          animation: fadeOut 3000ms infinite linear 15150ms;
+}
+
+#ui .track.track_57 .foot.left {
+  -webkit-animation: fadeOut 3000ms infinite linear 15000ms;
+          animation: fadeOut 3000ms infinite linear 15000ms;
+}
+
+#ui .track.track_57 .foot.right {
+  -webkit-animation: fadeOut 3000ms infinite linear 15150ms;
+          animation: fadeOut 3000ms infinite linear 15150ms;
+}
+
+#ui .track.track_58 .foot.left {
+  -webkit-animation: fadeOut 3000ms infinite linear 15000ms;
+          animation: fadeOut 3000ms infinite linear 15000ms;
+}
+
+#ui .track.track_58 .foot.right {
+  -webkit-animation: fadeOut 3000ms infinite linear 15150ms;
+          animation: fadeOut 3000ms infinite linear 15150ms;
+}
+
+#ui .track.track_59 .foot.left {
+  -webkit-animation: fadeOut 3000ms infinite linear 15000ms;
+          animation: fadeOut 3000ms infinite linear 15000ms;
+}
+
+#ui .track.track_59 .foot.right {
+  -webkit-animation: fadeOut 3000ms infinite linear 15150ms;
+          animation: fadeOut 3000ms infinite linear 15150ms;
+}
+
+#ui .track.track_60 .foot.left {
+  -webkit-animation: fadeOut 3000ms infinite linear 15000ms;
+          animation: fadeOut 3000ms infinite linear 15000ms;
+}
+
+#ui .track.track_60 .foot.right {
+  -webkit-animation: fadeOut 3000ms infinite linear 15150ms;
+          animation: fadeOut 3000ms infinite linear 15150ms;
+}
+
+#ui .track .foot {
+  position: absolute;
+  width: 8px;
+  height: 9px;
+  background: #000;
+  border-radius: 100%;
+  opacity: 0;
+}
+
+#ui .track .foot_claw {
+  content: '';
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: #000;
+  border-radius: 100%;
+}
+
+#ui .track .foot_claw:nth-child(1) {
+  top: -3px;
+  left: 8px;
+}
+
+#ui .track .foot_claw:nth-child(2) {
+  top: 3px;
+  left: 10px;
+}
+
+#ui .track .foot_claw:nth-child(3) {
+  top: 8px;
+  left: 8px;
+}
+
+#ui .track .foot.left {
+  top: -7px;
+}
+
+#ui .track .foot.right {
+  top: 7px;
+  left: 25px;
+}
+
+#ui.switch .track {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+#ui.switch p::after {
+  opacity: 1;
+}
+
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 0;
+  }
+}
+/*# sourceMappingURL=uploadedstyles.css.map */

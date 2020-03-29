@@ -182,7 +182,7 @@ h2 {
 
 h3 {
   font: 1.728em/1.5 'Cardo Bold', sans-serif;
-  color: rgb(20, 84, 167);
+  color: #51508B;
 }
 
 @media screen and (min-width: 768px) {
@@ -471,7 +471,7 @@ footer {
 
 footer h1 {
   text-align: center;
-  opacity: 40%;
+  opacity: 20%;
   margin-bottom: 20px;
 }
 
@@ -887,8 +887,6 @@ a:hover {
   padding: 0;
 }
 
-
-
 h1 {
   text-align: center;
   margin-top: 40px;
@@ -899,7 +897,7 @@ h1 {
 .con {
   width: 500px;
   height: 500px;
-  border: 1px white solid;
+  border: 2px white solid;
   border-radius: 898px;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
@@ -1012,7 +1010,7 @@ h1 {
   color: black;
   padding-right: 20px;
   font-size: 20px;
-  font-family:  Raleway Bold Italic;
+  font-family: 'Sriracha', cursive;
 }
 
 .textblack {
@@ -1025,7 +1023,7 @@ h1 {
   color: white;
   padding-right: 20px;
   font-size: 20px;
-  font-family:  Raleway Bold Italic;
+  font-family: 'Sriracha', cursive;
 }
 
 /* hover for text
@@ -1085,7 +1083,7 @@ h1 {
 
 .con_top > a:nth-child(2):hover .textyellow {
   font-size: 30px;
-  font-family:  Raleway Bold Italic;
+  font-family: 'Berkshire Swash', cursive;
 }
 
 .con_top > a:nth-child(1):hover {
@@ -1094,7 +1092,7 @@ h1 {
 
 .con_top > a:nth-child(1):hover .textwhite {
   font-size: 30px;
-  font-family:  Raleway Bold Italic;
+  font-family: 'Berkshire Swash', cursive;
 }
 
 /* Screen < 500px */
@@ -1201,10 +1199,6 @@ section {
 }
 
 /*Boundary line*/
-.footprint{
-  margin-top: 20px;
-  margin-bottom: 52px;
-}
 #ui {
   position: absolute;
   width: 100%;
@@ -3110,133 +3104,172 @@ td, th {
   border-radius: 2rem;
   color: white;
 }
-/*# sourceMappingURL=styles.css.map */
 
-/*--------------------- LOG IN ------------------------*/
-
-
-/* .logintitle{
-  text-align: center;
-  font-size: 40px;
-  color: aliceblue;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
-.form-group{
-  margin-top: 10px;
-}
-.username{
-  color: #09c0c0;
-}
-body{
-  background-image: url(/static/img/loginbg.jpg);
-}
-  .loginform{
-      background-color: seagreen;
-      border-radius: 20px;
-  } 
-  .logintitle{
-      text-align: center;
-      margin-bottom: 30px;
-      font-family: Raleway Bold Italic;
-  }
-  .logingroup{
-      text-align: center;
-  }
-  .loginform{
-      margin-left: 20%;
-      margin-right: 20%;
-  }
-  @media screen and (max-width: 800px) {
-    .loginform{
-      margin-top: 10%;
-    }
-  }
-  @media screen and (max-width: 500px) {
-    .loginform{
-      margin-left: 10%;
-      margin-right: 10%;
-    }
-  }
-  .username{
-      color: #fafce1;
-      font-family: Raleway Regular;
-  }
-  span{
-    font-family: Cardo bold;
-  }
-  .submit{
-    width: 100px;
-  } */
-
-
-  /*-----------------------------------------------------
-                NEWPOST STYLES
+/* ------------------------------------------------------
+                POST NEW STYLES
 ------------------------------------------------------ */
-
-.newposth1{
-  font-size: 50px;
+.newpostlable {
+  margin-left: 10%;
 }
 
-  /*-----------------------------------------------------
+.newposth1 {
+  font-size: 60px;
+  font-family: Raleway Blod;
+  margin-bottom: 5%;
+  color: black;
+}
+
+label {
+  font-size: 30px;
+  padding-right: 30px;
+  font-family: Cardo bold;
+}
+
+#id_category, #id_school, #id_title, #id_slug, #id_video {
+  font-size: 25px;
+  color: seagreen;
+  font-family: Cardo regular;
+}
+
+#id_image {
+  margin-bottom: 40px;
+}
+
+p {
+  padding-bottom: 20px;
+  color: #fafce1;
+}
+
+.newpostbtn {
+  font-size: 30px;
+  color: #1b4d31;
+  font-family: Cardo bold;
+  background-color: #fafce1;
+  border: 1px seagreen;
+  margin-bottom: 20px;
+  width: 100px;
+  border-radius: 10%;
+}
+
+/* ------------------------------------------------------
+                LOG IN STYLES
+------------------------------------------------------ */
+.loginform {
+  background-color: seagreen;
+  border-radius: 20px;
+}
+
+.logintitle {
+  text-align: center;
+  margin-bottom: 30px;
+  font-family: Raleway Bold Italic;
+}
+
+.logingroup {
+  text-align: center;
+}
+
+.loginform {
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-bottom: 0.75em;
+}
+
+@media screen and (max-width: 800px) {
+  .loginform {
+    margin-top: 10%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .loginform {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+}
+
+.username {
+  color: #fafce1;
+  font-family: Raleway Regular;
+}
+
+span {
+  font-family: Cardo bold;
+}
+
+.submit {
+  width: 100px;
+}
+
+/* ------------------------------------------------------
                 PROFILE STYLES
 ------------------------------------------------------ */
-.alert{
+.alert {
   font-size: 20px;
   margin-left: 10%;
-  color: rgb(255, 255, 255);
+  color: white;
 }
-.profile{
+
+.profile {
   margin-left: 10%;
 }
-.profileh2{
+
+.profileh2 {
   font-size: 2.369em;
   font-family: Raleway Bold Italic;
   margin-bottom: 0.75em;
 }
-.profileh2 span{
+
+.profileh2 span {
   font-family: Raleway Bold Italic;
   font-size: 1.777em;
   font-weight: bold;
   color: #fafce1;
 }
+
 @media screen and (max-width: 800px) {
-  .profileh2 span{
-       font-family: Raleway Bold Italic;
-       font-size: 1.333em;
-       font-weight: bold;
-       color: #fafce1;
+  .profileh2 span {
+    font-family: Raleway Bold Italic;
+    font-size: 1.333em;
+    font-weight: bold;
+    color: #fafce1;
   }
 }
-p{
+
+p {
   color: #fafce1;
 }
 
-p span{
+p span {
   font-size: 1.15em;
   font-weight: bold;
   color: black;
 }
-img{
+
+img {
   margin: 0.75em 0;
 }
 
-h3{
+h3 {
   margin-left: 10%;
   margin-top: 1.333em;
   margin-bottom: 0.75em;
   color: #fafce1;
 }
-.createpost{
+
+.createpost {
   border-radius: 10%;
-  padding:0.75em;
+  padding: 0.75em;
   font-size: 1.333em;
   margin-left: 10%;
   border: 1px #fafce1 solid;
   background-color: #fafce1;
   text-decoration: none;
-  color: rgb(27, 77, 49);
-  font-family: Raleway Bold ;
+  color: #1b4d31;
+  font-family: Raleway Bold;
 }
-footer{
+
+footer {
   margin-top: 3.777em;
 }
+/*# sourceMappingURL=styles.css.map */

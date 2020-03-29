@@ -1,0 +1,42 @@
+// .loginform{
+//     background-image: url(/static/img/loginbg.jpg);
+//   }
+  
+    .loginform{
+        background-color: seagreen;
+        border-radius: 20px;
+    } 
+    .logintitle{
+        text-align: center;
+        margin-bottom: 30px;
+        font-family: Raleway Bold Italic;
+    }
+    .logingroup{
+        text-align: center;
+    }
+    .loginform{
+        margin-left: 20%;
+        margin-right: 20%;
+        margin-bottom: 0.75em;
+    }
+    @media screen and (max-width: 800px) {
+      .loginform{
+        margin-top: 10%;
+      }
+    }
+    @media screen and (max-width: 500px) {
+      .loginform{
+        margin-left: 10%;
+        margin-right: 10%;
+      }
+    }
+    .username{
+        color: #fafce1;
+        font-family: Raleway Regular;
+    }
+    span{
+      font-family: Cardo bold;
+    }
+    .submit{
+      width: 100px;
+    }

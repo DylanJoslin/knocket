@@ -52,5 +52,18 @@
 @import 'dashboard/main/forms';
 @import 'dashboard/main/filter-forms';
 @import 'dashboard/main/alerts';
+/* ------------------------------------------------------
+                POST NEW STYLES
+------------------------------------------------------ */
 
+@import 'landing-page/post-new';
 
+/* ------------------------------------------------------
+                LOG IN STYLES
+------------------------------------------------------ */
+
+@import 'landing-page/login';
+/* ------------------------------------------------------
+                PROFILE STYLES
+------------------------------------------------------ */
+@import 'landing-page/profile';
