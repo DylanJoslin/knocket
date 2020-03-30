@@ -2712,6 +2712,79 @@ td, th {
 /* ------------------------------------------------------
                 USER STYLES
 ------------------------------------------------------ */
+.page-styles {
+  border: 1px solid #aeaeae;
+  padding: 1rem;
+  border-radius: 1rem;
+  background: white;
+  color: #0C2946;
+  margin: 1rem;
+  margin-top: 3rem;
+  margin-bottom: 10rem;
+}
+
+.page-styles label {
+  font-size: 1.2rem;
+  font-family: 'Raleway regular', sans-serif;
+}
+
+.page-styles input, .page-styles select {
+  margin-top: 0.5rem;
+  font-size: 1.1rem;
+  background: #ffffff;
+  width: 100%;
+  padding: 0.6rem;
+  color: #0C2946;
+  border: 1px solid #3EA3DF;
+  border-radius: 0.5rem;
+  font-family: 'Raleway Regular', sans-serif;
+  margin-bottom: 1.2rem;
+  outline: none;
+}
+
+.page-styles input:hover, .page-styles select:hover {
+  background: #3EA3DF;
+  border: 1px solid #0C2946;
+  color: white;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.page-styles .submit {
+  color: white;
+  background: #FB4547;
+  font-size: 1rem;
+  font-family: 'Cardo Regular', sans-serif;
+  text-transform: uppercase;
+  border-radius: 0.5rem;
+  text-align: center;
+  display: inline-block;
+  width: 100%;
+  padding: 0.6rem 2rem;
+  margin-bottom: 1rem;
+  text-decoration: none;
+}
+
+.page-styles .submit:hover {
+  background-color: #B4B9E5;
+  color: black;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+@media screen and (min-width: 700px) {
+  .page-styles .submit {
+    width: 250px;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    margin-right: 2rem;
+  }
+}
+
+.page-styles .helptext ul li {
+  font-size: 1rem;
+}
+
 .background {
   background: url(/static/img/overview-background.jpg);
   background-repeat: no-repeat;
@@ -2719,30 +2792,13 @@ td, th {
   background-size: 100% 13rem;
 }
 
-.login-container {
-  border: 1px solid #aeaeae;
-  padding: 1.2rem;
-  margin: 1rem;
-  margin-top: 0;
-  border-radius: 1rem;
-  margin-bottom: 12rem;
-  background: white;
-  color: #0C2946;
-}
-
-@media screen and (min-width: 700px) {
+@media only screen and (min-width: 820px) {
   .login-container {
-    width: 680px;
+    max-width: 800px;
     margin: 0 auto;
-    margin-bottom: 12rem;
+    margin-top: 3rem;
+    margin-bottom: 8rem;
   }
-}
-
-.login-container .login-heading {
-  font-size: 3rem;
-  font-family: 'Raleway Bold', sans-serif;
-  margin-bottom: 1rem;
-  margin-top: 3rem;
 }
 
 .login-container .login-form {
@@ -2772,53 +2828,6 @@ td, th {
     width: 620px;
     margin: 0 auto;
   }
-}
-
-.login-container .login-form label {
-  font-size: 1.2rem;
-  font-family: 'Raleway regular', sans-serif;
-}
-
-.login-container .login-form input {
-  margin-top: 0.5rem;
-  font-size: 1.1rem;
-  background: #ffffff;
-  width: 100%;
-  padding: 0.6rem;
-  color: #0C2946;
-  border: 1px solid #3EA3DF;
-  border-radius: 0.5rem;
-  font-family: 'Raleway Regular', sans-serif;
-  margin-bottom: 1.2rem;
-}
-
-.login-container .login-form .submit {
-  color: white;
-  background: #FB4547;
-  font-size: 1rem;
-  font-family: 'Cardo Regular', sans-serif;
-  text-transform: uppercase;
-  border-radius: 0.5rem;
-  text-align: center;
-  display: inline-block;
-  width: 100%;
-  padding: 0.6rem 2rem;
-  margin-bottom: 1rem;
-}
-
-@media screen and (min-width: 700px) {
-  .login-container .login-form .submit {
-    width: 220px;
-    margin: 0 auto;
-    margin-bottom: 2rem;
-  }
-}
-
-.login-container .login-form .submit:hover {
-  background-color: #B4B9E5;
-  color: black;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
 }
 
 .login-container .border {
@@ -2855,11 +2864,43 @@ td, th {
   border-top: 20px solid #51508B;
 }
 
-.user-profile {
-  padding: 1rem;
+@media only screen and (min-width: 820px) {
+  .edit-user {
+    width: 800px;
+    margin: 0 auto;
+    margin-bottom: 10rem;
+    margin-top: 3rem;
+  }
 }
 
 @media screen and (min-width: 700px) {
+  .edit-user {
+    padding: 2rem;
+  }
+}
+
+.edit-user h2 {
+  font-size: 3rem;
+  font-family: 'Raleway Bold', sans-serif;
+  margin-bottom: 1rem;
+  margin-top: 3rem;
+}
+
+.edit-user .edit-profile {
+  margin-bottom: 4rem;
+}
+
+.edit-user .edit-profile select {
+  height: 2.7rem;
+  margin-bottom: 3rem;
+}
+
+.user-profile {
+  padding: 1rem;
+  margin-top: 3rem;
+}
+
+@media only screen and (min-width: 820px) {
   .user-profile {
     max-width: 800px;
     margin: 0 auto;

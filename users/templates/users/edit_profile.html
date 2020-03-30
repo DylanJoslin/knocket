@@ -1,14 +1,16 @@
 {% extends "home/base.html" %}
 {% block content %}
-    <form enctype="multipart/form-data" method="POST">
-        <h2>Update Your Profile</h2>
+<div class="edit-user page-styles">
+    <h2>Update Your Profile</h2>
+    <form enctype="multipart/form-data" method="POST" class="edit-profile">
+        
         {% comment %} csrf_token is some built in security {% endcomment %}
         {% csrf_token %} 
         <div>
 
         {% comment %} Loops over each field specified in forms.py and generates a bootstrapped form-group {% endcomment %}
             {% for field in form %}
-                <div class="">
+                <div>
                     <label for="{{ field.html_name }}">{{ field.label }}</label>
                     <input 
                         type="{{ field.field.widget.input_type }}" 
@@ -34,7 +36,7 @@
             {% for field in profile_form %}
                 {% comment %} CREATE SELECT HTML ELEMENT {% endcomment %}
                 {% if field.field.widget.input_type == 'select' %}
-                    <div>
+                    <div class="select">
                         <label for="{{ field.html_name }}">{{ field.label }}</label>
                         <select name="{{ field.html_name }}" id="{{ field.html_name }}">
                             {% for choice in field.field.choices %}
@@ -68,8 +70,11 @@
                 {% endif %}
             {% endfor %}
 
-            <button type="submit">Update</button>
-            <a href="{% url 'change_password' %}">Change Password</a>
+            <button type="submit" class="submit">Update</button>
+            <a href="{% url 'change_password' %}" class="submit">Change Password</a>
         </div>
     </form>
+
+</div>
+    
 {% endblock content %}

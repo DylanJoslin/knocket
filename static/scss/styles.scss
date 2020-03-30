@@ -53,7 +53,9 @@
 /* ------------------------------------------------------
                 USER STYLES
 ------------------------------------------------------ */
-
+@import 'users/mixins';
+@import 'users/general';
 @import 'users/login';
+@import 'users/edit';
 @import 'users/profile';
 @import 'users/upload';
