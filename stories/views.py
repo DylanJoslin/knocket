@@ -9,8 +9,11 @@ from django.contrib.auth.decorators import login_required
 def post_list(request):
     school_slug = request.GET.get('school')
     category_slug = request.GET.get('category')
+    school_filter = VideoPost.objects.filter(school=school_slug)
+    category_filter = VideoPost.objects.filter(category=category_slug)
 
-    if VideoPost.objects.filter(school=school_slug).filter(category=category_slug).filter(approve = 1).exists():
+    if school_filter.filter(approve = 1).exists() or category_filter.filter(approve = 1).exists() or school_filter.filter(category=category_slug).filter(approve = 1).exists():
+
         posts = VideoPost.objects.all().filter(approve = 1)
     
         if school_slug:
