@@ -217,8 +217,20 @@ a {
 
 @media screen and (min-width: 1024px) {
   .inner-container {
+    margin: 0 6%;
+    max-width: 1125px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .inner-container {
     margin: 0 auto;
-    max-width: 1200px;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .inner-container {
+    margin: 0 auto;
   }
 }
 
@@ -439,11 +451,17 @@ img, .treaty-img {
 @media screen and (min-width: 768px) {
   .banner {
     height: 87vh;
-    padding: 120px 60px;
+    padding: 100px 60px;
   }
 }
 
 @media screen and (min-width: 1024px) {
+  .banner {
+    padding: 100px 120px;
+  }
+}
+
+@media screen and (min-width: 1600px) {
   .banner {
     padding: 100px 360px;
   }
@@ -464,8 +482,16 @@ img, .treaty-img {
 
 @media screen and (min-width: 1024px) {
   .banner .quote {
-    padding: 40px 120px;
+    padding: 40px 80px;
     margin-bottom: 100px;
+    max-width: 800px;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .banner .quote {
+    padding: 40px 120px;
+    max-width: 1200px;
   }
 }
 
@@ -474,6 +500,12 @@ img, .treaty-img {
 }
 
 @media screen and (min-width: 1024px) {
+  .banner .quote h3 {
+    font-size: 40px;
+  }
+}
+
+@media screen and (min-width: 1600px) {
   .banner .quote h3 {
     font-size: 50px;
   }
@@ -487,6 +519,12 @@ img, .treaty-img {
 @media screen and (min-width: 1024px) {
   .banner .quote h3 span {
     letter-spacing: 3px;
+    font-size: 46px;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .banner .quote h3 span {
     font-size: 60px;
   }
 }

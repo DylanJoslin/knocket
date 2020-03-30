@@ -2,10 +2,18 @@
     margin: 0 4%;
 
     @include media-lg{
-        margin: 0 auto;
-        max-width: 1200px;
+        margin: 0 6%;
+        max-width: 1125px;
     }
-  }
+
+    @include media-dk{
+        margin: 0 auto;
+    }
+
+    @include media-xl{
+        margin: 0 auto;
+    }
+}
 
 
 img, .treaty-img{
