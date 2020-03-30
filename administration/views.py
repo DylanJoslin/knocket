@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.models import User
 from django.contrib import messages
-from users.forms import AdminUserUpdateForm, AdminUserProfileForm, RegistrationForm, LoginForm, UserProfileForm, UserUpdateForm, ProfileUpdateForm
+from users.forms import AdminUserUpdateForm, AdminUserProfileForm, RegistrationForm, LoginForm, UserProfileForm, UserUpdateForm, ProfileUpdateForm, AdminProfileUpdateForm
 from django.contrib.auth.decorators import login_required
 from stories.models import VideoPost
 from .forms import AdminPostForm
@@ -129,30 +129,32 @@ def edit_users(request, username="none"):
         return redirect('/')
     elif request.user.userprofile.access == 'pending' or request.user.userprofile.access == 'student':
         return redirect('/')
-    else:
-        if request.user.userprofile.access == 'teacher' or request.user.userprofile.access == 'admin':
-            if username != 'none':
-                user = User.objects.get(username=username)
-                user_form = AdminUserUpdateForm(request.POST, instance=user)
-                profile_form = UserProfileForm(request.POST, instance=user.userprofile)
-                if request.method == 'POST':
+    elif request.user.userprofile.access == 'teacher' or request.user.userprofile.access == 'admin':
+        if username != 'none':
+            user = User.objects.get(username=username)
+            user_form = AdminUserUpdateForm(request.POST, instance=user)
+            profile_form = AdminProfileUpdateForm(request.POST, instance=user.userprofile)       
+            if request.method == 'POST':
+                if user_form.is_valid() and profile_form.is_valid():
                     user = user_form.save()
-                    profile = profile_form.save()
+                    # Don't commit profile to database yet
+                    profile = profile_form.save(commit=False)
+                    # Add user details to profile first
                     profile.user = user
+                    # THEN save to database
                     profile.save()
                     return redirect('/administration')
-                else:
-                    user_form = AdminUserUpdateForm(instance=user)
-                    profile_form = UserProfileForm(instance=user)
-                
-                context = {
-                    'form': user_form,
-                    'profile_form': profile_form,
-                    'edited_user': user
-                }
+            else: 
+                user_form = AdminUserUpdateForm( instance=user)
+                profile_form = AdminProfileUpdateForm( instance=user.userprofile)    
 
-                return render(request, 'administration/edit_user.html', context)
-        return render(request, 'administration/edit_user.html')
+            context = {
+                'form': user_form,
+                'profile_form': profile_form,
+                'edited_user': user
+            }
+
+            return render(request, 'administration/edit_user.html', context)
 
 
 def create_user(request):
