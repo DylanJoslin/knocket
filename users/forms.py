@@ -77,3 +77,10 @@ class AdminUserUpdateForm(forms.ModelForm):
             'email'
         ]
 
+class AdminProfileUpdateForm(forms.ModelForm):
+    class Meta: 
+        model = UserProfile
+        fields = [
+            'school',
+            'access'
+        ]

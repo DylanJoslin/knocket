@@ -42,7 +42,7 @@ def profile(request):
 def edit_profile(request):
     # TO DO: prepopulate forms with user data. SHOULD work with instance=requeset.user, but it doesnt :( )
     user_form = UserUpdateForm(request.POST, instance=request.user)
-    profile_form = ProfileUpdateForm(request.POST, request.FILES, instance=request.user.userprofile)
+    profile_form = ProfileUpdateForm(request.POST, instance=request.user.userprofile)
     if request.method == 'POST':
         if user_form.is_valid() and profile_form.is_valid():
             user = user_form.save()
