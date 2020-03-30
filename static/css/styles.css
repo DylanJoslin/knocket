@@ -2380,4 +2380,274 @@ td, th {
   border-radius: 2rem;
   color: white;
 }
+
+/* ------------------------------------------------------
+                USER STYLES
+------------------------------------------------------ */
+.background {
+  background: url(/static/img/overview-background.jpg);
+  background-repeat: no-repeat;
+  padding-top: 1rem;
+  background-size: 100% 13rem;
+}
+
+.login-container {
+  border: 1px solid #aeaeae;
+  padding: 1.2rem;
+  margin: 1rem;
+  margin-top: 0;
+  border-radius: 1rem;
+  margin-bottom: 12rem;
+  background: white;
+  color: #0C2946;
+}
+
+@media screen and (min-width: 700px) {
+  .login-container {
+    width: 680px;
+    margin: 0 auto;
+    margin-bottom: 12rem;
+  }
+}
+
+.login-container .login-heading {
+  font-size: 3rem;
+  font-family: 'Raleway Bold', sans-serif;
+  margin-bottom: 1rem;
+  margin-top: 3rem;
+}
+
+.login-container .login-form {
+  margin-bottom: 4rem;
+}
+
+@media screen and (min-width: 700px) {
+  .login-container .login-form {
+    width: 620px;
+    margin: 0 auto;
+    margin-bottom: 4rem;
+  }
+}
+
+.login-container .login-form .flex-container {
+  margin-bottom: 1.2rem;
+}
+
+@media screen and (min-width: 700px) {
+  .login-container .login-form .flex-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 620px;
+    margin: 0 auto;
+  }
+}
+
+.login-container .login-form label {
+  font-size: 1.2rem;
+  font-family: 'Raleway regular', sans-serif;
+}
+
+.login-container .login-form input {
+  margin-top: 0.5rem;
+  font-size: 1.1rem;
+  background: #ffffff;
+  width: 100%;
+  padding: 0.6rem;
+  color: #0C2946;
+  border: 1px solid #3EA3DF;
+  border-radius: 0.5rem;
+  font-family: 'Raleway Regular', sans-serif;
+  margin-bottom: 1.2rem;
+}
+
+.login-container .login-form .submit {
+  color: white;
+  background: #FB4547;
+  font-size: 1rem;
+  font-family: 'Cardo Regular', sans-serif;
+  text-transform: uppercase;
+  border-radius: 0.5rem;
+  text-align: center;
+  display: inline-block;
+  width: 100%;
+  padding: 0.6rem 2rem;
+  margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 700px) {
+  .login-container .login-form .submit {
+    width: 220px;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+  }
+}
+
+.login-container .login-form .submit:hover {
+  background-color: #B4B9E5;
+  color: black;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.login-container .border {
+  display: inline-block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: unset;
+      -ms-flex-pack: unset;
+          justify-content: unset;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 2px solid #51508B;
+  border-top: 2px solid #51508B;
+  padding: 0.7rem 0 0.7rem 1rem;
+  width: 20rem;
+  margin-bottom: 3rem;
+}
+
+.login-container .border .triangle-up {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 20px solid #B4B9E5;
+}
+
+.login-container .border .triangle-down {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 20px solid #51508B;
+}
+
+.user-profile {
+  padding: 1rem;
+}
+
+@media screen and (min-width: 700px) {
+  .user-profile {
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top: 3rem;
+  }
+}
+
+.user-profile .profile {
+  border: 1px solid #aeaeae;
+  padding: 1rem;
+  margin-top: 0;
+  border-radius: 1rem;
+  margin-bottom: 12rem;
+  background: white;
+  color: #0C2946;
+}
+
+@media screen and (min-width: 700px) {
+  .user-profile .profile {
+    padding: 2rem;
+  }
+}
+
+.user-profile .profile .name {
+  margin-bottom: 1rem;
+}
+
+@media only screen and (min-width: 400px) {
+  .user-profile .profile .name {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.user-profile .profile .name h2 {
+  font-size: 2.2rem;
+  font-family: 'Raleway Bold', sans-serif;
+  padding-right: 1rem;
+}
+
+@media screen and (min-width: 700px) {
+  .user-profile .profile .name h2 {
+    font-size: 3rem;
+  }
+}
+
+.user-profile .profile .name p {
+  background: #FB4547;
+  font-family: 'Raleway Regular', sans-serif;
+  font-size: 1rem;
+  padding: 0.3rem;
+  text-align: center;
+  border-radius: 0.4rem;
+  color: white;
+  width: 5rem;
+  text-transform: uppercase;
+}
+
+.user-profile .profile .information {
+  margin-bottom: 2rem;
+  border: 1px solid #e6e6e6;
+  background: #f9f9f9;
+  border-radius: 1rem;
+}
+
+.user-profile .profile .information p {
+  border-bottom: 1px solid #e6e6e6;
+  padding: 0.5rem;
+  padding-left: 1rem;
+}
+
+.user-profile .profile .information p .info-label {
+  font-family: 'Raleway Bold', sans-serif;
+}
+
+.user-profile .profile .information p:last-child {
+  border-bottom: 0;
+}
+
+@media screen and (min-width: 700px) {
+  .user-profile .profile .profile-buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .user-profile .profile .profile-buttons .button {
+    width: 15rem;
+  }
+  .user-profile .profile .profile-buttons .button:first-child {
+    margin-right: 1rem;
+  }
+}
+
+.user-profile .profile .button {
+  color: white;
+  background: #FB4547;
+  font-size: 1rem;
+  font-family: 'Cardo Regular', sans-serif;
+  text-transform: uppercase;
+  border-radius: 0.5rem;
+  text-align: center;
+  display: inline-block;
+  width: 100%;
+  padding: 0.6rem 2rem;
+  margin-bottom: 1rem;
+  text-decoration: none;
+}
+
+.user-profile .profile .button:hover {
+  background-color: #B4B9E5;
+  color: black;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
 /*# sourceMappingURL=styles.css.map */

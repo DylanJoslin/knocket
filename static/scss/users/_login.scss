@@ -1,0 +1,130 @@
+.background{
+    background: url(/static/img/overview-background.jpg);
+    background-repeat: no-repeat;
+    padding-top: 1rem;
+    background-size: 100% 13rem;
+}
+
+.login-container{
+    border: 1px solid rgb(174, 174, 174);
+    padding: 1.2rem;
+    margin: 1rem;
+    margin-top: 0;
+    border-radius: 1rem;
+    margin-bottom: 12rem;
+    background: rgb(255, 255, 255);
+    color: $third;
+
+    
+    @include breakpoint(tablet){
+        width: 680px;
+        margin: 0 auto;
+        margin-bottom: 12rem
+
+    }
+
+    .login-heading{
+        font-size: 3rem;
+        font-family: 'Raleway Bold', sans-serif;
+        margin-bottom: 1rem;
+        margin-top: 3rem;
+        
+    }
+    
+    .login-form{
+        margin-bottom: 4rem;
+    
+        @include breakpoint(tablet){
+            width: 620px;
+            margin: 0 auto;
+            margin-bottom: 4rem;
+        }
+        
+    
+        .flex-container{
+            margin-bottom: 1.2rem;
+            @include breakpoint(tablet){
+                display: flex;
+                justify-content: space-between;
+                width: 620px;
+                margin: 0 auto;
+            }
+        }
+        
+        label{
+            font-size: 1.2rem;
+            font-family: 'Raleway regular', sans-serif;
+        }
+    
+        input{
+            margin-top: 0.5rem;
+            font-size: 1.1rem;
+            background: #ffffff;
+            width: 100%;
+            padding: 0.6rem;
+            color: $third;
+            border: $input-border;
+            border-radius: 0.5rem;
+            font-family: 'Raleway Regular', sans-serif;
+            margin-bottom: 1.2rem;
+        }
+    
+        .submit{
+            color: white;
+            background: $secondary;
+            font-size: 1rem;
+            font-family: 'Cardo Regular', sans-serif;
+            text-transform: uppercase;
+            border-radius: 0.5rem;
+            text-align: center;
+            display: inline-block;
+            width: 100%;
+            padding: 0.6rem 2rem;
+            margin-bottom: 1rem;
+    
+            @include breakpoint(tablet){
+                width: 220px;
+                margin: 0 auto;
+                margin-bottom: 2rem;
+            }
+
+            &:hover{
+                background-color: $light-purple;
+                color: black;
+                transition: 0.5s;
+            }
+        }
+        
+    
+    }
+
+    .border {
+        display: inline-block;
+        @include flex(unset);
+        border-bottom: 2px solid $dark-purple;
+        border-top: 2px solid  $dark-purple;
+        padding: 0.7rem 0 0.7rem 1rem;
+        width: 20rem;
+        margin-bottom: 3rem;
+        
+        .triangle-up{
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-bottom: 20px solid $light-purple;
+        }
+
+        .triangle-down{
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-top: 20px solid $dark-purple;
+        }
+
+    }
+    
+}
+
+
