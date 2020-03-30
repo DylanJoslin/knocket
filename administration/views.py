@@ -104,7 +104,7 @@ def edit_upload(request, post_slug):
     else:
         post = get_object_or_404(VideoPost, slug=post_slug)
         if request.method == "POST":
-            form = AdminPostForm(request.POST, instance=post)
+            form = AdminPostForm(request.POST, request.FILES, instance=post)
             if form.is_valid():
                 post = form.save(commit=False)
                 post.save()
