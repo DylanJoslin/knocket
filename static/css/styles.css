@@ -195,7 +195,20 @@ a {
 }
 @media screen and (min-width: 1024px) {
   .inner-container {
-    margin: 0 20%;
+    margin: 0 6%;
+    max-width: 1125px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .inner-container {
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .inner-container {
+    margin: 0 auto;
   }
 }
 
@@ -228,6 +241,13 @@ img, .treaty-img {
     width: 200px;
     height: 200px;
     margin-right: 40px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .treaty .treaty-img {
+    width: 200px;
+    height: 200px;
   }
 }
 
@@ -363,7 +383,19 @@ img, .treaty-img {
 @media screen and (min-width: 768px) {
   .banner {
     height: 87vh;
-    padding: 120px 60px;
+    padding: 100px 60px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .banner {
+    padding: 100px 120px;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .banner {
+    padding: 100px 360px;
   }
 }
 .banner .quote {
@@ -377,13 +409,56 @@ img, .treaty-img {
     padding: 20px 30px;
   }
 }
+
+@media screen and (min-width: 1024px) {
+  .banner .quote {
+    padding: 40px 80px;
+    margin-bottom: 100px;
+    max-width: 800px;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .banner .quote {
+    padding: 40px 120px;
+    max-width: 1200px;
+  }
+}
+
 .banner .quote h3 {
   color: white;
 }
+
+@media screen and (min-width: 1024px) {
+  .banner .quote h3 {
+    font-size: 40px;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .banner .quote h3 {
+    font-size: 50px;
+  }
+}
+
 .banner .quote h3 span {
   color: #51508B;
   letter-spacing: 1.6px;
 }
+
+@media screen and (min-width: 1024px) {
+  .banner .quote h3 span {
+    letter-spacing: 3px;
+    font-size: 46px;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .banner .quote h3 span {
+    font-size: 60px;
+  }
+}
+
 .banner .explore-btn a {
   text-transform: uppercase;
   text-decoration: none;
@@ -399,6 +474,14 @@ img, .treaty-img {
 .banner .explore-btn a:hover {
   background-color: #B4B9E5;
   transition: 0.5s;
+}
+
+@media screen and (min-width: 1024px) {
+  .banner .explore-btn a {
+    padding: 20px 120px;
+    border-radius: 10px;
+    font-size: 26px;
+  }
 }
 
 .main-header .main-navigation {
@@ -1165,29 +1248,58 @@ h2 {
   color: #0C2946;
 }
 
-.resources-link-holder {
-  max-width: 1250px;
-  margin: 0 auto;
-}
-.resources-link-holder section > div > div > h3 {
-  color: #3EA3DF;
-}
-.resources-link-holder section > div > h2 {
-  padding-top: 2rem;
-}
-.resources-link-holder section > div > div {
-  text-align: center;
-  border: 1px solid #999;
-  border-radius: 10px;
-  margin: 2rem 0;
-  padding: 2rem;
+.education h2 {
+  margin-bottom: 40px;
 }
 
-.resources-link {
-  color: #fff;
-  background-color: #FB4547;
+@media screen and (min-width: 768px) {
+  .education .cards {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+.education .cards div {
+  padding: 14px;
   border-radius: 10px;
-  padding: 0.7rem;
+  border: 2px solid #B4B9E5;
+  margin-bottom: 40px;
+}
+
+@media screen and (min-width: 768px) {
+  .education .cards div {
+    margin-right: 20px;
+    width: 50%;
+  }
+}
+
+.education .cards div:nth-child(2) {
+  margin-right: 0;
+}
+
+.education .cards p {
+  margin-bottom: 20px;
+}
+
+.education .cards a {
+  text-decoration: none;
+  color: white;
+  background-color: #FB4547;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  border-radius: 6px;
+  display: table;
+  margin: 0 auto;
+}
+
+.education .cards a:hover {
+  background-color: #B4B9E5;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 @media only screen and (min-width: 767px) {

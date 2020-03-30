@@ -5,42 +5,51 @@ h2{
 }
 
 
-.resources-link-holder{
-    max-width: 1250px;
-    margin: 0 auto;
-  
-  section>div>div>h3{
-    color: #3EA3DF;
+.education{
+  h2{
+    margin-bottom: 40px;
   }
-  
-  section>div>h2{
-    padding-top: 2rem;
-  }
-  
-  section>div>div{
-    text-align: center;
-    border: 1px solid #999;
-    border-radius: 10px;
-    margin: 2rem 0;
-    padding: 2rem;
-  }
-}
-  
-.resources-link{
-    color: #fff;
-    background-color: #FB4547;
-    border-radius: 10px;
-    padding: 0.7rem;
-}
+  .cards{
 
-@media only screen and (min-width: 767px){
-  .re-flexer{
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    @include media-md{
+      display: flex;
+      justify-content: space-between;
+    }
+ 
+    & div{
+      padding: 14px;
+      border-radius: 10px;
+      border: 2px solid $light-purple;
+      margin-bottom: 40px;
 
-    div{
-      width: 45%;
+      @include media-md{
+        margin-right: 20px;
+        width: 50%;
+      }
+    }
+
+    div:nth-child(2){
+      margin-right: 0;
+    }
+
+    p{
+      margin-bottom: 20px;
+    }
+
+    a{
+      text-decoration: none;
+      color: white;
+      background-color: $red-colour;
+      text-transform: uppercase;
+      padding: 10px 20px;
+      border-radius: 6px;
+      display: table;
+      margin: 0 auto;
+
+      &:hover{
+        background-color: $light-purple;
+        transition: 0.5s;
+      }
     }
   }
 }

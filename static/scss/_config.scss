@@ -51,10 +51,17 @@ $orange-opacity: #ff7918db;
     }
 }
 
+
 @mixin media-lg {
     @media screen and (min-width: 1024px) {
         @content;
     }
+}
+
+@mixin media-dk{
+    @media screen and (min-width: 1280px) {
+      @content;
+  }
 }
 
 @mixin media-xl {

@@ -9,7 +9,15 @@
 
     @include media-md{
         height: 87vh;
-        padding: 120px 60px;
+        padding: 100px 60px;
+    }
+
+    @include media-lg{
+        padding: 100px 120px;
+    }
+
+    @include media-xl{
+        padding: 100px 360px;
     }
 
     .quote{
@@ -22,12 +30,40 @@
             padding: 20px 30px;
         }
 
+        @include media-lg{
+            padding: 40px 80px;
+            margin-bottom: 100px;
+            max-width: 800px;
+        }
+
+        @include media-xl{
+            padding: 40px 120px;
+            max-width: 1200px;
+        }
+
         h3{
             color: white;
+
+            @include media-lg{
+                font-size: 40px;
+            }
+
+            @include media-xl{
+                font-size: 50px;
+            }
 
             span{
                 color: $dark-purple;
                 letter-spacing: 1.6px;
+
+                @include media-lg{
+                    letter-spacing: 3px;
+                    font-size: 46px;
+                }
+
+                @include media-xl{
+                    font-size: 60px;
+                }
             }
         }
            
@@ -49,7 +85,13 @@
             &:hover{
                 background-color: $light-purple;
                 transition: 0.5s;
-            }    
+            }
+            
+            @include media-lg{
+                padding: 20px 120px;
+                border-radius: 10px;
+                font-size: 26px;
+            }
         }
     }
 }
