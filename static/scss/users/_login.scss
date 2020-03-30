@@ -1,0 +1,68 @@
+.background{
+    background: url(/static/img/overview-background.jpg);
+    background-repeat: no-repeat;
+    padding-top: 1rem;
+    background-size: 100% 13rem;
+}
+
+.login-container{
+
+    @media only screen and (min-width: 820px){
+        max-width: 800px;
+        margin: 0 auto;
+        margin-top: 3rem;
+        margin-bottom: 8rem;
+    }
+    
+    .login-form{
+        margin-bottom: 4rem;
+    
+        @include breakpoint(tablet){
+            width: 620px;
+            margin: 0 auto;
+            margin-bottom: 4rem;
+        }
+        
+    
+        .flex-container{
+            margin-bottom: 1.2rem;
+            @include breakpoint(tablet){
+                display: flex;
+                justify-content: space-between;
+                width: 620px;
+                margin: 0 auto;
+            }
+        }
+    
+    }
+
+    .border {
+        display: inline-block;
+        @include flex(unset);
+        border-bottom: 2px solid $dark-purple;
+        border-top: 2px solid  $dark-purple;
+        padding: 0.7rem 0 0.7rem 1rem;
+        width: 20rem;
+        margin-bottom: 3rem;
+        
+        .triangle-up{
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-bottom: 20px solid $light-purple;
+        }
+
+        .triangle-down{
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-top: 20px solid $dark-purple;
+        }
+
+    }
+    
+}
+
+

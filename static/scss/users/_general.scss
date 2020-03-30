@@ -1,0 +1,36 @@
+.page-styles{
+    border: 1px solid rgb(174, 174, 174);
+    padding: 1rem;
+    border-radius: 1rem;
+    background: rgb(255, 255, 255);
+    color: $third;
+    margin: 1rem;
+    margin-top: 3rem;
+    margin-bottom: 10rem;
+
+    label{
+        @include pageFormlabel;
+    }
+
+    input, select{
+        @include pageFormInput;
+    }
+
+    .submit{
+        @include pageFormButton;
+
+        @include breakpoint(tablet){
+            width: 250px;
+            margin: 0 auto;
+            margin-bottom: 2rem;
+            margin-right: 2rem;
+        }
+
+    }
+
+    .helptext ul li{
+        font-size: 2rem;
+    }
+
+
+}
