@@ -276,8 +276,8 @@ img, .treaty-img {
 
 @media screen and (min-width: 1024px) {
   .treaty .treaty-img {
-    width: 280px;
-    height: 280px;
+    width: 200px;
+    height: 200px;
   }
 }
 
@@ -1438,27 +1438,58 @@ h2 {
   color: #0C2946;
 }
 
-.resources-link-holder {
-  max-width: 1250px;
+.education h2 {
+  margin-bottom: 40px;
+}
+
+@media screen and (min-width: 768px) {
+  .education .cards {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+.education .cards div {
+  padding: 14px;
+  border-radius: 10px;
+  border: 2px solid #B4B9E5;
+  margin-bottom: 40px;
+}
+
+@media screen and (min-width: 768px) {
+  .education .cards div {
+    margin-right: 20px;
+    width: 50%;
+  }
+}
+
+.education .cards div:nth-child(2) {
+  margin-right: 0;
+}
+
+.education .cards p {
+  margin-bottom: 20px;
+}
+
+.education .cards a {
+  text-decoration: none;
+  color: white;
+  background-color: #FB4547;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  border-radius: 6px;
+  display: table;
   margin: 0 auto;
 }
 
-.resources-link-holder section > h2 {
-  padding-top: 2rem;
-}
-
-.resources-link-holder section > div {
-  border: 1px solid #999;
-  border-radius: 10px;
-  margin: 2rem 0;
-  padding: 2rem;
-}
-
-.resources-link {
-  color: #fff;
-  background-color: #09c0c0;
-  border-radius: 10px;
-  padding: 0.7rem;
+.education .cards a:hover {
+  background-color: #B4B9E5;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 /* ------------------------------------------------------
