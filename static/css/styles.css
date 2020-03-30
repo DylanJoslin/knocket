@@ -445,7 +445,7 @@ img, .treaty-img {
 
 @media screen and (min-width: 1024px) {
   .banner {
-    padding: 130px 360px;
+    padding: 100px 360px;
   }
 }
 
@@ -465,6 +465,7 @@ img, .treaty-img {
 @media screen and (min-width: 1024px) {
   .banner .quote {
     padding: 40px 120px;
+    margin-bottom: 100px;
   }
 }
 

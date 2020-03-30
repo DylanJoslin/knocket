@@ -13,7 +13,7 @@
     }
 
     @include media-lg{
-        padding: 130px 360px;
+        padding: 100px 360px;
     }
 
     .quote{
@@ -28,6 +28,7 @@
 
         @include media-lg{
             padding: 40px 120px;
+            margin-bottom: 100px;
 
         }
 
