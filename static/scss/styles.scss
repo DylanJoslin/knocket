@@ -4,7 +4,7 @@
 @import 'landing-page/reset';
 @import 'config';
 @import 'landing-page/typography';
-@import 'landing-page/styling';
+@import 'landing-page/landing';
 @import 'landing-page/header';
 @import 'landing-page/banner';
 @import 'landing-page/menu';
@@ -24,6 +24,8 @@
 /*-----------------------------------------------------
                 RESOURCES STYLES
 ------------------------------------------------------ */
+@import 'landing-page/typography';
+@import 'config';
 @import 'resources/resource-card';
 // >>>>>>> origin/master
 
@@ -62,8 +64,18 @@
                 LOG IN STYLES
 ------------------------------------------------------ */
 
+<<<<<<< HEAD
 @import 'landing-page/login';
 /* ------------------------------------------------------
                 PROFILE STYLES
 ------------------------------------------------------ */
 @import 'landing-page/profile';
+=======
+/* ------------------------------------------------------
+                USER STYLES
+------------------------------------------------------ */
+
+@import 'users/login';
+@import 'users/profile';
+@import 'users/upload';
+>>>>>>> origin/master

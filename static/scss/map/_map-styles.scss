@@ -168,9 +168,50 @@
     margin-top: 30%;
     left: 60%;
   }
+
+  .majorville-icon-main{
+    width: 5%;
+    position: relative;
+    margin-top: -23%;
+    left: 50%;
+  }
+
+  .lacsteanne-icon-main{
+    width: 5%;
+    position: relative;
+    margin-top: -50%;
+    left: 40%;
+  }
+
+  .headsmashed-icon-main{
+    width: 5%;
+    position: relative;
+    margin-top: 60%;
+    left: 60%;
+  }
+
+  .ribstones-icon-main{
+    width: 5%;
+    position: relative;
+    margin-top: -50%;
+    left: 60%;
+  }
+
+  .writingstone-icon-main{
+    width: 5%;
+    position: relative;
+    margin-top: 45%;
+    left: 70%;
+  }
+
+  .medicinelake-icon-main{
+    width: 5%;
+    position: relative;
+    margin-top: -42%;
+    left: 37%;
+  }
   
-  .school-icon-main:hover,
-  .treaty-icon-main:hover{
+  .map-icon:hover{
     border: 1px solid #999999;
     border-radius: 15px;
   }
@@ -181,6 +222,7 @@
   }
   
   .map-local-link{
+    margin-top: 2rem;
     width: 40%;
     text-align: center;
   }

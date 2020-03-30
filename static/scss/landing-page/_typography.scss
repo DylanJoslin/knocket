@@ -103,6 +103,10 @@ h3{
 h4{
     font: 1.44em/1.5 'Cardo Bold', sans-serif;
     color: $light-purple;
+
+    @include media-md{
+        font-size: 1.777em;
+    }
 }
 
 p{

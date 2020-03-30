@@ -196,6 +196,12 @@ h4 {
   color: #B4B9E5;
 }
 
+@media screen and (min-width: 768px) {
+  h4 {
+    font-size: 1.777em;
+  }
+}
+
 p {
   font: 18px/1.5 'Raleway Regular', sans-serif;
   text-align: justify;
@@ -211,7 +217,8 @@ a {
 
 @media screen and (min-width: 1024px) {
   .inner-container {
-    margin: 0 14%;
+    margin: 0 auto;
+    max-width: 1200px;
   }
 }
 
@@ -252,6 +259,90 @@ img, .treaty-img {
     width: 200px;
     height: 200px;
     margin-right: 40px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .treaty .treaty-img {
+    width: 280px;
+    height: 280px;
+  }
+}
+
+.seven-teachings {
+  margin-top: 100px;
+}
+
+.seven-teachings h3 {
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.seven-teachings p {
+  margin-bottom: 16px;
+}
+
+.seven-teachings .animals {
+  margin-top: 40px;
+}
+
+@media screen and (min-width: 768px) {
+  .seven-teachings .animals {
+    margin-top: 80px;
+  }
+}
+
+.seven-teachings .animals .teaching {
+  margin-bottom: 60px;
+}
+
+@media screen and (min-width: 768px) {
+  .seven-teachings .animals .teaching {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .seven-teachings .animals .teaching:nth-child(odd) {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .seven-teachings .animals .teaching div:first-child {
+    margin-right: 60px;
+  }
+}
+
+.seven-teachings .animals .teaching h4 {
+  text-align: center;
+  letter-spacing: 3px;
+}
+
+.seven-teachings .animals .teaching img {
+  width: 300px;
+  margin: 40px auto;
+}
+
+@media screen and (min-width: 768px) {
+  .seven-teachings .animals .teaching img {
+    width: 1200px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .seven-teachings .animals .teaching:nth-child(odd) div:first-child {
+    margin-right: 0px;
+    margin-left: 60px;
   }
 }
 
@@ -352,6 +443,12 @@ img, .treaty-img {
   }
 }
 
+@media screen and (min-width: 1024px) {
+  .banner {
+    padding: 100px 360px;
+  }
+}
+
 .banner .quote {
   background-color: #ff7918db;
   border-radius: 20px;
@@ -365,13 +462,33 @@ img, .treaty-img {
   }
 }
 
+@media screen and (min-width: 1024px) {
+  .banner .quote {
+    padding: 40px 120px;
+    margin-bottom: 100px;
+  }
+}
+
 .banner .quote h3 {
   color: white;
+}
+
+@media screen and (min-width: 1024px) {
+  .banner .quote h3 {
+    font-size: 50px;
+  }
 }
 
 .banner .quote h3 span {
   color: #51508B;
   letter-spacing: 1.6px;
+}
+
+@media screen and (min-width: 1024px) {
+  .banner .quote h3 span {
+    letter-spacing: 3px;
+    font-size: 60px;
+  }
 }
 
 .banner .explore-btn a {
@@ -393,15 +510,24 @@ img, .treaty-img {
   transition: 0.5s;
 }
 
+@media screen and (min-width: 1024px) {
+  .banner .explore-btn a {
+    padding: 20px 120px;
+    border-radius: 10px;
+    font-size: 26px;
+  }
+}
+
 .main-header .main-navigation {
   z-index: 90;
 }
 
 @media screen and (max-width: 999px) {
   .main-header .main-navigation {
-    padding: 20px;
+    padding: 60px 20px;
     text-align: center;
     width: 100%;
+    height: 100%;
     position: absolute;
     top: 30px;
     right: -100%;
@@ -434,9 +560,15 @@ img, .treaty-img {
   font-family: 'Raleway Regular', sans-serif;
   text-transform: uppercase;
   font-size: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 60px;
   text-decoration: none;
   color: white;
+}
+
+@media screen and (min-width: 768px) {
+  .main-header .main-navigation .nav-link a {
+    font-size: 24px;
+  }
 }
 
 @media screen and (min-width: 1000px) {
@@ -488,6 +620,10 @@ img, .treaty-img {
   margin-bottom: 20px;
 }
 
+.main-header .main-navigation .nav-link .sub-menu .nav-link a {
+  margin-bottom: 0;
+}
+
 @media screen and (min-width: 1000px) {
   .main-header .main-navigation .nav-link .sub-menu {
     position: absolute;
@@ -518,6 +654,23 @@ img, .treaty-img {
 @media screen and (min-width: 1000px) {
   .main-header .main-navigation .margin-bottom {
     margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .main-header .main-navigation .nav-buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .main-header .main-navigation .nav-buttons .show-at-mobile {
+    width: 400px;
   }
 }
 
@@ -885,8 +1038,49 @@ a:hover {
   left: 60%;
 }
 
-.school-icon-main:hover,
-.treaty-icon-main:hover {
+.majorville-icon-main {
+  width: 5%;
+  position: relative;
+  margin-top: -23%;
+  left: 50%;
+}
+
+.lacsteanne-icon-main {
+  width: 5%;
+  position: relative;
+  margin-top: -50%;
+  left: 40%;
+}
+
+.headsmashed-icon-main {
+  width: 5%;
+  position: relative;
+  margin-top: 60%;
+  left: 60%;
+}
+
+.ribstones-icon-main {
+  width: 5%;
+  position: relative;
+  margin-top: -50%;
+  left: 60%;
+}
+
+.writingstone-icon-main {
+  width: 5%;
+  position: relative;
+  margin-top: 45%;
+  left: 70%;
+}
+
+.medicinelake-icon-main {
+  width: 5%;
+  position: relative;
+  margin-top: -42%;
+  left: 37%;
+}
+
+.map-icon:hover {
   border: 1px solid #999999;
   border-radius: 15px;
 }
@@ -900,6 +1094,7 @@ a:hover {
 }
 
 .map-local-link {
+  margin-top: 2rem;
   width: 40%;
   text-align: center;
 }
@@ -2075,6 +2270,139 @@ section {
 /*-----------------------------------------------------
                 RESOURCES STYLES
 ------------------------------------------------------ */
+/* CARDO FONT */
+@font-face {
+  font-family: "Cardo Bold";
+  src: url("/static/fonts/Cardo-Bold.ttf");
+}
+
+@font-face {
+  font-family: "Cardo Italic";
+  src: url("/static/fonts/Cardo-Italic.ttf");
+}
+
+@font-face {
+  font-family: "Cardo Regular";
+  src: url("/static/fonts/Cardo-Regular.ttf");
+}
+
+/* RALEWAY FONT */
+@font-face {
+  font-family: "Raleway Light";
+  src: url("/static/fonts/Raleway-Light.ttf");
+}
+
+@font-face {
+  font-family: "Raleway Bold";
+  src: url("/static/fonts/Raleway-Bold.ttf");
+}
+
+@font-face {
+  font-family: "Raleway Bold Italic";
+  src: url("/static/fonts/Raleway-BoldItalic.ttf");
+}
+
+@font-face {
+  font-family: "Raleway Regular";
+  src: url("/static/fonts/Raleway-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Raleway Thin";
+  src: url("/static/fonts/Raleway-Thin.ttf");
+}
+
+@font-face {
+  font-family: "Raleway Thin Italic";
+  src: url("/static/fonts/Raleway-ThinItalic.ttf");
+}
+
+/* Custom Styles for Typography */
+h1, h2, h3, h4, h5 {
+  margin: 2.75rem 0 1.05rem;
+  font-weight: 500;
+  line-height: 1.15;
+}
+
+/* FONT-SIZES FOR IPAD/DESKTOP*/
+h1 {
+  font: 20px/1 'Cardo Regular', sans-serif;
+  margin-top: 0;
+  color: white;
+  text-transform: uppercase;
+}
+
+h1 span {
+  text-transform: none;
+  font-style: italic;
+  margin-left: 36px;
+}
+
+@media screen and (min-width: 768px) {
+  h1 span {
+    margin-left: 50px;
+  }
+}
+
+h1 a {
+  text-decoration: none;
+  color: white;
+}
+
+@media screen and (min-width: 768px) {
+  h1 {
+    font-size: 28px;
+  }
+}
+
+h2 {
+  font: 2.074em/1.5 'Raleway Regular', sans-serif;
+}
+
+@media screen and (min-width: 768px) {
+  h2 {
+    font-size: 3.157em;
+  }
+}
+
+h3 {
+  font: 1.728em/1.5 'Cardo Bold', sans-serif;
+  color: #51508B;
+}
+
+@media screen and (min-width: 768px) {
+  h3 {
+    font-size: 2.369em;
+  }
+}
+
+h4 {
+  font: 1.44em/1.5 'Cardo Bold', sans-serif;
+  color: #B4B9E5;
+}
+
+@media screen and (min-width: 768px) {
+  h4 {
+    font-size: 1.777em;
+  }
+}
+
+p {
+  font: 18px/1.5 'Raleway Regular', sans-serif;
+  text-align: justify;
+}
+
+a {
+  font-family: 'Cardo Regular', sans-serif;
+}
+
+/* Media Queries for different viewport sizes*/
+h2 {
+  text-align: center;
+  text-transform: uppercase;
+  color: #0C2946;
+}
+
 .resources-link-holder {
   max-width: 1250px;
   margin: 0 auto;
@@ -3385,6 +3713,7 @@ td, th {
 }
 
 /* ------------------------------------------------------
+<<<<<<< HEAD
                 POST NEW STYLES
 ------------------------------------------------------ */
 .newpostlable {
@@ -3550,5 +3879,274 @@ h3 {
 
 footer {
   margin-top: 3.777em;
+=======
+                USER STYLES
+------------------------------------------------------ */
+.background {
+  background: url(/static/img/overview-background.jpg);
+  background-repeat: no-repeat;
+  padding-top: 1rem;
+  background-size: 100% 13rem;
+}
+
+.login-container {
+  border: 1px solid #aeaeae;
+  padding: 1.2rem;
+  margin: 1rem;
+  margin-top: 0;
+  border-radius: 1rem;
+  margin-bottom: 12rem;
+  background: white;
+  color: #0C2946;
+}
+
+@media screen and (min-width: 700px) {
+  .login-container {
+    width: 680px;
+    margin: 0 auto;
+    margin-bottom: 12rem;
+  }
+}
+
+.login-container .login-heading {
+  font-size: 3rem;
+  font-family: 'Raleway Bold', sans-serif;
+  margin-bottom: 1rem;
+  margin-top: 3rem;
+}
+
+.login-container .login-form {
+  margin-bottom: 4rem;
+}
+
+@media screen and (min-width: 700px) {
+  .login-container .login-form {
+    width: 620px;
+    margin: 0 auto;
+    margin-bottom: 4rem;
+  }
+}
+
+.login-container .login-form .flex-container {
+  margin-bottom: 1.2rem;
+}
+
+@media screen and (min-width: 700px) {
+  .login-container .login-form .flex-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 620px;
+    margin: 0 auto;
+  }
+}
+
+.login-container .login-form label {
+  font-size: 1.2rem;
+  font-family: 'Raleway regular', sans-serif;
+}
+
+.login-container .login-form input {
+  margin-top: 0.5rem;
+  font-size: 1.1rem;
+  background: #ffffff;
+  width: 100%;
+  padding: 0.6rem;
+  color: #0C2946;
+  border: 1px solid #3EA3DF;
+  border-radius: 0.5rem;
+  font-family: 'Raleway Regular', sans-serif;
+  margin-bottom: 1.2rem;
+}
+
+.login-container .login-form .submit {
+  color: white;
+  background: #FB4547;
+  font-size: 1rem;
+  font-family: 'Cardo Regular', sans-serif;
+  text-transform: uppercase;
+  border-radius: 0.5rem;
+  text-align: center;
+  display: inline-block;
+  width: 100%;
+  padding: 0.6rem 2rem;
+  margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 700px) {
+  .login-container .login-form .submit {
+    width: 220px;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+  }
+}
+
+.login-container .login-form .submit:hover {
+  background-color: #B4B9E5;
+  color: black;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.login-container .border {
+  display: inline-block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: unset;
+      -ms-flex-pack: unset;
+          justify-content: unset;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 2px solid #51508B;
+  border-top: 2px solid #51508B;
+  padding: 0.7rem 0 0.7rem 1rem;
+  width: 20rem;
+  margin-bottom: 3rem;
+}
+
+.login-container .border .triangle-up {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 20px solid #B4B9E5;
+}
+
+.login-container .border .triangle-down {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 20px solid #51508B;
+}
+
+.user-profile {
+  padding: 1rem;
+}
+
+@media screen and (min-width: 700px) {
+  .user-profile {
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top: 3rem;
+  }
+}
+
+.user-profile .profile {
+  border: 1px solid #aeaeae;
+  padding: 1rem;
+  margin-top: 0;
+  border-radius: 1rem;
+  margin-bottom: 12rem;
+  background: white;
+  color: #0C2946;
+}
+
+@media screen and (min-width: 700px) {
+  .user-profile .profile {
+    padding: 2rem;
+  }
+}
+
+.user-profile .profile .name {
+  margin-bottom: 1rem;
+}
+
+@media only screen and (min-width: 400px) {
+  .user-profile .profile .name {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.user-profile .profile .name h2 {
+  font-size: 2.2rem;
+  font-family: 'Raleway Bold', sans-serif;
+  padding-right: 1rem;
+}
+
+@media screen and (min-width: 700px) {
+  .user-profile .profile .name h2 {
+    font-size: 3rem;
+  }
+}
+
+.user-profile .profile .name p {
+  background: #FB4547;
+  font-family: 'Raleway Regular', sans-serif;
+  font-size: 1rem;
+  padding: 0.3rem;
+  text-align: center;
+  border-radius: 0.4rem;
+  color: white;
+  width: 5rem;
+  text-transform: uppercase;
+}
+
+.user-profile .profile .information {
+  margin-bottom: 2rem;
+  border: 1px solid #e6e6e6;
+  background: #f9f9f9;
+  border-radius: 1rem;
+}
+
+.user-profile .profile .information p {
+  border-bottom: 1px solid #e6e6e6;
+  padding: 0.5rem;
+  padding-left: 1rem;
+}
+
+.user-profile .profile .information p .info-label {
+  font-family: 'Raleway Bold', sans-serif;
+}
+
+.user-profile .profile .information p:last-child {
+  border-bottom: 0;
+}
+
+@media screen and (min-width: 700px) {
+  .user-profile .profile .profile-buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .user-profile .profile .profile-buttons .button {
+    width: 15rem;
+  }
+  .user-profile .profile .profile-buttons .button:first-child {
+    margin-right: 1rem;
+  }
+}
+
+.user-profile .profile .button {
+  color: white;
+  background: #FB4547;
+  font-size: 1rem;
+  font-family: 'Cardo Regular', sans-serif;
+  text-transform: uppercase;
+  border-radius: 0.5rem;
+  text-align: center;
+  display: inline-block;
+  width: 100%;
+  padding: 0.6rem 2rem;
+  margin-bottom: 1rem;
+  text-decoration: none;
+}
+
+.user-profile .profile .button:hover {
+  background-color: #B4B9E5;
+  color: black;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+>>>>>>> origin/master
 }
 /*# sourceMappingURL=styles.css.map */

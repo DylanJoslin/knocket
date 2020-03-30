@@ -1,35 +1,41 @@
 {% extends "home/base.html" %}
 {% load static %}
 {% block content %}
-<<<<<<< HEAD
-    <div class="text-white bg-dark p-4">
-        <div class="profile mb-4">
-            <h2 class="mb-1 profileh2">Welcome, <span>{{ user.first_name }} {{ user.last_name }}</span></h2>
-            <p class="text-muted mb-0"><span>Username: </span>{{user}}</p>
-            <p class="text-muted mb-0"><span>School: </span>{{user.userprofile.school}}</p>
-            <p class="text-muted mb-0"><span>Email: </span>{{user.email}}</p>
-            <p class="text-muted mb-0"><span>Access: </span>{{user.userprofile.access}}</p>
-            <p class="text-muted mb-0"><span>Profile: </span><img src="{% static 'media/' %}{{user.userprofile.image}}" alt="{{ user.first_name }}'s profile photo"></p>
-=======
-    <div>
+
+
+    <div class="user-profile">
         <div class="profile">
-            <h2>{{ user.first_name }} {{ user.last_name }}</h2>
-            <p>{{user}}</p>
-            <p>{{user.userprofile.school}}</p>
-            <p>{{user.email}}</p>
-            <p>{{user.userprofile.access}}</p>
-            <a href="{% url 'edit_profile' %}">Edit Profile</a>
->>>>>>> origin/master
+            <div class="name">
+                <h2>{{ user.first_name }} {{ user.last_name }}</h2>
+                <p class="badge">{{user.userprofile.access}}</p>
+            </div>
+
+            <div class="information">
+                <p><span class="info-label">Username:</span> {{user}}</p>
+                <p><span class="info-label">School:</span> {{user.userprofile.school}}</p>
+                <p><span class="info-label">Email:</span> {{user.email}}</p>
+            </div>
+
+            {% if user.userprofile.access == 'pending' %}
+                <div>
+                    <p>Your account is pending approval from your teachers. Until then, you wont be able to post or view content from other students.</p>
+                </div>
+            {% elif user.userprofile.access == 'admin' %}
+                <div class="profile-buttons">
+                    <a href="{% url 'edit_profile' %}" class="button">Edit Profile</a>
+                    <a href="{% url 'administration' %}" class="button">Admin Dashboard</a>
+                </div>
+            {% else %}
+                <div class="profile-buttons">
+                    <a href="{% url 'edit_profile' %}" class="button">Edit Profile</a>
+                    <a href="{% url 'post_new'%}" class="button">Create Post</a>
+                </div>
+            {% endif %}
+
+
         </div>
 
-        {% if user.userprofile.access == 'pending' %}
-        <div>
-            Your account is pending approval from your teachers. Until then, you wont be able to post or view content from other students.
-        </div>
-        {% endif %}
-
-        <h3>Manage Your Posts Here</h3>
-        <a class="createpost" href="{% url 'post_new'%}">Create Post</a>
+        {% comment %} <h3>Manage Your Posts Here</h3> {% endcomment %}
     </div>
 
    
