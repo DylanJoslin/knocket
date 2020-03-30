@@ -12,10 +12,8 @@
     outline: none;
     
     &:hover{
-        background: $primary;
         border: 1px solid $third;
-        color: rgb(255, 255, 255);
-        transition: 0.5s;
+        transition: 0.4s;
     }
 }
 
@@ -47,9 +45,13 @@
 }
 
 @mixin pageHeading(){
-    font-size: 3rem;
-    font-family: 'Raleway Bold', sans-serif;
-    margin-bottom: 1rem;
-    margin-top: 3rem;
+    text-align: left;
+    font-size: 2.5rem;
+    padding-right: 1rem;
+    margin-bottom: 2rem;
+    line-height: 2.4rem;
+    @include breakpoint(tablet){
+        font-size: 3rem;
+    }
 }
 

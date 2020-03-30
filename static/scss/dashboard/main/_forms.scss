@@ -56,6 +56,11 @@
                 @include formInputs;
             }
 
+            .dashboard-input select{
+                padding: 0;
+                border: 1px solid green;
+            }
+
         }
 
         .form-button{

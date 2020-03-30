@@ -1,12 +1,56 @@
+.background{
+    background: linear-gradient(
+        rgba(255, 120, 24, 0.2), 
+        rgba(255, 120, 24, 0.2)), url(/static/img/fun-background-small.jpg);
+        background-repeat: repeat;
+        
+
+        @include breakpoint(laptop){
+            background: linear-gradient(
+            rgba(255, 120, 24, 0.2), 
+            rgba(255, 120, 24, 0.2)
+            ), url(/static/img/fun-background-medium.jpg);
+        }
+
+        @media only screen and (min-width: 1800px){
+            background: linear-gradient(
+            rgba(255, 120, 24, 0.2), 
+            rgba(255, 120, 24, 0.2)
+            ), url(/static/img/fun-background-large.jpg);
+        }
+    
+    background-size: 100%;
+
+    padding: 3rem 1rem;
+
+    @include breakpoint(tablet){
+        padding: 3rem;
+    }
+}
+
 .page-styles{
-    border: 1px solid rgb(174, 174, 174);
+    border: 2px solid $third;
     padding: 1rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
     border-radius: 1rem;
-    background: rgb(255, 255, 255);
+    background: rgba(255, 255, 255, 0.9);
     color: $third;
-    margin: 1rem;
-    margin-top: 3rem;
-    margin-bottom: 10rem;
+
+    @media only screen and (min-width: 820px){
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    @include breakpoint(tablet){
+        padding: 2rem;
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+
+    h2{
+        @include pageHeading;
+    }
 
     label{
         @include pageFormlabel;
@@ -14,6 +58,10 @@
 
     input, select{
         @include pageFormInput;
+    }
+
+    select{
+        height: 2.7rem;
     }
 
     .submit{
@@ -30,6 +78,48 @@
 
     .helptext ul li{
         font-size: 1rem;
+    }
+
+    .border {
+        display: inline-block;
+        @include flex(unset);
+        border-bottom: 2px solid $third;
+        border-top: 2px solid  $third;
+        padding: 0.7rem 0 0.7rem 1rem;
+        width: 16rem;
+        margin-bottom: 3rem;
+        
+        .triangle-up{
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-bottom: 20px solid $primary
+        }
+
+        .triangle-down{
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-top: 20px solid $secondary;
+        }
+
+    }
+
+    .border-mobile{
+        @include breakpoint(tablet){
+            display: none;
+        }
+    }
+
+    .border-tablet{
+        display: none;
+        @include breakpoint(tablet){
+            display: flex;
+        }
+
+        width: 32rem;
     }
 
 

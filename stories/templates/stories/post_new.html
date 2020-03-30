@@ -2,14 +2,55 @@
 {% extends 'home/base.html' %}
 
 {% block content %}
+<div class="background">
+    <div class="page-styles create-post-styles">
+        <h2>Create a new post</h2>
+            <div class="border border-mobile">
+                    <div class="triangle-up"></div>
+                    <div class="triangle-down"></div>
+                    <div class="triangle-up"></div>
+                    <div class="triangle-down"></div>
+                    <div class="triangle-up"></div>
+                    <div class="triangle-down"></div>
+                    <div class="triangle-up"></div>
+                    <div class="triangle-down"></div>
+                    <div class="triangle-up"></div>
+                    <div class="triangle-down"></div>
+                    <div class="triangle-up"></div>
+                </div>
 
-<div>
-    <h1>New post</h1>
-    <form method="POST" enctype="multipart/form-data">{% csrf_token %}
-        {{ form.media }}
-        {{ form.as_p }}
-        <button type="submit">Save</button>
-    </form>
+                <div class="border border-tablet">
+                    <div class="triangle-up"></div>
+                    <div class="triangle-down"></div>
+                    <div class="triangle-up"></div>
+                    <div class="triangle-down"></div>
+                    <div class="triangle-up"></div>
+                    <div class="triangle-down"></div>
+                    <div class="triangle-up"></div>
+                    <div class="triangle-down"></div>
+                    <div class="triangle-up"></div>
+                    <div class="triangle-down"></div>
+                    <div class="triangle-up"></div>
+                    <div class="triangle-down"></div>
+                    <div class="triangle-up"></div>
+                    <div class="triangle-down"></div>
+                    <div class="triangle-up"></div>
+                    <div class="triangle-down"></div>
+                    <div class="triangle-up"></div>
+                    <div class="triangle-down"></div>
+                    <div class="triangle-up"></div>
+                    <div class="triangle-down"></div>
+                    <div class="triangle-up"></div>
+                    <div class="triangle-down"></div>
+                    <div class="triangle-up"></div>
+                    <div class="triangle-down"></div>
+                </div>
+        <form method="POST" enctype="multipart/form-data">{% csrf_token %}
+            {{ form.media }}
+            {{ form.as_p }}
+            <button type="submit" class="submit">Create New Post</button>
+        </form>
+    </div>
+    <script src="/static/js/slugify.js"></script>
 </div>
-<script src="/static/js/slugify.js"></script>
 {% endblock %}

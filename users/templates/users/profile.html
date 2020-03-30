@@ -1,11 +1,53 @@
 {% extends "home/base.html" %}
 {% load static %}
 {% block content %}
+<div class="background">
     <div class="user-profile">
-        <div class="profile">
+        <div class="profile page-styles">
             <div class="name">
                 <h2>{{ user.first_name }} {{ user.last_name }}</h2>
                 <p class="badge">{{user.userprofile.access}}</p>
+            </div>
+
+            <div class="border border-mobile">
+                <div class="triangle-up"></div>
+                <div class="triangle-down"></div>
+                <div class="triangle-up"></div>
+                <div class="triangle-down"></div>
+                <div class="triangle-up"></div>
+                <div class="triangle-down"></div>
+                <div class="triangle-up"></div>
+                <div class="triangle-down"></div>
+                <div class="triangle-up"></div>
+                <div class="triangle-down"></div>
+                <div class="triangle-up"></div>
+            </div>
+
+            <div class="border border-tablet">
+                <div class="triangle-up"></div>
+                <div class="triangle-down"></div>
+                <div class="triangle-up"></div>
+                <div class="triangle-down"></div>
+                <div class="triangle-up"></div>
+                <div class="triangle-down"></div>
+                <div class="triangle-up"></div>
+                <div class="triangle-down"></div>
+                <div class="triangle-up"></div>
+                <div class="triangle-down"></div>
+                <div class="triangle-up"></div>
+                <div class="triangle-down"></div>
+                <div class="triangle-up"></div>
+                <div class="triangle-down"></div>
+                <div class="triangle-up"></div>
+                <div class="triangle-down"></div>
+                <div class="triangle-up"></div>
+                <div class="triangle-down"></div>
+                <div class="triangle-up"></div>
+                <div class="triangle-down"></div>
+                <div class="triangle-up"></div>
+                <div class="triangle-down"></div>
+                <div class="triangle-up"></div>
+                <div class="triangle-down"></div>
             </div>
 
             <div class="information">
@@ -24,7 +66,6 @@
                 <div class="profile-buttons">
                     <a href="{% url 'edit_profile' %}" class="button">Edit Profile</a>
                     <a href="{% url 'administration' %}" class="button">Admin Dashboard</a>
-                    <a href="{% url 'post_new'%}" class="button">Create Post</a>
                 </div>
             {% else %} 
                 <div class="profile-buttons">
@@ -37,4 +78,6 @@
 
         {% comment %} <h3>Manage Your Posts Here</h3> {% endcomment %}
     </div>
+</div>
+
 {% endblock content %}

@@ -518,6 +518,10 @@ img, .treaty-img {
   }
 }
 
+body {
+  overflow-x: hidden;
+}
+
 .main-header .main-navigation {
   z-index: 90;
 }
@@ -1908,6 +1912,8 @@ td, th {
 }
 
 .dashboard-main .welcome h2 {
+  text-align: left;
+  text-transform: unset;
   color: white;
   font-size: 4.4rem;
   line-height: 5.6rem;
@@ -2531,7 +2537,7 @@ td, th {
 }
 
 .dashboard-main .dashboard-form .dashboard-form-group .dashboard-label {
-  font-size: 2rem;
+  font-size: 2.4rem;
   color: #2f2f37;
   font-family: "Raleway Regluar", sans-serif;
 }
@@ -2551,6 +2557,11 @@ td, th {
   border: 1px solid #3EA3DF;
   border-radius: 0.5rem;
   font-family: "Raleway Regluar", sans-serif;
+}
+
+.dashboard-main .dashboard-form .dashboard-form-group .dashboard-input select {
+  padding: 0;
+  border: 1px solid green;
 }
 
 .dashboard-main .dashboard-form .form-button {
@@ -2640,6 +2651,42 @@ td, th {
   }
 }
 
+.dashboard-main .post-form #cke_id_content {
+  width: 100% !important;
+}
+
+.dashboard-main .post-form label {
+  font-size: 2.4rem;
+  color: #2f2f37;
+  font-family: "Raleway Regluar", sans-serif;
+}
+
+.dashboard-main .post-form p:nth-child(8n) {
+  margin-bottom: 0.6rem;
+}
+
+.dashboard-main .post-form input[type=text], .dashboard-main .post-form select {
+  margin-top: 0.8rem;
+  font-size: 1.8rem;
+  background: white;
+  height: 4.5rem;
+  width: 100%;
+  padding: 2rem 1rem;
+  color: #49576a;
+  border: 1px solid #3EA3DF;
+  border-radius: 0.5rem;
+  font-family: "Raleway Regluar", sans-serif;
+}
+
+.dashboard-main .post-form input[type=checkbox] {
+  width: 2rem;
+  height: 2rem;
+}
+
+.dashboard-main .post-form select {
+  padding: 0;
+}
+
 @media screen and (min-width: 700px) {
   .dashboard-main .filter .dashboard-form .flex-form {
     display: -webkit-box;
@@ -2712,15 +2759,71 @@ td, th {
 /* ------------------------------------------------------
                 USER STYLES
 ------------------------------------------------------ */
+.background {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 120, 24, 0.2)), to(rgba(255, 120, 24, 0.2))), url(/static/img/fun-background-small.jpg);
+  background: linear-gradient(rgba(255, 120, 24, 0.2), rgba(255, 120, 24, 0.2)), url(/static/img/fun-background-small.jpg);
+  background-repeat: repeat;
+  background-size: 100%;
+  padding: 3rem 1rem;
+}
+
+@media screen and (min-width: 1000px) {
+  .background {
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 120, 24, 0.2)), to(rgba(255, 120, 24, 0.2))), url(/static/img/fun-background-medium.jpg);
+    background: linear-gradient(rgba(255, 120, 24, 0.2), rgba(255, 120, 24, 0.2)), url(/static/img/fun-background-medium.jpg);
+  }
+}
+
+@media only screen and (min-width: 1800px) {
+  .background {
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 120, 24, 0.2)), to(rgba(255, 120, 24, 0.2))), url(/static/img/fun-background-large.jpg);
+    background: linear-gradient(rgba(255, 120, 24, 0.2), rgba(255, 120, 24, 0.2)), url(/static/img/fun-background-large.jpg);
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .background {
+    padding: 3rem;
+  }
+}
+
 .page-styles {
-  border: 1px solid #aeaeae;
+  border: 2px solid #0C2946;
   padding: 1rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
   border-radius: 1rem;
-  background: white;
+  background: rgba(255, 255, 255, 0.9);
   color: #0C2946;
-  margin: 1rem;
-  margin-top: 3rem;
-  margin-bottom: 10rem;
+}
+
+@media only screen and (min-width: 820px) {
+  .page-styles {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .page-styles {
+    padding: 2rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+}
+
+.page-styles h2 {
+  text-align: left;
+  font-size: 2.5rem;
+  padding-right: 1rem;
+  margin-bottom: 2rem;
+  line-height: 2.4rem;
+}
+
+@media screen and (min-width: 700px) {
+  .page-styles h2 {
+    font-size: 3rem;
+  }
 }
 
 .page-styles label {
@@ -2743,11 +2846,13 @@ td, th {
 }
 
 .page-styles input:hover, .page-styles select:hover {
-  background: #3EA3DF;
   border: 1px solid #0C2946;
-  color: white;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.page-styles select {
+  height: 2.7rem;
 }
 
 .page-styles .submit {
@@ -2785,31 +2890,63 @@ td, th {
   font-size: 1rem;
 }
 
-.background {
-  background: url(/static/img/overview-background.jpg);
-  background-repeat: no-repeat;
-  padding-top: 1rem;
-  background-size: 100% 13rem;
+.page-styles .border {
+  display: inline-block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: unset;
+      -ms-flex-pack: unset;
+          justify-content: unset;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 2px solid #0C2946;
+  border-top: 2px solid #0C2946;
+  padding: 0.7rem 0 0.7rem 1rem;
+  width: 16rem;
+  margin-bottom: 3rem;
 }
 
-@media only screen and (min-width: 820px) {
-  .login-container {
-    max-width: 800px;
-    margin: 0 auto;
-    margin-top: 3rem;
-    margin-bottom: 8rem;
+.page-styles .border .triangle-up {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 20px solid #3EA3DF;
+}
+
+.page-styles .border .triangle-down {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 20px solid #FB4547;
+}
+
+@media screen and (min-width: 700px) {
+  .page-styles .border-mobile {
+    display: none;
   }
 }
 
-.login-container .login-form {
-  margin-bottom: 4rem;
+.page-styles .border-tablet {
+  display: none;
+  width: 32rem;
+}
+
+@media screen and (min-width: 700px) {
+  .page-styles .border-tablet {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 @media screen and (min-width: 700px) {
   .login-container .login-form {
     width: 620px;
     margin: 0 auto;
-    margin-bottom: 4rem;
   }
 }
 
@@ -2830,100 +2967,6 @@ td, th {
   }
 }
 
-.login-container .border {
-  display: inline-block;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: unset;
-      -ms-flex-pack: unset;
-          justify-content: unset;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  border-bottom: 2px solid #51508B;
-  border-top: 2px solid #51508B;
-  padding: 0.7rem 0 0.7rem 1rem;
-  width: 20rem;
-  margin-bottom: 3rem;
-}
-
-.login-container .border .triangle-up {
-  width: 0;
-  height: 0;
-  border-left: 10px solid transparent;
-  border-right: 10px solid transparent;
-  border-bottom: 20px solid #B4B9E5;
-}
-
-.login-container .border .triangle-down {
-  width: 0;
-  height: 0;
-  border-left: 10px solid transparent;
-  border-right: 10px solid transparent;
-  border-top: 20px solid #51508B;
-}
-
-@media only screen and (min-width: 820px) {
-  .edit-user {
-    width: 800px;
-    margin: 0 auto;
-    margin-bottom: 10rem;
-    margin-top: 3rem;
-  }
-}
-
-@media screen and (min-width: 700px) {
-  .edit-user {
-    padding: 2rem;
-  }
-}
-
-.edit-user h2 {
-  font-size: 3rem;
-  font-family: 'Raleway Bold', sans-serif;
-  margin-bottom: 1rem;
-  margin-top: 3rem;
-}
-
-.edit-user .edit-profile {
-  margin-bottom: 4rem;
-}
-
-.edit-user .edit-profile select {
-  height: 2.7rem;
-  margin-bottom: 3rem;
-}
-
-.user-profile {
-  padding: 1rem;
-  margin-top: 3rem;
-}
-
-@media only screen and (min-width: 820px) {
-  .user-profile {
-    max-width: 800px;
-    margin: 0 auto;
-    margin-top: 3rem;
-  }
-}
-
-.user-profile .profile {
-  border: 1px solid #aeaeae;
-  padding: 1rem;
-  margin-top: 0;
-  border-radius: 1rem;
-  margin-bottom: 12rem;
-  background: white;
-  color: #0C2946;
-}
-
-@media screen and (min-width: 700px) {
-  .user-profile .profile {
-    padding: 2rem;
-  }
-}
-
 .user-profile .profile .name {
   margin-bottom: 1rem;
 }
@@ -2939,32 +2982,21 @@ td, th {
   }
 }
 
-.user-profile .profile .name h2 {
-  font-size: 2.2rem;
-  font-family: 'Raleway Bold', sans-serif;
-  padding-right: 1rem;
-}
-
-@media screen and (min-width: 700px) {
-  .user-profile .profile .name h2 {
-    font-size: 3rem;
-  }
-}
-
-.user-profile .profile .name p {
+.user-profile .profile .name .badge {
   background: #FB4547;
   font-family: 'Raleway Regular', sans-serif;
   font-size: 1rem;
-  padding: 0.3rem;
+  padding: 0.3rem 1rem;
+  margin-bottom: 2rem;
   text-align: center;
   border-radius: 0.4rem;
   color: white;
-  width: 5rem;
+  max-width: 8rem;
   text-transform: uppercase;
 }
 
 .user-profile .profile .information {
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
   border: 1px solid #e6e6e6;
   background: #f9f9f9;
   border-radius: 1rem;
@@ -2994,7 +3026,7 @@ td, th {
     width: 15rem;
   }
   .user-profile .profile .profile-buttons .button:first-child {
-    margin-right: 1rem;
+    margin-right: 2rem;
   }
 }
 
@@ -3018,5 +3050,14 @@ td, th {
   color: black;
   -webkit-transition: 0.5s;
   transition: 0.5s;
+}
+
+.create-post-styles .django-ckeditor-widget {
+  margin-top: 0.4rem;
+  margin-bottom: 1rem;
+}
+
+.create-post-styles #cke_id_content {
+  width: 100% !important;
 }
 /*# sourceMappingURL=styles.css.map */
