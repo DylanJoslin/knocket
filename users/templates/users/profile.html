@@ -16,14 +16,17 @@
 
             {% if user.userprofile.access == 'pending' %}
                 <div>
-                    <p>Your account is pending approval from your teachers. Until then, you wont be able to post or view content from other students.</p>
+                    <p>Your account is pending approval from your teachers. Until then, you wont be able to post or view content from other students. </p>
+                    <br>
+                    <p>You will be notified once your account is approved.</p>
                 </div>
             {% elif user.userprofile.access == 'admin' %}
                 <div class="profile-buttons">
                     <a href="{% url 'edit_profile' %}" class="button">Edit Profile</a>
                     <a href="{% url 'administration' %}" class="button">Admin Dashboard</a>
+                    <a href="{% url 'post_new'%}" class="button">Create Post</a>
                 </div>
-            {% else %}
+            {% else %} 
                 <div class="profile-buttons">
                     <a href="{% url 'edit_profile' %}" class="button">Edit Profile</a>
                     <a href="{% url 'post_new'%}" class="button">Create Post</a>

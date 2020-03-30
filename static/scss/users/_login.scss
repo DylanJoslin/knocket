@@ -6,29 +6,12 @@
 }
 
 .login-container{
-    border: 1px solid rgb(174, 174, 174);
-    padding: 1.2rem;
-    margin: 1rem;
-    margin-top: 0;
-    border-radius: 1rem;
-    margin-bottom: 12rem;
-    background: rgb(255, 255, 255);
-    color: $third;
 
-    
-    @include breakpoint(tablet){
-        width: 680px;
+    @media only screen and (min-width: 820px){
+        max-width: 800px;
         margin: 0 auto;
-        margin-bottom: 12rem
-
-    }
-
-    .login-heading{
-        font-size: 3rem;
-        font-family: 'Raleway Bold', sans-serif;
-        margin-bottom: 1rem;
         margin-top: 3rem;
-        
+        margin-bottom: 8rem;
     }
     
     .login-form{
@@ -50,51 +33,6 @@
                 margin: 0 auto;
             }
         }
-        
-        label{
-            font-size: 1.2rem;
-            font-family: 'Raleway regular', sans-serif;
-        }
-    
-        input{
-            margin-top: 0.5rem;
-            font-size: 1.1rem;
-            background: #ffffff;
-            width: 100%;
-            padding: 0.6rem;
-            color: $third;
-            border: $input-border;
-            border-radius: 0.5rem;
-            font-family: 'Raleway Regular', sans-serif;
-            margin-bottom: 1.2rem;
-        }
-    
-        .submit{
-            color: white;
-            background: $secondary;
-            font-size: 1rem;
-            font-family: 'Cardo Regular', sans-serif;
-            text-transform: uppercase;
-            border-radius: 0.5rem;
-            text-align: center;
-            display: inline-block;
-            width: 100%;
-            padding: 0.6rem 2rem;
-            margin-bottom: 1rem;
-    
-            @include breakpoint(tablet){
-                width: 220px;
-                margin: 0 auto;
-                margin-bottom: 2rem;
-            }
-
-            &:hover{
-                background-color: $light-purple;
-                color: black;
-                transition: 0.5s;
-            }
-        }
-        
     
     }
 

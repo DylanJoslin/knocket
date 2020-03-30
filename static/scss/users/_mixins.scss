@@ -1,0 +1,55 @@
+@mixin pageFormInput(){
+    margin-top: 0.5rem;
+    font-size: 1.1rem;
+    background: #ffffff;
+    width: 100%;
+    padding: 0.6rem;
+    color: $third;
+    border: $input-border;
+    border-radius: 0.5rem;
+    font-family: 'Raleway Regular', sans-serif;
+    margin-bottom: 1.2rem;
+    outline: none;
+    
+    &:hover{
+        background: $primary;
+        border: 1px solid $third;
+        color: rgb(255, 255, 255);
+        transition: 0.5s;
+    }
+}
+
+@mixin pageFormlabel(){
+    font-size: 1.2rem;
+    font-family: 'Raleway regular', sans-serif;
+}
+
+@mixin pageFormButton(){
+    color: white;
+    background: $secondary;
+    font-size: 1rem;
+    font-family: 'Cardo Regular', sans-serif;
+    text-transform: uppercase;
+    border-radius: 0.5rem;
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    padding: 0.6rem 2rem;
+    margin-bottom: 1rem;
+    text-decoration: none;
+
+    &:hover{
+        background-color: $light-purple;
+        color: black;
+        transition: 0.5s;
+    }
+
+}
+
+@mixin pageHeading(){
+    font-size: 3rem;
+    font-family: 'Raleway Bold', sans-serif;
+    margin-bottom: 1rem;
+    margin-top: 3rem;
+}
+
