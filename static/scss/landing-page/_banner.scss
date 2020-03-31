@@ -1,5 +1,5 @@
 .banner{
-    background-image: url(/static/img/banner.jpg);
+    background-image: url(/static/img/home_page_landing_image-01.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -9,40 +9,47 @@
 
     @include media-md{
         height: 87vh;
-        padding: 100px 60px;
+        padding: 80px 60px;
     }
 
     @include media-lg{
-        padding: 100px 120px;
+        height: 88vh;
+        padding: 60px 120px;
     }
 
     @include media-xl{
-        padding: 100px 360px;
+        height: 88vh;
+        padding: 80px 360px;
     }
 
     .quote{
-        background-color: $orange-opacity;
+        background-color: $purple-opacity;
         border-radius: 20px;
         padding: 20px;
-        margin-bottom: 140px;
+        margin-bottom: 100px;
 
         @include media-md{
-            padding: 20px 30px;
+            padding: 20px 48px;
         }
 
         @include media-lg{
-            padding: 40px 80px;
-            margin-bottom: 100px;
+            padding: 40px 50px;
             max-width: 800px;
         }
 
         @include media-xl{
-            padding: 40px 120px;
+            padding: 40px 100px;
             max-width: 1200px;
         }
 
         h3{
+            font-family: Fondamento;
             color: white;
+            font-size: 30px;
+
+            @include media-md{
+                font-size: 40px;
+            }
 
             @include media-lg{
                 font-size: 40px;
@@ -53,12 +60,17 @@
             }
 
             span{
-                color: $dark-purple;
-                letter-spacing: 1.6px;
+                color: $orange;
+                letter-spacing: 2px;
+                font-size: 40px;
+                margin-left: 40px;
 
+                @include media-md{
+                    font-size: 48px;
+                }
                 @include media-lg{
                     letter-spacing: 3px;
-                    font-size: 46px;
+                    font-size: 44px;
                 }
 
                 @include media-xl{

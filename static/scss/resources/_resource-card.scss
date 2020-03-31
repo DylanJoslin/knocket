@@ -1,14 +1,16 @@
-h2{
-  text-align: center;
-  text-transform: uppercase;
-  color: $dark-blue;
+.resources-link-holder{
+  margin: 60px auto;
 }
 
-
-.education{
+.education, .heritage, .mental-health{
+  margin-bottom: 100px;
   h2{
     margin-bottom: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    color: $dark-blue;
   }
+
   .cards{
 
     @include media-md{
@@ -21,6 +23,9 @@ h2{
       border-radius: 10px;
       border: 2px solid $light-purple;
       margin-bottom: 40px;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
 
       @include media-md{
         margin-right: 20px;
@@ -53,3 +58,45 @@ h2{
     }
   }
 }
+
+.heritage{
+  .cards{
+    @include media-md{
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    & div{
+      @include media-md{
+          width: 48%;
+      }
+    }
+
+    div:nth-child(4){
+      margin-right: 0;
+    }
+  }
+}
+
+.mental-health{
+  .cards{
+    @include media-md{
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    & div{
+      @include media-md{
+          width: 48%;
+      }
+    }
+
+    div:nth-child(4){
+      margin-right: 0;
+    }
+  }
+}
+
+
