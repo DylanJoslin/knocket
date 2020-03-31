@@ -19,11 +19,20 @@ def admin_home(request, access='pending', approve=0):
         # Count users to pass into context
         new_users = 0
         registered_users = 0
+        teacher_users = 0
+        elder_users = 0
+        admin_users = 0
         for user in User.objects.all():
             if user.userprofile.access == 'pending':
                 new_users = new_users + 1
             if user.userprofile.access == 'student':
                 registered_users = registered_users + 1
+            if user.userprofile.access == 'teacher':
+                teacher_users = teacher_users + 1
+            if user.userprofile.access == 'elder':
+                elder_users = elder_users + 1
+            if user.userprofile.access == 'admin':
+                admin_users = admin_users + 1
 
         access = [
             'pending',
@@ -32,6 +41,16 @@ def admin_home(request, access='pending', approve=0):
             'elder',
             'admin'
         ]
+
+        accessCounts = {
+            'pending': new_users,
+            'student': registered_users,
+            'teacher': teacher_users,
+            'elder': elder_users,
+            'admin': admin_users
+        }
+
+        
 
         new_post = 0
         approved_post = 0
@@ -44,8 +63,7 @@ def admin_home(request, access='pending', approve=0):
 
         context = {
             'users': User.objects.all(),
-            'new_users': new_users,
-            'registered_users': registered_users,
+            'accessCounts': accessCounts,
             'access': access,
             'posts': VideoPost.objects.all(),
             'new_post': new_post,
@@ -54,7 +72,7 @@ def admin_home(request, access='pending', approve=0):
         }
 
 
-        return render(request, 'administration/admin_home_loop.html', context)
+        return render(request, 'administration/admin_home.html', context)
 
 
 def admin_users(request, access='pending'):
@@ -63,20 +81,43 @@ def admin_users(request, access='pending'):
     elif request.user.userprofile.access == 'pending' or request.user.userprofile.access == 'student':
         return redirect('/')
     else:
-        # Count users to pass into context
         new_users = 0
         registered_users = 0
+        teacher_users = 0
+        elder_users = 0
+        admin_users = 0
         for user in User.objects.all():
             if user.userprofile.access == 'pending':
                 new_users = new_users + 1
             if user.userprofile.access == 'student':
                 registered_users = registered_users + 1
+            if user.userprofile.access == 'teacher':
+                teacher_users = teacher_users + 1
+            if user.userprofile.access == 'elder':
+                elder_users = elder_users + 1
+            if user.userprofile.access == 'admin':
+                admin_users = admin_users + 1
+
+        access = [
+            'pending',
+            'student',
+            'teacher',
+            'elder',
+            'admin'
+        ]
+
+        accessCounts = {
+            'pending': new_users,
+            'student': registered_users,
+            'teacher': teacher_users,
+            'elder': elder_users,
+            'admin': admin_users
+        }
 
         context = {
             'users': User.objects.all(),
-            'new_users': new_users,
-            'registered_users': registered_users,
-            'access': access
+            'access': access,
+            'accessCounts': accessCounts
         }
         return render(request, 'administration/admin_users.html', context)
 
@@ -141,7 +182,10 @@ def edit_users(request, username="none"):
         if username != 'none':
             user = User.objects.get(username=username)
             user_form = AdminUserUpdateForm(request.POST, instance=user)
-            profile_form = AdminProfileUpdateForm(request.POST, instance=user.userprofile)       
+            if request.user.userprofile.access == 'admin':
+                profile_form = AdminProfileUpdateForm(request.POST, instance=user.userprofile)       
+            else: 
+                profile_form = ProfileUpdateForm(request.POST, instance=user.userprofile)
             if request.method == 'POST':
                 if user_form.is_valid() and profile_form.is_valid():
                     user = user_form.save()
@@ -154,7 +198,10 @@ def edit_users(request, username="none"):
                     return redirect('/administration')
             else: 
                 user_form = AdminUserUpdateForm( instance=user)
-                profile_form = AdminProfileUpdateForm( instance=user.userprofile)    
+                if request.user.userprofile.access == 'admin':
+                    profile_form = AdminProfileUpdateForm(instance=user.userprofile)       
+                else: 
+                    profile_form = ProfileUpdateForm(instance=user.userprofile)    
 
             context = {
                 'form': user_form,
@@ -166,23 +213,33 @@ def edit_users(request, username="none"):
 
 
 def create_user(request):
-    if request.method == 'POST':
-        form = RegistrationForm(request.POST)
-        if request.user.userprofile.access == 'admin':
-            profile_form = AdminUserProfileForm(request.POST)
-        else:
-            profile_form = UserProfileForm(request.POST)
-        if form.is_valid() and profile_form.is_valid():
-            user = form.save()
-            profile = profile_form.save(commit=False)
-            profile.user = user
-            profile.save()
-            user.userprofile.access = 'student'
-            user.userprofile.save()
-            return redirect('admin_users')
-    else: 
-        form = RegistrationForm()
-        profile_form = AdminUserProfileForm()
+    if not request.user.is_authenticated:
+        return redirect('/')
+    elif request.user.userprofile.access == 'pending' or request.user.userprofile.access == 'student':
+        return redirect('/')
+    elif request.user.userprofile.access == 'teacher' or request.user.userprofile.access == 'admin':
+        if request.method == 'POST':
+            form = RegistrationForm(request.POST)
+            if request.user.userprofile.access == 'admin':
+                profile_form = AdminUserProfileForm(request.POST)
+            else:
+                profile_form = UserProfileForm(request.POST)
+            if form.is_valid() and profile_form.is_valid():
+                user = form.save()
+                profile = profile_form.save(commit=False)
+                profile.user = user
+                profile.save()
+                if request.user.userprofile.access == 'teacher':
+                    user.userprofile.access = 'student'
+                user.userprofile.save()
+                return redirect('admin_users')
+        else: 
+            form = RegistrationForm()
+            if request.user.userprofile.access == 'admin':
+                profile_form = AdminUserProfileForm()
+            else:
+                profile_form = UserProfileForm()
+        
 
     context = {
         'form': form,
@@ -198,7 +255,6 @@ def delete_user(request, username='none'):
         if username != 'none':
             user = User.objects.get(username=username)
             user.delete()
-            messages.success(request, f'This user has been deleted')
             return redirect('/administration')
     else:
         return redirect('/administration')
