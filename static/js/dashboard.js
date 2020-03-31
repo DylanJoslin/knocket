@@ -62,13 +62,13 @@ $(document).ready(function() {
 	
 	/*************** NEW USERS ***************/
     $('.acc-new-users').click(function(event) {
-		tabClick('#new-users', $(this));
+		tabClick('#pending-users', $(this));
 		event.preventDefault();
 	});
 
 	/*************** REGISTERED USERS ***************/
 	$('.acc-registered-users').click(function(event) {
-		tabClick('#registered-users', $(this));
+		tabClick('#student-users', $(this));
 		event.preventDefault();
 	});
 

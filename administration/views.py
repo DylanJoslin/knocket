@@ -25,6 +25,14 @@ def admin_home(request, access='pending', approve=0):
             if user.userprofile.access == 'student':
                 registered_users = registered_users + 1
 
+        access = [
+            'pending',
+            'student',
+            'teacher',
+            'elder',
+            'admin'
+        ]
+
         new_post = 0
         approved_post = 0
 
@@ -46,7 +54,7 @@ def admin_home(request, access='pending', approve=0):
         }
 
 
-        return render(request, 'administration/admin_home.html', context)
+        return render(request, 'administration/admin_home_loop.html', context)
 
 
 def admin_users(request, access='pending'):
