@@ -6,13 +6,15 @@ from django.shortcuts import redirect
 from django.contrib.auth.decorators import login_required
 # Create your views here.
 
+
+def browse(request):
+    return render(request, 'stories/browse.html')
+
 def post_list(request):
     school_slug = request.GET.get('school')
     category_slug = request.GET.get('category')
-    school_filter = VideoPost.objects.filter(school=school_slug)
-    category_filter = VideoPost.objects.filter(category=category_slug)
 
-    if school_filter.filter(approve = 1).exists() or category_filter.filter(approve = 1).exists() or school_filter.filter(category=category_slug).filter(approve = 1).exists():
+    if VideoPost.objects.filter(school=school_slug).filter(category=category_slug).filter(approve = 1).exists():
 
         posts = VideoPost.objects.all().filter(approve = 1)
     
@@ -48,7 +50,3 @@ def post_new(request):
         else:
             form = PostForm()
         return render(request, 'stories/post_new.html', {'form': form})
-
-
-def browse(request):
-    return render(request, 'stories/browse.html')
