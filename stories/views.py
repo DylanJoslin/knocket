@@ -24,7 +24,7 @@ def post_list(request):
     
         posts = posts.order_by('-date_posted')
     
-        return render(request, 'stories/browse.html', {'posts': posts})
+        return render(request, 'stories/post_list.html', {'posts': posts})
     return render(request, 'stories/no_post.html')
 
 def post_detail(request, post_slug):
@@ -48,3 +48,7 @@ def post_new(request):
         else:
             form = PostForm()
         return render(request, 'stories/post_new.html', {'form': form})
+
+
+def browse(request):
+    return render(request, 'stories/browse.html')
