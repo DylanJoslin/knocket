@@ -34,6 +34,12 @@
       margin-left: 2rem;
     }
 
+    a:hover{
+      background: $light-purple;
+      transition: 0.5s;
+      color: white;
+    }
+
   }
 
   .interactive-map{

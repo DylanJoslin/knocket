@@ -1070,6 +1070,13 @@ footer .bottom p {
   margin-left: 2rem;
 }
 
+.map-local-main a:hover {
+  background: #B4B9E5;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  color: white;
+}
+
 .interactive-map {
   background-color: rgba(11, 178, 228, 0.653);
   border-top: 4px solid #0C2946;
