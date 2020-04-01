@@ -77,7 +77,17 @@
     }
 
     .helptext ul li{
-        font-size: 1rem;
+        font-size: 1.2rem;
+        font-family: 'Raleway Regular', sans-serif;
+        padding-bottom: 0.4rem;
+    }
+
+    .helptext ul{
+        margin-bottom: 1rem;
+        border: 1px solid rgb(230, 230, 230);
+        background: rgb(249, 249, 249);
+        border-radius: 1rem;
+        padding: 1.4rem;
     }
 
     .border {

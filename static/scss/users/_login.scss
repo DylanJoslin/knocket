@@ -3,10 +3,7 @@
     .login-form{
         //margin-bottom: 4rem;
     
-        @include breakpoint(tablet){
-            width: 620px;
-            margin: 0 auto;
-        }
+        
         
     
         .flex-container{
@@ -15,7 +12,6 @@
                 display: flex;
                 justify-content: space-between;
                 width: 620px;
-                margin: 0 auto;
             }
         }
     

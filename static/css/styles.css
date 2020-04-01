@@ -3207,7 +3207,17 @@ td, th {
 }
 
 .page-styles .helptext ul li {
-  font-size: 1rem;
+  font-size: 1.2rem;
+  font-family: 'Raleway Regular', sans-serif;
+  padding-bottom: 0.4rem;
+}
+
+.page-styles .helptext ul {
+  margin-bottom: 1rem;
+  border: 1px solid #e6e6e6;
+  background: #f9f9f9;
+  border-radius: 1rem;
+  padding: 1.4rem;
 }
 
 .page-styles .border {
@@ -3263,13 +3273,6 @@ td, th {
   }
 }
 
-@media screen and (min-width: 700px) {
-  .login-container .login-form {
-    width: 620px;
-    margin: 0 auto;
-  }
-}
-
 .login-container .login-form .flex-container {
   margin-bottom: 1.2rem;
 }
@@ -3283,7 +3286,6 @@ td, th {
         -ms-flex-pack: justify;
             justify-content: space-between;
     width: 620px;
-    margin: 0 auto;
   }
 }
 
