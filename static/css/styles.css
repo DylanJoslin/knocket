@@ -1048,6 +1048,7 @@ footer .bottom p {
   padding-bottom: 3rem;
   padding-top: 5rem;
   color: white;
+  width: 100%;
 }
 
 .map-local-main h2 {
@@ -1056,6 +1057,7 @@ footer .bottom p {
   padding-bottom: 3rem;
   padding-top: 5rem;
   color: white;
+  width: 100%;
 }
 
 .map-local-main a {
@@ -1081,6 +1083,7 @@ footer .bottom p {
   padding-bottom: 3rem;
   padding-top: 5rem;
   color: white;
+  width: 100%;
 }
 
 .interactive-map h2 {
@@ -1089,6 +1092,7 @@ footer .bottom p {
   padding-bottom: 3rem;
   padding-top: 5rem;
   color: white;
+  width: 100%;
   width: 100%;
   padding: 0;
   margin-bottom: 2rem;
@@ -1140,7 +1144,7 @@ footer .bottom p {
 }
 
 .local-holder {
-  width: 50%;
+  padding: 0 4rem;
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1149,6 +1153,11 @@ footer .bottom p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.local-holder p {
+  max-width: 30rem;
+  margin: 0 auto;
 }
 
 .image-container {
@@ -1280,8 +1289,13 @@ footer .bottom p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 4rem;
 }
 
 .map-local-link {
@@ -1453,7 +1467,7 @@ footer .bottom p {
 }
 
 .white {
-  color: #999;
+  color: #0C2946;
 }
 
 /* ------------------------------------------------------

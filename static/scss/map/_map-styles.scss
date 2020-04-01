@@ -4,6 +4,7 @@
   padding-bottom: 3rem;
   padding-top: 5rem;
   color: white;
+  width: 100%;
 }
 
 
@@ -16,6 +17,7 @@
     h1{
       font-size: 4rem;
       @include heading;
+
     }
 
     h2{
@@ -91,10 +93,16 @@
   }
   
   .local-holder{
-    width: 50%;
+    padding: 0 4rem;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
+
+    p{
+      max-width: 30rem;
+      margin: 0 auto;
+    }
+
   }
   
   .image-container{
@@ -221,7 +229,10 @@
   
   .learn-more-local-buttons{
     display: flex;
-    justify-content: space-around;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 4rem
+   
   }
   
   .map-local-link{
@@ -384,5 +395,5 @@
   }
 
   .white{
-    color: #999;
+    color: $dark-blue;
   }
