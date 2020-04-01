@@ -1,14 +1,85 @@
 <!-- 'administration/base.html' -->
-{% extends 'home/base.html' %}
+{% extends 'administration/base.html' %}
 
 {% block content %}
-<div>
-    <h1>New post</h1>
-    <form method="POST" enctype="multipart/form-data">{% csrf_token %}
-        {{ form.media }}
-        {{ form.as_p }}
-        <button type="submit">Save</button>
-    </form>
-</div>
-<script src="/static/js/slugify.js"></script>
-{% endblock %}
+        
+<!-- ====================WELCOME BANNER==================== -->
+    <div class="welcome">
+        <h2>Edit Post</h2>
+        <div class="border">
+                <div class="triangle-up"></div>
+                <div class="triangle-down"></div>
+                <div class="triangle-up"></div>
+                <div class="triangle-down"></div>
+                <div class="triangle-up"></div>
+                <div class="triangle-down"></div>
+                <div class="triangle-up"></div>
+                <div class="triangle-down"></div>
+                <div class="triangle-up"></div>
+                <div class="triangle-down"></div>
+                <div class="triangle-up"></div>
+                <div class="triangle-down"></div>
+                <div class="triangle-up"></div>
+                <div class="triangle-down"></div>
+        </div>
+        <p>All fields must be entered fully.</p>
+    </div>
+<!-- ====================WELCOME BANNER CLOSE==================== -->
+        
+<!-- ====================CONTAINER==================== -->
+    <div class="width-container">
+        <div class="flex-container">
+            <div class="dashboard-form post-form">
+                <form method="POST" enctype="multipart/form-data">{% csrf_token %}
+                    {{ form.media }}
+                    {{ form.as_p }}
+                    <button type="submit" class="form-button">Edit Post</button>
+                </form>
+            </div>
+            <div class="side-image">
+					<div class="picture">
+                        <div class="triangle-up"></div>
+                        <div class="triangle-down"></div>
+                        <div class="triangle-up"></div>
+                        <div class="triangle-down"></div>
+                        <div class="triangle-up"></div>
+                        <div class="triangle-down"></div>
+                        <div class="triangle-up"></div>
+                        <div class="triangle-down"></div>
+                        <div class="triangle-up"></div>
+                        <div class="triangle-down"></div>
+                        <div class="triangle-up"></div>
+                        <div class="triangle-down"></div>
+                        <div class="triangle-up"></div>
+                        <div class="triangle-down"></div>
+						<div class="triangle-up"></div>
+                        <div class="triangle-down"></div>
+                        <div class="triangle-up"></div>
+                        <div class="triangle-down"></div>
+                        <div class="triangle-up"></div>
+                        <div class="triangle-down"></div>
+                        <div class="triangle-up"></div>
+                        <div class="triangle-down"></div>
+                        <div class="triangle-up"></div>
+                        <div class="triangle-down"></div>
+                        <div class="triangle-up"></div>
+                        <div class="triangle-down"></div>
+                        <div class="triangle-up"></div>
+                        <div class="triangle-down"></div>
+                        <div class="triangle-up"></div>
+                        <div class="triangle-down"></div>
+                        <div class="triangle-up"></div>
+                        <div class="triangle-down"></div>
+                        <div class="triangle-up"></div>
+                        <div class="triangle-down"></div>
+                        <div class="triangle-up"></div>
+                        <div class="triangle-down"></div>
+					</div>
+				</div>
+        </div>
+
+    </div><!--Container-->
+    <script src="/static/js/slugify.js"></script>
+<!-- ====================CONTAINER CLOSE==================== -->
+
+{% endblock content %}

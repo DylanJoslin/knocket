@@ -1,23 +1,83 @@
 {% extends "home/base.html" %}
 {% load static %}
 {% block content %}
-    <div class="text-white bg-dark p-4">
-        <div class="profile mb-4">
-            <h2 class="mb-1">{{ user.first_name }} {{ user.last_name }}</h2>
-            <p class="text-muted mb-0">{{user}}</p>
-            <p class="text-muted mb-0">{{user.userprofile.school}}</p>
-            <p class="text-muted mb-0">{{user.email}}</p>
-            <p class="text-muted mb-0">{{user.userprofile.access}}</p>
-            <p class="text-muted mb-0"><img src="{% static 'media/' %}{{user.userprofile.image}}" alt="{{ user.first_name }}'s profile photo"></p>
+<div class="background">
+    <div class="user-profile">
+        <div class="profile page-styles">
+            <div class="name">
+                <h2>{{ user.first_name }} {{ user.last_name }}</h2>
+                <p class="badge">{{user.userprofile.access}}</p>
+            </div>
+
+            <div class="border border-mobile">
+                <div class="triangle-up"></div>
+                <div class="triangle-down"></div>
+                <div class="triangle-up"></div>
+                <div class="triangle-down"></div>
+                <div class="triangle-up"></div>
+                <div class="triangle-down"></div>
+                <div class="triangle-up"></div>
+                <div class="triangle-down"></div>
+                <div class="triangle-up"></div>
+                <div class="triangle-down"></div>
+                <div class="triangle-up"></div>
+            </div>
+
+            <div class="border border-tablet">
+                <div class="triangle-up"></div>
+                <div class="triangle-down"></div>
+                <div class="triangle-up"></div>
+                <div class="triangle-down"></div>
+                <div class="triangle-up"></div>
+                <div class="triangle-down"></div>
+                <div class="triangle-up"></div>
+                <div class="triangle-down"></div>
+                <div class="triangle-up"></div>
+                <div class="triangle-down"></div>
+                <div class="triangle-up"></div>
+                <div class="triangle-down"></div>
+                <div class="triangle-up"></div>
+                <div class="triangle-down"></div>
+                <div class="triangle-up"></div>
+                <div class="triangle-down"></div>
+                <div class="triangle-up"></div>
+                <div class="triangle-down"></div>
+                <div class="triangle-up"></div>
+                <div class="triangle-down"></div>
+                <div class="triangle-up"></div>
+                <div class="triangle-down"></div>
+                <div class="triangle-up"></div>
+                <div class="triangle-down"></div>
+            </div>
+
+            <div class="information">
+                <p><span class="info-label">Username:</span> {{user}}</p>
+                <p><span class="info-label">School:</span> {{user.userprofile.school}}</p>
+                <p><span class="info-label">Email:</span> {{user.email}}</p>
+            </div>
+
+            {% if user.userprofile.access == 'pending' %}
+                <div>
+                    <p>Your account is pending approval from your teachers. Until then, you wont be able to post or view content from other students. </p>
+                    <br>
+                    <p>You will be notified once your account is approved.</p>
+                </div>
+            {% elif user.userprofile.access == 'admin' %}
+                <div class="profile-buttons">
+                    <a href="{% url 'edit_profile' %}" class="button">Edit Profile</a>
+                    <a href="{% url 'administration' %}" class="button">Admin Dashboard</a>
+                </div>
+            {% else %} 
+                <div class="profile-buttons">
+                    <a href="{% url 'edit_profile' %}" class="button">Edit Profile</a>
+                    <a href="{% url 'post_new'%}" class="button">Create Post</a>
+                </div>
+            {% endif %}
+
         </div>
 
-        {% if user.userprofile.access == 'pending' %}
-        <div class="alert alert-danger mb-4">
-            Your account is pending approval from your teachers. Until then, you wont be able to post or view content from other students.
-        </div>
-        {% endif %}
-
-        <h3>Manage Your Posts Here</h3>
-        <a href="{% url 'post_new'%}">Create Post</a>
+        {% comment %} <h3>Manage Your Posts Here</h3> {% endcomment %}
     </div>
+</div>
+
 {% endblock content %}

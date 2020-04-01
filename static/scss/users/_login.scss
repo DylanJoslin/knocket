@@ -1,0 +1,26 @@
+.login-container{
+    
+    .login-form{
+        //margin-bottom: 4rem;
+    
+        @include breakpoint(tablet){
+            width: 620px;
+            margin: 0 auto;
+        }
+        
+    
+        .flex-container{
+            margin-bottom: 1.2rem;
+            @include breakpoint(tablet){
+                display: flex;
+                justify-content: space-between;
+                width: 620px;
+                margin: 0 auto;
+            }
+        }
+    
+    }
+    
+}
+
+

@@ -18,6 +18,11 @@
             width: 78%;
         }
 
+        @include breakpoint(desktop){
+            @include padding(extraLarge);
+            width: 100%;
+        }
+
         .dashboard-form-group{
             position: relative;
             margin-bottom: 2rem;
@@ -51,6 +56,11 @@
                 @include formInputs;
             }
 
+            .dashboard-input select{
+                padding: 0;
+                border: 1px solid green;
+            }
+
         }
 
         .form-button{
@@ -69,6 +79,7 @@
     }
 
     .flex-container{
+        padding-top: 5rem;
         @include breakpoint(tablet){
             @include flex(unset);
         }
@@ -76,15 +87,34 @@
         .side-image {
             display: none;
             @include breakpoint(tablet){
-                background: rgba(128, 128, 128, 0.529);
-                border: 1px solid grey;
-                padding: 25rem 8rem;
+                padding: 0 3rem;
                 display: inline-block;
                 margin-left: 1rem;
             }
 
-            @include breakpoint(laptop){
-                padding: 25rem 8rem;
+            .picture {
+                display: inline-block;
+                border-left: 2px solid $secondary;
+                border-right: 2px solid $secondary;
+                padding: 1rem;
+                margin-bottom: 4rem;
+                
+                .triangle-up{
+                    width: 0;
+                    height: 0;
+                    border-top: 30px solid transparent;
+                    border-bottom: 30px solid transparent;
+                    border-right: 40px solid $secondary;
+                }
+    
+                .triangle-up{
+                    width: 0;
+                    height: 0;
+                    border-top: 30px solid transparent;
+                    border-bottom: 30px solid transparent;
+                    border-left: 40px solid $secondary;
+                }
+    
             }
 
         }

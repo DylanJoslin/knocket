@@ -1,0 +1,32 @@
+.dashboard-main{
+
+    .post-form{
+
+        #cke_id_content{
+            width: 100% !important;
+        }
+
+        label{
+            @include formLabels;
+        }
+
+        p:nth-child(8n){
+            margin-bottom: 0.6rem;
+        }
+
+        input[type=text], select{
+            @include formInputs;
+        }
+
+        input[type=checkbox]{
+            width: 2rem;
+            height: 2rem;
+        }
+
+        select{
+            padding: 0;
+        }
+
+    }
+
+}

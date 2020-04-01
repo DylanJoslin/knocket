@@ -54,7 +54,7 @@ class UserUpdateForm(forms.ModelForm):
         model = User
         fields = [
             'username',
-            'email',
+            'email'
         ]
 
 # Model used by the student in conjunction with UserUpdateForm
@@ -63,7 +63,6 @@ class ProfileUpdateForm(forms.ModelForm):
         model = UserProfile
         fields = (
             'school',
-            'image',
         )
 
 # Model used by an Administrator/Teacher to update a students info on their behalf
@@ -78,3 +77,10 @@ class AdminUserUpdateForm(forms.ModelForm):
             'email'
         ]
 
+class AdminProfileUpdateForm(forms.ModelForm):
+    class Meta: 
+        model = UserProfile
+        fields = [
+            'school',
+            'access'
+        ]

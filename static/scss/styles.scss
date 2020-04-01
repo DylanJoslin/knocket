@@ -29,14 +29,13 @@
 @import 'dashboard/base/minireset';
 @import 'dashboard/base/variables';
 @import 'dashboard/base/base';
+@import 'dashboard/base/typography';
 
 @import 'dashboard/mixins/base';
 @import 'dashboard/mixins/buttons';
 @import 'dashboard/mixins/links';
 @import 'dashboard/mixins/forms';
 @import 'dashboard/mixins/accordion';
-
-@import 'dashboard/base/typography';
 
 @import 'dashboard/header/header';
 @import 'dashboard/header/navigation';
@@ -46,7 +45,16 @@
 @import 'dashboard/main/accordion';
 @import 'dashboard/main/overview';
 @import 'dashboard/main/forms';
+@import 'dashboard/main/edit-upload';
 @import 'dashboard/main/filter-forms';
 @import 'dashboard/main/alerts';
 
 
+/* ------------------------------------------------------
+                USER STYLES
+------------------------------------------------------ */
+@import 'users/mixins';
+@import 'users/general';
+@import 'users/login';
+@import 'users/profile';
+@import 'users/upload';

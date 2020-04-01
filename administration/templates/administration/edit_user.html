@@ -61,7 +61,14 @@
 																<label class="dashboard-label" for="{{ field.html_name }}">{{ field.label }}</label>
 																<select name="{{ field.html_name }}" id="{{ field.html_name }}" class="dashboard-input">
 																		{% for choice in field.field.choices %}
-																				<option value="{{ choice.0 }}">{{ choice.1 }}</option>
+																				{% comment %} If value == choice, set selected {% endcomment %}
+																				{% comment %} if edited_user.userprofile.access == choice.0 or edited_user.userprofile.school == choice.0{% endcomment %}
+																				<option
+																					value="{{ choice.0 }}"
+																					{% if edited_user.userprofile.access == choice.0 or edited_user.userprofile.school == choice.0%}
+																					selected
+																					{%endif%}
+																				>{{ choice.1 }}</option>
 																		{% endfor %}
 																</select>
 														</div>
@@ -93,7 +100,28 @@
 											<button class="form-button">Submit Changes</button>
                     </form>
                 </div>
-                <div class="side-image"></div>
+                <div class="side-image">
+					<div class="picture">
+                        <div class="triangle-up"></div>
+                        <div class="triangle-down"></div>
+                        <div class="triangle-up"></div>
+                        <div class="triangle-down"></div>
+                        <div class="triangle-up"></div>
+                        <div class="triangle-down"></div>
+                        <div class="triangle-up"></div>
+                        <div class="triangle-down"></div>
+                        <div class="triangle-up"></div>
+                        <div class="triangle-down"></div>
+                        <div class="triangle-up"></div>
+                        <div class="triangle-down"></div>
+                        <div class="triangle-up"></div>
+                        <div class="triangle-down"></div>
+						<div class="triangle-up"></div>
+                        <div class="triangle-down"></div>
+                        <div class="triangle-up"></div>
+                        <div class="triangle-down"></div>
+					</div>
+				</div>
             </div>
 
         </div><!--Container-->
