@@ -1,9 +1,9 @@
 @mixin heading(){
   text-transform: unset;
   font-family: 'Cardo Regular';
-  padding-bottom: 3rem;
+  padding-bottom: 1rem;
   padding-top: 5rem;
-  color: white;
+  color: rgb(255, 255, 255);
   width: 100%;
 }
 
@@ -26,7 +26,7 @@
 
     a{
       background: $red-colour;
-      color: white;
+      color: rgb(255, 255, 255);
       text-decoration: none;
       width: 25%;
       margin: 0;
@@ -40,6 +40,13 @@
     background-color: rgba(11, 178, 228, 0.653);
     border-top: 4px solid $dark-blue;
     border-bottom: 4px solid $dark-blue;
+
+    p{
+      text-align: center;
+      color: rgb(255, 255, 255);
+      font-size: 1.6rem;
+      margin-bottom: 3rem;
+    }
 
     h1{
       font-size: 4rem;

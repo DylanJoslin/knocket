@@ -1045,7 +1045,7 @@ footer .bottom p {
   font-size: 4rem;
   text-transform: unset;
   font-family: 'Cardo Regular';
-  padding-bottom: 3rem;
+  padding-bottom: 1rem;
   padding-top: 5rem;
   color: white;
   width: 100%;
@@ -1054,7 +1054,7 @@ footer .bottom p {
 .map-local-main h2 {
   text-transform: unset;
   font-family: 'Cardo Regular';
-  padding-bottom: 3rem;
+  padding-bottom: 1rem;
   padding-top: 5rem;
   color: white;
   width: 100%;
@@ -1076,11 +1076,18 @@ footer .bottom p {
   border-bottom: 4px solid #0C2946;
 }
 
+.interactive-map p {
+  text-align: center;
+  color: white;
+  font-size: 1.6rem;
+  margin-bottom: 3rem;
+}
+
 .interactive-map h1 {
   font-size: 4rem;
   text-transform: unset;
   font-family: 'Cardo Regular';
-  padding-bottom: 3rem;
+  padding-bottom: 1rem;
   padding-top: 5rem;
   color: white;
   width: 100%;
@@ -1089,7 +1096,7 @@ footer .bottom p {
 .interactive-map h2 {
   text-transform: unset;
   font-family: 'Cardo Regular';
-  padding-bottom: 3rem;
+  padding-bottom: 1rem;
   padding-top: 5rem;
   color: white;
   width: 100%;
