@@ -1,21 +1,21 @@
 .background{
     background: linear-gradient(
-        rgba(255, 120, 24, 0.2), 
-        rgba(255, 120, 24, 0.2)), url(/static/img/fun-background-small.jpg);
+        rgba(24, 166, 255, 0.2), 
+        rgba(24, 166, 255, 0.2)), url(/static/img/fun-background-small.jpg);
         background-repeat: repeat;
         
 
         @include breakpoint(laptop){
             background: linear-gradient(
-            rgba(255, 120, 24, 0.2), 
-            rgba(255, 120, 24, 0.2)
+            rgba(24, 166, 255, 0.2), 
+            rgba(24, 166, 255, 0.2)
             ), url(/static/img/fun-background-medium.jpg);
         }
 
         @media only screen and (min-width: 1800px){
             background: linear-gradient(
-            rgba(255, 120, 24, 0.2), 
-            rgba(255, 120, 24, 0.2)
+            rgba(24, 166, 255, 0.2), 
+            rgba(24, 166, 255, 0.2)
             ), url(/static/img/fun-background-large.jpg);
         }
     

@@ -3080,8 +3080,8 @@ td, th {
                 USER STYLES
 ------------------------------------------------------ */
 .background {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 120, 24, 0.2)), to(rgba(255, 120, 24, 0.2))), url(/static/img/fun-background-small.jpg);
-  background: linear-gradient(rgba(255, 120, 24, 0.2), rgba(255, 120, 24, 0.2)), url(/static/img/fun-background-small.jpg);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(24, 166, 255, 0.2)), to(rgba(24, 166, 255, 0.2))), url(/static/img/fun-background-small.jpg);
+  background: linear-gradient(rgba(24, 166, 255, 0.2), rgba(24, 166, 255, 0.2)), url(/static/img/fun-background-small.jpg);
   background-repeat: repeat;
   background-size: 100%;
   padding: 3rem 1rem;
@@ -3089,15 +3089,15 @@ td, th {
 
 @media screen and (min-width: 1000px) {
   .background {
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 120, 24, 0.2)), to(rgba(255, 120, 24, 0.2))), url(/static/img/fun-background-medium.jpg);
-    background: linear-gradient(rgba(255, 120, 24, 0.2), rgba(255, 120, 24, 0.2)), url(/static/img/fun-background-medium.jpg);
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(24, 166, 255, 0.2)), to(rgba(24, 166, 255, 0.2))), url(/static/img/fun-background-medium.jpg);
+    background: linear-gradient(rgba(24, 166, 255, 0.2), rgba(24, 166, 255, 0.2)), url(/static/img/fun-background-medium.jpg);
   }
 }
 
 @media only screen and (min-width: 1800px) {
   .background {
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 120, 24, 0.2)), to(rgba(255, 120, 24, 0.2))), url(/static/img/fun-background-large.jpg);
-    background: linear-gradient(rgba(255, 120, 24, 0.2), rgba(255, 120, 24, 0.2)), url(/static/img/fun-background-large.jpg);
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(24, 166, 255, 0.2)), to(rgba(24, 166, 255, 0.2))), url(/static/img/fun-background-large.jpg);
+    background: linear-gradient(rgba(24, 166, 255, 0.2), rgba(24, 166, 255, 0.2)), url(/static/img/fun-background-large.jpg);
   }
 }
 
