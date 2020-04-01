@@ -1160,6 +1160,7 @@ footer .bottom p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  padding-bottom: 3rem;
 }
 
 .local-holder p {
@@ -1418,9 +1419,6 @@ footer .bottom p {
   .manitoba-svg {
     width: 20rem;
     height: 26.6rem;
-  }
-  .local-holder {
-    width: 80%;
   }
   .alberta-content,
   .bc-content,
