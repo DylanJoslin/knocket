@@ -55,6 +55,7 @@ urlpatterns = [
     path('change_password/', user_views.change_password, name='change_password'),
 
     # Posts
+    path('browse/', story_views.browse, name="browse"),
     path('post/', story_views.post_list, name='post_list'),
     # path('post/<slug:post_category>', story_views.post_list, name='post_list'),
     path('post/<slug:post_slug>/', story_views.post_detail, name='post_detail'),

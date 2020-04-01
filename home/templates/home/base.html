@@ -15,16 +15,10 @@
         <nav class="main-navigation">
             <ul class="menu-links">
                 <li class="nav-link">
-                    <a href="#" class="underline-link">Map</a>
+                    <a href="{% url 'home' %}" class="underline-link">Home</a>
                 </li>
                 <li class="nav-link stories">
-                    <a href="{% url 'post_list' %}?school=Amiskwaciy-Academy" class="underline-link">Stories <span class="dropdown">&#9660;</span></a>
-                    <ul class="sub-menu hidden">
-                        <li class="nav-link"><a href="{% url 'post_list' %}?school=Amiskwaciy-Academy&category=Physical" class="underline-link">Physical</a></li>
-                        <li class="nav-link"><a href="{% url 'post_list' %}?school=Amiskwaciy-Academy&category=Emotional" class="underline-link">Emotional</a></li>
-                        <li class="nav-link"><a href="{% url 'post_list' %}?school=Amiskwaciy-Academy&category=Mental" class="underline-link">Mental</a></li>
-                        <li class="nav-link"><a href="{% url 'post_list' %}?school=Amiskwaciy-Academy&category=Spiritual" class="underline-link">Spiritual</a></li>
-                    </ul>
+                    <a href="{% url 'browse' %}" class="underline-link">Stories</a>
                 </li>
                 <li class="nav-link">
                     <a href="{% url 'resources' %}" class="underline-link">Resources</a>
@@ -90,8 +84,6 @@
                 <li>Education</li>
                 <li><a href="https://www.nait.ca/nait/life-at-nait/nisohkamatotan-centre">Nîsôhkamâtotân Centre – NAIT</a></li>
                 <li><a href="http://amiskwaciy.epsb.ca">Amiskwaciy Academy</a></li>
-                <li><a href="">Item 3</a></li>
-                <li><a href="">Item 4</a></li>
             </ul>
 
             <ul class="col">
@@ -99,14 +91,6 @@
                 <li><a href="https://www.nait.ca/nait/life-at-nait/nisohkamatotan-centre">Nîsôhkamâtotân Centre</a></li>
                 <li><a href="http://amiskwaciy.epsb.ca">Amiskwaciy Academy</a></li>
                 <li><a href="https://www.bac-lac.gc.ca/eng/discover/aboriginal-heritage/pages/introduction.aspx">Government of Canada – Indigenous Heritage</a></li>
-            </ul>
-               
-            <ul class="col">
-                <li><a href="">Connect</a></li>
-                <li><a href="">Instagram</a></li>
-                <li><a href="">Twitter</a></li>
-                <li><a href="">Facebook</a></li>
-                <li><a href="">LinkedIn</a></li>
             </ul>
                 
         </div>

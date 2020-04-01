@@ -1,53 +1,65 @@
-// body {
-//     background-color: white;
-//     font-family: 'Poppins', sans-serif;
-//     font-weight: 400;
-//     line-height: 1.5;
-//     color: #999999;
-//     background-color: #0c2034;
-//     /* background: linear-gradient(#0ff 0.0555555em, transparent 0.0555555em); */
-//     // background-size: auto 1.5em;
-//     /*24px for ideal gap*/
-//   }
-  
-//   h1 {
-//     margin-top: 0;
-//     font-size: 1.802em;
-//     padding-top: 5rem;
-//   }
-    
-//   h2 {font-size: 1.602em;}
-    
-//   h3 {font-size: 1.424em;}
-    
-//   h4 {font-size: 1.266em;}
-    
-//   h5 {font-size: 1.125em;}
-    
-//   .text_small {font-size: 0.889em;}
-  
-  /*============================================
-                   Custom Styles 
-   ===========================================*/
-  
-  
-   /*---------- General ----------*/
+@mixin heading(){
+  text-transform: unset;
+  font-family: 'Cardo Regular';
+  padding-bottom: 1rem;
+  padding-top: 5rem;
+  color: rgb(255, 255, 255);
+  width: 100%;
+}
+
+
+/*---------- General ----------*/
+
    .map-local-main{
-    background-color: #0c2034;
+    background-color: rgba(11, 178, 228, 0.653);
     height: 100%;
-    padding: 5rem 0;
+
+    h1{
+      font-size: 4rem;
+      @include heading;
+
+    }
+
+    h2{
+      @include heading;
+    }
+
+    a{
+      background: $red-colour;
+      color: rgb(255, 255, 255);
+      text-decoration: none;
+      width: 25%;
+      margin: 0;
+      margin-top: 2rem;
+      margin-left: 2rem;
+    }
+
   }
 
   .interactive-map{
-    background-color: #0c2034
-  }
-  
-  a{
-    color: #999;
-  }
-  
-  a:hover{
-    color: #999;
+    background-color: rgba(11, 178, 228, 0.653);
+    border-top: 4px solid $dark-blue;
+    border-bottom: 4px solid $dark-blue;
+
+    p{
+      text-align: center;
+      color: rgb(255, 255, 255);
+      font-size: 1.6rem;
+      margin-bottom: 3rem;
+    }
+
+    h1{
+      font-size: 4rem;
+      @include heading;
+    }
+
+    h2{
+      @include heading;
+      width: 100%;
+      padding: 0;
+      margin-bottom: 2rem;
+    }
+
   }
   
   .holder{
@@ -61,7 +73,7 @@
     height: 35rem;
     padding-top: 10%;
   }
-   
+
   .province-nav{
     list-style: none;
     display: flex;
@@ -79,6 +91,15 @@
     border-radius: 10px;
     margin-bottom: 1rem;
   }
+
+.fix-button{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
   
   .province-nav>li:hover{
     transition: 0.5s;
@@ -88,10 +109,17 @@
   }
   
   .local-holder{
-    width: 50%;
+    padding: 0 4rem;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
+    padding-bottom: 3rem;
+
+    p{
+      max-width: 30rem;
+      margin: 0 auto;
+    }
+
   }
   
   .image-container{
@@ -218,13 +246,15 @@
   
   .learn-more-local-buttons{
     display: flex;
-    justify-content: space-around;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 4rem
+   
   }
   
   .map-local-link{
     margin-top: 2rem;
-    width: 40%;
-    text-align: center;
+    //width: 40%;
   }
   
   .bc:hover,
@@ -236,7 +266,13 @@
   .map-local-link,
   .return-link,
   .mobile-local-button{
-    border: 1px solid #999999;
+    background: $red-colour;
+    color: white;
+    font: 'Cardo Regular';
+    text-align: center;
+    margin: 1rem;
+    font-size: 1.3rem;
+    text-decoration: none;
     border-radius: 10px;
     padding: 1rem;
   }
@@ -258,17 +294,13 @@
   .button-container{
     display: flex;
     justify-content: space-around;
+    margin-bottom: 3rem;
   }
   
   .return-link{
     width: 10rem;
     margin-left: 5rem; 
     margin-top: 3rem;
-  }
-  
-  .province-hover{
-    color: #999999;
-    padding: 0;
   }
   
   .local{
@@ -299,21 +331,19 @@
     height: 4rem;
     width: 4rem;
     margin: 0;
-    border: 1px solid #999999;
     border-radius: 15px;
   }
   
   .next,
   .prev {
-      background-color: #0c2034;
+      background-color: $red-colour;
       border-radius: 50%;
-      color: #ddd;
+      color: white;
       display: inline-block;
-    font-size: 210%;
-    font-weight: bold;
-    margin-top: 30%;
-    width: 40px;
-    padding-bottom: 2px;
+      font-size: 2rem;
+      font-weight: bold;
+      margin-top: 30%;
+      width: 40px;
   }
   
   .next:hover,
@@ -331,10 +361,7 @@
       width: 20rem;
       height: 26.6rem;
     }
-  
-    .local-holder{
-      width: 80%;
-    }
+
     .alberta-content,
     .bc-content,
     .sask-content,
@@ -380,5 +407,5 @@
   }
 
   .white{
-    color: #999;
+    color: rgb(255, 255, 255);
   }
