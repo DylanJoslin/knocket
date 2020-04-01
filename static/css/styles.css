@@ -1990,7 +1990,7 @@ td, th {
   .dashboard-body .dashboard-navigation .navigation-para {
     margin: 0;
     margin-right: 1rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
   }
 }
 
@@ -2016,7 +2016,7 @@ td, th {
   .dashboard-body .dashboard-navigation .nav-link a {
     margin: 0;
     margin-right: 1rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
   }
 }
 
@@ -2054,7 +2054,7 @@ td, th {
   .dashboard-body .dashboard-navigation .logout {
     margin: 0;
     margin-right: 1rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
   }
 }
 
@@ -2076,7 +2076,6 @@ td, th {
   color: white;
   font-size: 2rem;
   font-family: 'Raleway Bold', sans-serif;
-  margin-bottom: 1rem;
 }
 
 @media screen and (min-width: 1000px) {
@@ -2415,7 +2414,7 @@ td, th {
 
 @media screen and (min-width: 700px) {
   .dashboard-main .accordion .acc-tabs {
-    margin-bottom: 0.85rem;
+    margin-bottom: 0.8rem;
   }
 }
 
