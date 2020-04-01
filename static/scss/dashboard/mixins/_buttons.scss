@@ -4,6 +4,7 @@
 
 @mixin button(){
   color: white;
+  border: none;
   background: $secondary;
   font-size: $button;
   font-family: $button-font;
