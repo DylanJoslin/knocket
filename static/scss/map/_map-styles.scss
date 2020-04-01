@@ -91,6 +91,15 @@
     border-radius: 10px;
     margin-bottom: 1rem;
   }
+
+.fix-button{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
   
   .province-nav>li:hover{
     transition: 0.5s;
