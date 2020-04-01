@@ -444,6 +444,10 @@ img, .treaty-img {
   margin-bottom: 20px;
 }
 
+body {
+  overflow-x: 0;
+}
+
 .banner {
   background-image: url(/static/img/home_page_landing_image-01.jpg);
   background-size: cover;
@@ -1031,26 +1035,63 @@ footer .bottom p {
 /* ------------------------------------------------------
                 MAP STYLES
 ------------------------------------------------------ */
-/*============================================
-                   Custom Styles 
-   ===========================================*/
 /*---------- General ----------*/
 .map-local-main {
-  background-color: #0c2034;
+  background-color: rgba(11, 178, 228, 0.653);
   height: 100%;
-  padding: 5rem 0;
+}
+
+.map-local-main h1 {
+  font-size: 4rem;
+  text-transform: unset;
+  font-family: 'Cardo Regular';
+  padding-bottom: 3rem;
+  padding-top: 5rem;
+  color: white;
+}
+
+.map-local-main h2 {
+  text-transform: unset;
+  font-family: 'Cardo Regular';
+  padding-bottom: 3rem;
+  padding-top: 5rem;
+  color: white;
+}
+
+.map-local-main a {
+  background: #FB4547;
+  color: white;
+  text-decoration: none;
+  width: 25%;
+  margin: 0;
+  margin-top: 2rem;
+  margin-left: 2rem;
 }
 
 .interactive-map {
-  background-color: #0c2034;
+  background-color: rgba(11, 178, 228, 0.653);
+  border-top: 4px solid #0C2946;
+  border-bottom: 4px solid #0C2946;
 }
 
-a {
-  color: #999;
+.interactive-map h1 {
+  font-size: 4rem;
+  text-transform: unset;
+  font-family: 'Cardo Regular';
+  padding-bottom: 3rem;
+  padding-top: 5rem;
+  color: white;
 }
 
-a:hover {
-  color: #999;
+.interactive-map h2 {
+  text-transform: unset;
+  font-family: 'Cardo Regular';
+  padding-bottom: 3rem;
+  padding-top: 5rem;
+  color: white;
+  width: 100%;
+  padding: 0;
+  margin-bottom: 2rem;
 }
 
 .holder {
@@ -1258,9 +1299,16 @@ a:hover {
 .map-local-link,
 .return-link,
 .mobile-local-button {
-  border: 1px solid #999999;
+  background: #FB4547;
+  color: white;
+  font: 'Cardo Regular';
+  text-align: center;
+  margin: 1rem;
+  font-size: 1.3rem;
+  text-decoration: none;
+  width: 90%;
   border-radius: 10px;
-  padding: 1rem;
+  padding: 0.6rem;
 }
 
 .map-local-link:hover,
@@ -1284,17 +1332,13 @@ a:hover {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  margin-bottom: 3rem;
 }
 
 .return-link {
   width: 10rem;
   margin-left: 5rem;
   margin-top: 3rem;
-}
-
-.province-hover {
-  color: #999999;
-  padding: 0;
 }
 
 .local {
@@ -1328,21 +1372,19 @@ a:hover {
   height: 4rem;
   width: 4rem;
   margin: 0;
-  border: 1px solid #999999;
   border-radius: 15px;
 }
 
 .next,
 .prev {
-  background-color: #0c2034;
+  background-color: #FB4547;
   border-radius: 50%;
-  color: #ddd;
+  color: white;
   display: inline-block;
-  font-size: 210%;
+  font-size: 2rem;
   font-weight: bold;
   margin-top: 30%;
   width: 40px;
-  padding-bottom: 2px;
 }
 
 .next:hover,
