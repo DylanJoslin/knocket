@@ -6,28 +6,28 @@ let alberta = document.querySelector(".alberta");
 document.querySelector(".bc").addEventListener("mouseover", function(){
     province.innerHTML = "British Columbia (Coming Soon)";
     document.querySelector(".bc").addEventListener("mouseout", function(){
-        province.innerHTML = "Select A Province";
+        province.innerHTML = "Explore the Map";
     });
 }); // End BC Hover Tile Changer
 
 alberta.addEventListener("mouseover", function(){
     province.innerHTML = "Alberta";
     alberta.addEventListener("mouseout", function(){
-        province.innerHTML = "Select A Province";
+        province.innerHTML = "Explore the Map";
     });
 }); // End Alberta Hover Tile Changer
 
 document.querySelector(".sask").addEventListener("mouseover", function(){
     province.innerHTML = "Saskatchewan (Coming Soon)";
     document.querySelector(".sask").addEventListener("mouseout", function(){
-        province.innerHTML = "Select A Province";
+        province.innerHTML = "Explore the Map";
     });
 }); // End Saskatchewan Hover Tile Changer
 
 document.querySelector(".manitoba").addEventListener("mouseover", function(){
     province.innerHTML = "Manitoba (Coming Soon)";
     document.querySelector(".manitoba").addEventListener("mouseout", function(){
-        province.innerHTML = "Select A Province";
+        province.innerHTML = "Explore the Map";
     });
 }); // End Manitoba Hover Tile Changer
 
