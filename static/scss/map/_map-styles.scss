@@ -244,8 +244,7 @@
   
   .map-local-link{
     margin-top: 2rem;
-    width: 40%;
-    text-align: center;
+    //width: 40%;
   }
   
   .bc:hover,
@@ -264,9 +263,8 @@
     margin: 1rem;
     font-size: 1.3rem;
     text-decoration: none;
-    width: 90%;
     border-radius: 10px;
-    padding: 0.6rem;
+    padding: 1rem;
   }
   
   .map-local-link:hover,
@@ -402,5 +400,5 @@
   }
 
   .white{
-    color: $dark-blue;
+    color: rgb(255, 255, 255);
   }

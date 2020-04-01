@@ -1307,8 +1307,6 @@ footer .bottom p {
 
 .map-local-link {
   margin-top: 2rem;
-  width: 40%;
-  text-align: center;
 }
 
 .bc:hover,
@@ -1327,9 +1325,8 @@ footer .bottom p {
   margin: 1rem;
   font-size: 1.3rem;
   text-decoration: none;
-  width: 90%;
   border-radius: 10px;
-  padding: 0.6rem;
+  padding: 1rem;
 }
 
 .map-local-link:hover,
@@ -1474,7 +1471,7 @@ footer .bottom p {
 }
 
 .white {
-  color: #0C2946;
+  color: white;
 }
 
 /* ------------------------------------------------------
