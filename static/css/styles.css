@@ -2560,7 +2560,7 @@ td, th {
 
 @media screen and (min-width: 700px) {
   .dashboard-main .accordion .acc-content .acc-single .acc-user-info .options {
-    padding-left: 3rem;
+    padding-left: 2rem;
     padding-bottom: 2rem;
     display: -webkit-box;
     display: -ms-flexbox;
