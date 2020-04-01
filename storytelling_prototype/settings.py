@@ -23,9 +23,11 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'h%ym-1djx@x=xc3br*+r^$#w6!sw_k-6-xia+-imr%d&o4xhp$'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'www.tristanhampton.ca/storytelling'
+]
 
 
 # Application definition
