@@ -11,32 +11,20 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
-from django.core.exceptions import ImproperlyConfigured
 
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
-# Handling Key Import Errors
-def get_env_variable(var_name):
-    """ Get the environment variable or return exception """
-    try:
-        return os.environ[var_name]
-    except KeyError:
-        error_msg = "Set the %s environment variable" % var_name
-        raise ImproperlyConfigured(error_msg)
 
-# Get ENV VARIABLES key
-ENV_ROLE = get_env_variable('ENV_ROLE')
+# Use this when in production, instead of SECRET_KEY
+# with open('/etc/secret_key.txt') as f:
+#     SECRET_KEY = f.read().strip()
 
 
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
-
-# SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'h%ym-1djx@x=xc3br*+r^$#w6!sw_k-6-xia+-imr%d&o4xhp$'
 
-# SECURITY WARNING: don't run with debug turned on in production!
+
 DEBUG = False
 
 ALLOWED_HOSTS = [
