@@ -68,10 +68,11 @@
     margin: 20rem 0;
     width: 60%;
     margin: 0 auto;
-    background-image: url(../img/canada.svg);
+    background-image: url(../img/map-of-canada.png);
+    background-size: 90%;
     background-repeat: no-repeat;
-    height: 35rem;
-    padding-top: 10%;
+    height: 40rem;
+    padding-top: 18%;
   }
 
   .province-nav{
@@ -130,9 +131,10 @@
   .alberta-svg{
     width: 30rem;
     height: 40rem;
-    background-image: url("../img/alberta.svg");
+    background-image: url("../img/alberta-final.png");
     background-position: center;
     background-repeat: no-repeat;
+    background-size: 100%;
     margin: 0 auto;
   }
   
@@ -238,10 +240,15 @@
     margin-top: -42%;
     left: 37%;
   }
-  
-  .map-icon:hover{
-    border: 1px solid #999999;
-    border-radius: 15px;
+
+  .map-icon{
+    width: 40px;
+    height: 40px;
+  }
+
+  .treaty-icon-main{
+    width: 30px;
+    height: 80px;
   }
   
   .learn-more-local-buttons{
@@ -306,6 +313,7 @@
   .local{
     background-image: url(../img/local-arrow.svg);
     background-repeat: no-repeat;
+    margin-left: -37rem;
     width: 6%;
     height: 15%;
     padding: 1rem;
