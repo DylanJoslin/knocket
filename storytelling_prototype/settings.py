@@ -11,9 +11,23 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
+from django.core.exceptions import ImproperlyConfigured
+
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+# Handling Key Import Errors
+def get_env_variable(var_name):
+    """ Get the environment variable or return exception """
+    try:
+        return os.environ[var_name]
+    except KeyError:
+        error_msg = "Set the %s environment variable" % var_name
+        raise ImproperlyConfigured(error_msg)
+
+# Get ENV VARIABLES key
+ENV_ROLE = get_env_variable('ENV_ROLE')
 
 
 # Quick-start development settings - unsuitable for production
@@ -26,8 +40,22 @@ SECRET_KEY = 'h%ym-1djx@x=xc3br*+r^$#w6!sw_k-6-xia+-imr%d&o4xhp$'
 DEBUG = False
 
 ALLOWED_HOSTS = [
-    'www.tristanhampton.ca/storytelling'
+    '.tristanhampton.ca/storytelling'
 ]
+
+SECURE_SSL_REDIRECT = True
+
+SESSION_COOKIE_SECURE = True
+
+CSRF_COOKIE_SECURE = True
+
+SECURE_REFERRER_POLICY = 'origin'
+
+SECURE_HSTS_SECONDS = 360
+
+SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+
+SECURE_HSTS_PRELOAD = True
 
 
 # Application definition
