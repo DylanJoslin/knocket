@@ -1235,6 +1235,11 @@ footer .bottom p {
     display: block;
   }
 }
+@media only screen and (max-width: 415px) {
+  .alberta-svg {
+    margin-left: -6rem;
+  }
+}
 /*---------- utils ----------*/
 .text-center {
   text-align: center;
