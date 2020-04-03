@@ -18,17 +18,17 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 
 # Use this when in production, instead of SECRET_KEY
-# with open('/etc/secret_key.txt') as f:
-#     SECRET_KEY = f.read().strip()
+with open('/etc/secret_key.txt') as f:
+    SECRET_KEY = f.read().strip()
 
-
-SECRET_KEY = 'h%ym-1djx@x=xc3br*+r^$#w6!sw_k-6-xia+-imr%d&o4xhp$'
 
 
 DEBUG = False
 
 ALLOWED_HOSTS = [
-    '.tristanhampton.ca/storytelling'
+    '.tristanhampton.ca/indigenous-storytelling',
+    'www.tristanhampton.ca',
+    '.tristanhampton.ca'
 ]
 
 SECURE_SSL_REDIRECT = True
