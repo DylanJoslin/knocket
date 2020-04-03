@@ -18,8 +18,11 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 
 # Use this when in production, instead of SECRET_KEY
-with open('/etc/secret_key.txt') as f:
-    SECRET_KEY = f.read().strip()
+# with open('/etc/secret_key.txt') as f:
+#     SECRET_KEY = f.read().strip()
+
+SECRET_KEY = 'h%ym-1djx@x=xc3br*+r^$#w6!sw_k-6-xia+-imr%d&o4xhp$'
+
 
 
 
@@ -144,11 +147,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = (
-  os.path.join(BASE_DIR, 'static'),
-)
-
+STATICFILES_DIRS = ()
+STATIC_ROOT = '/home/tristanhampton/knocket/static'
 LOGIN_REDIRECT_URL = 'home'
-
 MEDIA_ROOT = os.path.join(BASE_DIR, 'static/media')
 MEDIA_URL = 'static/media/'
