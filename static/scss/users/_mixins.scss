@@ -24,6 +24,7 @@
 
 @mixin pageFormButton(){
     color: white;
+    border: none;
     background: $secondary;
     font-size: 1rem;
     font-family: 'Cardo Regular', sans-serif;

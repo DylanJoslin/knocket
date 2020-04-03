@@ -42,7 +42,7 @@
             margin-bottom: 0.6rem;
 
             @include breakpoint(tablet){
-                margin-bottom: 0.85rem;
+                margin-bottom: 0.8rem;
             }
 
             a{
@@ -132,7 +132,7 @@
                         padding-top: 1rem;
 
                         @include breakpoint(tablet){
-                            padding-left: 3rem;
+                            padding-left: 2rem;
                             padding-bottom: 2rem;
                             @include flex(unset);
                         }
