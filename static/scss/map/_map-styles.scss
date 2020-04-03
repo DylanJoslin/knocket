@@ -209,7 +209,7 @@
   .lacsteanne-icon-main{
     width: 5%;
     position: relative;
-    margin-top: -50%;
+    margin-top: -60%;
     left: 40%;
   }
 
@@ -217,7 +217,7 @@
     width: 5%;
     position: relative;
     margin-top: 60%;
-    left: 60%;
+    left: 50%;
   }
 
   .ribstones-icon-main{
@@ -313,7 +313,7 @@
   .local{
     background-image: url(../img/local-arrow.svg);
     background-repeat: no-repeat;
-    margin-left: -37rem;
+    margin-left: -51%;
     width: 6%;
     height: 15%;
     padding: 1rem;
@@ -362,13 +362,6 @@
   /*---------- Respondsive ----------*/
   
   @media only screen and (max-width: 1000px){
-    .alberta-svg,
-    .bc-svg,
-    .sask-svg,
-    .manitoba-svg{
-      width: 20rem;
-      height: 26.6rem;
-    }
 
     .alberta-content,
     .bc-content,
@@ -376,9 +369,7 @@
     .manitoba-content{
       width: 90%;
     }
-  }
-  
-  @media only screen and (max-width: 800px){
+
     .holder{
       display: none;
     }
