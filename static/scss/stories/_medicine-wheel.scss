@@ -1,13 +1,4 @@
 
-.medicinewheel{
-	height: 700px;
-	background-image: url(/static/img/background602.jpg);
-	background-repeat: no-repeat;
-	background-position: center;
-	background-position-y: -88px;
-	padding-top: 10px;
-}
-
 .con{
 	width: 500px;
 	height: 500px;
@@ -168,13 +159,6 @@
 
 /* Screen < 500px */
 @media only screen and (max-width:500px){
-	.medicinewheel{
-		height: 600px;
-		background-image: url(../img/background350.jpg);
-		background-repeat: no-repeat;
-		background-position: center;
-		background-position-y: 85px;
-	}
 	.con{
 		width: 300px;
 		height: 300px;
@@ -217,12 +201,12 @@
 	}
 	.textwhite:hover, .textred:hover, .textyellow:hover{
 		color:black;
-		font-size: 18px;
+		font-size: 20px;
 		font-family: 'Berkshire Swash', cursive;
 	}
 	.textblack:hover{
 		color: aliceblue;
-		font-size: 18px;
+		font-size: 20px;
 		font-family: 'Berkshire Swash', cursive;
 	}
 
