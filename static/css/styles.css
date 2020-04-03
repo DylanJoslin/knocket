@@ -1124,6 +1124,7 @@ footer .bottom p {
       justify-content: space-around;
   margin: 20rem 0;
   width: 60%;
+  max-width: 1070px;
   margin: 0 auto;
   background-image: url(../img/map-of-canada.png);
   background-size: 90%;
@@ -1482,7 +1483,11 @@ footer .bottom p {
     margin: 0 auto;
   }
 }
-
+@media only screen and (max-width: 415px) {
+  .alberta-svg {
+    margin-left: -6rem;
+  }
+}
 /*---------- utils ----------*/
 .text-center {
   text-align: center;
