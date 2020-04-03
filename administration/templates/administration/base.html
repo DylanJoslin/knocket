@@ -9,55 +9,50 @@
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 </head>
 <body class="dashboard-body">
-    <div class="body-overflow">
+    <header class="dashboard-header">
+        <h1 class="logo"><a href="{% url 'home' %}">Indigenous <br><span>Storytelling</span></a></h1>
+        <nav class="dashboard-navigation">
+            <p class="navigation-para">Dashboard</p>
+            <ul class="menu-links">
+                <li class="nav-link">
+                    <a href="{% url 'administration' %}">
+                        <p>Home</p>
+                        <p><i class="fas fa-home"></i></p>
+                    </a>
+                </li>
+                <li class="nav-link">
+                    <a href="{% url 'admin_users' %}">
+                        <p>Users</p>
+                        <p><i class="fas fa-users"></i></p>
+                    </a>
+                </li>
+                <li class="nav-link">
+                    <a href="{% url 'admin_uploads' %}">
+                        <p>Content</p>
+                        <p><i class="fas fa-image"></i></p>
+                    </a>
+                </li>
+                <li class="logout">
+                        <p class="signed-in"><span>Signed in as,</span><br> {{ user.username }}</p>
+                        <a href="{% url 'logout' %}"><p>Logout <i class="fas fa-sign-out-alt"></i></p></a>
+                </li>
+                <li class="nav-link">
+                    <a href="{% url 'home' %}">
+                        <p>Back to Storytelling</p>
+                        <p><i class="fas fa-campground"></i></p>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="menu-icon">
+            <div></div>
+        </div>
+    </header>
 
-        <header class="dashboard-header">
-            <h1 class="logo"><a href="{% url 'home' %}">Indigenous <br><span>Storytelling</span></a></h1>
-            <nav class="dashboard-navigation">
-                <p class="navigation-para">Dashboard</p>
-                <ul class="menu-links">
-                    <li class="nav-link">
-                        <a href="{% url 'administration' %}">
-                            <p>Home</p>
-                            <p><i class="fas fa-home"></i></p>
-                        </a>
-                    </li>
-                    <li class="nav-link">
-                        <a href="{% url 'admin_users' %}">
-                            <p>Users</p>
-                            <p><i class="fas fa-users"></i></p>
-                        </a>
-                    </li>
-                    <li class="nav-link">
-                        <a href="{% url 'admin_uploads' %}">
-                            <p>Content</p>
-                            <p><i class="fas fa-image"></i></p>
-                        </a>
-                    </li>
-                    <li class="logout">
-                            <p class="signed-in"><span>Signed in as,</span><br> {{ user.username }}</p>
-                            <a href="{% url 'logout' %}"><p>Logout <i class="fas fa-sign-out-alt"></i></p></a>
-                    </li>
-                    <li class="nav-link">
-                        <a href="{% url 'home' %}">
-                            <p>Back to Storytelling</p>
-                            <p><i class="fas fa-campground"></i></p>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-            <div class="menu-icon">
-                <div></div>
-            </div>
-        </header>
-
-
-        <main class="dashboard-main">
-            {% block content%}
-            {% endblock %}
-        </main>
-        
-      </div>
+    <main class="dashboard-main">
+        {% block content%}
+        {% endblock %}
+    </main>
 
     <script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
     <script src="{% static 'js/dashboard.js' %}"></script>

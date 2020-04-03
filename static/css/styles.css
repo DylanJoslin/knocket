@@ -2003,6 +2003,15 @@ td, th {
   }
 }
 
+<<<<<<< HEAD
+=======
+@media screen and (min-width: 700px) {
+  .dashboard-body .dashboard-navigation {
+    width: 50%;
+  }
+}
+
+>>>>>>> origin/master
 @media screen and (min-width: 1000px) {
   .dashboard-body .dashboard-navigation {
     display: inline-block;
