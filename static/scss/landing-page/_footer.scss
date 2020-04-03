@@ -23,7 +23,7 @@ footer{
 
         @include media-md{
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
         }
 
         .col{
@@ -31,7 +31,7 @@ footer{
             width: 100%;
 
             @include media-md{
-                width: 33.333%;
+                width: 50%
             }
 
             li{

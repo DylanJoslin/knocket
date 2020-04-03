@@ -1,5 +1,14 @@
 .resources-link-holder{
   margin: 60px auto;
+  position: relative;
+}
+
+.decoration{
+  position: absolute;
+  z-index: -1;
+  width: 300px;
+  top: -40px;
+  opacity: 40%;
 }
 
 .education, .heritage, .mental-health{
@@ -19,9 +28,10 @@
     }
  
     & div{
+      border-bottom: 8px solid rgba(224, 44, 74, 0.616);
+      border-right: 8px solid rgba(228, 46, 92, 0.712);
       padding: 14px;
       border-radius: 10px;
-      border: 2px solid $light-purple;
       margin-bottom: 40px;
       display: flex;
       justify-content: space-between;
@@ -31,6 +41,15 @@
         margin-right: 20px;
         width: 50%;
       }
+    }
+
+    .box-1{
+      position: absolute;
+      top: 10px;
+      width: 100%;
+      opacity: 20%;
+      z-index: -1;
+      margin: 0;
     }
 
     div:nth-child(2){
