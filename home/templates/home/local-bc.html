@@ -1,0 +1,33 @@
+{% extends "home/base.html" %}
+{% load static %}
+{%block content%}
+<div class="map-local-main">
+        <ul class="province-nav hidden">
+            <li>Yukon</li>
+            <li>N.W. Territories</li>
+            <li>Nunavut</li>
+            <li>British Columbia</li>
+            <li>Alberta</li>
+            <li>Saskatchewan</li>
+            <li>Manatoba</li>
+            <li>Ontario</li>
+            <li>Quebec</li>
+            <li>Newfoundland and Labrador</li>
+            <li>New Brunswick</li>
+            <li>Nova Scotia</li>
+            <li>Price Edward Island</li>
+        </ul>
+        <div class="flex-column">
+            <a class="center-content return-link" href="{% url 'home' %}#map">&#x2190; Return To Map</a>
+        </div>
+        
+        <section class="local-holder">
+            <div class="bc-svg">
+            </div>
+            <h1 class="text-center focus-title no-padding">Hover A Point Of Intrest</h1>
+            <div class="bc-content">
+                
+            </div>
+        </section>
+    </div>
+{%endblock content%}

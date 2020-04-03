@@ -1,0 +1,53 @@
+
+// NAVIGATION LINKS
+
+@mixin nav-links(){
+    background: $nav-links-background;
+    border-radius: 1rem;
+    margin: 2rem;
+    display: block;
+    padding: 1.2rem;
+    margin-bottom: 2rem;
+
+    @include breakpoint(laptop){
+      margin: 0;
+      margin-right: 1rem;
+      margin-bottom: 1rem;
+    }//breakpoint
+
+  }//nav-border
+
+
+//NAVIGATION HOVER
+
+@mixin nav-hover(){
+    background: $nav-hover;
+    transition: $hover-transition;
+  }
+
+
+// LINKS HOVER UNDERLINE
+
+@mixin link-underline{
+  content: ' ';
+  display: block;
+  width: 0;
+  height: 2px;
+  padding-top: 2px;
+  background: #FF7918;
+  -webkit-transition: width .3s;
+  transition: width .3s;
+}
+
+//ACCORDION LINKS
+
+  @mixin accordion-link(){
+    color: $third;
+    font-size: $acc-tabs;
+    border-bottom: 1px solid $secondary;
+    padding-bottom: 1rem;
+    font-family: $acc-link-font;
+  }
+
+
+  

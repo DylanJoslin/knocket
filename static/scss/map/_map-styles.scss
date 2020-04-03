@@ -1,0 +1,433 @@
+@mixin heading(){
+  text-transform: unset;
+  font-family: 'Cardo Regular';
+  padding-bottom: 1rem;
+  padding-top: 5rem;
+  color: rgb(255, 255, 255);
+  width: 100%;
+}
+
+
+/*---------- General ----------*/
+
+   .map-local-main{
+    background-color: rgba(11, 178, 228, 0.653);
+    height: 100%;
+
+    h1{
+      font-size: 4rem;
+      @include heading;
+
+    }
+
+    h2{
+      @include heading;
+    }
+
+    a{
+      background: $red-colour;
+      color: rgb(255, 255, 255);
+      text-decoration: none;
+      width: 25%;
+      margin: 0;
+      margin-top: 2rem;
+      margin-left: 2rem;
+    }
+
+    a:hover{
+      background: $light-purple;
+      transition: 0.5s;
+      color: white;
+    }
+
+  }
+
+  .interactive-map{
+    background-color: rgba(11, 178, 228, 0.653);
+    border-top: 4px solid $dark-blue;
+    border-bottom: 4px solid $dark-blue;
+
+    p{
+      text-align: center;
+      color: rgb(255, 255, 255);
+      font-size: 1.6rem;
+      margin-bottom: 3rem;
+    }
+
+    h1{
+      font-size: 4rem;
+      @include heading;
+    }
+
+    h2{
+      @include heading;
+      width: 100%;
+      padding: 0;
+      margin-bottom: 2rem;
+    }
+
+  }
+  
+  .holder{
+    display: flex;
+    justify-content: space-around;
+    margin: 20rem 0;
+    width: 60%;
+    margin: 0 auto;
+    background-image: url(../img/map-of-canada.png);
+    background-size: 90%;
+    background-repeat: no-repeat;
+    height: 50rem;
+    padding-top: 22%;
+  }
+
+  .province-nav{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 75%;
+    margin: 0 auto;
+  }
+  
+  .province-nav>li{
+    padding: 1rem;
+    width: 14%;
+    text-decoration: underline;
+    border: 1px solid #999999;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+  }
+
+.fix-button{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+  
+  .province-nav>li:hover{
+    transition: 0.5s;
+    background-color: #999999;
+    color: #333;
+    cursor: pointer;
+  }
+  
+  .local-holder{
+    padding: 0 4rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 3rem;
+
+    p{
+      max-width: 30rem;
+      margin: 0 auto;
+    }
+
+  }
+  
+  .image-container{
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .alberta-svg{
+    width: 30rem;
+    height: 40rem;
+    background-image: url("../img/alberta-final.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 75%;
+    margin: 0 auto;
+  }
+  
+  .alberta-content{
+    width: 75%;
+    margin: 0 auto;
+  }
+  
+  .bc-svg{
+    width: 30rem;
+    height: 40rem;
+    background-image: url("../img/bc.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+  }
+  
+  .bc-content{
+    width: 75%;
+    margin: 0 auto;
+  }
+  
+  .sask-svg{
+    width: 30rem;
+    height: 40rem;
+    background-image: url("../img/saskatchewan.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+  }
+  
+  .sask-content{
+    width: 75%;
+    margin: 0 auto;
+  }
+  
+  .manitoba-svg{
+    width: 30rem;
+    height: 40rem;
+    background-image: url("../img/manitoba.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+  }
+  
+  .manitoba-content{
+    width: 75%;
+    margin: 0 auto;
+  }
+  
+  .school-icon-main{
+    width: 15%;
+    position: relative;
+    margin-top: 50%;
+    left: 45%;
+  }
+  
+  .treaty-icon-main{
+    width: 15%;
+    position: relative;
+    margin-top: 30%;
+    left: 60%;
+  }
+
+  .majorville-icon-main{
+    width: 5%;
+    position: relative;
+    margin-top: -23%;
+    left: 50%;
+  }
+
+  .lacsteanne-icon-main{
+    width: 5%;
+    position: relative;
+    margin-top: -60%;
+    left: 40%;
+  }
+
+  .headsmashed-icon-main{
+    width: 5%;
+    position: relative;
+    margin-top: 60%;
+    left: 50%;
+  }
+
+  .ribstones-icon-main{
+    width: 5%;
+    position: relative;
+    margin-top: -50%;
+    left: 60%;
+  }
+
+  .writingstone-icon-main{
+    width: 5%;
+    position: relative;
+    margin-top: 45%;
+    left: 70%;
+  }
+
+  .medicinelake-icon-main{
+    width: 5%;
+    position: relative;
+    margin-top: -42%;
+    left: 37%;
+  }
+
+  .map-icon{
+    width: 40px;
+    height: 40px;
+  }
+
+  .treaty-icon-main{
+    width: 30px;
+    height: 80px;
+  }
+  
+  .learn-more-local-buttons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 4rem
+   
+  }
+  
+  .map-local-link{
+    margin-top: 2rem;
+    //width: 40%;
+  }
+  
+  .bc:hover,
+  .sask:hover,
+  .manitoba:hover{
+    cursor: not-allowed;
+  }
+  
+  .map-local-link,
+  .return-link,
+  .mobile-local-button{
+    background: $red-colour;
+    color: white;
+    font: 'Cardo Regular';
+    text-align: center;
+    margin: 1rem;
+    font-size: 1.3rem;
+    text-decoration: none;
+    border-radius: 10px;
+    padding: 1rem;
+  }
+  
+  .map-local-link:hover,
+  .return-link:hover,
+  .mobile-local-button:hover{
+    transition: 0.5s;
+    background-color: #999999;
+    color: #333;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+  .mobile-local-button{
+    margin: 0 auto;
+  }
+  
+  .button-container{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 3rem;
+  }
+  
+  .return-link{
+    width: 10rem;
+    margin-left: 5rem; 
+    margin-top: 3rem;
+  }
+  
+  .local{
+    background-image: url(../img/local-arrow.svg);
+    background-repeat: no-repeat;
+    margin-left: -63%;
+    width: 6%;
+    height: 15%;
+    padding: 1rem;
+  }
+  
+  .holder-mobile{
+    display: none;
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  .holder-mobile>div>img{
+    width: 20rem;
+    max-height: 20rem;
+    margin: 0 auto;
+    border-bottom: 40px solid #5FCCED;
+    border-top: 40px solid #5FCCED;
+  }
+  
+  .slideshow-buttons{
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .slideshow-buttons>span{
+    height: 3rem;
+    width: 3rem;
+    margin: 0;
+    border-radius: 15px;
+  }
+  
+  .next,
+  .prev {
+      background-color: $red-colour;
+      border-radius: 50%;
+      color: white;
+      display: inline-block;
+      font-size: 2rem;
+      font-weight: bold;
+      margin-top: 30%;
+      width: 40px;
+  }
+  
+  .next:hover,
+  .prev:hover{
+    cursor: pointer;
+  }
+  
+  /*---------- Respondsive ----------*/
+  
+  @media only screen and (max-width: 1000px){
+
+    .alberta-content,
+    .bc-content,
+    .sask-content,
+    .manitoba-content{
+      width: 90%;
+    }
+
+    .holder{
+      display: none;
+    }
+  
+    .holder-mobile{
+      display: block;
+    }
+
+    .local-holder{
+      padding: 0 0rem;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      padding: 2rem;
+  
+      p{
+        max-width: 30rem;
+        margin: 0 auto;
+      }
+  
+    }
+  }
+   /*---------- utils ----------*/
+  
+  .text-center{
+    text-align: center;
+  }
+  
+  .flex-column{
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .grey{
+    background-color: #999999;
+  }
+  
+  .hidden{
+    display: none;
+  }
+  
+  .no-padding{
+    padding: 0;
+  }
+  
+  .width-full{
+    width: 100%;
+  }
+
+  .white{
+    color: rgb(255, 255, 255);
+  }

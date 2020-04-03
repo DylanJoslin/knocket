@@ -1,0 +1,22 @@
+.login-container{
+    
+    .login-form{
+        //margin-bottom: 4rem;
+    
+        
+        
+    
+        .flex-container{
+            margin-bottom: 1.2rem;
+            @include breakpoint(tablet){
+                display: flex;
+                justify-content: space-between;
+                width: 620px;
+            }
+        }
+    
+    }
+    
+}
+
+
