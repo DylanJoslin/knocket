@@ -2,33 +2,49 @@
 {% load static %}
 
 {% block content %}
+    {% comment %} Medicine Wheel {% endcomment %}
+    <section class="medicinewheel">
+        <div class="con">
+            <div class="con_top">
+                <a href="{% url 'post_list' %}?school=Amiskwaciy-Academy&category=Spiritual">
+                    <div class="textwhite">
+                        Spiritual
+                    </div>
+                </a>
+                <a href="{% url 'post_list' %}?school=Amiskwaciy-Academy&category=Physical">
+                    <div class="textyellow">
+                        Physical
+                    </div>
+                </a>
+            </div>
+            <div class="con_bot">
+                <a href="{% url 'post_list' %}?school=Amiskwaciy-Academy&category=Emotional">
+                    <div class="textred">
+                        Emotional
+                    </div>
+                </a>
+                <a href="{% url 'post_list' %}?school=Amiskwaciy-Academy&category=Mental">
+                    <div class="textblack">
+                        Mental
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
 
-<section class="medicinewheel">
-    <div class="con">
-        <div class="con_top">
-            <a href="{% url 'post_list' %}?school=Amiskwaciy-Academy&category=Spiritual">
-                <div class="textwhite">
-                    Spiritual
-                </div>
-            </a>
-            <a href="{% url 'post_list' %}?school=Amiskwaciy-Academy&category=Physical">
-                <div class="textyellow">
-                    Physical
-                </div>
-            </a>
-        </div>
-        <div class="con_bot">
-            <a href="{% url 'post_list' %}?school=Amiskwaciy-Academy&category=Emotional">
-                <div class="textred">
-                    Emotional
-                </div>
-            </a>
-            <a href="{% url 'post_list' %}?school=Amiskwaciy-Academy&category=Mental">
-                <div class="textblack">
-                    Mental
-                </div>
-            </a>
-        </div>
-    </div>
-</section>
+    
+
+    <h1>Post List</h1>
+    {% for post in posts %}
+    <div>
+        {% if post.image %}
+        <img src="{% static 'media/' %}{{ post.image }}" alt="">
+        {% endif %}
+        <h2><a href="{% url 'post_detail' post.slug %}">{{ post.title }} - <span>{{ post.author }}</span></a></h2>
+        
+    </div> 
+{% endfor %}
+
+
+
 {% endblock content %}

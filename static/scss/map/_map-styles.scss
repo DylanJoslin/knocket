@@ -386,6 +386,20 @@
     .holder-mobile{
       display: block;
     }
+
+    .local-holder{
+      padding: 0 0rem;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      padding: 2rem;
+  
+      p{
+        max-width: 30rem;
+        margin: 0 auto;
+      }
+  
+    }
   }
    /*---------- utils ----------*/
   
