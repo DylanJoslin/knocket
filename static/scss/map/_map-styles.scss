@@ -137,10 +137,10 @@
   .alberta-svg{
     width: 30rem;
     height: 40rem;
-    background-image: url("../img/alberta-final.png");
+    background-image: url("../img/alberta-final.svg");
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: 75%;
     margin: 0 auto;
   }
   
@@ -333,7 +333,10 @@
   
   .holder-mobile>div>img{
     width: 20rem;
+    max-height: 20rem;
     margin: 0 auto;
+    border-bottom: 40px solid #5FCCED;
+    border-top: 40px solid #5FCCED;
   }
   
   .slideshow-buttons{
