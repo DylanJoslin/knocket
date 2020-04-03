@@ -3,32 +3,35 @@
 
 {% block content %}
     {% comment %} Medicine Wheel {% endcomment %}
-    <div class="con">
-        <div class="con_top">
-            <a href="index1.html">
-                <div class="textwhite">
-                    Spiritual
-                </div>
-            </a>
-            <a href="index1.html">
-                <div class="textyellow">
-                    Physical
-                </div>
-            </a>
+    <section class="medicinewheel">
+        <div class="con">
+            <div class="con_top">
+                <a href="index1.html">
+                    <div class="textwhite">
+                        Spiritual
+                    </div>
+                </a>
+                <a href="index1.html">
+                    <div class="textyellow">
+                        Physical
+                    </div>
+                </a>
+            </div>
+            <div class="con_bot">
+                <a href="index1.html">
+                    <div class="textred">
+                        Emotional
+                    </div>
+                </a>
+                <a href="index1.html">
+                    <div class="textblack">
+                        Mental
+                    </div>
+                </a>
+            </div>
         </div>
-        <div class="con_bot">
-            <a href="index1.html">
-                <div class="textred">
-                    Emotional
-                </div>
-            </a>
-            <a href="index1.html">
-                <div class="textblack">
-                    Mental
-                </div>
-            </a>
-        </div>
-    </div>
+    </section>
+    
 
     <h1>Post List</h1>
     {% for post in posts %}
