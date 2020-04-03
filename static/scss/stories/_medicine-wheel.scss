@@ -1,15 +1,5 @@
 
-	*{
-		margin: 0;
-		padding: 0;
-	}
-
-	h1{
-		text-align: center;
-		margin-top: 40px;
-		font-family: 'Sriracha', cursive;
-		color: #fff;
-	}
+	
 	.medicinewheel{
 		height: 600px;
 		background-image: url(../img/sweetgrass.svg);
@@ -124,18 +114,6 @@
 		font-size: 20px;
 		font-family: 'Cardo Regular', sans-serif;
 	}
-
-	/* hover for text
-	.textwhite:hover, .textred:hover, .textyellow:hover{
-		color:black;
-		font-size: 30px;
-		font-family: 'Berkshire Swash', cursive;
-	}
-	.textblack:hover{
-		color: aliceblue;
-		font-size: 30px;
-		font-family: 'Berkshire Swash', cursive;
-	} */
 
 	/* Color of background(hover)	 */
 	.con_top>a:nth-child(1):hover {
