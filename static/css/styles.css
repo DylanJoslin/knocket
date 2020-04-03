@@ -986,9 +986,9 @@ footer .row {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
@@ -999,7 +999,7 @@ footer .row .col {
 
 @media screen and (min-width: 768px) {
   footer .row .col {
-    width: 33.333%;
+    width: 50%;
   }
 }
 
@@ -1070,6 +1070,13 @@ footer .bottom p {
   margin-left: 2rem;
 }
 
+.map-local-main a:hover {
+  background: #B4B9E5;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  color: white;
+}
+
 .interactive-map {
   background-color: rgba(11, 178, 228, 0.653);
   border-top: 4px solid #0C2946;
@@ -1114,10 +1121,11 @@ footer .bottom p {
   margin: 20rem 0;
   width: 60%;
   margin: 0 auto;
-  background-image: url(../img/canada.svg);
+  background-image: url(../img/map-of-canada.png);
+  background-size: 90%;
   background-repeat: no-repeat;
-  height: 35rem;
-  padding-top: 10%;
+  height: 50rem;
+  padding-top: 22%;
 }
 
 .province-nav {
@@ -1197,9 +1205,10 @@ footer .bottom p {
 .alberta-svg {
   width: 30rem;
   height: 40rem;
-  background-image: url("../img/alberta.svg");
+  background-image: url("../img/alberta-final.svg");
   background-position: center;
   background-repeat: no-repeat;
+  background-size: 75%;
   margin: 0 auto;
 }
 
@@ -1274,7 +1283,7 @@ footer .bottom p {
 .lacsteanne-icon-main {
   width: 5%;
   position: relative;
-  margin-top: -50%;
+  margin-top: -60%;
   left: 40%;
 }
 
@@ -1282,7 +1291,7 @@ footer .bottom p {
   width: 5%;
   position: relative;
   margin-top: 60%;
-  left: 60%;
+  left: 50%;
 }
 
 .ribstones-icon-main {
@@ -1306,9 +1315,14 @@ footer .bottom p {
   left: 37%;
 }
 
-.map-icon:hover {
-  border: 1px solid #999999;
-  border-radius: 15px;
+.map-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.treaty-icon-main {
+  width: 30px;
+  height: 80px;
 }
 
 .learn-more-local-buttons {
@@ -1381,6 +1395,7 @@ footer .bottom p {
 .local {
   background-image: url(../img/local-arrow.svg);
   background-repeat: no-repeat;
+  margin-left: -63%;
   width: 6%;
   height: 15%;
   padding: 1rem;
@@ -1393,8 +1408,11 @@ footer .bottom p {
 }
 
 .holder-mobile > div > img {
-  width: 25rem;
+  width: 20rem;
+  max-height: 20rem;
   margin: 0 auto;
+  border-bottom: 40px solid #5FCCED;
+  border-top: 40px solid #5FCCED;
 }
 
 .slideshow-buttons {
@@ -1406,8 +1424,8 @@ footer .bottom p {
 }
 
 .slideshow-buttons > span {
-  height: 4rem;
-  width: 4rem;
+  height: 3rem;
+  width: 3rem;
   margin: 0;
   border-radius: 15px;
 }
@@ -1431,22 +1449,12 @@ footer .bottom p {
 
 /*---------- Respondsive ----------*/
 @media only screen and (max-width: 1000px) {
-  .alberta-svg,
-  .bc-svg,
-  .sask-svg,
-  .manitoba-svg {
-    width: 20rem;
-    height: 26.6rem;
-  }
   .alberta-content,
   .bc-content,
   .sask-content,
   .manitoba-content {
     width: 90%;
   }
-}
-
-@media only screen and (max-width: 800px) {
   .holder {
     display: none;
   }
@@ -1628,6 +1636,15 @@ a {
 /* Media Queries for different viewport sizes*/
 .resources-link-holder {
   margin: 60px auto;
+  position: relative;
+}
+
+.decoration {
+  position: absolute;
+  z-index: -1;
+  width: 300px;
+  top: -40px;
+  opacity: 40%;
 }
 
 .education, .heritage, .mental-health {
@@ -1653,9 +1670,10 @@ a {
 }
 
 .education .cards div, .heritage .cards div, .mental-health .cards div {
+  border-bottom: 8px solid rgba(224, 44, 74, 0.616);
+  border-right: 8px solid rgba(228, 46, 92, 0.712);
   padding: 14px;
   border-radius: 10px;
-  border: 2px solid #B4B9E5;
   margin-bottom: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1674,6 +1692,15 @@ a {
     margin-right: 20px;
     width: 50%;
   }
+}
+
+.education .cards .box-1, .heritage .cards .box-1, .mental-health .cards .box-1 {
+  position: absolute;
+  top: 10px;
+  width: 100%;
+  opacity: 20%;
+  z-index: -1;
+  margin: 0;
 }
 
 .education .cards div:nth-child(2), .heritage .cards div:nth-child(2), .mental-health .cards div:nth-child(2) {
@@ -1983,7 +2010,7 @@ td, th {
   .dashboard-body .dashboard-navigation .navigation-para {
     margin: 0;
     margin-right: 1rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
   }
 }
 
@@ -2009,7 +2036,7 @@ td, th {
   .dashboard-body .dashboard-navigation .nav-link a {
     margin: 0;
     margin-right: 1rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
   }
 }
 
@@ -2047,7 +2074,7 @@ td, th {
   .dashboard-body .dashboard-navigation .logout {
     margin: 0;
     margin-right: 1rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
   }
 }
 
@@ -2069,7 +2096,6 @@ td, th {
   color: white;
   font-size: 2rem;
   font-family: 'Raleway Bold', sans-serif;
-  margin-bottom: 1rem;
 }
 
 @media screen and (min-width: 1000px) {
@@ -2306,6 +2332,7 @@ td, th {
 
 .dashboard-main .home-welcome a {
   color: white;
+  border: none;
   background: #FB4547;
   font-size: 1.8rem;
   font-family: "Raleway Bold", sans-serif;
@@ -2407,7 +2434,7 @@ td, th {
 
 @media screen and (min-width: 700px) {
   .dashboard-main .accordion .acc-tabs {
-    margin-bottom: 0.85rem;
+    margin-bottom: 0.8rem;
   }
 }
 
@@ -2552,7 +2579,7 @@ td, th {
 
 @media screen and (min-width: 700px) {
   .dashboard-main .accordion .acc-content .acc-single .acc-user-info .options {
-    padding-left: 3rem;
+    padding-left: 2rem;
     padding-bottom: 2rem;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2583,6 +2610,7 @@ td, th {
 
 .dashboard-main .accordion .acc-content .acc-single .acc-user-info .options a {
   color: white;
+  border: none;
   background: #FB4547;
   font-size: 1.8rem;
   font-family: "Raleway Bold", sans-serif;
@@ -2756,6 +2784,7 @@ td, th {
 
 .dashboard-main .overview .overview-box a {
   color: white;
+  border: none;
   background: #FB4547;
   font-size: 1.8rem;
   font-family: "Raleway Bold", sans-serif;
@@ -2886,6 +2915,7 @@ td, th {
 
 .dashboard-main .dashboard-form .form-button {
   color: white;
+  border: none;
   background: #FB4547;
   font-size: 1.8rem;
   font-family: "Raleway Bold", sans-serif;
@@ -3023,6 +3053,7 @@ td, th {
 
 .dashboard-main .filter .dashboard-form .filter-button {
   color: white;
+  border: none;
   background: #FB4547;
   font-size: 1.8rem;
   font-family: "Raleway Bold", sans-serif;
@@ -3177,6 +3208,7 @@ td, th {
 
 .page-styles .submit {
   color: white;
+  border: none;
   background: #FB4547;
   font-size: 1rem;
   font-family: 'Cardo Regular', sans-serif;
@@ -3383,13 +3415,55 @@ td, th {
   width: 100% !important;
 }
 
+.create-post-styles #modalbox {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.create-post-styles #close {
+  float: right;
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.create-post-styles .modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  width: 60%;
+  border-radius: 5px;
+}
+
+.create-post-styles .modal-content ol {
+  padding: 10%;
+}
+
 /* ------------------------------------------------------
                 STORIES STYLES
 ------------------------------------------------------ */
+.medicinewheel {
+  height: 600px;
+  background-image: url(../img/sweetgrass.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .con {
+  padding-left: 42px;
+  padding-top: 42px;
   width: 500px;
   height: 500px;
-  border: 2px black solid;
+  /* border:2px rgb(0, 0, 0) solid; */
   border-radius: 898px;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
@@ -3502,7 +3576,7 @@ td, th {
   color: black;
   padding-right: 20px;
   font-size: 20px;
-  font-family: 'Sriracha', cursive;
+  font-family: 'Cardo Regular', sans-serif;
 }
 
 .textblack {
@@ -3515,7 +3589,7 @@ td, th {
   color: white;
   padding-right: 20px;
   font-size: 20px;
-  font-family: 'Sriracha', cursive;
+  font-family: 'Cardo Regular', sans-serif;
 }
 
 /* Color of background(hover)	 */
@@ -3578,10 +3652,17 @@ td, th {
 
 /* Screen < 500px */
 @media only screen and (max-width: 500px) {
+  .medicinewheel {
+    height: 600px;
+    background-image: url(../img/background350.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
   .con {
+    padding-left: 120px;
+    padding-top: 125px;
     width: 300px;
     height: 300px;
-    border: 1px black solid;
     border-radius: 900px;
     -webkit-transform: rotate(45deg);
             transform: rotate(45deg);
@@ -3630,6 +3711,34 @@ td, th {
     color: aliceblue;
     font-size: 20px;
     font-family: 'Berkshire Swash', cursive;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .con {
+    padding-left: 110px;
+    padding-top: 135px;
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  .con {
+    padding-left: 104px;
+    padding-top: 132px;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .con {
+    padding-left: 95px;
+    padding-top: 140px;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .con {
+    padding-left: 90px;
+    padding-top: 140px;
   }
 }
 /*# sourceMappingURL=styles.css.map */
