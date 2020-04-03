@@ -3395,6 +3395,39 @@ td, th {
   width: 100% !important;
 }
 
+.create-post-styles #modalbox {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.create-post-styles #close {
+  float: right;
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.create-post-styles .modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  width: 60%;
+  border-radius: 5px;
+}
+
+.create-post-styles .modal-content ol {
+  padding: 10%;
+}
+
 /* ------------------------------------------------------
                 STORIES STYLES
 ------------------------------------------------------ */
