@@ -18,7 +18,7 @@ let contentHolderMedicinelake = document.querySelector(".extra-content-medicinel
 
 let titleSwapper = document.querySelector(".focus-title");
 
-school.addEventListener("mouseover", function(){
+school.addEventListener("click", function(){
     if(contentHolderAmiskwaciy.classList.contains('hidden')){
         contentHolderAmiskwaciy.classList.remove('hidden');
         contentHolderTreaty.classList.add('hidden');
@@ -32,7 +32,7 @@ school.addEventListener("mouseover", function(){
     }
 });
 
-treaty.addEventListener("mouseover", function(){
+treaty.addEventListener("click", function(){
     if(contentHolderTreaty.classList.contains('hidden')){
         contentHolderTreaty.classList.remove('hidden');
         contentHolderAmiskwaciy.classList.add('hidden');
@@ -46,7 +46,7 @@ treaty.addEventListener("mouseover", function(){
     }
 });
 
-Majorville.addEventListener("mouseover", function(){
+Majorville.addEventListener("click", function(){
     if(contentHolderMajorville.classList.contains('hidden')){
         contentHolderMajorville.classList.remove('hidden');
         contentHolderTreaty.classList.add('hidden');
@@ -60,7 +60,7 @@ Majorville.addEventListener("mouseover", function(){
     }
 });
 
-LacSteAnne.addEventListener("mouseover", function(){
+LacSteAnne.addEventListener("click", function(){
     if(contentHolderLacsteanne.classList.contains('hidden')){
         contentHolderLacsteanne.classList.remove('hidden');
         contentHolderMajorville.classList.add('hidden');
@@ -74,7 +74,7 @@ LacSteAnne.addEventListener("mouseover", function(){
     }
 });
 
-headsmashed.addEventListener("mouseover", function(){
+headsmashed.addEventListener("click", function(){
     if(contentHolderHeadsmashed.classList.contains('hidden')){
         contentHolderHeadsmashed.classList.remove('hidden');
         contentHolderLacsteanne.classList.add('hidden');
@@ -88,7 +88,7 @@ headsmashed.addEventListener("mouseover", function(){
     }
 });
 
-ribstones.addEventListener("mouseover", function(){
+ribstones.addEventListener("click", function(){
     if(contentHolderHeadsmashed.classList.contains('hidden')){
         contentHolderRibstones.classList.remove('hidden');
         contentHolderHeadsmashed.classList.add('hidden');
@@ -102,7 +102,7 @@ ribstones.addEventListener("mouseover", function(){
     }
 });
 
-writingstone.addEventListener("mouseover", function(){
+writingstone.addEventListener("click", function(){
     if(contentHolderWritingstone.classList.contains('hidden')){
         contentHolderWritingstone.classList.remove('hidden');
         contentHolderRibstones.classList.add('hidden');
@@ -116,7 +116,7 @@ writingstone.addEventListener("mouseover", function(){
     }
 });
 
-medicinelake.addEventListener("mouseover", function(){
+medicinelake.addEventListener("click", function(){
     if(contentHolderMedicinelake.classList.contains('hidden')){
         contentHolderMedicinelake.classList.remove('hidden');
         contentHolderWritingstone.classList.add('hidden');
