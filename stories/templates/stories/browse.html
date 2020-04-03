@@ -2,30 +2,33 @@
 {% load static %}
 
 {% block content %}
-<div class="con">
-    <div class="con_top">
-        <a href="{% url 'post_list' %}?school=Amiskwaciy-Academy&category=Spiritual">
-            <div class="textwhite">
-                Spiritual
-            </div>
-        </a>
-        <a href="{% url 'post_list' %}?school=Amiskwaciy-Academy&category=Physical">
-            <div class="textyellow">
-                Physical
-            </div>
-        </a>
+
+<section class="medicinewheel">
+    <div class="con">
+        <div class="con_top">
+            <a href="{% url 'post_list' %}?school=Amiskwaciy-Academy&category=Spiritual">
+                <div class="textwhite">
+                    Spiritual
+                </div>
+            </a>
+            <a href="{% url 'post_list' %}?school=Amiskwaciy-Academy&category=Physical">
+                <div class="textyellow">
+                    Physical
+                </div>
+            </a>
+        </div>
+        <div class="con_bot">
+            <a href="{% url 'post_list' %}?school=Amiskwaciy-Academy&category=Emotional">
+                <div class="textred">
+                    Emotional
+                </div>
+            </a>
+            <a href="{% url 'post_list' %}?school=Amiskwaciy-Academy&category=Mental">
+                <div class="textblack">
+                    Mental
+                </div>
+            </a>
+        </div>
     </div>
-    <div class="con_bot">
-        <a href="{% url 'post_list' %}?school=Amiskwaciy-Academy&category=Emotional">
-            <div class="textred">
-                Emotional
-            </div>
-        </a>
-        <a href="{% url 'post_list' %}?school=Amiskwaciy-Academy&category=Mental">
-            <div class="textblack">
-                Mental
-            </div>
-        </a>
-    </div>
-</div>
+</section>
 {% endblock content %}

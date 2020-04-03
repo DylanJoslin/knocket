@@ -3451,10 +3451,31 @@ td, th {
 /* ------------------------------------------------------
                 STORIES STYLES
 ------------------------------------------------------ */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 40px;
+  font-family: 'Sriracha', cursive;
+  color: #fff;
+}
+
+.medicinewheel {
+  height: 600px;
+  background-image: url(../img/sweetgrass.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .con {
+  padding-left: 42px;
+  padding-top: 42px;
   width: 500px;
   height: 500px;
-  border: 2px black solid;
+  /* border:2px rgb(0, 0, 0) solid; */
   border-radius: 898px;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
@@ -3567,7 +3588,7 @@ td, th {
   color: black;
   padding-right: 20px;
   font-size: 20px;
-  font-family: 'Sriracha', cursive;
+  font-family: 'Cardo Regular', sans-serif;
 }
 
 .textblack {
@@ -3580,9 +3601,20 @@ td, th {
   color: white;
   padding-right: 20px;
   font-size: 20px;
-  font-family: 'Sriracha', cursive;
+  font-family: 'Cardo Regular', sans-serif;
 }
 
+/* hover for text
+	.textwhite:hover, .textred:hover, .textyellow:hover{
+		color:black;
+		font-size: 30px;
+		font-family: 'Berkshire Swash', cursive;
+	}
+	.textblack:hover{
+		color: aliceblue;
+		font-size: 30px;
+		font-family: 'Berkshire Swash', cursive;
+	} */
 /* Color of background(hover)	 */
 .con_top > a:nth-child(1):hover {
   background: #c2c2c2;
@@ -3643,10 +3675,17 @@ td, th {
 
 /* Screen < 500px */
 @media only screen and (max-width: 500px) {
+  .medicinewheel {
+    height: 600px;
+    background-image: url(../img/background350.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
   .con {
+    padding-left: 120px;
+    padding-top: 125px;
     width: 300px;
     height: 300px;
-    border: 1px black solid;
     border-radius: 900px;
     -webkit-transform: rotate(45deg);
             transform: rotate(45deg);
@@ -3695,6 +3734,34 @@ td, th {
     color: aliceblue;
     font-size: 20px;
     font-family: 'Berkshire Swash', cursive;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .con {
+    padding-left: 110px;
+    padding-top: 135px;
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  .con {
+    padding-left: 104px;
+    padding-top: 132px;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .con {
+    padding-left: 95px;
+    padding-top: 140px;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .con {
+    padding-left: 90px;
+    padding-top: 140px;
   }
 }
 /*# sourceMappingURL=styles.css.map */
