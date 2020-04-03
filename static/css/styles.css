@@ -3463,7 +3463,6 @@ td, th {
   padding-top: 42px;
   width: 500px;
   height: 500px;
-  /* border:2px rgb(0, 0, 0) solid; */
   border-radius: 898px;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
