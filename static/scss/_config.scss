@@ -7,6 +7,10 @@ $orange: #FF7918;
 $purple-opacity: #b4b9e5c4;
 
 
+body{
+  overflow-x: hidden;
+}
+
 
 @mixin flex{
     display: flex;
