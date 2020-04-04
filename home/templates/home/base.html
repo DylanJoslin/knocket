@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 </head>
 <body class="main-body">
-
     <header class="main-header">
         <h1 class="logo"><a href="{% url 'home' %}">Indigenous <br><span>Storytelling</span></a></h1>
         <nav class="main-navigation">
@@ -23,7 +22,7 @@
                 <li class="nav-link">
                     <a href="{% url 'resources' %}" class="underline-link">Resources</a>
                 </li>
-                 <li class="nav-link">
+                <li class="nav-link">
                     <a href="{% url 'about' %}" class="underline-link">About Us</a>
                 </li>
                 {% if user.is_authenticated %}
@@ -64,11 +63,11 @@
     <main class="container">
         {% comment %} If there are any errors, such as an error when loggin in or registering, this code block will output it as html {% endcomment %}
         {% if messages %}
-          {% for message in messages %}
+        {% for message in messages %}
             <div class="alert alert-{{ message.tags }}">
-              {{ message }}
+            {{ message }}
             </div>
-          {% endfor%}
+        {% endfor%}
         {% endif %}
         {% comment %} Other html templates will be placed in this block statement {% endcomment %}
 
@@ -76,21 +75,29 @@
         {% block content%}{% endblock %}
     </main>
 
-    <footer>
-        <h1>Indigenous <br><span>Storytelling</span></h1>
-        <div class="line"></div>
-        <div class="row">
-            <ul class="col">
-                <li>Education</li>
-                <li><a href="https://www.nait.ca/nait/life-at-nait/nisohkamatotan-centre">Nîsôhkamâtotân Centre – NAIT</a></li>
-                <li><a href="http://amiskwaciy.epsb.ca">Amiskwaciy Academy</a></li>
-            </ul>
+<footer>
+    <h1>Indigenous <br><span>Storytelling</span></h1>
+    <div class="line"></div>
+    <div class="row">
+        <ul class="col">
+            <li>Education</li>
+            <li><a href="https://www.nait.ca/nait/life-at-nait/nisohkamatotan-centre">Nîsôhkamâtotân Centre – NAIT</a></li>
+            <li><a href="http://amiskwaciy.epsb.ca">Amiskwaciy Academy</a></li>
+        </ul>
 
+        <ul class="col">
+            <li>Resources</li>
+            <li><a href="https://www.nait.ca/nait/life-at-nait/nisohkamatotan-centre">Nîsôhkamâtotân Centre</a></li>
+            <li><a href="http://amiskwaciy.epsb.ca">Amiskwaciy Academy</a></li>
+            <li><a href="https://www.bac-lac.gc.ca/eng/discover/aboriginal-heritage/pages/introduction.aspx">Government of Canada – Indigenous Heritage</a></li>
+        </ul>
+            
             <ul class="col">
-                <li>Resources</li>
-                <li><a href="https://www.nait.ca/nait/life-at-nait/nisohkamatotan-centre">Nîsôhkamâtotân Centre</a></li>
-                <li><a href="http://amiskwaciy.epsb.ca">Amiskwaciy Academy</a></li>
-                <li><a href="https://www.bac-lac.gc.ca/eng/discover/aboriginal-heritage/pages/introduction.aspx">Government of Canada – Indigenous Heritage</a></li>
+                <li><a href="">Connect</a></li>
+                <li><a href="">Instagram</a></li>
+                <li><a href="">Twitter</a></li>
+                <li><a href="">Facebook</a></li>
+                <li><a href="">LinkedIn</a></li>
             </ul>
                 
         </div>

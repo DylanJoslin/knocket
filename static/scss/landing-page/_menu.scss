@@ -1,11 +1,6 @@
-body{
-    overflow-x: hidden;
-}
-
 
 .main-header{
     
-
     .main-navigation{
         z-index: 90;
         @include breakpoint(maxTablet){
@@ -15,7 +10,7 @@ body{
             height: 100%;
             position: absolute;
             top: 30px;
-            right: -100%;
+            left: -100%;
             background: $light-blue;
             padding-bottom: 4rem;
             transition: all 0.7s ease-in-out;
@@ -189,7 +184,7 @@ body{
     
         .menu-toggle {
             position: absolute;
-            right: 0;
+            left: 0;
             z-index: 9999;
         }//.menu-toggle
       }
