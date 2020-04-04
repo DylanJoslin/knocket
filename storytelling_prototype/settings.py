@@ -31,7 +31,8 @@ DEBUG = False
 ALLOWED_HOSTS = [
     '.tristanhampton.ca/indigenous-storytelling',
     'www.tristanhampton.ca',
-    '.tristanhampton.ca'
+    '.tristanhampton.ca',
+    '.tristanhampton.pythonanywhere'
 ]
 
 SECURE_SSL_REDIRECT = True
