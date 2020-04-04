@@ -3820,17 +3820,23 @@ td, th {
   }
 }
 
+.postdetailmain {
+  background-image: -webkit-gradient(linear, left top, right top, from(#7eb0f1), to(#c74641));
+  background-image: linear-gradient(to right, #7eb0f1, #c74641);
+}
+
 .postdetialh1 {
   font-size: 60.512px;
-  margin-top: 80px;
+  padding-top: 80px;
   margin-bottom: 10px;
   text-align: center;
   text-transform: uppercase;
-  color: darkblue;
+  color: #e7e7e7;
   font-family: 'Raleway bold', sans-serif;
 }
 
 .author {
+  color: #e7e7e7;
   font-size: 30px;
   text-align: center;
   font-family: 'Raleway regular', sans-serif;
@@ -3850,11 +3856,37 @@ iframe {
 
 .postdetail p {
   width: 400px;
-  margin-left: 40%;
   margin-right: 20%;
 }
 
 iframe {
+  margin-top: 10px;
   width: 40%;
+  height: 200px;
+}
+
+.postdetail p {
+  color: white;
+  width: 50%;
+  margin-left: 25%;
+}
+
+@media screen and (max-width: 768px) {
+  .postdetialh1 {
+    font-size: 40.512px;
+  }
+  .author {
+    font-size: 20.512px;
+  }
+  .postdetailimg {
+    margin-left: 20%;
+    width: 60%;
+  }
+  iframe {
+    margin-left: 20%;
+    margin-top: 10px;
+    width: 60%;
+    height: auto;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
