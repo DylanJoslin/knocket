@@ -84,6 +84,10 @@ select {
   }
 }
 
+body {
+  overflow-x: hidden;
+}
+
 /* Media Queries for different viewport sizes*/
 /* CARDO FONT */
 @font-face {
@@ -1479,6 +1483,13 @@ footer .bottom p {
     margin: 0 auto;
   }
 }
+
+@media only screen and (max-width: 415px) {
+  .alberta-svg {
+    margin-left: -6rem;
+  }
+}
+
 /*---------- utils ----------*/
 .text-center {
   text-align: center;
@@ -1647,6 +1658,10 @@ p {
 
 a {
   font-family: 'Cardo Regular', sans-serif;
+}
+
+body {
+  overflow-x: hidden;
 }
 
 /* Media Queries for different viewport sizes*/
