@@ -3739,7 +3739,7 @@ td, th {
   margin-bottom: 80px;
   text-align: center;
   text-transform: uppercase;
-  color: #dfdfdf;
+  color: white;
   font-family: 'Raleway regular', sans-serif;
 }
 
@@ -3755,8 +3755,8 @@ td, th {
 }
 
 .postcard {
-  background-image: -webkit-gradient(linear, left top, right top, from(white), to(#9e9a9a));
-  background-image: linear-gradient(to right, white, #9e9a9a);
+  background-image: -webkit-gradient(linear, left top, right top, from(white), to(#998a8a));
+  background-image: linear-gradient(to right, white, #998a8a);
   margin-bottom: 20px;
   padding: 10px;
   margin-left: 25%;
@@ -3834,8 +3834,12 @@ iframe {
 }
 
 .postdetail p {
-  width: 60%;
-  margin-left: 20%;
+  width: 400px;
+  margin-left: 40%;
   margin-right: 20%;
+}
+
+iframe {
+  width: 40%;
 }
 /*# sourceMappingURL=styles.css.map */
