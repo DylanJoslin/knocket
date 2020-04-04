@@ -1,0 +1,34 @@
+.postdetialh1{
+    font-size: 60.512px;
+    margin-top: 80px;
+    margin-bottom: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    color: darkblue;
+    font-family: 'Raleway bold', sans-serif;
+}
+.author{
+    font-size: 30px;
+    text-align: center;
+    font-family: 'Raleway regular', sans-serif;
+    margin-bottom: 40px;
+}
+iframe{
+    margin-left: 30%;
+}
+.postdetailimg{
+    width: 40%;
+    margin-left: 30%;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.postdetail p{
+    width: 400px;
+    margin-left: 40%;
+    margin-right: 20%;
+}
+.postdetail{
+    background-image: linear-gradient(to right , rgba(255, 255, 255), rgba(158, 154, 154));
+    border-radius: 10px;
+    border-right: 8px rgb(189, 189, 189) solid;
+}
