@@ -3582,7 +3582,9 @@ td, th {
 
 .category-posts .post {
   padding: 1rem;
-  border: 8px solid rgba(224, 44, 74, 0.616);
+  background: #B4B9E5;
+  border: 2px solid #51508B;
+  border-radius: 1rem;
   margin-bottom: 2rem;
 }
 
@@ -3619,6 +3621,8 @@ td, th {
 .category-posts .post p {
   color: #51508B;
   text-align: center;
+  color: #fff;
+  margin-bottom: 1rem;
 }
 
 .category-posts .post img {
