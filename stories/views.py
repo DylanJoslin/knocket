@@ -6,10 +6,10 @@ from django.shortcuts import redirect
 from django.contrib.auth.decorators import login_required
 # Create your views here.
 
-
 def browse(request):
     return render(request, 'stories/browse.html')
 
+@login_required
 def post_list(request):
     school_slug = request.GET.get('school')
     category_slug = request.GET.get('category')
@@ -29,6 +29,7 @@ def post_list(request):
         return render(request, 'stories/post_list.html', {'posts': posts})
     return render(request, 'stories/no_post.html')
 
+@login_required
 def post_detail(request, post_slug):
     post = get_object_or_404(VideoPost, slug=post_slug)
     return render(request, 'stories/post_detail.html', {'post': post})
