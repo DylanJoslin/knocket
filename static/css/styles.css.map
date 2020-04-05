@@ -40,7 +40,9 @@
         "../scss/users/_login.scss",
         "../scss/users/_profile.scss",
         "../scss/users/_upload.scss",
-        "../scss/stories/_medicine-wheel.scss"
+        "../scss/stories/_medicine-wheel.scss",
+        "../scss/post/_post-list.scss",
+        "../scss/post/_post-detail.scss"
     ],
     "names": [],
     "file": "styles.css"

@@ -6,12 +6,12 @@ let alberta = document.querySelector(".alberta");
 alberta.addEventListener("mouseover", function(){
     province.innerHTML = "Alberta";
     alberta.addEventListener("mouseout", function(){
-        province.innerHTML = "Select A Province";
+        province.innerHTML = "Explore the Map";
     });
 }); // End Alberta Hover Tile Changer
 
 //Mobile Map Slideshow
-let images = ["static/img/bc-final.png", "static/img/alberta-final.png", "static/img/sk-final.png", "static/img/mb-final.png", "static/img/on-final.png", "static/img/qc-final.png", "static/img/nl-final.png", "static/img/nb-final.png", "static/img/ns-final.png", "static/img/ter-final.svg"];
+let images = ["static/img/bc-final.svg", "static/img/alberta-final.svg", "static/img/sk-final.svg", "static/img/mb-final.svg", "static/img/on-final.svg", "static/img/qc-final.svg", "static/img/nl-final.svg", "static/img/nb-final.svg", "static/img/ns-final.svg"];
 let currentImg = 0;
 
 document.querySelector(".next").addEventListener("click", function(){
@@ -49,9 +49,6 @@ document.querySelector(".next").addEventListener("click", function(){
     } else if (currentImg == 8) {
         document.querySelector(".mobile-local-button").href = "#";
         document.querySelector(".mobile-provice-name").innerHTML = "Nova Scotia & Prince Edward Island";
-    } else if (currentImg == 9) {
-        document.querySelector(".mobile-local-button").href = "#";
-        document.querySelector(".mobile-provice-name").innerHTML = "Territories";
     }
 })
 
@@ -90,8 +87,5 @@ document.querySelector(".prev").addEventListener("click", function(){
     } else if (currentImg == 8) {
         document.querySelector(".mobile-local-button").href = "#";
         document.querySelector(".mobile-provice-name").innerHTML = "Nova Scotia & Prince Edward Island";
-    } else if (currentImg == 9) {
-        document.querySelector(".mobile-local-button").href = "#";
-        document.querySelector(".mobile-provice-name").innerHTML = "Territories";
     }
 })

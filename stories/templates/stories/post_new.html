@@ -1,4 +1,3 @@
-<!-- 'administration/base.html' -->
 {% extends 'home/base.html' %}
 
 {% block content %}
@@ -45,6 +44,21 @@
                     <div class="triangle-up"></div>
                     <div class="triangle-down"></div>
                 </div>
+                <p>Don't know how to upload Video?</p>
+                <button id="help">Get Help</button>
+                <div id="modalbox">
+                    <div class="modal-content">
+                        <span id="close">&times;</span>
+                        <h2>Private Video Upload Instruction</h2>
+                        <ol>
+                            <li>Go to <a href="https://studio.youtube.com/">Youtube Studio</a></li>
+                            <li>Upload your video and change settings</li>
+                            <li>Set visibility to <b>Unlisted</b><img src="/static/img/youtube.PNG" alt=""></li>
+                            <li>After publish, copy and paste 11 digit video code <img src="/static/img/embed.PNG" alt=""></li>
+                            <li>Done!</li>
+                        </ol>
+                    </div>
+                </div>                
         <form method="POST" enctype="multipart/form-data">{% csrf_token %}
             {{ form.media }}
             {{ form.as_p }}
@@ -52,5 +66,6 @@
         </form>
     </div>
     <script src="/static/js/slugify.js"></script>
+    <script src="/static/js/modal.js"></script>
 </div>
 {% endblock %}

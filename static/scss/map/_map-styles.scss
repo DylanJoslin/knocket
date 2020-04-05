@@ -34,6 +34,12 @@
       margin-left: 2rem;
     }
 
+    a:hover{
+      background: $light-purple;
+      transition: 0.5s;
+      color: white;
+    }
+
   }
 
   .interactive-map{
@@ -132,10 +138,10 @@
   .alberta-svg{
     width: 30rem;
     height: 40rem;
-    background-image: url("../img/alberta-final.png");
+    background-image: url("../img/alberta-final.svg");
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: 75%;
     margin: 0 auto;
   }
   
@@ -328,7 +334,10 @@
   
   .holder-mobile>div>img{
     width: 20rem;
+    max-height: 20rem;
     margin: 0 auto;
+    border-bottom: 40px solid #5FCCED;
+    border-top: 40px solid #5FCCED;
   }
   
   .slideshow-buttons{
@@ -377,6 +386,20 @@
   
     .holder-mobile{
       display: block;
+    }
+
+    .local-holder{
+      padding: 0 0rem;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      padding: 2rem;
+  
+      p{
+        max-width: 30rem;
+        margin: 0 auto;
+      }
+  
     }
   }
 

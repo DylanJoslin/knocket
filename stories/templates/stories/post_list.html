@@ -3,18 +3,23 @@
 
 {% block content %}
 
-
-    <h1>Post List</h1>
+<main class="postlistpage">
+    <h1 class="post-listh1">Post List</h1>
     {% for post in posts %}
-    <div>
-        {% if post.image %}
-        <img src="{% static 'media/' %}{{ post.image }}" alt="">
-        {% endif %}
-        <h2><a href="{% url 'post_detail' post.slug %}">{{ post.title }} - <span>{{ post.author }}</span></a></h2>
-        
-    </div> 
-{% endfor %}
+    <section class="postlist ">
+        <div class="postcard">
+            {% if post.image %}
+            <img class="postimg" src="{% static 'media/' %}{{ post.image }}" alt="">
+            {% endif %}
+            <h2 class="posth2"><a class="posta" href="{% url 'post_detail' post.slug %}">{{ post.title }} - <span>{{ post.author }}</span></a></h2>
+            
+        </div> 
 
+    </section>
+
+    
+{% endfor %}
+    </main>
 
 
 {% endblock content %}

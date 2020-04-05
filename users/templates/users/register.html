@@ -1,7 +1,49 @@
 {% extends "home/base.html" %}
 {% block content %}
-    <form method="POST">
-        <h2>Sign Up!</h2>
+<div class="background">
+    <div class="page-styles">
+        <form method="POST">
+        <h2>Register</h2>
+        <div class="border border-mobile">
+                <div class="triangle-up"></div>
+                <div class="triangle-down"></div>
+                <div class="triangle-up"></div>
+                <div class="triangle-down"></div>
+                <div class="triangle-up"></div>
+                <div class="triangle-down"></div>
+                <div class="triangle-up"></div>
+                <div class="triangle-down"></div>
+                <div class="triangle-up"></div>
+                <div class="triangle-down"></div>
+                <div class="triangle-up"></div>
+            </div>
+
+            <div class="border border-tablet">
+                <div class="triangle-up"></div>
+                <div class="triangle-down"></div>
+                <div class="triangle-up"></div>
+                <div class="triangle-down"></div>
+                <div class="triangle-up"></div>
+                <div class="triangle-down"></div>
+                <div class="triangle-up"></div>
+                <div class="triangle-down"></div>
+                <div class="triangle-up"></div>
+                <div class="triangle-down"></div>
+                <div class="triangle-up"></div>
+                <div class="triangle-down"></div>
+                <div class="triangle-up"></div>
+                <div class="triangle-down"></div>
+                <div class="triangle-up"></div>
+                <div class="triangle-down"></div>
+                <div class="triangle-up"></div>
+                <div class="triangle-down"></div>
+                <div class="triangle-up"></div>
+                <div class="triangle-down"></div>
+                <div class="triangle-up"></div>
+                <div class="triangle-down"></div>
+                <div class="triangle-up"></div>
+                <div class="triangle-down"></div>
+            </div>
         {% comment %} csrf_token is some built in security {% endcomment %}
         {% csrf_token %} 
         <div>
@@ -70,7 +112,9 @@
                 {% endif %}
             {% endfor %}
 
-            <button type="submit">Sign Up!</button>
+            <button type="submit" class="submit">Register</button>
         </div>
     </form>
+    </div>
+</div>
 {% endblock content %}
