@@ -853,9 +853,9 @@ body {
 
 .about .grid .member-1 .circle, .about .grid .member-2 .circle, .about .grid .member-3 .circle {
   position: absolute;
-  top: 280px;
-  left: 290px;
-  width: 200px;
+  top: 320px;
+  left: 260px;
+  width: 120px;
   z-index: 0;
 }
 
