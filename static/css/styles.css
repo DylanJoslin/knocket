@@ -489,14 +489,34 @@ body {
   }
 }
 
+@media screen and (min-width: 1024px) {
+  .hero .hero-inner {
+    padding: 20px 80px;
+  }
+}
+
 .hero .hero-inner h3 {
   color: white;
   font-family: Raleway Thin;
+  line-height: 1.5;
+  margin: 0;
+}
+
+@media screen and (min-width: 1024px) {
+  .hero .hero-inner h3 {
+    font-size: 48px;
+  }
 }
 
 .hero .hero-inner span {
   color: #FF7918;
   font-family: Raleway Bold Italic;
+}
+
+@media screen and (min-width: 1024px) {
+  .hero .hero-inner span {
+    font-size: 54px;
+  }
 }
 
 .hero .explore {
@@ -508,6 +528,20 @@ body {
   color: white;
   letter-spacing: 2px;
   text-decoration: none;
+}
+
+@media screen and (min-width: 768px) {
+  .hero .explore {
+    width: 400px;
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .hero .explore {
+    width: 500px;
+    font-size: 24px;
+  }
 }
 
 .hero .explore:hover {
@@ -784,7 +818,7 @@ body {
 .about .grid .member-1 .circle, .about .grid .member-2 .circle, .about .grid .member-3 .circle {
   position: absolute;
   top: 320px;
-  left: 300px;
+  left: 220px;
   width: 120px;
   z-index: 0;
 }
@@ -793,29 +827,22 @@ body {
   .about .grid .member-1 .circle, .about .grid .member-2 .circle, .about .grid .member-3 .circle {
     width: 90px;
     top: 180px;
-    left: 740px;
+    left: 630px;
   }
 }
 
 @media screen and (min-width: 1024px) {
   .about .grid .member-1 .circle, .about .grid .member-2 .circle, .about .grid .member-3 .circle {
-    top: 200px;
-    left: 860px;
+    top: 210px;
+    left: 800px;
+    width: 140px;
   }
 }
 
 @media screen and (min-width: 1280px) {
   .about .grid .member-1 .circle, .about .grid .member-2 .circle, .about .grid .member-3 .circle {
     top: 280px;
-    left: 1080px;
-  }
-}
-
-@media screen and (min-width: 1600px) {
-  .about .grid .member-1 .circle, .about .grid .member-2 .circle, .about .grid .member-3 .circle {
-    top: 240px;
-    left: 1080px;
-    width: 180px;
+    left: 1020px;
   }
 }
 
@@ -3392,6 +3419,132 @@ td, th {
 /* ------------------------------------------------------
                STORIES STYLES
 ------------------------------------------------------ */
+/* CARDO FONT */
+@font-face {
+  font-family: "Cardo Bold";
+  src: url("/static/fonts/Cardo-Bold.ttf");
+}
+
+@font-face {
+  font-family: "Cardo Italic";
+  src: url("/static/fonts/Cardo-Italic.ttf");
+}
+
+@font-face {
+  font-family: "Cardo Regular";
+  src: url("/static/fonts/Cardo-Regular.ttf");
+}
+
+/* RALEWAY FONT */
+@font-face {
+  font-family: "Raleway Light";
+  src: url("/static/fonts/Raleway-Light.ttf");
+}
+
+@font-face {
+  font-family: "Raleway Bold";
+  src: url("/static/fonts/Raleway-Bold.ttf");
+}
+
+@font-face {
+  font-family: "Raleway Bold Italic";
+  src: url("/static/fonts/Raleway-BoldItalic.ttf");
+}
+
+@font-face {
+  font-family: "Raleway Regular";
+  src: url("/static/fonts/Raleway-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Raleway Thin";
+  src: url("/static/fonts/Raleway-Thin.ttf");
+}
+
+@font-face {
+  font-family: "Raleway Thin Italic";
+  src: url("/static/fonts/Raleway-ThinItalic.ttf");
+}
+
+/* Custom Styles for Typography */
+h1, h2, h3, h4, h5 {
+  margin: 2.75rem 0 1.05rem;
+  font-weight: 500;
+  line-height: 1.15;
+}
+
+/* FONT-SIZES FOR IPAD/DESKTOP*/
+h1 {
+  font: 20px/1 'Cardo Regular', sans-serif;
+  margin-top: 0;
+  color: white;
+  text-transform: uppercase;
+}
+
+h1 span {
+  text-transform: none;
+  font-style: italic;
+  margin-left: 36px;
+}
+
+@media screen and (min-width: 768px) {
+  h1 span {
+    margin-left: 50px;
+  }
+}
+
+h1 a {
+  text-decoration: none;
+  color: white;
+}
+
+@media screen and (min-width: 768px) {
+  h1 {
+    font-size: 28px;
+  }
+}
+
+h2 {
+  font: 2.074em/1.5 'Raleway Regular', sans-serif;
+}
+
+@media screen and (min-width: 768px) {
+  h2 {
+    font-size: 3.157em;
+  }
+}
+
+h3 {
+  font: 1.728em/1.5 'Cardo Bold', sans-serif;
+  color: #51508B;
+}
+
+@media screen and (min-width: 768px) {
+  h3 {
+    font-size: 2.369em;
+  }
+}
+
+h4 {
+  font: 1.44em/1.5 'Cardo Bold', sans-serif;
+  color: #B4B9E5;
+}
+
+@media screen and (min-width: 768px) {
+  h4 {
+    font-size: 1.777em;
+  }
+}
+
+p {
+  font: 18px/1.5 'Raleway Regular', sans-serif;
+  text-align: justify;
+}
+
+a {
+  font-family: 'Cardo Regular', sans-serif;
+}
+
 .medicinewheel {
   height: 700px;
   background-image: url(/static/img/background602.jpg);
@@ -3507,7 +3660,7 @@ td, th {
 }
 
 /* FONT */
-.textwhite, .textyellow, .textred {
+.textwhite, .textyellow, .textred, .textblack {
   position: absolute;
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
@@ -3517,20 +3670,12 @@ td, th {
   color: black;
   padding-right: 20px;
   font-size: 20px;
-  font-family: 'Sriracha', cursive;
+  font-family: Raleway Regular;
+  letter-spacing: 2px;
 }
 
 .textblack {
-  position: absolute;
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
-  margin-top: 100px;
-  text-align: center;
-  width: 100%;
   color: white;
-  padding-right: 20px;
-  font-size: 20px;
-  font-family: 'Sriracha', cursive;
 }
 
 /* Color of background(hover)	 */
@@ -3547,7 +3692,7 @@ td, th {
 
 .con_bot > a:nth-child(1):hover .textred {
   font-size: 30px;
-  font-family: 'Berkshire Swash', cursive;
+  font-family: Raleway Bold;
 }
 
 .con_bot > a:nth-child(2):hover {
@@ -3563,7 +3708,7 @@ td, th {
 
 .con_bot > a:nth-child(2):hover .textblack {
   font-size: 30px;
-  font-family: 'Berkshire Swash', cursive;
+  font-family: Raleway Bold;
 }
 
 .con_top > a:nth-child(2):hover {
@@ -3579,7 +3724,7 @@ td, th {
 
 .con_top > a:nth-child(2):hover .textyellow {
   font-size: 30px;
-  font-family: 'Berkshire Swash', cursive;
+  font-family: Raleway Bold;
 }
 
 .con_top > a:nth-child(1):hover {
@@ -3588,7 +3733,7 @@ td, th {
 
 .con_top > a:nth-child(1):hover .textwhite {
   font-size: 30px;
-  font-family: 'Berkshire Swash', cursive;
+  font-family: Raleway Bold;
 }
 
 /* Screen < 500px */
@@ -3619,7 +3764,7 @@ td, th {
     width: 150px;
     height: 150px;
   }
-  .textwhite, .textyellow, .textred {
+  .textwhite, .textyellow, .textred, .textblack {
     position: absolute;
     -webkit-transform: rotate(-45deg);
             transform: rotate(-45deg);
@@ -3627,31 +3772,23 @@ td, th {
     text-align: center;
     width: 100%;
     color: black;
-    padding-left: 5px;
+    padding-left: 24px;
     margin-bottom: 20px;
     font-size: 16px;
-    font-family: 'Sriracha', cursive;
+    font-family: Raleway Regular;
   }
   .textblack {
-    position: absolute;
-    -webkit-transform: rotate(-45deg);
-            transform: rotate(-45deg);
-    margin-top: 60px;
-    text-align: center;
-    width: 100%;
     color: white;
-    font-size: 16px;
-    font-family: 'Sriracha', cursive;
   }
   .textwhite:hover, .textred:hover, .textyellow:hover {
     color: black;
     font-size: 18px;
-    font-family: 'Berkshire Swash', cursive;
+    font-family: Raleway Bold;
   }
   .textblack:hover {
     color: aliceblue;
     font-size: 18px;
-    font-family: 'Berkshire Swash', cursive;
+    font-family: Raleway Bold;
   }
 }
 
