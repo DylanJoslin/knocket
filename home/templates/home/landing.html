@@ -2,29 +2,21 @@
 {% load static %}
 {% block content %}
 
-<section class="banner">
-    <div class="quote inner-container">
-        <h3>“An individual can 
-            only accomplish</h3>
+<section class="hero">
+    <div class="hero-inner">
+        <h3>"An individual can accomplish</h3>
         <h3><span>some things</span>.</h3>
-            
-        </h3>
-        <h3>A community can
-            accomplish</h3>
-        <h3><span>anything</span>"</h3>
-           
+        <h3>A community can accomplish</h3>
+        <h3><span>anything</span>".</h3>
     </div>
-
-    <div class="explore-btn">
-        <a href="#map">Start Exploring</a>
-    </div>
+    <a href="#map" class="explore">Start Exploring</a>
 </section>
 
 <section>
     <div class="treaty inner-container">
         <h3> Treaty 6</h3>
         <div class="content">
-            <img src="/static/img/treaty.jpg" class="treaty-img" alt="Aliance between First Nations">
+            <img src="/static/img/sunset.png" class="treaty-img" alt="Aliance between First Nations">
             <div>
                 <p>Treaty 6 was signed between 1871 - 1877 by Canadian Crown and a few First Nations. It is an agreement
                 between the Crown, the Plains and Wood Cree, Assiniboine and the other band governments at Fort
@@ -43,7 +35,7 @@
 
 <div id="map" class="interactive-map">
     <h1 id="province-hover" class="province-hover text-center">Select A Province</h1>
-    <p>Click on an arrow in a province to see more!</p>
+    <p>Click on an arrow in a province or territory to see more!</p>
     <div class="province-data">
         <div class="holder">
             <a class="local alberta" href="province/ab"></a>

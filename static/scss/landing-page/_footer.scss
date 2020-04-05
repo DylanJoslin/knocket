@@ -2,19 +2,11 @@ footer{
     background-color: $light-blue;
     padding: 30px 10px;
 
-    h1{
-        text-align: center;
+    .logo{
+        width: 50px;
+        margin: 0 auto;
         opacity: 20%;
         margin-bottom: 20px;
-    }
-
-    .line{
-        width: 300px;
-        margin: 0 auto;
-        height: 2px;
-        background-color: white;
-        opacity: 10%;
-        margin-bottom: 40px;
     }
 
     .row{

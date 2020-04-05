@@ -40,11 +40,17 @@
         "../scss/users/_login.scss",
         "../scss/users/_profile.scss",
         "../scss/users/_upload.scss",
+<<<<<<< HEAD
         "../scss/users/_no-post.scss",
         "../scss/users/_alert.scss",
         "../scss/users/_post-list.scss",
         "../scss/users/_full-post.scss",
         "../scss/stories/_medicine-wheel.scss"
+=======
+        "../scss/stories/_medicine-wheel.scss",
+        "../scss/post/_post-list.scss",
+        "../scss/post/_post-detail.scss"
+>>>>>>> origin/master
     ],
     "names": [],
     "file": "styles.css"

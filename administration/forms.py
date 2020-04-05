@@ -16,3 +16,4 @@ class AdminPostForm(forms.ModelForm):
     class Meta:
         model = VideoPost
         fields = ('category','school', 'title', 'slug', 'content', 'video', 'image', 'approve')
+        widgets = {'slug': forms.HiddenInput()}

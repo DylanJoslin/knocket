@@ -10,7 +10,8 @@
 </head>
 <body class="main-body">
     <header class="main-header">
-        <h1 class="logo"><a href="{% url 'home' %}">Indigenous <br><span>Storytelling</span></a></h1>
+        <!-- <h1 class="logo"><a href="{% url 'home' %}">Indigenous <br><span>Storytelling</span></a></h1> -->
+        <a href="{% url 'home' %}"><img class="logo" src="/static/img/logo.png"></a>
         <nav class="main-navigation">
             <ul class="menu-links">
                 <li class="nav-link">
@@ -75,15 +76,14 @@
         {% block content%}{% endblock %}
     </main>
 
-<footer>
-    <h1>Indigenous <br><span>Storytelling</span></h1>
-    <div class="line"></div>
-    <div class="row">
-        <ul class="col">
-            <li>Education</li>
-            <li><a href="https://www.nait.ca/nait/life-at-nait/nisohkamatotan-centre">Nîsôhkamâtotân Centre – NAIT</a></li>
-            <li><a href="http://amiskwaciy.epsb.ca">Amiskwaciy Academy</a></li>
-        </ul>
+    <footer>
+        <img class="logo" src="/static/img/logo.png">
+        <div class="row">
+            <ul class="col">
+                <li>Education</li>
+                <li><a href="https://www.nait.ca/nait/life-at-nait/nisohkamatotan-centre">Nîsôhkamâtotân Centre – NAIT</a></li>
+                <li><a href="http://amiskwaciy.epsb.ca">Amiskwaciy Academy</a></li>
+            </ul>
 
         <ul class="col">
             <li>Resources</li>
