@@ -73,6 +73,7 @@
     justify-content: space-around;
     margin: 20rem 0;
     width: 60%;
+    max-width: 1070px;
     margin: 0 auto;
     background-image: url(../img/map-of-canada.png);
     background-size: 90%;
@@ -385,6 +386,26 @@
   
     .holder-mobile{
       display: block;
+    }
+
+    .local-holder{
+      padding: 0 0rem;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      padding: 2rem;
+  
+      p{
+        max-width: 30rem;
+        margin: 0 auto;
+      }
+  
+    }
+  }
+
+  @media only screen and (max-width: 415px){
+    .alberta-svg{
+      margin-left: -6rem;
     }
   }
    /*---------- utils ----------*/
