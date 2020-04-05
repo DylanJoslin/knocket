@@ -501,10 +501,6 @@ body {
   }
 }
 
-body {
-  overflow-x: hidden;
-}
-
 .main-header .main-navigation {
   z-index: 90;
 }
@@ -516,7 +512,7 @@ body {
     height: 100%;
     position: absolute;
     top: 30px;
-    right: -100%;
+    left: -100%;
     background: #3EA3DF;
     padding-bottom: 4rem;
     transition: all 0.7s ease-in-out;
@@ -670,7 +666,7 @@ body {
   }
   .main-header .menu-toggle {
     position: absolute;
-    right: 0;
+    left: 0;
     z-index: 9999;
   }
 }
@@ -1703,18 +1699,20 @@ td, th {
     width: 100%;
     position: absolute;
     top: 4rem;
-    right: -100%;
+    left: -100%;
     background-color: #0C2946;
     padding-bottom: 4rem;
     transition: all 0.7s ease-in-out;
     margin-top: 3.9rem;
   }
 }
+
 @media screen and (min-width: 700px) {
   .dashboard-body .dashboard-navigation {
     width: 50%;
   }
 }
+
 @media screen and (min-width: 1000px) {
   .dashboard-body .dashboard-navigation {
     display: inline-block;
@@ -1864,7 +1862,7 @@ td, th {
   }
   .dashboard-header .menu-toggle {
     position: absolute;
-    right: 0;
+    left: 0;
     z-index: 9999;
   }
 }

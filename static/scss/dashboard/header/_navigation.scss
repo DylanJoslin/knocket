@@ -6,16 +6,16 @@
             width: 100%;
             position: absolute;
             top: 4rem;
-            right: -100%;
+            left: -100%;
             background-color: $nav-shown;
             padding-bottom: 4rem;
             transition: all 0.7s ease-in-out;
             margin-top: 3.9rem;
         }//break
 
-        @include breakpoint(tablet){
-            width: 50%;
-        }
+        // @include breakpoint(tablet){
+        //     width: 75%;
+        // }
 
         @include breakpoint(laptop){
             display: inline-block;

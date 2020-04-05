@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 </head>
 <body class="dashboard-body">
-
     <header class="dashboard-header">
         <h1 class="logo"><a href="{% url 'home' %}">Indigenous <br><span>Storytelling</span></a></h1>
         <nav class="dashboard-navigation">
@@ -35,7 +34,7 @@
                 </li>
                 <li class="logout">
                         <p class="signed-in"><span>Signed in as,</span><br> {{ user.username }}</p>
-                         <a href="{% url 'logout' %}"><p>Logout <i class="fas fa-sign-out-alt"></i></p></a>
+                        <a href="{% url 'logout' %}"><p>Logout <i class="fas fa-sign-out-alt"></i></p></a>
                 </li>
                 <li class="nav-link">
                     <a href="{% url 'home' %}">
@@ -49,7 +48,6 @@
             <div></div>
         </div>
     </header>
-
 
     <main class="dashboard-main">
         {% block content%}
