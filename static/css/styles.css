@@ -88,6 +88,10 @@ body {
   overflow-x: hidden;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 /* Media Queries for different viewport sizes*/
 /* CARDO FONT */
 @font-face {
@@ -1653,6 +1657,10 @@ body {
   overflow-x: hidden;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 /* Media Queries for different viewport sizes*/
 .resources-link-holder {
   margin: 60px auto;
@@ -2003,15 +2011,6 @@ td, th {
   }
 }
 
-<<<<<<< HEAD
-=======
-@media screen and (min-width: 700px) {
-  .dashboard-body .dashboard-navigation {
-    width: 50%;
-  }
-}
-
->>>>>>> origin/master
 @media screen and (min-width: 1000px) {
   .dashboard-body .dashboard-navigation {
     display: inline-block;
@@ -3434,6 +3433,11 @@ td, th {
   margin-bottom: 1rem;
 }
 
+.create-post-styles .video-help {
+  margin-bottom: 1rem;
+  font-size: 1.6rem;
+}
+
 .create-post-styles #cke_id_content {
   width: 100% !important;
 }
@@ -3469,6 +3473,79 @@ td, th {
 
 .create-post-styles .modal-content ol {
   padding: 10%;
+}
+
+.no-content {
+  margin-top: 4rem;
+  margin-bottom: 6rem;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.no-content h2 {
+  font-size: 2rem;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  color: #51508B;
+}
+
+@media screen and (min-width: 700px) {
+  .no-content h2 {
+    font-size: 2.8rem;
+  }
+}
+
+.no-content a {
+  color: white;
+  border: none;
+  background: #FB4547;
+  font-size: 1rem;
+  font-family: 'Cardo Regular', sans-serif;
+  text-transform: uppercase;
+  border-radius: 0.5rem;
+  text-align: center;
+  display: inline-block;
+  width: 100%;
+  padding: 0.6rem 2rem;
+  margin-bottom: 1rem;
+  text-decoration: none;
+  padding: 1rem;
+}
+
+.no-content a:hover {
+  background-color: #B4B9E5;
+  color: black;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+@media screen and (min-width: 1000px) {
+  .no-content a {
+    max-width: 30rem;
+    margin: 0 auto;
+  }
+}
+
+.no-content p {
+  font-size: 1.6rem;
+  text-align: center;
+  padding: 1rem;
+}
+
+.container .alert {
+  padding: 1rem;
+  background: #FB4547;
+  color: white;
+  font-size: 1.3rem;
+  font-family: "Raleway Bold";
+  text-align: center;
 }
 
 /* ------------------------------------------------------
