@@ -58,9 +58,20 @@
 @import 'users/login';
 @import 'users/profile';
 @import 'users/upload';
+@import 'users/no-post';
+@import 'users/alert';
+@import 'users/post-list';
+@import 'users/full-post';
+
 
 
 /* ------------------------------------------------------
-                STORIES STYLES
+               STORIES STYLES
 ------------------------------------------------------ */
 @import 'stories/medicine-wheel';
+
+/* ------------------------------------------------------
+                POST STYLES
+------------------------------------------------------ */
+@import 'post/post-list';
+@import 'post/post-detail';

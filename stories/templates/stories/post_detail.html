@@ -2,14 +2,22 @@
 {% load static %}
 
 {% block content %}
-    <h1>{{post.title}}</h1>
-    <p>{{post.author}}</p>
-    {% if post.image %}
-    <!-- <img src="{{ post.image.url }}" alt=""> -->
-    <img src="{% static 'media/' %}{{ post.image }}" alt="">
+
+<div class="post-detail">
+    <h2>{{post.title}}</h2>
+    <p class="author">Created By: {{post.author}}</p>
+    <div class="content">
+        {% if post.image %}
+        <img src="{% static 'media/' %}{{ post.image }}" alt="">
+        {% endif %}
+        {{post.content | safe}}
+    </div>
+     {% if post.video %}
+     <div class="video">
+        <iframe src="https://www.youtube.com/embed/{{ post.video }}" frameborder="0"></iframe>
+     </div>
     {% endif %}
-    {% if post.video %}
-     <iframe src="https://www.youtube.com/embed/{{ post.video }}" frameborder="0"></iframe>
-    {% endif %}
-    {{post.content | safe}}
+    
+</div>
+
 {% endblock content %}

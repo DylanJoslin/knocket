@@ -88,6 +88,10 @@ body {
   overflow-x: hidden;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 /* Media Queries for different viewport sizes*/
 /* CARDO FONT */
 @font-face {
@@ -134,12 +138,6 @@ body {
 @font-face {
   font-family: "Raleway Thin Italic";
   src: url("/static/fonts/Raleway-ThinItalic.ttf");
-}
-
-/* FONDAMENTO */
-@font-face {
-  font-family: "Fondamento";
-  src: url("/static/fonts/Fondamento-Regular.ttf");
 }
 
 /* Custom Styles for Typography */
@@ -383,7 +381,7 @@ img, .treaty-img {
 }
 
 .main-header .logo {
-  font-size: 24px;
+  width: 50px;
 }
 
 @media screen and (min-width: 1000px) {
@@ -452,139 +450,71 @@ body {
   overflow-x: 0;
 }
 
-.banner {
-  background-image: url(/static/img/home_page_landing_image-01.jpg);
+.hero {
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  background-image: url(/static/img/banner.jpg);
   background-size: cover;
+  background-position: center center;
   background-repeat: no-repeat;
-  background-position: center;
-  height: 88vh;
-  padding: 120px 30px;
+  background-attachment: fixed;
   margin-bottom: 100px;
+  padding: 40px;
 }
 
-@media screen and (min-width: 768px) {
-  .banner {
-    height: 87vh;
-    padding: 80px 60px;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .banner {
-    height: 88vh;
-    padding: 60px 120px;
-  }
-}
-
-@media screen and (min-width: 1600px) {
-  .banner {
-    height: 88vh;
-    padding: 80px 360px;
-  }
-}
-
-.banner .quote {
+.hero .hero-inner {
   background-color: #b4b9e5c4;
   border-radius: 20px;
-  padding: 20px;
-  margin-bottom: 100px;
+  padding: 20px 10px;
+  margin-bottom: 60px;
 }
 
 @media screen and (min-width: 768px) {
-  .banner .quote {
-    padding: 20px 48px;
+  .hero .hero-inner {
+    padding: 20px 40px;
   }
 }
 
-@media screen and (min-width: 1024px) {
-  .banner .quote {
-    padding: 40px 50px;
-    max-width: 800px;
-  }
-}
-
-@media screen and (min-width: 1600px) {
-  .banner .quote {
-    padding: 40px 100px;
-    max-width: 1200px;
-  }
-}
-
-.banner .quote h3 {
-  font-family: Fondamento;
+.hero .hero-inner h3 {
   color: white;
-  font-size: 30px;
+  font-family: Raleway Thin;
 }
 
-@media screen and (min-width: 768px) {
-  .banner .quote h3 {
-    font-size: 40px;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .banner .quote h3 {
-    font-size: 40px;
-  }
-}
-
-@media screen and (min-width: 1600px) {
-  .banner .quote h3 {
-    font-size: 50px;
-  }
-}
-
-.banner .quote h3 span {
+.hero .hero-inner span {
   color: #FF7918;
-  letter-spacing: 2px;
-  font-size: 40px;
-  margin-left: 40px;
+  font-family: Raleway Bold Italic;
 }
 
-@media screen and (min-width: 768px) {
-  .banner .quote h3 span {
-    font-size: 48px;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .banner .quote h3 span {
-    letter-spacing: 3px;
-    font-size: 44px;
-  }
-}
-
-@media screen and (min-width: 1600px) {
-  .banner .quote h3 span {
-    font-size: 60px;
-  }
-}
-
-.banner .explore-btn a {
-  text-transform: uppercase;
-  text-decoration: none;
-  font-size: 20px;
-  letter-spacing: 2px;
-  color: white;
+.hero .explore {
+  width: 300px;
+  border-radius: 10px;
+  padding: 20px;
   background-color: #FB4547;
-  padding: 10px 60px;
-  border-radius: 8px;
-  display: table;
-  margin: 0 auto;
+  text-transform: uppercase;
+  color: white;
+  letter-spacing: 2px;
+  text-decoration: none;
 }
 
-.banner .explore-btn a:hover {
+.hero .explore:hover {
   background-color: #B4B9E5;
+  color: black;
   -webkit-transition: 0.5s;
   transition: 0.5s;
-}
-
-@media screen and (min-width: 1024px) {
-  .banner .explore-btn a {
-    padding: 20px 120px;
-    border-radius: 10px;
-    font-size: 26px;
-  }
 }
 
 .main-header .main-navigation {
@@ -853,17 +783,17 @@ body {
 
 .about .grid .member-1 .circle, .about .grid .member-2 .circle, .about .grid .member-3 .circle {
   position: absolute;
-  top: 280px;
-  left: 290px;
-  width: 200px;
+  top: 320px;
+  left: 300px;
+  width: 120px;
   z-index: 0;
 }
 
 @media screen and (min-width: 768px) {
   .about .grid .member-1 .circle, .about .grid .member-2 .circle, .about .grid .member-3 .circle {
     width: 90px;
-    top: 160px;
-    left: 650px;
+    top: 180px;
+    left: 740px;
   }
 }
 
@@ -961,19 +891,11 @@ footer {
   padding: 30px 10px;
 }
 
-footer h1 {
-  text-align: center;
+footer .logo {
+  width: 50px;
+  margin: 0 auto;
   opacity: 20%;
   margin-bottom: 20px;
-}
-
-footer .line {
-  width: 300px;
-  margin: 0 auto;
-  height: 2px;
-  background-color: white;
-  opacity: 10%;
-  margin-bottom: 40px;
 }
 
 footer .row {
@@ -1120,6 +1042,7 @@ footer .bottom p {
       justify-content: space-around;
   margin: 20rem 0;
   width: 60%;
+  max-width: 1070px;
   margin: 0 auto;
   background-image: url(../img/map-of-canada.png);
   background-size: 90%;
@@ -1479,6 +1402,12 @@ footer .bottom p {
   }
 }
 
+@media only screen and (max-width: 415px) {
+  .alberta-svg {
+    margin-left: -6rem;
+  }
+}
+
 /*---------- utils ----------*/
 .text-center {
   text-align: center;
@@ -1564,12 +1493,6 @@ footer .bottom p {
   src: url("/static/fonts/Raleway-ThinItalic.ttf");
 }
 
-/* FONDAMENTO */
-@font-face {
-  font-family: "Fondamento";
-  src: url("/static/fonts/Fondamento-Regular.ttf");
-}
-
 /* Custom Styles for Typography */
 h1, h2, h3, h4, h5 {
   margin: 2.75rem 0 1.05rem;
@@ -1647,6 +1570,10 @@ p {
 
 a {
   font-family: 'Cardo Regular', sans-serif;
+}
+
+body {
+  overflow-x: hidden;
 }
 
 body {
@@ -2003,15 +1930,6 @@ td, th {
   }
 }
 
-<<<<<<< HEAD
-=======
-@media screen and (min-width: 700px) {
-  .dashboard-body .dashboard-navigation {
-    width: 50%;
-  }
-}
-
->>>>>>> origin/master
 @media screen and (min-width: 1000px) {
   .dashboard-body .dashboard-navigation {
     display: inline-block;
@@ -3434,6 +3352,11 @@ td, th {
   margin-bottom: 1rem;
 }
 
+.create-post-styles .video-help {
+  margin-bottom: 1rem;
+  font-size: 1.6rem;
+}
+
 .create-post-styles #cke_id_content {
   width: 100% !important;
 }
@@ -3471,8 +3394,251 @@ td, th {
   padding: 10%;
 }
 
+.no-content {
+  margin-top: 4rem;
+  margin-bottom: 6rem;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.no-content h2 {
+  font-size: 2rem;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  color: #51508B;
+}
+
+@media screen and (min-width: 700px) {
+  .no-content h2 {
+    font-size: 2.8rem;
+  }
+}
+
+.no-content a {
+  color: white;
+  border: none;
+  background: #FB4547;
+  font-size: 1rem;
+  font-family: 'Cardo Regular', sans-serif;
+  text-transform: uppercase;
+  border-radius: 0.5rem;
+  text-align: center;
+  display: inline-block;
+  width: 100%;
+  padding: 0.6rem 2rem;
+  margin-bottom: 1rem;
+  text-decoration: none;
+  padding: 1rem;
+}
+
+.no-content a:hover {
+  background-color: #B4B9E5;
+  color: black;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+@media screen and (min-width: 1000px) {
+  .no-content a {
+    max-width: 30rem;
+    margin: 0 auto;
+  }
+}
+
+.no-content p {
+  font-size: 1.6rem;
+  text-align: center;
+  padding: 1rem;
+}
+
+.container .alert {
+  padding: 1rem;
+  background: #FB4547;
+  color: white;
+  font-size: 1.3rem;
+  font-family: "Raleway Bold";
+  text-align: center;
+}
+
+.category-posts {
+  margin: 1rem;
+}
+
+@media screen and (min-width: 700px) {
+  .category-posts {
+    padding: 0 3rem;
+  }
+}
+
+.category-posts h2 {
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 3.4rem;
+}
+
+@media screen and (min-width: 700px) {
+  .category-posts .all-posts {
+    width: 450px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .category-posts .all-posts {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
+.category-posts .post {
+  padding: 1rem;
+  background: #B4B9E5;
+  border: 2px solid #51508B;
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+}
+
+@media screen and (min-width: 700px) {
+  .category-posts .post {
+    width: 450px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .category-posts .post {
+    width: 45%;
+    margin-right: 2rem;
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  .category-posts .post {
+    width: 30%;
+  }
+}
+
+.category-posts .post .post-header {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.category-posts .post h3 {
+  margin-bottom: 0.5rem;
+}
+
+.category-posts .post p {
+  color: #51508B;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.category-posts .post img {
+  margin-bottom: 1rem;
+  border-radius: 0.6rem;
+  border: 1px solid #51508B;
+}
+
+.category-posts .post .button {
+  color: white;
+  border: none;
+  background: #FB4547;
+  font-size: 1rem;
+  font-family: 'Cardo Regular', sans-serif;
+  text-transform: uppercase;
+  border-radius: 0.5rem;
+  text-align: center;
+  display: inline-block;
+  width: 100%;
+  padding: 0.6rem 2rem;
+  margin-bottom: 1rem;
+  text-decoration: none;
+  margin: 0;
+}
+
+.category-posts .post .button:hover {
+  background-color: #B4B9E5;
+  color: black;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.post-detail {
+  padding: 1rem;
+}
+
+@media screen and (min-width: 700px) {
+  .post-detail {
+    padding: 0 4rem;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .post-detail {
+    padding: 0 5rem;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+}
+
+.post-detail h2 {
+  margin-top: 2rem;
+  font-size: 3rem;
+  text-align: center;
+}
+
+.post-detail iframe {
+  width: 100%;
+  height: 400px;
+  margin-top: 2rem;
+  margin-bottom: 5rem;
+}
+
+@media screen and (min-width: 700px) {
+  .post-detail iframe {
+    height: 600px;
+  }
+}
+
+.post-detail .author {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.post-detail img {
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: 3rem;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 700px) {
+  .post-detail img {
+    margin: 0 auto;
+    margin-bottom: 3rem;
+  }
+}
+
+.post-detail p {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  max-width: 50rem;
+  margin: 0 auto;
+}
+
 /* ------------------------------------------------------
-                STORIES STYLES
+               STORIES STYLES
 ------------------------------------------------------ */
 .medicinewheel {
   height: 700px;
@@ -3734,6 +3900,151 @@ td, th {
     color: aliceblue;
     font-size: 18px;
     font-family: 'Berkshire Swash', cursive;
+  }
+}
+
+/* ------------------------------------------------------
+                POST STYLES
+------------------------------------------------------ */
+.post-listh1 {
+  font-size: 60.512px;
+  padding-top: 80px;
+  margin-bottom: 80px;
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+  font-family: 'Raleway regular', sans-serif;
+}
+
+.postlist {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.postlistpage {
+  background-image: -webkit-gradient(linear, left top, right top, from(#7eb0f1), to(#c74641));
+  background-image: linear-gradient(to right, #7eb0f1, #c74641);
+}
+
+.postcard {
+  background-image: -webkit-gradient(linear, left top, right top, from(white), to(#998a8a));
+  background-image: linear-gradient(to right, white, #998a8a);
+  margin-bottom: 20px;
+  padding: 10px;
+  margin-left: 25%;
+  margin-right: 25%;
+  width: 50%;
+  text-align: center;
+  border-radius: 10px;
+  border-right: 8px #bdbdbd solid;
+  margin-bottom: 60px;
+}
+
+.postimg {
+  width: 70%;
+  margin-left: 15%;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.posta {
+  font-size: large;
+  text-decoration: none;
+  color: white;
+  background-color: #d36e72;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  border-radius: 6px;
+  display: table;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 600px) {
+  .postcard {
+    margin-left: 20%;
+    margin-right: 20%;
+    width: 60%;
+  }
+  .post-listh1 {
+    font-size: 40.512px;
+  }
+  .posta {
+    font-size: small;
+  }
+  .postimg {
+    width: 80%;
+    margin-left: 10%;
+  }
+}
+
+.postdetailmain {
+  background-image: -webkit-gradient(linear, left top, right top, from(#7eb0f1), to(#c74641));
+  background-image: linear-gradient(to right, #7eb0f1, #c74641);
+}
+
+.postdetialh1 {
+  font-size: 60.512px;
+  padding-top: 80px;
+  margin-bottom: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #e7e7e7;
+  font-family: 'Raleway bold', sans-serif;
+}
+
+.author {
+  color: #e7e7e7;
+  font-size: 30px;
+  text-align: center;
+  font-family: 'Raleway regular', sans-serif;
+  margin-bottom: 40px;
+}
+
+iframe {
+  margin-left: 30%;
+}
+
+.postdetailimg {
+  width: 40%;
+  margin-left: 30%;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.postdetail p {
+  width: 400px;
+  margin-right: 20%;
+}
+
+iframe {
+  margin-top: 10px;
+  width: 40%;
+  height: 200px;
+}
+
+.postdetail p {
+  color: white;
+  width: 50%;
+  margin-left: 25%;
+}
+
+@media screen and (max-width: 768px) {
+  .postdetialh1 {
+    font-size: 40.512px;
+  }
+  .author {
+    font-size: 20.512px;
+  }
+  .postdetailimg {
+    margin-left: 20%;
+    width: 60%;
+  }
+  iframe {
+    margin-left: 20%;
+    margin-top: 10px;
+    width: 60%;
+    height: auto;
   }
 }
 /*# sourceMappingURL=styles.css.map */
