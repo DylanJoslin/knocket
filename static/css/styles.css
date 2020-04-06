@@ -3860,9 +3860,11 @@ iframe {
   height: 200px;
 }
 
-.posttext {
+.posttext p {
+  color: white;
   width: 50%;
-  color: #e7e7e7;
+  margin-left: 25%;
+  word-wrap: break-word;
 }
 
 @media screen and (max-width: 768px) {
