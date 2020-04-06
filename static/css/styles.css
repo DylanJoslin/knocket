@@ -3352,6 +3352,11 @@ td, th {
   margin-bottom: 1rem;
 }
 
+.create-post-styles .video-help {
+  margin-bottom: 1rem;
+  font-size: 1.6rem;
+}
+
 .create-post-styles #cke_id_content {
   width: 100% !important;
 }
@@ -3387,6 +3392,249 @@ td, th {
 
 .create-post-styles .modal-content ol {
   padding: 10%;
+}
+
+.no-content {
+  margin-top: 4rem;
+  margin-bottom: 6rem;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.no-content h2 {
+  font-size: 2rem;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  color: #51508B;
+}
+
+@media screen and (min-width: 700px) {
+  .no-content h2 {
+    font-size: 2.8rem;
+  }
+}
+
+.no-content a {
+  color: white;
+  border: none;
+  background: #FB4547;
+  font-size: 1rem;
+  font-family: 'Cardo Regular', sans-serif;
+  text-transform: uppercase;
+  border-radius: 0.5rem;
+  text-align: center;
+  display: inline-block;
+  width: 100%;
+  padding: 0.6rem 2rem;
+  margin-bottom: 1rem;
+  text-decoration: none;
+  padding: 1rem;
+}
+
+.no-content a:hover {
+  background-color: #B4B9E5;
+  color: black;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+@media screen and (min-width: 1000px) {
+  .no-content a {
+    max-width: 30rem;
+    margin: 0 auto;
+  }
+}
+
+.no-content p {
+  font-size: 1.6rem;
+  text-align: center;
+  padding: 1rem;
+}
+
+.container .alert {
+  padding: 1rem;
+  background: #FB4547;
+  color: white;
+  font-size: 1.3rem;
+  font-family: "Raleway Bold";
+  text-align: center;
+}
+
+.category-posts {
+  margin: 1rem;
+}
+
+@media screen and (min-width: 700px) {
+  .category-posts {
+    padding: 0 3rem;
+  }
+}
+
+.category-posts h2 {
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 3.4rem;
+}
+
+@media screen and (min-width: 700px) {
+  .category-posts .all-posts {
+    width: 450px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .category-posts .all-posts {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
+.category-posts .post {
+  padding: 1rem;
+  background: #B4B9E5;
+  border: 2px solid #51508B;
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+}
+
+@media screen and (min-width: 700px) {
+  .category-posts .post {
+    width: 450px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .category-posts .post {
+    width: 45%;
+    margin-right: 2rem;
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  .category-posts .post {
+    width: 30%;
+  }
+}
+
+.category-posts .post .post-header {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.category-posts .post h3 {
+  margin-bottom: 0.5rem;
+}
+
+.category-posts .post p {
+  color: #51508B;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.category-posts .post img {
+  margin-bottom: 1rem;
+  border-radius: 0.6rem;
+  border: 1px solid #51508B;
+}
+
+.category-posts .post .button {
+  color: white;
+  border: none;
+  background: #FB4547;
+  font-size: 1rem;
+  font-family: 'Cardo Regular', sans-serif;
+  text-transform: uppercase;
+  border-radius: 0.5rem;
+  text-align: center;
+  display: inline-block;
+  width: 100%;
+  padding: 0.6rem 2rem;
+  margin-bottom: 1rem;
+  text-decoration: none;
+  margin: 0;
+}
+
+.category-posts .post .button:hover {
+  background-color: #B4B9E5;
+  color: black;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.post-detail {
+  padding: 1rem;
+}
+
+@media screen and (min-width: 700px) {
+  .post-detail {
+    padding: 0 4rem;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .post-detail {
+    padding: 0 5rem;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+}
+
+.post-detail h2 {
+  margin-top: 2rem;
+  font-size: 3rem;
+  text-align: center;
+}
+
+.post-detail iframe {
+  width: 100%;
+  height: 400px;
+  margin-top: 2rem;
+  margin-bottom: 5rem;
+}
+
+@media screen and (min-width: 700px) {
+  .post-detail iframe {
+    height: 600px;
+  }
+}
+
+.post-detail .author {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.post-detail img {
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: 3rem;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 700px) {
+  .post-detail img {
+    margin: 0 auto;
+    margin-bottom: 3rem;
+  }
+}
+
+.post-detail p {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  max-width: 50rem;
+  margin: 0 auto;
 }
 
 /* ------------------------------------------------------

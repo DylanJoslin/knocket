@@ -2,23 +2,22 @@
 {% load static %}
 
 {% block content %}
-<main class="postdetailmain">
-    <section class="postdetail">
-        <h1 class="postdetialh1">{{post.title}}</h1>
-        <h3 class="author">{{post.author}}</h3>
+
+<div class="post-detail">
+    <h2>{{post.title}}</h2>
+    <p class="author">Created By: {{post.author}}</p>
+    <div class="content">
         {% if post.image %}
-        <!-- <img src="{{ post.image.url }}" alt=""> -->
-        <img class="postdetailimg "src="{% static 'media/' %}{{ post.image }}" alt="">
+        <img src="{% static 'media/' %}{{ post.image }}" alt="">
         {% endif %}
-        {% if post.video %}
-         <iframe class="video" src="https://www.youtube.com/embed/{{ post.video }}" frameborder="0"></iframe>
-        {% endif %}
-        <p class="posttext">
-            {{post.content | safe}}</p>
-    </section>
-</main>
-<style>
+        {{post.content | safe}}
+    </div>
+     {% if post.video %}
+     <div class="video">
+        <iframe src="https://www.youtube.com/embed/{{ post.video }}" frameborder="0"></iframe>
+     </div>
+    {% endif %}
+    
+</div>
 
-</style>
-
-{% endblock content %} 
+{% endblock content %}

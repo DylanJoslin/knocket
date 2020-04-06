@@ -95,7 +95,6 @@
 						<p>Created on: {{ post.date_posted| date:"M d, Y" }}</p>
 						<p>Created by: {{ post.author }}</p>
 						<p>Category: {{ post.school }} / {{ post.category }}</p>
-						<p>Accepted By: (name)</p>
 					</div>
 					<div class="options">
 						<a href="{% url 'delete_upload' %}{{ post.slug }}">Delete Upload</a>
