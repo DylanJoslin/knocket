@@ -3636,7 +3636,7 @@ td, th {
 }
 
 .con_bot > a:nth-child(1):hover .textred {
-  font-size: 30px;
+  font-size: 25px;
   font-family: 'Berkshire Swash', cursive;
 }
 
@@ -3652,7 +3652,7 @@ td, th {
 }
 
 .con_bot > a:nth-child(2):hover .textblack {
-  font-size: 30px;
+  font-size: 25px;
   font-family: 'Berkshire Swash', cursive;
 }
 
@@ -3668,7 +3668,7 @@ td, th {
 }
 
 .con_top > a:nth-child(2):hover .textyellow {
-  font-size: 30px;
+  font-size: 25px;
   font-family: 'Berkshire Swash', cursive;
 }
 
@@ -3677,7 +3677,7 @@ td, th {
 }
 
 .con_top > a:nth-child(1):hover .textwhite {
-  font-size: 30px;
+  font-size: 25px;
   font-family: 'Berkshire Swash', cursive;
 }
 

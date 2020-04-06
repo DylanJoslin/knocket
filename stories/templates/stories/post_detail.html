@@ -14,7 +14,7 @@
          <iframe class="video" src="https://www.youtube.com/embed/{{ post.video }}" frameborder="0"></iframe>
         {% endif %}
         <div class="posttext">
-            <p style="width: 80%;">{{post.content | safe}}</p>
+            {{post.content | safe}}
             
         </div>
     </section>
