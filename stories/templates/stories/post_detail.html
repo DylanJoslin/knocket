@@ -13,8 +13,9 @@
         {% if post.video %}
          <iframe class="video" src="https://www.youtube.com/embed/{{ post.video }}" frameborder="0"></iframe>
         {% endif %}
-        <p class="posttext">
-            {{post.content | safe}}</p>
+        <div class="posttext">
+            {{post.content | safe}}
+        </div>
     </section>
 </main>
 <style>
