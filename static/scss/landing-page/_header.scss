@@ -7,6 +7,10 @@
 
     .logo{
         width: 50px;
+
+        @include media-md{
+            width: 60px;
+        }
     }
 
     @include breakpoint(laptop){

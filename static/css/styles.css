@@ -242,7 +242,7 @@ a {
   }
 }
 
-img, .treaty-img {
+img {
   max-width: 100%;
   height: auto;
 }
@@ -268,24 +268,40 @@ img, .treaty-img {
   margin-bottom: 20px;
 }
 
-.treaty .treaty-img {
+.treaty .have-fun {
+  font-size: 24px;
+  font-family: Raleway Bold Italic;
+  color: #FF7918;
+}
+
+.treaty .sunset-img {
   width: 60%;
   margin: 0 auto;
   margin-bottom: 40px;
+  border-radius: 16px;
 }
 
 @media screen and (min-width: 768px) {
-  .treaty .treaty-img {
-    width: 200px;
-    height: 200px;
+  .treaty .sunset-img {
+    width: 260px;
+    height: 260px;
     margin-right: 40px;
+    margin-top: 8px;
   }
 }
 
 @media screen and (min-width: 1024px) {
-  .treaty .treaty-img {
-    width: 200px;
-    height: 200px;
+  .treaty .sunset-img {
+    width: 260px;
+    height: 260px;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .treaty .sunset-img {
+    margin-top: 0;
+    width: 300px;
+    height: 300px;
   }
 }
 
@@ -382,6 +398,12 @@ img, .treaty-img {
 
 .main-header .logo {
   width: 50px;
+}
+
+@media screen and (min-width: 768px) {
+  .main-header .logo {
+    width: 60px;
+  }
 }
 
 @media screen and (min-width: 1000px) {
@@ -1013,10 +1035,10 @@ footer .bottom p {
   background: #FB4547;
   color: white;
   text-decoration: none;
-  width: 25%;
-  margin: 0;
-  margin-top: 2rem;
-  margin-left: 2rem;
+  width: 280px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 2rem;
 }
 
 .map-local-main a:hover {
@@ -1361,8 +1383,7 @@ footer .bottom p {
   width: 20rem;
   max-height: 20rem;
   margin: 0 auto;
-  border-bottom: 40px solid #5FCCED;
-  border-top: 40px solid #5FCCED;
+  padding: 40px 0;
 }
 
 .slideshow-buttons {
@@ -1700,6 +1721,20 @@ body {
   background-color: #B4B9E5;
   -webkit-transition: 0.5s;
   transition: 0.5s;
+}
+
+.education .resource-img, .heritage .resource-img, .mental-health .resource-img {
+  margin: 0 auto;
+  width: 400px;
+  height: 400px;
+  border-radius: 20px;
+}
+
+@media screen and (min-width: 1024px) {
+  .education .resource-img, .heritage .resource-img, .mental-health .resource-img {
+    width: 300px;
+    height: 300px;
+  }
 }
 
 @media screen and (min-width: 768px) {
