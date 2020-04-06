@@ -48,6 +48,7 @@
 @import 'dashboard/main/edit-upload';
 @import 'dashboard/main/filter-forms';
 @import 'dashboard/main/alerts';
+@import 'dashboard/main/delete';
 
 
 /* ------------------------------------------------------
@@ -70,8 +71,4 @@
 ------------------------------------------------------ */
 @import 'stories/medicine-wheel';
 
-/* ------------------------------------------------------
-                POST STYLES
------------------------------------------------------- */
-@import 'post/post-list';
-@import 'post/post-detail';
+
