@@ -1,10 +1,16 @@
-{% extends 'home/base.html' %}
+{% extends 'administration/base.html' %}
 
 {% block content %}
-<form action="" method="POST">{% csrf_token %}
-    <h2>Are you sure you want to delete</h2>
-    <p>{{post.title}}</p>
-    <a href="../">Cancel</a><input type="submit" value="Confirm">
-</form>
+
+<div class="confirm-delete">
+    <form action="" method="POST">{% csrf_token %}
+        <h3><span class="heading">Are you sure you want to delete this post?</span></h3>
+        <p class="info"><span class="span">Title: {{post.title}}</span></p>
+        <p class="info"><span class="span">Created by: {{post.author}}</span></p>
+        <div class="buttons">
+            <a href="../" class="submit colour">Cancel</a><input type="submit" value="Confirm" class="submit">
+        </div>
+    </form>
+</div>
 
 {% endblock %}
