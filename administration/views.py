@@ -169,8 +169,13 @@ def delete_upload(request, post_slug):
         return redirect('/')
     else:
         post = get_object_or_404(VideoPost, slug=post_slug)
-        post.delete()
-        return redirect('admin_uploads')
+        if request.method == "POST":
+            post.delete()
+            return redirect('admin_uploads')
+        context = {
+            "post": post
+        }
+        return render(request, "administration/confirm_delete.html", context)
 
 
 def edit_users(request, username="none"):
