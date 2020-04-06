@@ -70,8 +70,8 @@
 						<p>Category: {{ post.school }} / {{ post.category }}</p>
 					</div>
 					<div class="options">
-						<a href="{% url 'delete_upload' %}{{ post.slug }}">Delete Upload</a>
-						<a href="{% url 'edit_upload' %}{{ post.slug }}">Edit Upload</a>
+						<a href="{% url 'delete_upload' post.slug %}">Delete Upload</a>
+						<a href="{% url 'edit_upload' post.slug %}">Edit Upload</a>
 					</div>
 				</div><!-- User information -->
 			</div><!-- Single user -->
@@ -97,8 +97,8 @@
 						<p>Category: {{ post.school }} / {{ post.category }}</p>
 					</div>
 					<div class="options">
-						<a href="{% url 'delete_upload' %}{{ post.slug }}">Delete Upload</a>
-						<a href="{% url 'edit_upload' %}{{ post.slug }}">Edit Upload</a>
+						<a href="{% url 'delete_upload' post.slug %}"">Delete Upload</a>
+						<a href="{% url 'edit_upload' post.slug %}"">Edit Upload</a>
 					</div>
 				</div><!-- User information -->
 			</div><!-- Single user -->
