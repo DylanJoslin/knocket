@@ -35,7 +35,7 @@ class VideoPost(models.Model):
     # category = models.ForeignKey('Category', on_delete=models.CASCADE)
     # school = models.ForeignKey('School', on_delete=models.CASCADE)
     SCHOOL_CHOICES = [
-        ('Amiskwaciy-Academy', 'Amiskwaciy Academy'),
+        ('Amiskwaciy-Academy', 'amiskwaciy Academy'),
         ('NAIT', 'NAIT'),
     ]
 
