@@ -3861,11 +3861,8 @@ iframe {
 }
 
 .posttext {
-  margin-left: 20%;
-  width: 60%;
-  word-wrap: break-word;
+  width: 50%;
   color: #e7e7e7;
-  padding-bottom: 30px;
 }
 
 @media screen and (max-width: 768px) {
@@ -3884,9 +3881,6 @@ iframe {
     margin-top: 10px;
     width: 60%;
     height: auto;
-  }
-  .posttext{
-    font-size: 1.05em;
   }
 }
 /*# sourceMappingURL=styles.css.map */
