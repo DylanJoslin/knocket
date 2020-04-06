@@ -29,21 +29,18 @@ urlpatterns = [
     path('administration/', administration_views.admin_home, name='administration'),
     path('administration/users/', administration_views.admin_users, name='admin_users'),
     path('administration/uploads/', administration_views.admin_uploads, name='admin_uploads'),
-    path('administration/edit-user/', administration_views.edit_users, name='edit_users'),
+    # path('administration/edit-user/', administration_views.edit_users, name='edit_users'),
     path('administration/edit-user/<slug:username>', administration_views.edit_users, name='edit_users'),
     path('administration/create-user/', administration_views.create_user, name='create_user'),
-
     path('administration/edit-post/<slug:post_slug>', administration_views.edit_upload, name='edit_upload'),
-
     path('administration/delete-post/<slug:post_slug>', administration_views.delete_upload, name='delete_upload'),
-    # path('administration/<slug:access>', administration_views.admin_home, name='administration'),
 
     # Delete
-    path('delete/', administration_views.delete_user, name='delete_user'),
+    # path('delete/', administration_views.delete_user, name='delete_user'),
     path('delete/<slug:username>', administration_views.delete_user, name='delete_user'),
 
     # Approve    
-    path('approve/', administration_views.approve_user, name='approve_user'),
+    # path('approve/', administration_views.approve_user, name='approve_user'),
     path('approve/<slug:username>', administration_views.approve_user, name='approve_user'),
 
     # Login/Logout
@@ -55,7 +52,6 @@ urlpatterns = [
     # Posts
     path('browse/', story_views.browse, name="browse"),
     path('post/', story_views.post_list, name='post_list'),
-    # path('post/<slug:post_category>', story_views.post_list, name='post_list'),
     path('post/<slug:post_slug>/', story_views.post_detail, name='post_detail'),
     path('post/new', story_views.post_new, name='post_new'),
     
