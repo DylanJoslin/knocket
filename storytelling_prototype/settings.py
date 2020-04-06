@@ -11,17 +11,14 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
+import json 
 
+with open('/etc/config.json') as config_file:
+    config = json.load(config_file)
 
-# Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
-
-# Use this when in production, instead of SECRET_KEY
-# with open('/etc/secret_key.txt') as f:
-#     SECRET_KEY = f.read().strip()
-
-SECRET_KEY = 'h%ym-1djx@x=xc3br*+r^$#w6!sw_k-6-xia+-imr%d&o4xhp$'
+SECRET_KEY = config['SECRET_KEY']
 
 
 
@@ -29,25 +26,23 @@ SECRET_KEY = 'h%ym-1djx@x=xc3br*+r^$#w6!sw_k-6-xia+-imr%d&o4xhp$'
 DEBUG = False
 
 ALLOWED_HOSTS = [
-    '.tristanhampton.ca/indigenous-storytelling',
-    'www.tristanhampton.ca',
-    '.tristanhampton.ca',
-    '.tristanhampton.pythonanywhere'
+    '172.105.10.168',
+    '.indigenousstorytelling.ca'
 ]
 
-SECURE_SSL_REDIRECT = True
+# SECURE_SSL_REDIRECT = True
 
-SESSION_COOKIE_SECURE = True
+# SESSION_COOKIE_SECURE = True
 
-CSRF_COOKIE_SECURE = True
+# CSRF_COOKIE_SECURE = True
 
-SECURE_REFERRER_POLICY = 'origin'
+# SECURE_REFERRER_POLICY = 'origin'
 
-SECURE_HSTS_SECONDS = 360
+# SECURE_HSTS_SECONDS = 360
 
-SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+# SECURE_HSTS_INCLUDE_SUBDOMAINS = True
 
-SECURE_HSTS_PRELOAD = True
+# SECURE_HSTS_PRELOAD = True
 
 
 # Application definition
@@ -105,8 +100,12 @@ WSGI_APPLICATION = 'storytelling_prototype.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'storytelling',
+        'USER': 'tristanhampton',
+        'PASSWORD': 'devLbdSbwJbdV#1',
+        'HOST': 'localhost',
+        'POST': '',
     }
 }
 
@@ -149,7 +148,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = ()
-STATIC_ROOT = '/home/tristanhampton/knocket/static'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 LOGIN_REDIRECT_URL = 'home'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'static/media')
 MEDIA_URL = 'static/media/'
