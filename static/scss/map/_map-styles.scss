@@ -28,10 +28,10 @@
       background: $red-colour;
       color: rgb(255, 255, 255);
       text-decoration: none;
-      width: 25%;
-      margin: 0;
-      margin-top: 2rem;
-      margin-left: 2rem;
+      width: 280px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin: 2rem;
     }
 
     a:hover{
@@ -73,13 +73,12 @@
     justify-content: space-around;
     margin: 20rem 0;
     width: 60%;
-    max-width: 1070px;
     margin: 0 auto;
     background-image: url(../img/map-of-canada.png);
     background-size: 90%;
     background-repeat: no-repeat;
     height: 50rem;
-    padding-top: 22%;
+    max-width: 1070px;
   }
 
   .province-nav{
@@ -324,6 +323,7 @@
     width: 6%;
     height: 15%;
     padding: 1rem;
+    margin-top: 37%;
   }
   
   .holder-mobile{
@@ -336,8 +336,7 @@
     width: 20rem;
     max-height: 20rem;
     margin: 0 auto;
-    border-bottom: 40px solid #5FCCED;
-    border-top: 40px solid #5FCCED;
+    padding: 40px 0;
   }
   
   .slideshow-buttons{
