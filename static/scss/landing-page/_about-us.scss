@@ -44,31 +44,28 @@
             .circle{
                 position: absolute;
                 top: 320px;
-                left: 300px;
+                left: 220px;
                 width: 120px;
                 z-index: 0;
 
                 @include media-md{
                     width: 90px;
                     top:180px;
-                    left: 740px;
+                    left: 630px;
                 }
 
                 @include media-lg{
-                    top: 200px;
-                    left: 860px;
+                    top: 210px;
+                    left: 800px;
+                    width: 140px;
                 }
 
                 @include media-dk{
                     top: 280px;
-                    left: 1080px;
+                    left: 1020px;
                 }
 
-                @include media-xl{
-                    top: 240px;
-                    left: 1080px;
-                    width: 180px;
-                }
+               
             }
 
             .corner{
