@@ -3831,7 +3831,7 @@ td, th {
   margin-bottom: 10px;
   text-align: center;
   text-transform: uppercase;
-  color: #a85f5f;
+  color: #e7e7e7;
   font-family: 'Raleway bold', sans-serif;
 }
 
@@ -3854,10 +3854,6 @@ iframe {
   text-align: center;
 }
 
-.postdetail {
-  width: 50%;
-}
-
 iframe {
   margin-top: 10px;
   width: 40%;
@@ -3865,7 +3861,11 @@ iframe {
 }
 
 .posttext {
-  width: 50%;
+  margin-left: 20%;
+  width: 60%;
+  word-wrap: break-word;
+  color: #e7e7e7;
+  padding-bottom: 30px;
 }
 
 @media screen and (max-width: 768px) {
@@ -3884,6 +3884,9 @@ iframe {
     margin-top: 10px;
     width: 60%;
     height: auto;
+  }
+  .posttext{
+    font-size: 1.05em;
   }
 }
 /*# sourceMappingURL=styles.css.map */

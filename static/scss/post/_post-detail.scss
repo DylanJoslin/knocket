@@ -7,7 +7,7 @@
     margin-bottom: 10px;
     text-align: center;
     text-transform: uppercase;
-    color: rgb(168, 95, 95);
+    color: rgb(231, 231, 231);
     font-family: 'Raleway bold', sans-serif;
 }
 .author{
@@ -26,9 +26,7 @@ iframe{
     margin-bottom: 10px;
     text-align: center;
 }
-.postdetail{
-    width: 50%;
-}
+
 iframe{
     margin-top: 10px;
     width: 40%;
@@ -36,6 +34,7 @@ iframe{
 }
 .posttext{
     width: 50%;
+    color: rgb(231, 231, 231);
 }
 
 @media screen and (max-width: 768px){
