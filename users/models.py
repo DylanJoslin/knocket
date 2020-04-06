@@ -11,7 +11,7 @@ class UserProfile(models.Model):
     # adding to this list. They will auto populate in
     # the register form.
     SCHOOL_CHOICES = [
-        ('Amiskwaciy Academy', 'Amiskwaciy Academy'),
+        ('Amiskwaciy Academy', 'amiskwaciy Academy'),
         ('NAIT', 'NAIT')
     ]
 
