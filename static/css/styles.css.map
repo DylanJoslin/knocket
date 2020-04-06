@@ -35,6 +35,7 @@
         "../scss/dashboard/main/_edit-upload.scss",
         "../scss/dashboard/main/_filter-forms.scss",
         "../scss/dashboard/main/_alerts.scss",
+        "../scss/dashboard/main/_delete.scss",
         "../scss/users/_mixins.scss",
         "../scss/users/_general.scss",
         "../scss/users/_login.scss",

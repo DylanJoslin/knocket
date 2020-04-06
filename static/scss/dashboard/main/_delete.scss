@@ -1,0 +1,47 @@
+.confirm-delete{
+    background: $primary;
+    height: 100vh;
+
+    @include breakpoint(tablet){
+        @include padding(medium);
+    }
+
+    @include breakpoint(laptop){
+        margin-left: 26rem;
+    }
+
+    .heading{
+        color: white;
+    }
+
+    .info .span{
+        font-size: 2.4rem;
+        color: white;
+    }
+
+    .buttons{
+        @include breakpoint(laptop){
+            display: flex;
+        }
+
+        .submit:first-child{
+            margin-right: 3rem;
+
+        }
+    }
+
+    .submit{
+        @include button;
+        width: 100%;
+
+        @include breakpoint(laptop){
+            width: 30rem;
+        }
+    }
+
+    .colour{
+        background: $third;
+    }
+
+
+}

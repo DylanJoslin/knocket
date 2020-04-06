@@ -2,6 +2,11 @@
 {% load static %}
 
 {% block content %}
-    <p>NO POST UNDER THIS CATEGORY</p>
+<div class="no-content">
+    <h2>Sorry! There are no posts under this category.</h2>
+    <a href="{% url 'browse' %}">Back to the Medicine wheel</a>
+    <p>or</p>
+    <a href="{% url 'post_new'%}" class="button">Create a Post</a>
+</div>
     
 {% endblock content %}

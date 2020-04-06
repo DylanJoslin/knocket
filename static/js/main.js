@@ -1,3 +1,9 @@
+$(document).ready(function(){
+    $('#grid').isotope({
+        itemSelector: '.grid-item',
+    });
+});
+
 //Button Hover Title Changer
 let blockHolder = document.querySelectorAll(".blocky");
 let province = document.getElementById("province-hover");
@@ -89,3 +95,4 @@ document.querySelector(".prev").addEventListener("click", function(){
         document.querySelector(".mobile-provice-name").innerHTML = "Nova Scotia & Prince Edward Island";
     }
 })
+

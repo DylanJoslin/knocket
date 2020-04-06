@@ -48,6 +48,7 @@
 @import 'dashboard/main/edit-upload';
 @import 'dashboard/main/filter-forms';
 @import 'dashboard/main/alerts';
+@import 'dashboard/main/delete';
 
 
 /* ------------------------------------------------------
@@ -58,6 +59,11 @@
 @import 'users/login';
 @import 'users/profile';
 @import 'users/upload';
+@import 'users/no-post';
+@import 'users/alert';
+@import 'users/post-list';
+@import 'users/full-post';
+
 
 
 /* ------------------------------------------------------
