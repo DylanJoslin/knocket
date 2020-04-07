@@ -91,7 +91,7 @@
 }
 
 /* FONT */
-.textwhite, .textyellow, .textred{
+.textwhite, .textyellow, .textred, .textblack{
 	position: absolute;
 	transform: rotate(-45deg);
 	margin-top: 100px;
@@ -100,19 +100,12 @@
 	color: black;
 	padding-right: 20px;
 	font-size: 20px;
-	font-family: 'Sriracha', cursive;
+	font-family: Raleway Regular;
+	letter-spacing: 2px;
 }
 
 .textblack{
-	position: absolute;
-	transform: rotate(-45deg);
-	margin-top: 100px;
-	text-align: center;
-	width: 100%;
 	color: white;
-	padding-right: 20px;
-	font-size: 20px;
-	font-family: 'Sriracha', cursive;
 }
 
 /* Color of background(hover)	 */
@@ -125,7 +118,7 @@
 }
 .con_bot>a:nth-child(1):hover .textred{
 	font-size: 30px;
-	font-family: 'Berkshire Swash', cursive;
+	font-family: Raleway Bold;
 }
 
 .con_bot>a:nth-child(2):hover{
@@ -137,7 +130,7 @@
 }
 .con_bot>a:nth-child(2):hover .textblack{
 	font-size: 30px;
-	font-family: 'Berkshire Swash', cursive;
+	font-family: Raleway Bold;
 }
 
 .con_top>a:nth-child(2):hover {
@@ -149,7 +142,7 @@
 }
 .con_top>a:nth-child(2):hover .textyellow{
 	font-size: 30px;
-	font-family: 'Berkshire Swash', cursive;
+	font-family: Raleway Bold;
 }
 
 .con_top>a:nth-child(1):hover{
@@ -157,7 +150,7 @@
 }
 .con_top>a:nth-child(1):hover .textwhite{
 	font-size: 30px;
-	font-family: 'Berkshire Swash', cursive;
+	font-family: Raleway Bold;
 }
 
 
@@ -193,37 +186,30 @@
 		width: 150px;
 		height: 150px;
 	}
-	.textwhite, .textyellow, .textred{
+	.textwhite, .textyellow, .textred, .textblack{
 		position: absolute;
 		transform: rotate(-45deg);
 		margin-top: 60px;
 		text-align: center;
 		width: 100%;
 		color: black;
-		padding-left:5px;
+		padding-left:24px;
 		margin-bottom: 20px;
 		font-size: 16px;
-		font-family: 'Sriracha', cursive;
+		font-family: Raleway Regular;
 	}
 	.textblack{
-		position: absolute;
-		transform: rotate(-45deg);
-		margin-top: 60px;
-		text-align: center;
-		width: 100%;
 		color: white;
-		font-size: 16px;
-		font-family: 'Sriracha', cursive;
 	}
 	.textwhite:hover, .textred:hover, .textyellow:hover{
 		color:black;
 		font-size: 18px;
-		font-family: 'Berkshire Swash', cursive;
+		font-family: Raleway Bold;
 	}
 	.textblack:hover{
 		color: aliceblue;
 		font-size: 18px;
-		font-family: 'Berkshire Swash', cursive;
+		font-family: Raleway Bold;
 	}
 
 }

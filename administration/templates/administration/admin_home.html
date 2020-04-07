@@ -113,11 +113,11 @@
 								</div>
 								<div class="options">
 									{% if user.userprofile.access == 'pending'%}
-										<a href="{% url 'approve_user' %}{{ user.username }}">Approve User</a>
+										<a href="{% url 'approve_user' user.username %}">Approve User</a>
 									{% else %}
-										<a href="{% url 'edit_users' %}{{ user.username }}">Edit User</a>
+										<a href="{% url 'edit_users' user.username %}"">Edit User</a>
 									{% endif %}
-									<a href="{% url 'delete_user' %}{{ user.username }}">Delete User</a>
+									<a href="{% url 'delete_user' user.username %}"">Delete User</a>
 								</div>
 							</div><!-- User information -->
 						</div><!-- Single user -->
@@ -174,8 +174,8 @@
 							<p>Category: {{ post.school }} / {{ post.category }}</p>
 						</div>
 						<div class="options">
-							<a href="{% url 'delete_upload' %}{{ post.slug }}">Delete Upload</a>
-							<a href="{% url 'edit_upload' %}{{ post.slug }}">Edit Upload</a>
+							<a href="{% url 'delete_upload' post.slug %}">Delete Upload</a>
+							<a href="{% url 'edit_upload' post.slug %}">Edit Upload</a>
 						</div>
 					</div><!-- User information -->
 				</div><!-- Single user -->
@@ -203,8 +203,8 @@
 							<p>Category: {{ post.school }} / {{ post.category }}</p>
 						</div>
 						<div class="options">
-							<a href="{% url 'delete_upload' %}{{ post.slug }}">Delete Upload</a>
-							<a href="{% url 'edit_upload' %}{{ post.slug }}">Edit Upload</a>
+							<a href="{% url 'delete_upload' post.slug %}">Delete Upload</a>
+							<a href="{% url 'edit_upload'  post.slug %}">Edit Upload</a>
 						</div>
 					</div><!-- User information -->
 				</div><!-- Single user -->

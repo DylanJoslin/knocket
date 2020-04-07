@@ -76,6 +76,17 @@
       }
     }
   }
+  .resource-img{
+    margin: 0 auto;
+    width: 400px;
+    height: 400px;
+    border-radius: 20px;
+
+    @include media-lg{
+      width: 300px;
+      height: 300px;
+    }
+  }
 }
 
 .heritage{
