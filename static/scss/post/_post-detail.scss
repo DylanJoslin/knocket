@@ -34,9 +34,10 @@ iframe{
 }
 .posttext p{
     color:  white;
-    width: 50%;
-    margin-left: 25%;
-    word-wrap: break-word
+    width: 60%;
+    margin-left: 20%;
+    word-wrap: break-word;
+    padding-bottom: 30px;
 }
 
 @media screen and (max-width: 768px){
@@ -51,7 +52,7 @@ iframe{
     width: 60%;
    }
    iframe{
-       margin-left: 20%;
+    margin-left: 20%;
     margin-top: 10px;
     width: 60%;
     height: auto;
