@@ -6,23 +6,33 @@
 <div class="category-posts">
     <h2>Stories</h2>
 
-    <div class="all-posts" id="grid">
+    <div class="all-posts">
         {% for post in posts %}
-    
-        <div class="post grid-item">
-            <div class="post-header">
-                <h3>{{ post.title }}</h3>
-                <p>Created by: <span>{{ post.author }}</span></p>
-            </div>
-            {% if post.image %}
-            <img src="{% static 'media/' %}{{ post.image }}" alt="{{ post.title }} image">
-            {% endif %}
-            <a href="{% url 'post_detail' post.slug %}" class="button">View Post</a>
-        </div>
-        {% endfor %}
-    </div>
 
-    </section>
+        {% if post.image %}
+            <div class="post post-w-image">
+                <div class="image">
+                        <img src="{% static 'media/' %}{{ post.image }}" alt="{{ post.title }} image">
+                </div>
+                <div class="post-header">
+                    <div>
+                        <h3 class="post-title">{{ post.title }}</h3>
+                        <p>Created by: <span>{{ post.author }}</span></p>
+                    </div>
+                    <a href="{% url 'post_detail' post.slug %}" class="button">View Post</a>
+                </div>
+            </div>
+        {% else %}
+            <div class="post">
+                <h3 class="post-title">{{ post.title }}</h3>
+                <p>Created by: <span>{{ post.author }}</span></p>
+                <a href="{% url 'post_detail' post.slug %}" class="button">View Post</a>
+            </div>
+        {% endif %}
+
+        {% endfor %}
+
+    </div>
 
 </div>
 

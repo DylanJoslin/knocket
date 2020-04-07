@@ -20,19 +20,19 @@
         }
 
         @include breakpoint(laptop){
-            width: 90%;
+            width: 900px;
             margin: 0 auto;
         }
-
         
     }
 
     .post{
         padding: 1rem;
-        background: $light-purple;
-        border: 2px solid $dark-purple;
-        border-radius: 1rem;
+        border-right: 8px solid rgba(224, 44, 74, 0.616);
+        border-bottom: 8px solid rgba(224, 44, 74, 0.616);
         margin-bottom: 2rem;
+        width: 100%;
+        text-align: center;
         
         @include breakpoint (tablet){
             width: 450px;
@@ -41,37 +41,54 @@
         }
 
         @include breakpoint (laptop){
-            width: 45%;
-            margin-right: 2rem;
-           
-        }
-
-        @include breakpoint (desktop){
-            width: 30%;
+            width: 100%;
+            max-width: 900px;
         }
 
         .post-header{
             text-align: center;
-            margin-bottom: 1rem;
+
+            @include breakpoint(laptop){
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                width: 45%;
+            }
         }
 
         h3{
             margin-bottom: 0.5rem;
+            font-size: 2.4rem;
+
+            @include breakpoint(laptop){
+                font-size: 3rem;
+                margin-top: 2rem;
+            }
+
         }
 
         p{
             color: $dark-purple;
             text-align: center;
-            color: #fff;
+            font-size: 1.4rem;
             margin-bottom: 1rem;
+
+            @include breakpoint(laptop){
+                margin-bottom: 2rem;
+            }
         }
 
         img{
+            width: 100%;
             margin-bottom: 1rem;
             border-radius: 0.6rem;
             border: 1px solid $dark-purple;
-        }
+            max-width: 400px;
 
+            @include breakpoint(laptop){
+                margin-bottom: 0;
+            }
+        }
 
         .button{
             @include pageFormButton;
@@ -79,6 +96,15 @@
         
         }
 
+    }
+
+    .post-w-image{
+        @include breakpoint (laptop){
+            display: flex;
+            width: 100%;
+            max-width: 900px;
+            justify-content: space-between;
+        }
     }
 
     
