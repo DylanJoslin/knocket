@@ -26,19 +26,19 @@ iframe{
     margin-bottom: 10px;
     text-align: center;
 }
-.postdetail p{
-    width: 400px;
-    margin-right: 20%;
-}
+
 iframe{
     margin-top: 10px;
     width: 40%;
     height: 200px;
 }
-.postdetail p{
+.posttext p{
     color:  white;
-    width: 50%;
-    margin-left: 25%;
+    width: 60%;
+    margin-left: 20%;
+    word-wrap: break-word;
+    padding-bottom: 30px;
+    padding-top: 20px;
 }
 
 @media screen and (max-width: 768px){
@@ -53,8 +53,8 @@ iframe{
     width: 60%;
    }
    iframe{
-       margin-left: 20%;
-    margin-top: 10px;
+    margin-left: 20%;
+    margin-top: 20px;
     width: 60%;
     height: auto;
 }

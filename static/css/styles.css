@@ -140,6 +140,12 @@ body {
   src: url("/static/fonts/Raleway-ThinItalic.ttf");
 }
 
+/* FONDAMENTO */
+@font-face {
+  font-family: "Fondamento";
+  src: url("/static/fonts/Fondamento-Regular.ttf");
+}
+
 /* Custom Styles for Typography */
 h1, h2, h3, h4, h5 {
   margin: 2.75rem 0 1.05rem;
@@ -864,7 +870,15 @@ body {
 @media screen and (min-width: 1280px) {
   .about .grid .member-1 .circle, .about .grid .member-2 .circle, .about .grid .member-3 .circle {
     top: 280px;
-    left: 1020px;
+    left: 1080px;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .about .grid .member-1 .circle, .about .grid .member-2 .circle, .about .grid .member-3 .circle {
+    top: 240px;
+    left: 1080px;
+    width: 180px;
   }
 }
 
@@ -940,11 +954,19 @@ footer {
   padding: 30px 10px;
 }
 
-footer .logo {
-  width: 50px;
-  margin: 0 auto;
+footer h1 {
+  text-align: center;
   opacity: 20%;
   margin-bottom: 20px;
+}
+
+footer .line {
+  width: 300px;
+  margin: 0 auto;
+  height: 2px;
+  background-color: white;
+  opacity: 10%;
+  margin-bottom: 40px;
 }
 
 footer .row {
@@ -1541,6 +1563,12 @@ footer .bottom p {
   src: url("/static/fonts/Raleway-ThinItalic.ttf");
 }
 
+/* FONDAMENTO */
+@font-face {
+  font-family: "Fondamento";
+  src: url("/static/fonts/Fondamento-Regular.ttf");
+}
+
 /* Custom Styles for Typography */
 h1, h2, h3, h4, h5 {
   margin: 2.75rem 0 1.05rem;
@@ -1989,6 +2017,12 @@ td, th {
     -webkit-transition: all 0.7s ease-in-out;
     transition: all 0.7s ease-in-out;
     margin-top: 3.9rem;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .dashboard-body .dashboard-navigation {
+    width: 50%;
   }
 }
 
@@ -4015,12 +4049,20 @@ a {
   color: black;
   padding-right: 20px;
   font-size: 20px;
-  font-family: Raleway Regular;
-  letter-spacing: 2px;
+  font-family: 'Sriracha', cursive;
 }
 
 .textblack {
+  position: absolute;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  margin-top: 100px;
+  text-align: center;
+  width: 100%;
   color: white;
+  padding-right: 20px;
+  font-size: 20px;
+  font-family: 'Sriracha', cursive;
 }
 
 /* Color of background(hover)	 */
@@ -4036,8 +4078,9 @@ a {
 }
 
 .con_bot > a:nth-child(1):hover .textred {
-  font-size: 30px;
-  font-family: Raleway Bold;
+  font-size: 22px;
+  font-family: 'Berkshire Swash', cursive;
+  margin-left: 20px;
 }
 
 .con_bot > a:nth-child(2):hover {
@@ -4052,8 +4095,8 @@ a {
 }
 
 .con_bot > a:nth-child(2):hover .textblack {
-  font-size: 30px;
-  font-family: Raleway Bold;
+  font-size: 22px;
+  font-family: 'Berkshire Swash', cursive;
 }
 
 .con_top > a:nth-child(2):hover {
@@ -4068,8 +4111,8 @@ a {
 }
 
 .con_top > a:nth-child(2):hover .textyellow {
-  font-size: 30px;
-  font-family: Raleway Bold;
+  font-size: 22px;
+  font-family: 'Berkshire Swash', cursive;
 }
 
 .con_top > a:nth-child(1):hover {
@@ -4077,8 +4120,8 @@ a {
 }
 
 .con_top > a:nth-child(1):hover .textwhite {
-  font-size: 30px;
-  font-family: Raleway Bold;
+  font-size: 22px;
+  font-family: 'Berkshire Swash', cursive;
 }
 
 /* Screen < 500px */
@@ -4109,7 +4152,7 @@ a {
     width: 150px;
     height: 150px;
   }
-  .textwhite, .textyellow, .textred, .textblack {
+  .textwhite, .textyellow, .textred {
     position: absolute;
     -webkit-transform: rotate(-45deg);
             transform: rotate(-45deg);
@@ -4120,20 +4163,224 @@ a {
     padding-left: 24px;
     margin-bottom: 20px;
     font-size: 16px;
-    font-family: Raleway Regular;
+    font-family: 'Sriracha', cursive;
   }
   .textblack {
+    position: absolute;
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    margin-top: 60px;
+    text-align: center;
+    width: 100%;
     color: white;
+    font-size: 16px;
+    font-family: 'Sriracha', cursive;
   }
-  .textwhite:hover, .textred:hover, .textyellow:hover {
-    color: black;
-    font-size: 18px;
-    font-family: Raleway Bold;
+  .con_bot > a:nth-child(1):hover .textred {
+    font-size: 16px;
+    font-family: 'Berkshire Swash', cursive;
+    margin-left: 20px;
   }
-  .textblack:hover {
-    color: aliceblue;
-    font-size: 18px;
-    font-family: Raleway Bold;
+  .con_bot > a:nth-child(2):hover .textblack {
+    font-size: 16px;
+    font-family: 'Berkshire Swash', cursive;
   }
+  .con_top > a:nth-child(2):hover .textyellow {
+    font-size: 16px;
+    font-family: 'Berkshire Swash', cursive;
+  }
+  .con_top > a:nth-child(1):hover .textwhite {
+    font-size: 16px;
+    font-family: 'Berkshire Swash', cursive;
+  }
+}
+
+.medicinewheeldesc p {
+  width: 60%;
+  margin-left: 20%;
+}
+
+.storiesh1 {
+  font-size: 60.512px;
+  padding-top: 80px;
+  margin-bottom: 40px;
+  text-align: center;
+  text-transform: uppercase;
+  color: black;
+  font-family: 'Raleway regular', sans-serif;
+}
+
+@media only screen and (max-width: 500px) {
+  .medicinewheeldesc p {
+    margin-top: -100px;
+    width: 80%;
+    margin-left: 10%;
+  }
+}
+
+/* ------------------------------------------------------
+                POST STYLES
+------------------------------------------------------ */
+.post-listh1 {
+  font-size: 60.512px;
+  padding-top: 80px;
+  margin-bottom: 80px;
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+  font-family: 'Raleway regular', sans-serif;
+}
+
+.postlist {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.postlistpage {
+  background-image: -webkit-gradient(linear, left top, right top, from(#7eb0f1), to(#c74641));
+  background-image: linear-gradient(to right, #7eb0f1, #c74641);
+}
+
+.postcard {
+  background-image: -webkit-gradient(linear, left top, right top, from(white), to(#998a8a));
+  background-image: linear-gradient(to right, white, #998a8a);
+  margin-bottom: 20px;
+  padding: 10px;
+  margin-left: 25%;
+  margin-right: 25%;
+  width: 50%;
+  text-align: center;
+  border-radius: 10px;
+  border-right: 8px #bdbdbd solid;
+  margin-bottom: 60px;
+}
+
+.postimg {
+  width: 70%;
+  margin-left: 15%;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.posta {
+  font-size: large;
+  text-decoration: none;
+  color: white;
+  background-color: #d36e72;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  border-radius: 6px;
+  display: table;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 600px) {
+  .postcard {
+    margin-left: 20%;
+    margin-right: 20%;
+    width: 60%;
+  }
+  .post-listh1 {
+    font-size: 40.512px;
+  }
+  .posta {
+    font-size: small;
+  }
+  .postimg {
+    width: 80%;
+    margin-left: 10%;
+  }
+}
+
+.postdetailmain {
+  background-image: -webkit-gradient(linear, left top, right top, from(#7eb0f1), to(#c74641));
+  background-image: linear-gradient(to right, #7eb0f1, #c74641);
+}
+
+.postdetialh1 {
+  font-size: 60.512px;
+  padding-top: 80px;
+  margin-bottom: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #e7e7e7;
+  font-family: 'Raleway bold', sans-serif;
+}
+
+.author {
+  color: #e7e7e7;
+  font-size: 30px;
+  text-align: center;
+  font-family: 'Raleway regular', sans-serif;
+  margin-bottom: 40px;
+}
+
+iframe {
+  margin-left: 30%;
+}
+
+.postdetailimg {
+  width: 40%;
+  margin-left: 30%;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+iframe {
+  margin-top: 10px;
+  width: 40%;
+  height: 200px;
+}
+
+.posttext p {
+  color: white;
+  width: 60%;
+  margin-left: 20%;
+  word-wrap: break-word;
+  padding-bottom: 30px;
+  padding-top: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .postdetialh1 {
+    font-size: 40.512px;
+  }
+  .author {
+    font-size: 20.512px;
+  }
+  .postdetailimg {
+    margin-left: 20%;
+    width: 60%;
+  }
+  iframe {
+    margin-left: 20%;
+    margin-top: 20px;
+    width: 60%;
+    height: auto;
+  }
+}
+
+.no-post {
+  font-family: 'Raleway bold', sans-serif;
+  text-align: center;
+  padding: 30px;
+  padding-bottom: 50px;
+  color: white;
+}
+
+.post-noh1 {
+  font-size: 60.512px;
+  padding-top: 80px;
+  margin-bottom: 40px;
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+  font-family: 'Raleway regular', sans-serif;
+}
+
+.no-postpage {
+  background-image: -webkit-gradient(linear, left top, right top, from(#7eb0f1), to(#c74641));
+  background-image: linear-gradient(to right, #7eb0f1, #c74641);
 }
 /*# sourceMappingURL=styles.css.map */
