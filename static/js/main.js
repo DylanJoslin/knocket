@@ -1,8 +1,3 @@
-$(document).ready(function(){
-    $('#grid').isotope({
-        itemSelector: '.grid-item',
-    });
-});
 
 //Button Hover Title Changer
 let blockHolder = document.querySelectorAll(".blocky");
