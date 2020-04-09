@@ -3199,7 +3199,19 @@ td, th {
 
 @media screen and (min-width: 700px) {
   .background {
-    padding: 3rem;
+    padding: 4rem;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .background {
+    padding: 8rem;
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  .background {
+    padding: 12rem;
   }
 }
 
@@ -3406,7 +3418,7 @@ td, th {
   font-family: 'Raleway Regular', sans-serif;
   font-size: 1rem;
   padding: 0.3rem 1rem;
-  margin-bottom: 2rem;
+  margin-top: 1rem;
   text-align: center;
   border-radius: 0.4rem;
   color: white;
@@ -3618,17 +3630,19 @@ td, th {
 
 @media screen and (min-width: 1000px) {
   .category-posts .all-posts {
-    width: 90%;
+    width: 900px;
     margin: 0 auto;
   }
 }
 
 .category-posts .post {
   padding: 1rem;
-  background: #B4B9E5;
-  border: 2px solid #51508B;
-  border-radius: 1rem;
+  border-right: 8px solid rgba(224, 44, 74, 0.616);
+  border-bottom: 8px solid rgba(224, 44, 74, 0.616);
+  border-radius: 0.7rem;
   margin-bottom: 2rem;
+  width: 100%;
+  text-align: center;
 }
 
 @media screen and (min-width: 700px) {
@@ -3641,37 +3655,68 @@ td, th {
 
 @media screen and (min-width: 1000px) {
   .category-posts .post {
-    width: 45%;
-    margin-right: 2rem;
-  }
-}
-
-@media screen and (min-width: 1500px) {
-  .category-posts .post {
-    width: 30%;
+    width: 100%;
+    max-width: 900px;
   }
 }
 
 .category-posts .post .post-header {
   text-align: center;
-  margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 1000px) {
+  .category-posts .post .post-header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 45%;
+  }
 }
 
 .category-posts .post h3 {
   margin-bottom: 0.5rem;
+  font-size: 2.4rem;
+}
+
+@media screen and (min-width: 1000px) {
+  .category-posts .post h3 {
+    font-size: 3rem;
+    margin-top: 2rem;
+  }
 }
 
 .category-posts .post p {
   color: #51508B;
   text-align: center;
-  color: #fff;
+  font-size: 1.4rem;
   margin-bottom: 1rem;
 }
 
+@media screen and (min-width: 1000px) {
+  .category-posts .post p {
+    margin-bottom: 2rem;
+  }
+}
+
 .category-posts .post img {
+  width: 100%;
   margin-bottom: 1rem;
   border-radius: 0.6rem;
   border: 1px solid #51508B;
+  max-width: 400px;
+}
+
+@media screen and (min-width: 1000px) {
+  .category-posts .post img {
+    margin-bottom: 0;
+  }
 }
 
 .category-posts .post .button {
@@ -3696,6 +3741,19 @@ td, th {
   color: black;
   -webkit-transition: 0.5s;
   transition: 0.5s;
+}
+
+@media screen and (min-width: 1000px) {
+  .category-posts .post-w-image {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    max-width: 900px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
 }
 
 .post-detail {
@@ -4036,8 +4094,9 @@ a {
 }
 
 .con_bot > a:nth-child(1):hover .textred {
-  font-size: 30px;
-  font-family: Raleway Bold;
+  font-size: 22px;
+  font-family: 'Berkshire Swash', cursive;
+  margin-left: 20px;
 }
 
 .con_bot > a:nth-child(2):hover {
@@ -4052,8 +4111,8 @@ a {
 }
 
 .con_bot > a:nth-child(2):hover .textblack {
-  font-size: 30px;
-  font-family: Raleway Bold;
+  font-size: 22px;
+  font-family: 'Berkshire Swash', cursive;
 }
 
 .con_top > a:nth-child(2):hover {
@@ -4068,8 +4127,8 @@ a {
 }
 
 .con_top > a:nth-child(2):hover .textyellow {
-  font-size: 30px;
-  font-family: Raleway Bold;
+  font-size: 22px;
+  font-family: 'Berkshire Swash', cursive;
 }
 
 .con_top > a:nth-child(1):hover {
@@ -4077,8 +4136,8 @@ a {
 }
 
 .con_top > a:nth-child(1):hover .textwhite {
-  font-size: 30px;
-  font-family: Raleway Bold;
+  font-size: 22px;
+  font-family: 'Berkshire Swash', cursive;
 }
 
 /* Screen < 500px */
@@ -4125,15 +4184,45 @@ a {
   .textblack {
     color: white;
   }
-  .textwhite:hover, .textred:hover, .textyellow:hover {
-    color: black;
-    font-size: 18px;
-    font-family: Raleway Bold;
+  .con_bot > a:nth-child(1):hover .textred {
+    font-size: 16px;
+    font-family: 'Berkshire Swash', cursive;
+    margin-left: 20px;
   }
-  .textblack:hover {
-    color: aliceblue;
-    font-size: 18px;
-    font-family: Raleway Bold;
+  .con_bot > a:nth-child(2):hover .textblack {
+    font-size: 16px;
+    font-family: 'Berkshire Swash', cursive;
+  }
+  .con_top > a:nth-child(2):hover .textyellow {
+    font-size: 16px;
+    font-family: 'Berkshire Swash', cursive;
+  }
+  .con_top > a:nth-child(1):hover .textwhite {
+    font-size: 16px;
+    font-family: 'Berkshire Swash', cursive;
+  }
+}
+
+.medicinewheeldesc p {
+  width: 60%;
+  margin-left: 20%;
+}
+
+.storiesh1 {
+  font-size: 60.512px;
+  padding-top: 80px;
+  margin-bottom: 40px;
+  text-align: center;
+  text-transform: uppercase;
+  color: black;
+  font-family: 'Raleway regular', sans-serif;
+}
+
+@media only screen and (max-width: 500px) {
+  .medicinewheeldesc p {
+    margin-top: -100px;
+    width: 80%;
+    margin-left: 10%;
   }
 }
 /*# sourceMappingURL=styles.css.map */

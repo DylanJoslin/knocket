@@ -3,27 +3,28 @@
 
 {% block content %}
     {% comment %} Medicine Wheel {% endcomment %}
+    <h1 class="storiesh1">Medicine Wheel</h1>
     <section class="medicinewheel">
         <div class="con">
             <div class="con_top">
-                <a href="{% url 'post_list' %}?school=Amiskwaciy-Academy&category=Spiritual">
+                <a href="{% url 'post_list' %}?category=Spiritual">
                     <div class="textwhite">
                         Spiritual
                     </div>
                 </a>
-                <a href="{% url 'post_list' %}?school=Amiskwaciy-Academy&category=Physical">
+                <a href="{% url 'post_list' %}?category=Physical">
                     <div class="textyellow">
                         Physical
                     </div>
                 </a>
             </div>
             <div class="con_bot">
-                <a href="{% url 'post_list' %}?school=Amiskwaciy-Academy&category=Emotional">
+                <a href="{% url 'post_list' %}?category=Emotional">
                     <div class="textred">
                         Emotional
                     </div>
                 </a>
-                <a href="{% url 'post_list' %}?school=Amiskwaciy-Academy&category=Mental">
+                <a href="{% url 'post_list' %}?category=Mental">
                     <div class="textblack">
                         Mental
                     </div>
@@ -31,6 +32,10 @@
             </div>
         </div>
     </section>
+
+    <div class="medicinewheeldesc">
+        <p>Medicine Wheels are used in Indigenous cultures to represent the four directions, the seasons, the life stages and the pieces required to life a whole life; the emotional, mental, physical and spiritual components. Click a category to see more content.</p>
+    </div>
 
     
 

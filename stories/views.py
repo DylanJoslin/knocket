@@ -17,7 +17,8 @@ def post_list(request):
         school_slug = request.GET.get('school')
         category_slug = request.GET.get('category')
 
-        if VideoPost.objects.filter(school=school_slug).filter(category=category_slug).filter(approve = 1).exists():
+        # if VideoPost.objects.filter(school=school_slug).filter(category=category_slug).filter(approve = 1).exists():
+        if VideoPost.objects.filter(category=category_slug).filter(approve = 1).exists():
 
             posts = VideoPost.objects.all().filter(approve = 1)
         

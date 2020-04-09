@@ -24,7 +24,15 @@
     padding: 3rem 1rem;
 
     @include breakpoint(tablet){
-        padding: 3rem;
+        padding: 4rem;
+    }
+
+    @include breakpoint(laptop){
+        padding: 8rem;
+    }
+
+    @include breakpoint(desktop){
+        padding: 12rem;
     }
 }
 
