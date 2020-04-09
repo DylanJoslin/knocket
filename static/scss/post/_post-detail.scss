@@ -1,0 +1,66 @@
+.postdetailmain{
+    background-image: linear-gradient(to right , rgb(126, 176, 241), rgb(199, 70, 65));
+}
+.postdetialh1{
+    font-size: 60.512px;
+    padding-top: 80px;
+    margin-bottom: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    color: rgb(231, 231, 231);
+    font-family: 'Raleway bold', sans-serif;
+}
+.author{
+    color: rgb(231, 231, 231);
+    font-size: 30px;
+    text-align: center;
+    font-family: 'Raleway regular', sans-serif;
+    margin-bottom: 40px;
+}
+iframe{
+    margin-left: 30%;
+}
+.postdetailimg{
+    width: 40%;
+    margin-left: 30%;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+iframe{
+    margin-top: 10px;
+    width: 40%;
+    height: 200px;
+}
+.posttext p{
+    color:  white;
+    width: 60%;
+    margin-left: 20%;
+    word-wrap: break-word;
+    padding-bottom: 30px;
+    padding-top: 20px;
+}
+
+@media screen and (max-width: 768px){
+    .postdetialh1{
+       font-size:40.512px ;
+   }
+   .author{
+       font-size: 20.512px;
+   }
+   .postdetailimg{
+    margin-left: 20%;
+    width: 60%;
+   }
+   iframe{
+    margin-left: 20%;
+    margin-top: 20px;
+    width: 60%;
+    height: auto;
+}
+
+}
+// main {
+//     background-image: linear-gradient(to right , rgb(77, 40, 40), rgba(158, 154, 154));
+// }
+
