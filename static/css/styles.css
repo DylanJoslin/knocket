@@ -3199,7 +3199,19 @@ td, th {
 
 @media screen and (min-width: 700px) {
   .background {
-    padding: 3rem;
+    padding: 4rem;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .background {
+    padding: 8rem;
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  .background {
+    padding: 12rem;
   }
 }
 
@@ -3406,7 +3418,7 @@ td, th {
   font-family: 'Raleway Regular', sans-serif;
   font-size: 1rem;
   padding: 0.3rem 1rem;
-  margin-bottom: 2rem;
+  margin-top: 1rem;
   text-align: center;
   border-radius: 0.4rem;
   color: white;
@@ -4179,11 +4191,7 @@ a {
   .textblack:hover {
     color: aliceblue;
     font-size: 18px;
-<<<<<<< HEAD
-    font-family: 'Berkshire Swash', cursive;
-=======
     font-family: Raleway Bold;
->>>>>>> 3c43ec27af7eadbc2fa890bde322c378dca05927
   }
 }
 /*# sourceMappingURL=styles.css.map */
