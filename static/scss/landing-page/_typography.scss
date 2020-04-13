@@ -84,7 +84,8 @@ h1{
 }
 
 h2{
-    font: 2.074em/1.5 'Raleway Regular', sans-serif;
+    font: 2.074em/1.5 'Cardo Regular', sans-serif;
+    color: $dark-purple;
 
     @include media-md{
         font-size: 3.157em;

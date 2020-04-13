@@ -28,7 +28,7 @@ school.addEventListener("click", function(){
         contentHolderRibstones.classList.add('hidden');
         contentHolderWritingstone.classList.add('hidden');
         contentHolderMedicinelake.classList.add('hidden');
-        titleSwapper.textContent = "Amiskwaciy Academy";
+        titleSwapper.textContent = "amiskwaciy Academy";
     }
 });
 

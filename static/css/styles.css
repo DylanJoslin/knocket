@@ -179,7 +179,8 @@ h1 a {
 }
 
 h2 {
-  font: 2.074em/1.5 'Raleway Regular', sans-serif;
+  font: 2.074em/1.5 'Cardo Regular', sans-serif;
+  color: #51508B;
 }
 
 @media screen and (min-width: 768px) {
@@ -262,7 +263,7 @@ img {
   }
 }
 
-.treaty h3 {
+.treaty h2 {
   text-align: center;
   text-transform: uppercase;
   margin-bottom: 20px;
@@ -309,7 +310,7 @@ img {
   margin-top: 100px;
 }
 
-.seven-teachings h3 {
+.seven-teachings h2 {
   text-align: center;
   text-transform: uppercase;
   margin-bottom: 20px;
@@ -789,7 +790,7 @@ body {
   position: relative;
 }
 
-.about h3 {
+.about h2 {
   text-align: center;
   text-transform: uppercase;
   margin-bottom: 10px;
@@ -1018,7 +1019,7 @@ footer .bottom p {
   font-family: 'Cardo Regular';
   padding-bottom: 1rem;
   padding-top: 5rem;
-  color: white;
+  color: #51508B;
   width: 100%;
 }
 
@@ -1027,7 +1028,7 @@ footer .bottom p {
   font-family: 'Cardo Regular';
   padding-bottom: 1rem;
   padding-top: 5rem;
-  color: white;
+  color: #51508B;
   width: 100%;
 }
 
@@ -1067,7 +1068,7 @@ footer .bottom p {
   font-family: 'Cardo Regular';
   padding-bottom: 1rem;
   padding-top: 5rem;
-  color: white;
+  color: #51508B;
   width: 100%;
 }
 
@@ -1076,7 +1077,7 @@ footer .bottom p {
   font-family: 'Cardo Regular';
   padding-bottom: 1rem;
   padding-top: 5rem;
-  color: white;
+  color: #51508B;
   width: 100%;
   width: 100%;
   padding: 0;
@@ -1181,6 +1182,7 @@ footer .bottom p {
   background-repeat: no-repeat;
   background-size: 75%;
   margin: 0 auto;
+  margin-bottom: 2rem;
 }
 
 .alberta-content {
@@ -1580,7 +1582,8 @@ h1 a {
 }
 
 h2 {
-  font: 2.074em/1.5 'Raleway Regular', sans-serif;
+  font: 2.074em/1.5 'Cardo Regular', sans-serif;
+  color: #51508B;
 }
 
 @media screen and (min-width: 768px) {
@@ -1634,6 +1637,17 @@ body {
   position: relative;
 }
 
+.resources-link-holder h2 {
+  text-transform: uppercase;
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .resources-link-holder p {
+    text-align: center;
+  }
+}
+
 .decoration {
   position: absolute;
   z-index: -1;
@@ -1646,11 +1660,11 @@ body {
   margin-bottom: 100px;
 }
 
-.education h2, .heritage h2, .mental-health h2 {
+.education h3, .heritage h3, .mental-health h3 {
   margin-bottom: 40px;
   text-align: center;
   text-transform: uppercase;
-  color: #0C2946;
+  color: #51508B;
 }
 
 @media screen and (min-width: 768px) {
@@ -1687,6 +1701,10 @@ body {
     margin-right: 20px;
     width: 50%;
   }
+}
+
+.education .cards div p, .heritage .cards div p, .mental-health .cards div p {
+  text-align: left;
 }
 
 .education .cards .box-1, .heritage .cards .box-1, .mental-health .cards .box-1 {
@@ -3908,7 +3926,8 @@ h1 a {
 }
 
 h2 {
-  font: 2.074em/1.5 'Raleway Regular', sans-serif;
+  font: 2.074em/1.5 'Cardo Regular', sans-serif;
+  color: #51508B;
 }
 
 @media screen and (min-width: 768px) {
@@ -3946,6 +3965,11 @@ p {
 
 a {
   font-family: 'Cardo Regular', sans-serif;
+}
+
+h2 {
+  text-transform: uppercase;
+  text-align: center;
 }
 
 .medicinewheel {
