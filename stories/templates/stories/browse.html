@@ -37,19 +37,6 @@
         <p>Medicine Wheels are used in Indigenous cultures to represent the four directions, the seasons, the life stages and the pieces required to life a whole life; the emotional, mental, physical and spiritual components. Click a category to see more content.</p>
     </div>
 
-    
-
-    <h1>Post List</h1>
-    {% for post in posts %}
-    <div>
-        {% if post.image %}
-        <img src="{% static 'media/' %}{{ post.image }}" alt="">
-        {% endif %}
-        <h2><a href="{% url 'post_detail' post.slug %}">{{ post.title }} - <span>{{ post.author }}</span></a></h2>
-        
-    </div> 
-{% endfor %}
-
 
 
 {% endblock content %}
