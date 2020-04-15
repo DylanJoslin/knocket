@@ -12,24 +12,24 @@ def browse(request):
 
 def post_list(request):
 
-    school_slug = request.GET.get('school')
-    category_slug = request.GET.get('category')
+    school_slug = request.GET.get('school', None)
+    category_slug = request.GET.get('category', None)
 
-    # if VideoPost.objects.filter(school=school_slug).filter(category=category_slug).filter(approve = 1).exists():
-    if VideoPost.objects.filter(category=category_slug).filter(approve = 1).exists():
+    posts = VideoPost.objects.all().filter(approve = 1)
 
-        posts = VideoPost.objects.all().filter(approve = 1)
+    if school_slug:
+        posts = posts.filter(school=school_slug)
     
-        if school_slug:
-            posts = posts.filter(school=school_slug)
-        
-        if category_slug:
-            posts = posts.filter(category=category_slug)
+    if category_slug:
+        posts = posts.filter(category=category_slug)
+
+    posts = posts.order_by('-date_posted')
+
+    if not posts:
+        return render(request, 'stories/no_post.html')    
+
+    return render(request, 'stories/post_list.html', {'posts': posts})
     
-        posts = posts.order_by('-date_posted')
-    
-        return render(request, 'stories/post_list.html', {'posts': posts})
-    return render(request, 'stories/no_post.html')
 
 
 def post_detail(request, post_slug):
