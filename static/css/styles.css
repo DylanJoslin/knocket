@@ -3404,7 +3404,7 @@ td, th {
   margin-bottom: 1.2rem;
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 1000px) {
   .login-container .login-form .flex-container {
     display: -webkit-box;
     display: -ms-flexbox;
