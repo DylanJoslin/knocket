@@ -4,11 +4,9 @@
         //margin-bottom: 4rem;
     
         
-        
-    
         .flex-container{
             margin-bottom: 1.2rem;
-            @include breakpoint(tablet){
+            @include breakpoint(laptop){
                 display: flex;
                 justify-content: space-between;
                 width: 620px;
